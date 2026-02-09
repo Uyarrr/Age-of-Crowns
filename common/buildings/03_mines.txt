@@ -1,0 +1,205 @@
+﻿building_stone_quarry = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/stone_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+
+	unlocking_technologies = {
+		quarrying
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_stone_mine
+		pmg_power_and_extraction_methods_building_stone_mine
+		pmg_steam_automation_building_sulfur_mine
+		pmg_train_automation_building_sulfur_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+ }
+
+building_tin_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/tin_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+
+	unlocking_technologies = {
+		bronze_working
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_tin_mine,
+		pmg_power_and_extraction_methods_building_tin_mine
+		pmg_steam_automation_building_sulfur_mine
+		pmg_train_automation_building_sulfur_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+ }
+
+building_copper_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/copper_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		bronze_working
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_copper_mine
+		pmg_power_and_extraction_methods_building_copper_mine
+		pmg_steam_automation_building_sulfur_mine
+		pmg_train_automation_building_sulfur_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_iron_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/iron_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+
+	unlocking_technologies = {
+		iron_working
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_iron_mine
+		pmg_power_and_extraction_methods_building_iron_mine
+		pmg_steam_automation_building_iron_mine
+		pmg_train_automation_building_iron_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+ }
+
+ building_coal_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/coal_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		iron_working
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_coal_mine
+		pmg_power_and_extraction_methods_building_coal_mine
+		pmg_steam_automation_building_coal_mine
+		pmg_train_automation_building_coal_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_lead_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/lead_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		bronze_working
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_lead_mine
+		pmg_power_and_extraction_methods_building_lead_mine
+		pmg_steam_automation_building_lead_mine
+		pmg_train_automation_building_lead_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+ }
+
+ building_sulfur_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/sulfur_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		fine_metals_mining
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_sulfur_mine
+		pmg_power_and_extraction_methods_building_sulfur_mine
+		pmg_steam_automation_building_sulfur_mine
+		pmg_train_automation_building_sulfur_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+ }
+
+ building_gold_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/gold_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+
+	unlocking_technologies = {
+		fine_metals_mining
+	}
+
+	ai_value = 5000 # Gold mines are very nice for minting revenue and guaranteed profits
+	ai_nationalization_desire = 1.0 # AI should be keen on nationalizing these
+
+	production_method_groups = {
+		pmg_mining_equipment_building_gold_mine
+		pmg_power_and_extraction_methods_building_gold_mine
+		pmg_steam_automation_building_gold_mine
+		pmg_train_automation_building_gold_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_gold_field = {
+	building_group = bg_gold_fields
+	icon = "gfx/interface/icons/building_icons/gold_fields.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	buildable = no
+	expandable = no
+	downsizeable = no
+	can_switch_owner = no
+	terrain_manipulator = mining
+
+	unlocking_technologies = {
+		fine_metals_mining
+	}
+
+	production_method_groups = {
+		pmg_base_building_gold_field
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}

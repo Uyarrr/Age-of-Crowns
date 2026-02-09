@@ -1,0 +1,287 @@
+﻿# MANUFACTURING INDUSTRIES
+
+building_food_industry = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/food_industry.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
+
+	unlocking_technologies = {
+		manufacturies
+	}
+
+	production_method_groups = {
+		pmg_base_building_food_industry
+		pmg_canning
+		pmg_distillery
+		pmg_automation_building_food_industry
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_cloth_workshop = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/cloth_workshop_uyr.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
+
+	unlocking_technologies = {
+		cloth_workshop
+	}
+
+	production_method_groups = {
+		pmg_base_building_textile_mill
+		pmg_luxury_building_textile_mill
+		pmg_automation_building_textile_mill
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_furniture_workshop = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/furniture_workshop_uyr.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
+
+	unlocking_technologies = {
+		furniture_workshop
+	}
+
+	production_method_groups = {
+		pmg_base_building_furniture_manufactory
+		pmg_luxury_building_furniture_manufactory
+		pmg_automation_building_furniture_manufactory
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_glassworks = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/glassworks_uyr.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		glassworks
+	}
+
+	production_method_groups = {
+		pmg_base_building_glassworks
+		pmg_luxury_building_glassworks
+		pmg_glassblowing
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_tooling_workshop = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/tooling_worskhop_uyr.dds"
+
+	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize tools due to importance for construction etc
+
+	unlocking_technologies = {
+		metallurgy
+	}
+
+	city_type = city
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_base_building_tooling_workshop
+		pmg_automation_building_tooling_workshop
+	}
+
+	required_construction = construction_cost_high
+
+	ai_value = 2000 # Tools are very important
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_paper_mill = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/paper_mill_uyr.dds"
+
+	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
+
+	unlocking_technologies = {
+		manufacturies
+	}
+
+	city_type = city
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_base_building_paper_mill
+		pmg_automation_building_paper_mill
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_steel_foundry = {
+	building_group = bg_heavy_industry
+	icon = "gfx/interface/icons/building_icons/steel_foundry_uyr.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = 0.25 # AI will generally not privatize steel mills due to importance for construction
+
+	unlocking_technologies = {
+		steelworking
+	}
+
+	production_method_groups = {
+		pmg_steelmaking_process
+		pmg_automation_building_steel_mill
+	}
+
+	required_construction = construction_cost_very_high
+
+	possible = {
+		owner = {
+			NOT = {
+				OR = {
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
+				}
+			}
+		}
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
+}
+
+building_shipyard = {
+	aliases = { building_shipyards }
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/shipyard_uyr.dds"
+	city_type = port
+	levels_per_mesh = 1
+
+	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
+
+	unlocking_technologies = {
+		navigation
+	}
+
+	production_method_groups = {
+		pmg_base_building_shipyard
+	}
+
+	required_construction = construction_cost_high
+
+	potential = {
+		is_coastal = yes
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
+}
+
+building_weapon_workshop = {
+	building_group = bg_military_industry
+	icon = "gfx/interface/icons/building_icons/weapon_workshop_uyr.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
+
+	unlocking_technologies = {
+		weaponsmithing
+	}
+
+	production_method_groups = {
+		pmg_firearms_manufacturing
+		pmg_automation_building_arms_industry
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
+}
+
+building_cannon_foundry = {
+	building_group = bg_military_industry
+	icon = "gfx/interface/icons/building_icons/cannon_foundry_uyr.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
+
+	unlocking_technologies = {
+		cannonry
+	}
+
+	production_method_groups = {
+		pmg_foundries
+		pmg_automation_building_arms_industry
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
+}
+
+building_saltpeter_works = {
+	building_group = bg_military_industry
+	icon = "gfx/interface/icons/building_icons/saltpeter_works_uyr.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
+
+	unlocking_technologies = {
+		percussion_cap
+	}
+
+	production_method_groups = {
+		pmg_base_building_munition_plant
+		pmg_automation_building_munition_plant
+	}
+
+	required_construction = construction_cost_very_high
+
+	possible = {
+		owner = {
+			NOT = {
+				OR = {
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
+				}
+			}
+		}
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
+}

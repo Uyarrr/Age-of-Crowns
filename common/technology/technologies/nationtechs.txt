@@ -1,0 +1,97 @@
+﻿nation_trait_1 = {
+	# Unlocks Nationwide Bonus
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+	category = society
+
+    can_research = yes
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+nation_trait_2 = {
+	# Unlocks Nationwide Bonus
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
+	category = society
+
+	unlocking_technologies = {
+		nation_trait_1
+	}
+
+    can_research = yes
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+nation_trait_3 = {
+	# Unlocks Nationwide Bonus
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+	category = society
+
+	unlocking_technologies = {
+		nation_trait_2
+	}
+
+    can_research = yes
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+nation_trait_4 = {
+	# Unlocks Nationwide Bonus
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+	category = society
+
+	unlocking_technologies = {
+		nation_trait_3
+	}
+
+    can_research = yes
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+nation_trait_5 = {
+	# Unlocks Nationwide Bonus
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds"
+	category = society
+
+	unlocking_technologies = {
+		nation_trait_4
+	}
+
+    can_research = yes
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+nation_trait_6 = {
+	# Unlocks Nationwide Bonus
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/age_6_revolutions.dds"
+	category = society
+
+	unlocking_technologies = {
+		nation_trait_5
+	}
+
+    can_research = yes
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
