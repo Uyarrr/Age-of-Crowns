@@ -1,0 +1,102 @@
+﻿pm_building_fiber_farming_age_one = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+
+			# output goods
+			goods_output_fiber_add = 20
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+pm_building_fiber_farming_age_two = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
+
+	unlocking_technologies = {
+		atmospheric_engine
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_fertilizer_add = 5
+
+			# output goods
+			goods_output_fiber_add = 30
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_farmers_add = 1500
+		}
+	}
+}
+
+pm_building_fiber_farming_age_three = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+
+	unlocking_technologies = {
+		watertube_boiler
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 2
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 10
+			goods_input_fertilizer_add = 10
+
+			# output goods
+			goods_output_fiber_add = 45
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_farmers_add = 2000
+		}
+	}
+}
+
+pm_building_fiber_farming_age_four = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
+
+	unlocking_technologies = {
+		compression_ignition
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 15
+			goods_input_fertilizer_add = 15
+
+			# output goods
+			goods_output_fiber_add = 60
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2500
+			building_employment_farmers_add = 2500
+		}
+	}
+}
