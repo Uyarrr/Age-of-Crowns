@@ -223,3 +223,25 @@ building_stud_farm = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 }
+
+building_fiber_farm = {
+	building_group = bg_agriculture
+	icon = "gfx/interface/icons/building_icons/fiber_farm_uyr.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_base_building_banana_plantation
+		pmg_banana_exploitation
+		pmg_train_automation_building_banana_plantation
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
+}
