@@ -198,8 +198,11 @@ pmg_train_automation_building_vineyard = {
 }
 
 pmg_base_building_fiber_farm = {
-	pm_building_fiber_farming_age_one
-	pm_building_fiber_farming_age_two
-	pm_building_fiber_farming_age_three
-	pm_building_fiber_farming_age_four
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_fiber_farming_age_one
+		pm_building_fiber_farming_age_two
+		pm_building_fiber_farming_age_three
+		pm_building_fiber_farming_age_four
+	}
 }
