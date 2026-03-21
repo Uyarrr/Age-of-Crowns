@@ -1,10 +1,9 @@
-﻿pm_building_fiber_farming_age_one = {
+﻿pm_building_fiber_farm_main_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
 
 			# output goods
 			goods_output_fiber_add = 20
@@ -17,7 +16,7 @@
 	}
 }
 
-pm_building_fiber_farming_age_two = {
+pm_building_fiber_farm_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
@@ -27,7 +26,6 @@ pm_building_fiber_farming_age_two = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
 			goods_input_fertilizer_add = 5
 
 			# output goods
@@ -41,7 +39,7 @@ pm_building_fiber_farming_age_two = {
 	}
 }
 
-pm_building_fiber_farming_age_three = {
+pm_building_fiber_farm_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
@@ -71,7 +69,7 @@ pm_building_fiber_farming_age_three = {
 	}
 }
 
-pm_building_fiber_farming_age_four = {
+pm_building_fiber_farm_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {

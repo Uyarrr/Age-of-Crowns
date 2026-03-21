@@ -6,6 +6,10 @@
 	terrain_manipulator = forestry
 	levels_per_mesh = 50
 
+	unlocking_technologies = {
+		woodcutting
+	}
+
 	production_method_groups = {
 		pmg_base_building_logging_camp
 		pmg_hardwood
@@ -23,6 +27,10 @@ building_fishing_wharf = {
 	city_type = port
 	levels_per_mesh = 1
 	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		fishing
+	}
 
 	production_method_groups = {
 		pmg_base_building_fishing_wharf

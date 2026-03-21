@@ -48,6 +48,18 @@ standing_army = {
 	}
 }
 
+shipbuilding = {
+	# Unlocks Shipyards
+	# Unlocks Naval Supplies
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/naval_supplies.dds"
+	category = military
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 navigation = {
 	# Unlocks Shipyards
 	# Unlocks Ports
@@ -56,15 +68,19 @@ navigation = {
 	texture = "gfx/interface/icons/invention_icons/navigation.dds"
 	category = military
 
+	unlocking_technologies = {
+		shipbuilding
+	}
+
 	ai_weight = {
 		value = 2 # Important tech in general
 	}
 }
 
-drydocks = {
-	# Increases Port max level by 3
+cog = {
+	# Unlocks Cog
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/drydock.dds"
+	texture = "gfx/unit_illustrations/light_ships_1.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -81,6 +97,28 @@ drydocks = {
 		}
 	}
 }
+
+traditional_galley = {
+	# Unlocks Traditional Galley
+	era = era_1
+	texture = "gfx/unit_illustrations/capital_ships_1.dds"
+	category = military
+
+	unlocking_technologies = {
+		cog
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
 
 mandatory_service = {
 	# Unlocks Army Model - National Militia
@@ -104,7 +142,7 @@ mandatory_service = {
 weapon_crafting = {
 	# Unlocks Weapon Foundry
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/sword.dds"
+	texture = "gfx/interface/icons/goods_icons/weapons.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -119,7 +157,7 @@ weapon_crafting = {
 cannonry = {
 	#Unlocks Cannon Foundry
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/artillery.dds"
+	texture = "gfx/interface/icons/goods_icons/cannons.dds"
 	category = military
 
 	unlocking_technologies = {

@@ -34,18 +34,6 @@ pmg_base_building_trade_center = {
 	}
 }
 
-pmg_trade_quantity_trade_center = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_trade_center_trade_quantity_limited
-		pm_trade_center_trade_quantity_normal
-		pm_trade_center_trade_quantity_high
-		pm_trade_center_trade_quantity_very_high
-	}
-}
-
 pmg_ownership_building_manor_house = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	ai_selection = most_productive
@@ -74,6 +62,31 @@ pmg_ownership_building_financial_district = {
 		pm_financial_district_privately_owned
 		pm_financial_district_publicly_traded
 		pm_financial_district_principle_divine_economics_2
+	}
+}
+
+pmg_trade_quantity_trade_center = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_trade_center_trade_quantity_none
+		pm_trade_center_trade_quantity_limited
+		pm_trade_center_trade_quantity_normal
+		pm_trade_center_trade_quantity_high
+		pm_trade_center_trade_quantity_very_high
+	}
+}
+
+pmg_caravan_routes_trade_center = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_caravan_hub_main_1
+		pm_caravan_hub_main_2
+		pm_caravan_hub_main_3
+		pm_caravan_hub_main_4
 	}
 }
 

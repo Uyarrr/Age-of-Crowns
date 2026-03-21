@@ -1,8 +1,8 @@
 ﻿### ERA 1
-enclosure = {
+agriculture = {
 	# Unlocks construction of Farms and Plantations
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/enclosure.dds"
+	texture = "gfx/interface/icons/invention_icons/agriculture.dds"
 	category = production
 
 	ai_weight = {
@@ -88,7 +88,7 @@ windmill = {
 	category = production
 
 	unlocking_technologies = {
-		enclosure
+		agriculture
 	}
 
 	modifier = {
@@ -154,7 +154,7 @@ woodcutting = {
 glassworks = {
 	# Unlocks Glassworks
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/glassworks.dds"
+	texture = "gfx/interface/icons/goods_icons/glass.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -170,7 +170,7 @@ glassworks = {
 furniture_workshop = {
 	# Unlocks Furniture Workshop
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/furniture_workshop.dds"
+	texture = "gfx/interface/icons/goods_icons/furniture.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -183,16 +183,47 @@ furniture_workshop = {
 }
 
 cloth_workshop = {
-	# Unlocks Furniture Workshop
+	# Unlocks Cloth Workshop
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/cloth_workshop.dds"
+	texture = "gfx/interface/icons/goods_icons/cloth.dds"
 	category = production
 
 	unlocking_technologies = {
+		agriculture
 	}
 
 	ai_weight = {
 		value = 3
+	}
+}
+
+papermill = {
+	# Unlocks Papermill
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/paper.dds"
+	category = production
+
+	unlocking_technologies = {
+		woodcutting
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+fishing = {
+	# Unlocks Fishing
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/fish.dds"
+	category = production
+
+	unlocking_technologies = {
+		woodcutting
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
 	}
 }
 
@@ -231,7 +262,7 @@ shaft_mining = {
 	category = production
 
 	unlocking_technologies = {
-		enclosure
+		agriculture
 		manufacturies
 	}
 
@@ -366,7 +397,7 @@ intensive_agriculture = {
 	category = production
 
 	unlocking_technologies = {
-		enclosure
+		agriculture
 	}
 
 	ai_weight = {

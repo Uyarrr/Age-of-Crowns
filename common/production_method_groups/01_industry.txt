@@ -35,16 +35,6 @@ pmg_automation_building_food_industry = {
 	}
 }
 
-pmg_base_building_textile_mill = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_building_cloth_workshop_domestic_weaving
-		pm_building_cloth_workshop_guild_loom_workshops
-		pm_building_cloth_workshop_dye_workshops
-		pm_building_cloth_workshop_manufactories
-	}
-}
-
 pmg_luxury_building_textile_mill = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
@@ -298,18 +288,6 @@ pmg_radios_category = {
 	}
 }
 
-pmg_firearms_manufacturing = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_muskets
-		pm_rifles
-		pm_repeaters
-		pm_bolt_action_rifles
-	}
-}
-
 pmg_automation_building_arms_industry = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
@@ -331,23 +309,84 @@ pmg_foundries = {
 	}
 }
 
-pmg_base_building_munition_plant = {
+pmg_building_saltpeter_workshop_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_percussion_caps
-		pm_explosive_shells
+		pm_building_saltpeter_workshop_main_1
+		pm_building_saltpeter_workshop_main_2
+		pm_building_saltpeter_workshop_main_3
+		pm_building_saltpeter_workshop_main_4
 	}
 }
 
-pmg_automation_building_munition_plant = {
+pmg_building_pottery_workshop_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_automation_disabled
-		pm_rotary_valve_engine_building_munition_plant
-		pm_assembly_lines_building_munition_plant
+		pm_building_pottery_workshop_main_1
+		pm_building_pottery_workshop_main_2
+		pm_building_pottery_workshop_main_3
+		pm_building_pottery_workshop_main_4
+	}
+}
+
+pmg_building_brewery_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_brewery_main_1
+		pm_building_brewery_main_2
+		pm_building_brewery_main_3
+		pm_building_brewery_main_4
+	}
+}
+
+pmg_building_tannery_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_tannery_main_1
+		pm_building_tannery_main_2
+		pm_building_tannery_main_3
+		pm_building_tannery_main_4
+	}
+}
+
+pmg_building_weapon_workshop_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_weapon_workshop_main_1
+		pm_building_weapon_workshop_main_2
+		pm_building_weapon_workshop_main_3
+		pm_building_weapon_workshop_main_4
+	}
+}
+
+pmg_building_cannon_foundry_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_cannon_foundry_main_1
+		pm_building_cannon_foundry_main_2
+		pm_building_cannon_foundry_main_3
+		pm_building_cannon_foundry_main_4
+	}
+}
+
+pmg_building_cloth_workshop_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_cloth_workshop_main_1
+		pm_building_cloth_workshop_main_2
+		pm_building_cloth_workshop_main_3
+		pm_building_cloth_workshop_main_4
 	}
 }

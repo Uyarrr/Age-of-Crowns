@@ -405,6 +405,16 @@ pm_trade_center_principle_external_trade_2 = {
 	}
 }
 
+pm_trade_center_trade_quantity_none = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_2.dds"
+	is_default = yes
+
+	building_modifiers = {
+		workforce_scaled = {
+		}
+	}
+}
+
 pm_trade_center_trade_quantity_limited = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_1.dds"
 	low_pop_method = yes # AI will activate this method for states with low population

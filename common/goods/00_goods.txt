@@ -25,16 +25,6 @@ firearms = {
 	traded_quantity = 4 # 240
 }
 
-cannons = {
-	texture = "gfx/interface/icons/goods_icons/cannons.dds"
-	cost = 70
-	category = military
-
-	prestige_factor = 5
-	traded_quantity = 3.5 # 245
-	convoy_cost_multiplier = 1.5
-}
-
 tanks = {
 	texture = "gfx/interface/icons/goods_icons/tanks.dds"
 	cost = 80
@@ -215,6 +205,7 @@ merchant_marine = {
 	texture = "gfx/interface/icons/goods_icons/merchant_marine.dds"
 	cost = 50
 	category = staple
+	tradeable = no
 
 	prestige_factor = 8
 	traded_quantity = 4 # 200
@@ -409,7 +400,7 @@ porcelain = {
 }
 
 meat = {
-	texture = "gfx/interface/icons/goods_icons/meat.dds"
+	texture = "gfx/interface/icons/goods_icons/livestock.dds"
 	cost = 30
 	category = luxury
 
@@ -639,19 +630,6 @@ bronze = {
 	traded_quantity = 4 # 200
 }
 
-wool = {
-	texture = "gfx/interface/icons/goods_icons/wool.dds"
-	cost = 20
-	category = staple
-
-	prestige_factor = 3
-
-	traded_quantity = 10 # 200
-	convoy_cost_multiplier = 0.25
-
-	consumption_tax_cost = 300
-}
-
 fiber = {
 	texture = "gfx/interface/icons/goods_icons/fiber_crops.dds"
 	cost = 20
@@ -672,4 +650,73 @@ navalsupplies = {
 	prestige_factor = 4
 	traded_quantity = 3.5 # 210
 	convoy_cost_multiplier = 0.25
+}
+
+pottery = {
+	texture = "gfx/interface/icons/goods_icons/pottery.dds"
+	cost = 30
+	category = staple
+
+	prestige_factor = 4
+
+	traded_quantity = 8 # 240
+	convoy_cost_multiplier = 0.5
+
+	consumption_tax_cost = 300
+}
+
+saltpeter = {
+	texture = "gfx/interface/icons/goods_icons/saltpeter.dds"
+	cost = 50
+	category = industrial
+
+	prestige_factor = 6
+
+	traded_quantity = 4 # 200
+	convoy_cost_multiplier = 1.5
+}
+
+weapons = {
+	texture = "gfx/interface/icons/goods_icons/weapons.dds"
+	cost = 60
+	category = military
+
+	obsession_chance = 0.5
+	prestige_factor = 5
+	traded_quantity = 4 # 240
+}
+
+leather = {
+	texture = "gfx/interface/icons/goods_icons/leather.dds"
+	cost = 20
+	category = staple
+
+	prestige_factor = 3
+
+	traded_quantity = 10 # 200
+	convoy_cost_multiplier = 0.25
+
+	consumption_tax_cost = 300
+}
+
+beer = {
+	texture = "gfx/interface/icons/goods_icons/beer.dds"
+	cost = 30
+	category = luxury
+
+	obsession_chance = 2.0
+	prestige_factor = 4
+
+	traded_quantity = 8 # 240
+	convoy_cost_multiplier = 0.75
+}
+
+cannons = {
+	texture = "gfx/interface/icons/goods_icons/cannons.dds"
+	cost = 70
+	category = military
+
+	prestige_factor = 5
+	traded_quantity = 3.5 # 245
+	convoy_cost_multiplier = 1.5
 }

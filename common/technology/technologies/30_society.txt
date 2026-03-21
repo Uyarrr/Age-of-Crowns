@@ -127,6 +127,26 @@ urban_planning = {
 	}
 }
 
+classic_scholasticism = {
+	# Increases Education
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/colonial_governors.dds"
+	category = society
+
+	modifier = {
+		state_education_access_wealth_add = 0.005
+		country_institution_cost_institution_schools_mult = -0.10
+	}
+
+	unlocking_technologies = {
+		imperial_ambitions
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
 rationalism = {
 	# Unlocks Freedom of Conscience - Church and State Law
 	era = era_1
