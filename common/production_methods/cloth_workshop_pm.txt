@@ -1,4 +1,6 @@
-﻿pm_building_cloth_workshop_main_1 = {
+﻿################################# MAIN ##################################
+
+pm_building_cloth_workshop_main_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
 
 	building_modifiers = {
@@ -102,6 +104,60 @@ pm_building_cloth_workshop_main_4 = {
 			building_employment_laborers_add = 3000
 			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
+		}
+	}
+}
+
+################################# LEATHER UPGRADE ##################################
+
+pm_building_cloth_workshop_leather_0 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+
+			# output goods
+		}
+
+		level_scaled = {
+
+		}
+	}
+}
+
+pm_building_cloth_workshop_leather_1 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/automation1.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_leather_add = 10
+
+			# output goods
+			goods_output_clothes_add = 20
+		}
+
+		level_scaled = {
+
+		}
+	}
+}
+
+pm_building_cloth_workshop_leather_2 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_leather_add = 20
+
+			# output goods
+			goods_output_clothes_add = 40
+		}
+
+		level_scaled = {
+
 		}
 	}
 }

@@ -30,7 +30,7 @@ combat_unit_type_cannon_artillery = {
         military_formation_movement_speed_mult = -0.2
     }
 
-	unlocking_technologies = { artillery }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         trigger = {
@@ -93,7 +93,7 @@ combat_unit_type_mobile_artillery = {
         military_formation_movement_speed_mult = -0.2
     }
 
-	unlocking_technologies = { napoleonic_warfare }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         trigger = {
@@ -156,7 +156,7 @@ combat_unit_type_shrapnel_artillery = {
         military_formation_movement_speed_mult = -0.2
     }
 
-	unlocking_technologies = { breech_loading_artillery }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         trigger = {
@@ -219,7 +219,7 @@ combat_unit_type_siege_artillery = {
         military_formation_movement_speed_mult = -0.2
     }
 
-	unlocking_technologies = { defense_in_depth }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         trigger = {
@@ -281,7 +281,7 @@ combat_unit_type_heavy_tank = {
         military_formation_movement_speed_mult = -0.2
     }
 
-	unlocking_technologies = { mobile_armor }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/artillery_heavy_tank.dds"
@@ -309,7 +309,7 @@ combat_unit_type_hussars = {
         military_formation_movement_speed_mult = 0.25
     }
 
-	unlocking_technologies = { standing_army }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         trigger = {
@@ -425,7 +425,7 @@ combat_unit_type_cuirassiers = {
         unit_occupation_mult = 0.3
     }
 
-	unlocking_technologies = { line_infantry }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         trigger = {
@@ -485,7 +485,7 @@ combat_unit_type_lancers = {
         unit_occupation_mult = 0.3
     }
 
-	unlocking_technologies = { napoleonic_warfare }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         trigger = {
@@ -550,7 +550,7 @@ combat_unit_type_light_tanks = {
         military_formation_mobilization_speed_mult = 0.2
     }
 
-	unlocking_technologies = { mobile_armor }
+	unlocking_technologies = { behaviorism }
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/cavalry_light_tank.dds"

@@ -130,9 +130,10 @@ pmg_glassblowing = {
 pmg_base_building_paper_mill = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_pulp_pressing
-		pm_sulfite_pulping
-		pm_bleached_paper
+		pm_building_paper_mill_main_1
+		pm_building_paper_mill_main_2
+		pm_building_paper_mill_main_3
+		pm_building_paper_mill_main_4
 	}
 }
 
@@ -381,6 +382,8 @@ pmg_building_cannon_foundry_main = {
 	}
 }
 
+########################### CLOTH WORKSHOP ##################################
+
 pmg_building_cloth_workshop_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -388,5 +391,38 @@ pmg_building_cloth_workshop_main = {
 		pm_building_cloth_workshop_main_2
 		pm_building_cloth_workshop_main_3
 		pm_building_cloth_workshop_main_4
+	}
+}
+
+pmg_building_cloth_workshop_leather = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_cloth_workshop_leather_0
+		pm_building_cloth_workshop_leather_1
+		pm_building_cloth_workshop_leather_2	
+	}
+}
+
+########################### BRONZE FOUNDRY ##################################
+
+pmg_building_bronze_foundry_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_bronze_foundry_main_1
+		pm_building_bronze_foundry_main_2
+		pm_building_bronze_foundry_main_3
+		pm_building_bronze_foundry_main_4
+	}
+}
+
+########################### FURNITURE WORKSHOP ##################################
+
+pmg_building_furniture_workshop_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_furniture_workshop_main_1
+		pm_building_furniture_workshop_main_2
+		pm_building_furniture_workshop_main_3
+		pm_building_furniture_workshop_main_4
 	}
 }

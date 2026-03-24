@@ -361,48 +361,22 @@
 		}
 	}
 	s:STATE_URALSK = {
-		region_state:RUS = {
+		region_state:NOG = {
 			create_pop = {
 				culture = kazak
-				size = 61200
+				size = 176829
 			}
 			create_pop = {
 				culture = russian
-				size = 32112
+				size = 43142
 			}
 			create_pop = {
 				culture = tatar
-				size = 4260
+				size = 5660
 			}
-		}
-
-		region_state:KZH = {
-			create_pop = {
-				culture = kazak
-				size = 115489
-			}
-			create_pop = {
-				culture = russian
-				size = 10990
-			}
-			create_pop = {
-				culture = tatar
-				size = 1400
-			}
-		}
-
-		region_state:TRM = {
 			create_pop = {
 				culture = turkmen
 				size = 9607
-			}
-			create_pop = {
-				culture = russian
-				size = 40
-			}
-			create_pop = {
-				culture = kazak
-				size = 140
 			}
 		}
 	}

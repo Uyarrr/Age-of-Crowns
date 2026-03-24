@@ -1,10 +1,30 @@
 ﻿### ERA 1
 
+legalism = {
+	# Increases Authority
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/legalism.dds"
+	category = society
+
+	modifier = {
+		country_authority_mult = 0.1
+		country_voting_power_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
 abacus = {
 	# Increases Tax Efficiency
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/abacus.dds"
 	category = society
+
+	unlocking_technologies = {
+		legalism
+	}
 
 	modifier = {
 		country_minting_mult = 0.05
@@ -18,15 +38,16 @@ abacus = {
 imperial_ambitions = {
 	# Increases Prestige
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/crown_invention.dds"
+	texture = "gfx/interface/icons/invention_icons/crown.dds"
 	category = society
 
 	modifier = {
+		country_diplomatic_play_maneuvers_add = 10
 		country_prestige_mult = 0.05
 	}
 
 	unlocking_technologies = {
-		abacus
+		legalism
 	}
 
 	ai_weight = {
@@ -65,16 +86,12 @@ construction = {
 }
 
 roads_and_waystones = {
-	# Grants Infrastructure and boosts construction sector
+	# Unlocks Roads
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/road_advance_1.dds"
+	texture = "gfx/interface/icons/invention_icons/road.dds"
 	category = society
 
 	modifier = {
-		state_infrastructure_from_population_add = 1
-		state_infrastructure_from_population_max_add = 20
-		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 10
 	}
 
 	unlocking_technologies = {
@@ -95,6 +112,8 @@ urbanization = {
 	modifier = {
 		state_infrastructure_from_population_add = 1
 		state_infrastructure_from_population_max_add = 20
+		state_building_construction_sector_max_level_add = 5
+		country_max_weekly_construction_progress_add = 10
 	}
 
 	unlocking_technologies = {
@@ -106,16 +125,13 @@ urbanization = {
 	}
 }
 
-urban_planning = {
+national_guard = {
+	# Unlocks National Guard Law
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/urban_planning.dds"
+	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
 	category = society
 
 	modifier = {
-		state_infrastructure_from_population_add = 1
-		state_infrastructure_from_population_max_add = 20
-		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 5
 	}
 
 	unlocking_technologies = {
@@ -123,14 +139,14 @@ urban_planning = {
 	}
 
 	ai_weight = {
-		value = 2 # Important in general
+		value = 3 # Very important in general
 	}
 }
 
 classic_scholasticism = {
 	# Increases Education
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/colonial_governors.dds"
+	texture = "gfx/interface/icons/invention_icons/scholasticism.dds"
 	category = society
 
 	modifier = {
@@ -139,7 +155,7 @@ classic_scholasticism = {
 	}
 
 	unlocking_technologies = {
-		imperial_ambitions
+		abacus
 	}
 
 	ai_weight = {
@@ -147,9 +163,534 @@ classic_scholasticism = {
 	}
 }
 
+trading = {
+	# Unlocks Trade Center
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/trade.dds"
+	category = society
+
+	unlocking_technologies = {
+
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+international_relations = {
+	# Unlocks Defensive Pact and Rivalry
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
+	category = society
+
+	unlocking_technologies = {
+		trading
+	}
+
+	modifier = {
+		country_allow_multiple_alliances_bool = yes
+	}
+
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+trade_fairs = {
+	# Grants Trade Advantage
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/merchant_power.dds"
+	category = society
+
+	unlocking_technologies = {
+		trading
+	}
+
+	modifier = {
+		state_max_trade_advantage_from_capacity_add = 0.05
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+
+merchant_guilds = {
+	# Grants Trading Capacity
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/merchants_and_trade.dds"
+	category = society
+
+	unlocking_technologies = {
+		trade_fairs
+	}
+
+	modifier = {
+		state_trade_capacity_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+master_masons = {
+	# Upgrades Construction
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/legalism.dds"
+	category = society
+
+	unlocking_technologies = {
+		roads_and_waystones
+	}
+
+	modifier = {
+		state_building_construction_sector_max_level_add = 5
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+expanded_archives = {
+	# Increases Influence
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/diplomatic_influence.dds"
+	category = society
+
+	unlocking_technologies = {
+		international_relations
+	}
+
+	modifier = {
+		country_influence_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+############# AGE 2 #################
+
+renaissance = {
+	# Age 2 Start
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/renaissance.dds"
+	category = society
+
+	unlocking_technologies = {
+	}
+
+	modifier = {
+		state_expected_sol_from_literacy = 1
+		country_prestige_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+tenant_farmers = {
+	# Unlocks Tenant Farmers
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/peasants_rights_laws.dds"
+	category = society
+
+	unlocking_technologies = {
+		renaissance
+	}
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+favorable_social_mobility = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/pop_promotion_speed.dds"
+	category = society
+
+	modifier = {
+	state_pop_qualifications_mult = 0.10
+	}
+
+	unlocking_technologies = {
+		tenant_farmers
+	}
+
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+university = {
+	# Unlocks University
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/science.dds"
+	category = society
+
+	unlocking_technologies = {
+		renaissance
+	}
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+institutions = {
+	# Unlocks Extra Investment Education
+
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/dialectics.dds"
+	category = society
+
+	modifier = {
+		country_institution_schools_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		university
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+patron_of_arts = {
+	# Unlocks Art Center
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/patron_of_art.dds"
+	category = society
+
+	unlocking_technologies = {
+		renaissance
+	}
+
+	modifier = {
+		country_primary_culture_fervor_from_laws_add = 2
+		country_agitator_slots_add = 1
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+renaissance_sculptures = {
+	# Unlocks Art Center
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/stone.dds"
+	category = society
+
+	unlocking_technologies = {
+		patron_of_arts
+	}
+
+	modifier = {
+		building_stone_quarry_throughput_add = 0.1
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+landed_voting = {
+	# Unlocks Landed Voting Law
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/nobles_rights_laws.dds"
+	category = society
+
+	unlocking_technologies = {
+		renaissance
+	}
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+local_police_force = {
+	# Unlocks Local Police Force Law
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
+	category = society
+
+	modifier = {
+		country_institution_police_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		landed_voting
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
+renaissance_construction = {
+	# Unlocks New Construction Type
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/build_advance.dds"
+	category = society
+
+	modifier = {
+		state_building_construction_sector_max_level_add = 5
+		country_max_weekly_construction_progress_add = 5
+	}
+
+	unlocking_technologies = {
+		renaissance
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
+gravel_road = {
+	# Unlocks Gravel Road PM
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/road.dds"
+	category = society
+
+	modifier = {
+		state_harvest_condition_flood_impact_mult = -0.1
+	}
+
+	unlocking_technologies = {
+		renaissance_construction
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
+## BANKING ##
+
+banking = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/banking.dds"
+	category = society
+
+	modifier = {
+		country_loan_interest_rate_add = -0.02
+		state_max_trade_advantage_from_capacity_add = 0.05
+	}
+
+	unlocking_technologies = {
+		currency_standards
+	}
+
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+standardized_coins = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/standardized_coins.dds"
+	category = society
+
+	modifier = {
+		country_minting_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		banking
+	}
+
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+double_entry_bookkeeping = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/reduce_inflations.dds"
+	category = society
+
+	modifier = {
+		building_cash_reserves_mult = 0.2
+	}
+
+	unlocking_technologies = {
+		standardized_coins
+	}
+
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+tech_bureaucracy = {
+	# Unlocks Government Administration building
+	# Unlocks Isolationism - Economic System Law
+	# Unlocks Road Maintenance Decree
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/bureaucracy_law.dds"
+	category = society
+
+	modifier = {
+		country_institution_police_max_investment_add = 2
+	}
+
+	unlocking_technologies = {
+		banking
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
+land_based_taxation = {
+	# Unlocks Land Based Taxation
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/economical_policies_law.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		tech_bureaucracy
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
+guilds = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/guilds.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+	}
+
+	unlocking_technologies = {
+		banking
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+guild_charters = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/national_trade.dds"
+	category = society
+
+	modifier = {
+		country_free_charters_add = 2
+	}
+
+	unlocking_technologies = {
+		guilds
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+############ ERA 3 #####################
+new_world = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/new_world.dds"
+	category = society
+
+	modifier = {
+		country_max_declared_interests_add = 1
+		country_resource_discovery_chance_mult = 0.15
+	}
+
+	unlocking_technologies = {
+		banking
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+colonial_charters = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/colonies.dds"
+	category = society
+
+	modifier = {
+		country_institution_colonial_affairs_max_investment_add = 1		
+	}
+
+	unlocking_technologies = {
+		new_world
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+exploration_canada = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/exploration.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		new_world
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+exploration_caribbean = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/exploration.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		exploration_canada
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
 rationalism = {
 	# Unlocks Freedom of Conscience - Church and State Law
-	era = era_1
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/rationalism.dds"
 	category = society
 
@@ -163,53 +704,11 @@ rationalism = {
 	}
 }
 
-tech_bureaucracy = {
-	# Unlocks Government Administration building
-	# Unlocks Isolationism - Economic System Law
-	# Unlocks Road Maintenance Decree
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/scholasticism.dds"
-	category = society
-
-	modifier = {
-		country_institution_police_max_investment_add = 2
-	}
-
-	unlocking_technologies = {
-		urbanization
-	}
-
-	ai_weight = {
-		value = 3 # Very important in general
-	}
-}
-
-currency_standards = {
-	# Unlocks Payroll Tax - Income Taxation Law
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/currency_standards.dds"
-	category = society
-
-	unlocking_technologies = {
-		international_trade
-		centralization
-	}
-
-	ai_weight = {
-		value = 3 # Very important in general
-
-		if = {
-			limit = { has_journal_entry = je_sick_man_bureaucracy }
-			add = 20
-		}
-	}
-}
-
 democracy = {
 	# Unlocks Right of Assembly - Freedom of Speech Law
 	# Unlocks Landed Voting, Wealth Voting, Census Voting - Distribution of Power Laws
 	# Unlocks Presidential Republic, Parliamentary Republic - Governance Principles Law
-	era = era_1
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/democracy.dds"
 	category = society
 
@@ -218,7 +717,6 @@ democracy = {
 	}
 
 	unlocking_technologies = {
-		rationalism
 	}
 
 	ai_weight = {
@@ -230,7 +728,7 @@ romanticism = {
 	# Unlocks Arts Academy building
 	# Unlocks Greener Grass Campaign Decree
 	# Unlocks Agrarianism - Economic System Law
-	era = era_1
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/romanticism.dds"
 	category = society
 
@@ -239,7 +737,6 @@ romanticism = {
 	}
 
 	unlocking_technologies = {
-		academia
 	}
 
 	ai_weight = {
@@ -264,7 +761,7 @@ international_trade = {
 }
 
 centralization = {
-	era = era_1
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/centralization.dds"
 	category = society
 
@@ -275,7 +772,6 @@ centralization = {
 	}
 
 	unlocking_technologies = {
-		tech_bureaucracy
 	}
 
 	ai_weight = {
@@ -285,45 +781,6 @@ centralization = {
 			limit = { has_journal_entry = je_age_of_princes }
 			add = 20
 		}
-	}
-}
-
-corporate_charters = {
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/corporate_charters.dds"
-	category = society
-
-	modifier = {
-		country_max_companies_add = 1
-		country_free_charters_add = 2
-	}
-
-	unlocking_technologies = {
-		stock_exchange
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-banking = {
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/banking.dds"
-	category = society
-
-	modifier = {
-		country_minting_mult = 0.1
-		country_loan_interest_rate_add = -0.02
-		state_max_trade_advantage_from_capacity_add = 0.05
-	}
-
-	unlocking_technologies = {
-		currency_standards
-	}
-
-	ai_weight = {
-		value = 1.5 # Important in general
 	}
 }
 
@@ -350,13 +807,12 @@ colonization = {
 	# Unlocks Colonial Resettlement, Colonial Exploitation - Colonial Affairs Laws
 	# Unlocks various expedition decisions
 	# Unlocks the Suez Canal
-	era = era_1
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/colonization.dds"
 	category = society
 
 	modifier = {
 		country_institution_colonial_affairs_max_investment_add = 2
-		country_max_declared_interests_add = 1
 		country_infamy_generation_against_unrecognized_mult = -0.1
 	}
 
@@ -369,42 +825,8 @@ colonization = {
 	}
 }
 
-international_relations = {
-	# Unlocks Defensive Pact and Rivalry
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
-	category = society
-	unlocking_technologies = {
-		tech_bureaucracy
-	}
-
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
-
-law_enforcement = {
-	# Unlocks Local Police, Dedicated Police - Policing Laws
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/law_enforcement.dds"
-	category = society
-
-	modifier = {
-		country_institution_police_max_investment_add = 1
-	}
-
-	unlocking_technologies = {
-		tech_bureaucracy
-		urban_planning
-	}
-
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
-
 stock_exchange = {
-	era = era_1
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/stock_exchanges.dds"
 	category = society
 
@@ -413,7 +835,6 @@ stock_exchange = {
 	}
 
 	unlocking_technologies = {
-		international_trade
 	}
 
 	ai_weight = {
@@ -440,22 +861,41 @@ medical_degrees = {
 	}
 }
 
-mass_communication = {
+alchemy = {
+	# Increases the ratio of pop casualties that survive a battle
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/mass_communication.dds"
+	texture = "gfx/interface/icons/invention_icons/alchemy.dds"
 	category = society
 
 	modifier = {
-		country_authority_mult = 0.1
-		country_voting_power_mult = 0.1
+		state_harvest_condition_disease_outbreak_impact_mult = -0.1
 	}
 
 	unlocking_technologies = {
-		democracy
+		organized_religion
 	}
 
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1
+	}
+}
+
+organized_religion = {
+	# 
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/organized_religion.dds"
+	category = society
+
+	modifier = {
+		state_clergymen_investment_pool_efficiency_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		legalism
+	}
+
+	ai_weight = {
+		value = 1
 	}
 }
 
@@ -488,7 +928,7 @@ egalitarianism = {
 	# Unlocks Egalitarian - Citizenship Law
 	# Unlocks Proportional Taxation - Income Taxation Law
 	# New leaders may spawn with the Radical Ideology
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/egalitarianism.dds"
 	category = society
 
@@ -498,7 +938,6 @@ egalitarianism = {
 	}
 
 	unlocking_technologies = {
-		democracy
 	}
 
 	on_researched = {
@@ -539,7 +978,7 @@ egalitarianism = {
 
 pharmaceuticals = {
 	# Increases the ratio of pop casualties that survive a battle
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/pharmaceuticals.dds"
 	category = society
 
@@ -549,7 +988,7 @@ pharmaceuticals = {
 	}
 
 	unlocking_technologies = {
-		medical_degrees
+
 	}
 
 	ai_weight = {
@@ -558,7 +997,7 @@ pharmaceuticals = {
 }
 
 modern_sewerage = {
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/modern_sewerage.dds"
 	category = society
 
@@ -582,7 +1021,7 @@ modern_sewerage = {
 
 quinine = {
 	# Permits colonization of state regions with the Malaria trait
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/quinine.dds"
 	category = society
 
@@ -625,28 +1064,10 @@ quinine = {
 	}
 }
 
-organized_sports = {
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/organized_sports.dds"
-	category = society
-
-	modifier = {
-		country_prestige_mult = 0.1
-	}
-
-	unlocking_technologies = {
-		nationalism
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 central_archives = {
 	# Unlocks Secret Police - Internal Security Law
 	# Unlocks Horizontal Drawer Cabinets PM for Government Administration
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/central_archives.dds"
 	category = society
 
@@ -657,7 +1078,6 @@ central_archives = {
 	}
 
 	unlocking_technologies = {
-		centralization
 	}
 
 	on_researched = {
@@ -699,7 +1119,7 @@ central_archives = {
 }
 
 central_banking = {
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/central_banking.dds"
 	category = society
 
@@ -710,7 +1130,6 @@ central_banking = {
 	}
 
 	unlocking_technologies = {
-		banking
 	}
 
 	ai_weight = {
@@ -719,7 +1138,7 @@ central_banking = {
 }
 
 joint_stock_companies = {
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/joint_stock_companies.dds"
 	category = society
 
@@ -729,32 +1148,10 @@ joint_stock_companies = {
 	}
 
 	unlocking_technologies = {
-		banking
-		corporate_charters
 	}
 
 	ai_weight = {
 		value = 2 # important tech
-	}
-}
-
-dialectics = {
-	# Unlocks Philosophy Department PM in Universities
-
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/dialectics.dds"
-	category = society
-
-	modifier = {
-		country_institution_schools_max_investment_add = 1
-	}
-
-	unlocking_technologies = {
-		empiricism
-	}
-
-	ai_weight = {
-		value = 1
 	}
 }
 
@@ -780,7 +1177,7 @@ psychiatry = {
 
 realism = {
 	# Unlocks Realist Art PM in Art Academies
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/realism.dds"
 	category = society
 
@@ -789,7 +1186,6 @@ realism = {
 	}
 
 	unlocking_technologies = {
-		romanticism
 	}
 
 	ai_weight = {
@@ -903,7 +1299,7 @@ labor_movement = {
 }
 
 postal_savings = {
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/postal_savings.dds"
 	category = society
 
@@ -917,7 +1313,6 @@ postal_savings = {
 	}
 
 	unlocking_technologies = {
-		stock_exchange
 	}
 
 	ai_weight = {
@@ -926,136 +1321,6 @@ postal_savings = {
 }
 
 ### ERA 3
-
-human_rights = {
-	# Unlocks Worker Protections - Labor Rights Law
-	# Unlocks Protected Speech - Freedom of Speech Law
-	# Unlocks Compulsory Schooling - Children's Rights Laws
-	# Unlocks Old Age Pensions - Social Security Laws
-	# Should presumably unlock a lot of Laws in the Human Rights category of Laws
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/human_rights.dds"
-	category = society
-
-	modifier = {
-		country_institution_social_security_max_investment_add = 1
-	}
-
-	unlocking_technologies = {
-		egalitarianism
-	}
-
-	ai_weight = {
-		value = 1
-
-		if = {
-			limit = {
-				has_strategy = ai_strategy_progressive_agenda
-			}
-			add = 0.5
-		}
-		if = {
-			limit = {
-				has_strategy = ai_strategy_egalitarian_agenda
-			}
-			add = 1
-		}
-		if = {
-			limit = {
-				OR = {
-					has_strategy = ai_strategy_conservative_agenda
-					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
-				}
-			}
-			add = -0.5
-		}
-	}
-}
-
-feminism = {
-	# Unlocks Women in the Workplace - Rights of Women Law
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/feminism.dds"
-	category = society
-
-	on_researched = {
-		if = {
-			limit = {
-				NOT = { has_variable = feminism_researched }
-			}
-			set_variable = feminism_researched
-			custom_tooltip = {
-				text = liberal_and_egalitarian_amended_tt
-				every_interest_group = {
-					limit = {
-						has_ideology = ideology:ideology_liberal
-					}
-					remove_ideology = ideology_liberal
-					add_ideology = ideology_liberal_modern
-				}
-				every_interest_group = {
-					limit = {
-						has_ideology = ideology:ideology_egalitarian
-					}
-					remove_ideology = ideology_egalitarian
-					add_ideology = ideology_egalitarian_modern
-				}
-			}
-		}
-	}
-
-	modifier = {
-		country_institution_social_security_max_investment_add = 1
-	}
-
-	unlocking_technologies = {
-		human_rights
-	}
-
-	ai_weight = {
-		value = 1
-
-		if = {
-			limit = {
-				has_strategy = ai_strategy_egalitarian_agenda
-			}
-			add = 1
-		}
-		if = {
-			limit = {
-				OR = {
-					has_strategy = ai_strategy_conservative_agenda
-					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
-				}
-			}
-			add = -0.5
-		}
-	}
-}
-
-steel_frame_buildings = {
-	# Unlocks Covered Markets PM in Urban Centers
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
-	category = society
-	modifier = {
-		state_infrastructure_from_population_add = 1
-		state_infrastructure_from_population_max_add = 20
-		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 5
-		state_harvest_condition_flood_impact_mult = -0.05
-	}
-
-	unlocking_technologies = {
-		modern_sewerage
-	}
-
-	ai_weight = {
-		value = 2 # Important in general
-	}
-}
 
 civilizing_mission = {
 	# Unlocks Panama Canal survey expedition decision
@@ -1092,39 +1357,6 @@ civilizing_mission = {
 				has_strategy = ai_strategy_colonial_expansion
 			}
 			add = 1
-		}
-	}
-}
-
-anarchism = {
-	# Unlocks Anarchy - Distribution of Power Law
-	# New leaders may spawn with the Anarchist Ideology
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/anarchy.dds"
-	category = society
-
-	unlocking_technologies = {
-		egalitarianism
-	}
-
-	ai_weight = {
-		value = 1
-
-		if = {
-			limit = {
-				has_strategy = ai_strategy_egalitarian_agenda
-			}
-			add = 1
-		}
-		if = {
-			limit = {
-				OR = {
-					has_strategy = ai_strategy_conservative_agenda
-					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
-				}
-			}
-			add = -0.5
 		}
 	}
 }
@@ -1309,25 +1541,6 @@ investment_banks = {
 	}
 }
 
-camera = {
-	# Unlocks Photographic Art, Improved Propaganda Centers PMs in Art Academy
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/camera.dds"
-	category = society
-
-	modifier = {
-		country_prestige_mult = 0.05
-	}
-
-	unlocking_technologies = {
-		realism
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 philosophical_pragmatism = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
@@ -1371,45 +1584,6 @@ identification_documents = {
 }
 
 ### ERA 4
-elevator = {
-	# Unlocks Arcades PM in Urban Center
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/elevator.dds"
-	category = society
-
-	modifier = {
-		state_infrastructure_from_population_add = 1
-		state_infrastructure_from_population_max_add = 20
-		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 5
-	}
-
-	unlocking_technologies = {
-		steel_frame_buildings
-	}
-
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
-
-zeppelins = {
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/zeppelins.dds"
-	category = society
-
-	modifier = {
-		state_market_access_price_impact = 0.05
-	}
-
-	unlocking_technologies = {
-		steel_frame_buildings
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
 
 malaria_prevention = {
 	# Should permit for colonization of state regions with severe malaria
@@ -1572,49 +1746,6 @@ psychoanalysis = {
 	}
 }
 
-film = {
-	# Unlocks Film Propaganda Center PM in Arts Academies
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/film.dds"
-	category = society
-
-	modifier = {
-		country_prestige_mult = 0.05
-	}
-
-	unlocking_technologies = {
-		camera
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-multilateral_alliances = {
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/multilateral_alliances.dds"
-	category = society
-
-	modifier = {
-		country_infamy_generation_mult = -0.25
-		country_allow_multiple_alliances_bool = yes
-	}
-
-	unlocking_technologies = {
-		pan-nationalism
-	}
-
-	ai_weight = {
-		value = 1
-
-		if = {
-			limit = { country_rank >= rank_value:great_power }
-			add = 2
-		}
-	}
-}
-
 ### ERA 5
 
 mass_surveillance = {
@@ -1640,50 +1771,6 @@ mass_surveillance = {
 	}
 }
 
-antibiotics = {
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/antibiotics.dds"
-	category = society
-
-	modifier = {
-		country_institution_health_system_max_investment_add = 1
-		state_harvest_condition_disease_outbreak_impact_mult = -0.15
-	}
-
-	unlocking_technologies = {
-		malaria_prevention
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-mass_propaganda = {
-	# Unlocks Better Radios PM in Electrics Industries
-	# New leaders may spawn with the Fascist Ideology
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/mass_propaganda.dds"
-	category = society
-
-	modifier = {
-		country_authority_mult = 0.1
-		country_voting_power_mult = 0.1
-		state_expected_sol_from_literacy = 1
-		country_agitator_slots_add = 1
-		country_support_separatism_strength_mult = 0.25
-	}
-
-	unlocking_technologies = {
-		political_agitation
-		film
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 modern_financial_instruments = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/modern_financial_instruments.dds"
@@ -1702,28 +1789,8 @@ modern_financial_instruments = {
 	}
 }
 
-macroeconomics = {
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
-	category = society
-
-	modifier = {
-		country_max_companies_add = 1
-		state_market_access_price_impact = 0.05
-	}
-
-	unlocking_technologies = {
-		international_exchange_standards
-		corporate_management
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
 behaviorism = {
-	era = era_5
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
 	category = society
 
@@ -1739,38 +1806,5 @@ behaviorism = {
 
 	ai_weight = {
 		value = 1
-	}
-}
-
-analytical_philosophy = {
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/analytical_philosophy.dds"
-	category = society
-
-	unlocking_technologies = {
-		psychoanalysis
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-paved_roads = {
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
-	category = society
-	should_update_map = yes # This technology adds paved roads to the map
-
-	modifier = {
-		state_infrastructure_from_automobiles_consumption_add = 0.25
-	}
-
-	unlocking_technologies = {
-		elevator
-	}
-
-	ai_weight = {
-		value = 2 # Important for those nice-looking roads!
 	}
 }

@@ -38,9 +38,8 @@ building_cloth_workshop = {
 	}
 
 	production_method_groups = {
-		pmg_base_building_textile_mill
-		pmg_luxury_building_textile_mill
-		pmg_automation_building_textile_mill
+		pmg_building_cloth_workshop_main
+		pmg_building_cloth_workshop_leather
 	}
 
 	required_construction = construction_cost_high
@@ -62,9 +61,7 @@ building_furniture_workshop = {
 	}
 
 	production_method_groups = {
-		pmg_base_building_furniture_manufactory
-		pmg_luxury_building_furniture_manufactory
-		pmg_automation_building_furniture_manufactory
+		pmg_building_furniture_workshop_main
 	}
 
 	required_construction = construction_cost_high
@@ -135,7 +132,7 @@ building_paper_mill = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_paper_mill
+		pmg_building_paper_mill_main
 		pmg_automation_building_paper_mill
 	}
 
@@ -189,7 +186,7 @@ building_shipyard = {
 	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
 
 	unlocking_technologies = {
-		navigation
+		shipbuilding
 	}
 
 	production_method_groups = {
@@ -259,7 +256,7 @@ building_saltpeter_works = {
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
 	unlocking_technologies = {
-		percussion_cap
+		saltpeter_works
 	}
 
 	production_method_groups = {
@@ -292,7 +289,7 @@ building_pottery_workshop = {
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
 	unlocking_technologies = {
-		percussion_cap
+		pottery
 	}
 
 	production_method_groups = {
@@ -325,7 +322,7 @@ building_brewery = {
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
 	unlocking_technologies = {
-		percussion_cap
+		brewery
 	}
 
 	production_method_groups = {
@@ -358,7 +355,7 @@ building_tannery = {
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
 	unlocking_technologies = {
-		percussion_cap
+		tannery
 	}
 
 	production_method_groups = {

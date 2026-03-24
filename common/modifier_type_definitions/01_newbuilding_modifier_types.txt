@@ -102,6 +102,14 @@ goods_input_cannons_add={
 	}
 }
 
+goods_input_warhorse_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_output_stone_add={
 	decimals=1
 	color=good
@@ -199,6 +207,14 @@ goods_output_leather_add={
 }
 
 goods_output_cannons_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_warhorse_add={
 	decimals=1
 	color=good
 	game_data={
