@@ -387,7 +387,7 @@ ROM = {
 
 	required_states_fraction = 0.375 # Romania has 8 possible homeland states total, 3 are required.
 
-	ai_will_do = { always = yes }
+	ai_will_do = { always = no }
 
 	possible = {
 		NOR = {
@@ -708,7 +708,7 @@ UNL = {
 
 	required_states_fraction = 1
 
-	ai_will_do = { always = yes }
+	ai_will_do = { always = no }
 }
 
 RHN = {

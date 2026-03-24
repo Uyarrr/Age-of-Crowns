@@ -628,7 +628,24 @@ new_world = {
 	}
 
 	unlocking_technologies = {
-		banking
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+colonization = {
+	#Unlocks Colonial Laws
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/colonial_policy.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		new_world
 	}
 
 	ai_weight = {
@@ -646,7 +663,7 @@ colonial_charters = {
 	}
 
 	unlocking_technologies = {
-		new_world
+		colonization
 	}
 
 	ai_weight = {
@@ -660,10 +677,28 @@ exploration_canada = {
 	category = society
 
 	modifier = {
+		country_institution_cost_institution_colonial_affairs_mult = -0.05
 	}
 
 	unlocking_technologies = {
 		new_world
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+colonial_east_canada = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		exploration_canada
 	}
 
 	ai_weight = {
@@ -677,10 +712,168 @@ exploration_caribbean = {
 	category = society
 
 	modifier = {
+		country_institution_cost_institution_colonial_affairs_mult = -0.05
 	}
 
 	unlocking_technologies = {
-		exploration_canada
+		new_world
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+colonial_caribbean = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		exploration_caribbean
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+exploration_north_america = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/exploration.dds"
+	category = society
+
+	modifier = {
+		country_institution_cost_institution_colonial_affairs_mult = -0.05
+	}
+
+	unlocking_technologies = {
+		new_world
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+colonial_east_north_america = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		exploration_north_america
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+exploration_east_mexico = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/exploration.dds"
+	category = society
+
+	modifier = {
+		country_institution_cost_institution_colonial_affairs_mult = -0.05
+	}
+
+	unlocking_technologies = {
+		new_world
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+colonization_east_mexico = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		exploration_east_mexico
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+exploration_central_america = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/exploration.dds"
+	category = society
+
+	modifier = {
+		country_institution_cost_institution_colonial_affairs_mult = -0.05
+	}
+
+	unlocking_technologies = {
+		new_world
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+colonial_central_america = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		exploration_central_america
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+exploration_south_america = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/exploration.dds"
+	category = society
+
+	modifier = {
+		country_institution_cost_institution_colonial_affairs_mult = -0.05
+	}
+
+	unlocking_technologies = {
+		new_world
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+colonial_east_south_america = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		exploration_south_america
 	}
 
 	ai_weight = {
@@ -803,28 +996,6 @@ academia = {
 	}
 }
 
-colonization = {
-	# Unlocks Colonial Resettlement, Colonial Exploitation - Colonial Affairs Laws
-	# Unlocks various expedition decisions
-	# Unlocks the Suez Canal
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/colonization.dds"
-	category = society
-
-	modifier = {
-		country_institution_colonial_affairs_max_investment_add = 2
-		country_infamy_generation_against_unrecognized_mult = -0.1
-	}
-
-	unlocking_technologies = {
-		international_relations
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 stock_exchange = {
 	era = era_6
 	texture = "gfx/interface/icons/invention_icons/stock_exchanges.dds"
@@ -844,7 +1015,7 @@ stock_exchange = {
 
 medical_degrees = {
 	# Unlocks Private Health Insurance, Public Health Insurance - Health System Laws
-	era = era_1
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/medical_degrees.dds"
 	category = society
 

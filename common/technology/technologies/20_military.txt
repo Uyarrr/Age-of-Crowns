@@ -114,10 +114,29 @@ navigation = {
 	}
 }
 
+naval_traditions = {
+	# Increases Naval Max Level
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
+	category = military
+
+	unlocking_technologies = {
+		shipbuilding
+	}
+
+	modifier = {
+		state_building_naval_base_max_level_add = 10
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 cog = {
 	# Unlocks Cog
 	era = era_1
-	texture = "gfx/unit_illustrations/light_ships_1.dds"
+	texture = "gfx/invention_icons/lightship_1.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -138,11 +157,11 @@ cog = {
 traditional_galley = {
 	# Unlocks Traditional Galley
 	era = era_1
-	texture = "gfx/unit_illustrations/capital_ships_1.dds"
+	texture = "gfx/invention_icons/lightship_1.dds"
 	category = military
 
 	unlocking_technologies = {
-		cog
+		naval_traditions
 	}
 
 	ai_weight = {
@@ -199,7 +218,6 @@ professional_army = {
 	category = military
 
 	unlocking_technologies = {
-
 	}
 
 	ai_weight = {
@@ -391,183 +409,8 @@ message_relays = {
 	}
 }
 
-admiralty = {
-	# Unlocks Naval Base building
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/admiralty.dds"
-	category = military
-
-	modifier = {
-		state_building_naval_base_max_level_add = 20
-    }
-
-	unlocking_technologies = {
-		navigation
-	}
-
-	ai_weight = {
-		value = 3 # Very important in general
-	}
-}
-
-paddle_steamer = {
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/paddle_steamer.dds"
-	category = military
-
-	modifier = {
-		unit_navy_offense_mult = 0.1
-		unit_navy_defense_mult = 0.1
-	}
-
-	unlocking_technologies = {
-		admiralty
-	}
-
-	ai_weight = {
-		value = 1
-
-		# Important for naval powers
-		if = {
-			limit = { navy_size >= 20 }
-			add = 0.5
-		}
-	}
-}
-
-### ERA 2
-
-field_works = {
-	# Increases defense
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/field_works.dds"
-	category = military
-
-	modifier = {
-		# defensive bonus, either directly to army or (ideally) a fortifications bonus, if we get forts
-		# Lower kill rate?
-		unit_army_defense_mult = 0.1
-	}
-
-	unlocking_technologies = {
-		napoleonic_warfare
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-triage = {
-	# Unlocks Basic Medical Aid PM in Barracks
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/triage.dds"
-	category = military
-
-	unlocking_technologies = {
-		logistics
-	}
-
-	ai_weight = {
-		value = 1
-
-		if = {
-			limit = {
-				has_strategy = ai_strategy_unify_germany
-			}
-			add = 8
-		}
-	}
-}
-
-screw_frigate = {
-	# Unlocks Complex Shipbuilding PM in Shipyards
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/screw_frigate.dds"
-	category = military
-
-	modifier = {
-		# ship go faster
-	}
-
-	unlocking_technologies = {
-		paddle_steamer
-	}
-
-	ai_weight = {
-		value = 1
-
-		# Important for naval powers
-		if = {
-			limit = { navy_size >= 20 }
-			add = 0.5
-		}
-	}
-}
-
-power_of_the_purse = {
-	# Unlocks the Power of the Purse PM in Naval Bases
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/power_of_the_purse.dds"
-	category = military
-
-	modifier = {
-		state_building_naval_base_max_level_add = 10
-	}
-
-	unlocking_technologies = {
-		admiralty
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-### ERA 3
-
-modern_nursing = {
-	# Unlocks Field Hospitals PM in Barracks
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/modern_nursing.dds"
-	category = military
-
-	unlocking_technologies = {
-		triage
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-enlistment_offices = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/enlistment_offices.dds"
-	category = military
-
-	modifier = {
-		state_conscription_rate_mult = 0.2
-	}
-
-	unlocking_technologies = {
-		logistics
-	}
-
-	ai_weight = {
-		value = 1
-
-		if = {
-			limit = {
-				has_strategy = ai_strategy_unify_germany
-			}
-			add = 8
-		}
-	}
-}
-
 electric_telegraph = {
-	era = era_3
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/electrical_telegraph.dds"
 	category = military
 
@@ -576,7 +419,6 @@ electric_telegraph = {
 	}
 
 	unlocking_technologies = {
-		logistics
 	}
 
 	ai_weight = {
@@ -591,62 +433,10 @@ electric_telegraph = {
 	}
 }
 
-military_statistics = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/military_statistics.dds"
-	category = military
-
-
-	modifier = {
-		military_formation_organization_gain_mult = 0.2
-	}
-
-	unlocking_technologies = {
-		electric_telegraph
-		general_staff
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-repeaters = {
-	# Unlocks Repeaters PM in Arms Industry
-	# Global Unlock for Repeaters PM in Barracks
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/repeaters.dds"
-	category = military
-
-	unlocking_technologies = {
-		rifling
-	}
-
-	ai_weight = {
-		value = 1.5 # Important tech in general
-	}
-}
-
 ### ERA 4
 
-bolt_action_rifles = {
-	# Unlocks Bolt Action Rifles PM in Arms Industry
-	# Global Unlock for Bolt Action Rifles PM in Barracks
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/bolt_action_rifles.dds"
-	category = military
-
-	unlocking_technologies = {
-		repeaters
-	}
-
-	ai_weight = {
-		value = 2 # important for everyone
-	}
-}
-
 landing_craft = {
-	era = era_4
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/landing_craft.dds"
 	category = military
 
@@ -655,8 +445,6 @@ landing_craft = {
 	}
 
 	unlocking_technologies = {
-		jeune_ecole
-		monitor_tech
 	}
 
 	ai_weight = {

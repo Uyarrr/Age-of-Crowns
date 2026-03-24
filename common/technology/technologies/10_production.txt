@@ -228,7 +228,7 @@ fishing = {
 sheep_ranching = {
 	# Unlocks Wool PM for Livestock
 	era = era_1
-	texture = "gfx/interface/icons/goods_icons/wool.dds"
+	texture = "gfx/interface/icons/goods_icons/fabric.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -237,22 +237,6 @@ sheep_ranching = {
 
 	ai_weight = {
 		value = 3 # Important tech in general
-	}
-}
-
-sericulture = {
-	# Unlocks Mulberry Groves PM on Rice Farms
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
-	category = production
-	can_research = no
-
-	modifier = {
-		building_silk_plantation_throughput_add = 0.25
-	}
-
-	ai_weight = {
-		value = 1
 	}
 }
 
@@ -302,6 +286,7 @@ brewery = {
 }
 
 ######## AGE 2 ##########
+
 workshop_standardization = {
 	# Increases Economy Scale Cap
 	era = era_2
@@ -313,7 +298,6 @@ workshop_standardization = {
 	}
 
 	unlocking_technologies = {
-		agriculture
 	}
 
 	ai_weight = {
@@ -396,7 +380,8 @@ new_world_crops = {
 	}
 
 	unlocking_technologies = {
-		colonial_charters
+		expanded_quarrying
+		encourage_resource_industry
 	}
 
 	ai_weight = {
@@ -505,6 +490,8 @@ standardized_planks_and_bricks = {
 	}
 
 	unlocking_technologies = {
+		expanded_quarrying
+		encourage_resource_industry
 	}
 
 	ai_weight = {
@@ -600,71 +587,3 @@ apprenticeship_system = {
 		value = 3 # very important tech
 	}
 }
-
-
-distillation = {
-	# Unlocks Pot Stills PM in Food Industry
-	# Unlocks Sweeteners PM in Food Industry
-	# Unlocks Fish Press PM in Fishing Wharfs
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/distillation.dds"
-	category = production
-
-	unlocking_technologies = {
-		manufacturies
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-steelworking = {
-	# Unlocks Steel Mills
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/steelworking.dds"
-	category = production
-
-	unlocking_technologies = {
-		shaft_mining
-	}
-
-	ai_weight = {
-		value = 1
-
-		if = {
-			limit = {
-				OR = {
-					 has_strategy = ai_strategy_industrial_expansion
-					 has_strategy = ai_strategy_resource_expansion
-				}
-			}
-			add = 1
-		}
-	}
-}
-
-pneumatic_tools = {
-	# +15% construction throughput
-	# Countries get a +25% chance of discovering new resources
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/pneumatic_tools.dds"
-	category = production
-
-	modifier = {
-		building_construction_sector_throughput_add = 0.1
-		goods_output_hardwood_mult = 0.25
-		country_resource_discovery_chance_mult = 0.25
-	}
-
-	unlocking_technologies = {
-		rotary_valve_engine
-		reinforced_concrete
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-### ERA 5

@@ -1,28 +1,35 @@
-﻿pm_building_weapon_workshop_main_1 = {
+﻿pm_building_port_main_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
 
 	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_stone_add = 20	
-			goods_input_wood_add = 10
-
-			# output goods
-			goods_output_weapons_add = 20
+			workforce_scaled = {
+				goods_input_wood_add = 10 # 300
+				goods_output_merchant_marine_add = 10
+			}
+			level_scaled = {
+				building_employment_laborers_add = 700
+				building_employment_clerks_add = 200
+				building_employment_bureaucrats_add = 100
+			}
 		}
 
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 4500
+		country_modifiers = {
+			workforce_scaled = {
+				country_convoys_capacity_add = 100
+			}
 		}
-	}
+		state_modifiers = {
+			workforce_scaled = {
+				state_infrastructure_add = 3
+			}
+		}
 }
 
-pm_building_weapon_workshop_main_2 = {
+pm_building_port_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		steelworking
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -43,10 +50,11 @@ pm_building_weapon_workshop_main_2 = {
 	}
 }
 
-pm_building_weapon_workshop_main_3 = {
+pm_building_port_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+
 	unlocking_technologies = {
-		mechanical_tools
+		behaviorism
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -67,10 +75,11 @@ pm_building_weapon_workshop_main_3 = {
 	}
 }
 
-pm_building_weapon_workshop_main_4 = {
+pm_building_port_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
+	
 	unlocking_technologies = {
-		vulcanization
+		behaviorism
 	}
 	building_modifiers = {
 		workforce_scaled = {
