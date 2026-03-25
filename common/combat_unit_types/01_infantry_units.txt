@@ -16,8 +16,8 @@ combat_unit_type_infantry_1 = {
 	unlocking_technologies = { peasant_levy }
 
     battle_modifier = {
-        unit_offense_add = 10
-        unit_defense_add = 10
+        unit_offense_add = 8
+        unit_defense_add = 12
         unit_morale_loss_add = 15
     }
 
@@ -89,8 +89,8 @@ combat_unit_type_infantry_2 = {
 	unlocking_technologies = { men_at_arms }
 
     battle_modifier = { 
-        unit_offense_add = 20
-        unit_defense_add = 20
+        unit_offense_add = 15
+        unit_defense_add = 25
     }
 
     upkeep_modifier = {
@@ -161,8 +161,8 @@ combat_unit_type_infantry_3 = {
 	unlocking_technologies = { behaviorism }
 
     battle_modifier = { 
-        unit_offense_add = 30
-        unit_defense_add = 30
+        unit_offense_add = 25
+        unit_defense_add = 35
     }
 
     upkeep_modifier = {
@@ -233,8 +233,8 @@ combat_unit_type_infantry_4 = {
 	unlocking_technologies = { behaviorism }
 
     battle_modifier = { 
-        unit_offense_add = 40
-        unit_defense_add = 40
+        unit_offense_add = 35
+        unit_defense_add = 45
     }
 
     upkeep_modifier = {
@@ -304,8 +304,8 @@ combat_unit_type_infantry_5 = {
 	unlocking_technologies = { behaviorism }
 
     battle_modifier = { 
-        unit_offense_add = 50
-        unit_defense_add = 50
+        unit_offense_add = 45
+        unit_defense_add = 55
     }
 
     upkeep_modifier = {
@@ -375,8 +375,8 @@ combat_unit_type_infantry_6 = {
 	unlocking_technologies = { behaviorism }
 
     battle_modifier = { 
-        unit_offense_add = 60
-        unit_defense_add = 60
+        unit_offense_add = 55
+        unit_defense_add = 65
     }
 
     upkeep_modifier = {

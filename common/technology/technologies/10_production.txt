@@ -383,6 +383,21 @@ bronze_tools = {
 	}
 }
 
+expanded_copper_mining = {
+	# Unlocks Copper Mining PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/copper.dds"
+	category = production
+
+	unlocking_technologies = {
+		bronze_tools
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 ######## AGE 3 ######
 
 new_world_crops = {
@@ -395,8 +410,6 @@ new_world_crops = {
 	}
 
 	unlocking_technologies = {
-		expanded_quarrying
-		encourage_resource_industry
 	}
 
 	ai_weight = {
@@ -505,8 +518,6 @@ standardized_planks_and_bricks = {
 	}
 
 	unlocking_technologies = {
-		expanded_quarrying
-		encourage_resource_industry
 	}
 
 	ai_weight = {
@@ -593,6 +604,7 @@ apprenticeship_system = {
 
 	modifier = {
 		state_pop_qualifications_mult = 0.15
+		state_education_access_wealth_add = 0.025
 	}
 
 	unlocking_technologies = {
@@ -602,3 +614,4 @@ apprenticeship_system = {
 		value = 3 # very important tech
 	}
 }
+

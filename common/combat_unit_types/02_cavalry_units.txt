@@ -16,12 +16,14 @@ combat_unit_type_cavalry_1 = {
 	unlocking_technologies = { horsemen }
 
     upkeep_modifier = {
+        goods_input_warhorse_add = 1
     }
 
     battle_modifier = {
-        unit_offense_add = 10
-        unit_defense_add = 10
+        unit_offense_add = 12
+        unit_defense_add = 8
         unit_morale_loss_add = 15
+        unit_morale_damage_mult = 0.2
         unit_occupation_mult = 0.3
     }
 
@@ -91,11 +93,14 @@ combat_unit_type_cavalry_2 = {
 
     upkeep_modifier = {
         goods_input_weapons_add = 1
+        goods_input_warhorse_add = 1
     }
 
-    battle_modifier = { 
-        unit_offense_add = 20
-        unit_defense_add = 20
+    battle_modifier = {
+        unit_offense_add = 24
+        unit_defense_add = 16
+        unit_morale_loss_add = 10
+        unit_morale_damage_mult = 0.2
         unit_occupation_mult = 0.3
     }
 
@@ -163,13 +168,16 @@ combat_unit_type_cavalry_3 = {
 	unlocking_technologies = { behaviorism }
 
     battle_modifier = { 
-        unit_offense_add = 30
-        unit_defense_add = 30
+        unit_offense_add = 34
+        unit_defense_add = 26
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
     }
 
     upkeep_modifier = {
         goods_input_weapons_add = 2
-        goods_input_leather_add = 1
+        goods_input_leather_add = 4
+        goods_input_warhorse_add = 2
     }
 
     combat_unit_image = {
@@ -235,8 +243,10 @@ combat_unit_type_cavalry_4 = {
 	unlocking_technologies = { behaviorism }
 
     battle_modifier = { 
-        unit_offense_add = 40
-        unit_defense_add = 40
+        unit_offense_add = 44
+        unit_defense_add = 36
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
     }
 
     upkeep_modifier = {
@@ -306,8 +316,10 @@ combat_unit_type_cavalry_5 = {
 	unlocking_technologies = { behaviorism }
 
     battle_modifier = { 
-        unit_offense_add = 50
-        unit_defense_add = 50
+        unit_offense_add = 55
+        unit_defense_add = 45
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
     }
 
     upkeep_modifier = {
@@ -377,8 +389,10 @@ combat_unit_type_cavalry_6 = {
 	unlocking_technologies = { behaviorism }
 
     battle_modifier = { 
-        unit_offense_add = 60
-        unit_defense_add = 60
+        unit_offense_add = 66
+        unit_defense_add = 54
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
     }
 
     upkeep_modifier = {

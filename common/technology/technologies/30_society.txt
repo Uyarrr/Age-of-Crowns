@@ -143,15 +143,14 @@ national_guard = {
 	}
 }
 
-classic_scholasticism = {
-	# Increases Education
+religious_schools = {
+	# Unlocks Religious School Law
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/scholasticism.dds"
+	texture = "gfx/interface/icons/invention_icons/clergy_rights_laws.dds"
 	category = society
 
 	modifier = {
 		state_education_access_wealth_add = 0.005
-		country_institution_cost_institution_schools_mult = -0.10
 	}
 
 	unlocking_technologies = {
@@ -159,7 +158,7 @@ classic_scholasticism = {
 	}
 
 	ai_weight = {
-		value = 1 # Very important in general
+		value = 3 # Very important in general
 	}
 }
 
@@ -174,7 +173,7 @@ trading = {
 	}
 
 	ai_weight = {
-		value = 1 # Very important in general
+		value = 3 # Very important in general
 	}
 }
 
@@ -274,6 +273,44 @@ expanded_archives = {
 	}
 }
 
+alchemy = {
+	# Increases the ratio of pop casualties that survive a battle
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/alchemy.dds"
+	category = society
+
+	modifier = {
+		state_harvest_condition_disease_outbreak_impact_mult = -0.1
+	}
+
+	unlocking_technologies = {
+		organized_religion
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+organized_religion = {
+	# 
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/organized_religion.dds"
+	category = society
+
+	modifier = {
+		state_clergymen_investment_pool_efficiency_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		legalism
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 ############# AGE 2 #################
 
 renaissance = {
@@ -291,7 +328,7 @@ renaissance = {
 	}
 
 	ai_weight = {
-		value = 1 # Very important in general
+		value = 3 # Very important in general
 	}
 }
 
@@ -309,25 +346,22 @@ tenant_farmers = {
 	}
 
 	ai_weight = {
-		value = 1 # Very important in general
+		value = 3 # Very important in general
 	}
 }
 
-favorable_social_mobility = {
+agrarianism = {
+	#Unlocks Agrarianism Law
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/pop_promotion_speed.dds"
+	texture = "gfx/interface/icons/invention_icons/economical_policies_law.dds"
 	category = society
-
-	modifier = {
-	state_pop_qualifications_mult = 0.10
-	}
 
 	unlocking_technologies = {
 		tenant_farmers
 	}
 
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 3 # Important in general
 	}
 }
 
@@ -345,7 +379,7 @@ university = {
 	}
 
 	ai_weight = {
-		value = 1 # Very important in general
+		value = 3 # Very important in general
 	}
 }
 
@@ -365,7 +399,7 @@ institutions = {
 	}
 
 	ai_weight = {
-		value = 1
+		value = 3
 	}
 }
 
@@ -881,6 +915,62 @@ colonial_east_south_america = {
 	}
 }
 
+printing_press = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/printing_press.dds"
+	category = society
+
+	modifier = {
+		country_institution_schools_max_investment_add = 1
+		state_education_access_add = 0.03
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+paved_road = {
+	#Unlocks Road PM
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/paved_road.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		printing_press
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+diplomatic_network = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/expanded_archives.dds"
+	category = society
+
+	modifier = {
+		country_influence_mult = 0.15
+	}
+
+	unlocking_technologies = {
+		printing_press
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+######## AGE 4 ##########
+
 rationalism = {
 	# Unlocks Freedom of Conscience - Church and State Law
 	era = era_6
@@ -1032,47 +1122,9 @@ medical_degrees = {
 	}
 }
 
-alchemy = {
-	# Increases the ratio of pop casualties that survive a battle
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/alchemy.dds"
-	category = society
-
-	modifier = {
-		state_harvest_condition_disease_outbreak_impact_mult = -0.1
-	}
-
-	unlocking_technologies = {
-		organized_religion
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-organized_religion = {
-	# 
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/organized_religion.dds"
-	category = society
-
-	modifier = {
-		state_clergymen_investment_pool_efficiency_mult = 0.1
-	}
-
-	unlocking_technologies = {
-		legalism
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 empiricism = {
 	# Unlocks Total Separation - Church and State Law
-	era = era_1
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/empiricism.dds"
 	category = society
 
@@ -1202,8 +1254,6 @@ quinine = {
 	}
 
 	unlocking_technologies = {
-		colonization
-		pharmaceuticals
 	}
 
 	ai_weight = {
@@ -1327,7 +1377,7 @@ joint_stock_companies = {
 }
 
 psychiatry = {
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
 	category = society
 
@@ -1367,7 +1417,7 @@ realism = {
 nationalism = {
 	# Unlocks the Immigration Controls Law in Migration
 	# New leaders may spawn with the Ethno-Nationalist Ideology
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/nationalism.dds"
 	category = society
 
@@ -1428,7 +1478,7 @@ labor_movement = {
 	# Unlocks Restricted Child Labor - Children's Rights Laws
 	# Unlocks Wage Controls - Social Security Laws
 	# Increases attraction of Trade Unions IG
-	era = era_2
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/labor_movement.dds"
 	category = society
 
@@ -1439,8 +1489,6 @@ labor_movement = {
 	}
 
 	unlocking_technologies = {
-		mass_communication
-		egalitarianism
 	}
 
 	on_researched = {
@@ -1497,7 +1545,7 @@ civilizing_mission = {
 	# Unlocks Panama Canal survey expedition decision
 	# Unlocks the Panama Canal
 
-	era = era_3
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
 	category = society
 
@@ -1508,8 +1556,6 @@ civilizing_mission = {
 	}
 
 	unlocking_technologies = {
-		quinine
-		nationalism
 	}
 
 	ai_weight = {
@@ -1536,7 +1582,7 @@ socialism = {
 	# Unlocks Council Republic - Governance Principles Law
 	# Unlocks Graduated Taxation - Income Taxation Law
 	# New leaders may spawn with the Social Democrat, Communist Ideologies
-	era = era_3
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/socialism.dds"
 	category = society
 
@@ -1558,8 +1604,6 @@ socialism = {
 	}
 
 	unlocking_technologies = {
-		labor_movement
-		dialectics
 	}
 
 	ai_weight = {
@@ -1584,7 +1628,7 @@ socialism = {
 }
 
 corporatism = {
-	era = era_3
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/corporatism.dds"
 	category = society
 
@@ -1606,8 +1650,6 @@ corporatism = {
 	}
 
 	unlocking_technologies = {
-		labor_movement
-		nationalism
 	}
 
 	ai_weight = {
@@ -1634,7 +1676,7 @@ corporatism = {
 pan-nationalism = {
 	# Permits for the formation of a number of pan-nationalist countries
 	# Permits the Unify Germany and Unify Italy Diplomatic Plays
-	era = era_3
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/pan_nationalism.dds"
 	category = society
 
@@ -1645,7 +1687,6 @@ pan-nationalism = {
 	}
 
 	unlocking_technologies = {
-		nationalism
 	}
 
 	ai_weight = {
@@ -1713,7 +1754,7 @@ investment_banks = {
 }
 
 philosophical_pragmatism = {
-	era = era_3
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
 	category = society
 
@@ -1724,7 +1765,6 @@ philosophical_pragmatism = {
 	}
 
 	unlocking_technologies = {
-		psychiatry
 	}
 
 	ai_weight = {
@@ -1735,7 +1775,7 @@ philosophical_pragmatism = {
 identification_documents = {
 	# Unlocks Identification Documents PM in Government Administrations
 	# Unlocks Closed Borders Law in Migration
-	era = era_3
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/identification_documents.dds"
 	category = society
 
@@ -1746,7 +1786,6 @@ identification_documents = {
 	}
 
 	unlocking_technologies = {
-		central_archives
 	}
 
 	ai_weight = {
@@ -1758,7 +1797,7 @@ identification_documents = {
 
 malaria_prevention = {
 	# Should permit for colonization of state regions with severe malaria
-	era = era_4
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/malaria_prevention.dds"
 	category = society
 
@@ -1768,7 +1807,6 @@ malaria_prevention = {
 	}
 
 	unlocking_technologies = {
-		civilizing_mission
 	}
 
 	ai_weight = {
@@ -1794,7 +1832,7 @@ malaria_prevention = {
 central_planning = {
 	# Unlocks Command Economy - Economic System Law
 	# Unlocks Vertical Filing Cabinets PM in Government Administrations
-	era = era_4
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/central_planning.dds"
 	category = society
 
@@ -1806,7 +1844,6 @@ central_planning = {
 	}
 
 	unlocking_technologies = {
-		identification_documents
 	}
 
 	ai_weight = {
@@ -1818,7 +1855,7 @@ political_agitation = {
 	# Unlocks Women's Suffrage - Rights of Women Law
 	# Increases political participation from poor pop types
 	# New leaders may spawn with the Feminist, Vanguardist Ideology
-	era = era_4
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/political_agitation.dds"
 	category = society
 
@@ -1830,9 +1867,6 @@ political_agitation = {
 	}
 
 	unlocking_technologies = {
-		anarchism
-		socialism
-		corporatism
 	}
 
 	ai_weight = {
@@ -1878,7 +1912,7 @@ international_exchange_standards = {
 }
 
 corporate_management = {
-	era = era_4
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/corporate_management.dds"
 	category = society
 
@@ -1888,7 +1922,6 @@ corporate_management = {
 	}
 
 	unlocking_technologies = {
-		investment_banks
 	}
 
 	ai_weight = {
@@ -1898,7 +1931,7 @@ corporate_management = {
 
 psychoanalysis = {
 	# Should provide additional methods for dealing with negative psychological character traits
-	era = era_4
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
 	category = society
 
@@ -1909,7 +1942,6 @@ psychoanalysis = {
 	}
 
 	unlocking_technologies = {
-		philosophical_pragmatism
 	}
 
 	ai_weight = {
@@ -1922,7 +1954,7 @@ psychoanalysis = {
 mass_surveillance = {
 	# Unlocks Personal Files PM in Government Administrations
 	# Unlocks Militarized Police - Policing Law
-	era = era_5
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/mass_surveillance.dds"
 	category = society
 
@@ -1934,7 +1966,6 @@ mass_surveillance = {
 	}
 
 	unlocking_technologies = {
-		central_planning
 	}
 
 	ai_weight = {
@@ -1943,7 +1974,7 @@ mass_surveillance = {
 }
 
 modern_financial_instruments = {
-	era = era_5
+	era = era_6
 	texture = "gfx/interface/icons/invention_icons/modern_financial_instruments.dds"
 	category = society
 	modifier = {
@@ -1952,7 +1983,6 @@ modern_financial_instruments = {
 		country_government_dividends_efficiency_add = 0.05
 	}
 	unlocking_technologies = {
-		international_exchange_standards
 	}
 
 	ai_weight = {

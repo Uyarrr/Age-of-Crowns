@@ -18,6 +18,10 @@
 pm_building_fishing_wharf_net_and_line_fishing = {
 	texture = "gfx/interface/icons/production_method_icons/advanced_fishing.dds"
 
+	unlocking_technologies = {
+		net_and_line_fishing
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input
@@ -38,6 +42,10 @@ pm_building_fishing_wharf_net_and_line_fishing = {
 
 pm_building_fishing_wharf_fishing_trawlers = {
 	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
+
+	unlocking_technologies = {
+		rationalism
+	}
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -61,14 +69,8 @@ pm_building_fishing_wharf_fishing_trawlers = {
 pm_building_fishing_wharf_industrial_trawling = {
 	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
 
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
-
 	unlocking_technologies = {
-		gantry_cranes
+		rationalism
 	}
 
 	building_modifiers = {

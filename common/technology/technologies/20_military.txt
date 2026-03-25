@@ -154,10 +154,10 @@ cog = {
 	}
 }
 
-traditional_galley = {
+traditional_canoe = {
 	# Unlocks Traditional Galley
 	era = era_1
-	texture = "gfx/invention_icons/lightship_1.dds"
+	texture = "gfx/interface/icons/invention_icons/galley_1.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -319,6 +319,35 @@ cavalrymen = {
 	}
 }
 
+mediterranean_galley = {
+	#Unlocks Age 2 Galley
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/galley_2.dds"
+	category = military
+
+	unlocking_technologies = {
+		professional_army
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+net_and_line_fishing = {
+	#Unlocks Age 2 Galley
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/fish.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 ####### ERA 3 #######
 
 pike_and_shot = {
@@ -345,6 +374,7 @@ coastal_expansion = {
 	category = military
 
 	unlocking_technologies = {
+		state_building_naval_base_max_level_add = 5
 	}
 
 	ai_weight = {
@@ -409,6 +439,195 @@ message_relays = {
 	}
 }
 
+improved_spy_organization = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/spy_construction.dds"
+	category = military
+
+	modifier = {
+		country_support_separatism_strength_mult = 0.2
+	}
+
+	unlocking_technologies = {
+		pike_and_shot
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+state_consolidation = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/counter_espionage.dds"
+	category = military
+
+	modifier = {
+		country_support_separatism_resistance_mult = 0.15
+	}
+
+	unlocking_technologies = {
+		improved_spy_organization
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+state_consolidation = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/counter_espionage.dds"
+	category = military
+
+	modifier = {
+		country_support_separatism_resistance_mult = 0.15
+	}
+
+	unlocking_technologies = {
+		improved_spy_organization
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+bronze_weapons = {
+	# Unlocks Weapon Workshop Bronze PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/weapons.dds"
+	category = military
+
+	unlocking_technologies = {
+		halberdier
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+bronze_fastened_dockyards = {
+	# Unlocks Naval Supplies Bronze PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/naval_supplies.dds"
+	category = military
+
+	unlocking_technologies = {
+		coastal_expansion
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+nitrary_works = {
+	# Unlocks Saltpeter Works PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/saltpeter.dds"
+	category = military
+
+	unlocking_technologies = {
+		falconet
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+overseas_supply_networks = {
+	#Reduces Supply Cost
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/expanded_supply.dds"
+	category = military
+
+	modifier = {
+		character_supply_route_cost_mult = -0.1
+	}
+
+	unlocking_technologies = {
+		supply_lines
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+halberdier = {
+	#Unlocks Halberdier Infantry Unit
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/infantry_3.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		pike_and_shot
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+falconet = {
+	#Unlocks Falconet Artillery Unit
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/artillery_3.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		pike_and_shot
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+lancer = {
+	#Unlocks Lancers Cavalry Units
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/cavalry_3.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		halberdier
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+war_galley = {
+	#Unlocks Age 3 War Galley
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/galley_3.dds"
+	category = military
+
+	unlocking_technologies = {
+		coastal_expansion
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+### ERA 4
+
 electric_telegraph = {
 	era = era_6
 	texture = "gfx/interface/icons/invention_icons/electrical_telegraph.dds"
@@ -433,7 +652,6 @@ electric_telegraph = {
 	}
 }
 
-### ERA 4
 
 landing_craft = {
 	era = era_6

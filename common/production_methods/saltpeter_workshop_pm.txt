@@ -22,14 +22,15 @@ pm_building_saltpeter_workshop_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		nitrary_works
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_pottery_add = 20
-			goods_input_meat_add = 20
+			goods_input_meat_add = 10
+			goods_input_sulfur_add = 10
 
 			# output goods
 			goods_output_saltpeter_add = 40
