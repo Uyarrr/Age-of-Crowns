@@ -21,3 +21,51 @@ N01 = {
 	cultures = { tupinamba }
 	capital = STATE_BAHIA
 }
+
+# Central American Natives
+N02 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { tupinamba amazonian quechua guarani patagonian }
+	capital = STATE_NICARAGUA
+}
+
+# Mexican Natives
+N03 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { mexican }
+	capital = STATE_RIO_GRANDE
+}
+
+# North America Natives
+N04 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { athabaskan inuit }
+	capital = STATE_RIO_GRANDE
+}
+# Canada Natives
+N05 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { athabaskan inuit }
+	capital = STATE_RIO_GRANDE
+}
+

@@ -64,10 +64,10 @@ BRA = {
 
 	country_type = recognized
 
-	tier = kingdom
+	tier = principality
 
 	cultures = { north_german }
-	capital = STATE_NOVGOROD
+	capital = STATE_BRANDENBURG
 }
 
 # Great Horde
@@ -153,3 +153,77 @@ SCY = {
 	cultures = { south_italian }
 	capital = STATE_SICILY
 }
+
+# Cologne
+G00 = {
+	color = { 84 124 48 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { south_german }
+	capital = STATE_RHINELAND
+}
+
+# Cleves
+G01 = {
+	color = { 255 210 0 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { south_german }
+	capital = STATE_RHINELAND
+}
+
+# Mainz
+G02 = {
+	color = { 178 145 87  }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { south_german }
+	capital = STATE_RHINELAND
+}
+
+# Palatinate
+G03 = {
+	color = { 57 151 142 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { south_german }
+	capital = STATE_RHINELAND
+}
+
+# Trier
+G04 = {
+	color = { 208 104 44 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { south_german }
+	capital = STATE_RHINELAND
+}
+
+# Berg
+G05 = {
+	color = { 240 205 140 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { south_german }
+	capital = STATE_RHINELAND
+}
+
+

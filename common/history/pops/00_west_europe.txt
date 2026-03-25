@@ -1367,7 +1367,7 @@
 		}
 	}
 	s:STATE_WESTPHALIA = {
-		region_state:PRU = {
+		region_state:WES = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -1406,7 +1406,7 @@
 		}
 	}
 	s:STATE_ANHALT = {
-		region_state:PRU = {
+		region_state:BRA = {
 			create_pop = {
 				culture = north_german
 				size = 1196400
@@ -1434,39 +1434,177 @@
 		}
 	}
 	s:STATE_RHINELAND = {
-		region_state:PRU = {
+		region_state:G00 = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
-				size = 424000
-			}
-			create_pop = {
-				culture = french
-				size = 8400
+				size = 70820
 			}
 			create_pop = {
 				culture = north_german
-				size = 323992
+				size = 54120
 			}
-		}
-		region_state:BAV = {
+			create_pop = {
+				culture = french
+				size = 1388
+			}
 			create_pop = {
 				culture = south_german
-				size = 251600
-			}
-			create_pop = {
-				culture = ashkenazi
-				size = 1996
+				size = 42090
 			}
 			create_pop = {
 				culture = south_german
 				religion = protestant
-				size = 303996
+				size = 50780
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 330
+			}
+		}
+		region_state:G01 = {
+			create_pop = {
+				culture = north_german
+				religion = catholic
+				size = 70540
+			}
+			create_pop = {
+				culture = north_german
+				size = 53820
+			}
+			create_pop = {
+				culture = french
+				size = 1417
+			}
+			create_pop = {
+				culture = south_german
+				size = 41810
+			}
+			create_pop = {
+				culture = south_german
+				religion = protestant
+				size = 50590
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 335
+			}
+		}
+		region_state:G02 = {
+			create_pop = {
+				culture = north_german
+				religion = catholic
+				size = 70710
+			}
+			create_pop = {
+				culture = north_german
+				size = 54050
+			}
+			create_pop = {
+				culture = french
+				size = 1396
+			}
+			create_pop = {
+				culture = south_german
+				size = 41970
+			}
+			create_pop = {
+				culture = south_german
+				religion = protestant
+				size = 50670
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 331
+			}
+		}
+		region_state:G03 = {
+			create_pop = {
+				culture = north_german
+				religion = catholic
+				size = 70630
+			}
+			create_pop = {
+				culture = north_german
+				size = 53780
+			}
+			create_pop = {
+				culture = french
+				size = 1405
+			}
+			create_pop = {
+				culture = south_german
+				size = 41760
+			}
+			create_pop = {
+				culture = south_german
+				religion = protestant
+				size = 50510
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 333
+			}
+		}
+		region_state:G04 = {
+			create_pop = {
+				culture = north_german
+				religion = catholic
+				size = 70590
+			}
+			create_pop = {
+				culture = north_german
+				size = 54110
+			}
+			create_pop = {
+				culture = french
+				size = 1391
+			}
+			create_pop = {
+				culture = south_german
+				size = 41920
+			}
+			create_pop = {
+				culture = south_german
+				religion = protestant
+				size = 50710
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 332
+			}
+		}
+		region_state:G05 = {
+			create_pop = {
+				culture = north_german
+				religion = catholic
+				size = 70710
+			}
+			create_pop = {
+				culture = north_german
+				size = 54112
+			}
+			create_pop = {
+				culture = french
+				size = 1403
+			}
+			create_pop = {
+				culture = south_german
+				size = 42050
+			}
+			create_pop = {
+				culture = south_german
+				religion = protestant
+				size = 50736
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 335
 			}
 		}
 	}
 	s:STATE_NORTH_RHINE = {
-		region_state:PRU = {
+		region_state:WES = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -1488,7 +1626,7 @@
 	}
 
 	s:STATE_RUHR = {
-		region_state:PRU = {
+		region_state:WES = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -1505,7 +1643,7 @@
 		}
 	}
 	s:STATE_BRANDENBURG = {
-		region_state:PRU = {
+		region_state:BRA = {
 			create_pop = {
 				culture = north_german
 				size = 1558704
@@ -1661,7 +1799,7 @@
 				size = 4000
 			}
 		}
-		region_state:BRA = {
+		region_state:BSW = {
 			create_pop = {
 				culture = north_german
 				size = 220400
@@ -1672,7 +1810,7 @@
 				size = 4000
 			}
 		}
-		region_state:PRU = {
+		region_state:BRA = {
 			create_pop = {
 				culture = north_german
 				size = 112000

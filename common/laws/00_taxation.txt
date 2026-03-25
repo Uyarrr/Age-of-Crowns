@@ -16,22 +16,27 @@ law_consumption_based_taxation = {
 
 	tax_modifier_very_low = {
 		tax_consumption_add = 0.15
+		tax_land_add = 0.15
 	}
 
 	tax_modifier_low = {
 		tax_consumption_add = 0.20
+		tax_land_add = 0.20
 	}
 
 	tax_modifier_medium = {
 		tax_consumption_add = 0.25
+		tax_land_add = 0.25
 	}
 
 	tax_modifier_high = {
 		tax_consumption_add = 0.30
+		tax_land_add = 0.30
 	}
 
 	tax_modifier_very_high = {
 		tax_consumption_add = 0.35
+		tax_land_add = 0.35
 	}
 
 	# AI shouldn't change to consumption-based-taxation as it's likely to wreck their economy

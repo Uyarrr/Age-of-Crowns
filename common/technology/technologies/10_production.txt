@@ -368,6 +368,21 @@ encourage_resource_industry = {
 	}
 }
 
+bronze_tools = {
+	# Unlocks Tool Workshop Bronze PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/tools.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshop_standardization
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 ######## AGE 3 ######
 
 new_world_crops = {
