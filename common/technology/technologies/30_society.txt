@@ -9,6 +9,8 @@ legalism = {
 	modifier = {
 		country_authority_mult = 0.1
 		country_voting_power_mult = 0.1
+		country_weekly_innovation_add = 100
+		country_weekly_innovation_max_add = 100
 	}
 
 	ai_weight = {
@@ -665,7 +667,18 @@ new_world = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 1
+
+		# Iberian exploration bonus
+		if = {
+			limit = {
+				OR = {
+					tag = CAS
+					tag = POR
+				}
+			}
+			add = 10
+		}
 	}
 }
 
@@ -683,7 +696,18 @@ colonization = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 1
+
+		# Iberian exploration bonus
+		if = {
+			limit = {
+				OR = {
+					tag = CAS
+					tag = POR
+				}
+			}
+			add = 10
+		}
 	}
 }
 
@@ -701,7 +725,18 @@ colonial_charters = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 1
+
+		# Iberian exploration bonus
+		if = {
+			limit = {
+				OR = {
+					tag = CAS
+					tag = POR
+				}
+			}
+			add = 5
+		}
 	}
 }
 
@@ -894,7 +929,18 @@ exploration_south_america = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 1
+
+		# Iberian exploration bonus
+		if = {
+			limit = {
+				OR = {
+					tag = CAS
+					tag = POR
+				}
+			}
+			add = 5
+		}
 	}
 }
 
@@ -911,7 +957,18 @@ colonial_east_south_america = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 1
+
+		# Iberian exploration bonus
+		if = {
+			limit = {
+				OR = {
+					tag = CAS
+					tag = POR
+				}
+			}
+			add = 10
+		}
 	}
 }
 

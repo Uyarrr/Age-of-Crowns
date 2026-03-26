@@ -1,6 +1,6 @@
 ﻿POPS = {
 	s:STATE_SAN_SALVADOR = {
-		region_state:UCA = {
+		region_state:N02 = {
 			create_pop = {
 				culture = central_american
 				size = 428204
@@ -16,7 +16,7 @@
 		}
 	}
 	s:STATE_HONDURAS = {
-		region_state:UCA = {
+		region_state:N02 = {
 			create_pop = {
 				culture = central_american
 				size = 385204
@@ -28,7 +28,7 @@
 		}
 	}
 	s:STATE_NICARAGUA = {
-		region_state:UCA = {
+		region_state:N02 = {
 			create_pop = {
 				culture = central_american
 				size = 284000
@@ -68,7 +68,7 @@
 		}
 	}
 	s:STATE_COSTA_RICA = {
-		region_state:UCA = {
+		region_state:N02 = {
 			create_pop = {
 				culture = central_american
 				size = 83992
@@ -76,7 +76,7 @@
 		}
 	}
 	s:STATE_PANAMA = {
-		region_state:CLM = {
+		region_state:N02 = {
 			create_pop = {
 				culture = central_american
 				size = 87792
@@ -102,7 +102,7 @@
 	}
 	# Haitian and Dominican population numbers are based off 1850 numbers from "La población de América Latina" by Nicolás Sánchez-Albornoz, scaled back 8,5% to account for approx. population growth.
 	s:STATE_HAITI = {
-		region_state:HAI = {
+		region_state:N06 = {
 			create_pop = { # Includes mulatto population.
 				culture = afro_antillean
 				size = 830824
@@ -134,7 +134,7 @@
 		}
 	}
 	s:STATE_SANTO_DOMINGO = {
-		region_state:HAI = {
+		region_state:N06 = {
 			create_pop = { # Haitians.
 				culture = afro_antillean
 				size = 4007
@@ -208,7 +208,7 @@
 		}
 	}
 	s:STATE_PUERTO_RICO = {
-		region_state:PCO = {
+		region_state:N06 = {
 			create_pop = {
 				culture = caribeno
 				size = 136653
@@ -229,7 +229,7 @@
 		}
 	}
 	s:STATE_BAHAMAS = {
-		region_state:GBR = {
+		region_state:N06 = {
 			create_pop = {
 				culture = british
 				size = 19200
@@ -241,79 +241,19 @@
 		}
 	}
 	s:STATE_WEST_INDIES = {
-		region_state:FRA = {
+		region_state:N06 = {
 			create_pop = {
 				culture = french
 				size = 22200
 			}
 			create_pop = {
 				culture = afro_antillean
-				size = 216104
-			}
-		}
-		region_state:DEN = {
-			create_pop = {
-				culture = danish
-				size = 3992
-			}
-			create_pop = {
-				culture = afro_caribbean
-				size = 39996
-			}
-		}
-		region_state:GBR = {
-			create_pop = {
-				culture = british
-				size = 34704
-			}
-			create_pop = {
-				culture = afro_caribbean
-				size = 234768
-			}
-			create_pop = {
-				culture = dutch
-				size = 396
-			}
-		}
-		region_state:NET = {
-			# Population of ~23700 recorded in 1849
-			create_pop = {
-				culture = afro_brazilian # Papiamento-speakers
-				# pop_type = slaves
-				size = 10212
-			}
-			create_pop = {
-				culture = afro_brazilian # Papiamento-speakers
-				size = 8312
-			}
-			create_pop = {
-				culture = dutch
-				size = 1112
-			}
-			create_pop = {
-				culture = sephardic
-				size = 1202
-			}
-		}
-		region_state:VNZ = {
-			# Very rough backwards calculation of Nueva Esparta's population in 1921
-			create_pop = {
-				culture = north_andean
-				size = 17123
-			}
-			create_pop = {
-				culture = afro_caribeno
-				size = 1310
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = afro_caribeno
-				size = 1012
+				size = 572717
 			}
 		}
 	}
 	s:STATE_JAMAICA = {
-		region_state:GBR = {
+		region_state:N06 = {
 			create_pop = {
 				culture = afro_caribbean
 				size = 358596
@@ -325,7 +265,7 @@
 		}
 	}
 	s:STATE_WESTERN_CUBA = { # TODO Here, Caribeño = White. Revise spanish/caribeno ratio to account for mainlanders. Possibly include sepoarate Catalans/Galicians etc.
-		region_state:CUB = {
+		region_state:N06 = {
 			# 896400
 			create_pop = {
 				culture = caribeno
@@ -364,7 +304,7 @@
 		}
 	}
 	s:STATE_EASTERN_CUBA = { # TODO Here, Caribeño = White. Revise spanish/caribeno ratio to account for mainlanders. Possibly include sepoarate Catalans/Galicians etc.
-		region_state:CUB = {
+		region_state:N06 = {
 			# 896400
 			create_pop = {
 				culture = caribeno
@@ -386,7 +326,7 @@
 		}
 	}
 	s:STATE_CENTRAL_CUBA = { # TODO Here, Caribeño = White. Revise spanish/caribeno ratio to account for mainlanders. Possibly include sepoarate Catalans/Galicians etc.
-		region_state:CUB = {
+		region_state:N06 = {
 			# 896400
 			create_pop = {
 				culture = caribeno

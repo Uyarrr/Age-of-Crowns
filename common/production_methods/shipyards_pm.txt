@@ -23,6 +23,7 @@
 
 pm_building_shipyards_bronze_fastened_dockyards = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_wooden_ships.dds"
+	
 	unlocking_technologies = {
 		bronze_fastened_dockyards
 	}
@@ -52,14 +53,8 @@ pm_building_shipyards_bronze_fastened_dockyards = {
 pm_building_shipyards_organized_naval_stores = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_steam_ships.dds"
 
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
-
 	unlocking_technologies = {
-		gantry_cranes
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -89,10 +84,8 @@ pm_building_shipyards_organized_naval_stores = {
 pm_building_shipyards_imperial_naval_arsenals = {
 	texture = "gfx/interface/icons/production_method_icons/arc_welded_steam_ships.dds"
 
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 20
-		}
+	unlocking_technologies = {
+		behaviorism
 	}
 
 	building_modifiers = {

@@ -76,7 +76,7 @@ POPS = {
 		}
 	}
 	s:STATE_ZULIA = {
-		region_state:VNZ = {
+		region_state:N01 = {
 			create_pop = {
 				culture = north_andean
 				size = 325608
@@ -807,20 +807,14 @@ POPS = {
 		}
 	}
 	s:STATE_AMAZONAS = {
-		region_state:CLM = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = amazonian
-				size = 12000
+				size = 70800
 			}
 			create_pop = {
 				culture = north_andean
 				size = 210
-			}
-		}
-		region_state:PRA = {
-			create_pop = {
-				culture = amazonian
-				size = 36800
 			}
 			create_pop = {
 				culture = amazonic
@@ -829,17 +823,7 @@ POPS = {
 			create_pop = {
 				pop_type = slaves
 				culture = afro_brazilian
-				size = 940 # 1840 Amazonas Census
-			}
-			create_pop = {
-				culture = afro_brazilian
-				size = 1980 # 1840 Amazonas Census
-			}
-		}
-		region_state:BOL = { # I have literally no idea what number to put here.
-			create_pop = {
-				culture = amazonian
-				size = 11000
+				size = 2940 # 1840 Amazonas Census
 			}
 		}
 	}

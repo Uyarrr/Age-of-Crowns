@@ -155,7 +155,7 @@ law_agrarianism = {
 	}
 
 	unlocking_technologies = {
-		romanticism
+		agrarianism
 	}
 
 	on_activate = {
@@ -468,7 +468,7 @@ law_laissez_faire = {
 	}
 
 	unlocking_technologies = {
-		international_trade
+		behaviorism
 	}
 
 	on_activate = {
@@ -541,8 +541,7 @@ law_cooperative_ownership = {
 	}
 
 	unlocking_laws = {
-		law_council_republic
-		law_corporate_state
+		behaviorism
 	}
 
 	on_activate = {
@@ -626,7 +625,7 @@ law_command_economy = {
 	}
 
 	unlocking_technologies = {
-		central_planning
+		behaviorism
 	}
 
 	unlocking_laws = {

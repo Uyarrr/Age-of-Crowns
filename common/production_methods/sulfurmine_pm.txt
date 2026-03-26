@@ -21,7 +21,7 @@ pm_building_sulfur_mine_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		atmospheric_engine
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -46,13 +46,7 @@ pm_building_sulfur_mine_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		watertube_boiler
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 2
-		}
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -77,13 +71,7 @@ pm_building_sulfur_mine_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		compression_ignition
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
+		behaviorism
 	}
 
 	building_modifiers = {

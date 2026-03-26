@@ -675,7 +675,8 @@ building_road = {
 	}
 
 	production_method_groups = {
-		pmg_base_building_road
+		pmg_building_road_main
+		pmg_building_road_transport
 	}
 
 	required_construction = construction_cost_very_high

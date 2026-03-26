@@ -301,7 +301,7 @@ workshop_standardization = {
 	}
 
 	ai_weight = {
-		value = 3 # Important tech in general
+		value = 1 # Important tech in general
 	}
 }
 
@@ -316,7 +316,7 @@ fiber_paper = {
 	}
 
 	ai_weight = {
-		value = 3 # Important tech in general
+		value = 2 # Important tech in general
 	}
 }
 
@@ -334,7 +334,7 @@ expanded_quarrying = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 2 # very important tech
 	}
 }
 
@@ -349,7 +349,7 @@ encourage_agricultural_industry = {
 	}
 
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 3 # Important tech in general
 	}
 }
 
@@ -364,7 +364,7 @@ encourage_resource_industry = {
 	}
 
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 3 # Important tech in general
 	}
 }
 
@@ -391,6 +391,20 @@ expanded_copper_mining = {
 
 	unlocking_technologies = {
 		bronze_tools
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+pack_animal_transport = {
+	# Unlocks Road PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/horse.dds"
+	category = production
+
+	unlocking_technologies = {
 	}
 
 	ai_weight = {
@@ -502,7 +516,7 @@ refined_saiger_process = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 2 # very important tech
 	}
 }
 
@@ -538,7 +552,7 @@ patio_process = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 2 # very important tech
 	}
 }
 
@@ -556,7 +570,7 @@ expanded_iron_mining = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 2 # very important tech
 	}
 }
 
@@ -574,7 +588,7 @@ expanded_logging = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 2 # very important tech
 	}
 }
 
@@ -592,12 +606,12 @@ potatoes = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 2 # very important tech
 	}
 }
 
 apprenticeship_system = {
-	#Unlocks Potato for Farms
+	#Education
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/pop_promotion_speed.dds"
 	category = production
@@ -611,7 +625,26 @@ apprenticeship_system = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 1 # very important tech
+	}
+}
+
+######## ERA 4
+
+wagon_transport = {
+	#Unlocks Road Transport PM
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/wagon.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
 	}
 }
 

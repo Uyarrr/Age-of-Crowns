@@ -21,7 +21,7 @@ pm_building_stud_farm_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		steelworking
+		colonial_horse_breeding
 	}
 
 	building_modifiers = {
@@ -42,8 +42,9 @@ pm_building_stud_farm_main_2 = {
 
 pm_building_stud_farm_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+	
 	unlocking_technologies = {
-		mechanical_tools
+		behaviorism
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -64,8 +65,9 @@ pm_building_stud_farm_main_3 = {
 
 pm_building_stud_farm_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
+
 	unlocking_technologies = {
-		vulcanization
+		behaviorism
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -121,6 +123,10 @@ pm_building_stud_farm_warhorse_1 = {
 
 pm_building_stud_farm_warhorse_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/refining2.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
 
 	building_modifiers = {
 		workforce_scaled = {

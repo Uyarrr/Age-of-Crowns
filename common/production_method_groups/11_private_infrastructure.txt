@@ -13,7 +13,7 @@
 	}
 }
 
-pmg_base_building_road = {
+pmg_building_road_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -25,14 +25,14 @@ pmg_base_building_road = {
 	}
 }
 
-pmg_passenger_trains = {
+pmg_building_road_transport = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_no_passenger_trains
-		pm_wooden_passenger_carriages
-		pm_steel_passenger_carriages
+		pm_building_road_transport_0
+		pm_building_road_transport_1
+		pm_building_road_transport_2
 	}
 }
 
