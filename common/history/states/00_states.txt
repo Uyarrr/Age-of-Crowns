@@ -5979,34 +5979,28 @@ STATES = {
 		create_state = {
 			country = c:RUS
 			owned_provinces = { x805000 xAB3AF1 xDC0812 x005000 x16A02D x30DF60 x3161E0 }
-			state_type = unincorporated
 		}
 
 		add_homeland = cu:armenian
 		add_homeland = cu:azerbaijani
-		add_claim = c:PER
 	}
 	s:STATE_AZERBAIJAN = {
 		create_state = {
 			country = c:RUS
 			owned_provinces = { x007060 x008FBF x0467D5 x0B74ED x0E8C3E x493F0B x69FE0D x6EB08E xBFD159 xD77566 xE7B07C }
-			state_type = unincorporated
 		}
 
 		add_homeland = cu:armenian
 		add_homeland = cu:azerbaijani
-		add_claim = c:PER
 	}
 	s:STATE_ELIZAVETPOL = {
 		create_state = {
 			country = c:RUS
 			owned_provinces = { x0E70E4 x2F7A57 x404F5B x747318 x809040 x8090BF x80D041 x9195D4 xB7DDE5 xDFB2B0 xEE1A87 }
-			state_type = unincorporated
 		}
 
 		add_homeland = cu:armenian
 		add_homeland = cu:azerbaijani
-		add_claim = c:PER
 	}
 	s:STATE_GREATER_CAUCASUS = {
 		create_state = {
@@ -6432,8 +6426,6 @@ STATES = {
 
 		add_homeland = cu:siberian
 		add_homeland = cu:ainu
-
-		add_claim = c:RUS
 	}
 	s:STATE_HOKKAIDO = {
 		create_state = {
@@ -7301,7 +7293,7 @@ STATES = {
 	}
 	s:STATE_MOSCOW = {
 		create_state = {
-			country = c:RUS
+			country = c:MUS
 			owned_provinces = { x13D91C x43F336 x4DBAEC x54C962 x632D29 x8B324E xC05614 xE0A021 xE19E7E xE32FD0 xEC68C6 xF75BCA }
 		}
 
@@ -7321,7 +7313,6 @@ STATES = {
 
 		add_homeland = cu:north_caucasian
 		add_claim = c:CHC
-		add_claim = c:RUS
 	}
 	s:STATE_KUBAN = {
 		create_state = {
@@ -7404,7 +7395,7 @@ STATES = {
 	}
 	s:STATE_ORYOL = {
 		create_state = {
-			country = c:RUS
+			country = c:MUS
 			owned_provinces = { x05E237 x1D9534 x1E5225 x301EC1 x36FFFE x4A6AE0 x6BE684 x71473A x752A3E x8BC0CA x8FB5BF x9D8B55 xA020A0 xA02120 xB56E0D xC020E0 xC20515 xC492A0 xD04FB9 xD3CC3C xD7163E xE0FF4A x0B9BAA x21A0A0 x244D15 x31B814 x331CB3 x45FA32 x4C0018 x53EF9C x669560 x6A8F2C x8BEB3F x92C7C8 x93157C xB98492 xBCF6EB xBEE23A xC0DF60 xCE6B77 xE458EF xEABB0F xF50161 xFEFF16 }
 		}
 
@@ -8190,7 +8181,6 @@ STATES = {
 			owned_provinces = { x83F33B x2790A8 x56FD87 x668A47 xC05001 x23F98B }
 		}
 		add_claim = c:CHC
-		add_claim = c:RUS
 	    add_homeland = cu:north_caucasian
 	    add_homeland = cu:chechen
 	}
@@ -8251,7 +8241,7 @@ STATES = {
 
 	s:STATE_YAROSLAVL = {
 	    create_state = {
-	    	country = c:RUS
+	    	country = c:MUS
 	    	owned_provinces = { x028EC5 x221D59 x23F3C4 x2FB453 x4D1D44 x53C6EC x560151 x60C080 x64B6B7 x8D7901 x8F478B x9B8556 xB24923 xBDF81C xC0C040 xCC8451 xCD34E8 xD9ACBE xE78F94 xEE2E88 xF04BD2 xF39D33 xF7AA04 x0D1821 x1053DD x130A3E x2FC308 x400383 x40FEDE x461223 x53CD52 x5C950C x6DD07A x74EDD1 x756F52 x824587 x89264F x912892 x9DFD09 xA36510 xABAE9B xB0A39B xB9892E xC37BBA xCC840C xD19951 xDF20A0 xE02020 xE03FE3 xE33B67 xFFEC80 }
 	    }
 	    add_homeland = cu:russian
@@ -8259,7 +8249,7 @@ STATES = {
 
 	s:STATE_NIZHNY_NOVGOROD = {
 	    create_state = {
-	    	country = c:RUS
+	    	country = c:MUS
 	    	owned_provinces = { x006422 x02BE2C x05F5DA x088E55 x0C5F95 x0D8767 x193A00 x202BAA x221C4C x259E71 x298ED1 x29EC04 x2A61E0 x30B835 x339ADC x35FB76 x3F9FBA x40B6D6 x438CFD x4C71B7 x5E59E5 x60A0A0 x6CDD7C x7C85D2 x7DA8A0 x920EE6 x9439A0 x96DCF9 x975454 xA080A0 xA99531 xADD34A xBFA41C xC6E27A xC74B66 xD2E466 xE1A4D3 xEA0D0B xF0B801 }
 	    }
 	    add_homeland = cu:russian

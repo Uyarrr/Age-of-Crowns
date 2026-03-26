@@ -209,14 +209,14 @@
 		}
 	}
 	s:STATE_SAMARA = {
-		region_state:GRH = {
+		region_state:TAR = {
 			create_pop = {
 				culture = russian
-				size = 1170657
+				size = 1255657
 			}
 			create_pop = {
 				culture = tatar
-				size = 116076
+				size = 128076
 			}
 			create_pop = {
 				culture = mordvin
@@ -237,21 +237,7 @@
 			}
 			create_pop = {
 				culture = bashkir
-				size = 24145
-			}
-		}
-		region_state:KZH = {
-			create_pop = {
-				culture = russian
-				size = 85000
-			}
-			create_pop = {
-				culture = tatar
-				size = 12000
-			}
-			create_pop = {
-				culture = bashkir
-				size = 31000
+				size = 55145
 			}
 			create_pop = {
 				culture = kazak
@@ -381,7 +367,7 @@
 		}
 	}
 	s:STATE_AKTOBE = {
-		region_state:KZH = {
+		region_state:NOG = {
 			create_pop = {
 				culture = kazak
 				size = 126349
