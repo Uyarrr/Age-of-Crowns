@@ -1691,7 +1691,7 @@ POPS = {
 				size = 40023
 			}
 		}
-		region_state:BIC = {
+		region_state:VJY = {
 			create_pop = {
 				culture = kannada # tulu
 				size = 184548
@@ -1751,7 +1751,7 @@ POPS = {
 				size = 10240
 			}
 		}
-		region_state:BIC = {
+		region_state:VJY = {
 			create_pop = {
 				culture = malayalam
 				size = 671221
@@ -1793,45 +1793,10 @@ POPS = {
 		}
 	}
 	s:STATE_MADRAS = {
-		region_state:FRA = {
+		region_state:VJY = {
 			create_pop = {
 				culture = tamil
-				size = 182284
-			}
-			create_pop = {
-				culture = tamil
-				religion = sunni
-				size = 20102
-			}
-			create_pop = {
-				culture = french
-				size = 450
-			}
-			create_pop = {
-				culture = tamil
-				religion = catholic
-				size = 27773
-			}
-		}
-		region_state:DEN = {
-			create_pop = {
-				culture = tamil
-				size = 30102
-			}
-			create_pop = {
-				culture = tamil
-				religion = sunni
-				size = 4010
-			}
-			create_pop = {
-				culture = danish
-				size = 201
-			}
-		}
-		region_state:BIC = {
-			create_pop = {
-				culture = tamil
-				size = 7168370
+				size = 7380756
 			}
 			create_pop = {
 				culture = tamil
@@ -1839,32 +1804,14 @@ POPS = {
 				size = 61145
 			}
 			create_pop = {
-				culture = british
-				size = 2500
-				pop_type = bureaucrats
-			}
-			create_pop = {
-				culture = british
-				size = 15890
-			}
-			create_pop = {
-				culture = scottish
-				size = 6123
-				pop_type = bureaucrats
-			}
-			create_pop = {
-				culture = kannada
-				size = 271981
-			}
-			create_pop = {
 				culture = tamil
 				religion = sunni
-				size = 498443
+				size = 522555
 			}
 			create_pop = {
 				culture = tamil
 				religion = catholic
-				size = 59374
+				size = 87147
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1872,11 +1819,38 @@ POPS = {
 				size = 210321
 			}
 			create_pop = {
+				culture = kannada
+				size = 271981
+			}
+			create_pop = {
 				pop_type = slaves
 				culture = kannada
 				size = 34002
 			}
+			create_pop = {
+				culture = british
+				size = 15890
+			}
+			create_pop = {
+				culture = british
+				pop_type = bureaucrats
+				size = 2500
+			}
+			create_pop = {
+				culture = scottish
+				pop_type = bureaucrats
+				size = 6123
+			}
+			create_pop = {
+				culture = french
+				size = 450
+			}
+			create_pop = {
+				culture = danish
+				size = 201
+			}
 		}
+
 		region_state:PUD = {
 			create_pop = {
 				culture = tamil
@@ -2118,7 +2092,7 @@ POPS = {
 		}
 	}
 	s:STATE_KURNOOL = {
-		region_state:BIC = {
+		region_state:VJY = {
 			create_pop = {
 				culture = telegu
 				size = 960075
