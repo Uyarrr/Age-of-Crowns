@@ -162,7 +162,7 @@
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 37.183
+				size = 37183
 			}
 			create_pop = {
 				culture = ugrian #Livs
@@ -180,10 +180,6 @@
 			create_pop = {
 				culture = lithuanian
 				size = 4118
-			}
-			create_pop = {
-				culture = byelorussian
-				size = 25190
 			}
 		}
 	}
@@ -710,7 +706,7 @@
 		}
 	}
 	s:STATE_CHERSON = { #DONE
-		region_state:CRI = {
+		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
 				size = 593470
@@ -738,7 +734,7 @@
 		}
 	}
 	s:STATE_CHERNIHIV = { #DONE
-		region_state:LIT = {
+		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
 				size = 949520
@@ -972,7 +968,7 @@
 		}
 	}
 	s:STATE_YAROSLAVL = { #DONE
-		region_state:MSC = {
+		region_state:RUS = {
 			create_pop = {
 				culture = russian
 				size = 3005300
@@ -1012,7 +1008,7 @@
 		}
 	}
 	s:STATE_NIZHNY_NOVGOROD = { #DONE
-		region_state:MSC = {
+		region_state:RUS = {
 			create_pop = {
 				culture = russian
 				size = 1432715
