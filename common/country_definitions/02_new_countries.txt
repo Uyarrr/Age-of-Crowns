@@ -178,6 +178,65 @@ MAM = {
 	capital = STATE_LOWER_EGYPT
 }
 
+# Hormuz
+HOR = {
+	color = { 236  213  152 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { bedouin }
+	capital = STATE_LOWER_EGYPT
+}
+
+# Haasa
+HSA = {
+	color = { 188  129  77 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { bedouin }
+	capital = STATE_LOWER_EGYPT
+}
+
+# Tlemcen
+TLC = {
+	color = { 75  113  85 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { berber }
+	capital = STATE_ALGIERS
+}
+
+# Muscovy
+MSC = {
+	color = { 144  118  82 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { russian }
+	capital = STATE_MOSCOW
+}
+
+# Vijayanagar
+VJY = {
+	color = { 255  229  106 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { kannada }
+	capital = STATE_CARNATIC
+}
 
 # Cologne
 G00 = {

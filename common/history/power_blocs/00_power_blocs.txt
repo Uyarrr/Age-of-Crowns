@@ -1,49 +1,51 @@
 ﻿POWER_BLOCS = {
-	c:GBR ?= {
-		create_power_bloc = {
-			name = BRITISH_EMPIRE
-			map_color = hsv{ 0.99  0.7  0.9 }
-
-			founding_date = 1784.5.12 # Treaty of Paris (1783) comes into effect
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
-
-			# subjects are automatically part of the bloc
-		}
-		if = {
-			limit = {
-				has_dlc_feature = power_bloc_features
-			}
-			power_bloc = {
-				add_principle = principle_colonial_offices_2
-			}
-		}
-	}
-
 	c:AUS ?= {
 		create_power_bloc = {
-			name = METTERNICH_SYSTEM
+			name = HOLY_ROMAN_EMPIRE
 
 			map_color = { 219 211 157 }
 
 			founding_date = 1815.6.9 # Final agreement of the 1814 Congress of Vienna
-			identity = identity_ideological_union
-			principle = principle_creative_legislature_1
+			identity = identity_trade_league
+			principle = principle_internal_trade_1
 
 
 			# Habsburg leaders in Italy and Italian states held up by direct Austrian intervention
 			member = c:MOD
 			member = c:TUS
 			member = c:PAR
-			member = c:SIC
-		}
-		if = {
-			limit = {
-				has_dlc_feature = power_bloc_features
-			}
-			power_bloc = {
-				add_principle = principle_defensive_cooperation_1
-			}
+			member = c:SAV
+			member = c:SWI
+			member = c:BAV
+			member = c:BOH
+			member = c:WUR
+			member = c:BAD
+			member = c:HEK
+			member = c:HES
+			member = c:MEI
+			member = c:SAX
+			member = c:BRA
+			member = c:ANH
+			member = c:WES
+			member = c:HAM
+			member = c:COB
+			member = c:WLD
+			member = c:NAS
+			member = c:FRM
+			member = c:BSW
+			member = c:SCM
+			member = c:LIP
+			member = c:HOL
+			member = c:LUB
+			member = c:MEC
+			member = c:POM
+			member = c:G00
+			member = c:G01
+			member = c:G02
+			member = c:G03
+			member = c:G04
+			member = c:G05
+			member = c:G06
 		}
 	}
 
