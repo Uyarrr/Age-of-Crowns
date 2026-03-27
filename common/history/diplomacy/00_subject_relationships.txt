@@ -81,4 +81,38 @@
 			type = personal_union
 		}
 	}
+	c:MUS ?= {
+		create_diplomatic_pact = {
+			country = c:YSL
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:RST
+			type = puppet
+		}
+	}
+	c:AJM ?= {
+		create_diplomatic_pact = {
+			country = c:LUR
+			type = puppet
+		}
+	}
+	c:TIM ?= {
+		create_diplomatic_pact = {
+			country = c:SIS
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:PER
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:AFG
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:KHO
+			type = protectorate
+		}
+	}
 }

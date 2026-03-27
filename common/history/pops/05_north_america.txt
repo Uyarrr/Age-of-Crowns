@@ -1043,7 +1043,7 @@
 		}
 	}
 	s:STATE_ONTARIO = {
-		region_state:ONT = {
+		region_state:N05 = {
 			create_pop = {
 				culture = anglo_canadian
 				size = 366792
@@ -1069,8 +1069,6 @@
 				religion = protestant
 				size = 600
 			}
-		}
-		region_state:HBC = {
 			create_pop = {
 				culture = metis
 				size = 3996
@@ -1612,7 +1610,7 @@
 	# total of 231319. This number was revealed to me in a dream.
 	# jk. Couldn't find estimates for Guerrero in 1830 or 1840, but they could be found for 1870 onwards, so some math trickery was done. Neighboring Oaxaca's estimated 1835 population is 74.7% of its 1870 population, and 50.61% of its 1900 population, so those percentages were applied to Guerrero's 1870 and 1900 population figures, and the two results were averaged together into the above.
 	s:STATE_GUERRERO = {
-		region_state:NAH = {
+		region_state:N03 = {
 			create_pop = {
 				culture = zapotec
 				size = 13183

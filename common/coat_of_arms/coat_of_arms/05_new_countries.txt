@@ -70,7 +70,7 @@ GOT = { # Gotland - Default
 	color1 = "blue"
 
 	textured_emblem = {
-		texture = "gotland.dds"
+		texture = "te_gotland.dds"
 	}
 }
 
@@ -79,7 +79,7 @@ NOV = { # Novgorod - Default
 	color1 = "white"
 
 	textured_emblem = {
-		texture = "novgorod.dds"
+		texture = "te_novgorod.dds"
 	}
 }
 
@@ -87,8 +87,10 @@ BRA = { # Brandenburg - Default
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
-	textured_emblem = {
-		texture = "novgorod.dds"
+	colored_emblem = {
+		texture = "ce_eagle.dds"
+		color1 = red
+		color2 = yellow
 	}
 }
 
@@ -97,38 +99,42 @@ GRH = { # Great Horde - Default
 	color1 = "white"
 
 	colored_emblem = {
-		texture = "ce_tamgha_crescent_golden_horde.dds"
+		texture = "ce_great_horde.dds"
 		color1 = red
 	}
 }
 
 PRM = { # Perm - Default
 	pattern = "pattern_solid.tga"
-	color1 = "white"
+	color1 = "red"
 
 	colored_emblem = {
-		texture = "ce_tamgha_crescent_golden_horde.dds"
-		color1 = red
+		texture = "ce_bear_california.dds"
+		color1 = white
+		color2 = white
+		color3 = white	
 	}
 }
 
 RYZ = { # Ryazan - Default
 	pattern = "pattern_solid.tga"
-	color1 = "white"
+	color1 = "orange"
 
 	colored_emblem = {
-		texture = "ce_tamgha_crescent_golden_horde.dds"
-		color1 = red
+		texture = "ce_horse.dds"
+		color1 = white
+		color2 = black
 	}
 }
 
 NOG = { # Nogai - Default
 	pattern = "pattern_solid.tga"
-	color1 = "white"
+	color1 = "blue_light"
 
 	colored_emblem = {
-		texture = "ce_tamgha_crescent_golden_horde.dds"
-		color1 = red
+		texture = "ce_nogai.dds"
+		color1 = green_light
+		color2 = orange
 	}
 }
 
@@ -137,10 +143,10 @@ TVR = { # Tver - Default
 	color1 = "red"
 
 	colored_emblem = {
-		texture = "ce_throne_tver.dds"
+		texture = "ce_tver.dds"
 		color1 = yellow
 		color2 = green
-		color3 = "green_light"
+		color3 = green_light
 		instance = { position = { 0.5 0.5 } scale = { 1.05 1.05 } }		
 	}
 }
@@ -160,14 +166,10 @@ PRO = { # Provence - Default
 
 SCY = { # Sicily - Default
 	pattern = "pattern_solid.tga"
-	color1 = "red"
+	color1 = "white"
 
-	colored_emblem = {
-		texture = "ce_throne_tver.dds"
-		color1 = yellow
-		color2 = green
-		color3 = "green_light"
-		instance = { position = { 0.5 0.5 } scale = { 1.05 1.05 } }		
+	textured_emblem = {
+		texture = "te_sicily.dds"
 	}
 }
 
@@ -181,5 +183,129 @@ NAP = { # Naples - Default
 		color2 = green
 		color3 = "green_light"
 		instance = { position = { 0.5 0.5 } scale = { 1.05 1.05 } }		
+	}
+}
+
+TIM = { # Timurids - Default
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	# Top left
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = red
+		instance = { position = { 0.36 0.68 } scale = { 0.58 0.58 } }
+	}
+
+	# Top right
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = red
+		instance = { position = { 0.64 0.68 } scale = { 0.58 0.58 } }
+	}
+
+	# Bottom center
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = red
+		instance = { position = { 0.5 0.34 } scale = { 0.58 0.58 } }
+	}
+}
+
+HOR = { # Hormuz - Default
+	pattern = "pattern_border_of_4.dds"
+	color1 = "green"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crescent_large.dds"
+		color1 = white
+		color2 = white
+		color3 = white
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }
+	}
+}
+
+MUS = { # Muscovy - Default
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	textured_emblem = {
+		texture = "te_st_george_and_the_dragon.dds"
+	}
+}
+
+YSL = { # Yaroslavl - Default
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bear_rampant_holding_axe.dds"
+		color1 = black
+		color2 = white
+		color3 = white
+	}
+}
+
+CLN = { # Cologne - Default
+	pattern = "pattern_cross.dds"
+	color1 = "white"
+	color2 = "black"
+}
+
+LOM = { # Milan - Default
+	pattern = "pattern_checkers_01.tga"
+	color1 = "yellow"
+	color2 = "white"
+
+	# Top left
+	colored_emblem = {
+		texture = "ce_eagle_crown.dds"
+		color1 = black
+		color2 = orange
+		instance = { position = { 0.25 0.75 } scale = { 0.6 0.6 } }
+	}
+	# Bottom Right
+	colored_emblem = {
+		texture = "ce_eagle_crown.dds"
+		color1 = black
+		color2 = orange
+		instance = { position = { 0.75 0.25 } scale = { 0.6 0.6 } }
+	}
+	# Top left
+	textured_emblem = {
+		texture = "te_milan_lordship.dds"
+		instance = { position = { 0.25 0.25 } scale = { 0.5 0.5 } }
+	}
+	# Bottom Right
+	textured_emblem = {
+		texture = "te_milan_lordship.dds"
+		instance = { position = { 0.75 0.75 } scale = { 0.5 0.5 } }
+	}
+}
+
+BGG = { # Berg - Default
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_forked_crowned.dds"
+		color1 = red
+		color2 = blue
+		color3 = blue
+	}
+}
+
+MAM = { # Mamluk - Default
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crescent.dds"
+		color1 = white
+		instance = {
+			position = { 0.25 0.5 }
+			scale = { -0.5 1.0 }
+		}
 	}
 }

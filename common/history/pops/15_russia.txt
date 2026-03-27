@@ -814,88 +814,64 @@
 			}
 		}
 	}
-	s:STATE_NORTH_CAUCASUS = { #DONE
-		region_state:RUS = {
-			create_pop = {
-				culture = russian
-				size = 62731
-			}
-			create_pop = {
-				culture = ukrainian
-				size = 16443
-			}
-			create_pop = {
-				culture = chechen
-				size = 21197
-			}
+	s:STATE_NORTH_CAUCASUS = {
+		region_state:GZK = {
 			create_pop = {
 				culture = north_caucasian
-				size = 79030
-			}
-			create_pop = {
-				culture = circassian
-				size = 5050
-			}
-			create_pop = {
-				culture = kazak
-				size = 15405
-			}
-			create_pop = {
-				culture = east_german
-				size = 2513
-			}
-		}
-		region_state:CHC = {
-			create_pop = {
-				culture = chechen
-				size = 85000
-			}
-			create_pop = {
-				culture = north_caucasian
-				size = 21000
+				religion = sunni
+				size = 92879
 			}
 		}
 		region_state:CIR = {
 			create_pop = {
 				culture = circassian
-				size = 57809
+				religion = orthodox
+				size = 34830
 			}
 			create_pop = {
+				culture = circassian
+				religion = orthodox
+				size = 35383
+			}
+			create_pop = {
+				culture = circassian
+				religion = orthodox
+				size = 79611
+			}
+		}
+		region_state:GRH = {
+			create_pop = {
 				culture = north_caucasian
-				size = 13000
+				religion = sunni
+				size = 136476
 			}
 		}
 	}
-	s:STATE_ELIZAVETPOL = { #DONE
-		region_state:RUS = {
+	s:STATE_ELIZAVETPOL = {
+		region_state:QQK = {
 			create_pop = {
 				culture = azerbaijani
-				size = 91660
+				religion = shiite
+				size = 73810
+			}
+		}
+		region_state:SRV = {
+			create_pop = {
+				culture = azerbaijani
+				religion = sunni
+				size = 36905
 			}
 			create_pop = {
 				culture = azerbaijani
 				religion = sunni
-				size = 55000
+				size = 61508
 			}
-			create_pop = {
-				culture = kurdish
-				size = 12999
-			}
-			create_pop = {
-				culture = russian
-				size = 2909
-			}
+		}
+		region_state:KRB = {
 			create_pop = {
 				culture = armenian
-				size = 92855
-			}
-			create_pop = {
-				culture = east_german
-				size = 681
-			}
-			create_pop = {
-				culture = north_caucasian
-				size = 4691
+				religion = oriental_orthodox
+				size = 88572
 			}
 		}
 	}
@@ -967,18 +943,79 @@
 			}
 		}
 	}
-	s:STATE_YAROSLAVL = { #DONE
-		region_state:MUS = {
-			create_pop = {
-				culture = russian
-				size = 3005300
+	s:STATE_YAROSLAVL = {
+			region_state:YSL = {
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 547386
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 126320
+				}
 			}
-			create_pop = {
-				culture = ugrian
-				size = 4795
+			region_state:RST = {
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 202112
+				}
+			}
+			region_state:MUS = {
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 105267
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 231586
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 44914
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 210533
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 227376
+				}
+				create_pop = {
+					culture = tatar
+					religion = sunni
+					size = 42107
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 463173
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 330838
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 183738
+				}
+				create_pop = {
+					culture = russian
+					religion = orthodox
+					size = 294746
+				}
 			}
 		}
-	}
 	s:STATE_RYAZAN = { #DONE
 		region_state:RYZ = {
 			create_pop = {
