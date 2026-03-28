@@ -87,6 +87,7 @@ bg_agriculture = {
 	land_usage = rural
 
 	lens = agriculture
+	cash_reserves_max = 25000
 
 	economy_of_scale = yes
 
@@ -118,6 +119,8 @@ bg_subsistence_agriculture = {
 	auto_place_buildings = yes
 
 	is_subsistence = yes
+	
+	cash_reserves_max = 0
 
 	default_building = building_subsistence_farm
 
@@ -136,6 +139,7 @@ bg_ranching = {
 	land_usage = rural
 
 	lens = agriculture
+	cash_reserves_max = 25000
 
 	economy_of_scale = yes
 
@@ -163,6 +167,8 @@ bg_subsistence_ranching = {
 	auto_place_buildings = yes
 
 	is_subsistence = yes
+	
+	cash_reserves_max = 0
 
 	default_building = building_subsistence_pasture
 
@@ -280,49 +286,7 @@ bg_logging = {
 	foreign_investment_ai_factor = 1.0
 }
 
-bg_rubber = {
-	parent_group = bg_extraction
-
-	can_use_slaves = yes
-
-	discoverable_resource = yes
-
-	depletable_resource = no
-
-	default_building = building_rubber_plantation
-
-	lens = forestry
-
-	urbanization = 5
-	infrastructure_usage_per_level = 1
-
-	should_auto_expand = {
-		default_auto_expand_rule = yes
-	}
-
-	economy_of_scale_ai_factor = 2.0
-	foreign_investment_ai_factor = 1.0
-}
-
 # Fishing
-
-bg_whaling = {
-	parent_group = bg_extraction
-
-	default_building = building_whaling_station
-
-	lens = fishing
-
-	urbanization = 5
-	infrastructure_usage_per_level = 1
-
-	should_auto_expand = {
-		default_auto_expand_rule = yes
-	}
-
-	economy_of_scale_ai_factor = 4.0
-	foreign_investment_ai_factor = 0.75
-}
 
 bg_fishing = {
 	parent_group = bg_extraction
@@ -340,28 +304,6 @@ bg_fishing = {
 
 	economy_of_scale_ai_factor = 2.5
 	foreign_investment_ai_factor = 0.75
-}
-
-# Oil Extraction
-
-bg_oil_extraction = {
-	parent_group = bg_extraction
-
-	discoverable_resource = yes
-
-	default_building = building_oil_rig
-
-	lens = mine
-
-	urbanization = 10
-	infrastructure_usage_per_level = 2
-
-	should_auto_expand = {
-		default_auto_expand_rule = yes
-	}
-
-	economy_of_scale_ai_factor = 4.0
-	foreign_investment_ai_factor = 1.0
 }
 
 # Service
@@ -694,6 +636,5 @@ bg_banana_plantations = { default_building = building_banana_plantation }
 bg_coffee_plantations = { default_building = building_coffee_plantation }
 bg_silk_plantations = { default_building = building_silk_plantation }
 bg_dye_plantations = { default_building = building_dye_plantation }
-bg_opium_plantations = { default_building = building_opium_plantation }
 bg_tea_plantations = { default_building = building_tea_plantation }
 bg_sugar_plantations = { default_building = building_sugar_plantation }

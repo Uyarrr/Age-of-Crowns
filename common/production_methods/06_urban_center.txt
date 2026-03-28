@@ -17,7 +17,7 @@
 pm_market_squares = {
 	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
 
-	unlocking_technologies = { steel_frame_buildings }
+	unlocking_technologies = { new_world_crops }
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -35,7 +35,7 @@ pm_market_squares = {
 
 pm_covered_markets = {
 	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
-	unlocking_technologies = { steel_frame_buildings }
+	unlocking_technologies = { new_world_crops }
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -55,7 +55,7 @@ pm_covered_markets = {
 pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
 
-	unlocking_technologies = { steel_frame_buildings }
+	unlocking_technologies = { new_world_crops }
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -68,48 +68,6 @@ pm_arcades = {
 			building_employment_laborers_add = 2500
 			building_employment_clerks_add = 1900
 			building_employment_shopkeepers_add = 400
-		}
-	}
-}
-
-pm_urbancenter_age_five = {
-	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
-
-	unlocking_technologies = { steel_frame_buildings }
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_stone_add = 3   # MAX EVER
-			goods_input_glass_add = 2
-			goods_input_steel_add = 1
-			goods_output_services_add = 30
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 2300
-			building_employment_clerks_add = 2100
-			building_employment_shopkeepers_add = 400
-		}
-	}
-}
-
-pm_urbancenter_age_six = {
-	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
-
-	unlocking_technologies = { steel_frame_buildings }
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_stone_add = 2
-			goods_input_glass_add = 3
-			goods_input_steel_add = 2
-			goods_output_services_add = 36
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 1200
-			building_employment_clerks_add = 2800
-			building_employment_shopkeepers_add = 1000
 		}
 	}
 }
@@ -151,13 +109,8 @@ pm_electric_streetlights = {
 
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
 
-	unlocking_technologies = {
-		electrical_generation
-	}
-
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 3
 			goods_output_services_add = 10
 		}
 
@@ -174,70 +127,6 @@ pm_electric_streetlights = {
 	}
 
 	required_input_goods = electricity
-}
-
-pm_no_public_transport = {
-	texture = "gfx/interface/icons/production_method_icons/no_public_transport.dds"
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_output_transportation_add = 2
-		}
-	}
-}
-
-pm_public_trams = {
-	texture = "gfx/interface/icons/production_method_icons/public_trams.dds"
-
-	unlocking_technologies = {
-		railways
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_engines_add = 0.5
-			goods_output_transportation_add = 4
-		}
-
-		level_scaled = {
-			building_employment_engineers_add = 100
-			building_employment_machinists_add = 200
-			building_employment_laborers_add = -500
-		}
-	}
-}
-
-pm_public_motor_carriages = {
-	texture = "gfx/interface/icons/production_method_icons/public_motor_carriages.dds"
-
-	unlocking_technologies = {
-		combustion_engine
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_automobiles_add = 1
-			goods_output_transportation_add = 8
-		}
-
-		level_scaled = {
-			building_employment_engineers_add = 200
-			building_employment_machinists_add = 400
-			building_employment_laborers_add = -1000
-		}
-	}
 }
 
 pm_state_urban_clergy = {

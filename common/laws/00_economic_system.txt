@@ -72,7 +72,7 @@ law_interventionism = {
 	}
 
 	unlocking_technologies = {
-		manufacturies
+		behaviorism
 	}
 
 	modifier = {
@@ -251,7 +251,7 @@ law_industry_banned = {
 	}
 
 	unlocking_technologies = {
-		romanticism
+		behaviorism
 	}
 
 	on_activate = {
@@ -261,51 +261,9 @@ law_industry_banned = {
 			every_scope_state = {
 				if = {
 					limit = {
-						has_building = building_chemical_plant
+						has_building = building_weapon_workshop
 					}
-					remove_building = building_chemical_plant
-				}
-				if = {
-					limit = {
-						has_building = building_synthetics_plant
-					}
-					remove_building = building_synthetics_plant
-				}
-				if = {
-					limit = {
-						has_building = building_steel_mill
-					}
-					remove_building = building_steel_mill
-				}
-				if = {
-					limit = {
-						has_building = building_power_plant
-					}
-					remove_building = building_power_plant
-				}
-				if = {
-					limit = {
-						has_building = building_motor_industry
-					}
-					remove_building = building_motor_industry
-				}
-				if = {
-					limit = {
-						has_building = building_automotive_industry
-					}
-					remove_building = building_automotive_industry
-				}
-				if = {
-					limit = {
-						has_building = building_electrics_industry
-					}
-					remove_building = building_electrics_industry
-				}
-				if = {
-					limit = {
-						has_building = building_munition_plant
-					}
-					remove_building = building_munition_plant
+					remove_building = building_weapon_workshop
 				}
 			}
 		}
@@ -377,45 +335,9 @@ law_extraction_economy = {
 			every_scope_state = {
 				if = {
 					limit = {
-						has_building = building_chemical_plant
+						has_building = building_weapon_workshop
 					}
-					remove_building = building_chemical_plant
-				}
-				if = {
-					limit = {
-						has_building = building_synthetics_plant
-					}
-					remove_building = building_synthetics_plant
-				}
-				if = {
-					limit = {
-						has_building = building_steel_mill
-					}
-					remove_building = building_steel_mill
-				}
-				if = {
-					limit = {
-						has_building = building_motor_industry
-					}
-					remove_building = building_motor_industry
-				}
-				if = {
-					limit = {
-						has_building = building_automotive_industry
-					}
-					remove_building = building_automotive_industry
-				}
-				if = {
-					limit = {
-						has_building = building_electrics_industry
-					}
-					remove_building = building_electrics_industry
-				}
-				if = {
-					limit = {
-						has_building = building_munition_plant
-					}
-					remove_building = building_munition_plant
+					remove_building = building_weapon_workshop
 				}
 			}
 		}
@@ -541,7 +463,8 @@ law_cooperative_ownership = {
 	}
 
 	unlocking_laws = {
-		behaviorism
+		law_council_republic
+		law_corporate_state
 	}
 
 	on_activate = {

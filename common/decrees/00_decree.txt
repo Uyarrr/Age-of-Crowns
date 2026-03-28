@@ -15,7 +15,7 @@ decree_road_maintenance = {
 		state_construction_mult = 0.10
 	}
 	unlocking_technologies = {
-		centralization
+		behaviorism
 	}
 	cost = 100
 
@@ -95,7 +95,7 @@ decree_violent_suppression = {
 	texture = "gfx/interface/icons/decree/decree_violent_suppression.dds"
 
 	unlocking_technologies = {
-		standing_army
+		behaviorism
 	}
 
 	country_trigger = {
@@ -145,7 +145,7 @@ decree_violent_suppression = {
 decree_emergency_relief = {
 	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
 	unlocking_technologies = {
-		centralization
+		behaviorism
 	}
 	modifier = {
 		state_tax_collection_mult = -0.5
@@ -301,7 +301,7 @@ decree_promote_social_mobility = {
 decree_promote_national_values = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
-		nationalism
+		behaviorism
 	}
 
 	country_trigger = {
@@ -550,7 +550,7 @@ decree_promote_national_values = {
 decree_encourage_manufacturing_industry = {
 	texture = "gfx/interface/icons/decree/decree_encourage_manufacturing_industry.dds"
 	unlocking_technologies = {
-		manufacturies
+		behaviorism
 	}
 	state_trigger = {
 		NOR = {
@@ -690,9 +690,6 @@ decree_encourage_resource_industry = {
 		building_group_bg_mining_throughput_add = 0.2
 		building_group_bg_logging_throughput_add = 0.2
 		building_group_bg_fishing_throughput_add = 0.2
-		building_group_bg_whaling_throughput_add = 0.2
-		building_group_bg_oil_extraction_throughput_add = 0.2
-		building_group_bg_rubber_throughput_add = 0.2
 	}
 	cost = 100
 
@@ -705,8 +702,6 @@ decree_encourage_resource_industry = {
 						is_building_group = bg_mining
 						is_building_group = bg_logging
 						is_building_group = bg_fishing
-						is_building_group = bg_whaling
-						is_building_group = bg_oil_extraction
 					}
 				}
 			}
@@ -719,8 +714,6 @@ decree_encourage_resource_industry = {
 						is_building_group = bg_mining
 						is_building_group = bg_logging
 						is_building_group = bg_fishing
-						is_building_group = bg_whaling
-						is_building_group = bg_oil_extraction
 					}
 					count >= 3
 				}
@@ -734,8 +727,6 @@ decree_encourage_resource_industry = {
 						is_building_group = bg_mining
 						is_building_group = bg_logging
 						is_building_group = bg_fishing
-						is_building_group = bg_whaling
-						is_building_group = bg_oil_extraction
 					}
 					count >= 5
 				}
@@ -763,7 +754,7 @@ decree_greener_grass_campaign = {
 		state_migration_pull_mult = 0.25
 	}
 	unlocking_technologies = {
-		romanticism
+		behaviorism
 	}
 	cost = 100
 
@@ -855,7 +846,7 @@ decree_enlistment_efforts = {
 		building_training_rate_mult = 0.25
 	}
 	unlocking_technologies = {
-		mandatory_service
+		behaviorism
 	}
 	cost = 100
 

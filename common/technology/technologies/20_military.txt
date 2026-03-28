@@ -292,7 +292,7 @@ military_drill = {
 	category = military
 
 	unlocking_technologies = {
-		men_at_arms
+		cavalrymen
 	}
 
 	modifier = {
@@ -341,6 +341,21 @@ net_and_line_fishing = {
 	category = military
 
 	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+bronze_weapons = {
+	# Unlocks Weapon Workshop Bronze PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/weapons.dds"
+	category = military
+
+	unlocking_technologies = {
+		men_at_arms
 	}
 
 	ai_weight = {
@@ -496,21 +511,6 @@ state_consolidation = {
 	}
 }
 
-bronze_weapons = {
-	# Unlocks Weapon Workshop Bronze PM
-	era = era_3
-	texture = "gfx/interface/icons/goods_icons/weapons.dds"
-	category = military
-
-	unlocking_technologies = {
-		halberdier
-	}
-
-	ai_weight = {
-		value = 2 # Important tech in general
-	}
-}
-
 bronze_fastened_dockyards = {
 	# Unlocks Naval Supplies Bronze PM
 	era = era_3
@@ -644,6 +644,21 @@ colonial_horse_breeding = {
 	}
 }
 
+iron_weapons = {
+	# Unlocks Weapon Workshop PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/weapons.dds"
+	category = military
+
+	unlocking_technologies = {
+		halberdier
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 ### ERA 4
 
 electric_telegraph = {
@@ -670,28 +685,18 @@ electric_telegraph = {
 	}
 }
 
+### ERA 5
 
-landing_craft = {
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/landing_craft.dds"
+dedicated_police_force = {
+	# Unlocks Dedicated Police Force Law
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
 	category = military
-
-	modifier = {
-		country_ignores_landing_craft_penalty_bool = yes
-	}
 
 	unlocking_technologies = {
 	}
 
 	ai_weight = {
 		value = 1
-
-		# Important for naval powers
-		if = {
-			limit = { navy_size >= 20 }
-			add = 1
-		}
 	}
 }
-
-### ERA 5

@@ -151,19 +151,6 @@ TVR = { # Tver - Default
 	}
 }
 
-PRO = { # Provence - Default
-	pattern = "pattern_solid.tga"
-	color1 = "red"
-
-	colored_emblem = {
-		texture = "ce_throne_tver.dds"
-		color1 = yellow
-		color2 = green
-		color3 = "green_light"
-		instance = { position = { 0.5 0.5 } scale = { 1.05 1.05 } }		
-	}
-}
-
 SCY = { # Sicily - Default
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -303,6 +290,42 @@ MAM = { # Mamluk - Default
 	colored_emblem = {
 		texture = "ce_crescent.dds"
 		color1 = white
+		instance = {
+			position = { 0.25 0.5 }
+			scale = { -0.5 1.0 }
+		}
+	}
+}
+
+ PRO = { # Provence - Default
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red_mid"
+		color2 = "red"
+		instance = { position = { 0.5 0.07 }  scale = { 0.68 0.055 } }		
+		instance = { position = { 0.5 0.14 }  scale = { 0.07 0.175 } }			
+		instance = { position = { 0.195 0.14 }  scale = { 0.07 0.175 } }			
+		instance = { position = { 0.805 0.14 }  scale = { 0.07 0.175 } }					
+	}		
+}
+
+TLC = { # Tlemcen - Default
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "pb_crescent_pale.dds"
+		color1 = blue
 		instance = {
 			position = { 0.25 0.5 }
 			scale = { -0.5 1.0 }

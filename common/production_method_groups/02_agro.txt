@@ -8,6 +8,16 @@
 	}
 }
 
+pmg_building_rye_farm_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pmg_building_wheat_farm_main_1
+		pmg_building_wheat_farm_main_2
+		pmg_building_wheat_farm_main_3
+		pmg_building_wheat_farm_main_4
+	}
+}
+
 pmg_secondary_building_rye_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
@@ -23,19 +33,6 @@ pmg_harvesting_process_building_rye_farm = {
 	production_methods = {
 		pm_tools_disabled
 		pm_tools
-		pm_steam_threshers
-		pm_tractors
-		pm_compression_ignition_tractors
-	}
-}
-
-pmg_base_building_wheat_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pmg_building_wheat_farm_main_1
-		pmg_building_wheat_farm_main_2
-		pmg_building_wheat_farm_main_3
-		pmg_building_wheat_farm_main_4
 	}
 }
 
@@ -59,13 +56,13 @@ pmg_harvesting_process_building_wheat_farm = {
 	}
 }
 
-pmg_base_building_rice_farm = {
+pmg_building_rice_farm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_simple_farming_building_rice_farm
-		pm_soil_enriching_farming_building_rice_farm
-		pm_fertilization_building_rice_farm
-		pm_chemical_fertilizer_building_rice_farm
+		pmg_building_wheat_farm_main_1
+		pmg_building_wheat_farm_main_2
+		pmg_building_wheat_farm_main_3
+		pmg_building_wheat_farm_main_4
 	}
 }
 
@@ -86,7 +83,7 @@ pmg_harvesting_process_building_rice_farm = {
 	}
 }
 
-pmg_base_building_maize_farm = {
+pmg_building_maize_farm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pmg_building_wheat_farm_main_1
@@ -104,18 +101,7 @@ pmg_secondary_building_maize_farm = {
 	}
 }
 
-pmg_harvesting_process_building_maize_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_tools_disabled
-		pm_tools
-		pm_steam_threshers
-		pm_tractors
-		pm_compression_ignition_tractors
-	}
-}
-
-pmg_base_building_millet_farm = {
+pmg_building_millet_farm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pmg_building_wheat_farm_main_1
@@ -130,17 +116,6 @@ pmg_secondary_building_millet_farm = {
 	production_methods = {
 		pm_no_secondary
 		pm_fig_orchards
-	}
-}
-
-pmg_harvesting_process_building_millet_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_tools_disabled
-		pm_tools
-		pm_steam_threshers
-		pm_tractors
-		pm_compression_ignition_tractors
 	}
 }
 
@@ -163,37 +138,11 @@ pmg_building_livestock_sheep = {
 	}
 }
 
-pmg_fencing = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_standard_fences
-		pm_barbed_wire_fences
-		pm_electric_fencing
-	}
-}
-
-pmg_refrigeration_building_livestock_ranch = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_unrefrigerated
-		pm_refrigerated_storage_building_livestock_ranch
-		pm_refrigerated_rail_cars_building_livestock_ranch
-	}
-}
-
 pmg_base_building_vineyard = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_vineyard
 		automatic_irrigation_building_vineyard
-	}
-}
-
-pmg_train_automation_building_vineyard = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
 	}
 }
 

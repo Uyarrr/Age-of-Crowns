@@ -412,6 +412,20 @@ pack_animal_transport = {
 	}
 }
 
+dyed_furnitures = {
+	# Unlocks Furniture PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## AGE 3 ######
 
 new_world_crops = {
@@ -629,6 +643,36 @@ apprenticeship_system = {
 	}
 }
 
+free_trade = {
+	#Unlocks Free Trade Law
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/economical_policies_law.dds"
+	category = production
+
+	unlocking_technologies = {
+		apprenticeship_system
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+iron_tools = {
+	# Unlocks Tools PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/tools.dds"
+	category = production
+
+	unlocking_technologies = {
+		apprenticeship_system
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## ERA 4
 
 wagon_transport = {
@@ -648,3 +692,34 @@ wagon_transport = {
 	}
 }
 
+homesteading = {
+	#Unlocks Homesteading Law
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/peasants_rights_laws.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+steel_tools = {
+	# Unlocks Tools PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/tools.dds"
+	category = production
+
+	unlocking_technologies = {
+		apprenticeship_system
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}

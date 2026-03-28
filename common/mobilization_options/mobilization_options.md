@@ -19,7 +19,7 @@ link to a graphical representation of the mobilization option
 keys to technologies, at least one of which is required to use
 
 	unlocking_technologies = {
-		automatic_machine_guns
+		professional_army
 	}
 
 keys to laws, at least one of which is required to use
@@ -34,7 +34,7 @@ trigger that determines if the option can be turned off or not
 in this fictional example, if you have automatic machine guns you can never not use them
 
 	is_shown = {
-		has_technology = handcranked_machine_guns
+		has_technology = professional_army
 	}
 
 trigger that determines if the option can be used or not
@@ -77,8 +77,8 @@ effects that run when the mobilization option is toggled accordingly
 goods cost when active & mobilized
 
 	upkeep_modifier = {
-		goods_input_small_arms_add = 1
-		goods_input_ammunition_add = 1
+		goods_input_weapons_add = 1
+		goods_input_saltpeter_add = 1
 	}
 
 effects on units when active & mobilized

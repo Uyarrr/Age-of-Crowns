@@ -89,16 +89,3 @@ pmg_trade_quantity_trade_center = {
 		pm_trade_center_trade_quantity_very_high
 	}
 }
-
-pmg_caravan_routes_trade_center = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_caravan_hub_main_1
-		pm_caravan_hub_main_2
-		pm_caravan_hub_main_3
-		pm_caravan_hub_main_4
-	}
-}
-

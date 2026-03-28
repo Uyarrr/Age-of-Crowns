@@ -71,10 +71,10 @@ pmg_building_wheat_farm_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fertilizer_add = 15	 # 450
+			goods_input_meat_add = 15
 
 			# output goods
-			goods_output_grain_add = 60 # 1200
+			goods_output_grain_add = 60
 		}
 
 		level_scaled = {
@@ -296,91 +296,6 @@ pm_fig_orchards = {
 	}
 }
 
-pm_standard_fences = {
-	texture = "gfx/interface/icons/production_method_icons/standard_fences.dds"
-}
-
-pm_barbed_wire_fences = {
-	texture = "gfx/interface/icons/production_method_icons/barbed_wire_fencing.dds"
-	unlocking_technologies = {
-		field_works
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_iron_add = 1
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -500
-		}
-	}
-}
-
-pm_electric_fencing = {
-	texture = "gfx/interface/icons/production_method_icons/electric_fencing.dds"
-	unlocking_technologies = {
-		electrical_generation
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_iron_add = 1
-			goods_input_electricity_add = 1
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -1000
-		}
-	}
-
-	required_input_goods = electricity
-}
-
-pm_unrefrigerated = {
-	texture = "gfx/interface/icons/production_method_icons/no_refrigeration.dds"
-}
-
-pm_refrigerated_storage_building_livestock_ranch = {
-	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
-
-	unlocking_technologies = {
-		pasteurization
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_electricity_add = 1
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -500
-		}
-	}
-
-	required_input_goods = electricity
-}
-
-pm_refrigerated_rail_cars_building_livestock_ranch = {
-	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
-
-	unlocking_technologies = {
-		electric_railway
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_electricity_add = 1
-			goods_input_transportation_add = 1
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -1000
-		}
-	}
-
-	required_input_goods = electricity
-}
-
-
 default_building_vineyard = {
 	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
 
@@ -394,35 +309,6 @@ default_building_vineyard = {
 			# profit
 			building_employment_laborers_add = 4000
 			building_employment_farmers_add = 1000
-		}
-	}
-}
-
-automatic_irrigation_building_vineyard = {
-	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
-	}
-
-	unlocking_technologies = {
-		pumpjacks
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_input_engines_add = 5
-			goods_output_wine_add = 40
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1500
-			building_employment_machinists_add = 500
 		}
 	}
 }

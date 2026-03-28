@@ -17,100 +17,6 @@
 	}
 }
 
-pm_atmospheric_engine_pump_building_coal_mine = {
-	texture = "gfx/interface/icons/production_method_icons/pumps.dds"
-
-	unlocking_technologies = {
-		atmospheric_engine
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 10
-
-			# output goods
-			goods_output_coal_add = 40
-		}
-
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 3750
-			building_employment_machinists_add = 500
-			building_employment_engineers_add = 250
-		}
-	}
-}
-
-pm_condensing_engine_pump_building_coal_mine = {
-	texture = "gfx/interface/icons/production_method_icons/condensing_engine_pump.dds"
-
-	unlocking_technologies = {
-		watertube_boiler
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 15
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 15
-
-			# output goods
-			goods_output_coal_add = 60
-		}
-
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-		}
-	}
-}
-
-pm_diesel_pump_building_coal_mine = {
-	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
-
-	unlocking_technologies = {
-		compression_ignition
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 15
-			goods_input_oil_add = 5
-
-			# output goods
-			goods_output_coal_add = 90
-		}
-
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2250
-			building_employment_machinists_add = 1500
-			building_employment_engineers_add = 750
-		}
-	}
-}
-
 pm_no_explosives = {
 	texture = "gfx/interface/icons/production_method_icons/no_explosives.dds"
 }
@@ -119,19 +25,13 @@ pm_nitroglycerin_building_coal_mine = {
 	texture = "gfx/interface/icons/production_method_icons/nitroglycerin.dds"
 
 	unlocking_technologies = {
-	 	nitroglycerin
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
+	 	behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_explosives_add = 5
+			goods_input_saltpeter_add = 5
 
 			# output goods
 			goods_output_coal_add = 15
@@ -153,7 +53,7 @@ pm_dynamite_building_coal_mine = {
 	texture = "gfx/interface/icons/production_method_icons/dynamite.dds"
 
 	unlocking_technologies = {
-		dynamite
+		behaviorism
 	}
 
 	state_modifiers = {
@@ -164,7 +64,7 @@ pm_dynamite_building_coal_mine = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_explosives_add = 10
+			goods_input_saltpeter_add = 10
 
 			# output goods
 			goods_output_coal_add = 25
@@ -172,40 +72,6 @@ pm_dynamite_building_coal_mine = {
 
 		level_scaled = {
 			building_employment_engineers_add = 250
-		}
-	}
-}
-
-pm_no_steam_automation = {
-	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
-}
-
-pm_steam_donkey_building_coal_mine = {
-	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
-
-	unlocking_technologies = {
-		steam_donkey
-	}
-
-	disallowing_laws = {
-		law_industry_banned
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-				goods_input_engines_add = 1
-				goods_output_coal_add = -3
-			}
-
-		level_scaled = {
-			building_employment_laborers_add = -1000
 		}
 	}
 }
@@ -237,7 +103,7 @@ pm_atmospheric_engine_pump_building_iron_mine = {
 	texture = "gfx/interface/icons/production_method_icons/pumps.dds"
 
 	unlocking_technologies = {
-		atmospheric_engine
+		behaviorism
 	}
 
 	state_modifiers = {
@@ -269,7 +135,7 @@ pm_condensing_engine_pump_building_iron_mine = {
 	texture = "gfx/interface/icons/production_method_icons/condensing_engine_pump.dds"
 
 	unlocking_technologies = {
-		watertube_boiler
+		behaviorism
 	}
 
 	state_modifiers = {
@@ -301,7 +167,7 @@ pm_diesel_pump_building_iron_mine = {
 	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
 
 	unlocking_technologies = {
-		compression_ignition
+		behaviorism
 	}
 
 	state_modifiers = {
@@ -338,13 +204,13 @@ pm_nitroglycerin_building_iron_mine = {
 	}
 
 	unlocking_technologies = {
-	 	nitroglycerin
+	 	behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_explosives_add = 5
+			goods_input_saltpeter_add = 5
 
 			# output goods
 			goods_output_iron_add = 12
@@ -371,12 +237,12 @@ pm_dynamite_building_iron_mine = {
 	}
 
 	unlocking_technologies = {
-		dynamite
+		behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_explosives_add = 10
+			goods_input_saltpeter_add = 10
 
 			# output goods
 			goods_output_iron_add = 20
@@ -384,35 +250,6 @@ pm_dynamite_building_iron_mine = {
 
 		level_scaled = {
 			building_employment_engineers_add = 250
-		}
-	}
-}
-
-pm_steam_donkey_mine = {
-	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
-	}
-
-	unlocking_technologies = {
-		steam_donkey
-	}
-
-	disallowing_laws = {
-		law_industry_banned
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_engines_add = 1
-			goods_input_coal_add = 4
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -1000
 		}
 	}
 }
@@ -426,7 +263,7 @@ pm_rail_transport_mine = {
 	}
 
 	unlocking_technologies = {
-		railways
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -469,7 +306,7 @@ pm_atmospheric_engine_pump_building_lead_mine = {
 	}
 
 	unlocking_technologies = {
-		atmospheric_engine
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -500,7 +337,7 @@ pm_condensing_engine_pump_building_lead_mine = {
 	}
 
 	unlocking_technologies = {
-		watertube_boiler
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -531,7 +368,7 @@ pm_diesel_pump_building_lead_mine = {
 	}
 
 	unlocking_technologies = {
-		compression_ignition
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -562,13 +399,13 @@ pm_nitroglycerin_building_lead_mine = {
 	}
 
 	unlocking_technologies = {
-	 	nitroglycerin
+	 	behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_explosives_add = 5
+			goods_input_saltpeter_add = 5
 
 			# output goods
 			goods_output_lead_add = 12
@@ -595,12 +432,12 @@ pm_dynamite_building_lead_mine = {
 	}
 
 	unlocking_technologies = {
-		dynamite
+		behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_explosives_add = 10
+			goods_input_saltpeter_add = 10
 
 			# output goods
 			goods_output_lead_add = 20
@@ -640,7 +477,7 @@ pm_atmospheric_engine_pump_building_sulfur_mine = {
 	}
 
 	unlocking_technologies = {
-		atmospheric_engine
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -671,7 +508,7 @@ pm_condensing_engine_pump_building_sulfur_mine = {
 	}
 
 	unlocking_technologies = {
-		watertube_boiler
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -702,7 +539,7 @@ pm_diesel_pump_building_sulfur_mine = {
 	}
 
 	unlocking_technologies = {
-		compression_ignition
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -733,13 +570,13 @@ pm_nitroglycerin_building_sulfur_mine = {
 	}
 
 	unlocking_technologies = {
-	 	nitroglycerin
+	 	behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_explosives_add = 5
+			goods_input_add = 5
 
 			# output goods
 			goods_output_sulfur_add = 10
@@ -766,12 +603,12 @@ pm_dynamite_building_sulfur_mine = {
 	}
 
 	unlocking_technologies = {
-		dynamite
+		behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_explosives_add = 10
+			goods_input_saltpeter_add = 10
 
 			# output goods
 			goods_output_sulfur_add = 20
@@ -818,7 +655,7 @@ pm_atmospheric_engine_pump_building_gold_mine = {
 	}
 
 	unlocking_technologies = {
-		atmospheric_engine
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -855,7 +692,7 @@ pm_condensing_engine_pump_building_gold_mine = {
 	}
 
 	unlocking_technologies = {
-		watertube_boiler
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -892,7 +729,7 @@ pm_diesel_pump_building_gold_mine = {
 	}
 
 	unlocking_technologies = {
-		compression_ignition
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -929,13 +766,13 @@ pm_nitroglycerin_building_gold_mine = {
 	}
 
 	unlocking_technologies = {
-	 	nitroglycerin
+	 	behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_explosives_add = 5
+			goods_input_saltpeter_add = 5
 
 			# output goods
 			goods_output_gold_add = 5
@@ -968,12 +805,12 @@ pm_dynamite_building_gold_mine = {
 	}
 
 	unlocking_technologies = {
-		dynamite
+		behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_explosives_add = 10
+			goods_input_saltpeter_add = 10
 
 			# output goods
 			goods_output_gold_add = 10

@@ -15,7 +15,7 @@ popneed_simple_clothing = {
 	}
 
 	entry = {
-		goods = clothes
+		goods = cloth
 
 		weight = 2
 		max_supply_share = 1.0
@@ -144,10 +144,10 @@ popneed_household_items = {
 }
 
 popneed_standard_clothing = {
-	default = clothes
+	default = cloth
 
 	entry = {
-		goods = clothes
+		goods = cloth
 	}
 }
 
@@ -355,7 +355,7 @@ popneed_leisure = {
 	}
 
 	entry = {
-		goods = naval_supplies
+		goods = navalsupplies
 
 		weight = 1
 		max_supply_share = 0.25

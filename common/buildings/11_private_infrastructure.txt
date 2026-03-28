@@ -34,12 +34,10 @@ building_railway = {
 	ai_nationalization_desire = 0.5 # AI is reluctant to privatize railways since they are likely to need subsidies anyway
 
 	unlocking_technologies = {
-		railways
+		behaviorism
 	}
 
 	production_method_groups = {
-		pmg_base_building_railway
-		pmg_passenger_trains
 	}
 
 	required_construction = construction_cost_very_high
@@ -351,18 +349,6 @@ building_manor_house = {
 				value = 0.1
 			}
 		}
-		bg_rubber_score = {
-			group = "bg_rubber"
-			score = {
-				value = 0.1
-			}
-		}
-		bg_whaling_score = {
-			group = "bg_whaling"
-			score = {
-				value = 0.25
-			}
-		}
 		bg_fishing_score = {
 			group = "bg_fishing"
 			score = {
@@ -537,32 +523,6 @@ building_financial_district = {
 				}
 			}
 		}
-		bg_rubber_score = {
-			group = "bg_rubber"
-			score = {
-				value = 1
-
-				if = {
-					limit = {
-						has_law_or_variant = law_type:law_traditionalism
-					}
-					multiply = 0.5
-				}
-			}
-		}
-		bg_whaling_score = {
-			group = "bg_whaling"
-			score = {
-				value = 1
-
-				if = {
-					limit = {
-						has_law_or_variant = law_type:law_traditionalism
-					}
-					multiply = 0.5
-				}
-			}
-		}
 		bg_fishing_score = {
 			group = "bg_fishing"
 			score = {
@@ -573,31 +533,6 @@ building_financial_district = {
 						has_law_or_variant = law_type:law_traditionalism
 					}
 					multiply = 0.5
-				}
-			}
-		}
-		bg_oil_extraction_score = {
-			group = "bg_oil_extraction"
-			score = {
-				value = 1
-
-				if = {
-					limit = {
-						has_law_or_variant = law_type:law_traditionalism
-					}
-					multiply = 0.1
-				}
-				else_if = {
-					limit = {
-						has_law_or_variant = law_type:law_industry_banned
-					}
-					multiply = 0.5
-				}
-				else_if = {
-					limit = {
-						has_law_or_variant = law_type:law_agrarianism
-					}
-					multiply = 0.75
 				}
 			}
 		}
