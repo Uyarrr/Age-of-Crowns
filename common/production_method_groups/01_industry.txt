@@ -1,9 +1,10 @@
-﻿pmg_building_furniture_manufactory_main = {
+﻿pmg_building_furniture_workshop_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_handcrafted_furniture
-		pm_lathe
-		pm_mechanized_workshops
+		pm_building_furniture_workshop_main_1
+		pm_building_furniture_workshop_main_2
+		pm_building_furniture_workshop_main_3
+		pm_building_furniture_workshop_main_4
 	}
 }
 
@@ -19,10 +20,10 @@ pmg_luxury_building_furniture_manufactory = {
 pmg_building_tooling_workshop_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_tooling_workshop_stone_tools
-		pm_building_tooling_workshop_bronze_tools
-		pm_building_tooling_workshop_iron_tools
-		pm_building_tooling_workshop_steel_tools
+		pm_building_tooling_workshop_main_1
+		pm_building_tooling_workshop_main_2
+		pm_building_tooling_workshop_main_3
+		pm_building_tooling_workshop_main_4
 	}
 }
 
@@ -186,17 +187,5 @@ pmg_building_bronze_foundry_main = {
 		pm_building_bronze_foundry_main_2
 		pm_building_bronze_foundry_main_3
 		pm_building_bronze_foundry_main_4
-	}
-}
-
-########################### FURNITURE WORKSHOP ##################################
-
-pmg_building_furniture_workshop_main = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_building_furniture_workshop_main_1
-		pm_building_furniture_workshop_main_2
-		pm_building_furniture_workshop_main_3
-		pm_building_furniture_workshop_main_4
 	}
 }

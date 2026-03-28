@@ -12,7 +12,7 @@
 
 	production_method_groups = {
 		pmg_building_stone_mine_main
-		pmg_power_and_extraction_methods_building_stone_mine
+		pmg_building_stone_mine_extraction
 	}
 	ownership_type = self
 
@@ -33,7 +33,7 @@ building_tin_mine = {
 
 	production_method_groups = {
 		pmg_building_tin_mine_main
-		pmg_power_and_extraction_methods_building_tin_mine
+		pmg_building_tin_mine_extraction
 	}
 	ownership_type = self
 
@@ -53,7 +53,7 @@ building_copper_mine = {
 
 	production_method_groups = {
 		pmg_building_copper_mine_main
-		pmg_power_and_extraction_methods_building_copper_mine
+		pmg_building_copper_mine_extraction
 	}
 	ownership_type = self
 
@@ -74,7 +74,7 @@ building_iron_mine = {
 
 	production_method_groups = {
 		pmg_building_iron_mine_main
-		pmg_power_and_extraction_methods_building_iron_mine
+		pmg_building_iron_mine_extraction
 	}
 	ownership_type = self
 
@@ -94,7 +94,7 @@ building_iron_mine = {
 
 	production_method_groups = {
 		pmg_building_coal_mine_main
-		pmg_power_and_extraction_methods_building_coal_mine
+		pmg_building_coal_mine_extraction
 	}
 	ownership_type = self
 
@@ -114,7 +114,7 @@ building_lead_mine = {
 
 	production_method_groups = {
 		pmg_building_lead_mine_main
-		pmg_power_and_extraction_methods_building_lead_mine
+		pmg_building_lead_mine_extraction
 	}
 	ownership_type = self
 
@@ -134,7 +134,7 @@ building_lead_mine = {
 
 	production_method_groups = {
 		pmg_building_sulfur_mine_main
-		pmg_power_and_extraction_methods_building_sulfur_mine
+		pmg_building_sulfur_mine_extraction
 	}
 	ownership_type = self
 
@@ -158,7 +158,7 @@ building_lead_mine = {
 
 	production_method_groups = {
 		pmg_building_gold_mine_main
-		pmg_power_and_extraction_methods_building_gold_mine
+		pmg_building_gold_mine_extraction
 	}
 	ownership_type = self
 
@@ -181,7 +181,7 @@ building_gold_field = {
 	}
 
 	production_method_groups = {
-		pmg_base_building_gold_field
+		pmg_building_gold_field_main
 	}
 	ownership_type = self
 

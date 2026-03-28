@@ -1,20 +1,20 @@
 ﻿pmg_building_wheat_farm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pmg_building_wheat_farm_main_1
-		pmg_building_wheat_farm_main_2
-		pmg_building_wheat_farm_main_3
-		pmg_building_wheat_farm_main_4
+		pm_building_wheat_farm_main_1
+		pm_building_wheat_farm_main_2
+		pm_building_wheat_farm_main_3
+		pm_building_wheat_farm_main_4
 	}
 }
 
 pmg_building_rye_farm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pmg_building_wheat_farm_main_1
-		pmg_building_wheat_farm_main_2
-		pmg_building_wheat_farm_main_3
-		pmg_building_wheat_farm_main_4
+		pm_building_wheat_farm_main_1
+		pm_building_wheat_farm_main_2
+		pm_building_wheat_farm_main_3
+		pm_building_wheat_farm_main_4
 	}
 }
 
@@ -48,10 +48,10 @@ pmg_secondary_building_wheat_farm = {
 pmg_building_rice_farm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pmg_building_wheat_farm_main_1
-		pmg_building_wheat_farm_main_2
-		pmg_building_wheat_farm_main_3
-		pmg_building_wheat_farm_main_4
+		pm_building_wheat_farm_main_1
+		pm_building_wheat_farm_main_2
+		pm_building_wheat_farm_main_3
+		pm_building_wheat_farm_main_4
 	}
 }
 
@@ -66,10 +66,10 @@ pmg_secondary_building_rice_farm = {
 pmg_building_maize_farm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pmg_building_wheat_farm_main_1
-		pmg_building_wheat_farm_main_2
-		pmg_building_wheat_farm_main_3
-		pmg_building_wheat_farm_main_4
+		pm_building_wheat_farm_main_1
+		pm_building_wheat_farm_main_2
+		pm_building_wheat_farm_main_3
+		pm_building_wheat_farm_main_4
 	}
 }
 
@@ -84,10 +84,10 @@ pmg_secondary_building_maize_farm = {
 pmg_building_millet_farm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pmg_building_wheat_farm_main_1
-		pmg_building_wheat_farm_main_2
-		pmg_building_wheat_farm_main_3
-		pmg_building_wheat_farm_main_4
+		pm_building_wheat_farm_main_1
+		pm_building_wheat_farm_main_2
+		pm_building_wheat_farm_main_3
+		pm_building_wheat_farm_main_4
 	}
 }
 
@@ -118,7 +118,7 @@ pmg_building_livestock_sheep = {
 	}
 }
 
-pmg_base_building_vineyard = {
+pmg_building_vineyard_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_vineyard

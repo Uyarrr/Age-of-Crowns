@@ -13,9 +13,7 @@ building_coffee_plantation = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_coffee_plantation
-		pmg_drying_coffee_plantation
-		pmg_coffee_exploitation
+		pmg_building_coffee_plantation_main
 	}
 	ownership_type = self
 
@@ -35,8 +33,7 @@ building_cotton_plantation = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_cotton_plantation
-		pmg_cotton_exploitation
+		pmg_building_cotton_plantation_main
 	}
 	ownership_type = self
 
@@ -44,16 +41,6 @@ building_cotton_plantation = {
 
 	ai_value = {
 		value = 1000
-
-		if = { # British dictates
-			limit = {
-				owner = {
-					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type ?= 4
-				}
-			}
-			add = 2000
-		}
 	}
 }
 
@@ -70,9 +57,7 @@ building_dye_plantation = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_dye_plantation
-		pmg_dye_exploitation
-		pmg_train_automation_building_dye_plantation
+		pmg_building_dye_plantation_main
 	}
 	ownership_type = self
 
@@ -80,16 +65,6 @@ building_dye_plantation = {
 
 	ai_value = {
 		value = 1000
-
-		if = { # British dictates
-			limit = {
-				owner = {
-					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type ?= 3
-				}
-			}
-			add = 2000
-		}
 	}
 }
 
@@ -106,8 +81,7 @@ building_banana_plantation = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_banana_plantation
-		pmg_banana_exploitation
+		pmg_building_banana_plantation_main
 	}
 	ownership_type = self
 
@@ -127,8 +101,7 @@ building_tea_plantation = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_tea_plantation
-		pmg_tea_exploitation
+		pmg_building_tea_plantation_main
 	}
 	ownership_type = self
 
@@ -136,16 +109,6 @@ building_tea_plantation = {
 
 	ai_value = {
 		value = 1000
-
-		if = { # British dictates
-			limit = {
-				owner = {
-					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type ?= 2
-				}
-			}
-			add = 2000
-		}
 	}
 }
 
@@ -162,9 +125,7 @@ building_tobacco_plantation = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_tobacco_plantation
-		pmg_manufacture_tobacco
-		pmg_working_conditions_tobacco
+		pmg_building_tobacco_plantation_main
 	}
 	ownership_type = self
 
@@ -172,16 +133,6 @@ building_tobacco_plantation = {
 
 	ai_value = {
 		value = 1000
-
-		if = { # British dictates
-			limit = {
-				owner = {
-					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type ?= 5
-				}
-			}
-			add = 2000
-		}
 	}
 }
 
@@ -198,9 +149,7 @@ building_sugar_plantation = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_sugar_plantation
-		pmg_refinement_building_sugar_plantation
-		pmg_exploitation_sugar
+		pmg_building_sugar_plantation_main
 	}
 	ownership_type = self
 

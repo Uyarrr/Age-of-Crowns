@@ -38,74 +38,74 @@ pmg_building_copper_mine_main = {
 	}
 }
 
-pmg_power_and_extraction_methods_building_stone_mine = {
+pmg_building_stone_mine_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_stone_mine_extraction_none
-		pm_building_stone_mine_extraction_mechanical
-		pm_building_stone_mine_extraction_water_powered
-		pm_building_stone_mine_extraction_advanced
+		pm_building_stone_mine_extraction_0
+		pm_building_stone_mine_extraction_1
+		pm_building_stone_mine_extraction_2
+		pm_building_stone_mine_extraction_3
 	}
 }
 
-pmg_power_and_extraction_methods_building_tin_mine = {
+pmg_building_tin_mine_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_tin_mine_extraction_none
-		pm_building_tin_mine_extraction_mechanical
-		pm_building_tin_mine_extraction_water_powered
-		pm_building_tin_mine_extraction_advanced
+		pm_building_tin_mine_extraction_0
+		pm_building_tin_mine_extraction_1
+		pm_building_tin_mine_extraction_2
+		pm_building_tin_mine_extraction_3
 	}
 }
 
-pmg_power_and_extraction_methods_building_copper_mine = {
+pmg_building_copper_mine_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_copper_mine_extraction_none
-		pm_building_copper_mine_extraction_mechanical
-		pm_building_copper_mine_extraction_water_powered
-		pm_building_copper_mine_extraction_advanced
+		pm_building_copper_mine_extraction_0
+		pm_building_copper_mine_extraction_1
+		pm_building_copper_mine_extraction_2
+		pm_building_copper_mine_extraction_3
 	}
 }
 
 
-pmg_power_and_extraction_methods_building_iron_mine = {
+pmg_building_iron_mine_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_iron_mine_extraction_none
-		pm_building_iron_mine_extraction_mechanical
-		pm_building_iron_mine_extraction_water_powered
-		pm_building_iron_mine_extraction_advanced
+		pm_building_iron_mine_extraction_0
+		pm_building_iron_mine_extraction_1
+		pm_building_iron_mine_extraction_2
+		pm_building_iron_mine_extraction_3
 	}
 }
 
-pmg_power_and_extraction_methods_building_coal_mine = {
+pmg_building_coal_mine_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_coal_mine_extraction_none
-		pm_building_coal_mine_extraction_mechanical
-		pm_building_coal_mine_extraction_water_powered
-		pm_building_coal_mine_extraction_advanced
+		pm_building_coal_mine_extraction_0
+		pm_building_coal_mine_extraction_1
+		pm_building_coal_mine_extraction_2
+		pm_building_coal_mine_extraction_3
 	}
 }
 
-pmg_power_and_extraction_methods_building_lead_mine = {
+pmg_building_lead_mine_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_lead_mine_extraction_none
-		pm_building_lead_mine_extraction_mechanical
-		pm_building_lead_mine_extraction_water_powered
-		pm_building_lead_mine_extraction_advanced
+		pm_building_lead_mine_extraction_0
+		pm_building_lead_mine_extraction_1
+		pm_building_lead_mine_extraction_2
+		pm_building_lead_mine_extraction_3
 	}
 }
 
-pmg_power_and_extraction_methods_building_sulfur_mine = {
+pmg_building_sulfur_mine_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_sulfur_mine_extraction_none
-		pm_building_sulfur_mine_extraction_mechanical
-		pm_building_sulfur_mine_extraction_water_powered
-		pm_building_sulfur_mine_extraction_advanced
+		pm_building_sulfur_mine_extraction_0
+		pm_building_sulfur_mine_extraction_1
+		pm_building_sulfur_mine_extraction_2
+		pm_building_sulfur_mine_extraction_3
 	}
 }
 
@@ -146,43 +146,6 @@ pmg_power_and_extraction_methods_building_gold_mine = {
 		pm_building_gold_mine_extraction_mechanical
 		pm_building_gold_mine_extraction_water_powered
 		pm_building_gold_mine_extraction_advanced
-	}
-}
-
-pmg_power_and_extraction_methods_building_silver_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_building_silver_mine_extraction_none
-		pm_building_silver_mine_extraction_mechanical
-		pm_building_silver_mine_extraction_water_powered
-		pm_building_silver_mine_extraction_advanced
-	}
-}
-
-
-pmg_steam_automation_building_sulfur_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_no_steam_automation
-		pm_steam_donkey_mine
-	}
-}
-
-pmg_train_automation_building_sulfur_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_rail_transport_mine
-	}
-}
-
-pmg_mining_equipment_building_gold_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_picks_and_shovels_building_gold_mine
-		pm_atmospheric_engine_pump_building_gold_mine
-		pm_condensing_engine_pump_building_gold_mine
-		pm_diesel_pump_building_gold_mine
 	}
 }
 

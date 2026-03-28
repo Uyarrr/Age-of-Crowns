@@ -15,7 +15,6 @@ building_rye_farm = {
 	production_method_groups = {
 		pmg_building_rye_farm_main
 		pmg_secondary_building_rye_farm
-		pmg_harvesting_process_building_rye_farm
 	}
 
 	required_construction = construction_cost_low
@@ -41,7 +40,6 @@ building_wheat_farm = {
 	production_method_groups = {
 		pmg_building_wheat_farm_main
 		pmg_secondary_building_wheat_farm
-		pmg_harvesting_process_building_wheat_farm
 	}
 
 	required_construction = construction_cost_low
@@ -67,7 +65,6 @@ building_rice_farm = {
 	production_method_groups = {
 		pmg_building_rice_farm_main
 		pmg_secondary_building_rice_farm
-		pmg_harvesting_process_building_rice_farm
 	}
 
 	required_construction = construction_cost_low
@@ -93,7 +90,6 @@ building_maize_farm = {
 	production_method_groups = {
 		pmg_building_maize_farm_main
 		pmg_secondary_building_maize_farm
-		pmg_harvesting_process_building_maize_farm
 	}
 
 	required_construction = construction_cost_low
@@ -119,7 +115,6 @@ building_millet_farm = {
 	production_method_groups = {
 		pmg_building_millet_farm_main
 		pmg_secondary_building_millet_farm
-		pmg_harvesting_process_building_millet_farm
 	}
 
 	required_construction = construction_cost_low
@@ -145,7 +140,6 @@ building_livestock_ranch = {
 	production_method_groups = {
 		pmg_building_livestock_main
 		pmg_building_livestock_sheep
-		pmg_fencing
 	}
 
 	required_construction = construction_cost_low
@@ -171,8 +165,7 @@ building_vineyard = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_vineyard
-		pmg_train_automation_building_vineyard
+		pmg_building_vineyard_main
 	}
 	ownership_type = self
 
@@ -194,7 +187,6 @@ building_orchard = {
 	production_method_groups = {
 		pmg_base_building_banana_plantation
 		pmg_banana_exploitation
-		pmg_train_automation_building_banana_plantation
 	}
 	ownership_type = self
 

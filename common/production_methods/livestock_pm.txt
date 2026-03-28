@@ -80,6 +80,10 @@ pm_building_livestock_main_4 = {
 	}
 }
 
+pm_building_livestock_sheep_0 = {
+	texture = "gfx/interface/icons/production_method_icons/sheep_ranch.dds"
+}
+
 pm_building_livestock_sheep_1 = {
 	texture = "gfx/interface/icons/production_method_icons/sheep_ranch.dds"
 
@@ -118,8 +122,8 @@ pm_building_livestock_sheep_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_add = 20 # 300
-			goods_output_fabric_add = 40 # 500
+			goods_input_grain_add = 20
+			goods_output_fabric_add = 40
 		}
 	}
 }
