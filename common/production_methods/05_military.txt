@@ -28,7 +28,7 @@ pm_general_training = {
 	}
 
 	unlocking_technologies = {
-		general_staff
+		professional_army
 	}
 	building_modifiers = {
 		unscaled = {
@@ -50,7 +50,7 @@ pm_advanced_tactics_training = {
 	}
 
 	unlocking_technologies = {
-		military_statistics
+		professional_army
 	}
 	building_modifiers = {
 		unscaled = {
@@ -72,7 +72,7 @@ pm_training_streamlining = {
 	}
 
 	unlocking_technologies = {
-		wargaming
+		professional_army
 	}
 	building_modifiers = {
 		unscaled = {
@@ -94,7 +94,7 @@ pm_nco_incorporation = {
 	}
 
 	unlocking_technologies = {
-		nco_training
+		professional_army
 	}
 	building_modifiers = {
 		unscaled = {
@@ -116,7 +116,7 @@ pm_mobile_warfare_tactics = {
 	}
 
 	unlocking_technologies = {
-		mobile_armor
+		professional_army
 	}
 	building_modifiers = {
 		unscaled = {
@@ -159,7 +159,7 @@ pm_general_training_conscription = {
 	}
 
 	unlocking_technologies = {
-		general_staff
+		professional_army
 	}
 	building_modifiers = {
 		unscaled = {
@@ -181,7 +181,7 @@ pm_advanced_tactics_training_conscription = {
 	}
 
 	unlocking_technologies = {
-		military_statistics
+		professional_army
 	}
 	disallowing_laws = {
 		law_peasant_levies
@@ -206,7 +206,7 @@ pm_training_streamlining_conscription = {
 	}
 
 	unlocking_technologies = {
-		wargaming
+		professional_army
 	}
 	disallowing_laws = {
 		law_peasant_levies
@@ -231,7 +231,7 @@ pm_nco_incorporation_conscription = {
 	}
 
 	unlocking_technologies = {
-		nco_training
+		professional_army
 	}
 	disallowing_laws = {
 		law_peasant_levies
@@ -256,7 +256,7 @@ pm_mobile_warfare_tactics_conscription = {
 	}
 
 	unlocking_technologies = {
-		mobile_armor
+		professional_army
 	}
 	building_modifiers = {
 		unscaled = {
@@ -303,7 +303,7 @@ pm_power_of_the_purse = {
 	}
 
 	unlocking_technologies = {
-		power_of_the_purse
+		professional_army
 	}
 
 	state_modifiers = {
@@ -318,7 +318,7 @@ pm_power_of_the_purse = {
 		}
 
 		unscaled = {
-			unit_morale_loss_mult = -0.05
+			unit_morale_loss_mult = 0.05
 			unit_morale_damage_mult = 0.1
 			building_training_rate_add = 10
 		}
@@ -334,7 +334,7 @@ pm_jeune_ecole = {
 	}
 
 	unlocking_technologies = {
-		jeune_ecole
+		professional_army
 	}
 
 	state_modifiers = {
@@ -349,7 +349,7 @@ pm_jeune_ecole = {
 		}
 
 		unscaled = {
-			unit_morale_loss_mult = -0.1
+			unit_morale_loss_mult = 0.1
 			unit_morale_damage_mult = 0.2
 			building_training_rate_add = 10
 		}
@@ -365,7 +365,7 @@ pm_sea_lane_strategies = {
 	}
 
 	unlocking_technologies = {
-		sea_lane_strategies
+		professional_army
 	}
 
 	state_modifiers = {
@@ -396,7 +396,7 @@ pm_battlefleet_tactics = {
 	}
 
 	unlocking_technologies = {
-		battlefleet_tactics
+		professional_army
 	}
 
 	state_modifiers = {

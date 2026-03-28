@@ -493,24 +493,6 @@ state_consolidation = {
 	}
 }
 
-state_consolidation = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/counter_espionage.dds"
-	category = military
-
-	modifier = {
-		country_support_separatism_resistance_mult = 0.15
-	}
-
-	unlocking_technologies = {
-		improved_spy_organization
-	}
-
-	ai_weight = {
-		value = 1 # Important tech in general
-	}
-}
-
 bronze_fastened_dockyards = {
 	# Unlocks Naval Supplies Bronze PM
 	era = era_3

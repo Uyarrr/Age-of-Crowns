@@ -1,4 +1,4 @@
-﻿pmg_base_building_furniture_manufactory = {
+﻿pmg_building_furniture_manufactory_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_handcrafted_furniture
@@ -16,16 +16,6 @@ pmg_luxury_building_furniture_manufactory = {
 	}
 }
 
-pmg_automation_building_furniture_manufactory = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_automation_disabled
-		pm_watertube_boiler_building_furniture_manufactory
-		pm_rotary_valve_engine_building_furniture_manufactory
-		pm_assembly_lines_building_furniture_manufactory
-	}
-}
-
 pmg_building_tooling_workshop_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -39,9 +29,9 @@ pmg_building_tooling_workshop_main = {
 pmg_building_glassworks_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_glassworks_crude_glassmaking
-		pm_building_glassworks_leaded_glassmaking
-		pm_building_glassworks_colored_glassmaking
+		pm_building_glassworks_main_1
+		pm_building_glassworks_main_2
+		pm_building_glassworks_main_3
 	}
 }
 
@@ -75,10 +65,10 @@ pmg_building_shipyard_main = {
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_building_shipyards_timber_and_ropeyards
-		pm_building_shipyards_bronze_fastened_dockyards
-		pm_building_shipyards_organized_naval_stores
-		pm_building_shipyards_imperial_naval_arsenals
+		pm_building_shipyards_main_1
+		pm_building_shipyards_main_2
+		pm_building_shipyards_main_3
+		pm_building_shipyards_main_4
 	}
 }
 

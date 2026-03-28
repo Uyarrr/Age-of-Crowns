@@ -668,17 +668,6 @@ new_world = {
 
 	ai_weight = {
 		value = 1
-
-		# Iberian exploration bonus
-		if = {
-			limit = {
-				OR = {
-					tag = CAS
-					tag = POR
-				}
-			}
-			add = 10
-		}
 	}
 }
 
@@ -697,17 +686,6 @@ colonization = {
 
 	ai_weight = {
 		value = 1
-
-		# Iberian exploration bonus
-		if = {
-			limit = {
-				OR = {
-					tag = CAS
-					tag = POR
-				}
-			}
-			add = 10
-		}
 	}
 }
 
@@ -726,17 +704,6 @@ colonial_charters = {
 
 	ai_weight = {
 		value = 1
-
-		# Iberian exploration bonus
-		if = {
-			limit = {
-				OR = {
-					tag = CAS
-					tag = POR
-				}
-			}
-			add = 5
-		}
 	}
 }
 
@@ -930,17 +897,6 @@ exploration_south_america = {
 
 	ai_weight = {
 		value = 1
-
-		# Iberian exploration bonus
-		if = {
-			limit = {
-				OR = {
-					tag = CAS
-					tag = POR
-				}
-			}
-			add = 5
-		}
 	}
 }
 
@@ -958,17 +914,6 @@ colonial_east_south_america = {
 
 	ai_weight = {
 		value = 1
-
-		# Iberian exploration bonus
-		if = {
-			limit = {
-				OR = {
-					tag = CAS
-					tag = POR
-				}
-			}
-			add = 10
-		}
 	}
 }
 
