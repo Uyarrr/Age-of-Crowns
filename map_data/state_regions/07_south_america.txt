@@ -16,10 +16,8 @@
         building_iron_mine = 30
         building_logging_camp = 14
         building_fishing_wharf = 6
-        building_whaling_station = 4
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 12
     }
     naval_exit_id = 3024
@@ -50,11 +48,9 @@ STATE_GUAYANA = {
         undiscovered_amount = 12
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 16
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3062
@@ -82,11 +78,9 @@ STATE_ZULIA = {
         building_stone_quarry = 8
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 4
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 100
     }
     naval_exit_id = 3025
@@ -112,11 +106,9 @@ STATE_MIRANDA = {
         building_stone_quarry = 8
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 4
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 100
     }
     naval_exit_id = 3025
@@ -144,11 +136,9 @@ STATE_BOLIVAR = {
         building_stone_quarry = 7
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 16
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 50
     }
     naval_exit_id = 3025
@@ -176,11 +166,9 @@ STATE_ANTIOQUIA = {
         building_stone_quarry = 20
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3025
@@ -204,7 +192,6 @@ STATE_GUAVIARE = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 18
     }
 }
@@ -219,7 +206,7 @@ STATE_CUNDINAMARCA = {
     mine = "xDDE17B"
     wood = "x1BE3E2"
     arable_land = 50
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" "building_opium_plantation" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" "building_fiber_farm" "building_stud_farm" }
     capped_resources = {
         building_coal_mine = 20
         building_logging_camp = 7
@@ -228,7 +215,6 @@ STATE_CUNDINAMARCA = {
         building_stone_quarry = 20
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 10
     }
 }
@@ -249,13 +235,11 @@ STATE_CAUCA = {
         building_coal_mine = 20
         building_logging_camp = 8
         building_fishing_wharf = 6
-        building_whaling_station = 2
     
         building_copper_mine = 5
         building_stone_quarry = 20
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 6
     }
     naval_exit_id = 3155
@@ -280,12 +264,10 @@ STATE_PASTAZA = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 15
         discovered_amount = 1
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -305,7 +287,6 @@ STATE_TARAPACA = {
     capped_resources = {
         building_iron_mine = 18
         building_sulfur_mine = 24
-        building_whaling_station = 3
         building_fishing_wharf = 5
     
         building_copper_mine = 22
@@ -360,12 +341,10 @@ STATE_SANTA_CRUZ = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
         discovered_amount = 14
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 50
     }
 }
@@ -388,11 +367,9 @@ STATE_LA_PAZ = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 50
     }
 }
@@ -433,7 +410,6 @@ STATE_CAJAMARCA = {
     capped_resources = {
         building_coal_mine = 20
         building_logging_camp = 6
-        building_whaling_station = 3
         building_fishing_wharf = 7
     
         building_copper_mine = 8
@@ -445,7 +421,6 @@ STATE_CAJAMARCA = {
         undiscovered_amount = 4
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3024
@@ -469,7 +444,6 @@ STATE_LIMA = {
         building_lead_mine = 30
         building_sulfur_mine = 28
         building_logging_camp = 11
-        building_whaling_station = 5
         building_fishing_wharf = 7
     
         building_copper_mine = 10
@@ -541,13 +515,11 @@ STATE_URUGUAY = {
     capped_resources = {
         building_logging_camp = 9
         building_fishing_wharf = 6
-        building_whaling_station = 2
     
         building_copper_mine = 0
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3065
@@ -593,7 +565,6 @@ STATE_ALTO_PARAGUAY = {
         building_stone_quarry = 8
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -617,7 +588,6 @@ STATE_BAJO_PARAGUAY = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -665,7 +635,6 @@ STATE_PATAGONIA = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3066
@@ -731,7 +700,6 @@ STATE_SANTA_FE = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3065
@@ -755,7 +723,6 @@ STATE_CORRIENTES = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -819,7 +786,6 @@ STATE_SANTIAGO = {
         building_iron_mine = 33
         building_sulfur_mine = 36
         building_logging_camp = 6
-        building_whaling_station = 2
         building_fishing_wharf = 8
     
         building_copper_mine = 6
@@ -846,7 +812,6 @@ STATE_LOS_RIOS = {
         building_lead_mine = 24
         building_sulfur_mine = 32
         building_logging_camp = 20
-        building_whaling_station = 3
         building_fishing_wharf = 10
     
         building_copper_mine = 6
@@ -881,7 +846,6 @@ STATE_ARAUCANIA = {
         undiscovered_amount = 4
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3151
@@ -902,7 +866,6 @@ STATE_SOUTH_ATLANTIC_ISLANDS = {
     arable_land = 10
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
-        building_whaling_station = 3
         building_fishing_wharf = 2
     
         building_copper_mine = 2
@@ -933,11 +896,9 @@ STATE_PARA = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 22
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3062
@@ -963,7 +924,6 @@ STATE_MARANHAO = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 16
     }
     naval_exit_id = 3062
@@ -988,11 +948,9 @@ STATE_AMAZONAS = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 25
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -1015,7 +973,6 @@ STATE_ACRE = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 15
     }
 }
@@ -1039,7 +996,6 @@ STATE_GOIAS = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 16
     }
 }
@@ -1063,11 +1019,9 @@ STATE_MATO_GROSSO = {
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 26
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -1088,14 +1042,12 @@ STATE_RIO_GRANDE_DO_SUL = {
         building_coal_mine = 28
         building_logging_camp = 11
         building_fishing_wharf = 6
-        building_whaling_station = 2
         building_lead_mine = 30
     
         building_copper_mine = 1
         building_stone_quarry = 6
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3064
@@ -1117,7 +1069,6 @@ STATE_PARANA = {
         building_coal_mine = 20
         building_logging_camp = 30
         building_fishing_wharf = 3
-        building_whaling_station = 2
     
         building_copper_mine = 2
         building_stone_quarry = 10
@@ -1141,7 +1092,6 @@ STATE_SANTA_CATARINA = {
         building_coal_mine = 20
         building_logging_camp = 7
         building_fishing_wharf = 2
-        building_whaling_station = 2
     
         building_copper_mine = 2
         building_stone_quarry = 10
@@ -1169,11 +1119,9 @@ STATE_SAO_PAULO = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 10
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3064
@@ -1204,11 +1152,9 @@ STATE_MINAS_GERAIS = {
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 7
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -1228,13 +1174,11 @@ STATE_RIO_DE_JANEIRO = {
     capped_resources = {
         building_logging_camp = 9
         building_fishing_wharf = 9
-        building_whaling_station = 4
     
         building_copper_mine = 2
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 7
     }
     naval_exit_id = 3064
@@ -1261,7 +1205,6 @@ STATE_BAHIA = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 3
     }
     naval_exit_id = 3063
@@ -1287,7 +1230,6 @@ STATE_RIO_GRANDE_DO_NORTE = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 2
     }
     naval_exit_id = 3063
@@ -1314,7 +1256,6 @@ STATE_CEARA = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 3
     }
     naval_exit_id = 3063
@@ -1341,7 +1282,6 @@ STATE_PIAUI = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 4
     }
     naval_exit_id = 3063
@@ -1367,7 +1307,6 @@ STATE_PARAIBA = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 1
     }
     naval_exit_id = 3063
@@ -1393,7 +1332,6 @@ STATE_PERNAMBUCO = {
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_rubber_plantation"
         discovered_amount = 2
     }
     naval_exit_id = 3063

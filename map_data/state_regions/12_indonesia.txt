@@ -17,7 +17,6 @@
         building_fishing_wharf = 10
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 40
     }
     naval_exit_id = 3052
@@ -48,11 +47,9 @@ STATE_NORTH_BORNEO = {
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 16
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3055
@@ -84,7 +81,6 @@ STATE_WEST_BORNEO = {
         discovered_amount = 4
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 12
     }
     naval_exit_id = 3052
@@ -109,11 +105,9 @@ STATE_EAST_BORNEO = {
         building_fishing_wharf = 9
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 28
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
     naval_exit_id = 3125
@@ -138,11 +132,9 @@ STATE_WEST_JAVA = {
         building_fishing_wharf = 11
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 12
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3052
@@ -167,11 +159,9 @@ STATE_EAST_JAVA = {
         building_fishing_wharf = 8
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 12
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3052
@@ -195,7 +185,6 @@ STATE_CENTRAL_JAVA = {
         building_fishing_wharf = 4
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
     }
     naval_exit_id = 3052
@@ -220,7 +209,6 @@ STATE_NORTH_SUMATRA = {
         building_fishing_wharf = 13
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 28
     }
     naval_exit_id = 3120
@@ -244,11 +232,9 @@ STATE_SOUTH_SUMATRA = {
         building_fishing_wharf = 13
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 28
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3120
@@ -273,11 +259,9 @@ STATE_ACEH = {
         building_fishing_wharf = 8
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 25
     }
     naval_exit_id = 3051
@@ -299,14 +283,11 @@ STATE_WESTERN_NEW_GUINEA = {
         building_iron_mine = 18
         building_logging_camp = 20
         building_fishing_wharf = 9
-        building_whaling_station = 2
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 15
     }
     naval_exit_id = 3125
@@ -328,7 +309,6 @@ STATE_MOLUCCAS = {
         building_fishing_wharf = 6
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 4
     }
     naval_exit_id = 3125
@@ -352,7 +332,6 @@ STATE_CELEBES = {
         building_fishing_wharf = 4
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 4
     }
     naval_exit_id = 3125
@@ -375,14 +354,11 @@ STATE_EASTERN_NEW_GUINEA = {
         building_sulfur_mine = 32
         building_logging_camp = 16
         building_fishing_wharf = 10
-        building_whaling_station = 2
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 12
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 15
     }
     naval_exit_id = 3129
@@ -407,7 +383,6 @@ STATE_SUNDA_ISLANDS = {
         building_fishing_wharf = 10
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
     }
     naval_exit_id = 3052
@@ -431,7 +406,6 @@ STATE_MINDANAO = {
         building_fishing_wharf = 8
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 10
     }
     naval_exit_id = 3055
@@ -455,7 +429,6 @@ STATE_LUZON = {
         building_fishing_wharf = 12
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 4
     }
     naval_exit_id = 3056
@@ -479,7 +452,6 @@ STATE_VISAYAS = {
         building_coal_mine = 5
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 4
     }
     naval_exit_id = 3127
@@ -500,7 +472,6 @@ STATE_WEST_MICRONESIA = {
     arable_resources = { "building_rice_farm" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 3
         building_fishing_wharf = 3
     }
     naval_exit_id = 3002
@@ -522,7 +493,6 @@ STATE_EAST_MICRONESIA = {
     arable_resources = { "building_rice_farm" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 3
         building_fishing_wharf = 3
     }
     naval_exit_id = 3002
@@ -543,7 +513,6 @@ STATE_SOLOMON_ISLANDS = {
     arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 2
         building_fishing_wharf = 3
     }
     naval_exit_id = 3129
@@ -563,7 +532,6 @@ STATE_NAURU = {
     arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 3
         building_fishing_wharf = 3
         building_sulfur_mine = 12
     }
@@ -585,7 +553,6 @@ STATE_FIJI = {
     arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 4
         building_fishing_wharf = 4
     }
     naval_exit_id = 3124
@@ -646,7 +613,6 @@ STATE_BOUGAINVILLE = {
     arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 2
         building_fishing_wharf = 2
     }
     naval_exit_id = 3129
@@ -667,7 +633,6 @@ STATE_TAHITI = {
     arable_resources = { "building_rice_farm" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 4
-        building_whaling_station = 8
         building_fishing_wharf = 5
     }
     naval_exit_id = 3150
@@ -687,7 +652,6 @@ STATE_TONGA = {
     arable_resources = { "building_rice_farm" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 4
         building_fishing_wharf = 3
     }
     naval_exit_id = 3156

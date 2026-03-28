@@ -189,7 +189,6 @@ STATE_NORTHERN_NORWAY = {
         building_iron_mine = 18
         building_sulfur_mine = 20
         building_logging_camp = 24
-        building_whaling_station = 10
         building_fishing_wharf = 10
         building_stone_quarry = 28
         building_copper_mine = 5
@@ -233,7 +232,6 @@ STATE_ICELAND = {
     arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_sulfur_mine = 20
-        building_whaling_station = 5
         building_fishing_wharf = 3
         building_stone_quarry = 12
     }
@@ -254,7 +252,6 @@ STATE_GREENLAND = {
     arable_land = 3
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
-        building_whaling_station = 5
         building_fishing_wharf = 3
         building_stone_quarry = 10
 }
@@ -304,7 +301,6 @@ STATE_LANCASHIRE = {
         building_copper_mine = 4
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3030
@@ -370,7 +366,6 @@ STATE_HIGHLANDS = {
     arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 14
-        building_whaling_station = 6
         building_fishing_wharf = 14
         building_stone_quarry = 21
 }
@@ -421,7 +416,6 @@ STATE_EAST_ANGLIA = {
         building_stone_quarry = 24
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3028
@@ -610,7 +604,6 @@ STATE_NORMANDY = {
     capped_resources = {
         building_iron_mine = 30
         building_logging_camp = 8
-        building_whaling_station = 5
         building_fishing_wharf = 13
         building_stone_quarry = 18
 }
@@ -940,12 +933,10 @@ STATE_FRIESLAND = {
     arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 5
         building_fishing_wharf = 15
         building_stone_quarry = 10
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
     naval_exit_id = 3027
@@ -1170,7 +1161,6 @@ STATE_ELBE = {
         building_stone_quarry = 11
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
     naval_exit_id = 3027
@@ -1388,7 +1378,6 @@ STATE_HANNOVER = {
         building_stone_quarry = 17
 }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
     naval_exit_id = 3027

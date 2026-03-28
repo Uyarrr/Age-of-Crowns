@@ -481,7 +481,6 @@ STATE_KHARKOV = {
         building_logging_camp = 20
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 12
     }
 }
@@ -564,7 +563,6 @@ STATE_GALICH = {
         building_iron_mine = 12
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -623,7 +621,6 @@ STATE_PERM = {
         building_logging_camp = 35
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
 }
@@ -644,7 +641,6 @@ STATE_KAZAN = {
         building_coal_mine = 30
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
 }
@@ -664,7 +660,6 @@ STATE_URALSK = {
         building_logging_camp = 7
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
 }
@@ -678,7 +673,7 @@ STATE_KHIVA = {
     mine = "xC6FC10"
     wood = "xA487BA"
     arable_land = 85
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_opium_plantation" "building_cotton_plantation" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_fiber_farm" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 4
     }
@@ -803,7 +798,6 @@ STATE_AKTOBE = {
         building_logging_camp = 3
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 30
     }
 }
@@ -823,7 +817,6 @@ STATE_KALMYKIA = {
         building_logging_camp = 3
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 10
     }
 }
@@ -845,7 +838,6 @@ STATE_NORTH_CAUCASUS = {
         building_logging_camp = 25
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 25
     }
     resource = {
@@ -992,7 +984,6 @@ STATE_VYATKA = {
         building_logging_camp = 36
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 25
     }
 }
@@ -1015,7 +1006,6 @@ STATE_UFA = {
         building_lead_mine = 16
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 35
     }
 }
@@ -1035,7 +1025,6 @@ STATE_SURGUT = {
         building_logging_camp = 32
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 120
     }
 }
@@ -1213,7 +1202,6 @@ STATE_STAVROPOL = {
         building_logging_camp = 14
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 30
     }
 }
@@ -1234,7 +1222,6 @@ STATE_CHUVASHIA = {
         building_logging_camp = 25
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 24
     }
 }
@@ -1254,7 +1241,6 @@ STATE_CHERNIHIV = {
         building_logging_camp = 16
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 6
     }
 }
@@ -1278,7 +1264,6 @@ STATE_NENETSIA = {
         building_coal_mine = 30
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 30
     }
     naval_exit_id = 3039
