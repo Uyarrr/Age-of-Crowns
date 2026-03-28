@@ -1,4 +1,4 @@
-﻿pm_building_shipyards_timber_and_ropeyards = {
+﻿pm_building_shipyards_main_1 = {
 	texture = "gfx/interface/icons/production_method_icons/wooden_ships.dds"
 
 	building_modifiers = {
@@ -21,7 +21,7 @@
 	}
 }
 
-pm_building_shipyards_bronze_fastened_dockyards = {
+pm_building_shipyards_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_wooden_ships.dds"
 	
 	unlocking_technologies = {
@@ -50,7 +50,7 @@ pm_building_shipyards_bronze_fastened_dockyards = {
 	}
 }
 
-pm_building_shipyards_organized_naval_stores = {
+pm_building_shipyards_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_steam_ships.dds"
 
 	unlocking_technologies = {
@@ -81,7 +81,7 @@ pm_building_shipyards_organized_naval_stores = {
 	}
 }
 
-pm_building_shipyards_imperial_naval_arsenals = {
+pm_building_shipyards_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/arc_welded_steam_ships.dds"
 
 	unlocking_technologies = {

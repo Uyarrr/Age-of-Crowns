@@ -10,15 +10,15 @@
 	}
 }
 
-pmg_base_building_government_administration = {
+pmg_building_chancery_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_simple_organization
-		pm_horizontal_drawer_cabinets
-		pm_vertical_filing_cabinets
-		pm_switch_boards
+		pmg_building_chancery_main_1
+		pmg_building_chancery_main_2
+		pmg_building_chancery_main_3
+		pmg_building_chancery_main_4
 	}
 }
 
@@ -42,7 +42,7 @@ pmg_government_administration_religious_administration = {
 	}
 }
 
-pmg_base_building_university = {
+pmg_building_university_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -60,25 +60,5 @@ pmg_university_academia = {
 	production_methods = {
 		pm_religious_academia
 		pm_secular_academia
-	}
-}
-
-pmg_base_building_skyscraper = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_skyscraper_bureaucratic_nexus
-		pm_skyscraper_trade_nexus
-	}
-}
-
-pmg_airship_mooring_post = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
-	ai_selection = most_productive
-
-	production_methods = {
-		pm_no_airships
-		pm_airship_mooring_post
 	}
 }

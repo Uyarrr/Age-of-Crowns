@@ -533,7 +533,6 @@ banking = {
 	}
 
 	unlocking_technologies = {
-		currency_standards
 	}
 
 	ai_weight = {
@@ -1236,7 +1235,6 @@ modern_sewerage = {
 	}
 
 	unlocking_technologies = {
-		urban_planning
 	}
 
 	ai_weight = {
@@ -1732,65 +1730,6 @@ mutual_funds = {
 	}
 }
 
-investment_banks = {
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/investment_banks.dds"
-	category = society
-
-	modifier = {
-		country_max_companies_add = 1
-		country_free_charters_add = 1
-		state_urbanization_per_level_mult = -0.15
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 2 # important tech
-	}
-}
-
-philosophical_pragmatism = {
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
-	category = society
-
-	modifier = {
-		country_influence_mult = 0.25
-		country_diplomatic_play_maneuvers_add = 10
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-identification_documents = {
-	# Unlocks Identification Documents PM in Government Administrations
-	# Unlocks Closed Borders Law in Migration
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/identification_documents.dds"
-	category = society
-
-	modifier = {
-		state_tax_capacity_add = 25
-		country_institution_home_affairs_max_investment_add = 1
-		state_incorporation_speed_mult = 0.05
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 ### ERA 4
 
 malaria_prevention = {
@@ -1827,166 +1766,7 @@ malaria_prevention = {
 	}
 }
 
-central_planning = {
-	# Unlocks Command Economy - Economic System Law
-	# Unlocks Vertical Filing Cabinets PM in Government Administrations
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/central_planning.dds"
-	category = society
-
-	modifier = {
-		state_tax_capacity_add = 25
-		country_government_dividends_efficiency_add = 0.05
-		country_institution_home_affairs_max_investment_add = 1
-		state_incorporation_speed_mult = 0.05
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
-
-political_agitation = {
-	# Unlocks Women's Suffrage - Rights of Women Law
-	# Increases political participation from poor pop types
-	# New leaders may spawn with the Feminist, Vanguardist Ideology
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/political_agitation.dds"
-	category = society
-
-	modifier = {
-		state_expected_sol_from_literacy = 1
-		country_authority_mult = 0.1
-		country_voting_power_mult = 0.1
-		country_agitator_slots_add = 1
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 1
-
-		if = {
-			limit = {
-				has_strategy = ai_strategy_egalitarian_agenda
-			}
-			add = 1
-		}
-		if = {
-			limit = {
-				OR = {
-					has_strategy = ai_strategy_conservative_agenda
-					has_strategy = ai_strategy_reactionary_agenda
-				}
-			}
-			add = -0.5
-		}
-	}
-}
-
-international_exchange_standards = {
-	# Should increase trade power maybe
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/international_exchange_standards.dds"
-	category = society
-
-	modifier = {
-		country_minting_mult = 0.1
-		country_loan_interest_rate_add = -0.02
-		state_max_trade_advantage_from_capacity_add = 0.05
-	}
-
-	unlocking_technologies = {
-		mutual_funds
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-corporate_management = {
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/corporate_management.dds"
-	category = society
-
-	modifier = {
-		country_max_companies_add = 1
-		state_urbanization_per_level_mult = -0.25
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 2 # important tech
-	}
-}
-
-psychoanalysis = {
-	# Should provide additional methods for dealing with negative psychological character traits
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
-	category = society
-
-	modifier = {
-		country_influence_mult = 0.25
-		country_diplomatic_play_maneuvers_add = 10
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 ### ERA 5
-
-mass_surveillance = {
-	# Unlocks Personal Files PM in Government Administrations
-	# Unlocks Militarized Police - Policing Law
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/mass_surveillance.dds"
-	category = society
-
-	modifier = {
-		state_tax_capacity_add = 25
-		country_support_separatism_resistance_mult = 0.25
-		country_institution_home_affairs_max_investment_add = 1
-		state_incorporation_speed_mult = 0.05
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-modern_financial_instruments = {
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/modern_financial_instruments.dds"
-	category = society
-	modifier = {
-		country_minting_mult = 0.1
-		country_loan_interest_rate_add = -0.02
-		country_government_dividends_efficiency_add = 0.05
-	}
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
 
 behaviorism = {
 	era = era_6

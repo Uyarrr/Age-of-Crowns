@@ -118,6 +118,14 @@ goods_input_warhorse_add={
 	}
 }
 
+goods_input_trader_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_output_stone_add={
 	decimals=1
 	color=good
@@ -231,6 +239,14 @@ goods_output_warhorse_add={
 }
 
 goods_output_cloth_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_trader_add={
 	decimals=1
 	color=bad
 	game_data={
