@@ -17,7 +17,6 @@
 
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -404,7 +403,6 @@ STATE_GALICIA = {
         building_iron_mine = 4
         building_logging_camp = 5
         building_fishing_wharf = 4
-        building_whaling_station = 1
         building_stone_quarry = 8
         building_tin_mine = 6
 
@@ -479,7 +477,6 @@ STATE_BASQUE_COUNTRY = {
         building_iron_mine = 65
         building_logging_camp = 11
         building_fishing_wharf = 10
-        building_whaling_station = 1
         building_stone_quarry = 43
 
     }
@@ -723,7 +720,6 @@ STATE_CAPE_VERDE = {
     capped_resources = {
         building_logging_camp = 2
         building_fishing_wharf = 3
-        building_whaling_station = 3
     }
     naval_exit_id = 3088
 }
@@ -762,7 +758,6 @@ STATE_AZORES = {
     capped_resources = {
         building_logging_camp = 2
         building_fishing_wharf = 5
-        building_whaling_station = 5
     }
     naval_exit_id = 3069
 }
@@ -797,7 +792,7 @@ STATE_EASTERN_THRACE = {
     mine = "xFCF160"
     wood = "x608BB0"
     arable_land = 30
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tobacco_plantation" "building_opium_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tobacco_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
     capped_resources = {
         building_iron_mine = 18
         building_logging_camp = 4
@@ -850,7 +845,6 @@ STATE_ALBANIA = {
 
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3033

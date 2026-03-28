@@ -82,7 +82,6 @@ STATE_TOBOLSK = {
         building_logging_camp = 30
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
 }
@@ -125,7 +124,6 @@ STATE_OB = {
         building_logging_camp = 22
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
 }
@@ -147,7 +145,6 @@ STATE_CHUKOTKA = {
     capped_resources = {
         building_coal_mine = 36
         building_logging_camp = 13
-        building_whaling_station = 3
         building_fishing_wharf = 9
     }
     resource = {
@@ -174,7 +171,6 @@ STATE_KAMCHATKA = {
     capped_resources = {
         building_logging_camp = 13
         building_fishing_wharf = 15
-        building_whaling_station = 8
     }
     resource = {
         type = "building_gold_field"
@@ -201,7 +197,6 @@ STATE_OKHOTSK = {
     capped_resources = {
         building_coal_mine = 36
         building_fishing_wharf = 10
-        building_whaling_station = 5
         building_logging_camp = 10
     }
     resource = {
@@ -236,7 +231,6 @@ STATE_YAKUTSK = {
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 5
     }
 }
@@ -260,7 +254,6 @@ STATE_TRANS_BAIKAL = {
         building_logging_camp = 24
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 10
     }
 }
@@ -283,7 +276,6 @@ STATE_IRKUTSK = {
         building_logging_camp = 30
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 10
     }
 }

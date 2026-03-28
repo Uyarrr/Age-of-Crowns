@@ -38,7 +38,6 @@ STATE_LOUISIANA = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3060
@@ -59,7 +58,6 @@ STATE_NEW_YORK = {
     capped_resources = {
         building_iron_mine = 45
         building_logging_camp = 20
-        building_whaling_station = 5
         building_fishing_wharf = 6
         building_copper_mine = 5
         building_stone_quarry = 30
@@ -106,7 +104,6 @@ STATE_ALASKA = {
     capped_resources = {
         building_coal_mine = 32
         building_logging_camp = 90
-        building_whaling_station = 8
         building_fishing_wharf = 10
         building_copper_mine = 15
         building_stone_quarry = 40
@@ -135,7 +132,6 @@ STATE_WASHINGTON = {
         building_coal_mine = 32
         building_logging_camp = 40
         building_fishing_wharf = 6
-        building_whaling_station = 3
         building_copper_mine = 10
         building_stone_quarry = 30
     }
@@ -157,7 +153,6 @@ STATE_OREGON = {
     capped_resources = {
         building_logging_camp = 50
         building_fishing_wharf = 5
-        building_whaling_station = 3
         building_copper_mine = 8
         building_stone_quarry = 30
     }
@@ -205,7 +200,6 @@ STATE_COLORADO = {
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -228,7 +222,6 @@ STATE_WYOMING = {
         building_stone_quarry = 40
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -252,7 +245,6 @@ STATE_MONTANA = {
         building_stone_quarry = 40
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -275,7 +267,6 @@ STATE_NORTH_DAKOTA = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -303,7 +294,6 @@ STATE_SOUTH_DAKOTA = {
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -325,7 +315,6 @@ STATE_NEBRASKA = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -349,7 +338,6 @@ STATE_KANSAS = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 50
     }
 }
@@ -371,7 +359,6 @@ STATE_OKLAHOMA = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 80
     }
 }
@@ -394,7 +381,6 @@ STATE_ARKANSAS = {
         building_stone_quarry = 22
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -417,7 +403,6 @@ STATE_MISSOURI = {
         building_stone_quarry = 22
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -540,7 +525,6 @@ STATE_OHIO = {
         building_stone_quarry = 22
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 30
     }
 }
@@ -604,7 +588,6 @@ STATE_MISSISSIPPI = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 30
     }
     naval_exit_id = 3060
@@ -632,7 +615,6 @@ STATE_ALABAMA = {
         building_stone_quarry = 28
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
     naval_exit_id = 3060
@@ -658,7 +640,6 @@ STATE_FLORIDA = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 30
     }
     naval_exit_id = 3060
@@ -766,7 +747,6 @@ STATE_PENNSYLVANIA = {
         building_stone_quarry = 35
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 50
     }
 }
@@ -827,7 +807,6 @@ STATE_RHODE_ISLAND = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_vineyard" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 2
-        building_whaling_station = 2
         building_fishing_wharf = 3
         building_copper_mine = 5
         building_stone_quarry = 22
@@ -849,7 +828,6 @@ STATE_CONNECTICUT = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_vineyard" "building_stud_farm" }
     capped_resources = {
         building_iron_mine = 15
-        building_whaling_station = 3
         building_fishing_wharf = 5
         building_logging_camp = 6
         building_copper_mine = 5
@@ -874,7 +852,6 @@ STATE_MASSACHUSETTS = {
         building_coal_mine = 56
         building_iron_mine = 36
         building_logging_camp = 14
-        building_whaling_station = 8
         building_fishing_wharf = 10
         building_copper_mine = 5
         building_stone_quarry = 22
@@ -896,7 +873,6 @@ STATE_NEW_HAMPSHIRE = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 14
-        building_whaling_station = 2
         building_fishing_wharf = 2
         building_copper_mine = 5
         building_stone_quarry = 22
@@ -937,7 +913,6 @@ STATE_MAINE = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 35
-        building_whaling_station = 4
         building_fishing_wharf = 8
         building_copper_mine = 5
         building_stone_quarry = 22
@@ -985,7 +960,6 @@ STATE_UTAH = {
         building_stone_quarry = 40
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 20
     }
 }
@@ -1026,7 +1000,6 @@ STATE_HAWAIIAN_ISLANDS = {
     capped_resources = {
         building_iron_mine = 12
         building_logging_camp = 14
-        building_whaling_station = 10
         building_fishing_wharf = 8
         building_copper_mine = 5
         building_stone_quarry = 22
@@ -1053,7 +1026,6 @@ STATE_ONTARIO = {
         building_stone_quarry = 30
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 60
     }
 }
@@ -1097,7 +1069,6 @@ STATE_QUEBEC = {
     capped_resources = {
         building_iron_mine = 60
         building_logging_camp = 100
-        building_whaling_station = 4
         building_fishing_wharf = 8
         building_copper_mine = 8
         building_stone_quarry = 30
@@ -1122,7 +1093,6 @@ STATE_NEWFOUNDLAND = {
         building_iron_mine = 24
         building_lead_mine = 24
         building_logging_camp = 24
-        building_whaling_station = 6
         building_fishing_wharf = 10
         building_copper_mine = 5
         building_stone_quarry = 22
@@ -1149,7 +1119,6 @@ STATE_ALBERTA = {
         building_stone_quarry = 25
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 80
     }
 }
@@ -1170,7 +1139,6 @@ STATE_BRITISH_COLUMBIA = {
         building_coal_mine = 28
         building_sulfur_mine = 36
         building_logging_camp = 90
-        building_whaling_station = 6
         building_fishing_wharf = 9
         building_copper_mine = 18
         building_stone_quarry = 40
@@ -1201,7 +1169,6 @@ STATE_SASKATCHEWAN = {
         building_stone_quarry = 20
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 30
     }
 }
@@ -1224,7 +1191,6 @@ STATE_MANITOBA = {
         building_stone_quarry = 20
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 30
     }
 }
@@ -1333,7 +1299,6 @@ STATE_TEXAS = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 100
     }
     naval_exit_id = 3060
@@ -1422,7 +1387,6 @@ STATE_CALIFORNIA = {
         building_sulfur_mine = 40
         building_logging_camp = 45
         building_fishing_wharf = 14
-        building_whaling_station = 6
         building_copper_mine = 15
         building_stone_quarry = 45
     }
@@ -1432,7 +1396,6 @@ STATE_CALIFORNIA = {
         undiscovered_amount = 12
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 80
     }
     naval_exit_id = 3153
@@ -1503,7 +1466,6 @@ STATE_RIO_GRANDE = {
         building_stone_quarry = 25
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 80
     }
     naval_exit_id = 3060
@@ -1540,7 +1502,7 @@ STATE_SINALOA = {
     mine = "x832AE4"
     wood = "x963998"
     arable_land = 60
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_opium_plantation" "building_stud_farm" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_iron_mine = 17
         building_logging_camp = 7
@@ -1588,7 +1550,6 @@ STATE_YUCATAN = {
         building_stone_quarry = 20
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 16
     }
     naval_exit_id = 3060
@@ -1613,7 +1574,6 @@ STATE_MEXICO = {
         building_stone_quarry = 25
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
     }
 }
@@ -1639,11 +1599,9 @@ STATE_VERACRUZ = {
         building_stone_quarry = 18
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
     }
     resource = {
-        type = "building_oil_rig"
         undiscovered_amount = 40
     }
     naval_exit_id = 3060
@@ -1675,7 +1633,6 @@ STATE_GUERRERO = {
         undiscovered_amount = 3
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 8
     }
     naval_exit_id = 3155
@@ -1707,7 +1664,6 @@ STATE_OAXACA = {
         undiscovered_amount = 2
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 6
     }
     naval_exit_id = 3155
@@ -1733,7 +1689,6 @@ STATE_JALISCO = {
         building_stone_quarry = 30
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 12
     }
     naval_exit_id = 3155
@@ -1781,7 +1736,6 @@ STATE_CHIAPAS = {
         building_stone_quarry = 25
     }
     resource = {
-        type = "building_rubber_plantation"
         undiscovered_amount = 24
     }
     naval_exit_id = 3155
@@ -1802,7 +1756,6 @@ STATE_BAJA_CALIFORNIA = {
     capped_resources = {
         building_logging_camp = 2
         building_fishing_wharf = 6
-        building_whaling_station = 4
         building_copper_mine = 12
         building_stone_quarry = 25
     }
