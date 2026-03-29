@@ -17,8 +17,8 @@ pm_building_port_main_1 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 5 # 300
-			goods_output_trader_add = 10 # 500
+			goods_input_navalsupplies_uyr_add = 5 # 300
+			goods_output_trader_uyr_add = 10 # 500
 		}
 		level_scaled = {
 			building_employment_laborers_add = 700
@@ -44,8 +44,8 @@ pm_building_port_main_2 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 10 # 300
-			goods_output_trader_add = 20 # 500
+			goods_input_navalsupplies_uyr_add = 10 # 300
+			goods_output_trader_uyr_add = 20 # 500
 		}
 		level_scaled = {
 			building_employment_laborers_add = 500
@@ -74,8 +74,8 @@ pm_building_port_main_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 5 # 350
-			goods_output_trader_add = 30 # 1500
+			goods_input_navalsupplies_uyr_add = 5 # 350
+			goods_output_trader_uyr_add = 30 # 1500
 		}
 		level_scaled = {
 			building_employment_laborers_add = 400

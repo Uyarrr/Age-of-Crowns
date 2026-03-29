@@ -5,7 +5,7 @@ building_barrack = {
 
 	building_group = bg_army
 	recruits_combat_units = yes
-	icon = "gfx/interface/icons/building_icons/barracks_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/building_barracks.dds"
 	city_type = city
 
 	has_max_level = yes
@@ -13,7 +13,7 @@ building_barrack = {
 	levels_per_mesh = 50
 
 	unlocking_technologies = {
-		peasant_levy
+		standing_army
 	}
 
 	production_method_groups = {
@@ -34,16 +34,11 @@ building_conscription_center = {
 	has_max_level = yes
 
 	levels_per_mesh = 0
-
-	unlocking_technologies = {
-		peasant_levy
-	}
-
 	residence_points_per_level = 0
 	city_type = none
 
 	recruits_combat_units = yes
-	icon = "gfx/interface/icons/building_icons/barracks_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/building_conscription_center.dds"
 
 	production_method_groups = {
 		pmg_training_conscription
@@ -60,9 +55,9 @@ building_naval_base = {
 
 	has_max_level = yes
 
-	icon = "gfx/interface/icons/building_icons/naval_base_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/naval_base.dds"
 	naval = yes
-	unlocking_technologies = { navigation }
+	unlocking_technologies = { admiralty }
 
 	production_method_groups = {
 		pmg_naval_theory

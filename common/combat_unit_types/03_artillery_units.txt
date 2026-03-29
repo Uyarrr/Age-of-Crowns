@@ -13,9 +13,9 @@ combat_unit_type_artillery_1 = {
     unlocking_technologies = { archer }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 1
-        goods_input_leather_add = 1
-        goods_input_stone_add = 1
+        goods_input_weapons_uyr_add = 1
+        goods_input_leather_uyr_add = 1
+        goods_input_stone_uyr_add = 1
     }
 
     battle_modifier = {
@@ -74,8 +74,8 @@ combat_unit_type_artillery_2 = {
     unlocking_technologies = { houfnice }
 
     upkeep_modifier = {
-        goods_input_cannons_add = 1
-        goods_input_saltpeter_add = 1
+        goods_input_cannons_uyr_add = 1
+        goods_input_saltpeter_uyr_add = 1
     }
 
     battle_modifier = {
@@ -139,8 +139,8 @@ combat_unit_type_artillery_3 = {
     unlocking_technologies = { falconet }
 
     upkeep_modifier = {
-        goods_input_cannons_add = 2
-        goods_input_saltpeter_add = 2
+        goods_input_cannons_uyr_add = 2
+        goods_input_saltpeter_uyr_add = 2
     }
 
     battle_modifier = {
@@ -153,11 +153,6 @@ combat_unit_type_artillery_3 = {
     formation_modifier = {
         military_formation_mobilization_speed_mult = -0.2
         military_formation_movement_speed_mult = -0.2
-    }
-
-    upkeep_modifier = {
-        goods_input_weapons_add = 2
-        goods_input_leather_add = 1
     }
 
     upgrades = {
@@ -208,8 +203,8 @@ combat_unit_type_artillery_4 = {
     unlocking_technologies = { behaviorism }
 
     upkeep_modifier = {
-        goods_input_cannons_add = 3
-        goods_input_saltpeter_add = 3
+        goods_input_cannons_uyr_add = 3
+        goods_input_saltpeter_uyr_add = 3
     }
 
     battle_modifier = {
@@ -222,11 +217,6 @@ combat_unit_type_artillery_4 = {
     formation_modifier = {
         military_formation_mobilization_speed_mult = -0.2
         military_formation_movement_speed_mult = -0.2
-    }
-
-    upkeep_modifier = {
-        goods_input_weapons_add = 3
-        goods_input_leather_add = 2
     }
 
     upgrades = {
@@ -276,8 +266,8 @@ combat_unit_type_artillery_5 = {
     unlocking_technologies = { behaviorism }
 
     upkeep_modifier = {
-        goods_input_cannons_add = 4
-        goods_input_saltpeter_add = 4
+        goods_input_cannons_uyr_add = 4
+        goods_input_saltpeter_uyr_add = 4
     }
 
     battle_modifier = {
@@ -290,12 +280,6 @@ combat_unit_type_artillery_5 = {
     formation_modifier = {
         military_formation_mobilization_speed_mult = -0.2
         military_formation_movement_speed_mult = -0.2
-    }
-
-    upkeep_modifier = {
-        goods_input_weapons_add = 4
-        goods_input_leather_add = 3
-        goods_input_saltpeter_add = 3
     }
 
     upgrades = {
@@ -344,8 +328,8 @@ combat_unit_type_artillery_6 = {
     unlocking_technologies = { behaviorism }
 
     upkeep_modifier = {
-        goods_input_cannons_add = 5
-        goods_input_saltpeter_add = 5
+        goods_input_cannons_uyr_add = 5
+        goods_input_saltpeter_uyr_add = 5
     }
 
     battle_modifier = {
@@ -358,12 +342,6 @@ combat_unit_type_artillery_6 = {
     formation_modifier = {
         military_formation_mobilization_speed_mult = -0.2
         military_formation_movement_speed_mult = -0.2
-    }
-
-    upkeep_modifier = {
-        goods_input_weapons_add = 5
-        goods_input_leather_add = 4
-        goods_input_saltpeter_add = 4
     }
 
     upgrades = { }

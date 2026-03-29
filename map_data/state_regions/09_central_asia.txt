@@ -7,9 +7,9 @@
     mine = "xDA5ABE"
     wood = "x01D041"
     arable_land = 25
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tea_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 10
+        building_logging_camp_uyr = 10
     }
     traits = { "state_trait_caucasus_mountains" }
 }
@@ -25,16 +25,16 @@ STATE_KUBAN = {
     mine = "x2CF115"
     wood = "xD9CD9D"
     arable_land = 105
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tea_plantation_uyr" "building_tobacco_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 10
-        building_lead_mine = 27
-        building_iron_mine = 10
-        building_logging_camp = 35
-        building_fishing_wharf = 7
+        building_lead_mine_uyr = 27
+        building_iron_mine_uyr = 10
+        building_logging_camp_uyr = 35
+        building_fishing_wharf_uyr = 7
     
-        building_copper_mine = 2
-        building_stone_quarry = 8
+        building_copper_mine_uyr = 2
+        building_stone_mine_uyr = 8
 }
     naval_exit_id = 3036
 }
@@ -48,14 +48,14 @@ STATE_ARMENIA = {
     mine = "x805000"
     wood = "x3161E0"
     arable_land = 60
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_silk_plantation" "building_vineyard" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_silk_plantation_uyr" "building_vineyard" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine = 27
-        building_lead_mine = 21
-        building_logging_camp = 2
+        building_iron_mine_uyr = 27
+        building_lead_mine_uyr = 21
+        building_logging_camp_uyr = 2
     
-        building_copper_mine = 8
-        building_stone_quarry = 18
+        building_copper_mine_uyr = 8
+        building_stone_mine_uyr = 18
 }
 }
 
@@ -68,13 +68,13 @@ STATE_AZERBAIJAN = {
     mine = "x0E8C3E"
     wood = "x69FE0D"
     arable_land = 30
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_silk_plantation_uyr" "building_tea_plantation_uyr" "building_tobacco_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_lead_mine = 18
-        building_logging_camp = 4
+        building_lead_mine_uyr = 18
+        building_logging_camp_uyr = 4
     
-        building_copper_mine = 4
-        building_stone_quarry = 12
+        building_copper_mine_uyr = 4
+        building_stone_mine_uyr = 12
 }
 }
 
@@ -89,17 +89,17 @@ STATE_GREATER_CAUCASUS = {
     mine = "x4A4DF9"
     wood = "xD62036"
     arable_land = 75
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_silk_plantation_uyr" "building_tea_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 40
-        building_lead_mine = 20
+        building_lead_mine_uyr = 20
         building_gold_mine = 3
-        building_iron_mine = 24
-        building_logging_camp = 19
-        building_fishing_wharf = 5
+        building_iron_mine_uyr = 24
+        building_logging_camp_uyr = 19
+        building_fishing_wharf_uyr = 5
     
-        building_copper_mine = 6
-        building_stone_quarry = 18
+        building_copper_mine_uyr = 6
+        building_stone_mine_uyr = 18
 }
     naval_exit_id = 3036
 }
@@ -114,15 +114,15 @@ STATE_SAMARA = {
     mine = "x51CA06"
     wood = "x1C1FB7"
     arable_land = 95
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_stud_farm" }
+    arable_resources = { "building_rye_farm_uyr" "building_livestock_ranch" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 30
-        building_sulfur_mine = 15
-        building_logging_camp = 9
-        building_iron_mine = 5
+        building_sulfur_mine_uyr = 15
+        building_logging_camp_uyr = 9
+        building_iron_mine_uyr = 5
     
-        building_copper_mine = 1
-        building_stone_quarry = 8
+        building_copper_mine_uyr = 1
+        building_stone_mine_uyr = 8
 }
 }
 
@@ -137,13 +137,13 @@ STATE_TARTARIA = {
     mine = "xB9D801"
     wood = "x85FB7E"
     arable_land = 90
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_stud_farm" }
+    arable_resources = { "building_rye_farm_uyr" "building_livestock_ranch" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 16
-        building_iron_mine = 15
+        building_logging_camp_uyr = 16
+        building_iron_mine_uyr = 15
     
-        building_copper_mine = 1
-        building_stone_quarry = 8
+        building_copper_mine_uyr = 1
+        building_stone_mine_uyr = 8
 }
 }
 
@@ -157,14 +157,14 @@ STATE_ASTRAKHAN = {
     mine = "xD4CB58"
     wood = "x176C7A"
     arable_land = 45
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_vineyard" "building_stud_farm" }
+    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_tobacco_plantation_uyr" "building_vineyard" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 6
-        building_sulfur_mine = 30
-        building_iron_mine = 30
+        building_logging_camp_uyr = 6
+        building_sulfur_mine_uyr = 30
+        building_iron_mine_uyr = 30
     
-        building_copper_mine = 0
-        building_stone_quarry = 6
+        building_copper_mine_uyr = 0
+        building_stone_mine_uyr = 6
 }
 }
 
@@ -177,12 +177,12 @@ STATE_UZBEKIA = {
     mine = "xF5EF8A"
     wood = "xFD2FE1"
     arable_land = 100
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_silk_plantation" "building_cotton_plantation" "building_tea_plantation" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_silk_plantation_uyr" "building_cotton_plantation_uyr" "building_tea_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 6
+        building_logging_camp_uyr = 6
     
-        building_copper_mine = 3
-        building_stone_quarry = 10
+        building_copper_mine_uyr = 3
+        building_stone_mine_uyr = 10
 }
 }
 
@@ -195,13 +195,13 @@ STATE_TAJIKISTAN = {
     mine = "x42B020"
     wood = "xA94DAF"
     arable_land = 55
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tea_plantation" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_tea_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 36
-        building_logging_camp = 2
+        building_logging_camp_uyr = 2
     
-        building_copper_mine = 8
-        building_stone_quarry = 18
+        building_copper_mine_uyr = 8
+        building_stone_mine_uyr = 18
 }
 }
 
@@ -214,13 +214,13 @@ STATE_KIRGHIZIA = {
     mine = "xC8CDED"
     wood = "x480704"
     arable_land = 50
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tea_plantation" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_tea_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 32
-        building_logging_camp = 6
+        building_logging_camp_uyr = 6
     
-        building_copper_mine = 6
-        building_stone_quarry = 16
+        building_copper_mine_uyr = 6
+        building_stone_mine_uyr = 16
 }
 }
 
@@ -233,13 +233,13 @@ STATE_TURKMENIA = {
     mine = "xCF3B0F"
     wood = "x5E1CDC"
     arable_land = 25
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_silk_plantation" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_silk_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_sulfur_mine = 40
-        building_logging_camp = 2
+        building_sulfur_mine_uyr = 40
+        building_logging_camp_uyr = 2
     
-        building_copper_mine = 1
-        building_stone_quarry = 8
+        building_copper_mine_uyr = 1
+        building_stone_mine_uyr = 8
 }
 }
 
@@ -253,13 +253,13 @@ STATE_PASHTUNISTAN = {
     mine = "xAFD189"
     wood = "xEC3398"
     arable_land = 150
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tea_plantation" "building_vineyard" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_tea_plantation_uyr" "building_vineyard" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 6
-        building_lead_mine = 4
+        building_logging_camp_uyr = 6
+        building_lead_mine_uyr = 4
     
-        building_copper_mine = 2
-        building_stone_quarry = 10
+        building_copper_mine_uyr = 2
+        building_stone_mine_uyr = 10
 }
 }
 
@@ -272,14 +272,14 @@ STATE_CENTRAL_HIGHLANDS = {
     mine = "x0EE28B"
     wood = "x99A835"
     arable_land = 40
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_silk_plantation_uyr" "building_tea_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine = 16
-        building_lead_mine = 8
-        building_logging_camp = 4
+        building_iron_mine_uyr = 16
+        building_lead_mine_uyr = 8
+        building_logging_camp_uyr = 4
     
-        building_copper_mine = 4
-        building_stone_quarry = 14
+        building_copper_mine_uyr = 4
+        building_stone_mine_uyr = 14
 }
 }
 
@@ -293,12 +293,12 @@ STATE_NORTHERN_BALUCHISTAN = {
     mine = "x4DC5DC"
     wood = "x4DC5DC"
     arable_land = 10
-    arable_resources = { "building_livestock_ranch" "building_stud_farm" }
+    arable_resources = { "building_livestock_ranch" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 2
     
-        building_copper_mine = 2
-        building_stone_quarry = 10
+        building_copper_mine_uyr = 2
+        building_stone_mine_uyr = 10
 }
 }
 
@@ -311,13 +311,13 @@ STATE_HERAT = {
     mine = "xD74653"
     wood = "xD74653"
     arable_land = 50
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_silk_plantation_uyr" "building_tea_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine = 6
-        building_lead_mine = 8
+        building_iron_mine_uyr = 6
+        building_lead_mine_uyr = 8
     
-        building_copper_mine = 3
-        building_stone_quarry = 12
+        building_copper_mine_uyr = 3
+        building_stone_mine_uyr = 12
 }
 }
 
@@ -330,14 +330,14 @@ STATE_BALKH = {
     mine = "xB7ed78"
     wood = "xB7ed78"
     arable_land = 40
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tea_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 14
-        building_iron_mine = 14
-        building_logging_camp = 7
+        building_iron_mine_uyr = 14
+        building_logging_camp_uyr = 7
     
-        building_copper_mine = 3
-        building_stone_quarry = 12
+        building_copper_mine_uyr = 3
+        building_stone_mine_uyr = 12
 }
 }
 
@@ -350,14 +350,14 @@ STATE_QUETTA = {
     mine = "x6F000D"
     wood = "x6F000D"
     arable_land = 42
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_dye_plantation" "building_tea_plantation" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_dye_plantation_uyr" "building_tea_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine = 4
-        building_lead_mine = 8
-        building_logging_camp = 2
+        building_iron_mine_uyr = 4
+        building_lead_mine_uyr = 8
+        building_logging_camp_uyr = 2
     
-        building_copper_mine = 2
-        building_stone_quarry = 12
+        building_copper_mine_uyr = 2
+        building_stone_mine_uyr = 12
 }
 }
 
@@ -371,14 +371,14 @@ STATE_KANDAHAR = {
     mine = "xBBE7A9"
     wood = "x3991B0"
     arable_land = 50
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tea_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 2
+        building_logging_camp_uyr = 2
         building_coal_mine = 4
-        building_iron_mine = 5
+        building_iron_mine_uyr = 5
     
-        building_copper_mine = 2
-        building_stone_quarry = 10
+        building_copper_mine_uyr = 2
+        building_stone_mine_uyr = 10
 }
 }
 
@@ -392,14 +392,14 @@ STATE_KABUL = {
     mine = "x70FE4E"
     wood = "x401B5D"
     arable_land = 80
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tea_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 6
-        building_iron_mine = 10
-        building_logging_camp = 4
+        building_iron_mine_uyr = 10
+        building_logging_camp_uyr = 4
     
-        building_copper_mine = 4
-        building_stone_quarry = 16
+        building_copper_mine_uyr = 4
+        building_stone_mine_uyr = 16
 }
 }
 
@@ -414,15 +414,15 @@ STATE_BALUCHISTAN = {
     mine = "x954C12"
     wood = "x675BCE"
     arable_land = 63
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_dye_plantation" "building_tea_plantation" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_dye_plantation_uyr" "building_tea_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine = 20
-        building_lead_mine = 10
-        building_logging_camp = 1
-        building_fishing_wharf = 5
+        building_iron_mine_uyr = 20
+        building_lead_mine_uyr = 10
+        building_logging_camp_uyr = 1
+        building_fishing_wharf_uyr = 5
     
-        building_copper_mine = 3
-        building_stone_quarry = 12
+        building_copper_mine_uyr = 3
+        building_stone_mine_uyr = 12
 }
     naval_exit_id = 3048
 }
@@ -438,12 +438,12 @@ STATE_LHASA = {
     mine = "xBDF268"
     wood = "x466F9F"
     arable_land = 100
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_stud_farm" }
+    arable_resources = { "building_rye_farm_uyr" "building_livestock_ranch" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 20
+        building_logging_camp_uyr = 20
     
-        building_copper_mine = 4
-        building_stone_quarry = 18
+        building_copper_mine_uyr = 4
+        building_stone_mine_uyr = 18
 }
 }
 
@@ -458,12 +458,12 @@ STATE_NGARI = {
     mine = "x63CF7D"
     wood = "x3242A4"
     arable_land = 60
-    arable_resources = { "building_livestock_ranch" "building_stud_farm" }
+    arable_resources = { "building_livestock_ranch" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 11
+        building_logging_camp_uyr = 11
     
-        building_copper_mine = 4
-        building_stone_quarry = 18
+        building_copper_mine_uyr = 4
+        building_stone_mine_uyr = 18
 }
 }
 
@@ -478,14 +478,14 @@ STATE_HIMALAYAS = {
     mine = "x29576A"
     wood = "xC6D4A8"
     arable_land = 111
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_tea_plantation" "building_tobacco_plantation" "building_stud_farm" }
+    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_tea_plantation_uyr" "building_tobacco_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 10
-        building_lead_mine = 8
-        building_iron_mine = 8
+        building_logging_camp_uyr = 10
+        building_lead_mine_uyr = 8
+        building_iron_mine_uyr = 8
     
-        building_copper_mine = 4
-        building_stone_quarry = 18
+        building_copper_mine_uyr = 4
+        building_stone_mine_uyr = 18
 }
 }
 
@@ -501,12 +501,12 @@ STATE_EASTERN_HIMALAYAS = {
     mine = "xDA7F32"
     wood = "xDA7F32"
     arable_land = 30
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_tea_plantation" "building_stud_farm" }
+    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_tea_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_logging_camp = 3
+        building_logging_camp_uyr = 3
         building_coal_mine = 3
     
-        building_copper_mine = 4
-        building_stone_quarry = 18
+        building_copper_mine_uyr = 4
+        building_stone_mine_uyr = 18
 }
 }

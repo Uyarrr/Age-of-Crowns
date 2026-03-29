@@ -4,11 +4,11 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_bronze_add = 15
-			goods_input_tools_add = 5
+			goods_input_bronze_uyr_add = 15
+			goods_input_tools_uyr_add = 5
 
 			# output goods
-			goods_output_cannons_add = 20
+			goods_output_cannons_uyr_add = 20
 		}
 
 		level_scaled = {
@@ -28,11 +28,11 @@ pm_building_cannon_foundry_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_bronze_add = 30
-			goods_input_tools_add = 10
+			goods_input_bronze_uyr_add = 30
+			goods_input_tools_uyr_add = 10
 
 			# output goods
-			goods_output_cannons_add = 40
+			goods_output_cannons_uyr_add = 40
 		}
 
 		level_scaled = {
@@ -45,17 +45,19 @@ pm_building_cannon_foundry_main_2 = {
 
 pm_building_cannon_foundry_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+
 	unlocking_technologies = {
 		professional_army
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_bronze_add = 45
-			goods_input_tools_add = 15
+			goods_input_bronze_uyr_add = 45
+			goods_input_tools_uyr_add = 15
 
 			# output goods
-			goods_output_cannons_add = 60
+			goods_output_cannons_uyr_add = 60
 		}
 
 		level_scaled = {
@@ -69,17 +71,19 @@ pm_building_cannon_foundry_main_3 = {
 
 pm_building_cannon_foundry_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
+
 	unlocking_technologies = {
 		professional_army
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_bronze_add = 60
-			goods_input_tools_add = 20
+			goods_input_bronze_uyr_add = 60
+			goods_input_tools_uyr_add = 20
 
 			# output goods
-			goods_output_cannons_add = 80
+			goods_output_cannons_uyr_add = 80
 		}
 
 		level_scaled = {

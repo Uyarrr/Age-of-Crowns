@@ -4,10 +4,10 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
+			goods_input_tools_uyr_add = 5
 
 			# output goods
-			goods_output_iron_add = 25
+			goods_output_iron_uyr_add = 25
 		}
 
 		level_scaled = {
@@ -27,11 +27,11 @@ pm_building_iron_mine_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 7
-			goods_input_wood_add = 5
+			goods_input_tools_uyr_add = 7
+			goods_input_wood_uyr_add = 5
 
 			# output goods
-			goods_output_iron_add = 32
+			goods_output_iron_uyr_add = 32
 		}
 
 		level_scaled = {
@@ -59,11 +59,11 @@ pm_building_iron_mine_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 10
-			goods_input_wood_add = 5
+			goods_input_tools_uyr_add = 10
+			goods_input_wood_uyr_add = 5
 
 			# output goods
-			goods_output_iron_add = 40
+			goods_output_iron_uyr_add = 40
 		}
 
 		level_scaled = {
@@ -91,11 +91,11 @@ pm_building_iron_mine_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 13
-			goods_input_wood_add = 5
+			goods_input_tools_uyr_add = 13
+			goods_input_wood_uyr_add = 5
 
 			# output goods
-			goods_output_iron_add = 52
+			goods_output_iron_uyr_add = 52
 		}
 
 		level_scaled = {
@@ -116,9 +116,9 @@ pm_building_iron_mine_extraction_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation1.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add  = 5
-			goods_input_tools_add = 3
-			goods_output_iron_add = 15
+			goods_input_wood_uyr_add  = 5
+			goods_input_tools_uyr_add = 3
+			goods_output_iron_uyr_add = 15
 		}
 	}
 }
@@ -127,9 +127,9 @@ pm_building_iron_mine_extraction_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add  = 10
-			goods_input_tools_add = 6
-			goods_output_iron_add = 30
+			goods_input_wood_uyr_add  = 10
+			goods_input_tools_uyr_add = 6
+			goods_output_iron_uyr_add = 30
 		}
 	}
 }
@@ -138,10 +138,10 @@ pm_building_iron_mine_extraction_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation3.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add   = 10
-			goods_input_tools_add  = 6
-			goods_input_horse_add = 3
-			goods_output_iron_add  = 45
+			goods_input_wood_uyr_add   = 10
+			goods_input_tools_uyr_add  = 6
+			goods_input_horse_uyr_add = 3
+			goods_output_iron_uyr_add  = 45
 		}
 	}
 }

@@ -4,10 +4,10 @@
 # min_supply_share			If above 0, a minimum of this multiplier of the base weight will be applied to a good regardless of its market Sell Order share
 
 popneed_simple_clothing = {
-	default = fabric
+	default = fabric_uyr
 
 	entry = {
-		goods = fabric
+		goods = fabric_uyr
 
 		weight = 1
 		max_supply_share = 0.5
@@ -15,7 +15,7 @@ popneed_simple_clothing = {
 	}
 
 	entry = {
-		goods = cloth
+		goods = cloth_uyr
 
 		weight = 2
 		max_supply_share = 1.0
@@ -24,10 +24,10 @@ popneed_simple_clothing = {
 }
 
 popneed_crude_items = {
-	default = wood
+	default = wood_uyr
 
 	entry = {
-		goods = wood
+		goods = wood_uyr
 
 		weight = 1
 		max_supply_share = 0.5
@@ -35,7 +35,7 @@ popneed_crude_items = {
 	}
 
 	entry = {
-		goods = furniture
+		goods = furniture_uyr
 
 		weight = 2
 		max_supply_share = 1.0
@@ -44,10 +44,10 @@ popneed_crude_items = {
 }
 
 popneed_basic_food = {
-	default = grain
+	default = grain_uyr
 
 	entry = {
-		goods = grain
+		goods = grain_uyr
 
 		weight = 0.85
 		max_supply_share = 0.9
@@ -55,7 +55,7 @@ popneed_basic_food = {
 	}
 
 	entry = {
-		goods = fish
+		goods = fish_uyr
 
 		weight = 1
 		max_supply_share = 0.9
@@ -63,7 +63,7 @@ popneed_basic_food = {
 	}
 
 	entry = {
-		goods = meat
+		goods = livestock_uyr
 
 		weight = 1
 		max_supply_share = 0.9
@@ -71,7 +71,7 @@ popneed_basic_food = {
 	}
 
 	entry = {
-		goods = fruit
+		goods = fruit_uyr
 
 		weight = 1
 		max_supply_share = 0.9
@@ -80,10 +80,10 @@ popneed_basic_food = {
 }
 
 popneed_heating = {
-	default = wood
+	default = wood_uyr
 
 	entry = {
-		goods = wood
+		goods = wood_uyr
 
 		weight = 0.75
 		max_supply_share = 0.5
@@ -91,7 +91,7 @@ popneed_heating = {
 	}
 
 	entry = {
-		goods = fabric
+		goods = fabric_uyr
 
 		weight = 0.25
 		max_supply_share = 0.25
@@ -99,7 +99,7 @@ popneed_heating = {
 	}
 
 	entry = {
-		goods = coal
+		goods = coal_uyr
 
 		weight = 2
 		max_supply_share = 0.8
@@ -111,7 +111,7 @@ popneed_household_items = {
 	default = furniture
 
 	entry = {
-		goods = furniture
+		goods = furniture_uyr
 
 		weight = 1
 		max_supply_share = 0.75
@@ -119,7 +119,7 @@ popneed_household_items = {
 	}
 
 	entry = {
-		goods = glass
+		goods = glass_uyr
 
 		weight = 1
 		max_supply_share = 0.5
@@ -127,7 +127,7 @@ popneed_household_items = {
 	}
 
 	entry = {
-		goods = paper
+		goods = paper_uyr
 
 		weight = 0.5
 		max_supply_share = 0.5
@@ -135,7 +135,7 @@ popneed_household_items = {
 	}
 
 	entry = {
-		goods = pottery
+		goods = pottery_uyr
 
 		weight = 1
 		max_supply_share = 0.6
@@ -144,10 +144,10 @@ popneed_household_items = {
 }
 
 popneed_standard_clothing = {
-	default = cloth
+	default = cloth_uyr
 
 	entry = {
-		goods = cloth
+		goods = cloth_uyr
 	}
 }
 
@@ -160,14 +160,14 @@ popneed_services = {
 }
 
 popneed_intoxicants = {
-	default = liquor
+	default = liquor_uyr
 
 	obsession_demand_min = 0.75
 	obsession_demand_mult = 1.75
 	prestige_goods_demand_increase = 0.75
 
 	entry = {
-		goods = liquor
+		goods = liquor_uyr
 
 		weight = 1
 		max_supply_share = 0.75
@@ -175,7 +175,7 @@ popneed_intoxicants = {
 	}
 
 	entry = {
-		goods = tobacco
+		goods = tobacco_uyr
 
 		weight = 0.9 # As it's also part of Stimulants
 		max_supply_share = 0.75
@@ -183,7 +183,7 @@ popneed_intoxicants = {
 	}
 
 	entry = {
-		goods = wine
+		goods = wine_uyr
 
 		weight = 0.25
 		max_supply_share = 0.25
@@ -191,7 +191,7 @@ popneed_intoxicants = {
 	}
 
 	entry = {
-		goods = beer
+		goods = beer_uyr
 
 		weight = 0.25
 		max_supply_share = 0.25
@@ -200,14 +200,14 @@ popneed_intoxicants = {
 }
 
 popneed_luxury_drinks = {
-	default = tea
+	default = tea_uyr
 
 	obsession_demand_min = 0.75
 	obsession_demand_mult = 1.75
 	prestige_goods_demand_increase = 0.75
 
 	entry = {
-		goods = tea
+		goods = tea_uyr
 
 		weight = 1
 		max_supply_share = 0.75
@@ -215,7 +215,7 @@ popneed_luxury_drinks = {
 	}
 
 	entry = {
-		goods = coffee
+		goods = coffee_uyr
 
 		weight = 1
 		max_supply_share = 0.75
@@ -223,7 +223,7 @@ popneed_luxury_drinks = {
 	}
 
 	entry = {
-		goods = wine
+		goods = wine_uyr
 
 		weight = 0.45 # Coffee and Tea are now in Stimulants as well
 		max_supply_share = 0.33
@@ -256,10 +256,10 @@ popneed_communication = {
 }
 
 popneed_luxury_food = {
-	default = meat
+	default = livestock_uyr
 
 	entry = {
-		goods = meat
+		goods = livestock_uyr
 
 		weight = 1.25
 		max_supply_share = 0.75
@@ -267,7 +267,7 @@ popneed_luxury_food = {
 	}
 
 	entry = {
-		goods = fruit
+		goods = fruit_uyr
 
 		weight = 0.75
 		max_supply_share = 0.75
@@ -275,7 +275,7 @@ popneed_luxury_food = {
 	}
 
 	entry = {
-		goods = sugar
+		goods = sugar_uyr
 
 		weight = 0.5
 		max_supply_share = 0.5
@@ -284,14 +284,14 @@ popneed_luxury_food = {
 }
 
 popneed_luxury_items = {
-	default = silk
+	default = silk_uyr
 
 	obsession_demand_min = 0.75
 	obsession_demand_mult = 1.75
 	prestige_goods_demand_increase = 0.75
 
 	entry = {
-		goods = silk
+		goods = silk_uyr
 
 		weight = 0.5
 		max_supply_share = 0.25
@@ -299,7 +299,7 @@ popneed_luxury_items = {
 	}
 
 	entry = {
-		goods = luxury_clothes
+		goods = fine_cloth_uyr
 
 		weight = 1
 		max_supply_share = 0.5
@@ -307,7 +307,7 @@ popneed_luxury_items = {
 	}
 
 	entry = {
-		goods = luxury_furniture
+		goods = luxury_furniture_uyr
 
 		weight = 1
 		max_supply_share = 0.5
@@ -315,7 +315,7 @@ popneed_luxury_items = {
 	}
 
 	entry = {
-		goods = porcelain
+		goods = porcelain_uyr
 
 		weight = 1
 		max_supply_share = 0.5
@@ -347,7 +347,7 @@ popneed_leisure = {
 	}
 
 	entry = {
-		goods = weapons
+		goods = weapons_uyr
 
 		weight = 0.75
 		max_supply_share = 0.25
@@ -355,7 +355,7 @@ popneed_leisure = {
 	}
 
 	entry = {
-		goods = navalsupplies
+		goods = navalsupplies_uyr
 
 		weight = 1
 		max_supply_share = 0.25
@@ -364,10 +364,10 @@ popneed_leisure = {
 }
 
 popneed_stimulants = {
-	default = sugar
+	default = sugar_uyr
 
 	entry = {
-		goods = sugar
+		goods = sugar_uyr
 
 		weight = 1
 		max_supply_share = 0.75
@@ -375,7 +375,7 @@ popneed_stimulants = {
 	}
 
 	entry = {
-		goods = tea
+		goods = tea_uyr
 
 		weight = 0.95
 		max_supply_share = 0.75
@@ -383,7 +383,7 @@ popneed_stimulants = {
 	}
 
 	entry = {
-		goods = coffee
+		goods = coffee_uyr
 
 		weight = 0.95
 		max_supply_share = 0.75
@@ -391,7 +391,7 @@ popneed_stimulants = {
 	}
 
 	entry = {
-		goods = tobacco
+		goods = tobacco_uyr
 
 		weight = 0.8
 		max_supply_share = 0.75
