@@ -17,9 +17,6 @@
         building_logging_camp = 14
         building_fishing_wharf = 6
     }
-    resource = {
-        undiscovered_amount = 12
-    }
     naval_exit_id = 3024
 }
 
@@ -45,13 +42,6 @@ STATE_GUAYANA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 12
-    }
-    resource = {
-        undiscovered_amount = 16
-    }
-    resource = {
-        undiscovered_amount = 20
     }
     naval_exit_id = 3062
 }
@@ -77,12 +67,6 @@ STATE_ZULIA = {
         building_copper_mine = 2
         building_stone_quarry = 8
 }
-    resource = {
-        undiscovered_amount = 4
-    }
-    resource = {
-        undiscovered_amount = 100
-    }
     naval_exit_id = 3025
 }
 
@@ -105,12 +89,6 @@ STATE_MIRANDA = {
         building_copper_mine = 2
         building_stone_quarry = 8
 }
-    resource = {
-        undiscovered_amount = 4
-    }
-    resource = {
-        undiscovered_amount = 100
-    }
     naval_exit_id = 3025
 }
 
@@ -135,12 +113,6 @@ STATE_BOLIVAR = {
         building_copper_mine = 2
         building_stone_quarry = 7
 }
-    resource = {
-        undiscovered_amount = 16
-    }
-    resource = {
-        undiscovered_amount = 50
-    }
     naval_exit_id = 3025
 }
 
@@ -165,12 +137,6 @@ STATE_ANTIOQUIA = {
         building_copper_mine = 6
         building_stone_quarry = 20
 }
-    resource = {
-        undiscovered_amount = 8
-    }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3025
 }
 
@@ -191,9 +157,6 @@ STATE_GUAVIARE = {
         building_copper_mine = 1
         building_stone_quarry = 6
 }
-    resource = {
-        undiscovered_amount = 18
-    }
 }
 
 STATE_CUNDINAMARCA = {
@@ -214,9 +177,6 @@ STATE_CUNDINAMARCA = {
         building_copper_mine = 6
         building_stone_quarry = 20
 }
-    resource = {
-        undiscovered_amount = 10
-    }
 }
 
 STATE_CAUCA = {
@@ -239,9 +199,6 @@ STATE_CAUCA = {
         building_copper_mine = 5
         building_stone_quarry = 20
 }
-    resource = {
-        undiscovered_amount = 6
-    }
     naval_exit_id = 3155
 }
 
@@ -264,11 +221,7 @@ STATE_PASTAZA = {
         building_stone_quarry = 6
 }
     resource = {
-        undiscovered_amount = 15
         discovered_amount = 1
-    }
-    resource = {
-        undiscovered_amount = 20
     }
 }
 
@@ -318,7 +271,6 @@ STATE_ANTOFAGASTA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 10
     }
     naval_exit_id = 3152
 }
@@ -341,11 +293,7 @@ STATE_SANTA_CRUZ = {
         building_stone_quarry = 6
 }
     resource = {
-        undiscovered_amount = 8
         discovered_amount = 14
-    }
-    resource = {
-        undiscovered_amount = 50
     }
 }
 
@@ -366,12 +314,6 @@ STATE_LA_PAZ = {
         building_copper_mine = 10
         building_stone_quarry = 10
 }
-    resource = {
-        undiscovered_amount = 8
-    }
-    resource = {
-        undiscovered_amount = 50
-    }
 }
 
 STATE_POTOSI = {
@@ -418,10 +360,6 @@ STATE_CAJAMARCA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 4
-    }
-    resource = {
-        undiscovered_amount = 20
     }
     naval_exit_id = 3024
 }
@@ -519,9 +457,6 @@ STATE_URUGUAY = {
         building_copper_mine = 0
         building_stone_quarry = 6
 }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3065
 }
 
@@ -564,9 +499,6 @@ STATE_ALTO_PARAGUAY = {
         building_copper_mine = 2
         building_stone_quarry = 8
 }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_BAJO_PARAGUAY = {
@@ -587,9 +519,6 @@ STATE_BAJO_PARAGUAY = {
         building_copper_mine = 2
         building_stone_quarry = 10
 }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_BUENOS_AIRES = {
@@ -634,9 +563,6 @@ STATE_PATAGONIA = {
         building_copper_mine = 6
         building_stone_quarry = 10
 }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3066
 }
 
@@ -699,9 +625,6 @@ STATE_SANTA_FE = {
         building_copper_mine = 1
         building_stone_quarry = 6
 }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3065
 }
 
@@ -722,9 +645,6 @@ STATE_CORRIENTES = {
         building_copper_mine = 1
         building_stone_quarry = 6
 }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_TUCUMAN = {
@@ -843,10 +763,6 @@ STATE_ARAUCANIA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 4
-    }
-    resource = {
-        undiscovered_amount = 20
     }
     naval_exit_id = 3151
 }
@@ -898,9 +814,6 @@ STATE_PARA = {
     resource = {
         discovered_amount = 22
     }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3062
 }
 
@@ -949,9 +862,6 @@ STATE_AMAZONAS = {
 }
     resource = {
         discovered_amount = 25
-    }
-    resource = {
-        undiscovered_amount = 20
     }
 }
 
@@ -1021,9 +931,6 @@ STATE_MATO_GROSSO = {
     resource = {
         discovered_amount = 26
     }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_RIO_GRANDE_DO_SUL = {
@@ -1047,9 +954,6 @@ STATE_RIO_GRANDE_DO_SUL = {
         building_copper_mine = 1
         building_stone_quarry = 6
 }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3064
 }
 
@@ -1121,9 +1025,6 @@ STATE_SAO_PAULO = {
     resource = {
         discovered_amount = 10
     }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3064
 }
 
@@ -1149,13 +1050,9 @@ STATE_MINAS_GERAIS = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
     }
     resource = {
         discovered_amount = 7
-    }
-    resource = {
-        undiscovered_amount = 20
     }
 }
 

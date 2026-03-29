@@ -13,9 +13,6 @@
         building_lead_mine = 36
         building_sulfur_mine = 80
     }
-    resource = {
-        undiscovered_amount = 10
-    }
 }
 
 STATE_TIANSHAN = {
@@ -118,9 +115,6 @@ STATE_ALXA = {
     capped_resources = {
         building_coal_mine = 32
     }
-    resource = {
-        undiscovered_amount = 10
-    }
 }
 
 STATE_HINGGAN = {
@@ -197,9 +191,6 @@ STATE_SHENGJING = {
         building_logging_camp = 2
         building_fishing_wharf = 2
     }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3057
 }
 
@@ -225,10 +216,6 @@ STATE_OUTER_MANCHURIA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
-    }
-    resource = {
-        undiscovered_amount = 20
     }
     naval_exit_id = 3059
 }
@@ -287,9 +274,6 @@ STATE_SHANXI = {
         building_sulfur_mine = 48
         building_logging_camp = 7
     }
-    resource = {
-        undiscovered_amount = 30
-    }
 }
 
 STATE_NINGXIA = {
@@ -339,9 +323,6 @@ STATE_XIAN = {
         building_sulfur_mine = 60
         building_logging_camp = 9
     }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_QINGHAI = {
@@ -375,9 +356,6 @@ STATE_CHONGQING = {
     capped_resources = {
         building_coal_mine = 36
         building_logging_camp = 9
-    }
-    resource = {
-        undiscovered_amount = 10
     }
 }
 
@@ -645,9 +623,6 @@ STATE_SHANDONG = {
         building_logging_camp = 6
         building_fishing_wharf = 15
     }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3057
 }
 
@@ -724,9 +699,6 @@ STATE_CAMBODIA = {
         building_logging_camp = 20
         building_fishing_wharf = 5
     }
-    resource = {
-        undiscovered_amount = 12
-    }
     naval_exit_id = 3053
 }
 
@@ -745,9 +717,6 @@ STATE_BANGKOK = {
     capped_resources = {
         building_logging_camp = 17
         building_fishing_wharf = 8
-    }
-    resource = {
-        undiscovered_amount = 16
     }
     naval_exit_id = 3053
 }
@@ -768,9 +737,6 @@ STATE_TONKIN = {
         building_coal_mine = 32
         building_logging_camp = 15
         building_fishing_wharf = 7
-    }
-    resource = {
-        undiscovered_amount = 16
     }
     naval_exit_id = 3054
 }
@@ -793,9 +759,6 @@ STATE_ANNAM = {
         building_logging_camp = 17
         building_fishing_wharf = 15
     }
-    resource = {
-        undiscovered_amount = 6
-    }
     naval_exit_id = 3054
 }
 
@@ -815,9 +778,6 @@ STATE_MEKONG = {
     capped_resources = {
         building_logging_camp = 20
         building_fishing_wharf = 16
-    }
-    resource = {
-        undiscovered_amount = 8
     }
     naval_exit_id = 3053
 }
@@ -855,9 +815,6 @@ STATE_CHIANG_MAI = {
         building_lead_mine = 36
         building_logging_camp = 18
     }
-    resource = {
-        undiscovered_amount = 4
-    }
 }
 
 STATE_NAKHON_RATCHASIMA = {
@@ -875,9 +832,6 @@ STATE_NAKHON_RATCHASIMA = {
     capped_resources = {
         building_logging_camp = 25
         building_fishing_wharf = 6
-    }
-    resource = {
-        undiscovered_amount = 2
     }
     naval_exit_id = 3053
 }
@@ -898,9 +852,6 @@ STATE_SAKHALIN = {
         building_iron_mine = 45
         building_logging_camp = 11
         building_fishing_wharf = 7
-    }
-    resource = {
-        undiscovered_amount = 10
     }
     naval_exit_id = 3059
 }
@@ -929,7 +880,6 @@ STATE_HOKKAIDO = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3059
 }
@@ -990,9 +940,6 @@ STATE_CHUBU = {
         building_lead_mine = 33
         building_logging_camp = 16
         building_fishing_wharf = 16
-    }
-    resource = {
-        undiscovered_amount = 30
     }
     naval_exit_id = 3059
 }

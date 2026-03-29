@@ -422,7 +422,6 @@ STATE_ARKHANGELSK = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3039
 }
@@ -480,9 +479,6 @@ STATE_KHARKOV = {
         building_iron_mine = 28
         building_logging_camp = 20
     }
-    resource = {
-        undiscovered_amount = 12
-    }
 }
 
 STATE_KURSK = {
@@ -504,7 +500,6 @@ STATE_KURSK = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 3
     }
 }
 
@@ -562,9 +557,6 @@ STATE_GALICH = {
         building_coal_mine = 72
         building_iron_mine = 12
     }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_MINSK = {
@@ -620,9 +612,6 @@ STATE_PERM = {
         building_iron_mine = 75
         building_logging_camp = 35
     }
-    resource = {
-        undiscovered_amount = 60
-    }
 }
 
 STATE_KAZAN = {
@@ -640,9 +629,6 @@ STATE_KAZAN = {
         building_logging_camp = 12
         building_coal_mine = 30
     }
-    resource = {
-        undiscovered_amount = 60
-    }
 }
 
 STATE_URALSK = {
@@ -658,9 +644,6 @@ STATE_URALSK = {
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 7
-    }
-    resource = {
-        undiscovered_amount = 60
     }
 }
 
@@ -797,9 +780,6 @@ STATE_AKTOBE = {
         building_iron_mine = 10
         building_logging_camp = 3
     }
-    resource = {
-        undiscovered_amount = 30
-    }
 }
 
 STATE_KALMYKIA = {
@@ -815,9 +795,6 @@ STATE_KALMYKIA = {
     arable_resources = { "building_livestock_ranch" "building_wheat_farm" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 3
-    }
-    resource = {
-        undiscovered_amount = 10
     }
 }
 
@@ -838,12 +815,8 @@ STATE_NORTH_CAUCASUS = {
         building_logging_camp = 25
     }
     resource = {
-        undiscovered_amount = 25
-    }
-    resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 4
     }
 }
 
@@ -983,9 +956,6 @@ STATE_VYATKA = {
         building_sulfur_mine = 10
         building_logging_camp = 36
     }
-    resource = {
-        undiscovered_amount = 25
-    }
 }
 
 STATE_UFA = {
@@ -1005,9 +975,6 @@ STATE_UFA = {
         building_logging_camp = 25
         building_lead_mine = 16
     }
-    resource = {
-        undiscovered_amount = 35
-    }
 }
 
 STATE_SURGUT = {
@@ -1023,9 +990,6 @@ STATE_SURGUT = {
     arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 32
-    }
-    resource = {
-        undiscovered_amount = 120
     }
 }
 
@@ -1048,7 +1012,6 @@ STATE_KRASNOYARSK = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 12
     }
 }
 
@@ -1070,7 +1033,6 @@ STATE_ALTAI = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 3
     }
 }
 
@@ -1092,7 +1054,6 @@ STATE_BURYATIA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 16
     }
 }
 
@@ -1115,7 +1076,6 @@ STATE_KOLYMA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 16
     }
 }
 
@@ -1139,7 +1099,6 @@ STATE_AMUR = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 18
     }
     naval_exit_id = 3059
 }
@@ -1165,7 +1124,6 @@ STATE_CHELYABINSK = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 9
     }
 }
 
@@ -1201,9 +1159,6 @@ STATE_STAVROPOL = {
     capped_resources = {
         building_logging_camp = 14
     }
-    resource = {
-        undiscovered_amount = 30
-    }
 }
 
 STATE_CHUVASHIA = {
@@ -1221,9 +1176,6 @@ STATE_CHUVASHIA = {
         building_sulfur_mine = 15
         building_logging_camp = 25
     }
-    resource = {
-        undiscovered_amount = 24
-    }
 }
 
 STATE_CHERNIHIV = {
@@ -1239,9 +1191,6 @@ STATE_CHERNIHIV = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 16
-    }
-    resource = {
-        undiscovered_amount = 6
     }
 }
 
@@ -1262,9 +1211,6 @@ STATE_NENETSIA = {
         building_logging_camp = 13
         building_fishing_wharf = 12
         building_coal_mine = 30
-    }
-    resource = {
-        undiscovered_amount = 30
     }
     naval_exit_id = 3039
 }
