@@ -21,7 +21,6 @@
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 6
     }
 }
 
@@ -81,9 +80,6 @@ STATE_TOBOLSK = {
         building_iron_mine = 10
         building_logging_camp = 30
     }
-    resource = {
-        undiscovered_amount = 60
-    }
 }
 
 STATE_UPPER_YENISEYSK = {
@@ -123,9 +119,6 @@ STATE_OB = {
         building_coal_mine = 20
         building_logging_camp = 22
     }
-    resource = {
-        undiscovered_amount = 60
-    }
 }
 
 STATE_CHUKOTKA = {
@@ -150,7 +143,6 @@ STATE_CHUKOTKA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 4
     }
     naval_exit_id = 3128
 }
@@ -175,7 +167,6 @@ STATE_KAMCHATKA = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 2
     }
     naval_exit_id = 3118
 }
@@ -202,7 +193,6 @@ STATE_OKHOTSK = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3118
 }
@@ -228,10 +218,6 @@ STATE_YAKUTSK = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
-    }
-    resource = {
-        undiscovered_amount = 5
     }
 }
 
@@ -253,9 +239,6 @@ STATE_TRANS_BAIKAL = {
         building_sulfur_mine = 44
         building_logging_camp = 24
     }
-    resource = {
-        undiscovered_amount = 10
-    }
 }
 
 STATE_IRKUTSK = {
@@ -274,9 +257,6 @@ STATE_IRKUTSK = {
         building_coal_mine = 50
         building_iron_mine = 36
         building_logging_camp = 30
-    }
-    resource = {
-        undiscovered_amount = 10
     }
 }
 
