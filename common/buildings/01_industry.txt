@@ -9,10 +9,6 @@ building_food_industry = {
 
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
-	unlocking_technologies = {
-		manufacturies
-	}
-
 	production_method_groups = {
 		pmg_base_building_food_industry
 		pmg_canning
@@ -36,9 +32,6 @@ building_textile_mill = {
 
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
-	unlocking_technologies = {
-		manufacturies
-	}
 
 	production_method_groups = {
 		pmg_base_building_textile_mill
@@ -62,10 +55,6 @@ building_furniture_manufactory = {
 
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
-	unlocking_technologies = {
-		manufacturies
-	}
-
 	production_method_groups = {
 		pmg_base_building_furniture_manufactory
 		pmg_luxury_building_furniture_manufactory
@@ -84,10 +73,6 @@ building_glassworks = {
 	city_type = city
 	levels_per_mesh = 50
 	buildable = no
-
-	unlocking_technologies = {
-		manufacturies
-	}
 
 	production_method_groups = {
 		pmg_base_building_glassworks
@@ -108,9 +93,6 @@ building_tooling_workshop = {
 
 	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize tools due to importance for construction etc
 
-	unlocking_technologies = {
-		manufacturies
-	}
 
 	city_type = city
 	levels_per_mesh = 50
@@ -136,10 +118,6 @@ building_paper_mill = {
 
 	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
 
-	unlocking_technologies = {
-		manufacturies
-	}
-
 	city_type = city
 	levels_per_mesh = 50
 	buildable = no
@@ -159,10 +137,6 @@ building_chemical_plant = {
 	aliases = { building_chemical_plants }
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/chemicals_industry.dds"
-
-	unlocking_technologies = {
-		intensive_agriculture
-	}
 
 	city_type = city
 	levels_per_mesh = 50
@@ -193,10 +167,6 @@ building_chemical_plant = {
 building_explosives_factory = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/explosives_factory.dds"
-
-	unlocking_technologies = {
-		intensive_agriculture
-	}
 
 	city_type = city
 	levels_per_mesh = 50
@@ -231,10 +201,6 @@ building_synthetics_plant = {
 	levels_per_mesh = 50
 	buildable = no
 
-	unlocking_technologies = {
-		aniline
-	}
-
 	production_method_groups = {
 		pmg_synthetic_dyes
 		pmg_synthetic_silk
@@ -267,10 +233,6 @@ building_steel_mill = {
 
 	ai_nationalization_desire = 0.25 # AI will generally not privatize steel mills due to importance for construction
 
-	unlocking_technologies = {
-		steelworking
-	}
-
 	production_method_groups = {
 		pmg_steelmaking_process
 		pmg_automation_building_steel_mill
@@ -300,9 +262,6 @@ building_motor_industry = {
 	levels_per_mesh = 50
 	buildable = no
 
-	unlocking_technologies = {
-		atmospheric_engine
-	}
 
 	production_method_groups = {
 		pmg_base_building_motor_industry
@@ -336,10 +295,6 @@ building_shipyard = {
 
 	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
 
-	unlocking_technologies = {
-		navigation
-	}
-
 	production_method_groups = {
 		pmg_base_building_shipyard
 	}
@@ -364,10 +319,6 @@ building_military_shipyard = {
 
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
-	unlocking_technologies = {
-		admiralty
-	}
-
 	production_method_groups = {
 		pmg_military_base
 	}
@@ -388,10 +339,6 @@ building_automotive_industry = {
 	city_type = city
 	levels_per_mesh = 50
 	buildable = no
-
-	unlocking_technologies = {
-		combustion_engine
-	}
 
 	production_method_groups = {
 		pmg_automobile_production
@@ -424,9 +371,6 @@ building_electrics_industry = {
 	levels_per_mesh = 50
 	buildable = no
 
-	unlocking_technologies = {
-		telephone
-	}
 
 	production_method_groups = {
 		pmg_telephones_category
@@ -460,10 +404,6 @@ building_arms_industry = {
 
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
-	unlocking_technologies = {
-		gunsmithing
-	}
-
 	production_method_groups = {
 		pmg_firearms_manufacturing
 		pmg_automation_building_arms_industry
@@ -483,10 +423,6 @@ building_artillery_foundry = {
 	buildable = no
 
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
-
-	unlocking_technologies = {
-		gunsmithing
-	}
 
 	production_method_groups = {
 		pmg_foundries
@@ -508,10 +444,6 @@ building_munition_plant = {
 	buildable = no
 
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
-
-	unlocking_technologies = {
-		percussion_cap
-	}
 
 	production_method_groups = {
 		pmg_base_building_munition_plant

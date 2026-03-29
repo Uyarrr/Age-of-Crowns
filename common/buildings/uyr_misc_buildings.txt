@@ -21,6 +21,10 @@ building_fishing_wharf_uyr = {
 	levels_per_mesh = 1
 	required_construction = construction_cost_low
 
+	unlocking_technologies = {
+		fishing
+	}
+
 	production_method_groups = {
 		pmg_building_fishing_wharf_main
 	}

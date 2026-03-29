@@ -30,17 +30,15 @@ building_cotton_plantation_uyr = {
 	icon = "gfx/interface/icons/building_icons/cotton_plantation.dds"
 	required_construction = construction_cost_low
 
-	buildable = no
-
 	unlocking_technologies = {
-		enclosure
+		cotton_plantation
 	}
 
 	city_type = farm
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_cotton_plantation
+		pmg_building_cotton_plantation_main
 		pmg_cotton_exploitation
 		pmg_train_automation_building_cotton_plantation
 	}
@@ -109,7 +107,7 @@ building_tea_plantation_uyr = {
 	buildable = no
 
 	unlocking_technologies = {
-		enclosure
+		agriculture
 	}
 
 	city_type = farm
@@ -126,16 +124,6 @@ building_tea_plantation_uyr = {
 
 	ai_value = {
 		value = 1000
-
-		if = { # British dictates
-			limit = {
-				owner = {
-					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type ?= 2
-				}
-			}
-			add = 2000
-		}
 	}
 }
 
@@ -147,7 +135,7 @@ building_tobacco_plantation_uyr = {
 	buildable = no
 
 	unlocking_technologies = {
-		enclosure
+		tobacco_plantation
 	}
 
 	city_type = farm
@@ -165,16 +153,6 @@ building_tobacco_plantation_uyr = {
 
 	ai_value = {
 		value = 1000
-
-		if = { # British dictates
-			limit = {
-				owner = {
-					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type ?= 5
-				}
-			}
-			add = 2000
-		}
 	}
 }
 
@@ -186,7 +164,7 @@ building_sugar_plantation_uyr = {
 	buildable = no
 
 	unlocking_technologies = {
-		enclosure
+		sugar_plantation
 	}
 
 	city_type = farm
@@ -208,17 +186,15 @@ building_banana_plantation_uyr = {
 	icon = "gfx/interface/icons/building_icons/banana_plantation.dds"
 	required_construction = construction_cost_low
 
-	buildable = no
-
 	unlocking_technologies = {
-		enclosure
+		agriculture
 	}
 
 	city_type = farm
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_banana_plantation
+		pmg_building_banana_plantation_main
 		pmg_banana_exploitation
 		pmg_train_automation_building_banana_plantation
 	}

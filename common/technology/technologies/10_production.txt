@@ -228,7 +228,7 @@ fishing = {
 sheep_ranching = {
 	# Unlocks Wool PM for Livestock
 	era = era_1
-	texture = "gfx/interface/icons/goods_icons/fabric.dds"
+	texture = "gfx/interface/icons/invention_icons/sheep_ranching.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -298,6 +298,7 @@ workshop_standardization = {
 	}
 
 	unlocking_technologies = {
+		quarrying
 	}
 
 	ai_weight = {
@@ -722,5 +723,19 @@ steel_tools = {
 
 	ai_weight = {
 		value = 2 # Very important tech in general
+	}
+}
+
+steel_mills = {
+	# Unlocks Steel Mills
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/steel.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
 	}
 }

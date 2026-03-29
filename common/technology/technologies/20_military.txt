@@ -74,17 +74,6 @@ horsemen = {
 	}
 }
 
-standing_army = {
-	# Unlocks Barracks building
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/standing_army.dds"
-	category = military
-
-	ai_weight = {
-		value = 3 # Very important tech in general
-	}
-}
-
 shipbuilding = {
 	# Unlocks Shipyards
 	# Unlocks Naval Supplies
@@ -643,27 +632,17 @@ iron_weapons = {
 
 ### ERA 4
 
-electric_telegraph = {
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/electrical_telegraph.dds"
+arms_industry = {
+	# Unlocks Arms Industry
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
 	category = military
-
-	modifier = {
-		country_war_exhaustion_casualties_mult = -0.25
-	}
 
 	unlocking_technologies = {
 	}
 
 	ai_weight = {
 		value = 1
-
-		if = {
-			limit = {
-				has_strategy = ai_strategy_unify_germany
-			}
-			add = 8
-		}
 	}
 }
 

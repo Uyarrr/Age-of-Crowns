@@ -113,7 +113,7 @@ building_paper_mill_uyr = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
-building_steel_foundry_uyr = {
+building_steel_mill_uyr = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/steel_foundry_uyr.dds"
 	city_type = city
@@ -122,7 +122,7 @@ building_steel_foundry_uyr = {
 	ai_nationalization_desire = 0.25 # AI will generally not privatize steel mills due to importance for construction
 
 	unlocking_technologies = {
-		behaviorism
+		steel_mills
 	}
 
 	production_method_groups = {

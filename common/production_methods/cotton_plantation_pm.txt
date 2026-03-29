@@ -1,0 +1,65 @@
+﻿pm_building_cotton_plantation_main_1 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+
+			# output goods
+			goods_output_fabric_uyr_add = 30
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 7000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+pm_building_cotton_plantation_main_2 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_uyr_add = 10
+
+			# output goods
+			goods_output_fabric_uyr_add = 60
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 6500
+			building_employment_farmers_add = 1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_building_cotton_plantation_main_3 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_uyr_add = 20
+
+			# output goods
+			goods_output_fabric_uyr_add = 90
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 5500
+			building_employment_farmers_add = 1500
+			building_employment_machinists_add = 1000
+		}
+	}
+}
