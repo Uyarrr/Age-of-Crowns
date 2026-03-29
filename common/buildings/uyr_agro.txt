@@ -1,0 +1,161 @@
+﻿building_stud_farm_uyr = {
+	building_group = bg_agriculture
+	icon = "gfx/interface/icons/building_icons/stud_farm_uyr.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		ranching
+	}
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_stud_farm_main
+		pmg_building_stud_farm_warhorse
+		pmg_building_stud_farm_equipment
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
+}
+
+building_fiber_farm_uyr = {
+	building_group = bg_agriculture
+	icon = "gfx/interface/icons/building_icons/fiber_farm_uyr.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_fiber_farm_main
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
+}
+
+building_rye_farm_uyr = {
+	building_group = bg_staple_crops
+
+	icon = "gfx/interface/icons/building_icons/rye_farm.dds"
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	production_method_groups = {
+		pmg_building_farm_main
+	}
+
+	required_construction = construction_cost_low
+
+	terrain_manipulator = farmland_rye
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_wheat_farm_uyr = {
+	building_group = bg_staple_crops
+
+	icon = "gfx/interface/icons/building_icons/wheat_farm.dds"
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	production_method_groups = {
+		pmg_building_farm_main
+	}
+
+	required_construction = construction_cost_low
+
+	terrain_manipulator = farmland_wheat
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_rice_farm_uyr = {
+	building_group = bg_staple_crops
+
+	icon = "gfx/interface/icons/building_icons/rice_farm.dds"
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	production_method_groups = {
+		pmg_building_ricefarm_main
+	}
+
+	required_construction = construction_cost_low
+
+	terrain_manipulator = farmland_rice
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_maize_farm_uyr = {
+	building_group = bg_staple_crops
+
+	icon = "gfx/interface/icons/building_icons/maize_farm.dds"
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	production_method_groups = {
+		pmg_building_farm_main
+	}
+
+	required_construction = construction_cost_low
+
+	terrain_manipulator = farmland_maize
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_millet_farm_uyr = {
+	building_group = bg_staple_crops
+
+	icon = "gfx/interface/icons/building_icons/millet_farm.dds"
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	production_method_groups = {
+		pmg_building_farm_main
+	}
+
+	required_construction = construction_cost_low
+
+	terrain_manipulator = farmland_millet
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}

@@ -1,0 +1,94 @@
+﻿pm_building_fishing_wharf_main_1 = {
+	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output
+			goods_output_fish_uyr_add = 25
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_building_fishing_wharf_main_2 = {
+	texture = "gfx/interface/icons/production_method_icons/advanced_fishing.dds"
+
+	unlocking_technologies = {
+		net_and_line_fishing
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_wood_uyr_add = 5
+			goods_input_fiber_uyr_add = 5
+			# output
+			goods_output_fish_uyr_add = 50
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_building_fishing_wharf_main_3 = {
+	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
+
+	unlocking_technologies = {
+		rationalism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_navalsupplies_uyr_add = 15
+
+			# output
+			goods_output_fish_uyr_add = 75
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_building_fishing_wharf_main_4 = {
+	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
+
+	unlocking_technologies = {
+		rationalism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_navalsupplies_uyr_add = 20
+			goods_input_coal_uyr_add = 20
+
+			# output
+			goods_output_fish_uyr_add = 100
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}

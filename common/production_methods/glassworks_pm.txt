@@ -1,0 +1,86 @@
+﻿pm_building_glassworks_main_1 = {
+	texture = "gfx/interface/icons/production_method_icons/forest_glass.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_uyr_add = 15
+			goods_input_stone_uyr_add = 15
+			goods_input_tools_uyr_add = 5
+
+			# output goods
+			goods_output_glass_uyr_add = 30
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_building_glassworks_main_2 = {
+	texture = "gfx/interface/icons/production_method_icons/leaded_glass.dds"
+
+	unlocking_technologies = {
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_uyr_add = 15
+			goods_input_stone_uyr_add = 5
+			goods_input_lead_uyr_add = 10
+			goods_input_tools_uyr_add = 5
+
+			# output goods
+			goods_output_glass_uyr_add = 60
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_building_glassworks_main_3 = {
+	texture = "gfx/interface/icons/production_method_icons/crystal_glass.dds"
+
+	unlocking_technologies = {
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_uyr_add = 15
+			goods_input_stone_uyr_add = 5
+			goods_input_lead_uyr_add = 20
+			goods_input_dye_uyr_add = 10
+			goods_input_tools_uyr_add = 5
+
+			# output goods
+			goods_output_glass_uyr_add = 90
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}

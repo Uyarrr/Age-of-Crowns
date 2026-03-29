@@ -1,0 +1,38 @@
+{
+  "name" : "Age of Crowns Fresh",
+	"id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true,
+    "replace_paths" : [
+      "common/history/buildings",
+      "common/history/diplomatic_plays",
+      "common/history/military_deployments",
+      "common/history/military_formations",
+      "common/history/political_movements",
+      "common/history/trade",
+      "common/history/treaties",
+      "common/history/lobbies",
+      "common/history/interests",
+      "common/history/governments",
+      "common/history/government_setup",
+      "common/history/global",
+      "common/history/diplomatic_plays",
+      "common/history/diplomacy",
+      "common/history/conscription",
+      "common/history/ai",
+      "common/history/production_methods",
+      "common/history/countries",
+      "common/ai_strategies",
+      "common/journal_entries",
+      "common/journal_entry_groups",
+      "common/decisions",
+      "common/combat_unit_types",
+      "events"
+    ]
+  }
+}

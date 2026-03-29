@@ -1,0 +1,129 @@
+﻿pm_building_livestock_main_1 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_livestock_uyr_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+pm_building_livestock_main_2 = {
+	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_uyr_add = 2
+			goods_output_livestock_uyr_add = 15
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+pm_building_livestock_main_3 = {
+	texture = "gfx/interface/icons/production_method_icons/slaughterhouses.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_uyr_add = 5
+			goods_output_livestock_uyr_add = 25
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3750
+			building_employment_farmers_add = 1000
+			building_employment_machinists_add = 250
+		}
+	}
+}
+
+pm_building_livestock_main_4 = {
+	texture = "gfx/interface/icons/production_method_icons/mechanized_slaughtering.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_uyr_add = 5 # 200
+			goods_input_coal_uyr_add = 5 # 150
+			goods_output_livestock_uyr_add = 35 # 1050
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_farmers_add = 1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_building_livestock_sheep_0 = {
+	texture = "gfx/interface/icons/production_method_icons/sheep_ranch.dds"
+}
+
+pm_building_livestock_sheep_1 = {
+	texture = "gfx/interface/icons/production_method_icons/sheep_ranch.dds"
+
+	unlocking_technologies = {
+		sheep_ranching
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fabric_uyr_add = 5
+		}
+	}
+}
+
+pm_building_livestock_sheep_2 = {
+	texture = "gfx/interface/icons/production_method_icons/sheep_farms.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_grain_uyr_add = 10
+			goods_output_fabric_uyr_add = 20
+		}
+	}
+}
+
+pm_building_livestock_sheep_3 = {
+	texture = "gfx/interface/icons/production_method_icons/large_sheep_ranch.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_grain_uyr_add = 20
+			goods_output_fabric_uyr_add = 40
+		}
+	}
+}

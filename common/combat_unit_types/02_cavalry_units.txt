@@ -1,0 +1,453 @@
+###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Cavalry
+
+combat_unit_type_cavalry_1 = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+	unlocking_technologies = { horsemen }
+
+    upkeep_modifier = {
+        goods_input_warhorse_uyr_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 12
+        unit_defense_add = 8
+        unit_morale_loss_add = 15
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
+    }
+
+    combat_unit_image = {
+        trigger = {
+			has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = polynesian
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/cavalry_1.dds"
+    }
+
+	upgrades = {
+        combat_unit_type_cavalry_2
+        combat_unit_type_cavalry_3
+        combat_unit_type_cavalry_4
+        combat_unit_type_cavalry_5
+        combat_unit_type_cavalry_6
+	}
+}
+
+combat_unit_type_cavalry_2 = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+	unlocking_technologies = { cavalrymen }
+
+    upkeep_modifier = {
+        goods_input_weapons_uyr_add = 1
+        goods_input_warhorse_uyr_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 24
+        unit_defense_add = 16
+        unit_morale_loss_add = 10
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
+    }
+
+    combat_unit_image = {
+        trigger = {
+			has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = polynesian
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/cavalry_2.dds"
+    }
+
+	upgrades = {
+        combat_unit_type_cavalry_3
+        combat_unit_type_cavalry_4
+        combat_unit_type_cavalry_5
+        combat_unit_type_cavalry_6
+	}
+}
+
+combat_unit_type_cavalry_3 = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+	unlocking_technologies = { lancer }
+
+    battle_modifier = { 
+        unit_offense_add = 34
+        unit_defense_add = 26
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
+    }
+
+    upkeep_modifier = {
+        goods_input_weapons_uyr_add = 2
+        goods_input_leather_uyr_add = 4
+        goods_input_warhorse_uyr_add = 2
+    }
+
+    combat_unit_image = {
+        trigger = {
+			has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = polynesian
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/cavalry_3.dds"
+    }
+
+	upgrades = {
+		combat_unit_type_cavalry_4
+		combat_unit_type_cavalry_5
+		combat_unit_type_cavalry_6
+	}
+}
+
+combat_unit_type_cavalry_4 = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+	unlocking_technologies = { behaviorism }
+
+    battle_modifier = { 
+        unit_offense_add = 44
+        unit_defense_add = 36
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
+    }
+
+    upkeep_modifier = {
+        goods_input_weapons_uyr_add = 3
+        goods_input_leather_uyr_add = 2
+    }
+
+    combat_unit_image = {
+        trigger = {
+			has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = polynesian
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/cavalry_4.dds"
+    }
+
+	upgrades = {
+		combat_unit_type_infantry_5
+		combat_unit_type_infantry_6
+	}
+}
+
+combat_unit_type_cavalry_5 = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+	unlocking_technologies = { behaviorism }
+
+    battle_modifier = { 
+        unit_offense_add = 55
+        unit_defense_add = 45
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
+    }
+
+    upkeep_modifier = {
+        goods_input_weapons_uyr_add = 4
+        goods_input_leather_uyr_add = 3
+        goods_input_saltpeter_uyr_add = 3
+    }
+
+    combat_unit_image = {
+        trigger = {
+			has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = polynesian
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/cavalry_5.dds"
+    }
+
+	upgrades = {
+		combat_unit_type_infantry_6
+	}
+}
+
+combat_unit_type_cavalry_6 = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+	unlocking_technologies = { behaviorism }
+
+    battle_modifier = { 
+        unit_offense_add = 66
+        unit_defense_add = 54
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = 0.3
+    }
+
+    upkeep_modifier = {
+        goods_input_weapons_uyr_add = 5
+        goods_input_leather_uyr_add = 4
+        goods_input_saltpeter_uyr_add = 4
+    }
+
+    combat_unit_image = {
+        trigger = {
+			has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = polynesian
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/cavalry_6.dds"
+    }
+
+	upgrades = {
+	}
+}
