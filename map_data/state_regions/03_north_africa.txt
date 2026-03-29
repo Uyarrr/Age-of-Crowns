@@ -157,9 +157,6 @@ STATE_DONGOLA = {
         building_stone_quarry = 12
         building_copper_mine = 4
     }
-    resource = {
-        undiscovered_amount = 5
-    }
     naval_exit_id = 3047
 }
 
@@ -180,9 +177,6 @@ STATE_KORDOFAN = {
         building_stone_quarry = 14
         building_copper_mine = 4
     }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_DARFUR = {
@@ -200,9 +194,6 @@ STATE_DARFUR = {
     capped_resources = {
         building_copper_mine = 3
         building_stone_quarry = 14
-    }
-    resource = {
-        undiscovered_amount = 30
     }
 }
 
@@ -358,9 +349,6 @@ STATE_CONSTANTINE = {
         building_stone_quarry = 22
         building_copper_mine = 8
     }
-    resource = {
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3032
 }
 
@@ -427,9 +415,6 @@ STATE_TRIPOLI = {
         building_stone_quarry = 12
         building_copper_mine = 3
     }
-    resource = {
-        undiscovered_amount = 30
-    }
     naval_exit_id = 3033
 }
 
@@ -453,9 +438,6 @@ STATE_LIBYA = {
         building_stone_quarry = 14
         building_copper_mine = 2
 	}
-    resource = {
-        undiscovered_amount = 40
-    }
     naval_exit_id = 3033
 }
 
@@ -474,9 +456,6 @@ STATE_LIBYAN_DESERT = {
     capped_resources = {
         building_copper_mine = 1
         building_stone_quarry = 16
-    }
-    resource = {
-        undiscovered_amount = 30
     }
 }
 
@@ -497,9 +476,6 @@ STATE_SAHARA = {
         building_stone_quarry = 16
         building_copper_mine = 2
     }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_EAST_SAHARA = {
@@ -518,9 +494,6 @@ STATE_EAST_SAHARA = {
     capped_resources = {
         building_copper_mine = 1
         building_stone_quarry = 16
-    }
-    resource = {
-        undiscovered_amount = 20
     }
 }
 
@@ -584,9 +557,6 @@ STATE_INNER_MAURITANIA = {
         building_stone_quarry = 14
         building_copper_mine = 3
     }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_EASTERN_MALI = {
@@ -642,9 +612,6 @@ STATE_TIMBUKTU = {
         building_stone_quarry = 14
         building_copper_mine = 2
     }
-    resource = {
-        undiscovered_amount = 20
-    }
 }
 
 STATE_NIGER = {
@@ -666,9 +633,6 @@ STATE_NIGER = {
         building_stone_quarry = 12
         building_copper_mine = 3
     }
-    resource = {
-        undiscovered_amount = 50
-    }
 }
 
 STATE_CHAD = {
@@ -687,8 +651,5 @@ STATE_CHAD = {
     capped_resources = {
         building_copper_mine = 2
         building_stone_quarry = 12
-    }
-    resource = {
-        undiscovered_amount = 30
     }
 }
