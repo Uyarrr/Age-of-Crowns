@@ -107,12 +107,12 @@ pm_building_iron_mine_main_4 = {
 	}
 }
 
-pm_building_iron_mine_extraction_none = {
+pm_building_iron_mine_extraction_0 = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 	building_modifiers = { workforce_scaled = { } }
 }
 
-pm_building_iron_mine_extraction_mechanical = {
+pm_building_iron_mine_extraction_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation1.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -123,7 +123,7 @@ pm_building_iron_mine_extraction_mechanical = {
 	}
 }
 
-pm_building_iron_mine_extraction_water_powered = {
+pm_building_iron_mine_extraction_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -134,7 +134,7 @@ pm_building_iron_mine_extraction_water_powered = {
 	}
 }
 
-pm_building_iron_mine_extraction_advanced = {
+pm_building_iron_mine_extraction_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation3.dds"
 	building_modifiers = {
 		workforce_scaled = {

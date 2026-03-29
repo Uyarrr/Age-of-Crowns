@@ -406,7 +406,7 @@
 		}
 	}
 	s:STATE_CANARY_ISLANDS = {
-		region_state:SPA = {
+		region_state:CAS = {
 			create_pop = {
 				culture = spanish
 				size = 231268
@@ -762,7 +762,7 @@
 			}
 		}
 		# Cattaro Region, downscaled version of 1880 census, with inflated Italian numbers, and decreased German ones
-		region_state:AUS = {
+		region_state:MON = {
 			create_pop = {
 				culture = serb
 				size = 15662

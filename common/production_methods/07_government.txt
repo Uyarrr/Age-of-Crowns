@@ -1,4 +1,4 @@
-﻿pm_chancery_main_1 = {
+﻿pm_building_chancery_main_1 = {
 	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
 
 	country_modifiers = {
@@ -22,7 +22,7 @@
 	ai_value = -1000 # AI should get off this PM as fast as possible
 }
 
-pm_chancery_main_2 = {
+pm_building_chancery_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/horizontal_drawer_cabinets.dds"
 
 	unlocking_technologies = {
@@ -52,7 +52,7 @@ pm_chancery_main_2 = {
 	}
 }
 
-pm_chancery_main_3 = {
+pm_building_chancery_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/vertical_filing_cabinets.dds"
 	unlocking_technologies = {
 		behaviorism
@@ -81,7 +81,7 @@ pm_chancery_main_3 = {
 	}
 }
 
-pm_chancery_main_4 = {
+pm_building_chancery_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/telephone_switchboards.dds"
 	unlocking_technologies = {
 		behaviorism
@@ -102,7 +102,6 @@ pm_chancery_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_paper_add = 20
-			goods_input_telephones_add = 5
 		}
 
 		level_scaled = {

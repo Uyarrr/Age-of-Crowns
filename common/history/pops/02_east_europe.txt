@@ -33,7 +33,7 @@
 		}
 	}
 	s:STATE_MOSCOW = {
-		region_state:RUS = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				size = 1220711
@@ -45,7 +45,7 @@
 		}
 	}
 	s:STATE_ORYOL = {
-		region_state:RUS = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				size = 3327590
@@ -258,8 +258,6 @@
 				religion = protestant
 				size = 3452
 			}
-		}
-		region_state:AUS = {
 		    create_pop = {
 		        culture = north_german
 		        religion = catholic

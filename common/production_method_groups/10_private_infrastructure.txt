@@ -34,7 +34,7 @@ pmg_building_road_transport = {
 #### TRADE ###
 
 
-pmg_base_building_trade_center = {
+pmg_building_trade_center_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -49,7 +49,6 @@ pmg_ownership_building_manor_house = {
 
 	production_methods = {
 		pm_manor_house_privately_owned
-		pm_manor_house_principle_divine_economics_2
 	}
 }
 
@@ -70,7 +69,6 @@ pmg_ownership_building_financial_district = {
 	production_methods = {
 		pm_financial_district_privately_owned
 		pm_financial_district_publicly_traded
-		pm_financial_district_principle_divine_economics_2
 	}
 }
 

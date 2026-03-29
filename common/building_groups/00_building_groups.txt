@@ -354,31 +354,6 @@ bg_arts = {
 	infrastructure_usage_per_level = 0.5
 }
 
-bg_power = {
-	category = development
-
-	lens = development
-
-	always_possible = yes
-
-	economy_of_scale = yes
-
-	cash_reserves_max = 25000
-
-	should_auto_expand = {
-		default_auto_expand_rule = yes
-	}
-
-	economy_of_scale_ai_factor = 1.5
-	foreign_investment_ai_factor = 0.5
-
-	infrastructure_usage_per_level = 2
-
-	urbanization = 10
-
-	self_investment_chance_modifier = yes
-}
-
 # Government
 
 bg_government = {

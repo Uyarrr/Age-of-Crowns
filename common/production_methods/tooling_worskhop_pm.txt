@@ -1,4 +1,4 @@
-﻿pm_building_tooling_workshop_stone_tools = {
+﻿pm_building_tooling_workshop_main_1 = {
 	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"
 
 	building_modifiers = {
@@ -18,7 +18,7 @@
 	}
 }
 
-pm_building_tooling_workshop_bronze_tools = {
+pm_building_tooling_workshop_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
 
 	unlocking_technologies = {
@@ -43,7 +43,7 @@ pm_building_tooling_workshop_bronze_tools = {
 	}
 }
 
-pm_building_tooling_workshop_iron_tools = {
+pm_building_tooling_workshop_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/bessemer_process.dds"
 	unlocking_technologies = {
 		iron_tools
@@ -67,7 +67,7 @@ pm_building_tooling_workshop_iron_tools = {
 	}
 }
 
-pm_building_tooling_workshop_steel_tools = {
+pm_building_tooling_workshop_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
 	unlocking_technologies = {
 		steel_tools

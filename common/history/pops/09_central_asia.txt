@@ -46,7 +46,7 @@
 		}
 	}
 	s:STATE_KUBAN = {
-		region_state:RUS = {
+		region_state:CRI = {
 			create_pop = {
 				culture = circassian
 				size = 149000
@@ -71,8 +71,6 @@
 				culture = east_german
 				size = 9600
 			}
-		}
-		region_state:CIR = {
 			create_pop = {
 				culture = circassian
 				size = 540000
@@ -406,8 +404,6 @@
 				culture = russian
 				size = 5408
 			}
-		}
-		region_state:GRH = {
 			create_pop = {
 				culture = kazak
 				size = 21500
@@ -447,7 +443,7 @@
 		}
 	}
 	s:STATE_KHIVA = {
-		region_state:KHI = {
+		region_state:BUK = {
 			create_pop = {
 				culture = uzbek
 				size = 428468
@@ -479,8 +475,6 @@
 				culture = persian
 				size = 223100
 			}
-		}
-		region_state:TRM = {
 			create_pop = {
 				culture = turkmen
 				size = 12222
@@ -490,8 +484,6 @@
 				culture = persian
 				size = 2010
 			}
-		}
-		region_state:KZH = {
 			create_pop = {
 				culture = kazak
 				size = 9021
@@ -1046,7 +1038,7 @@
 		}
 	}
 	s:STATE_KABUL = {
-		region_state:KAB = {
+		region_state:AFG = {
 			create_pop = {
 				culture = pashtun
 				size = 631236
@@ -1079,8 +1071,6 @@
 				culture = uzbek
 				size = 5000
 			}
-		}
-		region_state:KAF = {
 			create_pop = {
 				culture = kho # nuristani
 				religion = hindu
@@ -1157,23 +1147,60 @@
 	}
 
 	s:STATE_NORTHERN_BALUCHISTAN = {
-		region_state:KAN = {
+		region_state:AFG = {
 			create_pop = {
-				culture = baluchi
-				size = 21400
+				culture = pashtun
+				religion = sunni
+				size = 8019
 			}
 			create_pop = {
 				culture = pashtun
-				size = 2404
+				religion = sunni
+				size = 387
+			}
+		}
+		region_state:TIM = {
+			create_pop = {
+				culture = persian
+				religion = sunni
+				size = 475
 			}
 			create_pop = {
 				culture = persian
-				pop_type = slaves
-				size = 1404
+				religion = sunni
+				size = 23
+			}
+		}
+		region_state:SIS = {
+			create_pop = {
+				culture = persian
+				religion = sunni
+				size = 8910
 			}
 			create_pop = {
-				culture = baluchi # Brahui
-				size = 5312
+				culture = persian
+				religion = sunni
+				size = 430
+			}
+			create_pop = {
+				culture = pashtun
+				religion = sunni
+				size = 6365
+			}
+			create_pop = {
+				culture = pashtun
+				religion = sunni
+				size = 307
+			}
+			create_pop = {
+				culture = persian
+				religion = sunni
+				size = 5346
+			}
+			create_pop = {
+				culture = persian
+				religion = sunni
+				size = 258
 			}
 		}
 	}

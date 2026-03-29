@@ -38,6 +38,36 @@ pmg_building_copper_mine_main = {
 	}
 }
 
+pmg_building_sulfur_mine_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_sulfur_mine_main_1
+		pm_building_sulfur_mine_main_2
+		pm_building_sulfur_mine_main_3
+		pm_building_sulfur_mine_main_4
+	}
+}
+
+pmg_building_tin_mine_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_tin_mine_main_1
+		pm_building_tin_mine_main_2
+		pm_building_tin_mine_main_3
+		pm_building_tin_mine_main_4
+	}
+}
+
+pmg_building_lead_mine_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_lead_mine_main_1
+		pm_building_lead_mine_main_2
+		pm_building_lead_mine_main_3
+		pm_building_lead_mine_main_4
+	}
+}
+
 pmg_building_stone_mine_extraction = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -109,47 +139,14 @@ pmg_building_sulfur_mine_extraction = {
 	}
 }
 
-pmg_building_sulfur_mine_main = {
+pmg_building_gold_field_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_building_sulfur_mine_main_1
-		pm_building_sulfur_mine_main_2
-		pm_building_sulfur_mine_main_3
-		pm_building_sulfur_mine_main_4
+		default_building_gold_field
 	}
 }
 
-pmg_building_tin_mine_main = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_building_tin_mine_main_1
-		pm_building_tin_mine_main_2
-		pm_building_tin_mine_main_3
-		pm_building_tin_mine_main_4
-	}
-}
-
-pmg_building_lead_mine_main = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_building_lead_mine_main_1
-		pm_building_lead_mine_main_2
-		pm_building_lead_mine_main_3
-		pm_building_lead_mine_main_4
-	}
-}
-
-pmg_power_and_extraction_methods_building_gold_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_building_gold_mine_extraction_none
-		pm_building_gold_mine_extraction_mechanical
-		pm_building_gold_mine_extraction_water_powered
-		pm_building_gold_mine_extraction_advanced
-	}
-}
-
-pmg_base_building_gold_field = {
+pmg_building_gold_mine_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_gold_field

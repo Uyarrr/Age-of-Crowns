@@ -1,4 +1,4 @@
-﻿pmg_building_wheat_farm_main_1 = {
+﻿pm_building_wheat_farm_main_1 = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -13,7 +13,7 @@
 	}
 }
 
-pmg_building_wheat_farm_main_2 = {
+pm_building_wheat_farm_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
 
 	unlocking_technologies = {
@@ -37,7 +37,7 @@ pmg_building_wheat_farm_main_2 = {
 	}
 }
 
-pmg_building_wheat_farm_main_3 = {
+pm_building_wheat_farm_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 
 	unlocking_technologies = {
@@ -61,7 +61,7 @@ pmg_building_wheat_farm_main_3 = {
 	}
 }
 
-pmg_building_wheat_farm_main_4 = {
+pm_building_wheat_farm_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
 
 	unlocking_technologies = {
@@ -246,21 +246,6 @@ pm_fig_orchards_building_rice_farm = {
 			goods_output_grain_add = -20
 			goods_output_fruit_add = 15
 			goods_output_sugar_add = 2
-		}
-	}
-}
-
-pm_tools_building_rice_farm = {
-	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 4
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -2000
 		}
 	}
 }

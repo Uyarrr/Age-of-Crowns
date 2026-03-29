@@ -1,4 +1,4 @@
-﻿pmg_base_building_coffee_plantation = {
+﻿pmg_building_coffee_plantation_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		coffee_plantation_dry_process
@@ -60,133 +60,40 @@ pmg_tea_exploitation = {
 	}
 }
 
-
-pmg_rubber_exploitation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		default_labour
-		slave_exploitation_rubber
-		worker_exploitation_rubber
-	}
-}
-
-pmg_train_automation_building_coffee_plantation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
-	}
-}
-
-pmg_base_building_cotton_plantation = {
+pmg_building_cotton_plantation_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_cotton_plantation
-		automatic_irrigation_building_cotton_plantation
 	}
 }
 
-pmg_train_automation_building_cotton_plantation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
-	}
-}
-
-pmg_base_building_dye_plantation = {
+pmg_building_dye_plantation_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_dye_plantation
-		automatic_irrigation_building_dye_plantation
 	}
 }
 
-pmg_train_automation_building_dye_plantation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
-	}
-}
-
-pmg_base_building_opium_plantation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		default_building_opium_plantation
-		automatic_irrigation_building_opium_plantation
-	}
-}
-
-pmg_train_automation_building_opium_plantation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
-	}
-}
-
-pmg_base_building_tea_plantation = {
+pmg_building_tea_plantation_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_tea_plantation
-		automatic_irrigation_building_tea_plantation
 	}
 }
 
-pmg_train_automation_building_tea_plantation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
-	}
-}
-
-pmg_base_building_tobacco_plantation = {
+pmg_building_tobacco_plantation_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_tobacco_plantation
-		automatic_irrigation_building_tobacco_plantation
 	}
 }
 
-pmg_manufacture_tobacco = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		hand_rolled
-		molds
-		electric_rollers
-	}
-}
-
-pmg_working_conditions_tobacco = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		worker_exploitation_tobacco
-		default_labour_tobacco
-		lectors_tobacco
-		radio_stations_tobacco
-	}
-}
-
-pmg_base_building_sugar_plantation = {
+pmg_building_sugar_plantation_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_sugar_plantation
-		automatic_irrigation_building_sugar_plantation
 	}
 }
-
-pmg_refinement_building_sugar_plantation = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		ox_driven_rollers_sugar
-		vacuum_pan_sugar
-		steam_powered_evaporation_sugar
-		centrifugal_machine_sugar
-	}
-}
-
 
 pmg_exploitation_sugar = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -197,11 +104,10 @@ pmg_exploitation_sugar = {
 	}
 }
 
-pmg_base_building_banana_plantation = {
+pmg_building_banana_plantation_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_banana_plantation
-		automatic_irrigation_building_banana_plantation
 	}
 }
 
@@ -209,6 +115,5 @@ pmg_building_silk_plantation_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_silk_plantation
-		automatic_irrigation_building_silk_plantation
 	}
 }

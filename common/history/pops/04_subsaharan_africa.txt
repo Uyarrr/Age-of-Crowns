@@ -3221,14 +3221,6 @@
 				culture = zulu
 				size = 28000
 			}
-		}
-		region_state:PDI = {
-			create_pop = {
-				culture = sotho
-				size = 320000
-			}
-		}
-		region_state:TRN = {
 			create_pop = {
 				culture = boer
 				size = 10192
@@ -3245,6 +3237,12 @@
 				pop_type = slaves
 				culture = khoisan
 				size = 10000
+			}
+		}
+		region_state:PDI = {
+			create_pop = {
+				culture = sotho
+				size = 320000
 			}
 		}
 		region_state:SWZ = {
