@@ -18,7 +18,7 @@ stone = {
 	traded_quantity = 5
 }
 
-horse_uyr = {
+horse = {
 	texture = "gfx/interface/icons/goods_icons/horse.dds"
 	cost = 50
 	category = staple
@@ -60,7 +60,7 @@ fiber_uyr = {
 	convoy_cost_multiplier = 0.25
 }
 
-navalsupplies_uyr = {
+navalsupplies = {
 	texture = "gfx/interface/icons/goods_icons/naval_supplies.dds"
 	cost = 60
 	category = industrial
@@ -183,24 +183,6 @@ cloth = {
 	convoy_cost_multiplier = 0.5
 
 	consumption_tax_cost = 300
-}
-
-services_uyr = {
-	texture = "gfx/interface/icons/goods_icons/services.dds"
-	cost = 30
-	category = staple
-	local = yes
-
-	consumption_tax_cost = 200
-}
-
-transportation_uyr = {
-	texture = "gfx/interface/icons/goods_icons/transportation.dds"
-	cost = 30
-	category = staple
-	local = yes
-
-	consumption_tax_cost = 200
 }
 
 fine_cloth = {

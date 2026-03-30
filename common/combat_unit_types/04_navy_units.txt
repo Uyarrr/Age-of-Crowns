@@ -12,7 +12,7 @@ combat_unit_type_lightship_1 = {
 	max_manpower = 1000
 
     upkeep_modifier = {
-        goods_input_navalsupplies_uyr_add = 1
+        goods_input_navalsupplies_add = 1
     }
 
     battle_modifier = {
@@ -39,7 +39,7 @@ combat_unit_type_lightship_2 = {
 	max_manpower = 1000
 
     upkeep_modifier = {
-        goods_input_navalsupplies_uyr_add = 2
+        goods_input_navalsupplies_add = 2
         goods_input_cannons_add = 1
     }
 
@@ -71,7 +71,7 @@ combat_unit_type_lightship_3 = {
 	max_manpower = 1000
 
     upkeep_modifier = {
-        goods_input_navalsupplies_uyr_add = 4
+        goods_input_navalsupplies_add = 4
         goods_input_cannons_add = 2
         goods_input_saltpeter_uyr_add = 2
     }
