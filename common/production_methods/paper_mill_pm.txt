@@ -53,7 +53,7 @@ pm_building_paper_mill_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_uyr_add = 15
+			goods_input_tools_add = 15
 			goods_input_wood_uyr_add = 45
 
 			# output goods
@@ -78,9 +78,9 @@ pm_building_paper_mill_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_uyr_add = 15
+			goods_input_tools_add = 15
 			goods_input_wood_uyr_add = 40
-			goods_input_sulfur_uyr_add = 25
+			goods_input_sulfur_add = 25
 
 			# output goods
 			goods_output_paper_uyr_add = 80

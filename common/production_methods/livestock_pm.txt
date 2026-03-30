@@ -21,7 +21,7 @@ pm_building_livestock_main_2 = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_tools_uyr_add = 2
+			goods_input_tools_add = 2
 			goods_output_livestock_uyr_add = 15
 		}
 
@@ -47,7 +47,7 @@ pm_building_livestock_main_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_tools_uyr_add = 5
+			goods_input_tools_add = 5
 			goods_output_livestock_uyr_add = 25
 		}
 
@@ -67,7 +67,7 @@ pm_building_livestock_main_4 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_tools_uyr_add = 5 # 200
+			goods_input_tools_add = 5 # 200
 			goods_input_coal_uyr_add = 5 # 150
 			goods_output_livestock_uyr_add = 35 # 1050
 		}
@@ -107,7 +107,7 @@ pm_building_livestock_sheep_2 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_uyr_add = 10
+			goods_input_grain_add = 10
 			goods_output_fabric_uyr_add = 20
 		}
 	}
@@ -122,7 +122,7 @@ pm_building_livestock_sheep_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_uyr_add = 20
+			goods_input_grain_add = 20
 			goods_output_fabric_uyr_add = 40
 		}
 	}

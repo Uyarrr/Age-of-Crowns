@@ -3,7 +3,7 @@ pm_building_wheat_farm_main_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_grain_uyr_add = 20
+			goods_output_grain_add = 20
 		}
 
 		level_scaled = {
@@ -26,7 +26,7 @@ pm_building_wheat_farm_main_2 = {
 			goods_input_livestock_uyr_add = 5
 
 			# output goods
-			goods_output_grain_uyr_add = 30
+			goods_output_grain_add = 30
 		}
 
 		level_scaled = {
@@ -50,7 +50,7 @@ pm_building_wheat_farm_main_3 = {
 			goods_input_livestock_uyr_add = 10
 
 			# output goods
-			goods_output_grain_uyr_add = 45
+			goods_output_grain_add = 45
 		}
 
 		level_scaled = {
@@ -74,7 +74,7 @@ pm_building_wheat_farm_main_4 = {
 			goods_input_livestock_uyr_add = 15
 
 			# output goods
-			goods_output_grain_uyr_add = 60
+			goods_output_grain_add = 60
 		}
 
 		level_scaled = {
@@ -90,7 +90,7 @@ pm_building_rice_farm_main_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_grain_uyr_add = 35
+			goods_output_grain_add = 35
 		}
 
 		level_scaled = {
@@ -116,7 +116,7 @@ pm_building_rice_farm_main_2 = {
 			goods_input_livestock_uyr_add = 10
 
 			# output goods
-			goods_output_grain_uyr_add = 50
+			goods_output_grain_add = 50
 		}
 
 		level_scaled = {
@@ -143,7 +143,7 @@ pm_building_rice_farm_main_3 = {
 			goods_input_livestock_uyr_add = 20
 
 			# output goods
-			goods_output_grain_uyr_add = 75
+			goods_output_grain_add = 75
 		}
 
 		level_scaled = {
@@ -165,7 +165,7 @@ pm_building_rice_farm_main_4 = {
 			goods_input_livestock_uyr_add = 30
 
 			# output goods
-			goods_output_grain_uyr_add = 100
+			goods_output_grain_add = 100
 		}
 
 		level_scaled = {

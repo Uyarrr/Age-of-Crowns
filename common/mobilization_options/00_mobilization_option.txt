@@ -7,7 +7,7 @@
 		}
 	}
 	upkeep_modifier = {
-		goods_input_grain_uyr_add = 0.75
+		goods_input_grain_add = 0.75
 	}
 	upkeep_modifier_unscaled = {
         goods_input_weapons_uyr_mult = 0.5
@@ -179,7 +179,7 @@ mobilization_option_chocolate = {
 	}
 
 	upkeep_modifier = {
-		goods_input_sugar_uyr_add = 1
+		goods_input_sugar_add = 1
 	}
 	unit_modifier = {
 		unit_morale_recovery_mult = 0.1
@@ -295,7 +295,7 @@ mobilization_option_liquor = {
 	}
 
 	upkeep_modifier = {
-		goods_input_liquor_uyr_add = 0.5
+		goods_input_liquor_add = 0.5
 	}
 	unit_modifier = {
 		unit_morale_recovery_mult = 0.1
@@ -920,7 +920,7 @@ mobilization_option_first_aid = {
 
 	upkeep_modifier = {
 		goods_input_fabric_uyr_add = 1
-		goods_input_liquor_uyr_add = 2
+		goods_input_liquor_add = 2
 	}
 	unit_modifier = {
 		unit_recovery_rate_add = 0.20

@@ -1,4 +1,4 @@
-goods_input_sulfur_uyr_mult={
+goods_input_sulfur_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -16,7 +16,7 @@ goods_input_hardwood_uyr_mult={
 	}
 }
 
-goods_input_dye_uyr_mult={
+goods_input_dye_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -61,7 +61,7 @@ goods_input_fabric_uyr_mult={
 	}
 }
 
-goods_input_liquor_uyr_mult={
+goods_input_liquor_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -80,24 +80,6 @@ goods_input_wood_uyr_mult={
 }
 
 goods_input_furniture_uyr_mult={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-goods_input_glass_uyr_mult={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-goods_input_grain_uyr_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -151,7 +133,7 @@ goods_input_firearms_uyr_mult={
 	}
 }
 
-goods_input_tools_uyr_mult={
+goods_input_tools_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -457,7 +439,7 @@ goods_output_trader_uyr_mult={
 	}
 }
 
-goods_output_tools_uyr_mult={
+goods_output_tools_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -529,16 +511,7 @@ goods_output_furniture_uyr_mult={
 	}
 }
 
-goods_output_grain_uyr_mult={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-goods_output_glass_uyr_mult={
+goods_output_grain_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -565,7 +538,7 @@ goods_output_fabric_uyr_mult={
 	}
 }
 
-goods_output_liquor_uyr_mult={
+goods_output_liquor_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -601,7 +574,7 @@ goods_output_fish_uyr_mult={
 	}
 }
 
-goods_output_dye_uyr_mult={
+goods_output_dye_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -610,7 +583,7 @@ goods_output_dye_uyr_mult={
 	}
 }
 
-goods_output_sulfur_uyr_mult={
+goods_output_sulfur_mult={
 	decimals=1
 	color=good
 	percent=yes
