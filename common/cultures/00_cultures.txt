@@ -6,6 +6,7 @@
 
 	obsessions = {
 		livestock_uyr
+		beer_uyr
 	}
 
 	traditions = { }
@@ -133,6 +134,7 @@ south_german= {
 
 	obsessions = {
 		livestock_uyr
+		beer_uyr
 	}
 
 	traditions = { }
@@ -1281,7 +1283,7 @@ swedish= {
 	language = language_scandinavian
 
 	obsessions = {
-		coffee_uyr
+		fish_uyr
 	}
 
 	traditions = { }
@@ -1405,7 +1407,7 @@ danish= {
 	language = language_scandinavian
 
 	obsessions = {
-		tea_uyr
+		fish_uyr
 	}
 
 	traditions = { }
@@ -1558,6 +1560,11 @@ norwegian= {
 	heritage = heritage_nordic
 	language = language_scandinavian
 	traditions = { }
+
+	obsessions = {
+		fish_uyr
+	}
+
 	male_common_first_names = {
 		Adrian Alfred Amund Anders Andreas Arne Arve August
 		Bernt Bernhard Birger Bj_Orn Blostrup
@@ -1748,7 +1755,6 @@ finnish= {
 	language = language_finnic
 
 	obsessions = {
-		coffee_uyr
 	}
 
 	traditions = { }
@@ -1959,6 +1965,7 @@ british= { # "English" in localization
 
 	obsessions = {
 		tea_uyr
+		beer_uyr
 	}
 
 	male_common_first_names = {
@@ -6931,6 +6938,11 @@ uzbek= {
 	heritage = heritage_uzbek
 	language = language_karluk
 	traditions = { tradition_persianate }
+
+	obsessions = {
+		livestock_uyr
+	}
+
 	male_common_first_names = {
 		Abd_al-Ahad
 		Abd_al-Karim
@@ -6994,6 +7006,11 @@ kazak= {
 	heritage = heritage_kipchak
 	language = language_kipchak
 	traditions = { }
+
+	obsessions = {
+		livestock_uyr
+	}
+
 	male_common_first_names = {
 		Ablai
 		Abu_al-Khayr
@@ -7467,6 +7484,11 @@ tatar= {
 	heritage = heritage_tatar
 	language = language_kipchak
 	traditions = { tradition_russosphere }
+
+	obsessions = {
+		livestock_uyr
+	}
+
 	male_common_first_names = {
 		Asaf
 		Baqi
@@ -9870,6 +9892,12 @@ japanese= {
 	heritage = heritage_japanese
 	language = language_japanese
 	traditions = { }
+
+	obsessions = {
+		tea_uyr
+		weapons_uyr
+	}
+
 	name_format = last_first
 	male_common_first_names = {
 		Aritomo
@@ -23315,6 +23343,11 @@ east_german= {
 	heritage = heritage_germanic
 	language = language_germanophone
 	traditions = { tradition_russosphere }
+
+	obsessions = {
+		beer_uyr
+	}
+
 	male_common_first_names = {
 		Adolf Albrecht Alexander Alfons Alois Anton Arthur Albert Arnulf Alfred August Andreas
 		Bernhard Benignus

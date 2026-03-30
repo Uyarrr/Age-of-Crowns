@@ -20,3 +20,25 @@ pmg_building_road_transport = {
 		pm_building_road_transport_2
 	}
 }
+
+pmg_building_trade_center_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_trade_center
+		pm_trade_center_principle_external_trade_2
+	}
+}
+
+pmg_building_trade_center_trade_quantity = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_trade_center_trade_1
+		pm_building_trade_center_trade_2
+		pm_building_trade_center_trade_3
+		pm_building_trade_center_trade_4
+	}
+}
