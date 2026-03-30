@@ -1,35 +1,101 @@
 ﻿l_english:
- building_stone_mine_uyr:0 "Stone Quarries"
- building_stone_mine_uyr_lens_option:0 "Expand $building_stone_mine_uyr$"
- building_copper_mine_uyr:0 "Copper Mines"
- building_copper_mine_lens_option:0 "Expand $building_copper_mine$"
- building_tin_mine:0 "Tin Mines"
- building_tin_mine_lens_option:0 "Expand $building_tin_mine$"
- building_cloth_workshop:0 "Cloth Workshop"
- building_cloth_workshop_lens_option:0 "Expand $building_cloth_workshop$"
- building_cannon_foundry:0 "Cannon Foundry"
- building_cannon_foundry_lens_option:0 "Expand $building_cannon_foundry$"
- building_weapon_workshop:0 "Weapon Workshop"
- building_weapon_workshop_lens_option:0 "Expand $building_weapon_workshop$"
- building_steel_foundry:0 "Steel Foundry"
- building_steel_foundry_lens_option:0 "Expand $building_steel_foundry$"
- building_saltpeter_works:0 "Saltpeter Works"
- building_saltpeter_works_lens_option:0 "Expand $building_saltpeter_works$"
- building_furniture_workshop:0 "Furniture Workshop"
- building_furniture_workshop_lens_option:0 "Expand $building_furniture_workshop$"
- building_tannery:0 "Tannery"
- building_tannery_lens_option:0 "Expand $building_tannery$"
- building_pottery_workshop:0 "Pottery Workshop"
- building_pottery_workshop_lens_option:0 "Expand $building_pottery_workshop$"
- building_brewery:0 "Brewery"
- building_brewery_lens_option:0 "Expand $building_brewery$"
- building_stud_farm:0 "Stud Farm"
- building_stud_farm_lens_option:0 "Expand $building_stud_farm$"
- building_fiber_farm:0 "Fiber Farm"
- building_fiber_farm_lens_option:0 "Expand $building_fiber_farm$"
- building_road:0 "Road"
- building_fiber_farm_lens_option:0 "Expand $building_road$"
+ building_stone_mine_uyr: "Stone Quarry"
+ building_stone_mine_uyr_lens_option: "Expand $building_stone_mine_uyr$"
 
- # Building Groups
- bg_copper_mining:0 "Copper Mines"
- bg_stone_mining:0 "Stone Quarries"
+ building_copper_mine_uyr: "Copper Mine"
+ building_copper_mine_uyr_lens_option: "Expand $building_copper_mine_uyr$"
+
+ building_tin_mine_uyr: "Tin Mine"
+ building_tin_mine_uyr_lens_option: "Expand $building_tin_mine_uyr$"
+
+ building_cloth_workshop_uyr: "Cloth Workshop"
+ building_cloth_workshop_uyr_lens_option: "Expand $building_cloth_workshop_uyr$"
+
+ building_cannon_foundry_uyr: "Cannon Foundry"
+ building_cannon_foundry_uyr_lens_option: "Expand $building_cannon_foundry_uyr$"
+
+ building_weapon_workshop_uyr: "Weapon Workshop"
+ building_weapon_workshop_uyr_lens_option: "Expand $building_weapon_workshop_uyr$"
+
+ building_steel_foundry_uyr: "Steel Foundry"
+ building_steel_foundry_uyr_lens_option: "Expand $building_steel_foundry_uyr$"
+
+ building_saltpeter_works_uyr: "Saltpeter Works"
+ building_saltpeter_works_uyr_lens_option: "Expand $building_saltpeter_works_uyr$"
+
+ building_furniture_workshop_uyr: "Furniture Workshop"
+ building_furniture_workshop_uyr_lens_option: "Expand $building_furniture_workshop_uyr$"
+
+ building_tannery_uyr: "Tannery"
+ building_tannery_uyr_lens_option: "Expand $building_tannery_uyr$"
+
+ building_pottery_workshop_uyr: "Pottery Workshop"
+ building_pottery_workshop_uyr_lens_option: "Expand $building_pottery_workshop_uyr$"
+
+ building_brewery_uyr: "Brewery"
+ building_brewery_uyr_lens_option: "Expand $building_brewery_uyr$"
+
+ building_stud_farm_uyr: "Stud Farm"
+ building_stud_farm_uyr_lens_option: "Expand $building_stud_farm_uyr$"
+
+ building_fiber_farm_uyr: "Fiber Farm"
+ building_fiber_farm_uyr_lens_option: "Expand $building_fiber_farm_uyr$"
+
+ building_road_uyr: "Road"
+ building_road_uyr_lens_option: "Expand $building_road_uyr$"
+
+ building_shipyard_uyr: "Shipyard"
+ building_shipyard_uyr_lens_option: "Expand $building_shipyard_uyr$"
+
+ building_caravan_hub_uyr: "Caravan Hub"
+ building_caravan_hub_uyr_lens_option: "Expand $building_caravan_hub_uyr$"
+
+ building_logging_camp_uyr: "Logging Camp"
+ building_logging_camp_uyr_lens_option: "Expand $building_logging_camp_uyr$"
+
+ building_lead_mine_uyr: "Lead Mine"
+ building_lead_mine_uyr_lens_option: "Expand $building_lead_mine_uyr$"
+
+ building_sulfur_mine_uyr: "Sulfur Mine"
+ building_sulfur_mine_uyr_lens_option: "Expand $building_sulfur_mine_uyr$"
+
+ building_fishing_wharf_uyr: "Fishing Wharf"
+ building_fishing_wharf_uyr_lens_option: "Expand $building_fishing_wharf_uyr$"
+
+ building_glassworks_uyr: "Glassworks"
+ building_glassworks_uyr_lens_option: "Expand $building_glassworks_uyr$"
+
+ building_paper_mill_uyr: "Paper Mill"
+ building_paper_mill_uyr_lens_option: "Expand $building_paper_mill_uyr$"
+
+ building_tooling_workshop_uyr: "Tooling Workshop"
+ building_tooling_workshop_uyr_lens_option: "Expand $building_tooling_workshop_uyr$"
+
+ building_bronze_foundry_uyr: "Bronze Foundry"
+ building_bronze_foundry_uyr_lens_option: "Expand $building_bronze_foundry_uyr$"
+
+ # --- AGRICULTURE ---
+
+ building_wheat_farm_uyr: "Wheat Farm"
+ building_wheat_farm_uyr_lens_option: "Expand $building_wheat_farm_uyr$"
+
+ building_rice_farm_uyr: "Rice Farm"
+ building_rice_farm_uyr_lens_option: "Expand $building_rice_farm_uyr$"
+
+ building_millet_farm_uyr: "Millet Farm"
+ building_millet_farm_uyr_lens_option: "Expand $building_millet_farm_uyr$"
+
+ building_livestock_ranch_uyr: "Livestock Ranch"
+ building_livestock_ranch_uyr_lens_option: "Expand $building_livestock_ranch_uyr$"
+
+ building_banana_plantation_uyr: "Banana Plantation"
+ building_banana_plantation_uyr_lens_option: "Expand $building_banana_plantation_uyr$"
+
+ building_tobacco_plantation_uyr: "Tobacco Plantation"
+ building_tobacco_plantation_uyr_lens_option: "Expand $building_tobacco_plantation_uyr$"
+
+ building_cotton_plantation_uyr: "Cotton Plantation"
+ building_cotton_plantation_uyr_lens_option: "Expand $building_cotton_plantation_uyr$"
+
+ building_sugar_plantation_uyr: "Sugar Plantation"
+ building_sugar_plantation_uyr_lens_option: "Expand $building_sugar_plantation_uyr$"
