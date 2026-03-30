@@ -260,9 +260,39 @@ texticon = {
 }
 
 texticon = {
-	icon = livestock_uyr
+	icon = liquor_uyr
 	iconsize = {
-		texture = "gfx/interface/icons/goods_icons/livestock.dds"
+		texture = "gfx/interface/icons/goods_icons/liquor.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = grain_uyr
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/wheat.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = fabric_uyr
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/fabric.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = cloth_uyr
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/cloth_uyr.dds"
 		size = { 25 25 }
 		offset = { 0 7 }
 		fontsize = 18

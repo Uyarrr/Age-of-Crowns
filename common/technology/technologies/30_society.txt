@@ -9,8 +9,6 @@ legalism = {
 	modifier = {
 		country_authority_mult = 0.1
 		country_voting_power_mult = 0.1
-		country_weekly_innovation_add = 100
-		country_weekly_innovation_max_add = 100
 	}
 
 	ai_weight = {
@@ -283,6 +281,8 @@ alchemy = {
 
 	modifier = {
 		state_harvest_condition_disease_outbreak_impact_mult = -0.1
+		country_weekly_innovation_add = 5
+		country_weekly_innovation_max_add = 5
 	}
 
 	unlocking_technologies = {
