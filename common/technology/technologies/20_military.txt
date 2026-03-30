@@ -182,7 +182,7 @@ weapon_crafting = {
 mandatory_training = {
 	# Unlocks Army Model - National Militia
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/offensive_army.dds"
+	texture = "gfx/interface/icons/invention_icons/banner.dds"
 	category = military
 
 	modifier = {
@@ -623,6 +623,21 @@ iron_weapons = {
 
 	unlocking_technologies = {
 		halberdier
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+oceanic_navigation = {
+	# Unlocks Port PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/weapons.dds"
+	category = military
+
+	unlocking_technologies = {
+		bronze_fastened_dockyards
 	}
 
 	ai_weight = {

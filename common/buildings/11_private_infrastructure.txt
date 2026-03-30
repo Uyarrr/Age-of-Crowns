@@ -4,14 +4,14 @@ building_port = {
 	building_group = bg_private_infrastructure
 	city_type = port
 	levels_per_mesh = 1
-	icon = "gfx/interface/icons/building_icons/building_port.dds"
+	icon = "gfx/interface/icons/building_icons/port_uyr.dds"
 
 	port = yes
 	
 	unlocking_technologies = { navigation }
 
 	production_method_groups = {
-		pmg_base_building_port
+		pmg_building_port_main
 	}
 
 	required_construction = construction_cost_medium

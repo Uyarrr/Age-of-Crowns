@@ -221,7 +221,7 @@ trade_fairs = {
 merchant_guilds = {
 	# Grants Trading Capacity
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/merchants_and_trade.dds"
+	texture = "gfx/interface/icons/invention_icons/merchant_guilds.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -240,7 +240,7 @@ merchant_guilds = {
 master_masons = {
 	# Upgrades Construction
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/legalism.dds"
+	texture = "gfx/interface/icons/invention_icons/master_masons.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -542,7 +542,7 @@ banking = {
 
 standardized_coins = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/standardized_coins.dds"
+	texture = "gfx/interface/icons/invention_icons/minting.dds"
 	category = society
 
 	modifier = {
@@ -560,7 +560,7 @@ standardized_coins = {
 
 double_entry_bookkeeping = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/reduce_inflations.dds"
+	texture = "gfx/interface/icons/invention_icons/bookkeeping.dds"
 	category = society
 
 	modifier = {
@@ -726,7 +726,7 @@ exploration_canada = {
 
 colonial_east_canada = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_canada.dds"
 	category = society
 
 	modifier = {
