@@ -9,7 +9,7 @@
 	convoy_cost_multiplier = 0.05
 }
 
-stone_uyr = {
+stone = {
 	texture = "gfx/interface/icons/goods_icons/stone.dds"
 	cost = 30
 	category = industrial
@@ -27,7 +27,7 @@ horse_uyr = {
 	traded_quantity = 5
 }
 
-bronze_uyr = {
+bronze = {
 	texture = "gfx/interface/icons/goods_icons/bronze.dds"
 	cost = 50
 	category = industrial
@@ -36,7 +36,7 @@ bronze_uyr = {
 	traded_quantity = 4
 }
 
-livestock_uyr = {
+livestock = {
 	texture = "gfx/interface/icons/goods_icons/livestock.dds"
 	cost = 30
 	category = luxury
@@ -71,7 +71,7 @@ navalsupplies_uyr = {
 	convoy_cost_multiplier = 0.25
 }
 
-pottery_uyr = {
+pottery = {
 	texture = "gfx/interface/icons/goods_icons/pottery.dds"
 	cost = 30
 	category = staple
@@ -92,7 +92,7 @@ saltpeter_uyr = {
 	convoy_cost_multiplier = 1.5
 }
 
-weapons_uyr = {
+weapons = {
 	texture = "gfx/interface/icons/goods_icons/weapons.dds"
 	cost = 60
 	category = military
@@ -102,7 +102,7 @@ weapons_uyr = {
 	traded_quantity = 4
 }
 
-leather_uyr = {
+leather = {
 	texture = "gfx/interface/icons/goods_icons/leather.dds"
 	cost = 20
 	category = staple
@@ -113,7 +113,7 @@ leather_uyr = {
 	consumption_tax_cost = 300
 }
 
-beer_uyr = {
+beer = {
 	texture = "gfx/interface/icons/goods_icons/beer.dds"
 	cost = 30
 	category = luxury
@@ -124,7 +124,25 @@ beer_uyr = {
 	convoy_cost_multiplier = 0.75
 }
 
-cannons_uyr = {
+copper = {
+	texture = "gfx/interface/icons/goods_icons/copper.dds"
+	cost = 40
+	category = industrial
+
+	prestige_factor = 3
+	traded_quantity = 5 # 200
+}
+
+tin = {
+	texture = "gfx/interface/icons/goods_icons/tin.dds"
+	cost = 40
+	category = industrial
+
+	prestige_factor = 3
+	traded_quantity = 5 # 200
+}
+
+cannons = {
 	texture = "gfx/interface/icons/goods_icons/cannons.dds"
 	cost = 70
 	category = military
@@ -134,7 +152,7 @@ cannons_uyr = {
 	convoy_cost_multiplier = 1.5
 }
 
-warhorse_uyr = {
+warhorse = {
 	texture = "gfx/interface/icons/goods_icons/warhorse.dds"
 	cost = 80
 	category = military
@@ -144,16 +162,7 @@ warhorse_uyr = {
 	convoy_cost_multiplier = 2.0
 }
 
-steel_uyr = {
-	texture = "gfx/interface/icons/goods_icons/steel.dds"
-	cost = 50
-	category = industrial
-
-	prestige_factor = 5
-	traded_quantity = 4 # 200
-}
-
-firearms_uyr = {
+firearms = {
 	texture = "gfx/interface/icons/goods_icons/weapons.dds"
 	cost = 60
 	category = military
@@ -163,20 +172,7 @@ firearms_uyr = {
 	traded_quantity = 4
 }
 
-fabric_uyr = {
-	texture = "gfx/interface/icons/goods_icons/fabric.dds"
-	cost = 20
-	category = staple
-
-	prestige_factor = 3
-
-	traded_quantity = 10 # 200
-	convoy_cost_multiplier = 0.25
-
-	consumption_tax_cost = 300
-}
-
-cloth_uyr = {
+cloth = {
 	texture = "gfx/interface/icons/goods_icons/cloth.dds"
 	cost = 30
 	category = staple
@@ -207,8 +203,8 @@ transportation_uyr = {
 	consumption_tax_cost = 200
 }
 
-fine_cloth_uyr = {
-	texture = "gfx/interface/icons/goods_icons/luxury_clothes.dds"
+fine_cloth = {
+	texture = "gfx/interface/icons/goods_icons/luxury_cloth.dds"
 	cost = 60
 	category = luxury
 

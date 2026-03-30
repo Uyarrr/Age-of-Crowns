@@ -77,7 +77,7 @@ effects that run when the mobilization option is toggled accordingly
 goods cost when active & mobilized
 
 	upkeep_modifier = {
-		goods_input_weapons_uyr_add = 1
+		goods_input_weapons_add = 1
 		goods_input_saltpeter_uyr_add = 1
 	}
 

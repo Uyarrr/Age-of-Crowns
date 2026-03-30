@@ -10,10 +10,10 @@
     mine = "x9C2C85"
     wood = "x7EC991"
     arable_land = 50
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 28
-        building_iron_mine_uyr = 30
+        building_iron_mine = 30
         building_logging_camp_uyr = 14
         building_fishing_wharf_uyr = 6
     }
@@ -36,8 +36,8 @@ STATE_GUAYANA = {
         building_logging_camp_uyr = 20
         building_fishing_wharf_uyr = 6
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
     resource = {
         type = "building_gold_field"
@@ -64,8 +64,8 @@ STATE_ZULIA = {
         building_logging_camp_uyr = 9
         building_fishing_wharf_uyr = 7
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 8
+        building_copper_mine = 2
+        building_stone_mine = 8
 }
     naval_exit_id = 3025
 }
@@ -81,13 +81,13 @@ STATE_MIRANDA = {
     mine = "xF085F7"
     wood = "x9204DB"
     arable_land = 60
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_logging_camp_uyr = 7
         building_fishing_wharf_uyr = 5
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 8
+        building_copper_mine = 2
+        building_stone_mine = 8
 }
     naval_exit_id = 3025
 }
@@ -106,12 +106,12 @@ STATE_BOLIVAR = {
     arable_land = 40
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 30
+        building_iron_mine = 30
         building_logging_camp_uyr = 25
         building_fishing_wharf_uyr = 3
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 7
+        building_copper_mine = 2
+        building_stone_mine = 7
 }
     naval_exit_id = 3025
 }
@@ -127,15 +127,15 @@ STATE_ANTIOQUIA = {
     mine = "x80C090"
     wood = "xB979D3"
     arable_land = 120
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 32
-        building_iron_mine_uyr = 36
+        building_iron_mine = 36
         building_logging_camp_uyr = 13
         building_fishing_wharf_uyr = 8
     
-        building_copper_mine_uyr = 6
-        building_stone_mine_uyr = 20
+        building_copper_mine = 6
+        building_stone_mine = 20
 }
     naval_exit_id = 3025
 }
@@ -154,8 +154,8 @@ STATE_GUAVIARE = {
     capped_resources = {
         building_logging_camp_uyr = 25
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
 }
 
@@ -169,13 +169,13 @@ STATE_CUNDINAMARCA = {
     mine = "xDDE17B"
     wood = "x1BE3E2"
     arable_land = 50
-    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 20
         building_logging_camp_uyr = 7
     
-        building_copper_mine_uyr = 6
-        building_stone_mine_uyr = 20
+        building_copper_mine = 6
+        building_stone_mine = 20
 }
 }
 
@@ -190,14 +190,14 @@ STATE_CAUCA = {
     mine = "xDFB23F"
     wood = "x5575E4"
     arable_land = 80
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 20
         building_logging_camp_uyr = 8
         building_fishing_wharf_uyr = 6
     
-        building_copper_mine_uyr = 5
-        building_stone_mine_uyr = 20
+        building_copper_mine = 5
+        building_stone_mine = 20
 }
     naval_exit_id = 3155
 }
@@ -217,8 +217,8 @@ STATE_PASTAZA = {
         building_coal_mine = 28
         building_logging_camp_uyr = 25
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
 }
 
@@ -235,12 +235,12 @@ STATE_TARAPACA = {
     arable_land = 10
     arable_resources = { "building_livestock_ranch" "building_dye_plantation_uyr" "building_banana_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 18
+        building_iron_mine = 18
         building_sulfur_mine_uyr = 24
         building_fishing_wharf_uyr = 5
     
-        building_copper_mine_uyr = 22
-        building_stone_mine_uyr = 12
+        building_copper_mine = 22
+        building_stone_mine = 12
 }
     naval_exit_id = 3152
 }
@@ -258,12 +258,12 @@ STATE_ANTOFAGASTA = {
     arable_land = 10
     arable_resources = { "building_livestock_ranch" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 30
+        building_iron_mine = 30
         building_sulfur_mine_uyr = 48
         building_fishing_wharf_uyr = 5
     
-        building_copper_mine_uyr = 28
-        building_stone_mine_uyr = 12
+        building_copper_mine = 28
+        building_stone_mine = 12
 }
     resource = {
         type = "building_gold_field"
@@ -286,8 +286,8 @@ STATE_SANTA_CRUZ = {
     capped_resources = {
         building_logging_camp_uyr = 15
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
 }
 
@@ -305,8 +305,8 @@ STATE_LA_PAZ = {
         building_logging_camp_uyr = 20
         building_gold_mine = 4
     
-        building_copper_mine_uyr = 10
-        building_stone_mine_uyr = 10
+        building_copper_mine = 10
+        building_stone_mine = 10
 }
 }
 
@@ -326,8 +326,8 @@ STATE_POTOSI = {
         building_logging_camp_uyr = 9
         building_gold_mine = 4
     
-        building_copper_mine_uyr = 10
-        building_stone_mine_uyr = 20
+        building_copper_mine = 10
+        building_stone_mine = 20
 }
 }
 
@@ -342,14 +342,14 @@ STATE_CAJAMARCA = {
     mine = "xDC3D44"
     wood = "x8D62E6"
     arable_land = 60
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 20
         building_logging_camp_uyr = 6
         building_fishing_wharf_uyr = 7
     
-        building_copper_mine_uyr = 8
-        building_stone_mine_uyr = 20
+        building_copper_mine = 8
+        building_stone_mine = 20
 }
     resource = {
         type = "building_gold_field"
@@ -369,17 +369,17 @@ STATE_LIMA = {
     mine = "xC64601"
     wood = "xA3F17B"
     arable_land = 40
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_gold_mine = 6
-        building_iron_mine_uyr = 21
+        building_iron_mine = 21
         building_lead_mine_uyr = 30
         building_sulfur_mine_uyr = 28
         building_logging_camp_uyr = 11
         building_fishing_wharf_uyr = 7
     
-        building_copper_mine_uyr = 10
-        building_stone_mine_uyr = 20
+        building_copper_mine = 10
+        building_stone_mine = 20
 }
     naval_exit_id = 3024
 }
@@ -395,15 +395,15 @@ STATE_ICA = {
     mine = "x52BF37"
     wood = "xBDFBD1"
     arable_land = 50
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 36
+        building_iron_mine = 36
         building_sulfur_mine_uyr = 32
         building_logging_camp_uyr = 11
         building_fishing_wharf_uyr = 4
     
-        building_copper_mine_uyr = 12
-        building_stone_mine_uyr = 20
+        building_copper_mine = 12
+        building_stone_mine = 20
 }
     naval_exit_id = 3152
 }
@@ -419,15 +419,15 @@ STATE_AREQUIPA = {
     mine = "xDFC0B0"
     wood = "xBB02B0"
     arable_land = 25
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 21
+        building_iron_mine = 21
         building_sulfur_mine_uyr = 32
         building_logging_camp_uyr = 4
         building_fishing_wharf_uyr = 5
     
-        building_copper_mine_uyr = 14
-        building_stone_mine_uyr = 20
+        building_copper_mine = 14
+        building_stone_mine = 20
 }
     naval_exit_id = 3152
 }
@@ -448,8 +448,8 @@ STATE_URUGUAY = {
         building_logging_camp_uyr = 9
         building_fishing_wharf_uyr = 6
     
-        building_copper_mine_uyr = 0
-        building_stone_mine_uyr = 6
+        building_copper_mine = 0
+        building_stone_mine = 6
 }
     naval_exit_id = 3065
 }
@@ -466,13 +466,13 @@ STATE_JUJUY = {
     arable_land = 50
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 36
+        building_iron_mine = 36
         building_lead_mine_uyr = 18
         building_logging_camp_uyr = 8
         building_gold_mine = 3
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 8
+        building_copper_mine = 2
+        building_stone_mine = 8
 }
 }
 
@@ -490,8 +490,8 @@ STATE_ALTO_PARAGUAY = {
     capped_resources = {
         building_logging_camp_uyr = 11
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 8
+        building_copper_mine = 2
+        building_stone_mine = 8
 }
 }
 
@@ -505,13 +505,13 @@ STATE_BAJO_PARAGUAY = {
     mine = "xF72535"
     wood = "x2594A3"
     arable_land = 120
-    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 15
+        building_iron_mine = 15
         building_logging_camp_uyr = 14
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
 }
 
@@ -531,8 +531,8 @@ STATE_BUENOS_AIRES = {
         building_logging_camp_uyr = 9
         building_fishing_wharf_uyr = 12
     
-        building_copper_mine_uyr = 0
-        building_stone_mine_uyr = 6
+        building_copper_mine = 0
+        building_stone_mine = 6
 }
     naval_exit_id = 3065
 }
@@ -554,8 +554,8 @@ STATE_PATAGONIA = {
         building_sulfur_mine_uyr = 20
         building_fishing_wharf_uyr = 7
     
-        building_copper_mine_uyr = 6
-        building_stone_mine_uyr = 10
+        building_copper_mine = 6
+        building_stone_mine = 10
 }
     naval_exit_id = 3066
 }
@@ -576,8 +576,8 @@ STATE_RIO_NEGRO = {
         building_coal_mine = 40
         building_sulfur_mine_uyr = 52
     
-        building_copper_mine_uyr = 6
-        building_stone_mine_uyr = 10
+        building_copper_mine = 6
+        building_stone_mine = 10
 }
 }
 
@@ -595,8 +595,8 @@ STATE_LA_PAMPA = {
     capped_resources = {
         building_logging_camp_uyr = 13
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
 }
 
@@ -616,8 +616,8 @@ STATE_SANTA_FE = {
         building_logging_camp_uyr = 11
         building_fishing_wharf_uyr = 2
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
     naval_exit_id = 3065
 }
@@ -636,8 +636,8 @@ STATE_CORRIENTES = {
     capped_resources = {
         building_logging_camp_uyr = 15
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
 }
 
@@ -653,13 +653,13 @@ STATE_TUCUMAN = {
     arable_land = 60
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 39
+        building_iron_mine = 39
         building_lead_mine_uyr = 15
         building_gold_mine = 3
         building_logging_camp_uyr = 6
     
-        building_copper_mine_uyr = 6
-        building_stone_mine_uyr = 20
+        building_copper_mine = 6
+        building_stone_mine = 20
 }
 }
 
@@ -673,12 +673,12 @@ STATE_CHACO = {
     mine = "x4E5F59"
     wood = "xE0C49E"
     arable_land = 60
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tobacco_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_logging_camp_uyr = 13
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 8
+        building_copper_mine = 2
+        building_stone_mine = 8
 }
 }
 
@@ -697,13 +697,13 @@ STATE_SANTIAGO = {
     arable_resources = { "building_wheat_farm_uyr" "building_livestock_ranch" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_vineyard" "building_stud_farm_uyr" }
     capped_resources = {
         building_gold_mine = 5
-        building_iron_mine_uyr = 33
+        building_iron_mine = 33
         building_sulfur_mine_uyr = 36
         building_logging_camp_uyr = 6
         building_fishing_wharf_uyr = 8
     
-        building_copper_mine_uyr = 6
-        building_stone_mine_uyr = 20
+        building_copper_mine = 6
+        building_stone_mine = 20
 }
     naval_exit_id = 3152
 }
@@ -728,8 +728,8 @@ STATE_LOS_RIOS = {
         building_logging_camp_uyr = 20
         building_fishing_wharf_uyr = 10
     
-        building_copper_mine_uyr = 6
-        building_stone_mine_uyr = 20
+        building_copper_mine = 6
+        building_stone_mine = 20
 }
     naval_exit_id = 3152
 }
@@ -751,8 +751,8 @@ STATE_ARAUCANIA = {
         building_logging_camp_uyr = 30
         building_fishing_wharf_uyr = 15
     
-        building_copper_mine_uyr = 6
-        building_stone_mine_uyr = 20
+        building_copper_mine = 6
+        building_stone_mine = 20
 }
     resource = {
         type = "building_gold_field"
@@ -778,8 +778,8 @@ STATE_SOUTH_ATLANTIC_ISLANDS = {
     capped_resources = {
         building_fishing_wharf_uyr = 2
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3066
 }
@@ -796,14 +796,14 @@ STATE_PARA = {
     mine = "x45DA42"
     wood = "x229F7E"
     arable_land = 30
-    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_rice_farm_uyr" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_logging_camp_uyr = 9
         building_fishing_wharf_uyr = 3
-        building_iron_mine_uyr = 78
+        building_iron_mine = 78
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
     naval_exit_id = 3062
 }
@@ -824,8 +824,8 @@ STATE_MARANHAO = {
         building_logging_camp_uyr = 16
         building_fishing_wharf_uyr = 7
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
     naval_exit_id = 3062
 }
@@ -845,8 +845,8 @@ STATE_AMAZONAS = {
     capped_resources = {
         building_logging_camp_uyr = 40
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
 }
 
@@ -864,8 +864,8 @@ STATE_ACRE = {
     capped_resources = {
         building_logging_camp_uyr = 15
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
 }
 
@@ -884,8 +884,8 @@ STATE_GOIAS = {
         building_logging_camp_uyr = 16
         building_fishing_wharf_uyr = 7
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
 }
 
@@ -899,13 +899,13 @@ STATE_MATO_GROSSO = {
     mine = "xE02E9A"
     wood = "x68945C"
     arable_land = 60
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_logging_camp_uyr = 29
-        building_iron_mine_uyr = 18
+        building_iron_mine = 18
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
 }
 
@@ -927,8 +927,8 @@ STATE_RIO_GRANDE_DO_SUL = {
         building_fishing_wharf_uyr = 6
         building_lead_mine_uyr = 30
     
-        building_copper_mine_uyr = 1
-        building_stone_mine_uyr = 6
+        building_copper_mine = 1
+        building_stone_mine = 6
 }
     naval_exit_id = 3064
 }
@@ -944,13 +944,13 @@ STATE_PARANA = {
     mine = "x38FE72"
     wood = "x492CDF"
     arable_land = 40
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tea_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tea_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 20
         building_logging_camp_uyr = 30
         building_fishing_wharf_uyr = 3
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3064
 }
@@ -966,13 +966,13 @@ STATE_SANTA_CATARINA = {
     mine = "xF6A625"
     wood = "x2DA91C"
     arable_land = 40
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tea_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tea_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_vineyard" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_coal_mine = 20
         building_logging_camp_uyr = 7
         building_fishing_wharf_uyr = 2
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3064
 }
@@ -988,12 +988,12 @@ STATE_SAO_PAULO = {
     mine = "xD2EC89"
     wood = "xD7EC24"
     arable_land = 130
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_dye_plantation_uyr" "building_tea_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_dye_plantation_uyr" "building_tea_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_logging_camp_uyr = 22
         building_fishing_wharf_uyr = 5
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3064
 }
@@ -1007,14 +1007,14 @@ STATE_MINAS_GERAIS = {
     mine = "x80F01D"
     wood = "x755D3F"
     arable_land = 150
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_gold_mine = 2
-        building_iron_mine_uyr = 45
+        building_iron_mine = 45
         building_lead_mine_uyr = 30
         building_logging_camp_uyr = 24
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     resource = {
         type = "building_gold_field"
@@ -1037,8 +1037,8 @@ STATE_RIO_DE_JANEIRO = {
     capped_resources = {
         building_logging_camp_uyr = 9
         building_fishing_wharf_uyr = 9
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3064
 }
@@ -1056,12 +1056,12 @@ STATE_BAHIA = {
     arable_land = 80
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 15
+        building_iron_mine = 15
         building_logging_camp_uyr = 18
         building_fishing_wharf_uyr = 8
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3063
 }
@@ -1077,13 +1077,13 @@ STATE_RIO_GRANDE_DO_NORTE = {
     mine = "x604190"
     wood = "x6E0A83"
     arable_land = 30
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_logging_camp_uyr = 7
         building_fishing_wharf_uyr = 4
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3063
 }
@@ -1099,14 +1099,14 @@ STATE_CEARA = {
     mine = "x469A7C"
     wood = "x4C763A"
     arable_land = 30
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 18
+        building_iron_mine = 18
         building_logging_camp_uyr = 7
         building_fishing_wharf_uyr = 3
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3063
 }
@@ -1122,14 +1122,14 @@ STATE_PIAUI = {
     mine = "xA33C32"
     wood = "x772A8C"
     arable_land = 30
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
-        building_iron_mine_uyr = 36
+        building_iron_mine = 36
         building_logging_camp_uyr = 14
         building_fishing_wharf_uyr = 7
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3063
 }
@@ -1145,13 +1145,13 @@ STATE_PARAIBA = {
     mine = "x5F988B"
     wood = "xF7C27D"
     arable_land = 50
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_logging_camp_uyr = 4
         building_fishing_wharf_uyr = 2
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3063
 }
@@ -1167,13 +1167,13 @@ STATE_PERNAMBUCO = {
     mine = "x1A21F3"
     wood = "x1A21F3"
     arable_land = 60
-    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation_uyr" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm_uyr" "building_stud_farm_uyr" }
+    arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation_uyr" "building_cotton_plantation" "building_tobacco_plantation_uyr" "building_sugar_plantation_uyr" "building_banana_plantation_uyr" "building_fiber_farm" "building_stud_farm_uyr" }
     capped_resources = {
         building_logging_camp_uyr = 5
         building_fishing_wharf_uyr = 3
     
-        building_copper_mine_uyr = 2
-        building_stone_mine_uyr = 10
+        building_copper_mine = 2
+        building_stone_mine = 10
 }
     naval_exit_id = 3063
 }

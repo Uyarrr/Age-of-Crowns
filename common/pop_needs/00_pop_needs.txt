@@ -4,10 +4,10 @@
 # min_supply_share			If above 0, a minimum of this multiplier of the base weight will be applied to a good regardless of its market Sell Order share
 
 popneed_simple_clothing = {
-	default = fabric_uyr
+	default = fabric
 
 	entry = {
-		goods = fabric_uyr
+		goods = fabric
 
 		weight = 1
 		max_supply_share = 0.5
@@ -15,7 +15,7 @@ popneed_simple_clothing = {
 	}
 
 	entry = {
-		goods = cloth_uyr
+		goods = cloth
 
 		weight = 2
 		max_supply_share = 1.0
@@ -63,7 +63,7 @@ popneed_basic_food = {
 	}
 
 	entry = {
-		goods = livestock_uyr
+		goods = livestock
 
 		weight = 1
 		max_supply_share = 0.9
@@ -91,7 +91,7 @@ popneed_heating = {
 	}
 
 	entry = {
-		goods = fabric_uyr
+		goods = fabric
 
 		weight = 0.25
 		max_supply_share = 0.25
@@ -135,7 +135,7 @@ popneed_household_items = {
 	}
 
 	entry = {
-		goods = pottery_uyr
+		goods = pottery
 
 		weight = 1
 		max_supply_share = 0.6
@@ -144,10 +144,10 @@ popneed_household_items = {
 }
 
 popneed_standard_clothing = {
-	default = cloth_uyr
+	default = cloth
 
 	entry = {
-		goods = cloth_uyr
+		goods = cloth
 	}
 }
 
@@ -191,7 +191,7 @@ popneed_intoxicants = {
 	}
 
 	entry = {
-		goods = beer_uyr
+		goods = beer
 
 		weight = 0.25
 		max_supply_share = 0.25
@@ -256,10 +256,10 @@ popneed_communication = {
 }
 
 popneed_luxury_food = {
-	default = livestock_uyr
+	default = livestock
 
 	entry = {
-		goods = livestock_uyr
+		goods = livestock
 
 		weight = 1.25
 		max_supply_share = 0.75
@@ -299,7 +299,7 @@ popneed_luxury_items = {
 	}
 
 	entry = {
-		goods = fine_cloth_uyr
+		goods = fine_cloth
 
 		weight = 1
 		max_supply_share = 0.5
@@ -347,7 +347,7 @@ popneed_leisure = {
 	}
 
 	entry = {
-		goods = weapons_uyr
+		goods = weapons
 
 		weight = 0.75
 		max_supply_share = 0.25

@@ -113,7 +113,7 @@ pm_building_stud_farm_warhorse_1 = {
 
 			# output goods
 			goods_output_horse_uyr_add = -10
-			goods_output_warhorse_uyr_add = 10
+			goods_output_warhorse_add = 10
 		}
 
 		level_scaled = {
@@ -136,7 +136,7 @@ pm_building_stud_farm_warhorse_2 = {
 
 			# output goods
 			goods_output_horse_uyr_add = -20
-			goods_output_warhorse_uyr_add = 20
+			goods_output_warhorse_add = 20
 		}
 
 		level_scaled = {
@@ -167,7 +167,7 @@ pm_building_stud_farm_equipment_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_leather_uyr_add = 10
+			goods_input_leather_add = 10
 			# output goods
 			goods_output_horse_uyr_add = 10
 		}
@@ -183,7 +183,7 @@ pm_building_stud_farm_equipment_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_leather_uyr_add = 10
+			goods_input_leather_add = 10
 			goods_input_iron_uyr_add = 20
 
 			# output goods
