@@ -1,4 +1,4 @@
-﻿trader_uyr = {
+﻿trader = {
 	texture = "gfx/interface/icons/goods_icons/trade.dds"
 	cost = 50
 	category = staple
@@ -50,7 +50,7 @@ livestock = {
 	consumption_tax_cost = 200
 }
 
-fiber_uyr = {
+fiber = {
 	texture = "gfx/interface/icons/goods_icons/fiber_crops.dds"
 	cost = 20
 	category = staple
@@ -82,7 +82,7 @@ pottery = {
 	consumption_tax_cost = 300
 }
 
-saltpeter_uyr = {
+saltpeter = {
 	texture = "gfx/interface/icons/goods_icons/saltpeter.dds"
 	cost = 50
 	category = industrial
@@ -169,29 +169,5 @@ firearms = {
 
 	obsession_chance = 0.5
 	prestige_factor = 5
-	traded_quantity = 4
-}
-
-cloth = {
-	texture = "gfx/interface/icons/goods_icons/cloth.dds"
-	cost = 30
-	category = staple
-
-	prestige_factor = 4
-
-	traded_quantity = 8 # 240
-	convoy_cost_multiplier = 0.5
-
-	consumption_tax_cost = 300
-}
-
-fine_cloth = {
-	texture = "gfx/interface/icons/goods_icons/luxury_cloth.dds"
-	cost = 60
-	category = luxury
-
-	obsession_chance = 1.0
-	prestige_factor = 8
-	convoy_cost_multiplier = 0.75
 	traded_quantity = 4
 }

@@ -15,7 +15,7 @@ popneed_simple_clothing = {
 	}
 
 	entry = {
-		goods = cloth
+		goods = clothes
 
 		weight = 2
 		max_supply_share = 1.0
@@ -63,7 +63,7 @@ popneed_basic_food = {
 	}
 
 	entry = {
-		goods = livestock
+		goods = meat
 
 		weight = 1
 		max_supply_share = 0.9
@@ -144,10 +144,10 @@ popneed_household_items = {
 }
 
 popneed_standard_clothing = {
-	default = cloth
+	default = clothes
 
 	entry = {
-		goods = cloth
+		goods = clothes
 	}
 }
 
@@ -256,10 +256,10 @@ popneed_communication = {
 }
 
 popneed_luxury_food = {
-	default = livestock
+	default = meat
 
 	entry = {
-		goods = livestock
+		goods = meat
 
 		weight = 1.25
 		max_supply_share = 0.75
@@ -299,7 +299,7 @@ popneed_luxury_items = {
 	}
 
 	entry = {
-		goods = fine_cloth
+		goods = luxury_clothes
 
 		weight = 1
 		max_supply_share = 0.5

@@ -50,17 +50,7 @@ texticon = {
 }
 
 texticon = {
-	icon = wool_uyr
-	iconsize = {
-		texture = "gfx/interface/icons/goods_icons/wool.dds"
-		size = { 25 25 }
-		offset = { 0 7 }
-		fontsize = 18
-	}
-}
-
-texticon = {
-	icon = fiber_uyr
+	icon = fiber
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/fiber_crops.dds"
 		size = { 25 25 }
@@ -80,7 +70,7 @@ texticon = {
 }
 
 texticon = {
-	icon = saltpeter_uyr
+	icon = saltpeter
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/saltpeter.dds"
 		size = { 25 25 }
@@ -150,19 +140,9 @@ texticon = {
 }
 
 texticon = {
-	icon = trader_uyr
+	icon = trader
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/trade.dds"
-		size = { 25 25 }
-		offset = { 0 7 }
-		fontsize = 18
-	}
-}
-
-texticon = {
-	icon = copper
-	iconsize = {
-		texture = "gfx/interface/icons/goods_icons/iron.dds"
 		size = { 25 25 }
 		offset = { 0 7 }
 		fontsize = 18
@@ -183,16 +163,6 @@ texticon = {
 	icon = fabric
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/fabric.dds"
-		size = { 25 25 }
-		offset = { 0 7 }
-		fontsize = 18
-	}
-}
-
-texticon = {
-	icon = cloth
-	iconsize = {
-		texture = "gfx/interface/icons/goods_icons/cloth.dds"
 		size = { 25 25 }
 		offset = { 0 7 }
 		fontsize = 18

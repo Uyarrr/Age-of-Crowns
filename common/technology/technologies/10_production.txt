@@ -270,6 +270,21 @@ pottery = {
 	}
 }
 
+distillery = {
+	# Unlocks Distillery
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/liquor.dds"
+	category = production
+
+	unlocking_technologies = {
+		pottery
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
 brewery = {
 	# Unlocks Brewery
 	era = era_1
