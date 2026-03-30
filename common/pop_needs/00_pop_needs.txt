@@ -24,10 +24,10 @@ popneed_simple_clothing = {
 }
 
 popneed_crude_items = {
-	default = wood_uyr
+	default = wood
 
 	entry = {
-		goods = wood_uyr
+		goods = wood
 
 		weight = 1
 		max_supply_share = 0.5
@@ -35,7 +35,7 @@ popneed_crude_items = {
 	}
 
 	entry = {
-		goods = furniture_uyr
+		goods = furniture
 
 		weight = 2
 		max_supply_share = 1.0
@@ -55,7 +55,7 @@ popneed_basic_food = {
 	}
 
 	entry = {
-		goods = fish_uyr
+		goods = fish
 
 		weight = 1
 		max_supply_share = 0.9
@@ -71,7 +71,7 @@ popneed_basic_food = {
 	}
 
 	entry = {
-		goods = fruit_uyr
+		goods = fruit
 
 		weight = 1
 		max_supply_share = 0.9
@@ -80,10 +80,10 @@ popneed_basic_food = {
 }
 
 popneed_heating = {
-	default = wood_uyr
+	default = wood
 
 	entry = {
-		goods = wood_uyr
+		goods = wood
 
 		weight = 0.75
 		max_supply_share = 0.5
@@ -99,7 +99,7 @@ popneed_heating = {
 	}
 
 	entry = {
-		goods = coal_uyr
+		goods = coal
 
 		weight = 2
 		max_supply_share = 0.8
@@ -111,7 +111,7 @@ popneed_household_items = {
 	default = furniture
 
 	entry = {
-		goods = furniture_uyr
+		goods = furniture
 
 		weight = 1
 		max_supply_share = 0.75
@@ -175,7 +175,7 @@ popneed_intoxicants = {
 	}
 
 	entry = {
-		goods = tobacco_uyr
+		goods = tobacco
 
 		weight = 0.9 # As it's also part of Stimulants
 		max_supply_share = 0.75
@@ -267,7 +267,7 @@ popneed_luxury_food = {
 	}
 
 	entry = {
-		goods = fruit_uyr
+		goods = fruit
 
 		weight = 0.75
 		max_supply_share = 0.75
@@ -391,7 +391,7 @@ popneed_stimulants = {
 	}
 
 	entry = {
-		goods = tobacco_uyr
+		goods = tobacco
 
 		weight = 0.8
 		max_supply_share = 0.75

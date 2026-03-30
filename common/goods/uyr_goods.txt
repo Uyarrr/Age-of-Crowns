@@ -18,24 +18,6 @@ stone_uyr = {
 	traded_quantity = 5
 }
 
-copper_uyr = {
-	texture = "gfx/interface/icons/goods_icons/copper.dds"
-	cost = 40
-	category = industrial
-
-	prestige_factor = 3
-	traded_quantity = 5
-}
-
-tin_uyr = {
-	texture = "gfx/interface/icons/goods_icons/tin.dds"
-	cost = 40
-	category = industrial
-
-	prestige_factor = 3
-	traded_quantity = 5
-}
-
 horse_uyr = {
 	texture = "gfx/interface/icons/goods_icons/horse.dds"
 	cost = 50
@@ -162,28 +144,6 @@ warhorse_uyr = {
 	convoy_cost_multiplier = 2.0
 }
 
-wood_uyr = {
-	texture = "gfx/interface/icons/goods_icons/wood.dds"
-	cost = 20
-	category = staple
-
-	prestige_factor = 3
-
-	traded_quantity = 10 # 200
-	convoy_cost_multiplier = 0.25
-
-	consumption_tax_cost = 300
-}
-
-tools = {
-	texture = "gfx/interface/icons/goods_icons/tools.dds"
-	cost = 40
-	category = industrial
-
-	prestige_factor = 5
-	traded_quantity = 5 # 200
-}
-
 steel_uyr = {
 	texture = "gfx/interface/icons/goods_icons/steel.dds"
 	cost = 50
@@ -201,46 +161,6 @@ firearms_uyr = {
 	obsession_chance = 0.5
 	prestige_factor = 5
 	traded_quantity = 4
-}
-
-furniture_uyr = {
-	texture = "gfx/interface/icons/goods_icons/furniture.dds"
-	cost = 30
-	category = staple
-
-	prestige_factor = 4
-
-	traded_quantity = 8 # 240
-	convoy_cost_multiplier = 0.5
-
-	consumption_tax_cost = 300
-}
-
-iron_uyr = {
-	texture = "gfx/interface/icons/goods_icons/iron.dds"
-	cost = 40
-	category = industrial
-
-	prestige_factor = 3
-	traded_quantity = 5 # 200
-}
-
-lead_uyr = {
-	texture = "gfx/interface/icons/goods_icons/lead.dds"
-	cost = 40
-	category = industrial
-
-	prestige_factor = 3
-	traded_quantity = 5 # 200
-}
-
-hardwood_uyr = {
-	texture = "gfx/interface/icons/goods_icons/hardwood.dds"
-	cost = 40
-	category = industrial
-
-	prestige_factor = 4
-	traded_quantity = 5 # 200
 }
 
 fabric_uyr = {
@@ -283,33 +203,6 @@ transportation_uyr = {
 	cost = 30
 	category = staple
 	local = yes
-
-	consumption_tax_cost = 200
-}
-
-coal_uyr = {
-	texture = "gfx/interface/icons/goods_icons/coal.dds"
-	cost = 30
-	category = industrial
-
-	prestige_factor = 3
-
-	traded_quantity = 7
-	convoy_cost_multiplier = 0.75
-
-	consumption_tax_cost = 150
-}
-
-fruit_uyr = {
-	texture = "gfx/interface/icons/goods_icons/fruit.dds"
-	cost = 30
-	category = luxury
-
-	obsession_chance = 1.0
-	prestige_factor = 4
-
-	traded_quantity = 8
-	convoy_cost_multiplier = 0.75
 
 	consumption_tax_cost = 200
 }
