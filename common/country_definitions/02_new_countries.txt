@@ -506,3 +506,23 @@ GRA ?= {
 	religion = sunni
 	capital = STATE_UPPER_ANDALUSIA
 }
+
+# Oirat
+OIR ?= {
+	color = { 210 220 175 }
+	country_type = recognized
+	tier = principality
+	cultures = { andalucian }
+	religion = sunni
+	capital = STATE_UPPER_ANDALUSIA
+}
+
+# Moghulistan
+MGH ?= {
+	color = { 98 88 90 }
+	country_type = recognized
+	tier = principality
+	cultures = { kirgiz }
+	religion = sunni
+	capital = STATE_KIRGHIZIA
+}
