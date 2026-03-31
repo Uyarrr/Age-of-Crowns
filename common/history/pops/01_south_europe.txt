@@ -38,7 +38,7 @@
 		}
 	}
 	s:STATE_MALTA = {
-		region_state:GBR = {
+		region_state:ARN = {
 			create_pop = {
 				culture = maltese
 				size = 117192
@@ -577,21 +577,27 @@
 		region_state:ALB = {
 			create_pop = {
 				culture = albanian
-				size = 1004808
-			}
-			create_pop = {
-				culture = greek
-				size = 40000
-			}
-			create_pop = {
-				culture = albanian
-				religion = catholic
-				size = 127200
+				religion = orthodox
+				size = 403402
 			}
 			create_pop = {
 				culture = albanian
 				religion = orthodox
-				size = 91200
+				size = 470636
+			}
+		}
+		region_state:TUR = {
+			create_pop = {
+				culture = albanian
+				religion = orthodox
+				size = 306232
+			}
+		}
+		region_state:VEN = {
+			create_pop = {
+				culture = albanian
+				religion = orthodox
+				size = 57419
 			}
 		}
 	}
