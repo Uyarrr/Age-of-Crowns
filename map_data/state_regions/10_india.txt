@@ -13,8 +13,7 @@
         building_coal_mine = 81
         building_iron_mine = 30
         building_logging_camp = 17
-        building_copper_mine = 37
-        building_tin_mine = 18
+        building_copper_mine = 27
     }
 }
 
@@ -35,8 +34,7 @@ STATE_WEST_BENGAL = {
         building_iron_mine = 9
         building_logging_camp = 29
         building_fishing_wharf = 9
-        building_copper_mine = 30
-        building_tin_mine = 15
+        building_copper_mine = 16
     }
 
     naval_exit_id = 3050
@@ -58,8 +56,6 @@ STATE_EAST_BENGAL = {
         building_coal_mine = 4
         building_logging_camp = 23
         building_fishing_wharf = 11
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
     naval_exit_id = 3050
 }
@@ -80,16 +76,7 @@ STATE_ASSAM = {
     capped_resources = {
         building_coal_mine = 29
         building_logging_camp = 37
-        building_copper_mine = 10
-        building_tin_mine = 5
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 44
-    }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 12
+        building_copper_mine = 4
     }
 }
 
@@ -108,8 +95,6 @@ STATE_DELHI = {
     capped_resources = {
         building_logging_camp = 5
         building_sulfur_mine = 2
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -145,8 +130,6 @@ STATE_AGRA = {
         building_logging_camp = 6
         building_coal_mine = 4
         building_iron_mine = 2
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -167,12 +150,6 @@ STATE_GUJARAT = {
         building_logging_camp = 4
         building_fishing_wharf = 16
         building_iron_mine = 4
-        building_copper_mine = 6
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3048
 }
@@ -194,8 +171,8 @@ STATE_BUNDELKHAND = {
         building_logging_camp = 18
         building_coal_mine = 12
         building_iron_mine = 8
-        building_copper_mine = 7
-        building_tin_mine = 4
+        building_copper_mine = 6
+        building_tin_mine = 3
     }
 }
 
@@ -216,7 +193,6 @@ STATE_MALWA = {
         building_iron_mine = 11
         building_coal_mine = 4
         building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -235,8 +211,6 @@ STATE_KASHMIR = {
     capped_resources = {
         building_iron_mine = 8
         building_logging_camp = 17
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -256,12 +230,8 @@ STATE_PUNJAB = {
         building_coal_mine = 6
         building_iron_mine = 6
         building_logging_camp = 11
-        building_copper_mine = 6
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 7
+        building_copper_mine = 4
+        building_tin_mine = 3
     }
 }
 
@@ -281,7 +251,7 @@ STATE_HILL_PUNJAB = {
         building_logging_camp = 9
         building_iron_mine = 12
         building_copper_mine = 6
-        building_tin_mine = 4
+        building_tin_mine = 3
     }
 }
 
@@ -301,7 +271,7 @@ STATE_CENTRAL_PROVINCES = {
         building_coal_mine = 21
         building_logging_camp = 12
         building_copper_mine = 14
-        building_tin_mine = 7
+        building_tin_mine = 6
     }
 }
 
@@ -321,8 +291,6 @@ STATE_SINDH = {
         building_sulfur_mine = 4
         building_fishing_wharf = 6
         building_logging_camp = 3
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
     naval_exit_id = 3048
 }
@@ -343,8 +311,7 @@ STATE_RAJPUTANA = {
         building_lead_mine = 6
         building_sulfur_mine = 3
         building_logging_camp = 2
-        building_copper_mine = 11
-        building_tin_mine = 6
+        building_copper_mine = 16
     }
 }
 
@@ -365,10 +332,6 @@ STATE_CEYLON = {
     capped_resources = {
         building_logging_camp = 11
         building_fishing_wharf = 13
-    }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 12
     }
     naval_exit_id = 3049
 }
@@ -410,8 +373,8 @@ STATE_ORISSA = {
         building_iron_mine = 36
         building_coal_mine = 21
         building_fishing_wharf = 7
-        building_copper_mine = 19
-        building_tin_mine = 10
+        building_copper_mine = 21
+        building_tin_mine = 9
     }
     naval_exit_id = 3050
 }
@@ -433,8 +396,6 @@ STATE_CIRCARS = {
         building_iron_mine = 2
         building_logging_camp = 11
         building_fishing_wharf = 18
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
     naval_exit_id = 3050
 }
@@ -457,12 +418,7 @@ STATE_MYSORE = {
         building_iron_mine = 24
         building_logging_camp = 14
         building_fishing_wharf = 5
-        building_copper_mine = 10
-        building_tin_mine = 5
-    }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 6
+        building_copper_mine = 18
     }
     naval_exit_id = 3049
 }
@@ -484,12 +440,6 @@ STATE_TRAVANCORE = {
         building_logging_camp = 11
         building_fishing_wharf = 10
         building_lead_mine = 2
-        building_copper_mine = 6
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3049
 }
@@ -510,12 +460,7 @@ STATE_MADRAS = {
         building_iron_mine = 26
         building_logging_camp = 20
         building_fishing_wharf = 18
-        building_copper_mine = 9
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 7
+        building_copper_mine = 13
     }
     naval_exit_id = 3049
 }
@@ -535,8 +480,7 @@ STATE_KURNOOL = {
     capped_resources = {
         building_logging_camp = 9
         building_iron_mine = 15
-        building_copper_mine = 6
-        building_tin_mine = 4
+        building_copper_mine = 8
     }
 }
 
@@ -554,8 +498,6 @@ STATE_HYDERABAD = {
         building_logging_camp = 16
         building_coal_mine = 6
         building_iron_mine = 4
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -578,8 +520,7 @@ STATE_BOMBAY = {
         building_fishing_wharf = 12
         building_coal_mine = 12
         building_iron_mine = 23
-        building_copper_mine = 13
-        building_tin_mine = 6
+        building_copper_mine = 16
     }
     naval_exit_id = 3048
 }
@@ -600,12 +541,6 @@ STATE_TENASSERIM = {
         building_logging_camp = 17
         building_fishing_wharf = 12
         building_iron_mine = 5
-        building_copper_mine = 6
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 16
     }
     naval_exit_id = 3051
 }
@@ -625,8 +560,6 @@ STATE_KACHIN = {
         building_logging_camp = 24
         building_iron_mine = 7
         building_gold_mine = 3
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -646,12 +579,8 @@ STATE_SHAN_STATES = {
         building_coal_mine = 5
         building_lead_mine = 34
         building_logging_camp = 17
-        building_copper_mine = 16
-        building_tin_mine = 8
-    }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 2
+        building_copper_mine = 22
+        building_tin_mine = 10
     }
 }
 
@@ -670,16 +599,7 @@ STATE_MANDALAY = {
         building_gold_mine = 2
         building_iron_mine = 16
         building_logging_camp = 20
-        building_copper_mine = 6
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 20
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 26
+        building_copper_mine = 10
     }
 }
 
@@ -699,14 +619,6 @@ STATE_PEGU = {
         building_logging_camp = 18
         building_fishing_wharf = 10
     }
-    resource = {
-        type = "building_rubber_plantation"
-        undiscovered_amount = 9
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 5
-    }
     naval_exit_id = 3050
 }
 
@@ -725,10 +637,6 @@ STATE_ARAKAN = {
     capped_resources = {
         building_logging_camp = 21
         building_fishing_wharf = 10
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 7
     }
     naval_exit_id = 3050
 }

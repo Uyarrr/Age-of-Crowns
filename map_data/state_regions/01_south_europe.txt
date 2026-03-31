@@ -13,12 +13,7 @@
         building_iron_mine = 27
         building_lead_mine = 19
         building_logging_camp = 7
-        building_copper_mine = 15
-        building_tin_mine = 8
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 20
+        building_copper_mine = 23
     }
 }
 
@@ -40,8 +35,8 @@ STATE_PIEDMONT = {
         building_lead_mine = 45
         building_logging_camp = 8
         building_fishing_wharf = 6
-        building_copper_mine = 39
-        building_tin_mine = 20
+        building_copper_mine = 40
+        building_tin_mine = 18
     }
     naval_exit_id = 3032
 }
@@ -64,8 +59,8 @@ STATE_SARDINIA = {
         building_sulfur_mine = 20
         building_logging_camp = 11
         building_fishing_wharf = 10
-        building_copper_mine = 27
-        building_tin_mine = 14
+        building_copper_mine = 29
+        building_tin_mine = 13
     }
     naval_exit_id = 3032
 }
@@ -103,8 +98,6 @@ STATE_UMBRIA = {
         building_iron_mine = 9
         building_logging_camp = 7
         building_fishing_wharf = 5
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
     naval_exit_id = 3033
 }
@@ -161,8 +154,7 @@ STATE_CALABRIA = {
         building_iron_mine = 24
         building_logging_camp = 7
         building_fishing_wharf = 12
-        building_copper_mine = 13
-        building_tin_mine = 6
+        building_copper_mine = 14
     }
     naval_exit_id = 3033
 }
@@ -219,8 +211,7 @@ STATE_SAVOY = {
         building_iron_mine = 24
         building_lead_mine = 24
         building_logging_camp = 11
-        building_copper_mine = 16
-        building_tin_mine = 8
+        building_copper_mine = 24
     }
 }
 
@@ -240,8 +231,7 @@ STATE_EMILIA = {
         building_iron_mine = 24
         building_logging_camp = 13
         building_fishing_wharf = 3
-        building_copper_mine = 8
-        building_tin_mine = 4
+        building_copper_mine = 12
     }
     naval_exit_id = 3032
 }
@@ -263,8 +253,7 @@ STATE_TUSCANY = {
         building_sulfur_mine = 40
         building_logging_camp = 11
         building_fishing_wharf = 5
-        building_copper_mine = 33
-        building_tin_mine = 16
+        building_copper_mine = 40
     }
     naval_exit_id = 3032
 }
@@ -284,8 +273,7 @@ STATE_ROMAGNA = {
         building_sulfur_mine = 48
         building_logging_camp = 8
         building_fishing_wharf = 6
-        building_copper_mine = 16
-        building_tin_mine = 8
+        building_copper_mine = 12
     }
     naval_exit_id = 3033
 }
@@ -325,8 +313,7 @@ STATE_VENETIA = {
         building_sulfur_mine = 36
         building_logging_camp = 7
         building_fishing_wharf = 12
-        building_copper_mine = 27
-        building_tin_mine = 14
+        building_copper_mine = 16
     }
     naval_exit_id = 3033
 }
@@ -347,8 +334,7 @@ STATE_SICILY = {
         building_sulfur_mine = 100
         building_logging_camp = 6
         building_fishing_wharf = 10
-        building_copper_mine = 33
-        building_tin_mine = 16
+        building_copper_mine = 25
     }
     naval_exit_id = 3033
 }
@@ -369,8 +355,7 @@ STATE_NEW_CASTILE = {
         building_coal_mine = 7
         building_iron_mine = 3
         building_sulfur_mine = 6
-        building_copper_mine = 6
-        building_tin_mine = 4
+        building_copper_mine = 4
     }
 }
 
@@ -392,8 +377,6 @@ STATE_GALICIA = {
         building_logging_camp = 5
         building_fishing_wharf = 4
         building_whaling_station = 1
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
     naval_exit_id = 3029
 }
@@ -416,8 +399,8 @@ STATE_ASTURIAS = {
         building_iron_mine = 5
         building_logging_camp = 5
         building_fishing_wharf = 7
-        building_copper_mine = 26
-        building_tin_mine = 13
+        building_copper_mine = 15
+        building_tin_mine = 7
     }
     naval_exit_id = 3029
 }
@@ -440,8 +423,8 @@ STATE_OLD_CASTILE = {
         building_sulfur_mine = 2
         building_logging_camp = 6
         building_fishing_wharf = 3
-        building_copper_mine = 6
-        building_tin_mine = 4
+        building_copper_mine = 4
+        building_tin_mine = 3
     }
     naval_exit_id = 3029
 }
@@ -465,8 +448,7 @@ STATE_BASQUE_COUNTRY = {
         building_logging_camp = 11
         building_fishing_wharf = 10
         building_whaling_station = 1
-        building_copper_mine = 24
-        building_tin_mine = 12
+        building_copper_mine = 34
     }
     naval_exit_id = 3029
 }
@@ -485,8 +467,8 @@ STATE_ARAGON = {
         building_coal_mine = 18
         building_iron_mine = 5
         building_logging_camp = 8
-        building_copper_mine = 8
-        building_tin_mine = 4
+        building_copper_mine = 5
+        building_tin_mine = 3
     }
 }
 
@@ -508,7 +490,6 @@ STATE_CATALONIA = {
         building_logging_camp = 6
         building_fishing_wharf = 12
         building_copper_mine = 8
-        building_tin_mine = 4
     }
     naval_exit_id = 3032
 }
@@ -549,8 +530,7 @@ STATE_LOWER_ANDALUSIA = {
         building_sulfur_mine = 44
         building_logging_camp = 4
         building_fishing_wharf = 9
-        building_copper_mine = 16
-        building_tin_mine = 8
+        building_copper_mine = 13
     }
     naval_exit_id = 3031
 }
@@ -572,8 +552,8 @@ STATE_UPPER_ANDALUSIA = {
         building_iron_mine = 7
         building_logging_camp = 4
         building_fishing_wharf = 8
-        building_copper_mine = 18
-        building_tin_mine = 9
+        building_copper_mine = 26
+        building_tin_mine = 12
     }
     naval_exit_id = 3031
 }
@@ -593,8 +573,6 @@ STATE_EXTREMADURA = {
         building_logging_camp = 13
         building_sulfur_mine = 4
         building_iron_mine = 2
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -616,7 +594,6 @@ STATE_VALENCIA = {
         building_logging_camp = 5
         building_fishing_wharf = 10
         building_copper_mine = 8
-        building_tin_mine = 4
     }
     naval_exit_id = 3032
 }
@@ -639,8 +616,6 @@ STATE_BEIRA = {
         building_gold_mine = 2
         building_logging_camp = 5
         building_fishing_wharf = 4
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
     naval_exit_id = 3029
 }
@@ -683,7 +658,6 @@ STATE_ALENTEJO = {
         building_logging_camp = 2
         building_fishing_wharf = 4
         building_copper_mine = 14
-        building_tin_mine = 7
     }
     naval_exit_id = 3029
 }
@@ -782,8 +756,7 @@ STATE_EASTERN_THRACE = {
         building_iron_mine = 18
         building_logging_camp = 4
         building_fishing_wharf = 10
-        building_copper_mine = 6
-        building_tin_mine = 4
+        building_copper_mine = 9
     }
     naval_exit_id = 3035
 }
@@ -823,12 +796,7 @@ STATE_ALBANIA = {
         building_iron_mine = 24
         building_logging_camp = 6
         building_fishing_wharf = 8
-        building_copper_mine = 8
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 20
+        building_copper_mine = 12
     }
     naval_exit_id = 3033
 }
@@ -847,8 +815,7 @@ STATE_BOSNIA = {
         building_iron_mine = 48
         building_lead_mine = 39
         building_logging_camp = 14
-        building_copper_mine = 29
-        building_tin_mine = 14
+        building_copper_mine = 40
     }
 }
 
@@ -867,8 +834,8 @@ STATE_NORTHERN_THRACE = {
         building_iron_mine = 33
         building_logging_camp = 17
         building_fishing_wharf = 6
-        building_copper_mine = 11
-        building_tin_mine = 6
+        building_copper_mine = 16
+        building_tin_mine = 7
     }
     naval_exit_id = 3036
 }
@@ -906,8 +873,7 @@ STATE_SLOVENIA = {
     capped_resources = {
         building_coal_mine = 60
         building_logging_camp = 11
-        building_copper_mine = 20
-        building_tin_mine = 10
+        building_copper_mine = 9
     }
 }
 
@@ -946,8 +912,7 @@ STATE_CROATIA = {
         building_coal_mine = 60
         building_logging_camp = 11
         building_fishing_wharf = 5
-        building_copper_mine = 20
-        building_tin_mine = 10
+        building_copper_mine = 9
     }
     naval_exit_id = 3033
 }
@@ -984,8 +949,7 @@ STATE_ISTRIA = {
         building_coal_mine = 44
         building_logging_camp = 5
         building_fishing_wharf = 14
-        building_copper_mine = 15
-        building_tin_mine = 8
+        building_copper_mine = 7
     }
     naval_exit_id = 3033
 }
@@ -1007,8 +971,7 @@ STATE_MONTENEGRO = {
         building_coal_mine = 50
         building_logging_camp = 15
         building_fishing_wharf = 15
-        building_copper_mine = 17
-        building_tin_mine = 8
+        building_copper_mine = 8
     }
     naval_exit_id = 3033
 }
@@ -1028,8 +991,7 @@ STATE_WESTERN_SERBIA = {
     capped_resources = {
         building_iron_mine = 24
         building_logging_camp = 13
-        building_copper_mine = 8
-        building_tin_mine = 4
+        building_copper_mine = 12
     }
 }
 
@@ -1048,8 +1010,8 @@ STATE_EASTERN_SERBIA = {
         building_coal_mine = 30
         building_lead_mine = 12
         building_logging_camp = 10
-        building_copper_mine = 14
-        building_tin_mine = 7
+        building_copper_mine = 10
+        building_tin_mine = 4
     }
 }
 
@@ -1067,8 +1029,7 @@ STATE_KOSOVO = {
         building_coal_mine = 10
         building_lead_mine = 24
         building_logging_camp = 4
-        building_copper_mine = 11
-        building_tin_mine = 6
+        building_copper_mine = 14
     }
 }
 
@@ -1143,7 +1104,6 @@ STATE_ATTICA = {
         building_logging_camp = 7
         building_fishing_wharf = 8
         building_copper_mine = 18
-        building_tin_mine = 9
     }
     naval_exit_id = 3033
 }
@@ -1179,8 +1139,7 @@ STATE_SKOPIA = {
     capped_resources = {
         building_iron_mine = 36
         building_logging_camp = 16
-        building_copper_mine = 12
-        building_tin_mine = 6
+        building_copper_mine = 18
     }
 }
 
@@ -1217,8 +1176,8 @@ STATE_WESTERN_THRACE = {
         building_iron_mine = 27
         building_logging_camp = 5
         building_fishing_wharf = 10
-        building_copper_mine = 9
-        building_tin_mine = 4
+        building_copper_mine = 14
+        building_tin_mine = 6
     }
     naval_exit_id = 3035
 }
@@ -1255,8 +1214,7 @@ STATE_PELOPONNESE = {
         building_iron_mine = 21
         building_logging_camp = 5
         building_fishing_wharf = 10
-        building_copper_mine = 7
-        building_tin_mine = 4
+        building_copper_mine = 10
     }
     naval_exit_id = 3033
 }
@@ -1279,8 +1237,8 @@ STATE_MURCIA = {
         building_lead_mine = 21
         building_logging_camp = 3
         building_fishing_wharf = 6
-        building_copper_mine = 10
-        building_tin_mine = 5
+        building_copper_mine = 16
+        building_tin_mine = 7
     }
     naval_exit_id = 3032
 }
@@ -1301,7 +1259,6 @@ STATE_LEON = {
         building_coal_mine = 12
         building_logging_camp = 7
         building_copper_mine = 7
-        building_tin_mine = 4
     }
 }
 
@@ -1324,8 +1281,7 @@ STATE_ENTRE_DOURO_E_MINHO = {
         building_lead_mine = 3
         building_logging_camp = 7
         building_fishing_wharf = 6
-        building_copper_mine = 10
-        building_tin_mine = 5
+        building_copper_mine = 16
     }
     naval_exit_id = 3029
 }

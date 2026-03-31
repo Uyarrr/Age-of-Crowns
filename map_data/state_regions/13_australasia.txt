@@ -16,17 +16,12 @@
         building_logging_camp = 7
         building_whaling_station = 4
         building_fishing_wharf = 8
-        building_copper_mine = 39
-        building_tin_mine = 20
+        building_copper_mine = 30
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 12
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
     }
     naval_exit_id = 3122
 }
@@ -47,8 +42,7 @@ STATE_VICTORIA = {
         building_logging_camp = 11
         building_whaling_station = 3
         building_fishing_wharf = 8
-        building_copper_mine = 8
-        building_tin_mine = 4
+        building_copper_mine = 6
     }
     resource = {
         type = "building_gold_field"
@@ -76,8 +70,7 @@ STATE_TASMANIA = {
         building_logging_camp = 8
         building_whaling_station = 2
         building_fishing_wharf = 6
-        building_copper_mine = 10
-        building_tin_mine = 5
+        building_copper_mine = 15
     }
     resource = {
         type = "building_gold_field"
@@ -106,8 +99,7 @@ STATE_QUEENSLAND = {
         building_logging_camp = 5
         building_whaling_station = 3
         building_fishing_wharf = 12
-        building_copper_mine = 30
-        building_tin_mine = 15
+        building_copper_mine = 40
     }
     naval_exit_id = 3124
 }
@@ -131,8 +123,7 @@ STATE_SOUTH_AUSTRALIA = {
         building_sulfur_mine = 60
         building_whaling_station = 2
         building_fishing_wharf = 6
-        building_copper_mine = 42
-        building_tin_mine = 21
+        building_copper_mine = 40
     }
     naval_exit_id = 3121
 }
@@ -156,8 +147,7 @@ STATE_WESTERN_AUSTRALIA = {
         building_logging_camp = 4
         building_whaling_station = 3
         building_fishing_wharf = 9
-        building_copper_mine = 23
-        building_tin_mine = 12
+        building_copper_mine = 21
     }
     resource = {
         type = "building_gold_field"
@@ -208,7 +198,6 @@ STATE_NORTH_ISLAND = {
         building_whaling_station = 3
         building_fishing_wharf = 8
         building_copper_mine = 18
-        building_tin_mine = 9
     }
     resource = {
         type = "building_gold_field"

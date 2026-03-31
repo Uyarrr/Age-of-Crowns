@@ -14,8 +14,7 @@
         building_sulfur_mine = 20
         building_logging_camp = 2
         building_fishing_wharf = 6
-        building_copper_mine = 7
-        building_tin_mine = 4
+        building_copper_mine = 5
     }
     naval_exit_id = 3034
 }
@@ -105,8 +104,7 @@ STATE_SINAI = {
         building_fishing_wharf = 3
         building_iron_mine = 24
         building_lead_mine = 24
-        building_copper_mine = 16
-        building_tin_mine = 8
+        building_copper_mine = 24
     }
     naval_exit_id = 3047
 }
@@ -125,8 +123,7 @@ STATE_ERITREA = {
     capped_resources = {
         building_iron_mine = 15
         building_fishing_wharf = 5
-        building_copper_mine = 6
-        building_tin_mine = 4
+        building_copper_mine = 8
     }
     naval_exit_id = 3047
 }
@@ -148,10 +145,6 @@ STATE_DONGOLA = {
         building_logging_camp = 4
         building_fishing_wharf = 4
     }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 5
-    }
     naval_exit_id = 3047
 }
 
@@ -170,10 +163,6 @@ STATE_KORDOFAN = {
     capped_resources = {
         building_logging_camp = 4
     }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 20
-    }
 }
 
 STATE_DARFUR = {
@@ -188,10 +177,6 @@ STATE_DARFUR = {
     wood = "x3B2BDC"
     arable_land = 20
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
-    }
 }
 
 STATE_BLUE_NILE = {
@@ -226,8 +211,7 @@ STATE_MARRAKECH = {
         building_iron_mine = 30
         building_sulfur_mine = 52
         building_fishing_wharf = 8
-        building_copper_mine = 27
-        building_tin_mine = 14
+        building_copper_mine = 28
     }
     naval_exit_id = 3089
 }
@@ -265,8 +249,6 @@ STATE_AL_RIF = {
         building_logging_camp = 6
         building_fishing_wharf = 7
         building_coal_mine = 6
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
     naval_exit_id = 3032
 }
@@ -290,8 +272,7 @@ STATE_INNER_MOROCCO = {
         building_fishing_wharf = 4
         building_gold_mine = 3
         building_coal_mine = 6
-        building_copper_mine = 23
-        building_tin_mine = 12
+        building_copper_mine = 34
     }
     naval_exit_id = 3089
 }
@@ -314,8 +295,7 @@ STATE_ALGIERS = {
         building_lead_mine = 7
         building_logging_camp = 6
         building_fishing_wharf = 8
-        building_copper_mine = 6
-        building_tin_mine = 4
+        building_copper_mine = 8
     }
     naval_exit_id = 3032
 }
@@ -339,12 +319,8 @@ STATE_CONSTANTINE = {
         building_sulfur_mine = 18
         building_logging_camp = 6
         building_fishing_wharf = 4
-        building_copper_mine = 31
-        building_tin_mine = 16
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 20
+        building_copper_mine = 40
+        building_tin_mine = 18
     }
     naval_exit_id = 3032
 }
@@ -367,7 +343,6 @@ STATE_ORAN = {
         building_fishing_wharf = 5
         building_logging_camp = 3
         building_copper_mine = 6
-        building_tin_mine = 4
     }
     naval_exit_id = 3032
 }
@@ -388,8 +363,7 @@ STATE_TUNISIA = {
         building_sulfur_mine = 48
         building_logging_camp = 9
         building_fishing_wharf = 7
-        building_copper_mine = 21
-        building_tin_mine = 10
+        building_copper_mine = 20
     }
     naval_exit_id = 3032
 }
@@ -409,10 +383,6 @@ STATE_TRIPOLI = {
     capped_resources = {
         building_fishing_wharf = 9
 		building_logging_camp = 2
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
     }
     naval_exit_id = 3033
 }
@@ -435,10 +405,6 @@ STATE_LIBYA = {
         building_fishing_wharf = 4
 		building_logging_camp = 6
 	}
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 40
-    }
     naval_exit_id = 3033
 }
 
@@ -454,10 +420,6 @@ STATE_LIBYAN_DESERT = {
     wood = "xD7FFBE"
     arable_land = 10
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
-    }
 }
 
 STATE_SAHARA = {
@@ -474,12 +436,7 @@ STATE_SAHARA = {
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_coal_mine = 16
-        building_copper_mine = 6
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 20
+        building_copper_mine = 4
     }
 }
 
@@ -496,10 +453,6 @@ STATE_EAST_SAHARA = {
     wood = "x873702"
     arable_land = 10
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 20
-    }
 }
 
 STATE_WEST_SAHARA = {
@@ -517,8 +470,7 @@ STATE_WEST_SAHARA = {
     capped_resources = {
         building_sulfur_mine = 36
         building_fishing_wharf = 11
-        building_copper_mine = 12
-        building_tin_mine = 6
+        building_copper_mine = 9
     }
     naval_exit_id = 3089
 }
@@ -540,8 +492,7 @@ STATE_MAURITANIA = {
         building_iron_mine = 45
         building_fishing_wharf = 15
         building_whaling_station = 3
-        building_copper_mine = 15
-        building_tin_mine = 8
+        building_copper_mine = 22
     }
     naval_exit_id = 3088
 }
@@ -560,12 +511,7 @@ STATE_INNER_MAURITANIA = {
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_iron_mine = 27
-        building_copper_mine = 9
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 20
+        building_copper_mine = 14
     }
 }
 
@@ -611,12 +557,7 @@ STATE_TIMBUKTU = {
     capped_resources = {
         building_coal_mine = 36
         building_sulfur_mine = 36
-        building_copper_mine = 24
-        building_tin_mine = 12
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 20
+        building_copper_mine = 14
     }
 }
 
@@ -636,12 +577,7 @@ STATE_NIGER = {
         building_coal_mine = 36
         building_lead_mine = 18
         building_sulfur_mine = 24
-        building_copper_mine = 26
-        building_tin_mine = 13
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 50
+        building_copper_mine = 20
     }
 }
 
@@ -658,9 +594,5 @@ STATE_CHAD = {
     wood = "x815967"
     arable_land = 30
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
-    }
 }
 

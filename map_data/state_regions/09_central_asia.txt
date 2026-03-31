@@ -12,10 +12,6 @@
         building_logging_camp = 10
     }
     traits = { "state_trait_caucasus_mountains" }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
-    }
 }
 
 STATE_KUBAN = {
@@ -36,12 +32,7 @@ STATE_KUBAN = {
         building_iron_mine = 10
         building_logging_camp = 35
         building_fishing_wharf = 7
-        building_copper_mine = 16
-        building_tin_mine = 8
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
+        building_copper_mine = 20
     }
     naval_exit_id = 3036
 }
@@ -60,8 +51,7 @@ STATE_ARMENIA = {
         building_iron_mine = 27
         building_lead_mine = 21
         building_logging_camp = 2
-        building_copper_mine = 16
-        building_tin_mine = 8
+        building_copper_mine = 24
     }
 }
 
@@ -78,12 +68,7 @@ STATE_AZERBAIJAN = {
     capped_resources = {
         building_lead_mine = 18
         building_logging_camp = 4
-        building_copper_mine = 6
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 100
+        building_copper_mine = 9
     }
 }
 
@@ -106,8 +91,7 @@ STATE_GREATER_CAUCASUS = {
         building_iron_mine = 24
         building_logging_camp = 19
         building_fishing_wharf = 5
-        building_copper_mine = 29
-        building_tin_mine = 14
+        building_copper_mine = 31
     }
     naval_exit_id = 3036
 }
@@ -128,12 +112,7 @@ STATE_SAMARA = {
         building_sulfur_mine = 15
         building_logging_camp = 9
         building_iron_mine = 5
-        building_copper_mine = 17
-        building_tin_mine = 8
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 90
+        building_copper_mine = 11
     }
 }
 
@@ -152,12 +131,7 @@ STATE_TARTARIA = {
     capped_resources = {
         building_logging_camp = 16
         building_iron_mine = 15
-        building_copper_mine = 6
-        building_tin_mine = 4
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 15
+        building_copper_mine = 8
     }
 }
 
@@ -176,12 +150,7 @@ STATE_ASTRAKHAN = {
         building_logging_camp = 6
         building_sulfur_mine = 30
         building_iron_mine = 30
-        building_copper_mine = 20
-        building_tin_mine = 10
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
+        building_copper_mine = 22
     }
 }
 
@@ -213,8 +182,7 @@ STATE_TAJIKISTAN = {
     capped_resources = {
         building_coal_mine = 36
         building_logging_camp = 2
-        building_copper_mine = 12
-        building_tin_mine = 6
+        building_copper_mine = 5
     }
 }
 
@@ -231,8 +199,7 @@ STATE_KIRGHIZIA = {
     capped_resources = {
         building_coal_mine = 32
         building_logging_camp = 6
-        building_copper_mine = 11
-        building_tin_mine = 6
+        building_copper_mine = 5
     }
 }
 
@@ -249,12 +216,7 @@ STATE_TURKMENIA = {
     capped_resources = {
         building_sulfur_mine = 40
         building_logging_camp = 2
-        building_copper_mine = 13
-        building_tin_mine = 6
-    }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 30
+        building_copper_mine = 10
     }
 }
 
@@ -272,8 +234,6 @@ STATE_PASHTUNISTAN = {
     capped_resources = {
         building_logging_camp = 6
         building_lead_mine = 4
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -291,8 +251,7 @@ STATE_CENTRAL_HIGHLANDS = {
         building_iron_mine = 16
         building_lead_mine = 8
         building_logging_camp = 4
-        building_copper_mine = 8
-        building_tin_mine = 4
+        building_copper_mine = 12
     }
 }
 
@@ -309,8 +268,6 @@ STATE_NORTHERN_BALUCHISTAN = {
     arable_resources = { "building_livestock_ranch" "building_stud_farm" }
     capped_resources = {
         building_coal_mine = 2
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -327,8 +284,7 @@ STATE_HERAT = {
     capped_resources = {
         building_iron_mine = 6
         building_lead_mine = 8
-        building_copper_mine = 6
-        building_tin_mine = 4
+        building_copper_mine = 7
     }
 }
 
@@ -347,7 +303,6 @@ STATE_BALKH = {
         building_iron_mine = 14
         building_logging_camp = 7
         building_copper_mine = 9
-        building_tin_mine = 4
     }
 }
 
@@ -366,7 +321,6 @@ STATE_QUETTA = {
         building_lead_mine = 8
         building_logging_camp = 2
         building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -385,8 +339,6 @@ STATE_KANDAHAR = {
         building_logging_camp = 2
         building_coal_mine = 4
         building_iron_mine = 5
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -406,7 +358,6 @@ STATE_KABUL = {
         building_iron_mine = 10
         building_logging_camp = 4
         building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
 
@@ -427,8 +378,8 @@ STATE_BALUCHISTAN = {
         building_lead_mine = 10
         building_logging_camp = 1
         building_fishing_wharf = 5
-        building_copper_mine = 10
-        building_tin_mine = 5
+        building_copper_mine = 15
+        building_tin_mine = 7
     }
     naval_exit_id = 3048
 }
@@ -483,8 +434,7 @@ STATE_HIMALAYAS = {
         building_logging_camp = 10
         building_lead_mine = 8
         building_iron_mine = 8
-        building_copper_mine = 6
-        building_tin_mine = 4
+        building_copper_mine = 8
     }
 }
 
@@ -504,7 +454,5 @@ STATE_EASTERN_HIMALAYAS = {
     capped_resources = {
         building_logging_camp = 3
         building_coal_mine = 3
-        building_copper_mine = 6
-        building_tin_mine = 4
     }
 }
