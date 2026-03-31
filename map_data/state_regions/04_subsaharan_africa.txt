@@ -34,6 +34,7 @@ STATE_WINDWARD_COAST = {
         building_logging_camp = 15
         building_fishing_wharf = 6
         building_copper_mine = 12
+        building_stone_mine = 8
     }
     naval_exit_id = 3091
 }
@@ -56,6 +57,7 @@ STATE_SENEGAL = {
         building_fishing_wharf = 10
         building_copper_mine = 25
         building_tin_mine = 11
+        building_stone_mine = 12
     }
     naval_exit_id = 3088
 }
@@ -77,6 +79,7 @@ STATE_SIERRA_LEONE = {
         building_logging_camp = 11
         building_fishing_wharf = 6
         building_copper_mine = 18
+        building_stone_mine = 12
     }
     naval_exit_id = 3088
 }
@@ -114,6 +117,7 @@ STATE_LIBERIA = {
         building_logging_camp = 11
         building_fishing_wharf = 7
         building_copper_mine = 16
+        building_stone_mine = 11
     }
     naval_exit_id = 3088
 }
@@ -152,6 +156,7 @@ STATE_BENIN = {
         building_logging_camp = 9
         building_fishing_wharf = 3
         building_copper_mine = 25
+        building_stone_mine = 16
     }
     naval_exit_id = 3091
 }
@@ -209,6 +214,7 @@ STATE_OUTER_HAUSALAND = {
         building_coal_mine = 48
         building_logging_camp = 4
         building_copper_mine = 7
+        building_stone_mine = 12
     }
 }
 
@@ -244,6 +250,7 @@ STATE_NIGERIA = {
         building_lead_mine = 45
         building_logging_camp = 20
         building_copper_mine = 40
+        building_stone_mine = 20
     }
 }
 
@@ -262,6 +269,7 @@ STATE_EAST_HAUSALAND = {
         building_coal_mine = 72
         building_logging_camp = 18
         building_copper_mine = 11
+        building_stone_mine = 19
     }
 }
 
@@ -323,6 +331,7 @@ STATE_TOGO = {
         building_logging_camp = 11
         building_fishing_wharf = 12
         building_copper_mine = 11
+        building_stone_mine = 12
     }
     naval_exit_id = 3091
 }
@@ -363,6 +372,7 @@ STATE_LINDI = {
         building_logging_camp = 5
         building_copper_mine = 23
         building_tin_mine = 10
+        building_stone_mine = 12
     }
 }
 
@@ -403,6 +413,7 @@ STATE_TANGANYIKA = {
         building_iron_mine = 48
         building_logging_camp = 23
         building_copper_mine = 35
+        building_stone_mine = 23
     }
 }
 
@@ -442,6 +453,7 @@ STATE_RIFT_VALLEY = {
         building_coal_mine = 48
         building_logging_camp = 7
         building_copper_mine = 7
+        building_stone_mine = 12
     }
 }
 
@@ -510,6 +522,7 @@ STATE_KAZEMBE = {
         building_coal_mine = 48
         building_logging_camp = 14
         building_copper_mine = 7
+        building_stone_mine = 12
     }
 }
 
@@ -529,6 +542,7 @@ STATE_SOMALILAND = {
         building_iron_mine = 24
         building_fishing_wharf = 15
         building_copper_mine = 12
+        building_stone_mine = 8
     }
     naval_exit_id = 3018
 }
@@ -552,6 +566,7 @@ STATE_SOUTH_MADAGASCAR = {
         building_whaling_station = 4
         building_fishing_wharf = 8
         building_copper_mine = 12
+        building_stone_mine = 21
     }
     naval_exit_id = 3107
 }
@@ -702,6 +717,7 @@ STATE_UBANGI_SHARI = {
         building_coal_mine = 48
         building_logging_camp = 18
         building_copper_mine = 7
+        building_stone_mine = 12
     }
 }
 
@@ -722,6 +738,7 @@ STATE_CONGO = {
         building_logging_camp = 25
         building_fishing_wharf = 4
         building_copper_mine = 7
+        building_stone_mine = 12
     }
     naval_exit_id = 3104
 }
@@ -742,6 +759,7 @@ STATE_CONGO_ORIENTALE = {
         building_coal_mine = 44
         building_logging_camp = 23
         building_copper_mine = 7
+        building_stone_mine = 11
     }
 }
 
@@ -761,6 +779,7 @@ STATE_KASAI = {
         building_iron_mine = 27
         building_logging_camp = 18
         building_copper_mine = 14
+        building_stone_mine = 9
     }
 }
 
@@ -782,6 +801,7 @@ STATE_BAS_CONGO = {
         building_logging_camp = 23
         building_fishing_wharf = 7
         building_copper_mine = 18
+        building_stone_mine = 12
     }
     naval_exit_id = 3104
 }
@@ -859,6 +879,7 @@ STATE_EAST_ANGOLA = {
         building_lead_mine = 27
         building_logging_camp = 11
         building_copper_mine = 26
+        building_stone_mine = 20
     }
 }
 
@@ -877,6 +898,7 @@ STATE_KATANGA = {
         building_iron_mine = 27
         building_logging_camp = 18
         building_copper_mine = 14
+        building_stone_mine = 9
     }
 }
 
@@ -916,6 +938,7 @@ STATE_ZAMBIA = {
         building_lead_mine = 33
         building_logging_camp = 17
         building_copper_mine = 22
+        building_stone_mine = 14
     }
 }
 
@@ -935,6 +958,7 @@ STATE_ZAMBEZIA = {
         building_iron_mine = 33
         building_fishing_wharf = 6
         building_copper_mine = 16
+        building_stone_mine = 11
     }
     resource = {
         type = "building_gold_field"
@@ -960,6 +984,7 @@ STATE_ZAMBEZI = {
         building_coal_mine = 44
         building_logging_camp = 11
         building_copper_mine = 7
+        building_stone_mine = 11
     }
 }
 
@@ -980,6 +1005,7 @@ STATE_NAMAQUALAND = {
         building_logging_camp = 4
         building_fishing_wharf = 7
         building_copper_mine = 5
+        building_stone_mine = 8
     }
     naval_exit_id = 3105
 }
@@ -1001,6 +1027,7 @@ STATE_HEREROLAND = {
         building_logging_camp = 2
         building_fishing_wharf = 6
         building_copper_mine = 6
+        building_stone_mine = 10
     }
     naval_exit_id = 3105
 }
@@ -1022,6 +1049,7 @@ STATE_ZULULAND = {
         building_logging_camp = 11
         building_fishing_wharf = 5
         building_copper_mine = 11
+        building_stone_mine = 19
     }
     naval_exit_id = 3106
 }
@@ -1042,6 +1070,7 @@ STATE_VRYSTAAT = {
         building_logging_camp = 7
         building_copper_mine = 24
         building_tin_mine = 11
+        building_stone_mine = 14
     }
     resource = {
         type = "building_gold_field"
@@ -1067,6 +1096,7 @@ STATE_TRANSVAAL = {
         building_iron_mine = 60
         building_logging_camp = 5
         building_copper_mine = 40
+        building_stone_mine = 31
     }
     resource = {
         type = "building_gold_field"
@@ -1091,6 +1121,7 @@ STATE_EASTERN_CAPE = {
         building_logging_camp = 9
         building_fishing_wharf = 8
         building_copper_mine = 8
+        building_stone_mine = 14
     }
     naval_exit_id = 3106
 }
@@ -1129,6 +1160,7 @@ STATE_NORTHERN_CAPE = {
         building_iron_mine = 33
         building_logging_camp = 2
         building_copper_mine = 16
+        building_stone_mine = 11
     }
     resource = {
         type = "building_gold_field"
@@ -1153,6 +1185,7 @@ STATE_BOTSWANA = {
         building_coal_mine = 48
         building_logging_camp = 5
         building_copper_mine = 7
+        building_stone_mine = 12
     }
 }
 
@@ -1173,6 +1206,7 @@ STATE_LOURENCO_MARQUES = {
         building_logging_camp = 9
         building_fishing_wharf = 8
         building_copper_mine = 6
+        building_stone_mine = 10
     }
     naval_exit_id = 3107
 }

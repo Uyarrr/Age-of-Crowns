@@ -16,6 +16,7 @@
         building_logging_camp = 45
         building_fishing_wharf = 11
         building_copper_mine = 39
+        building_stone_mine = 18
     }
     naval_exit_id = 3000
 }
@@ -37,6 +38,7 @@ STATE_GOTALAND = {
         building_logging_camp = 25
         building_fishing_wharf = 15
         building_copper_mine = 8
+        building_stone_mine = 5
     }
     naval_exit_id = 3019
 }
@@ -57,6 +59,7 @@ STATE_SCANIA = {
         building_coal_mine = 8
         building_logging_camp = 10
         building_fishing_wharf = 10
+        building_stone_mine = 4
     }
     naval_exit_id = 3019
 }
@@ -79,6 +82,7 @@ STATE_NORRLAND = {
         building_fishing_wharf = 12
         building_copper_mine = 40
         building_tin_mine = 18
+        building_stone_mine = 24
     }
     naval_exit_id = 3000
 }
@@ -159,6 +163,7 @@ STATE_WESTERN_NORWAY = {
         building_fishing_wharf = 15
         building_copper_mine = 5
         building_tin_mine = 3
+        building_stone_mine = 4
     }
     naval_exit_id = 3027
 }
@@ -183,6 +188,7 @@ STATE_NORTHERN_NORWAY = {
         building_whaling_station = 10
         building_fishing_wharf = 10
         building_copper_mine = 14
+        building_stone_mine = 8
     }
     naval_exit_id = 3020
 }
@@ -205,6 +211,7 @@ STATE_EASTERN_NORWAY = {
         building_fishing_wharf = 5
         building_copper_mine = 9
         building_tin_mine = 4
+        building_stone_mine = 5
     }
     naval_exit_id = 3019
 }
@@ -226,6 +233,7 @@ STATE_ICELAND = {
         building_whaling_station = 5
         building_fishing_wharf = 3
         building_copper_mine = 5
+        building_stone_mine = 6
     }
     naval_exit_id = 3022
 }
@@ -267,6 +275,7 @@ STATE_HOME_COUNTIES = {
         building_logging_camp = 6
         building_fishing_wharf = 10
         building_copper_mine = 6
+        building_stone_mine = 10
     }
     naval_exit_id = 3028
 }
@@ -290,6 +299,7 @@ STATE_LANCASHIRE = {
         building_logging_camp = 9
         building_fishing_wharf = 15
         building_copper_mine = 40
+        building_stone_mine = 28
     }
     naval_exit_id = 3030
 }
@@ -311,6 +321,7 @@ STATE_WALES = {
         building_logging_camp = 14
         building_fishing_wharf = 4
         building_copper_mine = 12
+        building_stone_mine = 21
     }
     naval_exit_id = 3030
 }
@@ -335,6 +346,7 @@ STATE_YORKSHIRE = {
         building_fishing_wharf = 7
         building_copper_mine = 40
         building_tin_mine = 18
+        building_stone_mine = 23
     }
     naval_exit_id = 3027
 }
@@ -379,6 +391,7 @@ STATE_MIDLANDS = {
         building_fishing_wharf = 2
         building_copper_mine = 40
         building_tin_mine = 18
+        building_stone_mine = 21
     }
     naval_exit_id = 3027
 }
@@ -401,6 +414,7 @@ STATE_EAST_ANGLIA = {
         building_logging_camp = 4
         building_fishing_wharf = 12
         building_copper_mine = 21
+        building_stone_mine = 14
     }
     naval_exit_id = 3028
 }
@@ -422,6 +436,7 @@ STATE_WEST_COUNTRY = {
         building_logging_camp = 6
         building_fishing_wharf = 9
         building_copper_mine = 30
+        building_stone_mine = 20
     }
     naval_exit_id = 3028
 }
@@ -444,6 +459,7 @@ STATE_LOWLANDS = {
         building_logging_camp = 14
         building_fishing_wharf = 12
         building_copper_mine = 16
+        building_stone_mine = 14
     }
     naval_exit_id = 3027
 }
@@ -484,6 +500,7 @@ STATE_MUNSTER = {
         building_fishing_wharf = 12
         building_copper_mine = 12
         building_tin_mine = 5
+        building_stone_mine = 6
     }
     naval_exit_id = 3030
 }
@@ -505,6 +522,7 @@ STATE_LEINSTER = {
         building_logging_camp = 6
         building_fishing_wharf = 6
         building_copper_mine = 30
+        building_stone_mine = 14
     }
     naval_exit_id = 3030
 }
@@ -525,6 +543,7 @@ STATE_CONNAUGHT = {
         building_logging_camp = 7
         building_fishing_wharf = 4
         building_copper_mine = 12
+        building_stone_mine = 14
     }
     naval_exit_id = 3030
 }
@@ -583,6 +602,7 @@ STATE_NORMANDY = {
         building_fishing_wharf = 13
         building_copper_mine = 15
         building_tin_mine = 7
+        building_stone_mine = 8
     }
     naval_exit_id = 3028
 }
@@ -623,6 +643,7 @@ STATE_RHONE = {
         building_logging_camp = 14
         building_copper_mine = 40
         building_tin_mine = 18
+        building_stone_mine = 21
     }
 }
 
@@ -643,6 +664,7 @@ STATE_FRENCH_LOW_COUNTRIES = {
         building_logging_camp = 3
         building_fishing_wharf = 6
         building_copper_mine = 15
+        building_stone_mine = 26
     }
     naval_exit_id = 3028
 }
@@ -682,6 +704,7 @@ STATE_ALSACE_LORRAINE = {
         building_iron_mine = 60
         building_logging_camp = 17
         building_copper_mine = 39
+        building_stone_mine = 24
     }
 }
 
@@ -733,6 +756,7 @@ STATE_AUVERGNE_LIMOUSIN = {
         building_iron_mine = 15
         building_logging_camp = 8
         building_copper_mine = 16
+        building_stone_mine = 13
     }
 }
 
@@ -770,6 +794,7 @@ STATE_BURGUNDY = {
         building_iron_mine = 33
         building_logging_camp = 9
         building_copper_mine = 16
+        building_stone_mine = 11
     }
 }
 
@@ -788,6 +813,7 @@ STATE_CHAMPAGNE = {
         building_iron_mine = 21
         building_logging_camp = 11
         building_copper_mine = 10
+        building_stone_mine = 7
     }
 }
 
@@ -805,6 +831,7 @@ STATE_FRANCHE_COMTE = {
         building_iron_mine = 20
         building_logging_camp = 9
         building_copper_mine = 10
+        building_stone_mine = 7
     }
 }
 
@@ -825,6 +852,7 @@ STATE_LORRAINE = {
         building_logging_camp = 17
         building_copper_mine = 40
         building_tin_mine = 18
+        building_stone_mine = 18
     }
 }
 
@@ -844,6 +872,7 @@ STATE_AQUITAINE = {
         building_logging_camp = 14
         building_fishing_wharf = 11
         building_copper_mine = 10
+        building_stone_mine = 18
     }
     naval_exit_id = 3029
 }
@@ -918,6 +947,7 @@ STATE_GELRE = {
         building_logging_camp = 9
         building_copper_mine = 6
         building_tin_mine = 3
+        building_stone_mine = 7
     }
 }
 
@@ -939,6 +969,7 @@ STATE_WALLONIA = {
         building_sulfur_mine = 30
         building_logging_camp = 17
         building_copper_mine = 40
+        building_stone_mine = 22
     }
 }
 
@@ -975,6 +1006,7 @@ STATE_AUSTRIA = {
         building_coal_mine = 44
         building_logging_camp = 7
         building_copper_mine = 7
+        building_stone_mine = 11
     }
 }
 
@@ -996,6 +1028,7 @@ STATE_BOHEMIA = {
         building_lead_mine = 8
         building_gold_mine = 5
         building_copper_mine = 39
+        building_stone_mine = 16
     }
 }
 
@@ -1013,6 +1046,7 @@ STATE_MORAVIA = {
         building_coal_mine = 56
         building_logging_camp = 14
         building_copper_mine = 8
+        building_stone_mine = 14
     }
 }
 
@@ -1033,6 +1067,7 @@ STATE_STYRIA = {
         building_lead_mine = 24
         building_logging_camp = 8
         building_copper_mine = 30
+        building_stone_mine = 13
     }
 }
 
@@ -1052,6 +1087,7 @@ STATE_TYROL = {
         building_iron_mine = 36
         building_logging_camp = 9
         building_copper_mine = 20
+        building_stone_mine = 13
     }
 }
 
@@ -1126,6 +1162,7 @@ STATE_EAST_SWITZERLAND = {
         building_lead_mine = 30
         building_logging_camp = 17
         building_copper_mine = 30
+        building_stone_mine = 14
     }
 }
 
@@ -1147,6 +1184,7 @@ STATE_WEST_SWITZERLAND = {
         building_logging_camp = 6
         building_copper_mine = 31
         building_tin_mine = 14
+        building_stone_mine = 13
     }
 }
 
@@ -1168,6 +1206,7 @@ STATE_WESTPHALIA = {
         building_sulfur_mine = 32
         building_logging_camp = 24
         building_copper_mine = 38
+        building_stone_mine = 21
     }
 }
 
@@ -1187,6 +1226,7 @@ STATE_ANHALT = {
         building_coal_mine = 44
         building_logging_camp = 20
         building_copper_mine = 7
+        building_stone_mine = 11
     }
 }
 
@@ -1206,6 +1246,7 @@ STATE_RHINELAND = {
         building_lead_mine = 30
         building_logging_camp = 11
         building_copper_mine = 24
+        building_stone_mine = 17
     }
 }
 
@@ -1225,6 +1266,7 @@ STATE_NORTH_RHINE = {
         building_iron_mine = 20
         building_logging_camp = 7
         building_copper_mine = 14
+        building_stone_mine = 9
     }
 }
 
@@ -1243,6 +1285,7 @@ STATE_BRANDENBURG = {
         building_coal_mine = 44
         building_logging_camp = 6
         building_copper_mine = 7
+        building_stone_mine = 11
     }
 }
 
@@ -1297,6 +1340,7 @@ STATE_BADEN = {
         building_iron_mine = 15
         building_logging_camp = 11
         building_copper_mine = 10
+        building_stone_mine = 7
     }
 }
 
@@ -1316,6 +1360,7 @@ STATE_HANNOVER = {
         building_logging_camp = 9
         building_fishing_wharf = 4
         building_copper_mine = 12
+        building_stone_mine = 8
     }
     naval_exit_id = 3027
 }
@@ -1338,6 +1383,7 @@ STATE_BRUNSWICK = {
         building_logging_camp = 6
         building_copper_mine = 40
         building_tin_mine = 18
+        building_stone_mine = 17
     }
 }
 
@@ -1358,6 +1404,7 @@ STATE_BAVARIA = {
         building_lead_mine = 30
         building_logging_camp = 23
         building_copper_mine = 39
+        building_stone_mine = 18
     }
 }
 
@@ -1375,6 +1422,7 @@ STATE_FRANCONIA = {
         building_iron_mine = 30
         building_logging_camp = 17
         building_copper_mine = 15
+        building_stone_mine = 10
     }
 }
 
@@ -1396,6 +1444,7 @@ STATE_SAXONY = {
         building_sulfur_mine = 80
         building_logging_camp = 6
         building_copper_mine = 40
+        building_stone_mine = 26
     }
 }
 
@@ -1417,6 +1466,7 @@ STATE_HESSE = {
         building_logging_camp = 8
         building_copper_mine = 34
         building_tin_mine = 15
+        building_stone_mine = 16
     }
 }
 
@@ -1455,6 +1505,7 @@ STATE_RUHR = {
         building_iron_mine = 10
         building_logging_camp = 4
         building_copper_mine = 13
+        building_stone_mine = 12
     }
 }
 
@@ -1474,5 +1525,6 @@ STATE_MAINE_ANJOU = {
         building_logging_camp = 11
         building_copper_mine = 15
         building_tin_mine = 7
+        building_stone_mine = 8
     }
 }
