@@ -322,34 +322,56 @@
 	s:STATE_UPPER_ANDALUSIA = {
 		region_state:CAS = {
 			create_pop = {
-				culture = spanish
-				size = 1188141
-			}
-		}
-		region_state:GBR = {
-			create_pop = {
-				culture = british
-				size = 4510
-			}
-			create_pop = {
-				culture = spanish
-				size = 3010
-			}
-			create_pop = {
-				culture = north_italian
-				size = 2210
+				culture = andalucian
+				religion = catholic
+				size = 263345
 			}
 			create_pop = {
 				culture = sephardic
-				size = 2244
+				religion = jewish
+				size = 493
+			}
+		}
+		region_state:GRA = {
+			create_pop = {
+				culture = andalucian
+				religion = sunni
+				size = 175563
 			}
 			create_pop = {
-				culture = portuguese
-				size = 1401
+				culture = sephardic
+				religion = jewish
+				size = 328
 			}
 			create_pop = {
-				culture = maltese
-				size = 410
+				culture = andalucian
+				religion = sunni
+				size = 409648
+			}
+			create_pop = {
+				culture = sephardic
+				religion = jewish
+				size = 766
+			}
+			create_pop = {
+				culture = andalucian
+				religion = sunni
+				size = 87782
+			}
+			create_pop = {
+				culture = sephardic
+				religion = jewish
+				size = 164
+			}
+			create_pop = {
+				culture = andalucian
+				religion = sunni
+				size = 263345
+			}
+			create_pop = {
+				culture = sephardic
+				religion = jewish
+				size = 493
 			}
 		}
 	}

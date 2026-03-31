@@ -62,7 +62,7 @@ province_governors = {
 	category = society
 
 	modifier = {
-		state_incorporation_speed_mult = 0.05
+		state_contiguous_incorporation_speed_mult = 0.05
 	}
 
 	unlocking_technologies = {
@@ -313,6 +313,43 @@ organized_religion = {
 	}
 }
 
+landed_voting = {
+	# Unlocks Landed Voting Law
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/nobles_rights_laws.dds"
+	category = society
+
+	unlocking_technologies = {
+		tech_bureaucracy
+	}
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+tech_bureaucracy = {
+	# Unlocks Government Administration building
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/bureaucracy_law.dds"
+	category = society
+
+	modifier = {
+		country_institution_police_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		legalism
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
 ############# AGE 2 #################
 
 renaissance = {
@@ -425,33 +462,14 @@ patron_of_arts = {
 	}
 }
 
-renaissance_sculptures = {
-	# Unlocks Art Center
-	era = era_2
-	texture = "gfx/interface/icons/goods_icons/stone.dds"
-	category = society
-
-	unlocking_technologies = {
-		patron_of_arts
-	}
-
-	modifier = {
-		building_stone_mine_uyr_throughput_add = 0.1
-	}
-
-	ai_weight = {
-		value = 1 # Very important in general
-	}
-}
-
-landed_voting = {
-	# Unlocks Landed Voting Law
+wealth_voting = {
+	# Unlocks Wealth Voting Law
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/nobles_rights_laws.dds"
 	category = society
 
 	unlocking_technologies = {
-		renaissance
+		formalized_administration
 	}
 
 	modifier = {
@@ -473,7 +491,7 @@ local_police_force = {
 	}
 
 	unlocking_technologies = {
-		landed_voting
+		land_based_taxation
 	}
 
 	ai_weight = {
@@ -576,27 +594,6 @@ double_entry_bookkeeping = {
 	}
 }
 
-tech_bureaucracy = {
-	# Unlocks Government Administration building
-	# Unlocks Isolationism - Economic System Law
-	# Unlocks Road Maintenance Decree
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/bureaucracy_law.dds"
-	category = society
-
-	modifier = {
-		country_institution_police_max_investment_add = 2
-	}
-
-	unlocking_technologies = {
-		banking
-	}
-
-	ai_weight = {
-		value = 3 # Very important in general
-	}
-}
-
 land_based_taxation = {
 	# Unlocks Land Based Taxation
 	era = era_2
@@ -607,7 +604,7 @@ land_based_taxation = {
 	}
 
 	unlocking_technologies = {
-		tech_bureaucracy
+		formalized_administration
 	}
 
 	ai_weight = {
@@ -650,6 +647,27 @@ guild_charters = {
 		value = 3 # very important tech
 	}
 }
+
+formalized_administration = {
+	# Unlocks Government Administration PM
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/bureaucracy_law.dds"
+	category = society
+
+	modifier = {
+		country_institution_police_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		renaissance
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
+
 
 ############ ERA 3 #####################
 new_world = {
@@ -983,6 +1001,23 @@ dissemination_of_knowledge = {
 
 	ai_weight = {
 		value = 1
+	}
+}
+
+census_suffrage = {
+	# Unlocks Census Suffrage Law
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/nobles_rights_laws.dds"
+	category = society
+
+	unlocking_technologies = {
+	}
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
 	}
 }
 

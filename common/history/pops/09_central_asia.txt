@@ -395,34 +395,63 @@
 		}
 	}
 	s:STATE_AKMOLINSK = {
+		region_state:NOG = {
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 11561
+			}
+		}
 		region_state:BUK = {
 			create_pop = {
 				culture = kazak
-				size = 113348
-			}
-			create_pop = {
-				culture = russian
-				size = 5408
+				religion = sunni
+				size = 67333
 			}
 			create_pop = {
 				culture = kazak
-				size = 21500
+				religion = sunni
+				size = 2748
 			}
 			create_pop = {
-				culture = russian
-				size = 16451
+				culture = kazak
+				religion = sunni
+				size = 24047
 			}
 			create_pop = {
-				culture = mordvin
-				size = 3581
+				culture = kazak
+				religion = sunni
+				size = 9352
 			}
 			create_pop = {
-				culture = ukrainian
-				size = 5004
+				culture = kazak
+				religion = sunni
+				size = 12024
 			}
 			create_pop = {
-				culture = tatar
-				size = 2240
+				culture = kazak
+				religion = sunni
+				size = 776
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 11636
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 12024
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 4008
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 12024
 			}
 		}
 	}
@@ -662,44 +691,80 @@
 		}
 	}
 	s:STATE_SYRDARYA = {
-		region_state:BUK = {
+		region_state:KYR = {
 			create_pop = {
 				culture = kazak
-				size = 170120
+				religion = sunni
+				size = 44738
 			}
 			create_pop = {
 				culture = kirgiz
-				size = 21520
+				religion = sunni
+				size = 4474
+			}
+		}
+		region_state:TJI = {
+			create_pop = {
+				culture = uzbek
+				religion = sunni
+				size = 53685
 			}
 			create_pop = {
 				culture = uzbek
-				size = 5105
+				religion = sunni
+				size = 26843
 			}
 		}
-		region_state:BUK = {
+		region_state:UZB = {
 			create_pop = {
 				culture = kazak
-				size = 36500
+				religion = sunni
+				size = 26843
 			}
-		}
-		region_state:BUK = {
 			create_pop = {
 				culture = kazak
-				size = 55000
+				religion = sunni
+				size = 10737
 			}
-			create_pop = {
-				culture = uzbek
-				size = 4100
-			}
-		}
-		region_state:BUK = {
 			create_pop = {
 				culture = kazak
-				size = 125000
+				religion = sunni
+				size = 35279
 			}
 			create_pop = {
-				culture = uzbek
-				size = 31005
+				culture = kazak
+				religion = sunni
+				size = 26843
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 53685
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 80528
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 51954
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 866
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 26843
+			}
+			create_pop = {
+				culture = kazak
+				religion = sunni
+				size = 5033
 			}
 		}
 	}

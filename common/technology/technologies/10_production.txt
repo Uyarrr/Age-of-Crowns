@@ -277,7 +277,7 @@ distillery = {
 	category = production
 
 	unlocking_technologies = {
-		pottery
+		brewery
 	}
 
 	ai_weight = {
@@ -432,6 +432,20 @@ dyed_furnitures = {
 	# Unlocks Furniture PM
 	era = era_2
 	texture = "gfx/interface/icons/goods_icons/furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+manured_fields = {
+	# Unlocks Grain Main PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/wheat.dds"
 	category = production
 
 	unlocking_technologies = {
