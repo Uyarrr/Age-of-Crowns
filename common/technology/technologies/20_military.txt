@@ -392,7 +392,7 @@ coastal_expansion = {
 supply_lines = {
 	#Unlocks Port PM 2
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/ship_1.dds"
+	texture = "gfx/interface/icons/invention_icons/navy.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -633,7 +633,7 @@ iron_weapons = {
 oceanic_navigation = {
 	# Unlocks Port PM
 	era = era_3
-	texture = "gfx/interface/icons/goods_icons/oceanic_navigation.dds"
+	texture = "gfx/interface/icons/invention_icons/oceanic_exploration.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -646,6 +646,8 @@ oceanic_navigation = {
 }
 
 ### ERA 4
+
+### ERA 5
 
 arms_industry = {
 	# Unlocks Arms Industry

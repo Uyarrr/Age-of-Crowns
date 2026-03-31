@@ -10,3 +10,15 @@ pmg_building_chancery_main = {
 		pm_building_chancery_main_4
 	}
 }
+
+################## University #######################
+pmg_building_university_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_university_main_1
+		pm_building_university_main_2
+		pm_building_university_main_3
+	}
+}
