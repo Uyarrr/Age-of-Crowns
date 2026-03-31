@@ -33,6 +33,7 @@ STATE_LOUISIANA = {
         building_logging_camp = 13
         building_fishing_wharf = 12
         building_copper_mine = 12
+        building_stone_mine = 10
     }
     naval_exit_id = 3060
 }
@@ -55,6 +56,7 @@ STATE_NEW_YORK = {
         building_whaling_station = 5
         building_fishing_wharf = 6
         building_copper_mine = 22
+        building_stone_mine = 15
     }
     naval_exit_id = 3067
 }
@@ -77,6 +79,7 @@ STATE_VIRGINIA = {
         building_logging_camp = 17
         building_fishing_wharf = 8
         building_copper_mine = 24
+        building_stone_mine = 17
     }
     naval_exit_id = 3067
 }
@@ -100,6 +103,7 @@ STATE_ALASKA = {
         building_whaling_station = 8
         building_fishing_wharf = 10
         building_copper_mine = 5
+        building_stone_mine = 8
     }
     resource = {
         type = "building_gold_field"
@@ -127,6 +131,7 @@ STATE_WASHINGTON = {
         building_fishing_wharf = 6
         building_whaling_station = 3
         building_copper_mine = 5
+        building_stone_mine = 8
     }
     naval_exit_id = 3154
 }
@@ -182,6 +187,7 @@ STATE_COLORADO = {
         building_coal_mine = 40
         building_logging_camp = 9
         building_copper_mine = 6
+        building_stone_mine = 10
     }
     resource = {
         type = "building_gold_field"
@@ -205,6 +211,7 @@ STATE_WYOMING = {
         building_coal_mine = 48
         building_logging_camp = 13
         building_copper_mine = 7
+        building_stone_mine = 12
     }
 }
 
@@ -224,6 +231,7 @@ STATE_MONTANA = {
         building_iron_mine = 33
         building_logging_camp = 17
         building_copper_mine = 28
+        building_stone_mine = 21
     }
 }
 
@@ -242,6 +250,7 @@ STATE_NORTH_DAKOTA = {
         building_coal_mine = 48
         building_logging_camp = 11
         building_copper_mine = 7
+        building_stone_mine = 12
     }
 }
 
@@ -260,6 +269,7 @@ STATE_SOUTH_DAKOTA = {
         building_coal_mine = 32
         building_logging_camp = 9
         building_copper_mine = 5
+        building_stone_mine = 8
     }
     resource = {
         type = "building_gold_field"
@@ -300,6 +310,7 @@ STATE_KANSAS = {
         building_lead_mine = 18
         building_logging_camp = 7
         building_copper_mine = 14
+        building_stone_mine = 10
     }
 }
 
@@ -317,6 +328,7 @@ STATE_OKLAHOMA = {
         building_coal_mine = 40
         building_logging_camp = 7
         building_copper_mine = 6
+        building_stone_mine = 10
     }
 }
 
@@ -335,6 +347,7 @@ STATE_ARKANSAS = {
         building_lead_mine = 45
         building_logging_camp = 11
         building_copper_mine = 22
+        building_stone_mine = 15
     }
 }
 
@@ -353,6 +366,7 @@ STATE_MISSOURI = {
         building_lead_mine = 36
         building_logging_camp = 16
         building_copper_mine = 18
+        building_stone_mine = 12
     }
 }
 
@@ -372,6 +386,7 @@ STATE_IOWA = {
         building_sulfur_mine = 40
         building_logging_camp = 11
         building_copper_mine = 20
+        building_stone_mine = 19
     }
 }
 
@@ -391,6 +406,7 @@ STATE_MINNESOTA = {
         building_sulfur_mine = 40
         building_logging_camp = 40
         building_copper_mine = 32
+        building_stone_mine = 18
     }
 }
 
@@ -410,6 +426,7 @@ STATE_WISCONSIN = {
         building_sulfur_mine = 32
         building_logging_camp = 35
         building_copper_mine = 20
+        building_stone_mine = 11
     }
 }
 
@@ -428,6 +445,7 @@ STATE_INDIANA = {
         building_coal_mine = 48
         building_logging_camp = 28
         building_copper_mine = 7
+        building_stone_mine = 12
     }
 }
 
@@ -447,6 +465,7 @@ STATE_MICHIGAN = {
         building_sulfur_mine = 32
         building_logging_camp = 50
         building_copper_mine = 38
+        building_stone_mine = 20
     }
 }
 
@@ -466,6 +485,7 @@ STATE_OHIO = {
         building_lead_mine = 36
         building_logging_camp = 30
         building_copper_mine = 27
+        building_stone_mine = 18
     }
 }
 
@@ -485,6 +505,7 @@ STATE_KENTUCKY = {
         building_iron_mine = 33
         building_logging_camp = 17
         building_copper_mine = 38
+        building_stone_mine = 32
     }
 }
 
@@ -503,6 +524,7 @@ STATE_TENNESSEE = {
         building_iron_mine = 30
         building_logging_camp = 17
         building_copper_mine = 15
+        building_stone_mine = 10
     }
 }
 
@@ -523,6 +545,7 @@ STATE_MISSISSIPPI = {
         building_logging_camp = 14
         building_fishing_wharf = 5
         building_copper_mine = 6
+        building_stone_mine = 10
     }
     naval_exit_id = 3060
 }
@@ -546,6 +569,7 @@ STATE_ALABAMA = {
         building_logging_camp = 17
         building_fishing_wharf = 3
         building_copper_mine = 31
+        building_stone_mine = 13
     }
     naval_exit_id = 3060
 }
@@ -567,6 +591,7 @@ STATE_FLORIDA = {
         building_fishing_wharf = 15
         building_sulfur_mine = 42
         building_copper_mine = 10
+        building_stone_mine = 12
     }
     naval_exit_id = 3060
 }
@@ -605,6 +630,7 @@ STATE_WEST_VIRGINIA = {
         building_iron_mine = 24
         building_logging_camp = 17
         building_copper_mine = 24
+        building_stone_mine = 19
     }
 }
 
@@ -660,6 +686,7 @@ STATE_PENNSYLVANIA = {
         building_iron_mine = 57
         building_logging_camp = 23
         building_copper_mine = 40
+        building_stone_mine = 33
     }
 }
 
@@ -680,6 +707,7 @@ STATE_NEW_JERSEY = {
         building_logging_camp = 6
         building_fishing_wharf = 10
         building_copper_mine = 22
+        building_stone_mine = 15
     }
     naval_exit_id = 3067
 }
@@ -700,6 +728,7 @@ STATE_ILLINOIS = {
         building_lead_mine = 90
         building_logging_camp = 22
         building_copper_mine = 40
+        building_stone_mine = 28
     }
 }
 
@@ -741,6 +770,7 @@ STATE_CONNECTICUT = {
         building_fishing_wharf = 5
         building_logging_camp = 6
         building_copper_mine = 8
+        building_stone_mine = 5
     }
     naval_exit_id = 3067
 }
@@ -764,6 +794,7 @@ STATE_MASSACHUSETTS = {
         building_whaling_station = 8
         building_fishing_wharf = 10
         building_copper_mine = 26
+        building_stone_mine = 18
     }
     naval_exit_id = 3067
 }
@@ -803,6 +834,7 @@ STATE_VERMONT = {
         building_iron_mine = 18
         building_logging_camp = 14
         building_copper_mine = 9
+        building_stone_mine = 6
     }
 }
 
@@ -843,6 +875,7 @@ STATE_NORTH_CAROLINA = {
         building_logging_camp = 15
         building_fishing_wharf = 6
         building_copper_mine = 5
+        building_stone_mine = 8
     }
     naval_exit_id = 3067
 }
@@ -862,6 +895,7 @@ STATE_UTAH = {
         building_iron_mine = 30
         building_logging_camp = 6
         building_copper_mine = 15
+        building_stone_mine = 10
     }
 }
 
@@ -901,6 +935,7 @@ STATE_HAWAIIAN_ISLANDS = {
         building_whaling_station = 10
         building_fishing_wharf = 8
         building_copper_mine = 6
+        building_stone_mine = 4
     }
     naval_exit_id = 3001
 }
@@ -921,6 +956,7 @@ STATE_ONTARIO = {
         building_sulfur_mine = 48
         building_logging_camp = 90
         building_copper_mine = 12
+        building_stone_mine = 14
     }
 }
 
@@ -942,6 +978,7 @@ STATE_NEW_BRUNSWICK = {
         building_logging_camp = 30
         building_fishing_wharf = 8
         building_copper_mine = 34
+        building_stone_mine = 20
     }
     naval_exit_id = 3017
 }
@@ -965,6 +1002,7 @@ STATE_QUEBEC = {
         building_whaling_station = 4
         building_fishing_wharf = 8
         building_copper_mine = 30
+        building_stone_mine = 20
     }
     naval_exit_id = 3045
 }
@@ -989,6 +1027,7 @@ STATE_NEWFOUNDLAND = {
         building_whaling_station = 6
         building_fishing_wharf = 10
         building_copper_mine = 24
+        building_stone_mine = 11
     }
     naval_exit_id = 3045
 }
@@ -1009,6 +1048,7 @@ STATE_ALBERTA = {
         building_sulfur_mine = 32
         building_logging_camp = 70
         building_copper_mine = 15
+        building_stone_mine = 14
     }
 }
 
@@ -1031,6 +1071,7 @@ STATE_BRITISH_COLUMBIA = {
         building_whaling_station = 6
         building_fishing_wharf = 9
         building_copper_mine = 13
+        building_stone_mine = 12
     }
     resource = {
         type = "building_gold_field"
@@ -1055,6 +1096,7 @@ STATE_SASKATCHEWAN = {
         building_coal_mine = 40
         building_logging_camp = 40
         building_copper_mine = 6
+        building_stone_mine = 10
     }
 }
 
@@ -1091,6 +1133,7 @@ STATE_YUKON_TERRITORY = {
         building_iron_mine = 15
         building_logging_camp = 25
         building_copper_mine = 8
+        building_stone_mine = 5
     }
     resource = {
         type = "building_gold_field"
@@ -1115,6 +1158,7 @@ STATE_NORTHWEST_TERRITORIES = {
         building_iron_mine = 18
         building_logging_camp = 40
         building_copper_mine = 9
+        building_stone_mine = 6
     }
 }
 
@@ -1170,6 +1214,7 @@ STATE_TEXAS = {
         building_logging_camp = 7
         building_fishing_wharf = 6
         building_copper_mine = 13
+        building_stone_mine = 12
     }
     naval_exit_id = 3060
 }
@@ -1189,6 +1234,7 @@ STATE_NEVADA = {
         building_iron_mine = 24
         building_logging_camp = 4
         building_copper_mine = 12
+        building_stone_mine = 8
     }
     resource = {
         type = "building_gold_field"
@@ -1211,6 +1257,7 @@ STATE_ARIZONA = {
         building_iron_mine = 21
         building_logging_camp = 2
         building_copper_mine = 10
+        building_stone_mine = 7
     }
     resource = {
         type = "building_gold_field"
@@ -1234,6 +1281,7 @@ STATE_NEW_MEXICO = {
         building_coal_mine = 20
         building_logging_camp = 6
         building_copper_mine = 4
+        building_stone_mine = 5
     }
 }
 
@@ -1256,6 +1304,7 @@ STATE_CALIFORNIA = {
         building_fishing_wharf = 14
         building_whaling_station = 6
         building_copper_mine = 26
+        building_stone_mine = 15
     }
     resource = {
         type = "building_gold_field"
@@ -1282,6 +1331,7 @@ STATE_SONORA = {
         building_logging_camp = 4
         building_fishing_wharf = 7
         building_copper_mine = 14
+        building_stone_mine = 9
     }
     resource = {
         type = "building_gold_field"
@@ -1306,6 +1356,7 @@ STATE_CHIHUAHUA = {
         building_lead_mine = 18
         building_logging_camp = 6
         building_copper_mine = 9
+        building_stone_mine = 6
     }
 }
 
@@ -1344,6 +1395,7 @@ STATE_DURANGO = {
         building_logging_camp = 4
         building_fishing_wharf = 5
         building_copper_mine = 8
+        building_stone_mine = 6
     }
 }
 
@@ -1364,6 +1416,7 @@ STATE_SINALOA = {
         building_logging_camp = 7
         building_fishing_wharf = 5
         building_copper_mine = 8
+        building_stone_mine = 6
     }
     naval_exit_id = 3153
 }
@@ -1382,6 +1435,7 @@ STATE_BAJIO = {
         building_iron_mine = 23
         building_gold_mine = 4
         building_copper_mine = 16
+        building_stone_mine = 9
     }
 }
 
@@ -1419,6 +1473,7 @@ STATE_MEXICO = {
         building_lead_mine = 12
         building_logging_camp = 7
         building_copper_mine = 10
+        building_stone_mine = 5
     }
 }
 
@@ -1440,6 +1495,7 @@ STATE_VERACRUZ = {
         building_logging_camp = 6
         building_fishing_wharf = 7
         building_copper_mine = 10
+        building_stone_mine = 5
     }
     naval_exit_id = 3060
 }
@@ -1462,6 +1518,7 @@ STATE_GUERRERO = {
         building_logging_camp = 8
         building_fishing_wharf = 4
         building_copper_mine = 11
+        building_stone_mine = 8
     }
     resource = {
         type = "building_gold_field"
@@ -1489,6 +1546,7 @@ STATE_OAXACA = {
         building_logging_camp = 7
         building_fishing_wharf = 4
         building_copper_mine = 11
+        building_stone_mine = 8
     }
     resource = {
         type = "building_gold_field"
@@ -1515,6 +1573,7 @@ STATE_JALISCO = {
         building_logging_camp = 18
         building_fishing_wharf = 8
         building_copper_mine = 16
+        building_stone_mine = 11
     }
     naval_exit_id = 3155
 }
@@ -1533,6 +1592,7 @@ STATE_ZACATECAS = {
     capped_resources = {
         building_iron_mine = 23
         building_copper_mine = 12
+        building_stone_mine = 8
     }
     resource = {
         type = "building_gold_field"

@@ -18,6 +18,7 @@
         building_fishing_wharf = 6
         building_whaling_station = 4
         building_copper_mine = 19
+        building_stone_mine = 12
     }
     naval_exit_id = 3024
 }
@@ -64,6 +65,7 @@ STATE_ZULIA = {
         building_logging_camp = 9
         building_fishing_wharf = 7
         building_copper_mine = 12
+        building_stone_mine = 10
     }
     naval_exit_id = 3025
 }
@@ -104,6 +106,7 @@ STATE_BOLIVAR = {
         building_fishing_wharf = 3
         building_copper_mine = 15
         building_tin_mine = 7
+        building_stone_mine = 8
     }
     naval_exit_id = 3025
 }
@@ -126,6 +129,7 @@ STATE_ANTIOQUIA = {
         building_logging_camp = 13
         building_fishing_wharf = 8
         building_copper_mine = 23
+        building_stone_mine = 14
     }
     naval_exit_id = 3025
 }
@@ -161,6 +165,7 @@ STATE_CUNDINAMARCA = {
         building_coal_mine = 20
         building_logging_camp = 7
         building_copper_mine = 4
+        building_stone_mine = 5
     }
 }
 
@@ -182,6 +187,7 @@ STATE_CAUCA = {
         building_fishing_wharf = 6
         building_whaling_station = 2
         building_copper_mine = 4
+        building_stone_mine = 5
     }
     naval_exit_id = 3155
 }
@@ -201,6 +207,7 @@ STATE_PASTAZA = {
         building_coal_mine = 28
         building_logging_camp = 25
         building_copper_mine = 4
+        building_stone_mine = 7
     }
 }
 
@@ -222,6 +229,7 @@ STATE_TARAPACA = {
         building_whaling_station = 3
         building_fishing_wharf = 5
         building_copper_mine = 15
+        building_stone_mine = 9
     }
     naval_exit_id = 3152
 }
@@ -244,6 +252,7 @@ STATE_ANTOFAGASTA = {
         building_fishing_wharf = 5
         building_copper_mine = 27
         building_tin_mine = 12
+        building_stone_mine = 13
     }
     resource = {
         type = "building_gold_field"
@@ -301,6 +310,7 @@ STATE_POTOSI = {
         building_logging_camp = 9
         building_gold_mine = 4
         building_copper_mine = 10
+        building_stone_mine = 5
     }
 }
 
@@ -322,6 +332,7 @@ STATE_CAJAMARCA = {
         building_whaling_station = 3
         building_fishing_wharf = 7
         building_copper_mine = 4
+        building_stone_mine = 5
     }
     resource = {
         type = "building_gold_field"
@@ -352,6 +363,7 @@ STATE_LIMA = {
         building_whaling_station = 5
         building_fishing_wharf = 7
         building_copper_mine = 38
+        building_stone_mine = 13
     }
     naval_exit_id = 3024
 }
@@ -374,6 +386,7 @@ STATE_ICA = {
         building_logging_camp = 11
         building_fishing_wharf = 4
         building_copper_mine = 26
+        building_stone_mine = 14
     }
     naval_exit_id = 3152
 }
@@ -396,6 +409,7 @@ STATE_AREQUIPA = {
         building_logging_camp = 4
         building_fishing_wharf = 5
         building_copper_mine = 18
+        building_stone_mine = 11
     }
     naval_exit_id = 3152
 }
@@ -438,6 +452,7 @@ STATE_JUJUY = {
         building_gold_mine = 3
         building_copper_mine = 30
         building_tin_mine = 14
+        building_stone_mine = 11
     }
 }
 
@@ -472,6 +487,7 @@ STATE_BAJO_PARAGUAY = {
         building_iron_mine = 15
         building_logging_camp = 14
         building_copper_mine = 8
+        building_stone_mine = 5
     }
 }
 
@@ -511,6 +527,7 @@ STATE_PATAGONIA = {
         building_sulfur_mine = 20
         building_fishing_wharf = 7
         building_copper_mine = 10
+        building_stone_mine = 9
     }
     naval_exit_id = 3066
 }
@@ -531,6 +548,7 @@ STATE_RIO_NEGRO = {
         building_coal_mine = 40
         building_sulfur_mine = 52
         building_copper_mine = 19
+        building_stone_mine = 17
     }
 }
 
@@ -602,6 +620,7 @@ STATE_TUCUMAN = {
         building_gold_mine = 3
         building_logging_camp = 6
         building_copper_mine = 30
+        building_stone_mine = 13
     }
 }
 
@@ -642,6 +661,7 @@ STATE_SANTIAGO = {
         building_whaling_station = 2
         building_fishing_wharf = 8
         building_copper_mine = 30
+        building_stone_mine = 15
     }
     naval_exit_id = 3152
 }
@@ -667,6 +687,7 @@ STATE_LOS_RIOS = {
         building_whaling_station = 3
         building_fishing_wharf = 10
         building_copper_mine = 29
+        building_stone_mine = 16
     }
     naval_exit_id = 3152
 }
@@ -688,6 +709,7 @@ STATE_ARAUCANIA = {
         building_logging_camp = 30
         building_fishing_wharf = 15
         building_copper_mine = 10
+        building_stone_mine = 11
     }
     resource = {
         type = "building_gold_field"
@@ -737,6 +759,7 @@ STATE_PARA = {
         building_iron_mine = 78
         building_copper_mine = 39
         building_tin_mine = 18
+        building_stone_mine = 20
     }
     naval_exit_id = 3062
 }
@@ -826,6 +849,7 @@ STATE_MATO_GROSSO = {
         building_iron_mine = 18
         building_copper_mine = 9
         building_tin_mine = 4
+        building_stone_mine = 5
     }
 }
 
@@ -848,6 +872,7 @@ STATE_RIO_GRANDE_DO_SUL = {
         building_whaling_station = 2
         building_lead_mine = 30
         building_copper_mine = 19
+        building_stone_mine = 12
     }
     naval_exit_id = 3064
 }
@@ -870,6 +895,7 @@ STATE_PARANA = {
         building_fishing_wharf = 3
         building_whaling_station = 2
         building_copper_mine = 4
+        building_stone_mine = 5
     }
     naval_exit_id = 3064
 }
@@ -892,6 +918,7 @@ STATE_SANTA_CATARINA = {
         building_fishing_wharf = 2
         building_whaling_station = 2
         building_copper_mine = 4
+        building_stone_mine = 5
     }
     naval_exit_id = 3064
 }
@@ -931,6 +958,7 @@ STATE_MINAS_GERAIS = {
         building_lead_mine = 30
         building_logging_camp = 24
         building_copper_mine = 40
+        building_stone_mine = 17
     }
     resource = {
         type = "building_gold_field"
@@ -976,6 +1004,7 @@ STATE_BAHIA = {
         building_logging_camp = 18
         building_fishing_wharf = 8
         building_copper_mine = 8
+        building_stone_mine = 5
     }
     naval_exit_id = 3063
 }
@@ -1016,6 +1045,7 @@ STATE_CEARA = {
         building_logging_camp = 7
         building_fishing_wharf = 3
         building_copper_mine = 9
+        building_stone_mine = 6
     }
     naval_exit_id = 3063
 }
@@ -1037,6 +1067,7 @@ STATE_PIAUI = {
         building_logging_camp = 14
         building_fishing_wharf = 7
         building_copper_mine = 18
+        building_stone_mine = 12
     }
     naval_exit_id = 3063
 }
