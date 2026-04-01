@@ -285,31 +285,153 @@
 			}
 		}
 	}
-	s:STATE_OUTER_MANCHURIA = { #DONE
-		region_state:CHI = {
+	s:STATE_OUTER_MANCHURIA = {
+		region_state:OCH = {
 			create_pop = {
-				culture = siberian
-				size = 67800
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 6891
 			}
 			create_pop = {
 				culture = manchu
-				size = 8200
+				religion = tengri_pagan_reformed
+				size = 10336
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 8039
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 3445
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 6891
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 6891
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 6891
+			}
+		}
+		region_state:NVK = {
+			create_pop = {
+				culture = siberian
+				religion = tengri_pagan_reformed
+				size = 8422
+			}
+			create_pop = {
+				culture = siberian
+				religion = tengri_pagan_reformed
+				size = 215
+			}
+		}
+		region_state:JHZ = {
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 17227
+			}
+		}
+		region_state:NNI = {
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 431
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 319
 			}
 		}
 	}
-	s:STATE_AMUR = { #DONE
-		region_state:CHI = {
+	s:STATE_AMUR = {
+		region_state:NVK = {
 			create_pop = {
 				culture = siberian
-				size = 81123
+				religion = tengri_pagan_reformed
+				size = 10734
+			}
+			create_pop = {
+				culture = siberian
+				religion = tengri_pagan_reformed
+				size = 6560
+			}
+			create_pop = {
+				culture = siberian
+				religion = tengri_pagan_reformed
+				size = 5032
+			}
+		}
+		region_state:N00 = {
+			create_pop = {
+				culture = evenk
+				religion = tengri_pagan_reformed
+				size = 10734
+			}
+			create_pop = {
+				culture = evenk
+				religion = tengri_pagan_reformed
+				size = 8945
+			}
+			create_pop = {
+				culture = evenk
+				religion = tengri_pagan_reformed
+				size = 5367
+			}
+			create_pop = {
+				culture = evenk
+				religion = tengri_pagan_reformed
+				size = 5367
+			}
+			create_pop = {
+				culture = evenk
+				religion = tengri_pagan_reformed
+				size = 10734
+			}
+			create_pop = {
+				culture = siberian
+				religion = animist
+				size = 2617
+			}
+			create_pop = {
+				culture = siberian
+				religion = animist
+				size = 229
+			}
+			create_pop = {
+				culture = yakut
+				religion = animist
+				size = 21
+			}
+		}
+		region_state:XBE = {
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 5367
+			}
+		}
+		region_state:NNI = {
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 7156
 			}
 			create_pop = {
 				culture = manchu
-				size = 1040
-			}
-			create_pop = {
-				culture = russian
-				size = 450
+				religion = tengri_pagan_reformed
+				size = 4696
 			}
 		}
 	}

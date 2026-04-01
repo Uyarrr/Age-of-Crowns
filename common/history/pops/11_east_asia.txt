@@ -244,19 +244,35 @@
 		}
 	}
 	s:STATE_ALXA = {
-		region_state:CHI = {
-			# Alasha Ööled and Ejine Torghuud banner. Could not find accurate population data, but should be relatively low
+		region_state:OIR = {
 			create_pop = {
 				culture = mongol
-				size = 42992
+				religion = gelugpa
+				size = 13536
 			}
 			create_pop = {
-				culture = manchu
-				size = 196
+				culture = mongol
+				religion = gelugpa
+				size = 13536
 			}
 			create_pop = {
-				culture = han # nanfaren
-				size = 1600
+				culture = mongol
+				religion = gelugpa
+				size = 13536
+			}
+		}
+		region_state:CHI = {
+			create_pop = {
+				culture = mongol
+				religion = gelugpa
+				size = 796
+			}
+		}
+		region_state:MGL = {
+			create_pop = {
+				culture = mongol
+				religion = gelugpa
+				size = 3384
 			}
 		}
 	}
@@ -334,22 +350,43 @@
 	s:STATE_BEIJING = {
 		region_state:CHI = {
 			create_pop = {
-				culture = han # nanfaren
-				size = 11597600
+				culture = han
+				religion = confucian
+				size = 6612767
 			}
 			create_pop = {
-				culture = han # nanfaren
-				size = 3001021
-				religion = mahayana
+				culture = han
+				religion = confucian
+				size = 1603095
 			}
 			create_pop = {
-				culture = han # nanfaren
-				religion = sunni
-				size = 348400
+				culture = han
+				religion = confucian
+				size = 1603095
+			}
+		}
+		region_state:MGL = {
+			create_pop = {
+				culture = mongol
+				religion = gelugpa
+				size = 1402708
 			}
 			create_pop = {
-				culture = manchu
-				size = 81994
+				culture = mongol
+				religion = gelugpa
+				size = 1402708
+			}
+		}
+		region_state:KCH = {
+			create_pop = {
+				culture = mongol
+				religion = gelugpa
+				size = 1402708
+			}
+			create_pop = {
+				culture = mongol
+				religion = gelugpa
+				size = 1001934
 			}
 		}
 	}
@@ -379,40 +416,175 @@
 		region_state:CHI = {
 			create_pop = {
 				culture = manchu
-				size = 5210800
+				religion = confucian
+				size = 32963
 			}
-			create_pop = {
-				culture = han # nanfaren
-				size = 2511992
-			}
-			create_pop = {
-				culture = han # nanfaren
-				size = 511992
-				religion = mahayana
-			}
-			create_pop = {
-				culture = korean
-				size = 504000
-			}
+		}
+		region_state:KCH = {
 			create_pop = {
 				culture = mongol
-				size = 80412
+				religion = gelugpa
+				size = 652663
+			}
+		}
+		region_state:HXI = {
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 1087772
+			}
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 652663
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 558390
+			}
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 507627
+			}
+		}
+		region_state:JHZ = {
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 507627
+			}
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 1232809
+			}
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 942736
+			}
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 725182
+			}
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 580145
+			}
+			create_pop = {
+				culture = manchu
+				religion = confucian
+				size = 507627
+			}
+		}
+		region_state:NNI = {
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 488543
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 342447
 			}
 		}
 	}
 	s:STATE_NORTHERN_MANCHURIA = {
-		region_state:CHI = {
+		region_state:MGL = {
 			create_pop = {
-				culture = manchu
-				size = 2821200
-			}
-			create_pop = {
-				culture = siberian
-				size = 32000
+				culture = buryat
+				religion = tengri_pagan_reformed
+				size = 112263
 			}
 			create_pop = {
 				culture = mongol
-				size = 236404
+				religion = tengri_pagan_reformed
+				size = 112263
+			}
+		}
+		region_state:N00 = {
+			create_pop = {
+				culture = evenk
+				religion = tengri_pagan_reformed
+				size = 261948
+			}
+			create_pop = {
+				culture = evenk
+				religion = tengri_pagan_reformed
+				size = 112263
+			}
+		}
+		region_state:KCH = {
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 374211
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 261948
+			}
+			create_pop = {
+				culture = mongol
+				religion = gelugpa
+				size = 187105
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 112263
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 112263
+			}
+		}
+		region_state:HXI = {
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 123490
+			}
+		}
+		region_state:XBE = {
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 336790
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 187105
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 374211
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 187105
+			}
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 187105
+			}
+		}
+		region_state:NNI = {
+			create_pop = {
+				culture = manchu
+				religion = tengri_pagan_reformed
+				size = 47269
 			}
 		}
 	}
@@ -1026,30 +1198,149 @@
 	}
 	# Population of Outer Mongolia should be somewhat over 600,000, but I could not find data for a more granular distribution in regards to West vs East. Due to the existence of more banners in the East, I have assumed this also means a somewhat higher population.
 	s:STATE_ULIASTAI = {
-		region_state:CHI = {
+		region_state:OIR = {
 			create_pop = {
 				culture = mongol
-				size = 270000
+				religion = tengri_pagan_reformed
+				size = 26495
 			}
 			create_pop = {
-				culture = han
-				size = 623
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 39742
 			}
 			create_pop = {
-				culture = kazak
-				size = 13000
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 17663
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 26495
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 22079
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 10050
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 17663
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 1204
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 37651
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 17663
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 17663
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 17663
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 22079
+			}
+		}
+		region_state:MGL = {
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 9511
 			}
 		}
 	}
 	s:STATE_URGA = {
-		region_state:CHI = {
+		region_state:OIR = {
 			create_pop = {
 				culture = mongol
-				size = 340000
+				religion = tengri_pagan_reformed
+				size = 5279
 			}
 			create_pop = {
-				culture = han
-				size = 996
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 19884
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 3453
+			}
+		}
+		region_state:MGL = {
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 21872
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 29163
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 36454
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 51035
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 29163
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 51035
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 21872
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 29163
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 13460
+			}
+			create_pop = {
+				culture = mongol
+				religion = tengri_pagan_reformed
+				size = 29163
 			}
 		}
 	}
