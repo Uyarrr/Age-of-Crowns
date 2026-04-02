@@ -512,7 +512,7 @@ OIR ?= {
 	color = { 210 220 175 }
 	country_type = recognized
 	tier = principality
-	cultures = { andalucian }
+	cultures = { mongol }
 	religion = sunni
 	capital = STATE_UPPER_ANDALUSIA
 }
@@ -656,3 +656,74 @@ W86 ?= {
 	religion = gelugpa
 	capital = STATE_SICHUAN
 }
+
+# Beloozero
+X48 ?= {
+	color = { 66 32 81 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_NOVGOROD
+}
+
+# Pskov
+U50 ?= {
+	color = { 82 123 95 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_PSKOV
+}
+
+# Guge
+W55 ?= {
+	color = { 50 37 125 }
+	country_type = unrecognized
+	tier = grand_principality
+	cultures = { tibetan }
+	religion = gelugpa
+	capital = STATE_NGARI
+}
+
+# Sadiya
+U78 ?= {
+	color = { 63 115 37 }
+	country_type = unrecognized
+	tier = city_state
+	cultures = { assamese }
+	religion = hindu
+	capital = STATE_EASTERN_HIMALAYAS
+}
+
+# Limbuwan
+V47 ?= {
+	color = { 181 114 3 }
+	country_type = unrecognized
+	tier = grand_principality
+	cultures = { nepali }
+	religion = gelugpa
+	capital = STATE_HIMALAYAS
+}
+
+# Blambang
+X47 ?= {
+	color = { 168 62 31 }
+	country_type = unrecognized
+	tier = grand_principality
+	cultures = { javan }
+	religion = hindu
+	capital = STATE_EAST_JAVA
+}
+
+# Sunda
+T40 ?= {
+	color = { 32 131 135 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { javan }
+	religion = hindu
+	capital = STATE_WEST_JAVA
+}
+

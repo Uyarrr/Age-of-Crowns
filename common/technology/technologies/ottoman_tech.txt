@@ -1,0 +1,131 @@
+﻿ottoman_trait_1 = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/dan_royal_danish_navy.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		state_contiguous_incorporation_speed_mult = 0.25
+	}
+
+	on_researched = {
+		every_state_region = {
+			limit = {
+				region = sr:region_anatolia
+			}
+			add_claim = root
+		}
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+ottoman_trait_2 = {
+	# The Kalmar Union (Denmark–Norway–Sweden) forced Denmark to develop unusually centralized royal administration and noble management for the period.
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/dan_rentekammer_advance.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_authority_mult = 0.05
+		interest_group_ig_landowners_pol_str_mult = -0.10
+		country_liberty_desire_of_subjects_add = -0.04
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+ottoman_trait_3 = {
+	# Denmark invested heavily in protecting Baltic shipping lanes, convoying grain, timber, iron, and naval supplies vital to European powers.
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
+	category = society
+
+	modifier = {
+		country_convoys_capacity_mult = 0.20
+		state_trade_advantage_mult = 0.10
+	}
+
+    can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+ottoman_trait_4 = {
+	# Denmark was one of the earliest adopters of Lutheranism (1536). Unlike many realms, the Reformation was not a chaotic bottom-up movement but a top-down royal project: monasteries were dissolved, church lands confiscated, and the king became head of the national church. This massively strengthened the crown, stabilized religion internally, and redirected church wealth into the state.
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
+	category = society
+
+	unlocking_technologies = {
+		DEN_Baltic_Convoy_System
+	}
+
+    can_research = no
+
+	modifier = {
+		country_conversion_delta_threshold_add = 0.15
+		country_clergymen_pol_str_mult = -0.20
+		country_institution_cost_institution_schools_mult = -0.10
+		country_authority_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+ottoman_trait_5 = {
+	# The Danish crown professionalized the navy earlier than many continental states, treating it as a permanent arm of royal power.
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
+	category = society
+
+	unlocking_technologies = {
+		DEN_Royal_Lutheran_Church_Ordinance
+	}
+
+    can_research = no
+
+	modifier = {
+		unit_navy_offense_mult = 0.1
+		unit_navy_defense_mult = 0.1
+		state_building_naval_base_max_level_add = 10
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+ottoman_trait_6 = {
+	# Denmark abolished serfdom earlier and more peacefully than most of Europe, integrating peasants into a productive agrarian economy.
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/abolished_serfdom.dds"
+	category = society
+
+	unlocking_technologies = {
+		DEN_Royal_Naval_Ordinance
+	}
+
+	modifier = {
+		state_working_adult_ratio_add = 0.05
+		interest_group_ig_landowners_pol_str_mult = -0.10
+		building_group_bg_agriculture_throughput_add = 0.15
+	}
+
+    can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}

@@ -1,10 +1,17 @@
 ﻿nation_trait_1 = {
 	# Unlocks Nationwide Bonus
-	era = era_1
+	era = era_2
 	texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 	category = society
 
     can_research = yes
+
+	on_researched = {
+			if = {
+				limit = { this = c:TUR }
+				add_technology_researched = ottoman_trait_1
+			}
+	}
 
 	ai_weight = {
 		value = 3 # Very important tech in general
@@ -23,6 +30,13 @@ nation_trait_2 = {
 
     can_research = yes
 
+	on_researched = {
+			if = {
+				limit = { this = c:TUR }
+				add_technology_researched = ottoman_trait_2
+			}
+	}
+
 	ai_weight = {
 		value = 3 # Very important tech in general
 	}
@@ -39,6 +53,13 @@ nation_trait_3 = {
 	}
 
     can_research = yes
+
+	on_researched = {
+			if = {
+				limit = { this = c:TUR }
+				add_technology_researched = ottoman_trait_2
+			}
+	}
 
 	ai_weight = {
 		value = 3 # Very important tech in general
@@ -57,6 +78,13 @@ nation_trait_4 = {
 
     can_research = yes
 
+	on_researched = {
+			if = {
+				limit = { this = c:TUR }
+				add_technology_researched = ottoman_trait_3
+			}
+	}
+
 	ai_weight = {
 		value = 3 # Very important tech in general
 	}
@@ -74,6 +102,13 @@ nation_trait_5 = {
 
     can_research = yes
 
+	on_researched = {
+			if = {
+				limit = { this = c:TUR }
+				add_technology_researched = ottoman_trait_4
+			}
+	}
+
 	ai_weight = {
 		value = 3 # Very important tech in general
 	}
@@ -90,6 +125,13 @@ nation_trait_6 = {
 	}
 
     can_research = yes
+
+	on_researched = {
+			if = {
+				limit = { this = c:TUR }
+				add_technology_researched = ottoman_trait_5
+			}
+	}
 
 	ai_weight = {
 		value = 3 # Very important tech in general

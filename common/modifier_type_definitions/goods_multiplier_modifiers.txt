@@ -1,4 +1,4 @@
-goods_input_livestock_mult={
+﻿goods_input_livestock_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -126,6 +126,15 @@ goods_input_beer_mult={
 }
 
 goods_input_cannons_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_weapons_mult={
 	decimals=1
 	color=bad
 	percent=yes
