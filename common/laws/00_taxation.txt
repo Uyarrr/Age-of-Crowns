@@ -117,7 +117,7 @@ law_per_capita_based_taxation = {
 	}
 
 	unlocking_technologies = {
-		currency_standards
+		behaviorism
 	}
 
 	tax_modifier_very_low = {
@@ -167,9 +167,7 @@ law_per_capita_based_taxation = {
 		if = {
 			limit = {
 				OR = {
-					has_technology_researched = civilizing_mission
-					has_technology_researched = human_rights
-					has_technology_researched = pan-nationalism
+					has_technology_researched = behaviorism
 				}
 				has_law_or_variant = law_type:law_land_based_taxation
 			}
@@ -206,7 +204,7 @@ law_proportional_taxation = {
 	}
 
 	unlocking_technologies = {
-		egalitarianism
+		behaviorism
 	}
 
 	tax_modifier_very_low = {
@@ -276,7 +274,7 @@ law_graduated_taxation = {
 	}
 
 	unlocking_technologies = {
-		socialism
+		behaviorism
 	}
 
 	tax_modifier_very_low = {

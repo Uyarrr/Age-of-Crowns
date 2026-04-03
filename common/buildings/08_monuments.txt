@@ -723,7 +723,7 @@ building_cristo_redentor = {
 	}
 
 	unlocking_technologies = {
-		pneumatic_tools
+		behaviorism
 	}
 
 	required_construction = construction_cost_monument
@@ -1229,7 +1229,7 @@ building_sagrada_familia_cathedral_3 = { # Sagrada Família Cathedral, Stage 3 i
 	possible = {
 		owner ?= {
 			has_journal_entry = je_sagrada_familia
-			has_technology_researched = pneumatic_tools	
+			has_technology_researched = behaviorism	
 		}
 	}
 
@@ -1339,7 +1339,7 @@ building_gran_teatro_de_la_habana = { # Gran Teatro de La Habana
 	required_construction = construction_cost_monument
 
 	unlocking_technologies = {
-		pneumatic_tools
+		behaviorism
 	}
 
 	potential = {

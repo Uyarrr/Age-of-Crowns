@@ -154,7 +154,7 @@ law_national_militia = {
 
 	progressiveness = 0
 
-	unlocking_technologies = { mandatory_service }
+	unlocking_technologies = { behaviorism }
 
 	modifier = {
 		unit_morale_loss_mult = -0.05
@@ -213,7 +213,7 @@ law_mass_conscription = {
 
 	progressiveness = 50
 
-	unlocking_technologies = { enlistment_offices }
+	unlocking_technologies = { behaviorism }
 
 	modifier = {
 		unit_morale_loss_mult = 0.05

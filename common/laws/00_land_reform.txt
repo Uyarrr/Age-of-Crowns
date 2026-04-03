@@ -193,9 +193,7 @@ law_tenant_farmers = {
 		if = {
 			limit = {
 				OR = {
-					has_technology_researched = civilizing_mission
-					has_technology_researched = human_rights
-					has_technology_researched = pan-nationalism
+					has_technology_researched = behaviorism
 				}
 				has_law_or_variant = law_type:law_serfdom
 			}
@@ -461,11 +459,7 @@ law_collectivized_agriculture = {
 		}
 	}
 
-	unlocking_laws = {
-		behaviorism
-	}
-
-	unlocking_technologies = { socialism }
+	unlocking_technologies = { behaviorism }
 
 	ai_enact_weight_modifier = { #Petitions
 		value = 0

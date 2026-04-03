@@ -96,9 +96,7 @@ law_interventionism = {
 		if = {
 			limit = {
 				OR = {
-					has_technology_researched = civilizing_mission
-					has_technology_researched = human_rights
-					has_technology_researched = pan-nationalism
+					has_technology_researched = behaviorism
 				}
 				has_law_or_variant = law_type:law_traditionalism
 			}
@@ -193,9 +191,7 @@ law_agrarianism = {
 		if = {
 			limit = {
 				OR = {
-					has_technology_researched = civilizing_mission
-					has_technology_researched = human_rights
-					has_technology_researched = pan-nationalism
+					has_technology_researched = behaviorism
 				}
 				has_law_or_variant = law_type:law_traditionalism
 			}
@@ -251,7 +247,7 @@ law_industry_banned = {
 	}
 
 	unlocking_technologies = {
-		romanticism
+		behaviorism
 	}
 
 	on_activate = {

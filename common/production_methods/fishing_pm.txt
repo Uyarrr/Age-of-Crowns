@@ -26,7 +26,7 @@ pm_building_fishing_wharf_main_2 = {
 		workforce_scaled = {
 			# input
 			goods_input_wood_add = 5
-			goods_input_fiber_uyr_add = 5
+			goods_input_fiber_add = 5
 			# output
 			goods_output_fish_add = 50
 		}
@@ -44,7 +44,7 @@ pm_building_fishing_wharf_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
 
 	unlocking_technologies = {
-		rationalism
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -70,7 +70,7 @@ pm_building_fishing_wharf_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
 
 	unlocking_technologies = {
-		rationalism
+		behaviorism
 	}
 
 	building_modifiers = {
