@@ -361,7 +361,7 @@
 		}
 	}
 	s:STATE_AKMOLINSK = {
-		region_state:U15 = {
+		region_state:NOG = {
 			create_pop = {
 				culture = kazak
 				religion = sunni
@@ -422,7 +422,7 @@
 		}
 	}
 	s:STATE_AKTOBE = {
-		region_state:U15 = {
+		region_state:NOG = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -2298,7 +2298,7 @@
 				size = 4790
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -2445,7 +2445,7 @@
 		}
 	}
 	s:STATE_ASTRAKHAN = {
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -6847,7 +6847,7 @@
 		}
 	}
 	s:STATE_CHELYABINSK = {
-		region_state:U15 = {
+		region_state:NOG = {
 			create_pop = {
 				culture = bashkir
 				religion = sunni
@@ -8017,7 +8017,7 @@
 				size = 866
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = north_caucasian
 				religion = sunni
@@ -9362,7 +9362,7 @@
 		}
 	}
 	s:STATE_EAST_GALICIA = {
-		region_state:POL = {
+		region_state:M34 = {
 			create_pop = {
 				culture = ukrainian
 				religion = orthodox
@@ -9391,6 +9391,8 @@
 				religion = jewish
 				size = 1021
 			}
+		}
+		region_state:POL = {
 			create_pop = {
 				culture = ukrainian
 				religion = orthodox
@@ -11332,7 +11334,7 @@
 				size = 3225
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -12016,7 +12018,7 @@
 		}
 	}
 	s:STATE_GREATER_POLAND = {
-		region_state:POL = {
+		region_state:M34 = {
 			create_pop = {
 				culture = polish
 				religion = catholic
@@ -12037,6 +12039,8 @@
 				religion = jewish
 				size = 11289
 			}
+		}
+		region_state:POL = {
 			create_pop = {
 				culture = polish
 				religion = catholic
@@ -15408,7 +15412,7 @@
 		}
 	}
 	s:STATE_KALMYKIA = {
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -16486,7 +16490,7 @@
 				size = 2305
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -16532,7 +16536,7 @@
 				size = 945
 			}
 		}
-		region_state:U15 = {
+		region_state:NOG = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -17304,7 +17308,7 @@
 				size = 24482
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -17941,7 +17945,7 @@
 				size = 7460
 			}
 		}
-		region_state:POL = {
+		region_state:M34 = {
 			create_pop = {
 				culture = polish
 				religion = catholic
@@ -17952,6 +17956,8 @@
 				religion = jewish
 				size = 6886
 			}
+		}
+		region_state:POL = {
 			create_pop = {
 				culture = polish
 				religion = catholic
@@ -20115,7 +20121,7 @@
 				size = 3482
 			}
 		}
-		region_state:POL = {
+		region_state:M34 = {
 			create_pop = {
 				culture = polish
 				religion = catholic
@@ -20173,19 +20179,6 @@
 		}
 	}
 	s:STATE_MEKONG = {
-		region_state:B08 = {
-			create_pop = {
-				culture = champa
-				religion = animist
-				size = 38321
-			}
-			create_pop = {
-				culture = champa
-				religion = animist
-				pop_type = slaves
-				size = 1540
-			}
-		}
 		region_state:CAM = {
 			create_pop = {
 				culture = khmer
@@ -20240,6 +20233,28 @@
 				pop_type = slaves
 				size = 1540
 			}
+			create_pop = {
+				culture = champa
+				religion = animist
+				size = 38321
+			}
+			create_pop = {
+				culture = champa
+				religion = animist
+				pop_type = slaves
+				size = 1540
+			}
+			create_pop = {
+				culture = champa
+				religion = animist
+				size = 38321
+			}
+			create_pop = {
+				culture = champa
+				religion = animist
+				pop_type = slaves
+				size = 1540
+			}
 		}
 		region_state:SH0 = {
 			create_pop = {
@@ -20271,19 +20286,6 @@
 				culture = champa
 				religion = hindu
 				size = 2566
-			}
-		}
-		region_state:W74 = {
-			create_pop = {
-				culture = champa
-				religion = animist
-				size = 38321
-			}
-			create_pop = {
-				culture = champa
-				religion = animist
-				pop_type = slaves
-				size = 1540
 			}
 		}
 	}
@@ -21380,7 +21382,7 @@
 		}
 	}
 	s:STATE_MOSCOW = {
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -22786,7 +22788,7 @@
 				size = 75549
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -23580,7 +23582,7 @@
 				size = 23883
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = north_caucasian
 				religion = sunni
@@ -24064,7 +24066,7 @@
 				size = 29417
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -25095,7 +25097,7 @@
 				size = 1286
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -26417,7 +26419,7 @@
 				size = 133
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -27393,7 +27395,7 @@
 				size = 7418
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -27498,7 +27500,7 @@
 				size = 7634
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -27675,7 +27677,7 @@
 				size = 98015
 			}
 		}
-		region_state:U15 = {
+		region_state:NOG = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -27687,7 +27689,7 @@
 				size = 118548
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -29089,7 +29091,7 @@
 				size = 406
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -30032,7 +30034,7 @@
 				size = 34020
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = north_caucasian
 				religion = sunni
@@ -30718,14 +30720,14 @@
 				size = 146552
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
 				size = 219827
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -30899,7 +30901,7 @@
 				size = 56757
 			}
 		}
-		region_state:W49 = {
+		region_state:GRH = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -32433,7 +32435,7 @@
 				size = 23125
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -32551,7 +32553,7 @@
 				size = 9734
 			}
 		}
-		region_state:U15 = {
+		region_state:NOG = {
 			create_pop = {
 				culture = bashkir
 				religion = sunni
@@ -33131,7 +33133,7 @@
 		}
 	}
 	s:STATE_URALSK = {
-		region_state:U15 = {
+		region_state:NOG = {
 			create_pop = {
 				culture = tatar
 				religion = sunni
@@ -34103,7 +34105,7 @@
 				size = 152217
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox
@@ -35647,7 +35649,7 @@
 				size = 60634
 			}
 		}
-		region_state:V88 = {
+		region_state:MUS = {
 			create_pop = {
 				culture = russian
 				religion = orthodox

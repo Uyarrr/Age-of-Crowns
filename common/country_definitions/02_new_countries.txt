@@ -71,26 +71,22 @@ BRA = {
 }
 
 # Great Horde
-GRH = {
-	color = { 151 128 102 }
-
+GRH ?= {
+	color = { 193 179 127 }
 	country_type = recognized
-
 	tier = kingdom
-
 	cultures = { tatar }
+	religion = sunni
 	capital = STATE_ASTRAKHAN
 }
 
 # Nogai
-NOG = {
-	color = { 76 118 124 }
-
+NOG ?= {
+	color = { 0 120 145 }
 	country_type = recognized
-
-	tier = principality
-
-	cultures = { kazak }
+	tier = kingdom
+	cultures = { tatar }
+	religion = sunni
 	capital = STATE_URALSK
 }
 
@@ -215,14 +211,12 @@ TLC = {
 }
 
 # Muscovy
-MUS = {
-	color = { 144  118  82 }
-
+MUS ?= {
+	color = { 206 181 97 }
 	country_type = recognized
-
 	tier = principality
-
 	cultures = { russian }
+	religion = orthodox
 	capital = STATE_MOSCOW
 }
 
@@ -726,4 +720,3 @@ T40 ?= {
 	religion = hindu
 	capital = STATE_WEST_JAVA
 }
-

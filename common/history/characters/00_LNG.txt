@@ -1,0 +1,28 @@
+﻿CHARACTERS = {
+	c:LNG = {
+		create_character = {
+			first_name = "Bicullu"
+			last_name = "Loanga"
+			heir = yes
+			culture = cu:bakongo
+			religion = rel:animist
+			birth_date = 1420.1.1
+			traits = {
+				direct 
+			}
+		}
+
+		create_character = {
+			first_name = "Tati"
+			last_name = "Loanga"
+			ruler = yes
+			culture = cu:bakongo
+			religion = rel:animist
+			birth_date = 1426.1.1
+			traits = {
+				basic_political_operator reserved 
+			}
+		}
+
+	}
+}
