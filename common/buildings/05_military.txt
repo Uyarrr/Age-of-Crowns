@@ -13,7 +13,7 @@ building_barrack = {
 	levels_per_mesh = 50
 
 	unlocking_technologies = {
-		professional_army
+		peasant_levy
 	}
 
 	production_method_groups = {
@@ -61,10 +61,10 @@ building_naval_base = {
 
 	icon = "gfx/interface/icons/building_icons/naval_base.dds"
 	naval = yes
-	unlocking_technologies = { admiralty }
+	unlocking_technologies = { cog }
 
 	production_method_groups = {
-		navigation
+		pmg_naval_theory
 	}
 
 	required_construction = construction_cost_very_low

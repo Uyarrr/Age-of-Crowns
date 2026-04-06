@@ -56,15 +56,6 @@ NOV = { # Novgorod
 	}
 }
 
-BRA = { # Brandenburg
-	flag_definition = {
-		coa = BRA
-		subject_canton = BRA
-		allow_overlord_canton = yes
-		priority = 1
-	}
-}
-
 GRH = { # Great Horde
 	flag_definition = {
 		coa = GRH
@@ -214,6 +205,102 @@ BBG = { # Berg
 		coa = BBG
 		subject_canton = BBG
 		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+VJY = { # Vijayanagar
+	flag_definition = {
+		coa = VJY
+		subject_canton = VJY
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+MAI = { # Mainz
+	flag_definition = {
+		coa = MAI
+		subject_canton = MAI
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+KNI = { # The Knights
+	flag_definition = {
+		coa = KNI
+		subject_canton = KNI
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+BBR = { # Brandenburg
+	flag_definition = {
+		coa = BBR
+		subject_canton = BBR
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+YSL = { # Yaroslavl
+	flag_definition = {
+		coa = YSL
+		subject_canton = YSL
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = YSL_subject
+		priority = 1
+	}
+}
+
+U67 = { # Rostov
+	flag_definition = {
+		coa = U67
+		subject_canton = U67
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = U67_subject
+		priority = 1
+	}
+}
+
+CND = { # Candar
+	flag_definition = {
+		coa = CND
+		subject_canton = CND
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = CND
+		priority = 1
+	}
+}
+
+TBZ = { # Trebizond
+	flag_definition = {
+		coa = TBZ
+		subject_canton = TBZ
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = TBZ
+		priority = 1
+	}
+}
+
+FRI = { # Friesland
+	flag_definition = {
+		coa = FRI
+		subject_canton = FRI
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = FRI
+		priority = 1
+	}
+}
+
+ATH = { # Athens
+	flag_definition = {
+		coa = ATH
+		subject_canton = ATH
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = ATH
 		priority = 1
 	}
 }

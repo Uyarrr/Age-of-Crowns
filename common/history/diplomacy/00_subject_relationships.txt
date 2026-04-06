@@ -143,13 +143,13 @@
 	c:X52 ?= {
 		add_liberty_desire = -17.1
 	}
-	c:U48 ?= {
+	c:PRO ?= {
 		create_diplomatic_pact = {
-			country = c:V43
+			country = c:GNA
 			type = personal_union
 		}
 	}
-	c:V43 ?= {
+	c:GNA ?= {
 		add_liberty_desire = -35
 	}
 	c:BOH ?= {
@@ -262,11 +262,11 @@
 	}
 	c:MUS ?= {
 		create_diplomatic_pact = {
-			country = c:T99
+			country = c:YSL
 			type = puppet
 		}
 	}
-	c:T99 ?= {
+	c:YSL ?= {
 		add_liberty_desire = -28.825
 	}
 	c:MUS ?= {
@@ -296,7 +296,7 @@
 	c:PRM ?= {
 		add_liberty_desire = -19.575
 	}
-	c:EGY ?= {
+	c:MAM ?= {
 		create_diplomatic_pact = {
 			country = c:HDJ
 			type = vassal
@@ -305,7 +305,7 @@
 	c:HDJ ?= {
 		add_liberty_desire = -10.15
 	}
-	c:EGY ?= {
+	c:MAM ?= {
 		create_diplomatic_pact = {
 			country = c:SYR
 			type = vassal
@@ -314,7 +314,7 @@
 	c:SYR ?= {
 		add_liberty_desire = 2.675
 	}
-	c:EGY ?= {
+	c:MAM ?= {
 		create_diplomatic_pact = {
 			country = c:W31
 			type = vassal
@@ -755,7 +755,7 @@
 	c:U92 ?= {
 		add_liberty_desire = 35.275
 	}
-	c:T86 ?= {
+	c:VJY ?= {
 		create_diplomatic_pact = {
 			country = c:W75
 			type = vassal
