@@ -1,12 +1,10 @@
 ﻿# Teutonic Order
-TEU = {
+TEU ?= {
 	color = { 102 105 104 }
-
 	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { east_german }
+	tier = principality
+	cultures = { north_german }
+	religion = catholic
 	capital = STATE_EAST_PRUSSIA
 }
 
@@ -47,14 +45,12 @@ GOT = {
 }
 
 # Novgorod
-NOV = {
-	color = { 90 89 53 }
-
+NOV ?= {
+	color = { 97 126 37 }
 	country_type = recognized
-
-	tier = kingdom
-
+	tier = principality
 	cultures = { russian }
+	religion = orthodox
 	capital = STATE_NOVGOROD
 }
 
@@ -78,15 +74,12 @@ NOG ?= {
 	capital = STATE_URALSK
 }
 
-# Ryazan
-RYZ = {
-	color = { 76 118 124 }
-
+RYZ ?= {
+	color = { 146 134 77 }
 	country_type = recognized
-
 	tier = principality
-
 	cultures = { mordvin }
+	religion = orthodox
 	capital = STATE_RYAZAN
 }
 
@@ -648,7 +641,7 @@ X48 ?= {
 }
 
 # Pskov
-U50 ?= {
+PKV ?= {
 	color = { 82 123 95 }
 	country_type = recognized
 	tier = principality
@@ -657,54 +650,14 @@ U50 ?= {
 	capital = STATE_PSKOV
 }
 
-# Guge
-W55 ?= {
-	color = { 50 37 125 }
-	country_type = unrecognized
-	tier = grand_principality
-	cultures = { tibetan }
-	religion = gelugpa
-	capital = STATE_NGARI
-}
-
-# Sadiya
-U78 ?= {
-	color = { 63 115 37 }
-	country_type = unrecognized
-	tier = city_state
-	cultures = { assamese }
-	religion = hindu
-	capital = STATE_EASTERN_HIMALAYAS
-}
-
-# Limbuwan
-V47 ?= {
-	color = { 181 114 3 }
-	country_type = unrecognized
-	tier = grand_principality
-	cultures = { nepali }
-	religion = gelugpa
-	capital = STATE_HIMALAYAS
-}
-
-# Blambang
-X47 ?= {
-	color = { 168 62 31 }
-	country_type = unrecognized
-	tier = grand_principality
-	cultures = { javan }
-	religion = hindu
-	capital = STATE_EAST_JAVA
-}
-
-# Sunda
-T40 ?= {
-	color = { 32 131 135 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { javan }
-	religion = hindu
-	capital = STATE_WEST_JAVA
+# Livonian Order
+LVO ?= {
+	color = { 110 50 50 }
+	country_type = recognized
+	tier = principality
+	cultures = { east_german }
+	religion = catholic
+	capital = STATE_TARTU
 }
 
 # Brandenburg
@@ -755,4 +708,44 @@ FRI ?= {
 	cultures = { dutch }
 	religion = catholic
 	capital = STATE_FRIESLAND
+}
+
+# Athens
+ATH ?= {
+	color = { 113 112 96 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_italian }
+	religion = catholic
+	capital = STATE_ATTICA
+}
+
+# Genoa
+GNA ?= {
+	color = { 218 215 56 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_PIEDMONT
+}
+
+# Luneburg
+LNB ?= {
+	color = { 135 109 147 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_ELBE
+}
+
+# Florence
+FRC ?= {
+	color = { 236 47 47 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_TUSCANY
 }

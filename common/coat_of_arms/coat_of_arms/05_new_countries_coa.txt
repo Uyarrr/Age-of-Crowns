@@ -74,12 +74,14 @@ GOT = { # Gotland - Default
 	}
 }
 
-NOV = { # Novgorod - Default
+NOV = { # Novgorod - Cross calvary from seal & banners
 	pattern = "pattern_solid.tga"
-	color1 = "white"
-
-	textured_emblem = {
-		texture = "te_novgorod.dds"
+	color1 = "azure"
+	
+	colored_emblem = {
+		texture = "ce_cross_calvary_novgorod.dds"
+		color1 = yellow
+		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }				
 	}
 }
 
@@ -102,6 +104,19 @@ PRM = { # Perm - Default
 		color1 = white
 		color2 = white
 		color3 = white	
+	}
+}
+
+PRM_subject = { # Perm - Default
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_bear_california.dds"
+		color1 = white
+		color2 = white
+		color3 = white
+		instance = { position = { 0.70 0.5 } scale = { 0.70 0.70 } }
 	}
 }
 
@@ -132,7 +147,7 @@ TVR = { # Tver - Default
 	color1 = "red"
 
 	colored_emblem = {
-		texture = "ce_tver.dds"
+		texture = "ce_crown_tver.dds"
 		color1 = yellow
 		color2 = green
 		color3 = green_light
@@ -232,7 +247,7 @@ YSL_subject = { # Yaroslavl - Subject
 		color1 = black
 		color2 = white
 		color3 = white
-		instance = { position = { 0.75 0.65 } scale = { 0.6 0.6 } }
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }
 	}
 }
 
@@ -249,17 +264,17 @@ LOM = { # Milan - Default
 
 	# Top left
 	colored_emblem = {
-		texture = "ce_eagle_crown.dds"
+		texture = "ce_eagle_crowned_wide.dds"
 		color1 = black
 		color2 = orange
-		instance = { position = { 0.25 0.75 } scale = { 0.6 0.6 } }
+		instance = { position = { 0.25 0.75 } scale = { 0.5 0.5 } }
 	}
 	# Bottom Right
 	colored_emblem = {
-		texture = "ce_eagle_crown.dds"
+		texture = "ce_eagle_crowned_wide.dds"
 		color1 = black
 		color2 = orange
-		instance = { position = { 0.75 0.25 } scale = { 0.6 0.6 } }
+		instance = { position = { 0.75 0.25 } scale = { 0.5 0.5 } }
 	}
 	# Top left
 	textured_emblem = {
@@ -394,6 +409,7 @@ BBR = { # Brandenburg - Default
 		texture = "ce_eagle_boned_wide.dds"
 		color1 = red
 		color2 = yellow
+		color3 = white
 		instance = { position = { 0.5 0.5 } scale = { 1 1 } }	
 	}
 }
@@ -417,7 +433,7 @@ U67_subject = { # Rostov - Subject
 		texture = "ce_ibex_goat_passant_shield.dds"
 		color1 = white
 		color2 = yellow
-		instance = { position = { 0.75 0.65 } scale = { 0.6 0.6 } }
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }
 	}
 }
 
@@ -426,9 +442,10 @@ TRT = { # Trent - Default
 	color1 = "white"
 
 	colored_emblem = {
-		texture = "ce_eagle_boned_wider.dds"
+		texture = "ce_eagle_boned_wide.dds"
 		color1 = black
 		color2 = yellow
+		color3 = white
 		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
 	}
 }
@@ -438,14 +455,15 @@ TRT_subject = { # Trent - Subject
 	color1 = "white"
 
 	colored_emblem = {
-		texture = "ce_eagle.dds"
+		texture = "ce_eagle_boned_wider.dds"
 		color1 = black
 		color2 = yellow
-		instance = { position = { 0.75 0.65 } scale = { 0.6 0.6 } }
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.6 0.6 } }
 	}
 }
 
-LIV = { # Livonian Order
+LVO = { # Livonian Order
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -504,7 +522,7 @@ TBZ = { # Trebizond
 	}	
 }
 
-CND = { # Candar
+CND = { # Candar - Subject
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -512,6 +530,18 @@ CND = { # Candar
 		texture = "ce_star_solomon_seal_candar.dds"
 		color1 = red
 		color2 = red
+	}
+}
+
+CND_subject = { # Candar
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_star_solomon_seal_candar.dds"
+		color1 = red
+		color2 = red
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }
 	}
 }
 
@@ -523,6 +553,7 @@ WOL = { # Wolgast
 		texture = "ce_griffin_wide.dds"
 		color1 = black
 		color2 = orange
+		color3 = white
 	}
 }
 
@@ -554,7 +585,206 @@ GEO = { # Georgia
 		color2 = red
 		instance = { position = { 0.25 0.20 } scale = { 0.4 0.4 } }
 		instance = { position = { 0.75 0.20 } scale = { 0.4 0.4 } }
-		instance = { position = { 0.25 0.70 } scale = { 0.4 0.4 } }
-		instance = { position = { 0.75 0.70 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.25 0.80 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.75 0.80 } scale = { 0.4 0.4 } }
+	}
+}
+
+GNA = { # Genoa
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_england.dds"
+		color1 = red
+		color2 = red
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+GOS = { # Goslar - 16th c. arms minus the fess undy
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red"
+	color4 = "green"
+		
+	colored_emblem = {
+		texture = "ce_eagle_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "white"
+		instance = { position = { 0.5 0.46 } scale = { 1.0 0.9 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color3
+		color2 = color1	
+		instance = { position = { 0.5 0.75 } scale = { 1.0 0.5 } }				
+	}				
+}
+
+ATH = { # Athens
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = azure
+		color2 = red
+		color3 = white
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+
+ATH_subject = { # Athens - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = azure
+		color2 = red
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }				
+	}
+}
+
+LNB = { # Luneburg
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_heart.dds"
+		color1 = red
+		instance = { position = { 0.10 0.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.30 0.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.50 0.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.70 0.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.90 0.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.00 0.20 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.20 0.20 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.40 0.20 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.60 0.20 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.80 0.20 } scale = { 0.20 0.20 } }
+		instance = { position = { 1.00 0.20 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.10 0.40 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.30 0.40 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.50 0.40 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.70 0.40 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.90 0.40 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.00 0.60 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.20 0.60 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.40 0.60 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.60 0.60 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.80 0.60 } scale = { 0.20 0.20 } }
+		instance = { position = { 1.00 0.60 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.10 0.80 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.30 0.80 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.50 0.80 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.70 0.80 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.90 0.80 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.00 1.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.20 1.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.40 1.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.60 1.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 0.80 1.00 } scale = { 0.20 0.20 } }
+		instance = { position = { 1.00 1.00 } scale = { 0.20 0.20 } }
+	}	
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = blue
+		color2 = red
+		color3 = white
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
+	}
+}
+
+PKV = { # Pskov - Default)
+	pattern = "pattern_solid.tga"
+	color1 = "azure"
+
+	colored_emblem = {
+		texture = "ce_lion_passant_pskov_wide.dds"
+		color1 = yellow
+		color2 = yellow
+		color3 = blue
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+
+PKV_subject = { # Pskov - Subject)
+	pattern = "pattern_solid.tga"
+	color1 = "azure"
+
+	colored_emblem = {
+		texture = "ce_lion_passant_pskov_wide.dds"
+		color1 = yellow
+		color2 = yellow
+		color3 = blue
+		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }				
+	}
+}
+
+SRV = { # Shirvan
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "yellow_dark"
+	
+	colored_emblem = {
+		texture = "ce_shirvanshah_lions.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1		
+		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }				
+	}		
+}
+
+FRC = { # Florence
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis_florence.dds"
+		color1 = red
+		color2 = hsv360 { 358 60 75 }	
+		instance = { position = { 0.5 0.5 } scale = { 1 1 } }		
+	}
+}
+
+FRC_subject = { # Florence - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis_florence.dds"
+		color1 = red
+		color2 = hsv360 { 358 60 75 }	
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }		
+	}
+}
+
+BLO = { # Beloozero
+	pattern = "pattern_solid.tga"
+	color1 = "azure"
+
+	colored_emblem = {
+		texture = "ce_sturgeons_saltire.dds"
+		color1 = hsv360 	{ 20 0 78 } 
+		color2 = white
+		color3 = azure
+		instance = { position = { 0.5 0.58 } scale = { 0.85 0.85 } }			
+	}
+	colored_emblem = {
+		texture = "ce_crescent_pale.dds"
+		color1 = white
+		color2 = white
+		instance = { position = { 0.5 0.24 } scale = { 0.32 0.32 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = yellow
+		color2 = yellow
+		instance = { position = { 0.5 0.145 } scale = { 0.18 0.18 } }		
 	}
 }

@@ -28,11 +28,11 @@
 	}
 	c:BYZ ?= {
 		create_diplomatic_pact = {
-			country = c:X30
+			country = c:ATH
 			type = puppet
 		}
 	}
-	c:X30 ?= {
+	c:ATH ?= {
 		add_liberty_desire = -32.925
 	}
 	c:HUN ?= {
@@ -145,11 +145,11 @@
 	}
 	c:PRO ?= {
 		create_diplomatic_pact = {
-			country = c:GNA
+			country = c:V43
 			type = personal_union
 		}
 	}
-	c:GNA ?= {
+	c:V43 ?= {
 		add_liberty_desire = -35
 	}
 	c:BOH ?= {
@@ -253,11 +253,11 @@
 	}
 	c:MUS ?= {
 		create_diplomatic_pact = {
-			country = c:U50
+			country = c:PKV
 			type = puppet
 		}
 	}
-	c:U50 ?= {
+	c:PKV ?= {
 		add_liberty_desire = -19.575
 	}
 	c:MUS ?= {

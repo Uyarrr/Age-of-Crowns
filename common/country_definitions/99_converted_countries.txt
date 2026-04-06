@@ -5107,15 +5107,6 @@ L14 ?= {
 	capital = STATE_LEINSTER
 }
 
-L15 ?= {
-	color = { 110 50 50 }
-	country_type = recognized
-	tier = principality
-	cultures = { east_german }
-	religion = catholic
-	capital = STATE_TARTU
-}
-
 L16 ?= {
 	color = { 56 125 113 }
 	country_type = decentralized
@@ -9407,15 +9398,6 @@ T53 ?= {
 	capital = STATE_AL_RIF
 }
 
-TEU ?= {
-	color = { 102 105 104 }
-	country_type = recognized
-	tier = principality
-	cultures = { north_german }
-	religion = catholic
-	capital = STATE_EAST_PRUSSIA
-}
-
 T55 ?= {
 	color = { 140 45 100 }
 	country_type = unrecognized
@@ -10292,15 +10274,6 @@ U14 ?= {
 	capital = STATE_JIANGXI
 }
 
-U16 ?= {
-	color = { 97 126 37 }
-	country_type = recognized
-	tier = principality
-	cultures = { russian }
-	religion = orthodox
-	capital = STATE_NOVGOROD
-}
-
 U17 ?= {
 	color = { 131 138 116 }
 	country_type = recognized
@@ -10589,7 +10562,7 @@ U49 ?= {
 	capital = STATE_ACEH
 }
 
-U50 ?= {
+PKV ?= {
 	color = { 82 123 95 }
 	country_type = recognized
 	tier = principality
@@ -10776,15 +10749,6 @@ U71 ?= {
 	cultures = { north_german }
 	religion = catholic
 	capital = STATE_RUHR
-}
-
-U72 ?= {
-	color = { 146 134 77 }
-	country_type = recognized
-	tier = principality
-	cultures = { russian }
-	religion = orthodox
-	capital = STATE_RYAZAN
 }
 
 U73 ?= {
@@ -11502,15 +11466,6 @@ V33 ?= {
 	capital = STATE_FIJI
 }
 
-V34 ?= {
-	color = { 236 47 47 }
-	country_type = recognized
-	tier = principality
-	cultures = { north_italian }
-	religion = catholic
-	capital = STATE_TUSCANY
-}
-
 V35 ?= {
 	color = { 79 139 99 }
 	country_type = recognized
@@ -11583,7 +11538,7 @@ V42 ?= {
 	capital = STATE_LEON
 }
 
-GNA ?= {
+V43 ?= {
 	color = { 115 142 205 }
 	country_type = recognized
 	tier = principality
@@ -11599,15 +11554,6 @@ V44 ?= {
 	cultures = { north_german }
 	religion = catholic
 	capital = STATE_HANNOVER
-}
-
-V45 ?= {
-	color = { 135 109 147 }
-	country_type = recognized
-	tier = principality
-	cultures = { north_german }
-	religion = catholic
-	capital = STATE_ELBE
 }
 
 V46 ?= {
@@ -12489,16 +12435,6 @@ W42 ?= {
 	religion = catholic
 	capital = STATE_GELRE
 }
-
-W43 ?= {
-	color = { 218 215 56 }
-	country_type = recognized
-	tier = principality
-	cultures = { north_italian }
-	religion = catholic
-	capital = STATE_PIEDMONT
-}
-
 W44 ?= {
 	color = { 255 133 15 }
 	country_type = unrecognized
@@ -13419,15 +13355,6 @@ X29 ?= {
 	cultures = { muskogean }
 	religion = animist
 	capital = STATE_ALABAMA
-}
-
-X30 ?= {
-	color = { 113 112 96 }
-	country_type = recognized
-	tier = city_state
-	cultures = { south_italian }
-	religion = catholic
-	capital = STATE_ATTICA
 }
 
 X31 ?= {

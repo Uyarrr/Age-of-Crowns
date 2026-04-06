@@ -1,0 +1,157 @@
+﻿MILITARY_FORMATIONS = {
+	c:TEU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_poland
+			name = 1_Armee
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_EAST_PRUSSIA
+				count = 8
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_poland
+			name = Holy_Marine
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lightship_1
+				state_region = s:STATE_EAST_PRUSSIA
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:AUS ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_germany
+			name = "generalkommando_lemberg"
+
+			save_scope_as = generalkommando_lemberg
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_AUSTRIA
+				count = 12
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:FRA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_france
+			name = "french_army"
+			save_scope_as = general_frech_army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_ILE_DE_FRANCE
+				count = 15
+			}
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_france
+			name = Champagne_Army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_CHAMPAGNE
+				count = 8
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:HUN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_danubia
+			name = "hungarian_army"
+
+			save_scope_as = general_hungarian_army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_CENTRAL_HUNGARY
+				count = 20
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:LIT ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dnieper
+			name = Lithuanian_Army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_KAUNAS
+				count = 11
+			}
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dnieper
+			name = Kyiv_Army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_KIEV
+				count = 8
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+}
