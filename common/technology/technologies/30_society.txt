@@ -1004,6 +1004,20 @@ dissemination_of_knowledge = {
 	}
 }
 
+nation_formation = {
+	# Unlocks Basic Formables
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/book_of_knowledge.dds"
+	category = society
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 census_suffrage = {
 	# Unlocks Census Suffrage Law
 	era = era_4
@@ -1033,6 +1047,20 @@ behaviorism = {
 		country_diplomatic_play_maneuvers_add = 20
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+major_formation = {
+	# Unlocks Major Formables
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/book_of_knowledge.dds"
+	category = society
 
 	unlocking_technologies = {
 	}

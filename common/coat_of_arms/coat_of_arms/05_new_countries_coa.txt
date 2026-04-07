@@ -455,7 +455,7 @@ TRT_subject = { # Trent - Subject
 	color1 = "white"
 
 	colored_emblem = {
-		texture = "ce_eagle_boned_wider.dds"
+		texture = "ce_eagle_boned_wide.dds"
 		color1 = black
 		color2 = yellow
 		color3 = white
@@ -557,6 +557,44 @@ WOL = { # Wolgast
 	}
 }
 
+WOL_subject = { # Wolgast - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_griffin_wide.dds"
+		color1 = black
+		color2 = orange
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }
+	}
+}
+
+STE = { # Stettin
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_griffin_wide.dds"
+		color1 = red
+		color2 = orange
+		color3 = white
+	}
+}
+
+STE_subject = { # Stettin - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_griffin_wide.dds"
+		color1 = red
+		color2 = orange
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }
+	}
+}
+
 FRI = { # Friesland
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -605,21 +643,18 @@ GNA = { # Genoa
 GOS = { # Goslar - 16th c. arms minus the fess undy
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
-	color2 = "black"
-	color3 = "red"
-	color4 = "green"
 		
 	colored_emblem = {
 		texture = "ce_eagle_wide.dds"
-		color1 = color2
-		color2 = color3
-		color3 = "white"
-		instance = { position = { 0.5 0.46 } scale = { 1.0 0.9 } }			
+		color1 = black
+		color2 = red
+		color3 = white
+		instance = { position = { 0.5 0.46 } scale = { 1.0 1.0 } }			
 	}	
 	colored_emblem = {
 		texture = "ce_per_fess.dds"
-		color1 = color3
-		color2 = color1	
+		color1 = red
+		color2 = yellow	
 		instance = { position = { 0.5 0.75 } scale = { 1.0 0.5 } }				
 	}				
 }
@@ -700,7 +735,7 @@ LNB = { # Luneburg
 	}
 }
 
-PKV = { # Pskov - Default)
+PKV = { # Pskov - Default
 	pattern = "pattern_solid.tga"
 	color1 = "azure"
 
@@ -713,7 +748,7 @@ PKV = { # Pskov - Default)
 	}
 }
 
-PKV_subject = { # Pskov - Subject)
+PKV_subject = { # Pskov - Subject
 	pattern = "pattern_solid.tga"
 	color1 = "azure"
 
@@ -760,7 +795,7 @@ FRC_subject = { # Florence - Subject
 		texture = "ce_fleur_de_lis_florence.dds"
 		color1 = red
 		color2 = hsv360 { 358 60 75 }	
-		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }		
+		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }		
 	}
 }
 
@@ -786,5 +821,183 @@ BLO = { # Beloozero
 		color1 = yellow
 		color2 = yellow
 		instance = { position = { 0.5 0.145 } scale = { 0.18 0.18 } }		
+	}
+}
+
+LGE = { # Liège - Default
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_pillar_liege.dds"
+		color1 = yellow
+		color2 = yellow
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}		
+}
+
+LGE_subject = { # Liège - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_pillar_liege.dds"
+		color1 = yellow
+		color2 = yellow
+		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }				
+	}		
+}
+
+MUL = { # Mulhouse - Default
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cogwheel.dds"
+		color1 = red
+		color2 = red
+		color3 = white
+	}
+}
+
+MUL_subject = { # Mulhouse - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cogwheel.dds"
+		color1 = red
+		color2 = red
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }	
+	}
+}
+
+KNZ = { # Konstanz
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = black
+		color2 = black
+		instance = { position = { 0.5 0.675 } scale = { 1.0 0.195 } }		
+		instance = { position = { 0.5 0.5 } scale = { 0.13 1.0 } }				
+	}	
+	colored_emblem = {
+		texture = "ce_chief.dds"
+		color1 = red
+		color2 = red
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
+	}
+}
+
+GRA = { # Granada
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_nasrid_motto.dds"
+		color1 = yellow
+		color2 = red
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+GOT = { # Gotland - Default
+	pattern = "pattern_solid.tga"
+	color1 = "azure"
+
+	colored_emblem = {
+		texture = "ce_ibex_goat_rampant_shield.dds"
+		color1 = white
+		color2 = yellow
+		color3 = white
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+GOT_subject = { # Gotland - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "azure"
+
+	colored_emblem = {
+		texture = "ce_ibex_goat_rampant_shield.dds"
+		color1 = white
+		color2 = yellow
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }
+	}
+}
+
+DIT = { # Dithmarschen - Default
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	textured_emblem = {
+		texture = "te_knight_dithmarschen.dds"
+		instance = { position = { 0.51 0.5 } scale = { 1.0 1.0 }  }		
+	}	
+}
+
+DIT_subject = { # Dithmarschen - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	textured_emblem = {
+		texture = "te_knight_dithmarschen.dds"
+		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }		
+	}
+}
+
+ODO = { # Odoyev - Default
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_solid.dds" # Eye
+		color1 = hsv360 { 0 0 80 }
+		instance = { position = { 0.49 0.145 } scale = { 0.02 0.03 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_eagle_crowned_wide_chernigov.dds"
+		color1 = black
+		color2 = orange
+		color3 = red
+		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }				
+	}
+}
+
+ODO_subject = { # Odoyev - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_eagle_crowned_wide_chernigov.dds"
+		color1 = black
+		color2 = orange
+		color3 = red
+		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }				
+	}
+}
+
+MAG = { # Magdeburg - Default
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = "red"
+	color2 = "white"
+}
+
+MCM = { # Munster
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_stag.dds"
+		color1 = red
+		color2 = yellow
+		color3 = white
+		instance = { position = { 0.5 0.52 } scale = { 1.10 1.10 } }					
 	}
 }

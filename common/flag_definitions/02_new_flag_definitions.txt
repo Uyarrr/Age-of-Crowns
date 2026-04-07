@@ -38,15 +38,6 @@ BGY = { # Burgundy
 	}
 }
 
-GOT = { # Gotland
-	flag_definition = {
-		coa = GOT
-		subject_canton = GOT
-		allow_overlord_canton = yes
-		priority = 1
-	}
-}
-
 NOV = { # Novgorod
 	flag_definition = {
 		coa = NOV
@@ -342,6 +333,106 @@ FRC = { # Florence
 		subject_canton = FRC
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = FRC_subject
+		priority = 1
+	}
+}
+
+LGE = { # Liege
+	flag_definition = {
+		coa = LGE
+		subject_canton = LGE
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = LGE_subject
+		priority = 1
+	}
+}
+
+MUL = { # Mulhouse
+	flag_definition = {
+		coa = MUL
+		subject_canton = MUL
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MUL_subject
+		priority = 1
+	}
+}
+
+KNZ = { # Konstanz
+	flag_definition = {
+		coa = KNZ
+		subject_canton = KNZ
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = KNZ
+		priority = 1
+	}
+}
+
+GRA = { # Granada
+	flag_definition = {
+		coa = GRA
+		subject_canton = GRA
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GRA
+		priority = 1
+	}
+}
+
+GOT = { # Gotland
+	flag_definition = {
+		coa = GOT
+		subject_canton = GOT
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GOT_subject
+		priority = 1
+	}
+}
+
+ODO = { # Odoyev
+	flag_definition = {
+		coa = ODO
+		subject_canton = ODO
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = ODO_subject
+		priority = 1
+	}
+}
+
+STE = { # Stettin
+	flag_definition = {
+		coa = STE
+		subject_canton = STE
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = STE_subject
+		priority = 1
+	}
+}
+
+WOL = { # Wolgast
+	flag_definition = {
+		coa = WOL
+		subject_canton = WOL
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = WOL_subject
+		priority = 1
+	}
+}
+
+MAG = { # Magdeburg
+	flag_definition = {
+		coa = MAG
+		subject_canton = MAG
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MAG
+		priority = 1
+	}
+}
+
+GOS = { # Goslar
+	flag_definition = {
+		coa = GOS
+		subject_canton = GOS
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GOS
 		priority = 1
 	}
 }

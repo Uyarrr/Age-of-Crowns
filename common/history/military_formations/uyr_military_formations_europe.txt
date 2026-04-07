@@ -3,7 +3,6 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_poland
-			name = 1_Armee
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_infantry_1
@@ -15,7 +14,6 @@
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_poland
-			name = Holy_Marine
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_lightship_1
@@ -38,14 +36,21 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_south_germany
-			name = "generalkommando_lemberg"
-
-			save_scope_as = generalkommando_lemberg
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_infantry_1
 				state_region = s:STATE_AUSTRIA
-				count = 12
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_AUSTRIA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_AUSTRIA
+				count = 4
 			}
 		}
 
@@ -63,25 +68,21 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_france
-			name = "french_army"
-			save_scope_as = general_frech_army
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_infantry_1
 				state_region = s:STATE_ILE_DE_FRANCE
-				count = 15
+				count = 16
 			}
-		}
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_france
-			name = Champagne_Army
-
 			combat_unit = {
-				type = unit_type:combat_unit_type_infantry_1
-				state_region = s:STATE_CHAMPAGNE
-				count = 8
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_ILE_DE_FRANCE
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_ILE_DE_FRANCE
+				count = 5
 			}
 		}
 
@@ -99,14 +100,21 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_danubia
-			name = "hungarian_army"
-
-			save_scope_as = general_hungarian_army
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_infantry_1
 				state_region = s:STATE_CENTRAL_HUNGARY
-				count = 20
+				count = 12
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_CENTRAL_HUNGARY
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_CENTRAL_HUNGARY
+				count = 5
 			}
 		}
 
@@ -124,24 +132,661 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_dnieper
-			name = Lithuanian_Army
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_infantry_1
 				state_region = s:STATE_KAUNAS
 				count = 11
 			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_KAUNAS
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_KAUNAS
+				count = 5
+			}
 		}
 
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:POL ?= {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_dnieper
-			name = Kyiv_Army
+			hq_region = sr:region_poland
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_infantry_1
-				state_region = s:STATE_KIEV
+				state_region = s:STATE_GREATER_POLAND
+				count = 11
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_GREATER_POLAND
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_GREATER_POLAND
+				count = 7
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:ENG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_england
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_HOME_COUNTIES
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_HOME_COUNTIES
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_HOME_COUNTIES
+				count = 7
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:CAS ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_iberia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_NEW_CASTILE
+				count = 11
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_NEW_CASTILE
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_NEW_CASTILE
+				count = 3
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:MAM ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_egypt
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_LOWER_EGYPT
+				count = 11
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_LOWER_EGYPT
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_LOWER_EGYPT
+				count = 7
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:T54 ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khorasan
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_HERAT
+				count = 12
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_HERAT
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_HERAT
 				count = 8
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:TUR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_anatolia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_ANKARA
+				count = 18
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_ANKARA
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_ANKARA
+				count = 6
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:X24 ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_iberia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_CATALONIA
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_CATALONIA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_CATALONIA
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:POR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_iberia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_BEIRA
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_BEIRA
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_BEIRA
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:SCO ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_britain
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_LOWLANDS
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_LOWLANDS
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_LOWLANDS
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:GNA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_italy
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_PIEDMONT
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_PIEDMONT
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_PIEDMONT
+				count = 3
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:VEN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_italy
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_VENETIA
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_VENETIA
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_VENETIA
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:MUS ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_russia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_MOSCOW
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_MOSCOW
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_MOSCOW
+				count = 3
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:NOG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_central_asia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_SAMARA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_SAMARA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_SAMARA
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:TAR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_urals
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_KAZAN
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_KAZAN
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_KAZAN
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:UZB ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_siberia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_TOBOLSK
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_TOBOLSK
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_TOBOLSK
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:ALI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_china
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_ULIASTAI
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_ULIASTAI
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_ULIASTAI
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:GRH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_russia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_KURSK
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_KURSK
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_KURSK
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:LOM ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_italy
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_LOMBARDY
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_LOMBARDY
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_LOMBARDY
+				count = 3
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:SAV ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_italy
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_PIEDMONT
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_PIEDMONT
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_PIEDMONT
+				count = 2
+			}
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_naval_theory
+		}
+		activate_production_method = {
+			building_type = building_barrack
+			production_method = pm_general_training
+		}
+	}
+
+	c:FRI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_rhine
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_FRIESLAND
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cavalry_1
+				state_region = s:STATE_FRIESLAND
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_FRIESLAND
+				count = 2
 			}
 		}
 

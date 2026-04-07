@@ -1791,42 +1791,6 @@ EZO = {
 		trigger = { coa_def_communist_flag_trigger = yes }
 	}
 }
-G02 = {
-	flag_definition = {
-		coa = legacy_d_gotland
-		allow_overlord_canton = yes
-		subject_canton = legacy_d_gotland
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_d_gotland_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_d_gotland_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_d_gotland_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_d_gotland_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_d_gotland_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_d_gotland_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_d_gotland_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
 GAO = {
 	flag_definition = {
 		coa = GAO
@@ -7919,42 +7883,6 @@ U24 = {
 		priority = 1
 	}
 }
-U25 = {
-	flag_definition = {
-		coa = legacy_OKA
-		allow_overlord_canton = yes
-		subject_canton = legacy_OKA
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_OKA_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_OKA_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_OKA_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_OKA_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_OKA_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_OKA_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_OKA_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
 U26 = {
 	flag_definition = {
 		coa = legacy_c_opole
@@ -10312,42 +10240,6 @@ U96 = {
 		trigger = { coa_def_communist_flag_trigger = yes }
 	}
 }
-U97 = {
-	flag_definition = {
-		coa = legacy_c_stettin
-		allow_overlord_canton = yes
-		subject_canton = legacy_c_stettin
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_c_stettin_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_c_stettin_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_c_stettin_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_c_stettin_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_c_stettin_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_c_stettin_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_c_stettin_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
 U98 = {
 	flag_definition = {
 		coa = legacy_STY
@@ -10783,42 +10675,6 @@ V23 = {
 	}
 	flag_definition = {
 		coa = legacy_c_kandy_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
-V25 = {
-	flag_definition = {
-		coa = legacy_KNZ
-		allow_overlord_canton = yes
-		subject_canton = legacy_KNZ
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_KNZ_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_KNZ_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_KNZ_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_KNZ_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_KNZ_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_KNZ_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_KNZ_communist
 		allow_overlord_canton = yes
 		priority = 1500
 		trigger = { coa_def_communist_flag_trigger = yes }
@@ -11264,42 +11120,6 @@ V38 = {
 		trigger = { coa_def_communist_flag_trigger = yes }
 	}
 }
-V39 = {
-	flag_definition = {
-		coa = legacy_LIG
-		allow_overlord_canton = yes
-		subject_canton = legacy_LIG
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_LIG_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_LIG_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_LIG_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_LIG_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_LIG_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_LIG_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_LIG_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
 V40 = {
 	flag_definition = {
 		coa = legacy_LGR
@@ -11591,42 +11411,6 @@ V50 = {
 	}
 	flag_definition = {
 		coa = legacy_XMA_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
-V51 = {
-	flag_definition = {
-		coa = legacy_MAG
-		allow_overlord_canton = yes
-		subject_canton = legacy_MAG
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_MAG_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_MAG_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_MAG_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_MAG_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_MAG_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_MAG_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_MAG_communist
 		allow_overlord_canton = yes
 		priority = 1500
 		trigger = { coa_def_communist_flag_trigger = yes }
@@ -12541,42 +12325,6 @@ V78 = {
 		trigger = { coa_def_communist_flag_trigger = yes }
 	}
 }
-V79 = {
-	flag_definition = {
-		coa = legacy_MLH
-		allow_overlord_canton = yes
-		subject_canton = legacy_MLH
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_MLH_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_MLH_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_MLH_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_MLH_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_MLH_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_MLH_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_MLH_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
 V80 = {
 	flag_definition = {
 		coa = legacy_ML1
@@ -13319,42 +13067,6 @@ W03 = {
 	}
 	flag_definition = {
 		coa = legacy_DTI_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
-W23 = {
-	flag_definition = {
-		coa = legacy_DTT
-		allow_overlord_canton = yes
-		subject_canton = legacy_DTT
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_DTT_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_DTT_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_DTT_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_DTT_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_DTT_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_DTT_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_DTT_communist
 		allow_overlord_canton = yes
 		priority = 1500
 		trigger = { coa_def_communist_flag_trigger = yes }
@@ -14153,7 +13865,7 @@ W48 = {
 	}
 }
 
-W50 = {
+GOS = {
 	flag_definition = {
 		coa = legacy_GOS
 		allow_overlord_canton = yes
@@ -14184,42 +13896,6 @@ W50 = {
 	}
 	flag_definition = {
 		coa = legacy_GOS_communist
-		allow_overlord_canton = yes
-		priority = 1500
-		trigger = { coa_def_communist_flag_trigger = yes }
-	}
-}
-W51 = {
-	flag_definition = {
-		coa = legacy_GRA
-		allow_overlord_canton = yes
-		subject_canton = legacy_GRA
-		priority = 1
-	}
-	flag_definition = {
-		coa = legacy_GRA_republic
-		allow_overlord_canton = yes
-		priority = 10
-		subject_canton = legacy_GRA_republic
-		trigger = { coa_def_republic_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_GRA_monarchy
-		allow_overlord_canton = yes
-		priority = 20
-		subject_canton = legacy_GRA_monarchy
-		overlord_canton_scale = { 0.337 0.337 }
-		trigger = { coa_def_absolute_monarchy_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_GRA_fascist
-		allow_overlord_canton = yes
-		priority = 1500
-		subject_canton = legacy_GRA_fascist
-		trigger = { coa_def_fascist_flag_trigger = yes }
-	}
-	flag_definition = {
-		coa = legacy_GRA_communist
 		allow_overlord_canton = yes
 		priority = 1500
 		trigger = { coa_def_communist_flag_trigger = yes }

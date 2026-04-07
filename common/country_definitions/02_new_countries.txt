@@ -33,14 +33,12 @@ BGY = {
 }
 
 # Gotland
-GOT = {
-	color = { 131 193 56 }
-
+GOT ?= {
+	color = { 41 39 64 }
 	country_type = recognized
-
 	tier = principality
-
 	cultures = { swedish }
+	religion = catholic
 	capital = STATE_GOTLAND
 }
 
@@ -74,6 +72,17 @@ NOG ?= {
 	capital = STATE_URALSK
 }
 
+# Dithmarschen
+DIT ?= {
+	color = { 72 194 212 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_SCHLESWIG_HOLSTEIN
+}
+
+# Ryazan
 RYZ ?= {
 	color = { 146 134 77 }
 	country_type = recognized
@@ -219,16 +228,14 @@ CLN = {
 	capital = STATE_RHINELAND
 }
 
-# Cleves
-G01 = {
-	color = { 255 210 0 }
-
+# Liege
+LGE ?= {
+	color = { 149 186 37 }
 	country_type = recognized
-
 	tier = principality
-
-	cultures = { south_german }
-	capital = STATE_RHINELAND
+	cultures = { wallonian }
+	religion = catholic
+	capital = STATE_WALLONIA
 }
 
 # Mainz
@@ -470,16 +477,6 @@ KLW = {
 	capital = STATE_LINDI
 }
 
-# Granada
-GRA ?= {
-	color = { 210 220 175 }
-	country_type = recognized
-	tier = principality
-	cultures = { andalucian }
-	religion = sunni
-	capital = STATE_UPPER_ANDALUSIA
-}
-
 # Oirat
 OIR ?= {
 	color = { 210 220 175 }
@@ -540,44 +537,14 @@ KCH ?= {
 	capital = STATE_SOUTHERN_MANCHURIA
 }
 
-# Xibe
-XBE ?= {
-	color = { 16 156 27 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { manchu }
-	#religion = tengri_pagan_reformed
-	capital = STATE_NORTHERN_MANCHURIA
-}
-
-# Haixi
-HXI ?= {
-	color = { 152 167 237 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { manchu }
-	#religion = tengri_pagan_reformed
-	capital = STATE_SOUTHERN_MANCHURIA
-}
-
-# Jihanzhou
-JHZ ?= {
-	color = { 65 32 57 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { manchu }
-	religion = tengri_pagan_reformed
-	capital = STATE_SOUTHERN_MANCHURIA
-}
-
-# Orochoni
-OCH ?= {
-	color = { 135 225 194 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { manchu }
-	religion = tengri_pagan_reformed
-	capital = STATE_OUTER_MANCHURIA
+# Mulhouse
+MUL ?= {
+	color = { 155 170 136 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_german }
+	religion = catholic
+	capital = STATE_ALSACE_LORRAINE
 }
 
 # Nanai
@@ -590,14 +557,24 @@ NNI ?= {
 	capital = STATE_SOUTHERN_MANCHURIA
 }
 
-# Nivkh
-NVK ?= {
-	color = { 105 226 233 }
-	country_type = decentralized
+# Konstanz
+KNZ ?= {
+	color = { 255 133 59 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_german }
+	religion = catholic
+	capital = STATE_BADEN
+}
+
+# Granada
+GRA ?= {
+	color = { 210 220 175 }
+	country_type = recognized
 	tier = principality
-	cultures = { siberian }
-	religion = tengri_pagan_reformed
-	capital = STATE_OUTER_MANCHURIA
+	cultures = { andalucian }
+	religion = sunni
+	capital = STATE_UPPER_ANDALUSIA
 }
 
 # Tsang
@@ -748,4 +725,44 @@ FRC ?= {
 	cultures = { north_italian }
 	religion = catholic
 	capital = STATE_TUSCANY
+}
+
+# Odoyev
+ODO ?= {
+	color = { 43 136 207 }
+	country_type = recognized
+	tier = city_state
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_ORYOL
+}
+
+# Stettin
+STE ?= {
+	color = { 33 119 58 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_POMERANIA
+}
+
+# Magdeburg
+MAG ?= {
+	color = { 189 115 99 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_ANHALT
+}
+
+# Goslar
+GOS ?= {
+	color = { 88 45 148 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_BRUNSWICK
 }

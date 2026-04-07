@@ -31,7 +31,7 @@
 	}
 	c:CAS ?= {
 		create_bidirectional_truce = {
-			country = c:W51
+			country = c:GRA
 			months = 37
 		}
 	}
@@ -153,7 +153,7 @@
 	}
 	c:POR ?= {
 		create_bidirectional_truce = {
-			country = c:W51
+			country = c:GRA
 			months = 49
 		}
 	}
@@ -339,7 +339,7 @@
 			months = 13
 		}
 	}
-	c:W51 ?= {
+	c:GRA ?= {
 		create_bidirectional_truce = {
 			country = c:CAS
 			months = 37
@@ -391,7 +391,7 @@
 			months = 26
 		}
 		create_bidirectional_truce = {
-			country = c:W51
+			country = c:GRA
 			months = 49
 		}
 	}
