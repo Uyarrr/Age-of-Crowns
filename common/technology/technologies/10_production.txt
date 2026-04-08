@@ -21,6 +21,22 @@ quarrying = {
 	}
 }
 
+bakery = {
+	# Unlocks Bakery
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/bread.dds"
+	category = production
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+
 metallurgy = {
 	# Unlocks Tool Workshop
 	era = era_1
@@ -183,7 +199,7 @@ furniture_workshop = {
 cloth_workshop = {
 	# Unlocks Cloth Workshop
 	era = era_1
-	texture = "gfx/interface/icons/goods_icons/cloth.dds"
+	texture = "gfx/interface/icons/goods_icons/clothes.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -262,7 +278,7 @@ pottery = {
 	category = production
 
 	unlocking_technologies = {
-		metallurgy
+		bakery
 	}
 
 	ai_weight = {
@@ -354,6 +370,24 @@ expanded_quarrying = {
 	}
 }
 
+bakery_wood_heating = {
+	#Unlocks Wood Heating for Bakery
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/bakery_wood_heating.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		manured_fields
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
 encourage_agricultural_industry = {
 	# Unlocks Encourage Resource Industry Decree
 	era = era_2
@@ -421,6 +455,7 @@ pack_animal_transport = {
 	category = production
 
 	unlocking_technologies = {
+		manured_fields
 	}
 
 	ai_weight = {
@@ -435,6 +470,7 @@ dyed_furnitures = {
 	category = production
 
 	unlocking_technologies = {
+		manured_fields
 	}
 
 	ai_weight = {
@@ -710,6 +746,23 @@ wagon_transport = {
 	#Unlocks Road Transport PM
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/wagon.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+bakery_coal_heating = {
+	#Unlocks Bakery Coal Heating
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/bakery_coal_heating.dds"
 	category = production
 
 	modifier = {

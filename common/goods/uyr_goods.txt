@@ -36,6 +36,19 @@ bronze = {
 	traded_quantity = 4
 }
 
+bread = {
+	texture = "gfx/interface/icons/goods_icons/bread.dds"
+	cost = 30
+	category = staple
+
+	prestige_factor = 4
+
+	traded_quantity = 9 # 270
+	convoy_cost_multiplier = 0.5
+
+	consumption_tax_cost = 300
+}
+
 livestock = {
 	texture = "gfx/interface/icons/goods_icons/livestock.dds"
 	cost = 30

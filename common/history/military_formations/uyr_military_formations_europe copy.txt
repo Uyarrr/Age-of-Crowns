@@ -10,26 +10,6 @@
 				count = 8
 			}
 		}
-
-		create_military_formation = {
-			type = fleet
-			hq_region = sr:region_poland
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lightship_1
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 2
-			}
-		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
-		}
 	}
 
 	c:AUS ?= {
@@ -116,15 +96,6 @@
 				state_region = s:STATE_CENTRAL_HUNGARY
 				count = 5
 			}
-		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
 		}
 	}
 

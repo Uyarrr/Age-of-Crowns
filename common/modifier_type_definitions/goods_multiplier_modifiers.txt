@@ -16,17 +16,7 @@ goods_input_firearms_mult={
 	}
 }
 
-
 goods_input_stone_mult={
-	decimals=1
-	color=bad
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-goods_input_cloth_mult={
 	decimals=1
 	color=bad
 	percent=yes
@@ -161,6 +151,15 @@ goods_input_trader_mult={
 	}
 }
 
+goods_input_bread_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_output_stone_mult={
 	decimals=1
 	color=good
@@ -278,15 +277,6 @@ goods_output_warhorse_mult={
 	}
 }
 
-goods_output_cloth_mult={
-	decimals=1
-	color=bad
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
 goods_output_trader_mult={
 	decimals=1
 	color=bad
@@ -314,7 +304,7 @@ goods_output_livestock_mult={
 	}
 }
 
-goods_output_fabric_mult={
+goods_output_bread_mult={
 	decimals=1
 	color=good
 	percent=yes

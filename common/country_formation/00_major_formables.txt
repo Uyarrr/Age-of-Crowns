@@ -125,6 +125,10 @@ SCA = {
 
 	required_states_fraction = 0.7
 
+	possible = {
+		has_technology_researched = major_formation
+	}
+
 	ai_will_do = { always = yes }
 
 	possible = {
@@ -148,7 +152,6 @@ SCA = {
 					country_has_primary_culture = cu:icelandic
 				}
 			}
-			has_technology_researched = major_formation
 			percent = 1
 		}
 	}

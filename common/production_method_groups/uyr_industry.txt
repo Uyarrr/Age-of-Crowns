@@ -180,3 +180,24 @@ pmg_building_distillery_main = {
 		pm_building_distillery_main_4
 	}
 }
+
+########################### BAKERY ##################################
+
+pmg_building_bakery_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_bakery_main_1
+		pm_building_bakery_main_2
+		pm_building_bakery_main_3
+		pm_building_bakery_main_4
+	}
+}
+
+pmg_building_bakery_heating = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_bakery_heating_0
+		pm_building_bakery_heating_1
+		pm_building_bakery_heating_2
+	}
+}
