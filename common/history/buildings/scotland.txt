@@ -1,21 +1,41 @@
 ﻿BUILDINGS={
-	s:STATE_AUSTRIA={
-		region_state:AUS={
+	s:STATE_LOWLANDS={
+		region_state:SCO={
 			create_building={
-				building="building_weapon_workshop"
+				building="building_livestock_ranch"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:SCO"
 						levels=1
 					}
 				}
 				reserves=1
 			}
 			create_building={
-				building="building_logging_camp"
+				building="building_rye_farm"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:SCO"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_stone_mine"
+				add_ownership={
+					country={
+						country="c:SCO"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_weapon_workshop"
+				add_ownership={
+					country={
+						country="c:SCO"
 						levels=1
 					}
 				}
@@ -23,33 +43,13 @@
 			}
 		}
 	}
-	s:STATE_STYRIA={
-		region_state:AUS={
+	s:STATE_HIGHLANDS={
+		region_state:SCO={
 			create_building={
-				building="building_stud_farm"
+				building="building_logging_camp"
 				add_ownership={
 					country={
-						country="c:AUS"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_caravan_hub"
-				add_ownership={
-					country={
-						country="c:AUS"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={
-					country={
-						country="c:AUS"
+						country="c:SCO"
 						levels=1
 					}
 				}

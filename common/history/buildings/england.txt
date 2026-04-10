@@ -1,4 +1,5 @@
 ﻿BUILDINGS={
+	# 10 BUILDINGS EXCLUDED ADMINISTRATION AND TRADE CENTER
 	s:STATE_HOME_COUNTIES={
 		region_state:ENG={
 			create_building={
@@ -22,27 +23,37 @@
 				reserves=1
 			}
 			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_rye_farm"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_bakery"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
 				building="building_port"
-				add_ownership={
-					country={
-						country="c:ENG"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_road"
-				add_ownership={
-					country={
-						country="c:ENG"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_government_administration"
 				add_ownership={
 					country={
 						country="c:ENG"
@@ -76,7 +87,17 @@
 				reserves=1
 			}
 			create_building={
-				building="building_government_administration"
+				building="building_textile_mill"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_paper_mill"
 				add_ownership={
 					country={
 						country="c:ENG"
@@ -90,27 +111,41 @@
 	s:STATE_WEST_COUNTRY={
 		region_state:ENG={
 			create_building={
-				building="building_trade_center"
-				add_ownership={
-					country={
-						country="c:ENG"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_government_administration"
-				add_ownership={
-					country={
-						country="c:ENG"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
 				building="building_tooling_workshop"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_stone_mine"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_FRENCH_LOW_COUNTRIES={
+		region_state:ENG={
+			create_building={
+				building="building_port"
 				add_ownership={
 					country={
 						country="c:ENG"

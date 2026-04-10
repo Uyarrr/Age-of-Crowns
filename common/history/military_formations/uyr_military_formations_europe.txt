@@ -184,15 +184,6 @@
 				count = 7
 			}
 		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
-		}
 	}
 
 	c:CAS ?= {
@@ -215,15 +206,6 @@
 				state_region = s:STATE_NEW_CASTILE
 				count = 3
 			}
-		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
 		}
 	}
 
@@ -248,15 +230,6 @@
 				count = 7
 			}
 		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
-		}
 	}
 
 	c:T54 ?= {
@@ -280,15 +253,6 @@
 				count = 8
 			}
 		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
-		}
 	}
 
 	c:TUR ?= {
@@ -311,15 +275,6 @@
 				state_region = s:STATE_ANKARA
 				count = 6
 			}
-		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
 		}
 	}
 
@@ -390,7 +345,7 @@
 	c:SCO ?= {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_britain
+			hq_region = sr:region_england
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_infantry_1
@@ -407,15 +362,6 @@
 				state_region = s:STATE_LOWLANDS
 				count = 2
 			}
-		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
 		}
 	}
 
@@ -440,15 +386,6 @@
 				count = 3
 			}
 		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
-		}
 	}
 
 	c:VEN ?= {
@@ -471,15 +408,6 @@
 				state_region = s:STATE_VENETIA
 				count = 2
 			}
-		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
 		}
 	}
 
@@ -504,15 +432,6 @@
 				count = 3
 			}
 		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
-		}
 	}
 
 	c:NOG ?= {
@@ -536,15 +455,6 @@
 				count = 2
 			}
 		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
-		}
 	}
 
 	c:TAR ?= {
@@ -567,15 +477,6 @@
 				state_region = s:STATE_KAZAN
 				count = 2
 			}
-		}
-
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_naval_theory
-		}
-		activate_production_method = {
-			building_type = building_barrack
-			production_method = pm_general_training
 		}
 	}
 

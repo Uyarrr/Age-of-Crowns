@@ -1,0 +1,170 @@
+﻿identity_holy_roman_empire = {
+	power_bloc_modifier = {
+		power_bloc_customs_union_bool = yes
+		power_bloc_income_transfer_to_leader_factor = 0.10
+
+		power_bloc_mandate_progress_per_great_power_member_add = -15
+		power_bloc_mandate_progress_per_major_power_member_add = -8
+		power_bloc_mandate_progress_per_minor_power_member_add = 3
+		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
+
+		power_bloc_cohesion_per_member_add = 1.0
+
+		power_bloc_invite_acceptance_great_power_add = -100
+		power_bloc_invite_acceptance_major_power_add = -50
+		power_bloc_invite_acceptance_add = -15
+	}
+
+	leader_modifier = {
+		country_prestige_mult = 0.10
+		country_influence_add = 100
+		country_liberty_desire_of_subjects_add = -0.05
+	}
+
+	member_modifier = {
+		country_construction_add = 3
+	}
+
+	can_leave = {
+		OR = {
+			is_power_bloc_leader = yes
+
+			# Only allow leaving if relations are VERY bad
+			AND = {
+				power_bloc = {
+					leverage_advantage = {
+						target = root
+						value <= 10
+					}
+				}
+				relations <= relations_threshold:hostile
+			}
+		}
+	}
+
+	possible = {
+		always = no
+	}
+
+	icon = "gfx/interface/icons/central_identity_pillars_icons/sovereign_empire.dds"
+	background = "gfx/interface/power_blocs/backgrounds/pb_background_generic.dds"
+
+	visible = {
+		has_dlc_feature = power_bloc_features
+	}
+
+	mandate_progress = power_bloc_mandate_progress_by_rank
+
+	on_created = { relations_hit_with_power_bloc_leaders = yes }
+
+	cohesion = {
+		add = {
+			add = 0.35
+			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
+			desc = POWER_BLOC_COHESION_BASE
+		}
+
+		add = {
+			scope:power_bloc = {
+				every_power_bloc_member = {
+					if = {
+						limit = { country_rank <= rank_value:minor_power }
+						add = 0.03
+					}
+				}
+			}
+			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
+			desc = POWER_BLOC_COHESION_BASE
+		}
+
+		add = {
+			if = {
+				limit = { exists = scope:with_country }
+				add = "scope:power_bloc.power_bloc_worst_leader_relations_with(scope:with_country)"
+			}
+			else_if = {
+				limit = { exists = scope:without_country }
+				add = "scope:power_bloc.power_bloc_worst_leader_relations_without(scope:without_country)"
+			}
+			else = {
+				add = scope:power_bloc.power_bloc_worst_leader_relations
+			}
+			divide = define:NDiplomacy|MIN_RELATIONS
+			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
+			multiply = -1
+			max = 0
+			desc = POWER_BLOC_COHESION_WORST_LEADER_RELATIONS
+		}
+
+		add = {
+			if = {
+				limit = { exists = scope:with_country }
+				add = "scope:power_bloc.power_bloc_worst_liberty_desire_with(scope:with_country)"
+			}
+			else_if = {
+				limit = { exists = scope:without_country }
+				add = "scope:power_bloc.power_bloc_worst_liberty_desire_without(scope:without_country)"
+			}
+			else = {
+				add = scope:power_bloc.power_bloc_worst_liberty_desire
+			}
+			divide = 200
+			multiply = -1
+			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
+			desc = POWER_BLOC_COHESION_WORST_LIBERTY_DESIRE
+		}
+
+		add = {
+			if = {
+				limit = { exists = scope:with_country }
+				add = "power_bloc_share_gdp_with(scope:with_country)"
+			}
+			else_if = {
+				limit = { exists = scope:without_country }
+				add = "power_bloc_share_gdp_without(scope:without_country)"
+			}
+			else = {
+				add = power_bloc_share_gdp
+			}
+			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
+			multiply = 0.25
+			desc = POWER_BLOC_COHESION_SHARE_GDP
+		}
+	}
+
+	ai_weight = {
+		value = 50
+
+		if = {
+			limit = {
+				has_law = law_type:law_monarchy
+			}
+			add = 100
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_maintain_power_balance
+					has_strategy = ai_strategy_austrian_hegemony
+				}
+			}
+			add = 150
+		}
+
+		if = {
+			limit = {
+				ig:ig_landowners ?= { is_in_government = yes }
+			}
+			add = 50
+		}
+
+		if = {
+			limit = {
+				ig:ig_armed_forces ?= { is_in_government = yes }
+			}
+			add = 50
+		}
+	}
+}

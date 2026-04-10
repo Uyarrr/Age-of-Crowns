@@ -1,0 +1,646 @@
+﻿ai_strategy_ottoman_imperial_expansion = {
+	icon = "gfx/interface/icons/ai_strategy_icons/territorial_expansion.dds"
+	type = diplomatic
+
+	will_form_power_bloc = {
+		always = yes
+	}
+
+	undesirable_infamy_level = {
+		value = 50
+	}
+
+	unacceptable_infamy_level = {
+		value = 85
+	}
+
+	ideological_opinion_effect_mult = {
+		value = 0.75
+	}
+
+	wargoal_maneuvers_fraction = {
+		value = 0.22
+	}
+
+	diplomatic_play_neutrality = {
+		value = 15
+	}
+
+	diplomatic_play_boldness = {
+		value = 50
+	}
+
+	recklessness = {
+		value = 0.24
+	}
+
+	aggression = {
+		value = 0.85
+
+		# Main driver: pursue countries holding Ottoman claims
+		if = {
+			limit = {
+				scope:target_country = {
+					any_scope_state = {
+						has_claim_by = root
+					}
+				}
+			}
+			add = 1.20
+		}
+
+		# Strong preference for land and nearby sea expansion
+		if = {
+			limit = {
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							any_neighbouring_state = {
+								owner = root
+								is_incorporated = yes
+							}
+							AND = {
+								root = {
+									navy_size >= 10
+								}
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			add = 0.75
+		}
+
+		# Natural Ottoman expansion zones
+		if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						capital.region = sr:region_anatolia
+						capital.region = sr:region_balkans
+						capital.region = sr:region_caucasus
+						capital.region = sr:region_persia
+						capital.region = sr:region_arabia
+						capital.region = sr:region_nile
+					}
+				}
+			}
+			add = 0.50
+		}
+
+		# Opportunism: target already in war
+		if = {
+			limit = {
+				scope:target_country = {
+					is_in_war = yes
+				}
+			}
+			add = 0.55
+		}
+
+		# Opportunism: isolated target
+		if = {
+			limit = {
+				scope:target_country = {
+					num_allies < 1
+				}
+			}
+			add = 0.35
+		}
+
+		# Prefer weaker targets
+		if = {
+			limit = {
+				scope:target_country.country_rank < root.country_rank
+			}
+			add = 0.35
+		}
+
+		# Prefer minor powers for domination / incremental expansion
+		if = {
+			limit = {
+				scope:target_country.country_rank <= rank_value:minor_power
+			}
+			add = 0.35
+		}
+
+		# Subjects should not be treated as conquest targets
+		if = {
+			limit = {
+				scope:target_country = { is_subject_of = root }
+			}
+			multiply = 0.20
+		}
+
+		# Reduce aggression toward irrelevant distant targets, but do not kill AI
+		if = {
+			limit = {
+				scope:target_country = {
+					NOT = {
+						any_scope_state = {
+							has_claim_by = root
+						}
+					}
+					NOT = {
+						any_scope_state = {
+							OR = {
+								any_neighbouring_state = {
+									owner = root
+									is_incorporated = yes
+								}
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+					}
+					NOT = {
+						OR = {
+							capital.region = sr:region_anatolia
+							capital.region = sr:region_balkans
+							capital.region = sr:region_caucasus
+							capital.region = sr:region_persia
+							capital.region = sr:region_arabia
+							capital.region = sr:region_nile
+						}
+					}
+					NOT = { is_subject_of = root }
+				}
+			}
+			multiply = 0.45
+		}
+
+		multiply = {
+			value = "ai_ideological_opinion(scope:target_country)"
+			multiply = -0.1
+			add = 1
+			max = 2.0
+			min = 0.5
+		}
+
+		max = 3.0
+	}
+
+	building_group_weights = {
+		bg_army = 1.75
+		bg_navy = 1.20
+	}
+
+	secret_goal_weights = {
+		protect = 0.55
+		conquer = 2.25
+		dominate = 1.50
+		befriend = 0.20
+		reconcile = 0.00
+	}
+
+	wargoal_weights = {
+		conquer_state = 3.25
+		return_state = 2.75
+		make_protectorate = 1.40
+		make_dominion = 0.70
+		reduce_autonomy = 1.90
+		annex_country = 2.10
+		force_nationalization = 0.00
+	}
+
+	secret_goal_scores = {
+		conquer = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country.country_rank <= root.country_rank
+				scope:target_country = {
+					OR = {
+						any_scope_state = {
+							has_claim_by = root
+						}
+						any_scope_state = {
+							OR = {
+								any_neighbouring_state = {
+									owner = root
+									is_incorporated = yes
+								}
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+						OR = {
+							capital.region = sr:region_anatolia
+							capital.region = sr:region_balkans
+							capital.region = sr:region_caucasus
+							capital.region = sr:region_persia
+							capital.region = sr:region_arabia
+							capital.region = sr:region_nile
+						}
+					}
+				}
+				can_reach_target_country = yes
+			}
+			score = {
+				value = 125
+
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = {
+								has_claim_by = root
+							}
+						}
+					}
+					add = 300
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = {
+								OR = {
+									any_neighbouring_state = {
+										owner = root
+										is_incorporated = yes
+									}
+									any_sea_node_adjacent_state = {
+										owner = root
+										is_incorporated = yes
+									}
+								}
+							}
+						}
+					}
+					add = 150
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							OR = {
+								capital.region = sr:region_anatolia
+								capital.region = sr:region_balkans
+								capital.region = sr:region_caucasus
+								capital.region = sr:region_persia
+								capital.region = sr:region_arabia
+								capital.region = sr:region_nile
+							}
+						}
+					}
+					add = 100
+				}
+
+				if = {
+					limit = {
+						scope:target_country.country_rank <= rank_value:minor_power
+					}
+					add = 80
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							is_in_war = yes
+						}
+					}
+					add = 70
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							num_allies < 1
+						}
+					}
+					add = 40
+				}
+			}
+		}
+
+		dominate = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country.country_rank <= rank_value:minor_power
+				scope:target_country = {
+					OR = {
+						any_scope_state = {
+							OR = {
+								any_neighbouring_state = {
+									owner = root
+									is_incorporated = yes
+								}
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+						OR = {
+							capital.region = sr:region_balkans
+							capital.region = sr:region_caucasus
+							capital.region = sr:region_arabia
+							capital.region = sr:region_nile
+						}
+					}
+				}
+				can_reach_target_country = yes
+			}
+			score = {
+				value = 70
+
+				if = {
+					limit = {
+						scope:target_country = {
+							OR = {
+								capital.region = sr:region_balkans
+								capital.region = sr:region_caucasus
+								capital.region = sr:region_arabia
+								capital.region = sr:region_nile
+							}
+						}
+					}
+					add = 95
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							is_in_war = yes
+						}
+					}
+					add = 35
+				}
+			}
+		}
+
+		protect = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+			}
+			score = {
+				value = 150
+			}
+		}
+
+		befriend = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+			}
+			score = {
+				value = 55
+
+				if = {
+					limit = {
+						scope:target_country = { relations:root < relations_threshold:amicable }
+					}
+					add = 70
+				}
+			}
+		}
+
+		none = {
+			trigger = {
+				scope:target_country = {
+					NOT = {
+						any_scope_state = {
+							has_claim_by = root
+						}
+					}
+					NOT = {
+						any_scope_state = {
+							OR = {
+								any_neighbouring_state = {
+									owner = root
+									is_incorporated = yes
+								}
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+					}
+					NOT = {
+						OR = {
+							capital.region = sr:region_anatolia
+							capital.region = sr:region_balkans
+							capital.region = sr:region_caucasus
+							capital.region = sr:region_persia
+							capital.region = sr:region_arabia
+							capital.region = sr:region_nile
+						}
+					}
+					NOT = { is_subject_of = root }
+				}
+			}
+			score = {
+				value = -250
+			}
+		}
+	}
+
+	wargoal_scores = {
+		conquer_state = {
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							has_claim_by = root
+							any_neighbouring_state = {
+								owner = root
+								is_incorporated = yes
+							}
+							any_sea_node_adjacent_state = {
+								owner = root
+								is_incorporated = yes
+							}
+						}
+					}
+				}
+				add = 225
+			}
+
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = conquer
+					}
+				}
+				add = 200
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						has_claim_by = root
+					}
+				}
+				add = 300
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							region = sr:region_anatolia
+							region = sr:region_balkans
+							region = sr:region_caucasus
+							region = sr:region_persia
+							region = sr:region_arabia
+							region = sr:region_nile
+						}
+					}
+				}
+				add = 90
+			}
+		}
+
+		return_state = {
+			if = {
+				limit = {
+					scope:target_state = {
+						has_claim_by = root
+					}
+				}
+				add = 280
+			}
+		}
+
+		make_protectorate = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					scope:target_country.country_rank <= rank_value:minor_power
+				}
+				add = 125
+			}
+		}
+
+		make_dominion = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					scope:target_country.country_rank <= rank_value:minor_power
+				}
+				add = 60
+			}
+		}
+
+		reduce_autonomy = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = { relations:root >= relations_threshold:amicable }
+				}
+				add = 180
+			}
+		}
+
+		annex_country = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country.country_rank <= rank_value:minor_power
+					scope:target_country = { relations:root >= relations_threshold:cordial }
+				}
+				add = 220
+			}
+		}
+	}
+
+	possible = {
+		is_subject = no
+		c:TUR ?= this
+	}
+
+	weight = {
+		value = 100
+
+		if = {
+			limit = {
+				game_date < 1475.1.1
+			}
+			add = 100
+		}
+
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					any_scope_state = {
+						has_claim_by = root
+					}
+				}
+			}
+			add = 140
+		}
+
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					NOT = { is_subject_of = root }
+					any_scope_state = {
+						OR = {
+							any_neighbouring_state = {
+								owner = root
+								is_incorporated = yes
+							}
+							any_sea_node_adjacent_state = {
+								owner = root
+								is_incorporated = yes
+							}
+						}
+					}
+				}
+			}
+			add = 70
+		}
+
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					NOT = { is_subject_of = root }
+					OR = {
+						capital.region = sr:region_anatolia
+						capital.region = sr:region_balkans
+						capital.region = sr:region_arabia
+						capital.region = sr:region_nile
+						capital.region = sr:region_caucasus
+						capital.region = sr:region_persia
+					}
+					is_in_war = yes
+				}
+			}
+			add = 40
+		}
+
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					NOT = { is_subject_of = root }
+					scope:country_rank <= rank_value:minor_power
+					OR = {
+						capital.region = sr:region_balkans
+						capital.region = sr:region_anatolia
+						capital.region = sr:region_arabia
+						capital.region = sr:region_nile
+					}
+				}
+			}
+			add = 35
+		}
+	}
+}

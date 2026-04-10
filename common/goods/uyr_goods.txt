@@ -5,8 +5,6 @@
 	tradeable = no
 
 	prestige_factor = 8
-	traded_quantity = 4
-	convoy_cost_multiplier = 0.05
 }
 
 stone = {
@@ -21,7 +19,7 @@ stone = {
 horse = {
 	texture = "gfx/interface/icons/goods_icons/horse.dds"
 	cost = 50
-	category = staple
+	category = industrial
 
 	prestige_factor = 5
 	traded_quantity = 5
@@ -51,37 +49,30 @@ bread = {
 
 livestock = {
 	texture = "gfx/interface/icons/goods_icons/livestock.dds"
-	cost = 30
-	category = luxury
+	cost = 20
+	category = industrial
 
-	obsession_chance = 1.0
-	prestige_factor = 4
-
-	traded_quantity = 8 # 240
-	convoy_cost_multiplier = 0.75
-
-	consumption_tax_cost = 200
+	prestige_factor = 6
+	traded_quantity = 5 # 200
 }
 
 fiber = {
 	texture = "gfx/interface/icons/goods_icons/fiber_crops.dds"
 	cost = 20
-	category = staple
+	category = industrial
 
-	prestige_factor = 3
-	traded_quantity = 10
-	convoy_cost_multiplier = 0.25
+	prestige_factor = 6
+	traded_quantity = 5 # 200
 }
 
 navalsupplies = {
 	texture = "gfx/interface/icons/goods_icons/naval_supplies.dds"
-	cost = 60
+	cost = 65
 	category = industrial
 
-	obsession_chance = 0.5
-	prestige_factor = 4
+	prestige_factor = 5
 	traded_quantity = 3.5
-	convoy_cost_multiplier = 0.25
+	convoy_cost_multiplier = 0.5
 }
 
 pottery = {
@@ -100,9 +91,8 @@ saltpeter = {
 	cost = 50
 	category = industrial
 
-	prestige_factor = 6
-	traded_quantity = 4
-	convoy_cost_multiplier = 1.5
+	prestige_factor = 5
+	traded_quantity = 5
 }
 
 weapons = {
@@ -117,13 +107,12 @@ weapons = {
 
 leather = {
 	texture = "gfx/interface/icons/goods_icons/leather.dds"
-	cost = 20
-	category = staple
+	cost = 30
+	category = industrial
 
 	prestige_factor = 3
 	traded_quantity = 10
 	convoy_cost_multiplier = 0.25
-	consumption_tax_cost = 300
 }
 
 beer = {

@@ -5,6 +5,8 @@
 	language = language_germanophone
 	traditions = { }
 	obsessions = {
+		beer
+		fish
 		meat
 	}
 	male_common_first_names={
@@ -201,6 +203,7 @@ south_german={
 	language = language_germanophone
 	traditions = { }
 	obsessions = {
+		beer
 		meat
 	}
 	male_common_first_names={
@@ -526,7 +529,8 @@ dutch={
 	language = language_dutch
 	traditions = { }
 	obsessions = {
-		coffee
+		beer
+		fish
 	}
 	male_common_first_names={
 		nl_Aalbert nl_Aarend nl_Aart nl_Adriaan nl_Adriaen nl_Aelbert nl_Andre nl_Andreas
@@ -2952,7 +2956,9 @@ british={ # "English" in localization
 	traditions = { }
 	
 	obsessions = {
-		tea
+		bread
+		cloth
+		beer
 	}
 	
 	male_common_first_names={
@@ -3550,6 +3556,7 @@ north_italian={
 	
 	obsessions = {
 		wine
+		cloth
 	}	
 	
 	male_common_first_names={
@@ -4515,6 +4522,7 @@ south_italian={
 	
 	obsessions = {
 		wine
+		pottery
 	}	
 	
 	male_common_first_names={
@@ -5581,6 +5589,8 @@ basque={
 	language = language_basque
 	traditions = { }
 	obsessions = {
+		fish
+		meat
 		wine
 	}
 	male_common_first_names={
@@ -5694,7 +5704,8 @@ spanish={
 	language = language_hispanophone
 	traditions = { }
 	obsessions = {
-		liquor
+		grain
+		meat
 	}
 	male_common_first_names={
 		es_Abelardo es_Abimael es_Absalon es_Acacio es_Adalberto es_Adan es_Adamo
@@ -5953,6 +5964,7 @@ catalan={
 	traditions = { }
 	obsessions = {
 		wine
+		fruit
 	}
 	male_common_first_names={
 		ca_Aaro ca_Aaron ca_Abelard ca_Abraham ca_Absalo ca_Abundi ca_Adalbert ca_Adam
@@ -6043,6 +6055,7 @@ portuguese={
 	language = language_lusophone
 	traditions = { }
 	obsessions = {
+		fish
 		wine
 	}
 	male_common_first_names={
@@ -6286,6 +6299,7 @@ french={
 	
 	obsessions = {
 		wine
+		bread
 	}
 	
 	male_common_first_names={
@@ -6779,6 +6793,7 @@ occitan={
 	# the best wine is from Occitania, of course.
 	obsessions = {
 		wine
+		fruit
 	}
 
 	male_common_first_names={
@@ -8708,7 +8723,9 @@ polish={
 	language = language_west_slavic
 	traditions = { }
 	obsessions = {
+		meat
 		liquor
+		grain
 	}
 	male_common_first_names={
 		pl_Adam pl_Adolf pl_Adrian pl_Albin pl_Aleksander pl_Alfons pl_Alojzy pl_Ambrozy

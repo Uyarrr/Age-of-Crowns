@@ -1,42 +1,11 @@
 ﻿BUILDINGS={
-	# 10 BUILDINGS EXCLUDED ADMINISTRATION AND TRADE CENTER
-	s:STATE_ILE_DE_FRANCE={
-		region_state:FRA={
+	s:STATE_HUDAVENDIGAR={
+		region_state:TUR={
 			create_building={
-				building="building_weapon_workshop"
+				building="building_port"
 				add_ownership={
 					country={
-						country="c:FRA"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={
-					country={
-						country="c:FRA"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_stud_farm"
-				add_ownership={
-					country={
-						country="c:FRA"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_wheat_farm"
-				add_ownership={
-					country={
-						country="c:FRA"
+						country="c:TUR"
 						levels=1
 					}
 				}
@@ -46,17 +15,27 @@
 				building="building_logging_camp"
 				add_ownership={
 					country={
-						country="c:FRA"
+						country="c:TUR"
 						levels=1
 					}
 				}
 				reserves=1
 			}
 			create_building={
-				building="building_government_administration"
+				building="building_wheat_farm"
 				add_ownership={
 					country={
-						country="c:FRA"
+						country="c:TUR"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_paper_mill"
+				add_ownership={
+					country={
+						country="c:TUR"
 						levels=1
 					}
 				}
@@ -64,33 +43,43 @@
 			}
 		}
 	}
-	s:STATE_POITOU={
-		region_state:FRA={
-			create_building={
-				building="building_shipyard"
-				add_ownership={
-					country={
-						country="c:FRA"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_port"
-				add_ownership={
-					country={
-						country="c:FRA"
-						levels=1
-					}
-				}
-				reserves=1
-			}
+	s:STATE_ANKARA={
+		region_state:TUR={
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
 					country={
-						country="c:FRA"
+						country="c:TUR"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_vineyard"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_stud_farm"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_bakery"
+				add_ownership={
+					country={
+						country="c:TUR"
 						levels=1
 					}
 				}
@@ -98,27 +87,57 @@
 			}
 		}
 	}
-	s:STATE_CHAMPAGNE={
-		region_state:FRA={
+	s:STATE_KONYA={
+		region_state:TUR={
 			create_building={
-				building="building_vineyard"
+				building="building_weapon_workshop"
 				add_ownership={
 					country={
-						country="c:FRA"
+						country="c:TUR"
 						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=3
 					}
 				}
 				reserves=1
 			}
 		}
 	}
-	s:STATE_ORLEANS={
-		region_state:FRA={
+	s:STATE_AYDIN={
+		region_state:TUR={
 			create_building={
-				building="building_vineyard"
+				building="building_fiber_farm"
 				add_ownership={
 					country={
-						country="c:FRA"
+						country="c:TUR"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_shipyard"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_stone_mine"
+				add_ownership={
+					country={
+						country="c:TUR"
 						levels=1
 					}
 				}
