@@ -4,7 +4,7 @@
 	type = diplomatic
 
 	will_form_power_bloc = {
-		country_rank >= rank_value:major_power
+		always = yes
 	}
 
 	undesirable_infamy_level = {
@@ -16,7 +16,7 @@
 	}
 
 	ideological_opinion_effect_mult = {
-		value = 0.90
+		value = 0.9
 	}
 
 	wargoal_maneuvers_fraction = {
@@ -24,31 +24,34 @@
 	}
 
 	diplomatic_play_neutrality = {
-		value = 10
+		value = 5
 	}
 
 	diplomatic_play_boldness = {
-		value = 55
+		value = 50
 	}
 
 	recklessness = {
-		value = 0.25
+		value = 0.3
 	}
 
 	aggression = {
-		value = 0.85
+		value = 1.15
 
-		# Main rival: England, but not insane tunnel vision
+		# Main rival: England
 		if = {
 			limit = {
 				scope:target_country = { c:ENG ?= this }
 			}
-			add = 0.90
+			add = 2.5
 		}
 
-		# Primary sphere: France / Occitania / Rhine
+		# Strong aggression toward adjacent targets in the French sphere
 		if = {
 			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
 				scope:target_country = {
 					OR = {
 						capital.region = sr:region_france
@@ -57,81 +60,54 @@
 					}
 				}
 			}
-			add = 0.80
+			add = 1.25
 		}
 
-		# Strong preference for adjacent targets
+		# General preference for adjacent reachable targets
 		if = {
 			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
 				has_strategic_adjacency = scope:target_country
 			}
-			add = 0.45
+			add = 0.6
 		}
 
-		# Coastal / reachable targets matter too
-		if = {
-			limit = {
-				can_reach_target_country = yes
-			}
-			add = 0.20
-		}
-
-		# Opportunism: strike countries already tied up in war
-		if = {
-			limit = {
-				scope:target_country = {
-					is_in_war = yes
-				}
-			}
-			add = 0.55
-		}
-
-		# Opportunism: isolated targets
-		if = {
-			limit = {
-				scope:target_country = {
-					num_allies < 1
-				}
-			}
-			add = 0.35
-		}
-
-		# Prefer weaker targets
+		# Prefer weaker neighbors
 		if = {
 			limit = {
 				scope:target_country.country_rank < root.country_rank
 			}
-			add = 0.35
+			add = 0.4
 		}
 
-		# Reduce aggression against subjects; use integration tools instead
+		# Tone down aggression against non-adjacent countries outside the French sphere
+		if = {
+			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				NOT = { has_strategic_adjacency = scope:target_country }
+				scope:target_country = {
+					NOT = {
+						OR = {
+							c:ENG ?= this
+							capital.region = sr:region_france
+							capital.region = sr:region_occitania
+							capital.region = sr:region_rhine
+						}
+					}
+				}
+			}
+			add = -1.0
+		}
+
+		# Much less aggression toward own subjects
 		if = {
 			limit = {
 				scope:target_country = { is_subject_of = root }
 			}
-			multiply = 0.20
+			multiply = 0.1
 		}
-
-		# Reduce aggression against irrelevant distant targets, but do not cripple AI
-		if = {
-			limit = {
-				scope:target_country = {
-					NOR = {
-						c:ENG ?= this
-						capital.region = sr:region_france
-						capital.region = sr:region_occitania
-						capital.region = sr:region_rhine
-						is_subject_of = root
-					}
-				}
-				NOT = { has_strategic_adjacency = scope:target_country }
-				NOT = { can_reach_target_country = yes }
-			}
-			multiply = 0.45
-		}
-
-		max = 3.0
 	}
 
 	building_group_weights = {
@@ -140,21 +116,21 @@
 	}
 
 	secret_goal_weights = {
-		conquer = 2.10
-		dominate = 1.60
-		protect = 0.55
-		befriend = 0.40
-		reconcile = 0.05
+		conquer = 2.5
+		dominate = 0.9
+		protect = 0.5
+		befriend = 0.25
+		reconcile = 0.0
 	}
 
 	wargoal_weights = {
-		conquer_state = 3.00
-		return_state = 2.25
-		make_protectorate = 1.75
-		make_dominion = 0.90
-		reduce_autonomy = 2.50
-		annex_country = 2.75
-		force_nationalization = 0.00
+		conquer_state = 3.5
+		return_state = 2.5
+		make_protectorate = 1.1
+		make_dominion = 0.5
+		reduce_autonomy = 2.5
+		annex_country = 3.0
+		force_nationalization = 0.0
 	}
 
 	secret_goal_scores = {
@@ -163,8 +139,8 @@
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
 				OR = {
-					has_strategic_adjacency = scope:target_country
 					scope:target_country = { c:ENG ?= this }
+					has_strategic_adjacency = scope:target_country
 					scope:target_country = {
 						OR = {
 							capital.region = sr:region_france
@@ -175,17 +151,17 @@
 				}
 			}
 			score = {
-				value = 100
+				value = 120
 
-				# England is a major rival, but no longer absurdly over-weighted
+				# England is the main enemy early game
 				if = {
 					limit = {
 						scope:target_country = { c:ENG ?= this }
 					}
-					add = 220
+					add = 450
 				}
 
-				# Strong preference for consolidation in the French sphere
+				# Strong preference for French cultural sphere
 				if = {
 					limit = {
 						scope:target_country = {
@@ -195,52 +171,33 @@
 							}
 						}
 					}
-					add = 180
+					add = 200
 				}
 
-				# Rhine is a secondary expansion pressure zone
+				# Rhine is still important, but slightly lower
 				if = {
 					limit = {
 						scope:target_country = {
 							capital.region = sr:region_rhine
 						}
 					}
-					add = 110
+					add = 125
 				}
 
-				# Adjacent targets are naturally preferred
+				# Adjacent targets preferred
 				if = {
 					limit = {
 						has_strategic_adjacency = scope:target_country
 					}
-					add = 80
+					add = 100
 				}
 
-				# Prefer weaker targets
+				# Prefer smaller countries when expanding
 				if = {
 					limit = {
-						scope:target_country.country_rank < root.country_rank
+						scope:target_country.country_rank <= rank_value:minor_power
 					}
-					add = 45
-				}
-
-				# Opportunistic attack windows
-				if = {
-					limit = {
-						scope:target_country = {
-							is_in_war = yes
-						}
-					}
-					add = 65
-				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							num_allies < 1
-						}
-					}
-					add = 40
+					add = 50
 				}
 			}
 		}
@@ -249,57 +206,18 @@
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
 				scope:target_country.country_rank <= rank_value:minor_power
-				OR = {
-					has_strategic_adjacency = scope:target_country
-					scope:target_country = {
-						OR = {
-							capital.region = sr:region_france
-							capital.region = sr:region_occitania
-							capital.region = sr:region_rhine
-						}
+				scope:target_country = {
+					OR = {
+						capital.region = sr:region_france
+						capital.region = sr:region_occitania
+						capital.region = sr:region_rhine
 					}
 				}
 			}
 			score = {
-				value = 85
-
-				if = {
-					limit = {
-						scope:target_country = {
-							OR = {
-								capital.region = sr:region_france
-								capital.region = sr:region_occitania
-							}
-						}
-					}
-					add = 110
-				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							capital.region = sr:region_rhine
-						}
-					}
-					add = 70
-				}
-
-				if = {
-					limit = {
-						has_strategic_adjacency = scope:target_country
-					}
-					add = 50
-				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							is_in_war = yes
-						}
-					}
-					add = 40
-				}
+				value = 80
 			}
 		}
 
@@ -317,33 +235,14 @@
 				scope:target_country = { is_subject_of = root }
 			}
 			score = {
-				value = 80
+				value = 75
 
 				if = {
 					limit = {
 						scope:target_country = { relations:root < relations_threshold:amicable }
 					}
-					add = 70
+					add = 75
 				}
-			}
-		}
-
-		none = {
-			trigger = {
-				scope:target_country = {
-					NOR = {
-						c:ENG ?= this
-						capital.region = sr:region_france
-						capital.region = sr:region_occitania
-						capital.region = sr:region_rhine
-						is_subject_of = root
-					}
-				}
-				NOT = { has_strategic_adjacency = scope:target_country }
-				NOT = { can_reach_target_country = yes }
-			}
-			score = {
-				value = -220
 			}
 		}
 	}
@@ -357,38 +256,41 @@
 						secret_goal = conquer
 					}
 				}
-				add = 225
+				add = 250
 			}
 
-			# England still gets extra priority, but less extreme
+			# Extra priority vs England
 			if = {
 				limit = {
 					scope:target_country = { c:ENG ?= this }
 				}
-				add = 180
+				add = 300
 			}
 
-			# Core consolidation first
+			# Strong preference for states in the French sphere
 			if = {
 				limit = {
 					scope:target_state = {
 						OR = {
 							region = sr:region_france
 							region = sr:region_occitania
+							region = sr:region_rhine
 						}
 					}
 				}
-				add = 140
+				add = 125
 			}
 
-			# Rhine still matters
+			# Prefer directly bordering states
 			if = {
 				limit = {
 					scope:target_state = {
-						region = sr:region_rhine
+						any_neighbouring_state = {
+							owner = root
+						}
 					}
 				}
-				add = 80
+				add = 100
 			}
 		}
 
@@ -397,7 +299,7 @@
 				limit = {
 					scope:target_country = { c:ENG ?= this }
 				}
-				add = 220
+				add = 300
 			}
 
 			if = {
@@ -409,45 +311,33 @@
 						}
 					}
 				}
-				add = 160
+				add = 150
 			}
 		}
 
 		make_protectorate = {
 			if = {
 				limit = {
-					scope:target_country.country_rank <= rank_value:minor_power
-					OR = {
-						has_strategic_adjacency = scope:target_country
-						scope:target_country = {
-							OR = {
-								capital.region = sr:region_france
-								capital.region = sr:region_occitania
-								capital.region = sr:region_rhine
-							}
-						}
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
 					}
+					scope:target_country.country_rank <= rank_value:minor_power
 				}
-				add = 140
+				add = 125
 			}
 		}
 
 		make_dominion = {
 			if = {
 				limit = {
-					scope:target_country.country_rank <= rank_value:minor_power
-					OR = {
-						has_strategic_adjacency = scope:target_country
-						scope:target_country = {
-							OR = {
-								capital.region = sr:region_france
-								capital.region = sr:region_occitania
-								capital.region = sr:region_rhine
-							}
-						}
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
 					}
+					scope:target_country.country_rank <= rank_value:minor_power
 				}
-				add = 70
+				add = 50
 			}
 		}
 
@@ -467,7 +357,7 @@
 					scope:target_country = { is_subject_of = root }
 					scope:target_country = { relations:root >= relations_threshold:cordial }
 				}
-				add = 280
+				add = 300
 			}
 		}
 	}
@@ -480,15 +370,15 @@
 	weight = {
 		value = 150
 
-		# England remains a major strategic concern
+		# Early game: prioritize removing England
 		if = {
 			limit = {
 				exists = c:ENG
 			}
-			add = 70
+			add = 100
 		}
 
-		# If England still holds land in the French core, push harder
+		# If England still holds land in France or Occitania, push hard
 		if = {
 			limit = {
 				c:ENG = {
@@ -500,50 +390,17 @@
 					}
 				}
 			}
-			add = 140
+			add = 150
 		}
 
-		# Subject integration remains important
+		# If subjects still exist, prioritize integration
 		if = {
 			limit = {
 				any_country = {
 					is_subject_of = root
 				}
 			}
-			add = 80
-		}
-
-		# If opportunities exist in the French sphere, stay assertive
-		if = {
-			limit = {
-				any_country = {
-					NOT = { this = root }
-					NOT = { is_subject_of = root }
-					OR = {
-						capital.region = sr:region_france
-						capital.region = sr:region_occitania
-						capital.region = sr:region_rhine
-					}
-				}
-			}
-			add = 50
-		}
-
-		# Opportunity factor: nearby war-torn region
-		if = {
-			limit = {
-				any_country = {
-					NOT = { this = root }
-					can_reach_target_country = yes
-					is_in_war = yes
-					OR = {
-						capital.region = sr:region_france
-						capital.region = sr:region_occitania
-						capital.region = sr:region_rhine
-					}
-				}
-			}
-			add = 35
+			add = 75
 		}
 	}
 }

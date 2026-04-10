@@ -697,7 +697,7 @@ ideology_land_reformer_movement = {
 	icon = "gfx/interface/icons/ideology_icons/land_reformer.dds"
 
 	lawgroup_taxation = {
-		law_land_based_taxation = strongly_disapprove
+		law_land_based_taxation = neutral
 		law_consumption_based_taxation = neutral
 		law_per_capita_based_taxation = neutral
 		law_proportional_taxation = neutral
@@ -1128,7 +1128,7 @@ ideology_utilitarian_movement = {
 		law_per_capita_based_taxation = neutral
 		law_proportional_taxation = approve
 		law_graduated_taxation = strongly_approve
-		law_land_based_taxation = disapprove
+		law_land_based_taxation = neutral
 	}
 
 	lawgroup_caste_hegemony = {

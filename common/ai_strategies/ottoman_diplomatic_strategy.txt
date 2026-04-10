@@ -1,5 +1,6 @@
 ﻿ai_strategy_ottoman_imperial_expansion = {
 	icon = "gfx/interface/icons/ai_strategy_icons/territorial_expansion.dds"
+
 	type = diplomatic
 
 	will_form_power_bloc = {
@@ -7,11 +8,11 @@
 	}
 
 	undesirable_infamy_level = {
-		value = 50
+		value = 60
 	}
 
 	unacceptable_infamy_level = {
-		value = 85
+		value = 95
 	}
 
 	ideological_opinion_effect_mult = {
@@ -19,23 +20,23 @@
 	}
 
 	wargoal_maneuvers_fraction = {
-		value = 0.22
+		value = 0.25
 	}
 
 	diplomatic_play_neutrality = {
-		value = 15
+		value = 10
 	}
 
 	diplomatic_play_boldness = {
-		value = 50
+		value = 55
 	}
 
 	recklessness = {
-		value = 0.24
+		value = 0.4
 	}
 
 	aggression = {
-		value = 0.85
+		value = 1.4
 
 		# Main driver: pursue countries holding Ottoman claims
 		if = {
@@ -46,38 +47,42 @@
 					}
 				}
 			}
-			add = 1.20
+			add = 2.25
 		}
 
-		# Strong preference for land and nearby sea expansion
+		# Strong preference for adjacent reachable neighbors
 		if = {
 			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+			}
+			add = 1.5
+		}
+
+		# Tone down aggression toward non-adjacent countries unless they hold Ottoman claims
+		if = {
+			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				NOT = { has_strategic_adjacency = scope:target_country }
 				scope:target_country = {
-					any_scope_state = {
-						OR = {
-							any_neighbouring_state = {
-								owner = root
-								is_incorporated = yes
-							}
-							AND = {
-								root = {
-									navy_size >= 10
-								}
-								any_sea_node_adjacent_state = {
-									owner = root
-									is_incorporated = yes
-								}
-							}
+					NOT = {
+						any_scope_state = {
+							has_claim_by = root
 						}
 					}
 				}
 			}
-			add = 0.75
+			add = -1.25
 		}
 
-		# Natural Ottoman expansion zones
+		# Extra hostility for adjacent countries in core Ottoman expansion zones
 		if = {
 			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
 				scope:target_country = {
 					OR = {
 						capital.region = sr:region_anatolia
@@ -89,163 +94,61 @@
 					}
 				}
 			}
-			add = 0.50
+			add = 0.9
 		}
 
-		# Opportunism: target already in war
-		if = {
-			limit = {
-				scope:target_country = {
-					is_in_war = yes
-				}
-			}
-			add = 0.55
-		}
-
-		# Opportunism: isolated target
-		if = {
-			limit = {
-				scope:target_country = {
-					num_allies < 1
-				}
-			}
-			add = 0.35
-		}
-
-		# Prefer weaker targets
+		# Prefer weaker neighbors
 		if = {
 			limit = {
 				scope:target_country.country_rank < root.country_rank
 			}
-			add = 0.35
+			add = 0.5
 		}
 
-		# Prefer minor powers for domination / incremental expansion
-		if = {
-			limit = {
-				scope:target_country.country_rank <= rank_value:minor_power
-			}
-			add = 0.35
-		}
-
-		# Subjects should not be treated as conquest targets
+		# Strongly tone down aggression toward existing subjects
 		if = {
 			limit = {
 				scope:target_country = { is_subject_of = root }
 			}
-			multiply = 0.20
+			multiply = 0.1
 		}
-
-		# Reduce aggression toward irrelevant distant targets, but do not kill AI
-		if = {
-			limit = {
-				scope:target_country = {
-					NOT = {
-						any_scope_state = {
-							has_claim_by = root
-						}
-					}
-					NOT = {
-						any_scope_state = {
-							OR = {
-								any_neighbouring_state = {
-									owner = root
-									is_incorporated = yes
-								}
-								any_sea_node_adjacent_state = {
-									owner = root
-									is_incorporated = yes
-								}
-							}
-						}
-					}
-					NOT = {
-						OR = {
-							capital.region = sr:region_anatolia
-							capital.region = sr:region_balkans
-							capital.region = sr:region_caucasus
-							capital.region = sr:region_persia
-							capital.region = sr:region_arabia
-							capital.region = sr:region_nile
-						}
-					}
-					NOT = { is_subject_of = root }
-				}
-			}
-			multiply = 0.45
-		}
-
-		multiply = {
-			value = "ai_ideological_opinion(scope:target_country)"
-			multiply = -0.1
-			add = 1
-			max = 2.0
-			min = 0.5
-		}
-
-		max = 3.0
 	}
 
 	building_group_weights = {
 		bg_army = 1.75
-		bg_navy = 1.20
+		bg_navy = 1.25
 	}
 
 	secret_goal_weights = {
-		protect = 0.55
-		conquer = 2.25
-		dominate = 1.50
-		befriend = 0.20
-		reconcile = 0.00
+		conquer = 2.8
+		dominate = 0.8
+		protect = 0.35
+		befriend = 0.0
+		reconcile = 0.0
 	}
 
 	wargoal_weights = {
-		conquer_state = 3.25
+		conquer_state = 3.75
 		return_state = 2.75
-		make_protectorate = 1.40
-		make_dominion = 0.70
-		reduce_autonomy = 1.90
-		annex_country = 2.10
-		force_nationalization = 0.00
+		make_protectorate = 0.85
+		make_dominion = 0.35
+		reduce_autonomy = 1.5
+		annex_country = 1.75
+		force_nationalization = 0.0
 	}
 
 	secret_goal_scores = {
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				scope:target_country.country_rank <= root.country_rank
-				scope:target_country = {
-					OR = {
-						any_scope_state = {
-							has_claim_by = root
-						}
-						any_scope_state = {
-							OR = {
-								any_neighbouring_state = {
-									owner = root
-									is_incorporated = yes
-								}
-								any_sea_node_adjacent_state = {
-									owner = root
-									is_incorporated = yes
-								}
-							}
-						}
-						OR = {
-							capital.region = sr:region_anatolia
-							capital.region = sr:region_balkans
-							capital.region = sr:region_caucasus
-							capital.region = sr:region_persia
-							capital.region = sr:region_arabia
-							capital.region = sr:region_nile
-						}
-					}
-				}
 				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= root.country_rank
 			}
 			score = {
-				value = 125
+				value = 175
 
+				# Highest priority: claimed lands
 				if = {
 					limit = {
 						scope:target_country = {
@@ -254,29 +157,18 @@
 							}
 						}
 					}
-					add = 300
+					add = 350
 				}
 
+				# Strong preference for bordering enemies
 				if = {
 					limit = {
-						scope:target_country = {
-							any_scope_state = {
-								OR = {
-									any_neighbouring_state = {
-										owner = root
-										is_incorporated = yes
-									}
-									any_sea_node_adjacent_state = {
-										owner = root
-										is_incorporated = yes
-									}
-								}
-							}
-						}
+						has_strategic_adjacency = scope:target_country
 					}
-					add = 150
+					add = 125
 				}
 
+				# Extra pull for Ottoman near abroad
 				if = {
 					limit = {
 						scope:target_country = {
@@ -290,32 +182,15 @@
 							}
 						}
 					}
-					add = 100
+					add = 125
 				}
 
+				# Prefer smaller targets
 				if = {
 					limit = {
 						scope:target_country.country_rank <= rank_value:minor_power
 					}
-					add = 80
-				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							is_in_war = yes
-						}
-					}
-					add = 70
-				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							num_allies < 1
-						}
-					}
-					add = 40
+					add = 75
 				}
 			}
 		}
@@ -323,55 +198,25 @@
 		dominate = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				scope:target_country.country_rank <= rank_value:minor_power
-				scope:target_country = {
-					OR = {
-						any_scope_state = {
-							OR = {
-								any_neighbouring_state = {
-									owner = root
-									is_incorporated = yes
-								}
-								any_sea_node_adjacent_state = {
-									owner = root
-									is_incorporated = yes
-								}
-							}
-						}
-						OR = {
-							capital.region = sr:region_balkans
-							capital.region = sr:region_caucasus
-							capital.region = sr:region_arabia
-							capital.region = sr:region_nile
-						}
-					}
-				}
 				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
 			}
 			score = {
-				value = 70
+				value = 25
 
+				# Use subjugation mainly on smaller adjacent states without claims
 				if = {
 					limit = {
+						scope:target_country.country_rank <= rank_value:minor_power
 						scope:target_country = {
-							OR = {
-								capital.region = sr:region_balkans
-								capital.region = sr:region_caucasus
-								capital.region = sr:region_arabia
-								capital.region = sr:region_nile
+							NOT = {
+								any_scope_state = {
+									has_claim_by = root
+								}
 							}
 						}
 					}
-					add = 95
-				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							is_in_war = yes
-						}
-					}
-					add = 35
+					add = 100
 				}
 			}
 		}
@@ -390,13 +235,13 @@
 				scope:target_country = { is_subject_of = root }
 			}
 			score = {
-				value = 55
+				value = 40
 
 				if = {
 					limit = {
 						scope:target_country = { relations:root < relations_threshold:amicable }
 					}
-					add = 70
+					add = 60
 				}
 			}
 		}
@@ -404,40 +249,18 @@
 		none = {
 			trigger = {
 				scope:target_country = {
-					NOT = {
-						any_scope_state = {
-							has_claim_by = root
-						}
+					OR = {
+						capital.region = sr:region_anatolia
+						capital.region = sr:region_balkans
+						capital.region = sr:region_caucasus
+						capital.region = sr:region_persia
+						capital.region = sr:region_arabia
+						capital.region = sr:region_nile
 					}
-					NOT = {
-						any_scope_state = {
-							OR = {
-								any_neighbouring_state = {
-									owner = root
-									is_incorporated = yes
-								}
-								any_sea_node_adjacent_state = {
-									owner = root
-									is_incorporated = yes
-								}
-							}
-						}
-					}
-					NOT = {
-						OR = {
-							capital.region = sr:region_anatolia
-							capital.region = sr:region_balkans
-							capital.region = sr:region_caucasus
-							capital.region = sr:region_persia
-							capital.region = sr:region_arabia
-							capital.region = sr:region_nile
-						}
-					}
-					NOT = { is_subject_of = root }
 				}
 			}
 			score = {
-				value = -250
+				value = -125
 			}
 		}
 	}
@@ -446,42 +269,51 @@
 		conquer_state = {
 			if = {
 				limit = {
-					scope:target_state = {
-						OR = {
-							has_claim_by = root
-							any_neighbouring_state = {
-								owner = root
-								is_incorporated = yes
-							}
-							any_sea_node_adjacent_state = {
-								owner = root
-								is_incorporated = yes
-							}
-						}
-					}
-				}
-				add = 225
-			}
-
-			if = {
-				limit = {
 					has_secret_goal = {
 						who = scope:target_country
 						secret_goal = conquer
 					}
 				}
-				add = 200
+				add = 225
 			}
 
+			# Highest priority: Ottoman claims
 			if = {
 				limit = {
 					scope:target_state = {
 						has_claim_by = root
 					}
 				}
-				add = 300
+				add = 325
 			}
 
+			# Strong preference for states directly bordering Ottoman land
+			if = {
+				limit = {
+					scope:target_state = {
+						any_neighbouring_state = {
+							owner = root
+						}
+					}
+				}
+				add = 250
+			}
+
+			# Penalize non-neighbour states so the AI stops grabbing random far targets
+			if = {
+				limit = {
+					NOT = {
+						scope:target_state = {
+							any_neighbouring_state = {
+								owner = root
+							}
+						}
+					}
+				}
+				add = -200
+			}
+
+			# Extra pull for Ottoman historical expansion zones
 			if = {
 				limit = {
 					scope:target_state = {
@@ -495,7 +327,7 @@
 						}
 					}
 				}
-				add = 90
+				add = 75
 			}
 		}
 
@@ -506,7 +338,31 @@
 						has_claim_by = root
 					}
 				}
-				add = 280
+				add = 250
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						any_neighbouring_state = {
+							owner = root
+						}
+					}
+				}
+				add = 175
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						scope:target_state = {
+							any_neighbouring_state = {
+								owner = root
+							}
+						}
+					}
+				}
+				add = -125
 			}
 		}
 
@@ -519,7 +375,7 @@
 					}
 					scope:target_country.country_rank <= rank_value:minor_power
 				}
-				add = 125
+				add = 100
 			}
 		}
 
@@ -532,7 +388,7 @@
 					}
 					scope:target_country.country_rank <= rank_value:minor_power
 				}
-				add = 60
+				add = 40
 			}
 		}
 
@@ -542,7 +398,7 @@
 					scope:target_country = { is_subject_of = root }
 					scope:target_country = { relations:root >= relations_threshold:amicable }
 				}
-				add = 180
+				add = 140
 			}
 		}
 
@@ -553,26 +409,30 @@
 					scope:target_country.country_rank <= rank_value:minor_power
 					scope:target_country = { relations:root >= relations_threshold:cordial }
 				}
-				add = 220
+				add = 185
 			}
 		}
 	}
 
 	possible = {
 		is_subject = no
-		c:TUR ?= this
+		OR = {
+			c:TUR ?= this
+		}
 	}
 
 	weight = {
 		value = 100
 
+		# Very aggressive in the early game
 		if = {
 			limit = {
 				game_date < 1475.1.1
 			}
-			add = 100
+			add = 150
 		}
 
+		# Stay expansionist while claims remain outside the empire
 		if = {
 			limit = {
 				any_country = {
@@ -582,36 +442,28 @@
 					}
 				}
 			}
-			add = 140
+			add = 125
 		}
 
+		# Keep pressure on adjacent non-subject neighbors
 		if = {
 			limit = {
 				any_country = {
 					NOT = { this = root }
 					NOT = { is_subject_of = root }
-					any_scope_state = {
-						OR = {
-							any_neighbouring_state = {
-								owner = root
-								is_incorporated = yes
-							}
-							any_sea_node_adjacent_state = {
-								owner = root
-								is_incorporated = yes
-							}
-						}
-					}
+					has_strategic_adjacency = root
 				}
 			}
-			add = 70
+			add = 75
 		}
 
+		# Extra priority if adjacent countries are in key Ottoman theaters
 		if = {
 			limit = {
 				any_country = {
 					NOT = { this = root }
 					NOT = { is_subject_of = root }
+					has_strategic_adjacency = root
 					OR = {
 						capital.region = sr:region_anatolia
 						capital.region = sr:region_balkans
@@ -620,27 +472,9 @@
 						capital.region = sr:region_caucasus
 						capital.region = sr:region_persia
 					}
-					is_in_war = yes
 				}
 			}
-			add = 40
-		}
-
-		if = {
-			limit = {
-				any_country = {
-					NOT = { this = root }
-					NOT = { is_subject_of = root }
-					scope:country_rank <= rank_value:minor_power
-					OR = {
-						capital.region = sr:region_balkans
-						capital.region = sr:region_anatolia
-						capital.region = sr:region_arabia
-						capital.region = sr:region_nile
-					}
-				}
-			}
-			add = 35
+			add = 50
 		}
 	}
 }
