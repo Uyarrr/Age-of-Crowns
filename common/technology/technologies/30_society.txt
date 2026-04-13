@@ -491,7 +491,7 @@ local_police_force = {
 	}
 
 	unlocking_technologies = {
-		land_based_taxation
+		banking
 	}
 
 	ai_weight = {
@@ -591,24 +591,6 @@ double_entry_bookkeeping = {
 
 	ai_weight = {
 		value = 1 # Important in general
-	}
-}
-
-land_based_taxation = {
-	# Unlocks Land Based Taxation
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/economical_policies_law.dds"
-	category = society
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-		banking
-	}
-
-	ai_weight = {
-		value = 3 # Very important in general
 	}
 }
 

@@ -181,24 +181,11 @@ TIM = { # Timurids - Default
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
-	# Top left
 	colored_emblem = {
 		texture = "ce_circle.dds"
 		color1 = red
 		instance = { position = { 0.36 0.68 } scale = { 0.58 0.58 } }
-	}
-
-	# Top right
-	colored_emblem = {
-		texture = "ce_circle.dds"
-		color1 = red
 		instance = { position = { 0.64 0.68 } scale = { 0.58 0.58 } }
-	}
-
-	# Bottom center
-	colored_emblem = {
-		texture = "ce_circle.dds"
-		color1 = red
 		instance = { position = { 0.5 0.34 } scale = { 0.58 0.58 } }
 	}
 }
@@ -398,6 +385,17 @@ KNI = { # The Knights - Default
 	colored_emblem = {
 		texture = "ce_cross_malta.dds"
 		color1 = white
+	}
+}
+
+KNI_subject = { # The Knights - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_cross_malta.dds"
+		color1 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }				
 	}
 }
 
@@ -799,7 +797,7 @@ FRC_subject = { # Florence - Subject
 	}
 }
 
-BLO = { # Beloozero
+BLZ = { # Beloozero
 	pattern = "pattern_solid.tga"
 	color1 = "azure"
 
@@ -821,6 +819,31 @@ BLO = { # Beloozero
 		color1 = yellow
 		color2 = yellow
 		instance = { position = { 0.5 0.145 } scale = { 0.18 0.18 } }		
+	}
+}
+
+BLZ_subject = { # Beloozero Subject
+	pattern = "pattern_solid.tga"
+	color1 = "azure"
+
+	colored_emblem = {
+		texture = "ce_sturgeons_saltire.dds"
+		color1 = hsv360 { 20 0 78 } 
+		color2 = white
+		color3 = azure
+		instance = { position = { 0.75 0.58 } scale = { 0.55 0.55 } }			
+	}
+	colored_emblem = {
+		texture = "ce_crescent_pale.dds"
+		color1 = white
+		color2 = white
+		instance = { position = { 0.75 0.24 } scale = { 0.20 0.20 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = yellow
+		color2 = yellow
+		instance = { position = { 0.75 0.145 } scale = { 0.12 0.12 } }		
 	}
 }
 
@@ -989,7 +1012,7 @@ MAG = { # Magdeburg - Default
 	color2 = "white"
 }
 
-MCM = { # Munster
+MNS = { # Munster
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -999,5 +1022,123 @@ MCM = { # Munster
 		color2 = yellow
 		color3 = white
 		instance = { position = { 0.5 0.52 } scale = { 1.10 1.10 } }					
+	}
+}
+
+MNS_subject = { # Munster - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_stag.dds"
+		color1 = red
+		color2 = yellow
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }					
+	}
+}
+
+MZV = { # Mazovia
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_griffin_head_shield.dds"
+		color1 = white
+		color2 = orange
+		color3 = white
+		instance = { position = { 0.5 0.5 } scale = { 1 1 } }					
+	}
+}
+
+MZV_subject = { # Mazovia - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_griffin_head_shield.dds"
+		color1 = white
+		color2 = orange
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.7 0.7 } }					
+	}
+}
+
+LEI = { # Leinster
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = white
+		color2 = white
+		color3 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+
+ARA = { # Aragon
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_stripes_08.dds"
+		color1 = red
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
+	}
+}
+
+SIE = { # Siena
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = "white"
+	color2 = "black"
+}
+
+FRR = { # Ferrara
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = "black"
+	color2 = "white"
+}
+
+FRA = { # France - Three fleurs design after 1378
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = yellow
+		color2 = yellow
+		color3 = blue
+		instance = { position = { 0.31 0.30 } scale = { 0.60 0.60 }  }
+		instance = { position = { 0.69 0.30 } scale = { 0.60 0.60 }  }
+		instance = { position = { 0.5 0.66 } scale = { 0.60 0.60 }  }					
+	}
+}
+
+PEG = { # Perugia - 14th c.
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_griffin_passant_crowned_perugia.dds"
+		color1 = white
+		color2 = orange
+		color3 = white
+		instance = { position = { 0.5 0.51 } scale = { 1.0 1.0 } }
+	}
+}
+
+PEG_subject = { # Perugia - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_griffin_passant_crowned_perugia.dds"
+		color1 = white
+		color2 = orange
+		color3 = white
+		instance = { position = { 0.75 0.5 } scale = { 0.65 0.65 } }
 	}
 }

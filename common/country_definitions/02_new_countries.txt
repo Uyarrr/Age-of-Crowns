@@ -608,7 +608,7 @@ W86 ?= {
 }
 
 # Beloozero
-X48 ?= {
+BLZ ?= {
 	color = { 66 32 81 }
 	country_type = recognized
 	tier = principality
@@ -765,4 +765,84 @@ GOS ?= {
 	cultures = { north_german }
 	religion = catholic
 	capital = STATE_BRUNSWICK
+}
+
+# Leinster
+LEI ?= {
+	color = { 66 157 22 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_LEINSTER
+}
+
+# Beloozero
+BLZ ?= {
+	color = { 66 32 81 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_NOVGOROD
+}
+
+# Munster
+MNS ?= {
+	color = { 150 231 150 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_MUNSTER
+}
+
+# Mazovia
+MZV ?= {
+	color = { 125 46 36 }
+	country_type = recognized
+	tier = principality
+	cultures = { polish }
+	religion = catholic
+	capital = STATE_GREATER_POLAND
+}
+
+# Aragon
+ARA ?= {
+	color = { 166 68 72 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { catalan }
+	religion = catholic
+	capital = STATE_CATALONIA
+}
+
+# Siena
+SIE ?= {
+	color = { 165 171 115 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_TUSCANY
+}
+
+# Perugia
+PEG ?= {
+	color = { 157 174 219 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_UMBRIA
+}
+
+# Ferrara
+FRR ?= {
+	color = { 21 128 21 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_ROMAGNA
 }

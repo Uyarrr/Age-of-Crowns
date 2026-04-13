@@ -5,10 +5,10 @@
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 15
-			goods_input_tools_add = 5
+			goods_input_tools_add = 3
 
 			# output goods
-			goods_output_leather_add = 20
+			goods_output_leather_add = 25
 		}
 
 		level_scaled = {
@@ -22,16 +22,17 @@ pm_building_tannery_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
+		behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 30
-			goods_input_tools_add = 10
+			goods_input_tools_add = 7
 
 			# output goods
-			goods_output_leather_add = 40
+			goods_output_leather_add = 55
 		}
 
 		level_scaled = {
@@ -45,15 +46,16 @@ pm_building_tannery_main_2 = {
 pm_building_tannery_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 	unlocking_technologies = {
+		behaviorism
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 45
-			goods_input_tools_add = 15
+			goods_input_tools_add = 10
 
 			# output goods
-			goods_output_leather_add = 60
+			goods_output_leather_add = 75
 		}
 
 		level_scaled = {
@@ -68,15 +70,16 @@ pm_building_tannery_main_3 = {
 pm_building_tannery_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 	unlocking_technologies = {
+		behaviorism
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 60
-			goods_input_tools_add = 20
+			goods_input_tools_add = 15
 
 			# output goods
-			goods_output_leather_add = 80
+			goods_output_leather_add = 100
 		}
 
 		level_scaled = {

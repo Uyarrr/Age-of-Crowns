@@ -5652,15 +5652,6 @@ M33 ?= {
 	capital = STATE_CANARY_ISLANDS
 }
 
-M34 ?= {
-	color = { 125 46 36 }
-	country_type = recognized
-	tier = principality
-	cultures = { polish }
-	religion = catholic
-	capital = STATE_GREATER_POLAND
-}
-
 M35 ?= {
 	color = { 252 252 15 }
 	country_type = decentralized
@@ -9416,15 +9407,6 @@ T57 ?= {
 	capital = STATE_MOLUCCAS
 }
 
-T58 ?= {
-	color = { 213 0 39 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { uzbek }
-	religion = sunni
-	capital = STATE_HERAT
-}
-
 T59 ?= {
 	color = { 94 181 212 }
 	country_type = decentralized
@@ -9560,7 +9542,7 @@ T75 ?= {
 	capital = STATE_NORTH_ISLAND
 }
 
-T76 ?= {
+TVR ?= {
 	color = { 136 158 183 }
 	country_type = recognized
 	tier = principality
@@ -9776,15 +9758,6 @@ TBI ?= {
 
 TC1 ?= {
 	color = { 25 190 31 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_ULSTER
-}
-
-TE1 ?= {
-	color = { 66 157 22 }
 	country_type = recognized
 	tier = city_state
 	cultures = { irish }
@@ -10454,15 +10427,6 @@ U39 ?= {
 	capital = STATE_CONNECTICUT
 }
 
-U40 ?= {
-	color = { 157 174 219 }
-	country_type = recognized
-	tier = city_state
-	cultures = { north_italian }
-	religion = catholic
-	capital = STATE_UMBRIA
-}
-
 U41 ?= {
 	color = { 69 22 59 }
 	country_type = unrecognized
@@ -10803,15 +10767,6 @@ U80 ?= {
 	cultures = { south_italian }
 	religion = catholic
 	capital = STATE_SICILY
-}
-
-U81 ?= {
-	color = { 165 171 115 }
-	country_type = recognized
-	tier = city_state
-	cultures = { north_italian }
-	religion = catholic
-	capital = STATE_TUSCANY
 }
 
 U82 ?= {
@@ -11619,15 +11574,6 @@ V59 ?= {
 	capital = STATE_TYROL
 }
 
-V60 ?= {
-	color = { 150 231 150 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_MUNSTER
-}
-
 V61 ?= {
 	color = { 191 68 86 }
 	country_type = unrecognized
@@ -12283,15 +12229,6 @@ W32 ?= {
 	capital = STATE_CRIMEA
 }
 
-W33 ?= {
-	color = { 21 128 21 }
-	country_type = recognized
-	tier = principality
-	cultures = { north_italian }
-	religion = catholic
-	capital = STATE_ROMAGNA
-}
-
 W34 ?= {
 	color = { 224 146 113 }
 	country_type = unrecognized
@@ -12741,7 +12678,7 @@ W88 ?= {
 	capital = STATE_GUATEMALA
 }
 
-W89 ?= {
+KAR ?= {
 	color = { 90 160 190 }
 	country_type = recognized
 	tier = principality
@@ -13213,15 +13150,6 @@ X23 ?= {
 	capital = STATE_VENETIA
 }
 
-X24 ?= {
-	color = { 166 68 72 }
-	country_type = recognized
-	tier = kingdom
-	cultures = { catalan }
-	religion = catholic
-	capital = STATE_CATALONIA
-}
-
 X25 ?= {
 	color = { 68 110 35 }
 	country_type = recognized
@@ -13420,15 +13348,6 @@ X47 ?= {
 	capital = STATE_EAST_JAVA
 }
 
-X48 ?= {
-	color = { 66 32 81 }
-	country_type = recognized
-	tier = principality
-	cultures = { russian }
-	religion = orthodox
-	capital = STATE_NOVGOROD
-}
-
 X49 ?= {
 	color = { 36 109 194 }
 	country_type = unrecognized
@@ -13492,7 +13411,7 @@ X56 ?= {
 	capital = STATE_FLANDERS
 }
 
-X57 ?= {
+BGG ?= {
 	color = { 240 205 140 }
 	country_type = recognized
 	tier = principality

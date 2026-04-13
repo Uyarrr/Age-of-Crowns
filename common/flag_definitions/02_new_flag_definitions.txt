@@ -143,6 +143,7 @@ TIM = { # Timurids
 		coa = TIM
 		subject_canton = TIM
 		allow_overlord_canton = yes
+		coa_with_overlord_canton = TIM_subject
 		priority = 1
 	}
 }
@@ -224,6 +225,7 @@ KNI = { # The Knights
 		coa = KNI
 		subject_canton = KNI
 		allow_overlord_canton = yes
+		coa_with_overlord_canton = KNI_subject
 		priority = 1
 	}
 }
@@ -433,6 +435,56 @@ GOS = { # Goslar
 		subject_canton = GOS
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = GOS
+		priority = 1
+	}
+}
+
+MNS = { # Munster
+	flag_definition = {
+		coa = MNS
+		subject_canton = MNS
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MNS_subject
+		priority = 1
+	}
+}
+
+MZV = { # Mazovia
+	flag_definition = {
+		coa = MZV
+		subject_canton = MZV
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MZV_subject
+		priority = 1
+	}
+}
+
+BLZ = { # Beloozero
+	flag_definition = {
+		coa = BLZ
+		subject_canton = BLZ
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = BLZ_subject
+		priority = 1
+	}
+}
+
+ARA = { # Aragon
+	flag_definition = {
+		coa = ARA
+		subject_canton = ARA
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = ARA
+		priority = 1
+	}
+}
+
+PEG = { # Perugia
+	flag_definition = {
+		coa = PEG
+		subject_canton = PEG
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = PEG_subject
 		priority = 1
 	}
 }

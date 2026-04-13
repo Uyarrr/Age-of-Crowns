@@ -55,11 +55,11 @@
 	}
 	c:POL ?= {
 		create_diplomatic_pact = {
-			country = c:M34
+			country = c:MZV
 			type = puppet
 		}
 	}
-	c:M34 ?= {
+	c:MZV ?= {
 		add_liberty_desire = -40.725
 	}
 	c:X65 ?= {
@@ -188,7 +188,7 @@
 	c:X39 ?= {
 		add_liberty_desire = -37.825
 	}
-	c:X24 ?= {
+	c:ARA ?= {
 		create_diplomatic_pact = {
 			country = c:SIC
 			type = personal_union
@@ -208,11 +208,11 @@
 	}
 	c:PAP ?= {
 		create_diplomatic_pact = {
-			country = c:U40
+			country = c:PEG
 			type = puppet
 		}
 	}
-	c:U40 ?= {
+	c:PEG ?= {
 		add_liberty_desire = -27.35
 	}
 	c:SAV ?= {
@@ -271,11 +271,11 @@
 	}
 	c:MUS ?= {
 		create_diplomatic_pact = {
-			country = c:X48
+			country = c:BLZ
 			type = puppet
 		}
 	}
-	c:X48 ?= {
+	c:BLZ ?= {
 		add_liberty_desire = -29.575
 	}
 	c:MUS ?= {
@@ -368,7 +368,7 @@
 	c:V81 ?= {
 		add_liberty_desire = -37.15
 	}
-	c:T58 ?= {
+	c:TIM ?= {
 		create_diplomatic_pact = {
 			country = c:TJI
 			type = vassal
@@ -377,7 +377,7 @@
 	c:TJI ?= {
 		add_liberty_desire = 19.375
 	}
-	c:T58 ?= {
+	c:TIM ?= {
 		create_diplomatic_pact = {
 			country = c:AFG
 			type = vassal
@@ -386,7 +386,7 @@
 	c:AFG ?= {
 		add_liberty_desire = -0.625
 	}
-	c:T58 ?= {
+	c:TIM ?= {
 		create_diplomatic_pact = {
 			country = c:PER
 			type = vassal
@@ -395,7 +395,7 @@
 	c:PER ?= {
 		add_liberty_desire = 0.875
 	}
-	c:T58 ?= {
+	c:TIM ?= {
 		create_diplomatic_pact = {
 			country = c:W95
 			type = vassal
@@ -404,7 +404,7 @@
 	c:W95 ?= {
 		add_liberty_desire = -7.375
 	}
-	c:T58 ?= {
+	c:TIM ?= {
 		create_diplomatic_pact = {
 			country = c:U82
 			type = vassal
