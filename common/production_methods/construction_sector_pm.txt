@@ -16,9 +16,8 @@
 		}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 100
 			building_employment_clerks_add = 100
-			building_employment_laborers_add = 800
+			building_employment_laborers_add = 900
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1
@@ -47,17 +46,17 @@ pm_construction_main_2 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 40
+			goods_input_wood_add = 30
 			goods_input_fabric_add = 20
-			goods_input_stone_add = 50
+			goods_input_stone_add = 30
 			goods_input_tools_add = 10
 		}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 100
+			building_employment_bureaucrats_add = 50
 			building_employment_clerks_add = 100
 			building_employment_machinists_add = 50
-			building_employment_laborers_add = 750
+			building_employment_laborers_add = 800
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1

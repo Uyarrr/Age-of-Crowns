@@ -4,7 +4,7 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_grain_add = 20
+			goods_input_grain_add = 15
 
 			# output goods
 			goods_output_bread_add = 20
@@ -103,7 +103,7 @@ pm_building_bakery_heating_0 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-
+			goods_input_wood_add = 5
 			# output goods
 		}
 	}
@@ -120,6 +120,8 @@ pm_building_bakery_heating_1 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_wood_add = 15
+			#output goods
+			goods_output_bread_add = 15
 		}
 
 		level_scaled = {
@@ -139,6 +141,8 @@ pm_building_bakery_heating_2 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_coal_add = 15
+			#output goods
+			goods_output_bread_add = 25
 		}
 
 		level_scaled = {
