@@ -1002,7 +1002,7 @@ ODO_subject = { # Odoyev - Subject
 		color1 = black
 		color2 = orange
 		color3 = red
-		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }				
+		instance = { position = { 0.75 0.5 } scale = { 0.65 0.65 } }				
 	}
 }
 
@@ -1076,6 +1076,21 @@ LEI = { # Leinster
 		color2 = white
 		color3 = color1
 		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+
+LEI_subject = { # Leinster - Subject
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = white
+		color2 = white
+		color3 = color1
+		instance = { position = { 0.75 0.5 } scale = { 0.7 0.7 } }				
 	}
 }
 
