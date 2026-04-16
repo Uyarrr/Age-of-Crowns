@@ -71,15 +71,21 @@ lawgroup_feudal_de_jure_laws = {
 	affected_by_regime_change = yes
 }
 
-lawgroup_army_doctrine = {
-	law_group_category = power_structure
-	ideological_opinion_impact = 0.25
-	affected_by_regime_change = yes
-}
-
 lawgroup_administrative_system = {
 	law_group_category = power_structure
 	ideological_opinion_impact = 1
+	affected_by_regime_change = yes
+}
+
+lawgroup_rights_of_the_nobility = {
+	law_group_category = power_structure
+	ideological_opinion_impact = 1
+	affected_by_regime_change = yes
+}
+
+lawgroup_army_doctrine = {
+	law_group_category = power_structure
+	ideological_opinion_impact = 0.25
 	affected_by_regime_change = yes
 }
 
@@ -179,3 +185,12 @@ lawgroup_labour_associations = {
 	ideological_opinion_impact = 0.5
 }
 
+lawgroup_cultural_traditions = {
+	law_group_category = human_rights
+	ideological_opinion_impact = 0.25
+}
+
+lawgroup_levy_law = {
+	law_group_category = human_rights
+	ideological_opinion_impact = 0.25
+}

@@ -1,0 +1,36 @@
+﻿law_martial_society = {
+	group = lawgroup_cultural_traditions
+
+	icon = "gfx/interface/icons/law_icons/martial_society.dds"
+
+	progressiveness = 0
+
+	modifier = {
+		unit_army_experience_gain_mult = 0.25
+		country_infamy_generation_mult = -0.1
+		country_support_separatism_strength_mult = 0.1
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+	}
+}
+
+law_civil_society = {
+	group = lawgroup_cultural_traditions
+
+	icon = "gfx/interface/icons/law_icons/civil_society.dds"
+
+	progressiveness = 0
+
+	modifier = {
+		country_authority_mult = 0.15
+		state_tax_capacity_mult = 0.1
+		country_support_separatism_resistance_mult = 0.1
+		state_turmoil_effects_mult = -0.1
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+	}
+}

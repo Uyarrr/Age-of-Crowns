@@ -1103,3 +1103,20 @@ absolute_leadership = {
 		value = 1
 	}
 }
+
+unitary_administration = {
+	#Unlocks Absolute Leadership Law
+	era = era_5
+	texture = "gfx/interface/icons/law_icons/absolute_leadership.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
