@@ -688,6 +688,24 @@ colonization = {
 	}
 }
 
+confederal_union = {
+	#Unlocks Colonial Laws
+	era = era_3
+	texture = "gfx/interface/icons/law_icons/confederal_union.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		diplomatic_network
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 colonial_charters = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/colonies.dds"
@@ -1017,6 +1035,23 @@ census_suffrage = {
 	}
 }
 
+federal_state = {
+	#Unlocks Federal State Law
+	era = era_4
+	texture = "gfx/interface/icons/law_icons/federal_state.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 ######## ERA 5 ##########
 
 behaviorism = {
@@ -1043,6 +1078,23 @@ major_formation = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/book_of_knowledge.dds"
 	category = society
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+absolute_leadership = {
+	#Unlocks Absolute Leadership Law
+	era = era_5
+	texture = "gfx/interface/icons/law_icons/absolute_leadership.dds"
+	category = society
+
+	modifier = {
+	}
 
 	unlocking_technologies = {
 	}
