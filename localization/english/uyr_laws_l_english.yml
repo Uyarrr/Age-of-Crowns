@@ -1,13 +1,14 @@
 ﻿l_english:
-
-# ARMY DOCTRINE #
-
  lawgroup_army_doctrine: "Army Doctrine"
  lawgroup_feudal_de_jure_laws: "Feudal 'De Jure' Laws"
  lawgroup_administrative_system: "Administrative System"
  lawgroup_rights_of_the_nobility: "Rights of the Nobility"
  lawgroup_cultural_traditions: "Cultural Traditions"
  lawgroup_levy_law: "Levy Law"
+ lawgroup_foreign_cultural_law: "Foreign Cultural Law"
+ lawgroup_economic_policy: "Economic Policy"
+
+# ARMY DOCTRINE #
 
  law_no_army_doctrine: "No Formal Doctrine"
  law_no_army_doctrine_desc: "The army lacks a unified doctrine, relying instead on tradition, local practices, and the judgment of individual commanders. While flexible, such forces lack the cohesion and efficiency of a formally organized military system."
@@ -84,3 +85,34 @@ law_noble_levy_desc: "Military service is the duty of the nobility, who raise an
 
 law_peasant_levy: "Peasant Levies"
 law_peasant_levy_desc: "The state mobilizes the peasantry en masse in times of war, fielding large but poorly trained armies. While cheap to maintain and vast in number, such forces lack discipline and experience, often suffering heavy losses in battle."
+
+# Economic Policy #
+
+law_no_economic_policy: "No Economic Policy"
+law_no_economic_policy_desc: "The state takes no active role in shaping the economy. Production and trade are left to local customs, tradition, and circumstance, resulting in a fragmented and inefficient economic landscape."
+
+law_lockean_proviso: "Lockean Proviso"
+law_lockean_proviso_desc: "Land and resources may be claimed freely, so long as enough and as good is left for others. This encourages expansion and productivity while maintaining a minimal sense of fairness."
+
+law_war_economy: "War Economy"
+law_war_economy_desc: "The entire economy is directed toward sustaining warfare. Industry and resources are mobilized to supply the military, often at the expense of civilian needs."
+
+law_economic_theory: "Economic Theory"
+law_economic_theory_desc: "Emerging financial and economic ideas guide the state’s policies. Structured taxation, lending systems, and monetary control strengthen the economy and state finances."
+
+law_agriculture_economy: "Agrarian Economy"
+law_agriculture_economy_desc: "The economy is centered around agriculture and rural production. While ensuring food security and stability, it limits the growth of industry and urban development."
+
+law_fishing_economy: "Maritime Economy"
+law_fishing_economy_desc: "Fishing and naval activity form the backbone of the economy. Coastal industries thrive, and naval power is strengthened, but inland development suffers."
+
+law_pirate_economy: "Privateering Economy"
+law_pirate_economy_desc: "Wealth is acquired through raiding, smuggling, and exploitation. While highly profitable in the short term, it destabilizes lawful trade and invites retaliation from other nations."
+
+# Foreign Cultural Law #
+
+law_allow_foreign_rituals: "Allow Foreign Rituals"
+law_allow_foreign_rituals_desc: "Foreign customs, languages, and traditions are permitted to flourish within the realm. This policy fosters tolerance and coexistence, improving relations between diverse populations at the cost of cultural unity."
+
+law_integrate_foreign_traditions: "Integrate Foreign Traditions"
+law_integrate_foreign_traditions_desc: "The state actively encourages the blending of foreign customs into the dominant culture. Over time, distinct identities are absorbed, creating a more unified but less diverse society."

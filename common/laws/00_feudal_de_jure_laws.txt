@@ -5,6 +5,10 @@
 
 	progressiveness = 0
 
+	is_visible = {
+		has_law = law_type:law_monarchy
+	}
+
 	modifier = {
 		country_legitimacy_ideological_incoherence_mult = -0.15
 		country_influence_mult = -0.10
@@ -12,28 +16,8 @@
 		state_incorporation_speed_mult = -0.10
 	}
 
-	unlocking_laws = {
-		law_monarchy
-	}
-
-	is_visible = {
-		has_law_or_variant = law_type:law_monarchy
-	}
-
-	ai_will_do = {
-		exists = ruler
-		ruler = {
-			has_ideology = ideology:ideology_isolationist
-		}
-	}
-
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
-
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
 	}
 }
 
@@ -44,6 +28,10 @@ law_by_blood = {
 
 	progressiveness = 0
 
+	is_visible = {
+		has_law = law_type:law_monarchy
+	}
+
 	modifier = {
 		country_influence_mult = 0.10
 		country_authority_mult = 0.05
@@ -52,23 +40,7 @@ law_by_blood = {
 		country_legitimacy_ideological_incoherence_mult = 0.15
 	}
 
-	unlocking_laws = {
-		law_monarchy
-	}
-
-	ai_will_do = {
-		exists = ruler
-		ruler = {
-			has_ideology = ideology:ideology_jingoist
-		}
-	}
-
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
-
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
 	}
 }
