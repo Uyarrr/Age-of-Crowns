@@ -1559,37 +1559,6 @@ ai_strategy_default = {
 			limit = { has_law_or_variant = law_type:law_mass_conscription }
 			add = 0.5
 		}
-
-		if = {
-			limit = {
-				has_technology_researched = mandatory_service
-			}
-			multiply = 1.15
-		}
-		if = {
-			limit = {
-				has_technology_researched = army_reserves
-			}
-			multiply = 1.15
-		}
-		if = {
-			limit = {
-				has_technology_researched = logistics
-			}
-			multiply = 1.2
-		}
-		if = {
-			limit = {
-				has_technology_researched = enlistment_offices
-			}
-			multiply = 1.2
-		}
-		if = {
-			limit = {
-				has_technology_researched = war_propaganda
-			}
-			multiply = 1.25
-		}
 	}
 
 	# What's the base AI desire to nationalize/privatize buildings

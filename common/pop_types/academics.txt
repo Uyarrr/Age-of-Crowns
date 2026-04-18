@@ -87,15 +87,6 @@
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				is_peasant_under_serfdom = yes
-			}
-			value = {
-				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
-				value = 0
-			}
-		}
 		else = {
 			value = {
 				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"

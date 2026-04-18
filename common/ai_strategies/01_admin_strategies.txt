@@ -193,13 +193,12 @@ ai_strategy_resource_expansion = {
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_export }
 		iron = { stance = wants_export }
-		oil = { stance = wants_export }
+		copper = { stance = wants_export }
+		tin = { stance = wants_export }
 		lead = { stance = wants_export }
 		wood = { stance = wants_export }
-		hardwood = { stance = wants_export }
 		sulfur = { stance = wants_export }
 	}
-
 
 	possible = {
 		always = yes
@@ -280,39 +279,29 @@ ai_strategy_industrial_expansion = {
 		building_iron_mine = nice_to_have
 		building_lead_mine = nice_to_have
 		building_sulfur_mine = nice_to_have
+		building_tin_mine = nice_to_have
+		building_copper_mine = nice_to_have
 	}
 
 	goods_stances = {
-		rubber = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = rubber_mastication
-			}
-		}
-		oil = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = pumpjacks
-			}
-		}
 		dye = { stance = wants_high_supply }
 		silk = { stance = wants_high_supply }
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_high_supply }
 		iron = { stance = wants_high_supply }
 		steel = { stance = wants_high_supply }
+		bronze = { stance = wants_high_supply }
 		lead = { stance = wants_high_supply }
+		tin = { stance = wants_high_supply }
+		copper = { stance = wants_high_supply }
 		sulfur = { stance = wants_high_supply }
 		wood = { stance = wants_high_supply }
-		sugar = { stance = wants_high_supply }
-		explosives = { stance = wants_export }
-		fertilizer = { stance = wants_export }
 	}
 
 	building_group_weights = {
 		bg_manufacturing = 1.25
-		bg_rubber = 1.25
-		bg_oil_extraction = 1.25
+		bg_rubber = 0
+		bg_oil_extraction = 0
 		bg_mining = 1.25
 		bg_logging = 1.25
 	}
@@ -350,56 +339,6 @@ ai_strategy_industrial_expansion = {
 		}
 
 		if = {
-			limit = {
-				exists = c:FRA
-				c:FRA = this
-				ruler = {
-					OR = {
-						has_variable = house_orleans
-						has_variable = house_bonaparte
-					}
-				}
-			}
-			add = 20
-		}
-
-		if = { # Grunderzeit
-			limit = {
-				has_journal_entry = je_grunderzeit
-			}
-			add = 100
-		}
-
-		if = {
-			limit = {
-				has_radical_leftist_government = yes
-				NOT = {
-					ig:ig_rural_folk ?= {
-						is_powerful = yes
-						is_in_government = yes
-					}
-				}
-			}
-			add = 50
-		}
-
-		# Metternich agenda of 1844 - inclined to industrialise
-		if = {
-			limit = {
-				c:AUS ?= this
-				has_journal_entry = je_metternich
-			}
-           add = 10
-		}
-
-		if = {
-			limit = {
-				has_law_or_variant = law_type:law_command_economy
-			}
-			multiply = 2
-		}
-
-		if = {
 			limit = { is_country_type = unrecognized }
 			multiply = 0.25
 		}
@@ -431,13 +370,6 @@ ai_strategy_industrial_expansion = {
 			limit = { literacy_rate >= 0.80 }
 			multiply = 1.5
 		}
-
-		if = {
-			limit = {
-				has_technology_researched = railways
-			}
-			multiply = 1.5
-		}
 	}
 }
 
@@ -466,11 +398,6 @@ ai_strategy_placate_population = {
 		fruit = { stance = wants_high_supply }
 		fabric = { stance = wants_high_supply }
 		wood = { stance = wants_high_supply }
-		opium = { stance = does_not_want }
-	}
-
-	possible = {
-		has_law_or_variant = law_type:law_traditionalism
 	}
 
 	weight = {
@@ -493,13 +420,6 @@ ai_strategy_placate_population = {
 
 		if = {
 			limit = { literacy_rate >= 0.50 }
-			multiply = 0.5
-		}
-
-		if = {
-			limit = {
-				has_technology_researched = railways
-			}
 			multiply = 0.5
 		}
 
@@ -574,51 +494,6 @@ ai_strategy_colonial_extraction = {
     possible = {
     	is_subject = yes
 		country_is_colonial_or_company = yes
-    }
-
-    weight = {
-        value = 100
-    }
-}
-
-ai_strategy_montenegro_admin = {
-    icon = "gfx/interface/icons/ai_strategy_icons/placate_population.dds"
-
-    type = administrative
-    building_group_weights = {
-		bg_private_infrastructure = 2.0
-		bg_agriculture = 2.0
-		bg_ranching = 2.0
-		bg_logging = 1.5
-		bg_manufacturing = 0.5
-    }
-
-    subsidies = {
-        building_trade_center = must_have
-    }
-
-    goods_stances = {
-		grain = { stance = wants_high_supply }
-		meat = { stance = wants_high_supply }
-		fish = { stance = wants_high_supply }
-		fruit = { stance = wants_high_supply }
-		fabric = { stance = wants_high_supply }
-		wood = { stance = wants_high_supply }
-		liquor = { stance = wants_high_supply }
-		small_arms = { stance = wants_high_supply }
-	}
-    possible = {
-    	c:MON ?= this
-		NOR = {
-			any_scope_state = { # Has a port
-				has_building = building_port
-			}
-			ROOT.market_capital = { # Is in another market
-				NOT = {
-					owner = ROOT
-				}
-			}
-		}
     }
 
     weight = {

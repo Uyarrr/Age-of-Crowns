@@ -10,7 +10,8 @@
 	}
 
 	modifier = {
-		country_legitimacy_ideological_incoherence_mult = -0.15
+		interest_group_ig_landowners_pol_str_mult = 0.15
+		country_legitimacy_ideological_incoherence_mult = -0.20
 		country_influence_mult = -0.10
 		country_authority_mult = -0.05
 		state_incorporation_speed_mult = -0.10
@@ -35,9 +36,9 @@ law_by_blood = {
 	modifier = {
 		country_influence_mult = 0.10
 		country_authority_mult = 0.05
-		interest_group_ig_landowners_pol_str_mult = 0.15
 		state_contiguous_incorporation_speed_mult = 0.10
 		country_legitimacy_ideological_incoherence_mult = 0.15
+		interest_group_ig_crown_pol_str_mult = 0.15
 	}
 
 	ai_enact_weight_modifier = { #Petitions

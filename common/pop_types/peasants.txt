@@ -36,20 +36,6 @@
 				value = 0.75
 			}
 		}
-
-		multiply = {
-			desc = "HAS_POLITICAL_AGITATION"
-			value = 1.0
-
-			if = {
-				limit = {
-					owner = {
-						has_technology_researched = political_agitation
-					}
-				}
-				value = 1.5
-			}
-		}
 	}
 
 	portrait_age = {
