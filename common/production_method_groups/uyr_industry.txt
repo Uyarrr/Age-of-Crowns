@@ -201,3 +201,23 @@ pmg_building_bakery_heating = {
 		pm_building_bakery_heating_2
 	}
 }
+########################### Slaugtherhouse ##################################
+
+pmg_building_slaughterhouse_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_slaughterhouse_main_1
+		pm_building_slaughterhouse_main_2
+		pm_building_slaughterhouse_main_3
+		pm_building_slaughterhouse_main_4
+	}
+}
+
+pmg_building_slaughterhouse_salting = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_slaughterhouse_salting_0
+		pm_building_slaughterhouse_salting_1
+		pm_building_slaughterhouse_salting_2
+	}
+}

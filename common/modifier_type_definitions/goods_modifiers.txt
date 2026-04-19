@@ -22,6 +22,14 @@ goods_input_stone_add={
 	}
 }
 
+goods_input_salt_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_input_bread_add={
 	decimals=1
 	color=bad
@@ -279,6 +287,14 @@ goods_output_copper_add={
 }
 
 goods_output_bread_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_salt_add={
 	decimals=1
 	color=good
 	game_data={
