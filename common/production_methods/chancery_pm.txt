@@ -1,0 +1,111 @@
+﻿pm_building_chancery_main_1 = {
+	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 10
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 500
+		}
+	}
+
+	ai_value = -1000 # AI should get off this PM as fast as possible
+}
+
+pm_building_chancery_main_2 = {
+	texture = "gfx/interface/icons/production_method_icons/horizontal_drawer_cabinets.dds"
+
+	unlocking_technologies = {
+		formalized_administration
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 50
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 10
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 500
+		}
+	}
+}
+
+pm_building_chancery_main_3 = {
+	texture = "gfx/interface/icons/production_method_icons/vertical_filing_cabinets.dds"
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 65
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 15
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 20
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 500
+		}
+	}
+}
+
+pm_building_chancery_main_4 = {
+	texture = "gfx/interface/icons/production_method_icons/telephone_switchboards.dds"
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 100
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 30
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 30
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 500
+		}
+	}
+}

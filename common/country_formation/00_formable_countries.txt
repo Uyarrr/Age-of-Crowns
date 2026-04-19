@@ -1,12 +1,5 @@
 ﻿GBR = {
-	use_culture_states = yes
 
-	required_states_fraction = 0.75
-
-	ai_will_do = { always = yes }
-}
-
-ENG = {
 	states = {
 		STATE_HOME_COUNTIES
 		STATE_MIDLANDS
@@ -14,9 +7,15 @@ ENG = {
 		STATE_WEST_COUNTRY
 		STATE_YORKSHIRE
 		STATE_LANCASHIRE
+		STATE_LOWLANDS
+		STATE_HIGHLANDS
 	}
 
-	required_states_fraction = 0.75
+	possible = {
+		has_technology_researched = nation_formation
+	}
+
+	required_states_fraction = 1
 
 	ai_will_do = { always = yes }
 }
@@ -35,8 +34,11 @@ RUS = {
 	required_states_fraction = 0.75
 
 	ai_will_do = { always = yes }
-}
 
+	possible = {
+		has_technology_researched = nation_formation
+	}
+}
 
 IRE = {
 	use_culture_states = yes
@@ -44,46 +46,10 @@ IRE = {
 	required_states_fraction = 0.75
 
 	ai_will_do = { always = yes }
-}
 
-FRA = {
-	states = {
-		STATE_ILE_DE_FRANCE
-		STATE_PROVENCE
-		STATE_NORMANDY
-		STATE_LANGUEDOC
-		STATE_RHONE
-		STATE_FRENCH_LOW_COUNTRIES
-		STATE_PICARDY
-		STATE_ALSACE_LORRAINE
-		STATE_POITOU
-		STATE_GUYENNE
-		STATE_AUVERGNE_LIMOUSIN
-		STATE_BRITTANY
-		STATE_BURGUNDY
-		STATE_CHAMPAGNE
-		STATE_FRANCHE_COMTE
-		STATE_LORRAINE
-		STATE_AQUITAINE
-		STATE_ORLEANS
+	possible = {
+		has_technology_researched = nation_formation
 	}
-
-	required_states_fraction = 0.75
-
-	ai_will_do = { always = yes }
-}
-
-SWE = {
-	states = {
-		STATE_SVEALAND
-		STATE_GOTALAND
-		STATE_SCANIA
-		STATE_NORRLAND
-	}
-
-	required_states_fraction = 0.75
-
-	ai_will_do = { always = no }
 }
 
 LAO = {
@@ -172,6 +138,10 @@ PRU = {
 	required_states_fraction = 0.8
 
 	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nation_formation
+	}
 }
 
 CHI = {
@@ -222,7 +192,7 @@ IBE = {
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = pan-nationalism
+		has_technology_researched = nation_formation
 		trigger_if = {
 			limit = {
 				capital = {
@@ -387,7 +357,7 @@ ROM = {
 
 	required_states_fraction = 0.375 # Romania has 8 possible homeland states total, 3 are required.
 
-	ai_will_do = { always = no }
+	ai_will_do = { always = yes }
 
 	possible = {
 		NOR = {
@@ -708,7 +678,7 @@ UNL = {
 
 	required_states_fraction = 1
 
-	ai_will_do = { always = no }
+	ai_will_do = { always = yes }
 }
 
 RHN = {

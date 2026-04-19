@@ -38,28 +38,10 @@ BGY = { # Burgundy
 	}
 }
 
-GOT = { # Gotland
-	flag_definition = {
-		coa = GOT
-		subject_canton = GOT
-		allow_overlord_canton = yes
-		priority = 1
-	}
-}
-
 NOV = { # Novgorod
 	flag_definition = {
 		coa = NOV
 		subject_canton = NOV
-		allow_overlord_canton = yes
-		priority = 1
-	}
-}
-
-BRA = { # Brandenburg
-	flag_definition = {
-		coa = BRA
-		subject_canton = BRA
 		allow_overlord_canton = yes
 		priority = 1
 	}
@@ -79,6 +61,7 @@ PRM = { # Perm
 		coa = PRM
 		subject_canton = PRM
 		allow_overlord_canton = yes
+		coa_with_overlord_canton = PRM_subject
 		priority = 1
 	}
 }
@@ -160,6 +143,7 @@ TIM = { # Timurids
 		coa = TIM
 		subject_canton = TIM
 		allow_overlord_canton = yes
+		coa_with_overlord_canton = TIM_subject
 		priority = 1
 	}
 }
@@ -214,6 +198,313 @@ BBG = { # Berg
 		coa = BBG
 		subject_canton = BBG
 		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+VJY = { # Vijayanagar
+	flag_definition = {
+		coa = VJY
+		subject_canton = VJY
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+MAI = { # Mainz
+	flag_definition = {
+		coa = MAI
+		subject_canton = MAI
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+KNI = { # The Knights
+	flag_definition = {
+		coa = KNI
+		subject_canton = KNI
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = KNI_subject
+		priority = 1
+	}
+}
+
+BBR = { # Brandenburg
+	flag_definition = {
+		coa = BBR
+		subject_canton = BBR
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+YSL = { # Yaroslavl
+	flag_definition = {
+		coa = YSL
+		subject_canton = YSL
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = YSL_subject
+		priority = 1
+	}
+}
+
+LVO = { # Livonian Order
+	flag_definition = {
+		coa = LVO
+		subject_canton = LVO
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = LVO_subject
+		priority = 1
+	}
+}
+
+U67 = { # Rostov
+	flag_definition = {
+		coa = U67
+		subject_canton = U67
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = U67_subject
+		priority = 1
+	}
+}
+
+CND = { # Candar
+	flag_definition = {
+		coa = CND
+		subject_canton = CND
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = CND_subject
+		priority = 1
+	}
+}
+
+TBZ = { # Trebizond
+	flag_definition = {
+		coa = TBZ
+		subject_canton = TBZ
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = TBZ
+		priority = 1
+	}
+}
+
+FRI = { # Friesland
+	flag_definition = {
+		coa = FRI
+		subject_canton = FRI
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = FRI
+		priority = 1
+	}
+}
+
+ATH = { # Athens
+	flag_definition = {
+		coa = ATH
+		subject_canton = ATH
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = ATH_subject
+		priority = 1
+	}
+}
+
+LNB = { # Lüneburg
+	flag_definition = {
+		coa = LNB
+		subject_canton = LNB
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = LNB
+		priority = 1
+	}
+}
+
+PKV = { # Pskov
+	flag_definition = {
+		coa = PRM
+		subject_canton = PKV
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = PKV_subject
+		priority = 1
+	}
+}
+
+FRC = { # Florence
+	flag_definition = {
+		coa = FRC
+		subject_canton = FRC
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = FRC_subject
+		priority = 1
+	}
+}
+
+LGE = { # Liege
+	flag_definition = {
+		coa = LGE
+		subject_canton = LGE
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = LGE_subject
+		priority = 1
+	}
+}
+
+MUL = { # Mulhouse
+	flag_definition = {
+		coa = MUL
+		subject_canton = MUL
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MUL_subject
+		priority = 1
+	}
+}
+
+KNZ = { # Konstanz
+	flag_definition = {
+		coa = KNZ
+		subject_canton = KNZ
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = KNZ
+		priority = 1
+	}
+}
+
+GRA = { # Granada
+	flag_definition = {
+		coa = GRA
+		subject_canton = GRA
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GRA
+		priority = 1
+	}
+}
+
+GOT = { # Gotland
+	flag_definition = {
+		coa = GOT
+		subject_canton = GOT
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GOT_subject
+		priority = 1
+	}
+}
+
+ODO = { # Odoyev
+	flag_definition = {
+		coa = ODO
+		subject_canton = ODO
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = ODO_subject
+		priority = 1
+	}
+}
+
+STE = { # Stettin
+	flag_definition = {
+		coa = STE
+		subject_canton = STE
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = STE_subject
+		priority = 1
+	}
+}
+
+WOL = { # Wolgast
+	flag_definition = {
+		coa = WOL
+		subject_canton = WOL
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = WOL_subject
+		priority = 1
+	}
+}
+
+MAG = { # Magdeburg
+	flag_definition = {
+		coa = MAG
+		subject_canton = MAG
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MAG
+		priority = 1
+	}
+}
+
+GOS = { # Goslar
+	flag_definition = {
+		coa = GOS
+		subject_canton = GOS
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GOS
+		priority = 1
+	}
+}
+
+MNS = { # Munster
+	flag_definition = {
+		coa = MNS
+		subject_canton = MNS
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MNS_subject
+		priority = 1
+	}
+}
+
+MZV = { # Mazovia
+	flag_definition = {
+		coa = MZV
+		subject_canton = MZV
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MZV_subject
+		priority = 1
+	}
+}
+
+BLZ = { # Beloozero
+	flag_definition = {
+		coa = BLZ
+		subject_canton = BLZ
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = BLZ_subject
+		priority = 1
+	}
+}
+
+ARA = { # Aragon
+	flag_definition = {
+		coa = ARA
+		subject_canton = ARA
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = ARA
+		priority = 1
+	}
+}
+
+PEG = { # Perugia
+	flag_definition = {
+		coa = PEG
+		subject_canton = PEG
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = PEG_subject
+		priority = 1
+	}
+}
+
+DIT = { # Dithmarschen
+	flag_definition = {
+		coa = DIT
+		subject_canton = DIT
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = DIT_subject
+		priority = 1
+	}
+}
+
+LEI = { # Leinster
+	flag_definition = {
+		coa = LEI
+		subject_canton = LEI
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = LEI_subject
 		priority = 1
 	}
 }

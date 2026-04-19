@@ -1471,23 +1471,23 @@ BOS = { # Bosnia
 	}
 }
 
-BSW = { # Brunswick
+BRA = { # Brunswick
 	flag_definition = {
-		coa = BSW
-		subject_canton = BSW
+		coa = BRA
+		subject_canton = BRA
 		priority = 1
 	}
 	flag_definition = {
-		coa = BSW_republic
-		subject_canton = BSW_republic
+		coa = BRA_republic
+		subject_canton = BRA_republic
 		priority = 10
 		trigger = {
 			coa_def_republic_flag_trigger = yes
 		}
 	}
 	flag_definition = {
-		coa = BSW_absolute_monarchy
-		subject_canton = BSW_absolute_monarchy
+		coa = BRA_absolute_monarchy
+		subject_canton = BRA_absolute_monarchy
 		priority = 20
 		trigger = {
 			coa_def_absolute_monarchy_flag_trigger = yes

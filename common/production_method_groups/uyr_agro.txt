@@ -1,0 +1,95 @@
+﻿############################################### FARMS ###############################################
+pmg_building_farm_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_building_wheat_farm_main_1
+		pm_building_wheat_farm_main_2
+		pm_building_wheat_farm_main_3
+		pm_building_wheat_farm_main_4
+	}
+}
+
+pmg_building_ricefarm_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_rice_farm_main_1
+		pm_building_rice_farm_main_2
+		pm_building_rice_farm_main_3
+		pm_building_rice_farm_main_4
+	}
+}
+
+############################################### LIVESTOCK ###############################################
+
+pmg_building_livestock_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_building_livestock_main_1
+		pm_building_livestock_main_2
+		pm_building_livestock_main_3
+		pm_building_livestock_main_4
+	}
+}
+
+pmg_building_livestock_sheep = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_livestock_sheep_1
+		pm_building_livestock_sheep_2
+		pm_building_livestock_sheep_3
+	}
+}
+
+############################################### FIBER FARM ###############################################
+
+pmg_building_fiber_farm_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_fiber_farm_main_1
+		pm_building_fiber_farm_main_2
+		pm_building_fiber_farm_main_3
+		pm_building_fiber_farm_main_4
+	}
+}
+
+############################################### STUD FARM ###############################################
+
+pmg_building_stud_farm_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_stud_farm_main_1
+		pm_building_stud_farm_main_2
+		pm_building_stud_farm_main_3
+		pm_building_stud_farm_main_4
+	}
+}
+
+pmg_building_stud_farm_warhorse = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_stud_farm_warhorse_0
+		pm_building_stud_farm_warhorse_1
+		pm_building_stud_farm_warhorse_2
+	}
+}
+
+pmg_building_stud_farm_equipment = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_stud_farm_equipment_0
+		pm_building_stud_farm_equipment_1
+		pm_building_stud_farm_equipment_2
+	}
+}
+
+############################################### VINEYARD ###############################################
+
+pmg_building_vineyard_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_vineyard_main_1
+		pm_building_vineyard_main_2
+		pm_building_vineyard_main_3
+		pm_building_vineyard_main_4
+	}
+}

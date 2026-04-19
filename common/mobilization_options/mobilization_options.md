@@ -19,7 +19,7 @@ link to a graphical representation of the mobilization option
 keys to technologies, at least one of which is required to use
 
 	unlocking_technologies = {
-		professional_army
+		automatic_machine_guns
 	}
 
 keys to laws, at least one of which is required to use
@@ -34,7 +34,7 @@ trigger that determines if the option can be turned off or not
 in this fictional example, if you have automatic machine guns you can never not use them
 
 	is_shown = {
-		has_technology = professional_army
+		has_technology = handcranked_machine_guns
 	}
 
 trigger that determines if the option can be used or not

@@ -1,0 +1,324 @@
+﻿ai_strategy_england_unite_britain = {
+	icon = "gfx/interface/icons/ai_strategy_icons/unification.dds"
+
+	type = diplomatic
+
+	will_form_power_bloc = {
+		always = yes
+	}
+
+	undesirable_infamy_level = {
+		value = 40
+	}
+
+	unacceptable_infamy_level = {
+		value = 75
+	}
+
+	ideological_opinion_effect_mult = {
+		value = 0.75
+	}
+
+	wargoal_maneuvers_fraction = {
+		value = 0.20
+	}
+
+	diplomatic_play_neutrality = {
+		value = 10
+	}
+
+	diplomatic_play_boldness = {
+		value = 40
+	}
+
+	recklessness = {
+		value = 0.20
+	}
+
+	aggression = {
+		value = 1.35
+
+		# Strong aggression against Scotland and Irish targets
+		if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						c:SCO ?= this
+						capital.region = sr:region_north_sea_coast
+						capital.region = sr:region_england
+					}
+				}
+			}
+			add = 1.75
+		}
+
+		# Prefer nearby reachable targets
+		if = {
+			limit = {
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+			}
+			add = 0.9
+		}
+
+		# Be less aggressive toward existing subjects
+		if = {
+			limit = {
+				scope:target_country = { is_subject_of = root }
+			}
+			multiply = 0.10
+		}
+	}
+
+	building_group_weights = {
+		bg_army = 1.5
+		bg_navy = 1.5
+	}
+
+	secret_goal_weights = {
+		dominate = 2.75
+		conquer = 0.6
+		protect = 0.35
+		befriend = 0.2
+		reconcile = 0.0
+	}
+
+	wargoal_weights = {
+		make_protectorate = 3.0
+		make_dominion = 1.75
+		reduce_autonomy = 2.5
+		annex_country = 2.75
+		conquer_state = 0.5
+		return_state = 0.75
+		force_nationalization = 0.0
+	}
+
+	secret_goal_scores = {
+		dominate = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				OR = {
+					scope:target_country = { c:SCO ?= this }
+					scope:target_country = { capital.region = sr:region_north_sea_coast }
+					scope:target_country = { capital.region = sr:region_england }
+				}
+			}
+			score = {
+				value = 500
+
+				# Scotland is the top target
+				if = {
+					limit = {
+						scope:target_country = { c:SCO ?= this }
+					}
+					add = 250
+				}
+
+				# Irish states are also high priority
+				if = {
+					limit = {
+						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					}
+					add = 150
+				}
+
+				# Adjacent states are especially attractive
+				if = {
+					limit = {
+						has_strategic_adjacency = scope:target_country
+					}
+					add = 75
+				}
+			}
+		}
+
+		conquer = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+				OR = {
+					scope:target_country = { c:SCO ?= this }
+					scope:target_country = { capital.region = sr:region_north_sea_coast }
+					scope:target_country = { capital.region = sr:region_england }
+				}
+			}
+			score = {
+				value = 90
+			}
+		}
+
+		protect = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+				OR = {
+					scope:target_country = { c:SCO ?= this }
+					scope:target_country = { capital.region = sr:region_north_sea_coast }
+					scope:target_country = { capital.region = sr:region_england }
+				}
+			}
+			score = {
+				value = 125
+			}
+		}
+
+		befriend = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+				OR = {
+					scope:target_country = { c:SCO ?= this }
+					scope:target_country = { capital.region = sr:region_north_sea_coast }
+					scope:target_country = { capital.region = sr:region_england }
+				}
+			}
+			score = {
+				value = 75
+
+				if = {
+					limit = {
+						scope:target_country = { relations:root < relations_threshold:amicable }
+					}
+					add = 75
+				}
+			}
+		}
+	}
+
+	wargoal_scores = {
+		make_protectorate = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					OR = {
+						scope:target_country = { c:SCO ?= this }
+						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					}
+				}
+				add = 300
+			}
+		}
+
+		make_dominion = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					OR = {
+						scope:target_country = { c:SCO ?= this }
+						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					}
+				}
+				add = 180
+			}
+		}
+
+		reduce_autonomy = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = { relations:root >= relations_threshold:amicable }
+					OR = {
+						scope:target_country = { c:SCO ?= this }
+						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					}
+				}
+				add = 250
+			}
+		}
+
+		annex_country = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = { relations:root >= relations_threshold:cordial }
+					OR = {
+						scope:target_country = { c:SCO ?= this }
+						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					}
+				}
+				add = 300
+			}
+		}
+
+		conquer_state = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = conquer
+					}
+					OR = {
+						scope:target_country = { c:SCO ?= this }
+						scope:target_country = { capital.region = sr:region_north_sea_coast }
+						scope:target_country = { capital.region = sr:region_england }
+					}
+				}
+				add = 80
+			}
+		}
+
+		return_state = {
+			if = {
+				limit = {
+					OR = {
+						scope:target_country = { c:SCO ?= this }
+						scope:target_country = { capital.region = sr:region_north_sea_coast }
+						scope:target_country = { capital.region = sr:region_england }
+					}
+				}
+				add = 100
+			}
+		}
+	}
+
+	possible = {
+		is_subject = no
+		OR = {
+			c:ENG ?= this
+			c:GBR ?= this
+		}
+	}
+
+	weight = {
+		value = 100
+
+		# Strongest before Britain is formed
+		if = {
+			limit = { c:ENG ?= this }
+			add = 150
+		}
+
+		# After formation, still useful for finishing off holdouts
+		if = {
+			limit = { c:GBR ?= this }
+			add = 50
+		}
+
+		# If Scotland still exists independently, push harder
+		if = {
+			limit = {
+				exists = c:SCO
+				NOT = { c:SCO = { is_subject_of = root } }
+			}
+			add = 100
+		}
+
+		# If any Irish target still exists independently, push harder
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					NOT = { is_subject_of = root }
+					capital.region = sr:region_north_sea_coast
+				}
+			}
+			add = 75
+		}
+	}
+}

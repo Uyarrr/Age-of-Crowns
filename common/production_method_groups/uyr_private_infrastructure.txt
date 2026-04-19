@@ -1,0 +1,71 @@
+﻿pmg_building_road_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_road_main_1
+		pm_building_road_main_2
+		pm_building_road_main_3
+		pm_building_road_main_4
+	}
+}
+
+pmg_building_road_transport = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_road_transport_0
+		pm_building_road_transport_1
+		pm_building_road_transport_2
+	}
+}
+
+################## TRADE CENTER #######################
+
+pmg_building_trade_center_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_trade_center
+		pm_trade_center_principle_external_trade_2
+	}
+}
+
+pmg_building_trade_center_trade_quantity = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_trade_center_trade_1
+		pm_building_trade_center_trade_2
+		pm_building_trade_center_trade_3
+		pm_building_trade_center_trade_4
+	}
+}
+
+################## Port #######################
+pmg_building_port_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_port_main_0
+		pm_building_port_main_1
+		pm_building_port_main_2
+		pm_building_port_main_3
+	}
+}
+
+################## Caravan Hub #######################
+pmg_building_caravan_hub_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_caravan_hub_main_1
+		pm_building_caravan_hub_main_2
+		pm_building_caravan_hub_main_3
+	}
+}

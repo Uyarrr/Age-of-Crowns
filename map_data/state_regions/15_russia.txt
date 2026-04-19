@@ -118,6 +118,8 @@ STATE_KUOPIO = {
     capped_resources = {
         building_logging_camp = 42
         building_iron_mine = 11
+        building_copper_mine = 6
+        building_stone_mine = 4
     }
     naval_exit_id = 3000
 }
@@ -139,6 +141,7 @@ STATE_UUSIMAA = {
         building_lead_mine = 5
         building_logging_camp = 36
         building_fishing_wharf = 8
+        building_stone_mine = 3
     }
     naval_exit_id = 3000
 }
@@ -159,6 +162,8 @@ STATE_WEST_KARELIA = {
         building_iron_mine = 18
         building_logging_camp = 28
         building_fishing_wharf = 2
+        building_copper_mine = 9
+        building_stone_mine = 6
     }
     naval_exit_id = 3000
 }
@@ -197,6 +202,7 @@ STATE_OSTROBOTHNIA = {
         building_lead_mine = 5
         building_logging_camp = 25
         building_fishing_wharf = 10
+        building_stone_mine = 3
     }
     naval_exit_id = 3000
 }
@@ -218,6 +224,8 @@ STATE_OULU = {
         building_iron_mine = 45
         building_logging_camp = 56
         building_fishing_wharf = 10
+        building_copper_mine = 22
+        building_stone_mine = 15
     }
     naval_exit_id = 3000
 }
@@ -238,6 +246,8 @@ STATE_EAST_KARELIA = {
         building_iron_mine = 25
         building_logging_camp = 30
         building_fishing_wharf = 5
+        building_copper_mine = 12
+        building_stone_mine = 8
     }
     naval_exit_id = 3039
 }
@@ -260,6 +270,8 @@ STATE_KOLA = {
         building_sulfur_mine = 10
         building_logging_camp = 25
         building_fishing_wharf = 10
+        building_copper_mine = 40
+        building_stone_mine = 20
     }
     naval_exit_id = 3039
 }
@@ -298,6 +310,8 @@ STATE_MOSCOW = {
         building_coal_mine = 60
         building_iron_mine = 30
         building_logging_camp = 34
+        building_copper_mine = 24
+        building_stone_mine = 17
     }
 }
 
@@ -331,6 +345,8 @@ STATE_VOLHYNIA = {
     capped_resources = {
         building_coal_mine = 42
         building_logging_camp = 18
+        building_copper_mine = 6
+        building_stone_mine = 11
     }
 }
 
@@ -349,6 +365,8 @@ STATE_KIEV = {
         building_coal_mine = 36
         building_iron_mine = 14
         building_logging_camp = 32
+        building_copper_mine = 12
+        building_stone_mine = 9
     }
 }
 
@@ -366,6 +384,8 @@ STATE_ORYOL = {
         building_logging_camp = 72
         building_coal_mine = 58
         building_iron_mine = 16
+        building_copper_mine = 17
+        building_stone_mine = 14
     }
 }
 
@@ -383,6 +403,7 @@ STATE_SMOLENSK = {
     capped_resources = {
         building_coal_mine = 8
         building_logging_camp = 24
+        building_stone_mine = 4
     }
 }
 
@@ -422,6 +443,7 @@ STATE_ARKHANGELSK = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 8
     }
     naval_exit_id = 3039
 }
@@ -440,6 +462,8 @@ STATE_NOVGOROD = {
     capped_resources = {
         building_coal_mine = 24
         building_logging_camp = 40
+        building_copper_mine = 4
+        building_stone_mine = 6
     }
 }
 
@@ -459,6 +483,8 @@ STATE_CRIMEA = {
         building_iron_mine = 15
         building_logging_camp = 4
         building_fishing_wharf = 12
+        building_copper_mine = 8
+        building_stone_mine = 5
     }
     naval_exit_id = 3036
 }
@@ -478,6 +504,8 @@ STATE_KHARKOV = {
         building_coal_mine = 60
         building_iron_mine = 28
         building_logging_camp = 20
+        building_copper_mine = 23
+        building_stone_mine = 17
     }
 }
 
@@ -496,10 +524,13 @@ STATE_KURSK = {
         building_logging_camp = 31
         building_iron_mine = 93
         building_sulfur_mine = 12
+        building_copper_mine = 40
+        building_stone_mine = 22
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 3
     }
 }
 
@@ -517,6 +548,7 @@ STATE_TVER = {
     capped_resources = {
         building_logging_camp = 36
         building_coal_mine = 8
+        building_stone_mine = 4
     }
 }
 
@@ -537,6 +569,8 @@ STATE_CHERSON = {
         building_iron_mine = 92
         building_logging_camp = 8
         building_fishing_wharf = 12
+        building_copper_mine = 40
+        building_stone_mine = 27
     }
     naval_exit_id = 3036
 }
@@ -556,6 +590,8 @@ STATE_GALICH = {
         building_logging_camp = 48
         building_coal_mine = 72
         building_iron_mine = 12
+        building_copper_mine = 17
+        building_stone_mine = 15
     }
 }
 
@@ -574,6 +610,8 @@ STATE_MINSK = {
         building_logging_camp = 35
         building_iron_mine = 8
         building_coal_mine = 5
+        building_copper_mine = 5
+        building_stone_mine = 3
     }
 }
 
@@ -588,10 +626,12 @@ STATE_ROSTOV = {
     wood = "xA71AE3"
     arable_land = 125
     traits = { "state_trait_don_river" "state_trait_western_steppe" "state_trait_black_soil" }
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_vineyard" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_fiber_farm" "building_vineyard" "building_stud_farm" }
     capped_resources = {
         building_coal_mine = 108
         building_logging_camp = 7
+        building_copper_mine = 16
+        building_stone_mine = 28
     }
     naval_exit_id = 3036
 }
@@ -611,6 +651,8 @@ STATE_PERM = {
         building_coal_mine = 80
         building_iron_mine = 75
         building_logging_camp = 35
+        building_copper_mine = 40
+        building_stone_mine = 29
     }
 }
 
@@ -628,6 +670,8 @@ STATE_KAZAN = {
     capped_resources = {
         building_logging_camp = 12
         building_coal_mine = 30
+        building_copper_mine = 4
+        building_stone_mine = 8
     }
 }
 
@@ -656,7 +700,7 @@ STATE_KHIVA = {
     mine = "xC6FC10"
     wood = "xA487BA"
     arable_land = 85
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_opium_plantation" "building_cotton_plantation" "building_fiber_farm" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 4
     }
@@ -677,6 +721,8 @@ STATE_SEMIRECHE = {
         building_coal_mine = 28
         building_lead_mine = 16
         building_logging_camp = 4
+        building_copper_mine = 12
+        building_stone_mine = 8
     }
 }
 
@@ -695,6 +741,8 @@ STATE_JETISY = {
         building_coal_mine = 12
         building_lead_mine = 20
         building_logging_camp = 4
+        building_copper_mine = 12
+        building_stone_mine = 7
     }
 }
 
@@ -713,6 +761,8 @@ STATE_AKMOLINSK = {
         building_iron_mine = 16
         building_coal_mine = 68
         building_logging_camp = 6
+        building_copper_mine = 18
+        building_stone_mine = 15
     }
 }
 
@@ -729,6 +779,8 @@ STATE_FERGANA = {
     capped_resources = {
         building_iron_mine = 21
         building_logging_camp = 5
+        building_copper_mine = 10
+        building_stone_mine = 7
     }
 }
 
@@ -745,6 +797,8 @@ STATE_MERZ = {
     capped_resources = {
         building_iron_mine = 21
         building_logging_camp = 5
+        building_copper_mine = 10
+        building_stone_mine = 7
     }
 }
 
@@ -762,6 +816,9 @@ STATE_SYRDARYA = {
         building_iron_mine = 15
         building_lead_mine = 60
         building_logging_camp = 6
+        building_copper_mine = 38
+        building_tin_mine = 17
+        building_stone_mine = 15
     }
 }
 
@@ -779,6 +836,8 @@ STATE_AKTOBE = {
     capped_resources = {
         building_iron_mine = 10
         building_logging_camp = 3
+        building_copper_mine = 5
+        building_stone_mine = 3
     }
 }
 
@@ -813,10 +872,13 @@ STATE_NORTH_CAUCASUS = {
         building_coal_mine = 16
         building_iron_mine = 12
         building_logging_camp = 25
+        building_copper_mine = 8
+        building_stone_mine = 5
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 4
     }
 }
 
@@ -837,6 +899,8 @@ STATE_TAURIDA = {
         building_iron_mine = 48
         building_logging_camp = 8
         building_fishing_wharf = 12
+        building_copper_mine = 29
+        building_stone_mine = 17
     }
     naval_exit_id = 3036
 }
@@ -855,6 +919,8 @@ STATE_TAMBOV = {
     capped_resources = {
         building_iron_mine = 10
         building_logging_camp = 35
+        building_copper_mine = 5
+        building_stone_mine = 3
     }
 }
 
@@ -871,6 +937,8 @@ STATE_RYAZAN = {
     capped_resources = {
         building_coal_mine = 21
         building_logging_camp = 28
+        building_copper_mine = 4
+        building_stone_mine = 6
     }
 }
 
@@ -920,6 +988,7 @@ STATE_YAROSLAVL = {
     capped_resources = {
         building_logging_camp = 67
         building_iron_mine = 6
+        building_stone_mine = 3
     }
 }
 
@@ -937,6 +1006,8 @@ STATE_NIZHNY_NOVGOROD = {
     capped_resources = {
         building_iron_mine = 25
         building_logging_camp = 24
+        building_copper_mine = 12
+        building_stone_mine = 8
     }
 }
 
@@ -955,6 +1026,8 @@ STATE_VYATKA = {
         building_coal_mine = 15
         building_sulfur_mine = 10
         building_logging_camp = 36
+        building_copper_mine = 5
+        building_stone_mine = 4
     }
 }
 
@@ -974,6 +1047,8 @@ STATE_UFA = {
         building_coal_mine = 10
         building_logging_camp = 25
         building_lead_mine = 16
+        building_copper_mine = 22
+        building_stone_mine = 8
     }
 }
 
@@ -1008,10 +1083,13 @@ STATE_KRASNOYARSK = {
         building_iron_mine = 15
         building_coal_mine = 40
         building_logging_camp = 60
+        building_copper_mine = 14
+        building_stone_mine = 10
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 12
     }
 }
 
@@ -1029,10 +1107,14 @@ STATE_ALTAI = {
         building_iron_mine = 7
         building_logging_camp = 18
         building_lead_mine = 12
+        building_copper_mine = 10
+        building_tin_mine = 4
+        building_stone_mine = 4
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 3
     }
 }
 
@@ -1050,10 +1132,13 @@ STATE_BURYATIA = {
         building_iron_mine = 10
         building_coal_mine = 24
         building_logging_camp = 16
+        building_copper_mine = 9
+        building_stone_mine = 6
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 16
     }
 }
 
@@ -1072,10 +1157,12 @@ STATE_KOLYMA = {
     capped_resources = {
         building_logging_camp = 10
         building_coal_mine = 8
+        building_stone_mine = 4
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 16
     }
 }
 
@@ -1095,10 +1182,13 @@ STATE_AMUR = {
         building_coal_mine = 20
         building_logging_camp = 25
         building_fishing_wharf = 6
+        building_copper_mine = 16
+        building_stone_mine = 9
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 18
     }
     naval_exit_id = 3059
 }
@@ -1120,10 +1210,13 @@ STATE_CHELYABINSK = {
         building_coal_mine = 25
         building_logging_camp = 16
         building_gold_mine = 3
+        building_copper_mine = 40
+        building_stone_mine = 24
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
+        undiscovered_amount = 9
     }
 }
 
@@ -1142,6 +1235,8 @@ STATE_ELIZAVETPOL = {
     capped_resources = {
         building_iron_mine = 10
         building_logging_camp = 12
+        building_copper_mine = 5
+        building_stone_mine = 3
     }
 }
 
@@ -1155,7 +1250,7 @@ STATE_STAVROPOL = {
     provinces = { "x1ED727" "x32FEBA" "x3E954F" "x565E50" "x6B2515" "x7685A4" "x76C012" "x793FDE" "x796017" "x891792" "x929AC4" "x9A43C9" "x9B5EC8" "x9BAE11" "x9CDC20" "xA4B654" "xAA6E62" "xB3593A" "xBC214C" "xC0D001" "xD7EDE7" "xE0E16A" "xE2E1EB" "xF7D005" "xF88EA3" }
     arable_land = 100
     traits = { "state_trait_western_steppe" "state_trait_black_soil" }
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_fiber_farm" "building_stud_farm" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_fiber_farm" "building_tea_plantation" "building_tobacco_plantation" "building_stud_farm" }
     capped_resources = {
         building_logging_camp = 14
     }
@@ -1175,6 +1270,8 @@ STATE_CHUVASHIA = {
     capped_resources = {
         building_sulfur_mine = 15
         building_logging_camp = 25
+        building_copper_mine = 4
+        building_stone_mine = 4
     }
 }
 
@@ -1211,6 +1308,8 @@ STATE_NENETSIA = {
         building_logging_camp = 13
         building_fishing_wharf = 12
         building_coal_mine = 30
+        building_copper_mine = 4
+        building_stone_mine = 8
     }
     naval_exit_id = 3039
 }

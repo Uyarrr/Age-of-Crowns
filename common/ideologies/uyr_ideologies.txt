@@ -1,0 +1,164 @@
+﻿ideology_aristocracy = {
+	icon = "gfx/interface/icons/ideology_icons/oligarchic.dds"
+
+	lawgroup_administrative_system = {
+		law_autonomous_councils = strongly_approve
+		law_central_council = approve
+		law_local_courts = neutral
+		law_feudal_administration = neutral
+		law_confederal_union = neutral
+		law_federal_state = neutral
+		law_absolute_leadership = strongly_disapprove
+		law_unitary_administration = disapprove
+	}
+
+	lawgroup_levy_law = {
+		law_inclusive_levy = neutral
+		law_noble_levy = strongly_approve
+		law_peasant_levy = neutral
+	}
+
+	lawgroup_rights_of_the_nobility = {
+		law_strengthen_the_nobility = strongly_approve
+		law_curtail_the_nobility = strongly_disapprove
+	}
+}
+
+ideology_plutocratic = {
+	icon = "gfx/interface/icons/ideology_icons/plutocratic.dds"
+
+	lawgroup_distribution_of_power = {
+		law_oligarchy = approve
+		law_wealth_voting = approve
+		law_technocracy = neutral
+		law_landed_voting = neutral
+		law_census_voting = neutral
+		law_single_party_state = neutral
+		law_autocracy = disapprove
+		law_universal_suffrage = strongly_disapprove
+		law_anarchy = strongly_disapprove
+	}
+
+	lawgroup_governance_principles = {
+		law_monarchy = neutral
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_corporate_state = disapprove
+		law_theocracy = disapprove
+		law_council_republic = strongly_disapprove
+	}
+
+	lawgroup_taxation = {
+		law_per_capita_based_taxation = approve
+		law_consumption_based_taxation = neutral
+		law_land_based_taxation = neutral
+		law_proportional_taxation = neutral
+		law_graduated_taxation = disapprove
+	}
+
+	lawgroup_colonization = {
+		law_colonial_exploitation = approve
+		law_no_colonial_affairs = neutral
+		law_colonial_resettlement = neutral
+		law_frontier_colonization = neutral
+	}
+}
+
+ideology_decentralization = {
+	icon = "gfx/interface/icons/ideology_icons/egalitarian.dds"
+
+	lawgroup_administrative_system = {
+		law_autonomous_councils = strongly_approve
+		law_central_council = strongly_disapprove
+		law_local_courts = strongly_approve
+		law_feudal_administration = approve
+		law_confederal_union = strongly_approve
+		law_federal_state = approve
+		law_absolute_leadership = strongly_disapprove
+		law_unitary_administration = disapprove
+	}
+}
+
+ideology_centralization = {
+	icon = "gfx/interface/icons/ideology_icons/hierarchic.dds"
+}
+
+ideology_serfdom = {
+	icon = "gfx/interface/icons/ideology_icons/agrarian.dds"
+}
+
+ideology_free_subjects = {
+	icon = "gfx/interface/icons/ideology_icons/anarchist.dds"
+}
+
+ideology_traditionalist = {
+	icon = "gfx/interface/icons/ideology_icons/traditionalist.dds"
+}
+
+ideology_innovative = {
+	icon = "gfx/interface/icons/ideology_icons/positivist.dds"
+}
+
+ideology_liberalism = {
+	icon = "gfx/interface/icons/ideology_icons/liberal.dds"
+}
+
+ideology_absolutism = {
+	icon = "gfx/interface/icons/ideology_icons/authoritarian.dds"
+}
+
+ideology_outward = {
+	icon = "gfx/interface/icons/ideology_icons/colonialist.dds"
+}
+
+ideology_inward = {
+	icon = "gfx/interface/icons/ideology_icons/isolationist.dds"
+}
+
+ideology_capital_economy = {
+	icon = "gfx/interface/icons/ideology_icons/laissez_faire.dds"
+}
+
+ideology_traditional_economy = {
+	icon = "gfx/interface/icons/ideology_icons/land_reformer.dds"
+}
+
+ideology_spiritualist = {
+	icon = "gfx/interface/icons/ideology_icons/pious.dds"
+}
+
+ideology_humanist = {
+	icon = "gfx/interface/icons/ideology_icons/anti_clerical.dds"
+}
+
+ideology_quality = {
+	icon = "gfx/interface/icons/ideology_icons/patriotic.dds"
+}
+
+ideology_quantity = {
+	icon = "gfx/interface/icons/ideology_icons/utopian.dds"
+}
+
+ideology_individualism = {
+	icon = "gfx/interface/icons/ideology_icons/individualist.dds"
+}
+
+ideology_communalism = {
+	icon = "gfx/interface/icons/ideology_icons/corporatist.dds"
+}
+
+ideology_royalist = {
+	icon = "gfx/interface/icons/ideology_icons/royalist.dds"
+}
+
+ideology_republican = {
+	icon = "gfx/interface/icons/ideology_icons/republican.dds"
+}
+
+ideology_slaver = {
+	icon = "gfx/interface/icons/ideology_icons/republican.dds"
+}
+
+ideology_abolitionist = {
+	icon = "gfx/interface/icons/ideology_icons/republican.dds"
+}

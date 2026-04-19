@@ -339,7 +339,7 @@ law_presidential_republic = {
 	progressiveness = 100
 
 	unlocking_technologies = {
-		democracy
+		behaviorism
 	}
 
 	can_enact = {
@@ -521,7 +521,7 @@ law_parliamentary_republic = {
 	}
 
 	unlocking_technologies = {
-		democracy
+		behaviorism
 	}
 
 	can_impose = {
@@ -845,7 +845,7 @@ law_council_republic = {
 	progressiveness = 200
 
 	unlocking_technologies = {
-		socialism
+		behaviorism
 	}
 
 	can_enact = {
@@ -996,7 +996,7 @@ law_corporate_state = {
 	progressiveness = 50
 
 	unlocking_technologies = {
-		corporatism
+		behaviorism
 	}
 
 	can_enact = {
@@ -1143,36 +1143,6 @@ law_corporate_state = {
 				}
 			}
 			multiply = 0
-		}
-	}
-}
-
-law_steppe_horde = {
-	group = lawgroup_governance_principles
-
-	icon = "gfx/interface/icons/law_icons/chiefdom.dds"
-
-	progressiveness = -100
-
-	can_enact = {
-		is_country_type = decentralized
-	}
-
-	is_visible = {
-		is_country_type = decentralized
-	}
-
-	modifier = {
-		country_legitimacy_headofstate_add = 20
-		country_authority_add = 100
-	}
-
-	ai_enact_weight_modifier = { #Petitions
-		value = 0
-
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
 		}
 	}
 }

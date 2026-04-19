@@ -1,0 +1,97 @@
+﻿pm_building_distillery_main_1 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = 10
+			goods_input_pottery_add = 1
+			goods_input_bronze_add = 2
+
+			# output goods
+			goods_output_liquor_add = 30
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_building_distillery_main_2 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = 30
+			goods_input_pottery_add = 10
+
+			# output goods
+			goods_output_liquor_add = 40
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_building_distillery_main_3 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = 45
+			goods_input_pottery_add = 15
+
+			# output goods
+			goods_output_liquor_add = 60
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_building_distillery_main_4 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = 60
+			goods_input_pottery_add = 20
+
+			# output goods
+			goods_output_liquor_add = 80
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}

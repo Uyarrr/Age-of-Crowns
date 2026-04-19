@@ -21,20 +21,9 @@ law_traditionalism = {
 	}
 
 	modifier = {
-		state_shopkeepers_investment_pool_efficiency_mult = -0.5
-		state_bureaucrats_investment_pool_efficiency_mult = -0.5
-		state_capitalists_investment_pool_efficiency_mult = -0.5
-		state_farmers_investment_pool_efficiency_mult = -0.5
-		state_clergymen_investment_pool_efficiency_mult = -0.5
-		state_aristocrats_investment_pool_efficiency_mult = -0.5
-		state_bureaucracy_population_base_cost_factor_mult = -0.25
-		country_government_dividends_reinvestment_add = 0.25
-		state_tax_capacity_mult = -0.25
 		country_private_construction_allocation_mult = 0.25
 		building_nationalization_cost_mult = 1.0
-		building_nationalization_investment_return_add = 0.1
-		country_leverage_resistance_mult = 0.25
-		state_market_access_price_impact = -0.15
+		state_market_access_price_impact = -0.25
 		building_self_investment_chance_add = 0.25
 		country_disable_nationalization_without_compensation_bool = yes
 	}
@@ -96,9 +85,7 @@ law_interventionism = {
 		if = {
 			limit = {
 				OR = {
-					has_technology_researched = civilizing_mission
-					has_technology_researched = human_rights
-					has_technology_researched = pan-nationalism
+					has_technology_researched = behaviorism
 				}
 				has_law_or_variant = law_type:law_traditionalism
 			}
@@ -193,9 +180,7 @@ law_agrarianism = {
 		if = {
 			limit = {
 				OR = {
-					has_technology_researched = civilizing_mission
-					has_technology_researched = human_rights
-					has_technology_researched = pan-nationalism
+					has_technology_researched = behaviorism
 				}
 				has_law_or_variant = law_type:law_traditionalism
 			}
@@ -261,9 +246,51 @@ law_industry_banned = {
 			every_scope_state = {
 				if = {
 					limit = {
-						has_building = building_weapon_workshop
+						has_building = building_chemical_plant
 					}
-					remove_building = building_weapon_workshop
+					remove_building = building_chemical_plant
+				}
+				if = {
+					limit = {
+						has_building = building_synthetics_plant
+					}
+					remove_building = building_synthetics_plant
+				}
+				if = {
+					limit = {
+						has_building = building_steel_mill
+					}
+					remove_building = building_steel_mill
+				}
+				if = {
+					limit = {
+						has_building = building_power_plant
+					}
+					remove_building = building_power_plant
+				}
+				if = {
+					limit = {
+						has_building = building_motor_industry
+					}
+					remove_building = building_motor_industry
+				}
+				if = {
+					limit = {
+						has_building = building_automotive_industry
+					}
+					remove_building = building_automotive_industry
+				}
+				if = {
+					limit = {
+						has_building = building_electrics_industry
+					}
+					remove_building = building_electrics_industry
+				}
+				if = {
+					limit = {
+						has_building = building_munition_plant
+					}
+					remove_building = building_munition_plant
 				}
 			}
 		}
@@ -335,9 +362,45 @@ law_extraction_economy = {
 			every_scope_state = {
 				if = {
 					limit = {
-						has_building = building_weapon_workshop
+						has_building = building_chemical_plant
 					}
-					remove_building = building_weapon_workshop
+					remove_building = building_chemical_plant
+				}
+				if = {
+					limit = {
+						has_building = building_synthetics_plant
+					}
+					remove_building = building_synthetics_plant
+				}
+				if = {
+					limit = {
+						has_building = building_steel_mill
+					}
+					remove_building = building_steel_mill
+				}
+				if = {
+					limit = {
+						has_building = building_motor_industry
+					}
+					remove_building = building_motor_industry
+				}
+				if = {
+					limit = {
+						has_building = building_automotive_industry
+					}
+					remove_building = building_automotive_industry
+				}
+				if = {
+					limit = {
+						has_building = building_electrics_industry
+					}
+					remove_building = building_electrics_industry
+				}
+				if = {
+					limit = {
+						has_building = building_munition_plant
+					}
+					remove_building = building_munition_plant
 				}
 			}
 		}
@@ -463,8 +526,7 @@ law_cooperative_ownership = {
 	}
 
 	unlocking_laws = {
-		law_council_republic
-		law_corporate_state
+		behaviorism
 	}
 
 	on_activate = {

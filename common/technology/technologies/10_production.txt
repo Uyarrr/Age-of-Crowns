@@ -21,6 +21,22 @@ quarrying = {
 	}
 }
 
+bakery = {
+	# Unlocks Bakery
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/bread.dds"
+	category = production
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+
 metallurgy = {
 	# Unlocks Tool Workshop
 	era = era_1
@@ -183,7 +199,7 @@ furniture_workshop = {
 cloth_workshop = {
 	# Unlocks Cloth Workshop
 	era = era_1
-	texture = "gfx/interface/icons/goods_icons/cloth.dds"
+	texture = "gfx/interface/icons/goods_icons/clothes.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -228,7 +244,7 @@ fishing = {
 sheep_ranching = {
 	# Unlocks Wool PM for Livestock
 	era = era_1
-	texture = "gfx/interface/icons/goods_icons/fabric.dds"
+	texture = "gfx/interface/icons/invention_icons/sheep_ranching.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -262,7 +278,22 @@ pottery = {
 	category = production
 
 	unlocking_technologies = {
-		metallurgy
+		bakery
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+distillery = {
+	# Unlocks Distillery
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/liquor.dds"
+	category = production
+
+	unlocking_technologies = {
+		brewery
 	}
 
 	ai_weight = {
@@ -298,6 +329,7 @@ workshop_standardization = {
 	}
 
 	unlocking_technologies = {
+		quarrying
 	}
 
 	ai_weight = {
@@ -331,6 +363,24 @@ expanded_quarrying = {
 
 	unlocking_technologies = {
 		fiber_paper
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+bakery_wood_heating = {
+	#Unlocks Wood Heating for Bakery
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/bakery_wood_heating.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		manured_fields
 	}
 
 	ai_weight = {
@@ -405,6 +455,7 @@ pack_animal_transport = {
 	category = production
 
 	unlocking_technologies = {
+		manured_fields
 	}
 
 	ai_weight = {
@@ -419,6 +470,21 @@ dyed_furnitures = {
 	category = production
 
 	unlocking_technologies = {
+		manured_fields
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+manured_fields = {
+	# Unlocks Grain Main PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/wheat.dds"
+	category = production
+
+	unlocking_technologies = {
 	}
 
 	ai_weight = {
@@ -430,7 +496,7 @@ dyed_furnitures = {
 
 new_world_crops = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/global_supply_limit_modifier_advance_5.dds"
+	texture = "gfx/interface/icons/invention_icons/new_world_crops.dds"
 	category = production
 
 	modifier = {
@@ -438,6 +504,7 @@ new_world_crops = {
 	}
 
 	unlocking_technologies = {
+		workshop_standardization
 	}
 
 	ai_weight = {
@@ -609,7 +676,7 @@ expanded_logging = {
 potatoes = {
 	#Unlocks Potato for Farms
 	era = era_3
-	texture = "gfx/interface/icons/goods_icons/potato.dds"
+	texture = "gfx/interface/icons/invention_icons/potato.dds"
 	category = production
 
 	modifier = {
@@ -692,6 +759,23 @@ wagon_transport = {
 	}
 }
 
+bakery_coal_heating = {
+	#Unlocks Bakery Coal Heating
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/bakery_coal_heating.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
 homesteading = {
 	#Unlocks Homesteading Law
 	era = era_4
@@ -721,5 +805,19 @@ steel_tools = {
 
 	ai_weight = {
 		value = 2 # Very important tech in general
+	}
+}
+
+steel_mills = {
+	# Unlocks Steel Mills
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/steel.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
 	}
 }

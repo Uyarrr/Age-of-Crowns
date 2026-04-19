@@ -46,7 +46,7 @@ N03 = {
 	capital = STATE_RIO_GRANDE
 }
 
-# North America Natives
+# North America Natives 1
 N04 = {
 	color = { 102 105 104 }
 
@@ -77,5 +77,136 @@ N06 = {
 	tier = principality
 
 	cultures = { athabaskan inuit }
+	capital = STATE_SANTO_DOMINGO
+}
+# Australian Natives
+N07 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aborigine }
+	capital = STATE_QUEENSLAND
+}
+
+# Indonesian Natives
+N08 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { javan }
+	capital = STATE_SANTO_DOMINGO
+}
+
+# West African Natives
+N09 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { javan }
+	capital = STATE_SANTO_DOMINGO
+}
+
+# La Plata Natives
+N10 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { patagonian }
+	capital = STATE_PATAGONIA
+}
+
+# Mexican Natives
+N11 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { patagonian }
+	capital = STATE_PATAGONIA
+}
+
+# Pacific Coast Natives
+N12 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { patagonian }
+	capital = STATE_PATAGONIA
+}
+
+# Tuareg Playable
+TU9 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { tuareg }
+	capital = STATE_SANTO_DOMINGO
+}
+
+# Songhai Playable
+SON = {
+	color = { 102 105 104 }
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { javan }
+	capital = STATE_SANTO_DOMINGO
+}
+
+# Mossi Playable
+M99 = {
+	color = { 102 105 104 }
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { javan }
+	capital = STATE_SANTO_DOMINGO
+}
+
+# Hausa Playable
+H99 = {
+	color = { 102 105 104 }
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { javan }
+	capital = STATE_SANTO_DOMINGO
+}
+
+# Another African Natives
+N10 = {
+	color = { 102 105 104 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { javan }
 	capital = STATE_SANTO_DOMINGO
 }

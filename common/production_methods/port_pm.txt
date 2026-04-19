@@ -42,6 +42,10 @@ pm_building_port_main_1 = {
 pm_building_port_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
 
+	unlocking_technologies = {
+		oceanic_navigation
+	}	
+
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_navalsupplies_add = 10 # 300
@@ -70,11 +74,12 @@ pm_building_port_main_2 = {
 pm_building_port_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
 	unlocking_technologies = {
+		behaviorism
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 5 # 350
+			goods_input_navalsupplies_add = 15 # 350
 			goods_output_trader_add = 30 # 1500
 		}
 		level_scaled = {

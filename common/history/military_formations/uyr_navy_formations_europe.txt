@@ -1,0 +1,92 @@
+﻿MILITARY_FORMATIONS = {
+	c:FRA ?= {
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_occitania
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lightship_1
+				state_region = s:STATE_LANGUEDOC
+				count = 5
+			}
+		}
+	}
+
+	c:ENG ?= {
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_england
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lightship_1
+				state_region = s:STATE_HOME_COUNTIES
+				count = 10
+			}
+		}
+	}
+
+	c:VEN ?= {
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_italy
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lightship_1
+				state_region = s:STATE_VENETIA
+				count = 10
+			}
+		}
+	}
+
+	c:TUR ?= {
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_anatolia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lightship_1
+				state_region = s:STATE_HUDAVENDIGAR
+				count = 5
+			}
+		}
+	}
+
+	c:TEU ?= {
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_poland
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lightship_1
+				state_region = s:STATE_EAST_PRUSSIA
+				count = 2
+			}
+		}
+	}
+
+	c:CAS ?= {
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_iberia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lightship_1
+				state_region = s:STATE_OLD_CASTILE
+				count = 6
+			}
+		}
+	}
+
+	c:POR ?= {
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_iberia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lightship_1
+				state_region = s:STATE_BEIRA
+				count = 4
+			}
+		}
+	}
+}

@@ -49,12 +49,6 @@ pm_building_tin_mine_main_3 = {
 		behaviorism
 	}
 
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 2
-		}
-	}
-
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -78,12 +72,6 @@ pm_building_tin_mine_main_4 = {
 
 	unlocking_technologies = {
 		behaviorism
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
 	}
 
 	building_modifiers = {
