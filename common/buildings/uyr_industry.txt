@@ -22,29 +22,6 @@ building_textile_mill = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
-building_textile_mill = {
-	building_group = bg_light_industry
-	icon = "gfx/interface/icons/building_icons/cloth_workshop_uyr.dds"
-	city_type = city
-	levels_per_mesh = 50
-
-	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
-
-	unlocking_technologies = {
-		cloth_workshop
-	}
-
-	production_method_groups = {
-		pmg_building_cloth_workshop_main
-		pmg_building_cloth_workshop_leather
-	}
-
-	required_construction = construction_cost_high
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
-}
-
 building_furniture_manufactory = {
 	building_group = bg_light_industry
 	icon = "gfx/interface/icons/building_icons/furniture_workshop_uyr.dds"
@@ -59,6 +36,7 @@ building_furniture_manufactory = {
 
 	production_method_groups = {
 		pmg_building_furniture_workshop_main
+		pmg_building_furniture_workshop_luxury
 	}
 
 	required_construction = construction_cost_high
