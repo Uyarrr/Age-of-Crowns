@@ -473,8 +473,8 @@ building_slaughterhouse = {
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
 	production_method_groups = {
-		pmg_building_bakery_main
-		pmg_building_bakery_heating
+		pmg_building_slaughterhouse_main
+		pmg_building_slaughterhouse_salting
 	}
 
 	required_construction = construction_cost_high
