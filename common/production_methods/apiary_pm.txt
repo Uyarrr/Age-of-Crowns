@@ -22,7 +22,9 @@ pm_building_apiary_main_2 = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_beeswax_add = 15
+			goods_input_wood_add = 5
+			goods_input_tools_add = 1
+			goods_output_beeswax_add = 20
 		}
 
 		level_scaled = {
@@ -41,7 +43,9 @@ pm_building_apiary_main_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_beeswax_add = 25
+			goods_input_wood_add = 10
+			goods_input_tools_add = 5
+			goods_output_beeswax_add = 35
 		}
 
 		level_scaled = {
@@ -60,7 +64,9 @@ pm_building_apiary_main_4 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_beeswax_add = 35
+			goods_input_wood_add = 20
+			goods_input_tools_add = 10
+			goods_output_beeswax_add = 75
 		}
 
 		level_scaled = {
