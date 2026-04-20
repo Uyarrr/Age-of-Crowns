@@ -97,6 +97,15 @@ goods_input_weapons_mult={
 	}
 }
 
+goods_input_book_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_input_leather_mult={
 	decimals=1
 	color=bad
@@ -305,6 +314,15 @@ goods_output_livestock_mult={
 }
 
 goods_output_bread_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_book_mult={
 	decimals=1
 	color=good
 	percent=yes

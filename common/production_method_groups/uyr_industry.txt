@@ -231,3 +231,15 @@ pmg_building_furniture_workshop_luxury = {
 		pm_building_furniture_workshop_luxury_furniture_1
 	}
 }
+
+########################### PRINTING MILL ##################################
+
+pmg_building_printing_mill_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_printing_mill_main_1
+		pm_building_printing_mill_main_2
+		pm_building_printing_mill_main_3
+		pm_building_printing_mill_main_4
+	}
+}

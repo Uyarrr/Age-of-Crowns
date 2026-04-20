@@ -43,16 +43,6 @@ building_cotton_plantation = {
 
 	ai_value = {
 		value = 1000
-
-		if = { # British dictates
-			limit = {
-				owner = {
-					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type ?= 4
-				}
-			}
-			add = 2000
-		}
 	}
 }
 
@@ -61,19 +51,15 @@ building_dye_plantation = {
 	icon = "gfx/interface/icons/building_icons/dye_plantation.dds"
 	required_construction = construction_cost_low
 
-	buildable = no
-
 	unlocking_technologies = {
-		enclosure
+		agriculture
 	}
 
 	city_type = farm
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_base_building_dye_plantation
-		pmg_dye_exploitation
-		pmg_train_automation_building_dye_plantation
+		pmg_building_dye_plantation_main
 	}
 	ownership_type = self
 
@@ -81,16 +67,6 @@ building_dye_plantation = {
 
 	ai_value = {
 		value = 1000
-
-		if = { # British dictates
-			limit = {
-				owner = {
-					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type ?= 3
-				}
-			}
-			add = 2000
-		}
 	}
 }
 

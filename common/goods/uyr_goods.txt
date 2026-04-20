@@ -195,3 +195,16 @@ beeswax = {
 
 	consumption_tax_cost = 200
 }
+
+book = {
+	texture = "gfx/interface/icons/goods_icons/book.dds"
+	cost = 30
+	category = staple
+
+	prestige_factor = 4
+
+	traded_quantity = 7 # 210
+	convoy_cost_multiplier = 0.5
+
+	consumption_tax_cost = 200
+}
