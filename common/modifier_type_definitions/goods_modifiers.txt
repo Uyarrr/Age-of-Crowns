@@ -150,6 +150,14 @@ goods_input_trader_add={
 	}
 }
 
+goods_input_beeswax_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_output_stone_add={
 	decimals=1
 	color=good
@@ -295,6 +303,14 @@ goods_output_bread_add={
 }
 
 goods_output_salt_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_beeswax_add={
 	decimals=1
 	color=good
 	game_data={

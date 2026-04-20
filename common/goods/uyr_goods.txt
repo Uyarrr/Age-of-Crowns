@@ -57,7 +57,7 @@ bread = {
 
 livestock = {
 	texture = "gfx/interface/icons/goods_icons/livestock.dds"
-	cost = 20
+	cost = 40
 	category = industrial
 
 	prestige_factor = 6
@@ -180,4 +180,18 @@ firearms = {
 	obsession_chance = 0.5
 	prestige_factor = 5
 	traded_quantity = 4
+}
+
+beeswax = {
+	texture = "gfx/interface/icons/goods_icons/beeswax.dds"
+	cost = 30
+	category = staple
+
+	obsession_chance = 1.0
+	prestige_factor = 4
+
+	traded_quantity = 8 # 240
+	convoy_cost_multiplier = 0.75
+
+	consumption_tax_cost = 200
 }

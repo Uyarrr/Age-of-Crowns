@@ -205,3 +205,23 @@ building_vineyard = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 }
+
+building_apiary = {
+	building_group = bg_agriculture
+	icon = "gfx/interface/icons/building_icons/apiary_uyr.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		apiary
+	}
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_apiary_main
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
+}
