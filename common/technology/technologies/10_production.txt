@@ -36,6 +36,21 @@ bakery = {
 	}
 }
 
+slaughterhouse = {
+	# Unlocks Slaughterhouse
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/meat.dds"
+	category = production
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
 metallurgy = {
 	# Unlocks Tool Workshop
 	era = era_1
