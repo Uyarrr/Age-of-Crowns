@@ -8,6 +8,14 @@
 	}
 }
 
+pmg_transportation_building_coal_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_transport_mine
+	}
+}
+
 pmg_building_gold_mine_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -15,6 +23,14 @@ pmg_building_gold_mine_main = {
 		pm_building_coal_mine_main_2
 		pm_building_coal_mine_main_3
 		pm_building_coal_mine_main_4
+	}
+}
+
+pmg_transportation_building_gold_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_transport_mine
 	}
 }
 
@@ -38,6 +54,14 @@ pmg_building_stone_mine_main = {
 	}
 }
 
+pmg_transportation_building_stone_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_transport_mine
+	}
+}
+
 pmg_building_iron_mine_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -45,6 +69,14 @@ pmg_building_iron_mine_main = {
 		pm_building_iron_mine_main_2
 		pm_building_iron_mine_main_3
 		pm_building_iron_mine_main_4
+	}
+}
+
+pmg_transportation_building_iron_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_transport_mine
 	}
 }
 
@@ -58,6 +90,14 @@ pmg_building_copper_mine_main = {
 	}
 }
 
+pmg_transportation_building_copper_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_transport_mine
+	}
+}
+
 pmg_building_sulfur_mine_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -65,6 +105,14 @@ pmg_building_sulfur_mine_main = {
 		pm_building_sulfur_mine_main_2
 		pm_building_sulfur_mine_main_3
 		pm_building_sulfur_mine_main_4
+	}
+}
+
+pmg_transportation_building_sulfur_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_transport_mine
 	}
 }
 
@@ -78,6 +126,14 @@ pmg_building_tin_mine_main = {
 	}
 }
 
+pmg_transportation_building_tin_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_transport_mine
+	}
+}
+
 pmg_building_lead_mine_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -85,6 +141,14 @@ pmg_building_lead_mine_main = {
 		pm_building_lead_mine_main_2
 		pm_building_lead_mine_main_3
 		pm_building_lead_mine_main_4
+	}
+}
+
+pmg_transportation_building_lead_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_transport_mine
 	}
 }
 
