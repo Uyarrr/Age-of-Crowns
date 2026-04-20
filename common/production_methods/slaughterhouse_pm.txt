@@ -21,6 +21,7 @@ pm_building_slaughterhouse_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -45,6 +46,7 @@ pm_building_slaughterhouse_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -70,6 +72,7 @@ pm_building_slaughterhouse_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -99,6 +102,7 @@ pm_building_slaughterhouse_salting_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation1.dds"
 
 	unlocking_technologies = {
+		salted_meat_preservation
 	}
 
 	building_modifiers = {
@@ -115,6 +119,7 @@ pm_building_slaughterhouse_salting_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
 
 	unlocking_technologies = {
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -122,7 +127,7 @@ pm_building_slaughterhouse_salting_2 = {
 			# input goods
 			goods_input_salt_add = 15
 			#output goods
-			goods_output_bread_add = 25
+			goods_output_meat_add = 25
 		}
 	}
 }
