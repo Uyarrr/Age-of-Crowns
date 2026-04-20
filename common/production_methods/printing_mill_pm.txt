@@ -4,11 +4,12 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_clothes_add = 10
-			goods_input_wood_add = 5
+			goods_input_leather_add = 5
+			goods_input_paper_add = 10
+			goods_input_dye_add = 5
 
 			# output goods
-			goods_output_book_add = 20
+			goods_output_book_add = 25
 		}
 
 		level_scaled = {
@@ -28,8 +29,10 @@ pm_building_printing_mill_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fiber_add = 25
-			goods_input_wood_add = 5
+			goods_input_leather_add = 5
+			goods_input_paper_add = 15
+			goods_input_dye_add = 5
+			goods_input_lead_add = 5
 
 			# output goods
 			goods_output_book_add = 40
@@ -53,8 +56,10 @@ pm_building_printing_mill_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 15
-			goods_input_wood_add = 40
+			goods_input_leather_add = 10
+			goods_input_paper_add = 20
+			goods_input_dye_add = 10
+			goods_input_lead_add = 5
 
 			# output goods
 			goods_output_book_add = 60
@@ -64,32 +69,6 @@ pm_building_printing_mill_main_3 = {
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3500
 			building_employment_machinists_add = 500
-			building_employment_engineers_add = 500
-		}
-	}
-}
-
-pm_building_printing_mill_main_4 = {
-	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
-	
-	unlocking_technologies = {
-		behaviorism
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 15
-			goods_input_wood_add = 30
-			goods_input_sulfur_add = 25
-
-			# output goods
-			goods_output_book_add = 80
-		}
-
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
 		}
 	}
