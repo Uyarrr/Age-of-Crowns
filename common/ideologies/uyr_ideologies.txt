@@ -22,6 +22,11 @@
 		law_strengthen_the_nobility = strongly_approve
 		law_curtail_the_nobility = strongly_disapprove
 	}
+
+	lawgroup_feudal_de_jure_laws = {
+		law_by_tradition = strongly_approve
+		law_by_blood = strongly_disapprove
+	}
 }
 
 ideology_plutocratic = {
@@ -81,22 +86,57 @@ ideology_decentralization = {
 
 ideology_centralization = {
 	icon = "gfx/interface/icons/ideology_icons/hierarchic.dds"
+
+	lawgroup_administrative_system = {
+		law_autonomous_councils = strongly_disapprove
+		law_central_council = strongly_approve
+		law_local_courts = strongly_disapprove
+		law_feudal_administration = disapprove
+		law_confederal_union = strongly_disapprove
+		law_federal_state = disapprove
+		law_absolute_leadership = strongly_approve
+		law_unitary_administration = approve
+	}
 }
 
 ideology_serfdom = {
 	icon = "gfx/interface/icons/ideology_icons/agrarian.dds"
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_approve
+		law_tenant_farmers = neutral
+		law_homesteading = strongly_disapprove
+	}
 }
 
 ideology_free_subjects = {
 	icon = "gfx/interface/icons/ideology_icons/anarchist.dds"
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = approve
+		law_homesteading = strongly_approve
+	}
 }
 
 ideology_traditionalist = {
 	icon = "gfx/interface/icons/ideology_icons/traditionalist.dds"
+
+	lawgroup_rights_of_the_clergy = {
+		law_strengthen_clergy = strongly_approve
+		law_curtail_clergy = strongly_disapprove
+	}
 }
 
 ideology_innovative = {
 	icon = "gfx/interface/icons/ideology_icons/positivist.dds"
+
+	lawgroup_education_system = {
+		law_no_schools = strongly_disapprove
+		law_religious_schools = approve
+		law_private_schools = approve
+		law_public_schools = strongly_approve
+	}
 }
 
 ideology_liberalism = {
@@ -105,38 +145,206 @@ ideology_liberalism = {
 
 ideology_absolutism = {
 	icon = "gfx/interface/icons/ideology_icons/authoritarian.dds"
+
+	lawgroup_administrative_system = {
+		law_autonomous_councils = strongly_disapprove
+		law_central_council = approve
+		law_local_courts = strongly_disapprove
+		law_feudal_administration = disapprove
+		law_confederal_union = strongly_disapprove
+		law_federal_state = disapprove
+		law_absolute_leadership = strongly_approve
+		law_unitary_administration = approve
+	}
+
+	lawgroup_feudal_de_jure_laws = {
+		law_by_tradition = strongly_disapprove
+		law_by_blood = strongly_approve
+	}
+
+	lawgroup_rights_of_the_clergy = {
+		law_strengthen_clergy = strongly_disapprove
+		law_curtail_clergy = strongly_approve
+	}
+
+	lawgroup_rights_of_the_burghers = {
+		law_strengthen_the_burghers = strongly_disapprove
+		law_curtail_the_burghers = strongly_approve
+	}
+
+	lawgroup_rights_of_the_nobility = {
+		law_strengthen_the_nobility = strongly_disapprove
+		law_curtail_the_nobility = strongly_approve
+	}
 }
 
 ideology_outward = {
 	icon = "gfx/interface/icons/ideology_icons/colonialist.dds"
+
+	lawgroup_feudal_de_jure_laws = {
+		law_by_tradition = disapprove
+		law_by_blood = approve
+	}
+
+	lawgroup_cultural_traditions = {
+		law_martial_society = strongly_approve
+		law_civil_society = strongly_disapprove
+	}
+
+	lawgroup_colonization = {
+		law_colonial_exploitation = strongly_approve
+		law_no_colonial_affairs = disapprove
+		law_colonial_resettlement = strongly_approve
+		law_frontier_colonization = neutral
+	}
 }
 
 ideology_inward = {
 	icon = "gfx/interface/icons/ideology_icons/isolationist.dds"
+
+	lawgroup_feudal_de_jure_laws = {
+		law_by_tradition = approve
+		law_by_blood = disapprove
+	}
+
+	lawgroup_cultural_traditions = {
+		law_martial_society = strongly_disapprove
+		law_civil_society = strongly_approve
+	}
+
+	lawgroup_colonization = {
+		law_colonial_exploitation = strongly_disapprove
+		law_no_colonial_affairs = approve
+		law_colonial_resettlement = strongly_disapprove
+		law_frontier_colonization = neutral
+	}
 }
 
 ideology_capital_economy = {
 	icon = "gfx/interface/icons/ideology_icons/laissez_faire.dds"
+
+	lawgroup_economic_policy = {
+		law_no_economic_policy = strongly_disapprove
+		law_lockean_proviso = strongly_approve
+		law_war_economy = strongly_approve
+		law_economic_theory = strongly_approve
+		law_agriculture_economy = disapprove
+		law_fishing_economy = disapprove
+		law_pirate_economy = disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = approve
+		law_homesteading = strongly_approve
+	}
+
+	lawgroup_rights_of_the_burghers = {
+		law_strengthen_the_burghers = approve
+		law_curtail_the_burghers = disapprove
+	}
 }
 
 ideology_traditional_economy = {
 	icon = "gfx/interface/icons/ideology_icons/land_reformer.dds"
+
+	lawgroup_economic_policy = {
+		law_no_economic_policy = strongly_approve
+		law_lockean_proviso = strongly_disapprove
+		law_war_economy = strongly_disapprove
+		law_economic_theory = neutral
+		law_agriculture_economy = approve
+		law_fishing_economy = approve
+		law_pirate_economy = neutral
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_approve
+		law_tenant_farmers = approve
+		law_homesteading = disapprove
+	}
+
+	lawgroup_rights_of_the_burghers = {
+		law_strengthen_the_burghers = disapprove
+		law_curtail_the_burghers = approve
+	}
 }
 
 ideology_spiritualist = {
 	icon = "gfx/interface/icons/ideology_icons/pious.dds"
+
+	lawgroup_rights_of_the_clergy = {
+		law_strengthen_clergy = strongly_approve
+		law_curtail_clergy = strongly_disapprove
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_approve
+		law_freedom_of_conscience = disapprove
+		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
+	}
+
+	lawgroup_foreign_cultural_law = {
+		law_allow_foreign_rituals = strongly_disapprove
+		law_integrate_foreign_traditions = strongly_approve
+	}
+
+	lawgroup_education_system = {
+		law_no_schools = neutral
+		law_religious_schools = strongly_approve
+		law_private_schools = disapprove
+		law_public_schools = strongly_disapprove
+	}
 }
 
 ideology_humanist = {
 	icon = "gfx/interface/icons/ideology_icons/anti_clerical.dds"
+
+	lawgroup_rights_of_the_clergy = {
+		law_strengthen_clergy = disapprove
+		law_curtail_clergy = approve
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_disapprove
+		law_freedom_of_conscience = approve
+		law_total_separation = strongly_approve
+		law_state_atheism = approve
+	}
+
+	lawgroup_foreign_cultural_law = {
+		law_allow_foreign_rituals = strongly_approve
+		law_integrate_foreign_traditions = strongly_disapprove
+	}
 }
 
 ideology_quality = {
 	icon = "gfx/interface/icons/ideology_icons/patriotic.dds"
+
+	lawgroup_army_doctrine = {
+		law_no_army_doctrine = strongly_disapprove
+		law_offensive_stance = approve
+		law_defensive_stance = approve
+		law_infantry_warfare = strongly_approve
+		law_artillery_warfare = strongly_approve
+		law_cavalry_warfare = strongly_approve
+	}
 }
 
 ideology_quantity = {
 	icon = "gfx/interface/icons/ideology_icons/utopian.dds"
+
+	lawgroup_recruitment_law = {
+		law_expanded_levies = strongly_approve
+		law_noble_levy = strongly_disapprove
+	}
+
+	lawgroup_levy_law = {
+		law_inclusive_levy = approve
+		law_noble_levy = strongly_disapprove
+		law_peasant_levy = strongly_approve
+	}
 }
 
 ideology_individualism = {
@@ -149,6 +357,11 @@ ideology_communalism = {
 
 ideology_royalist = {
 	icon = "gfx/interface/icons/ideology_icons/royalist.dds"
+
+	lawgroup_feudal_de_jure_laws = {
+		law_by_tradition = disapprove
+		law_by_blood = approve
+	}
 }
 
 ideology_republican = {
