@@ -1374,21 +1374,6 @@ ai_strategy_default = {
 			add = 10
 		}
 
-		# Add a baseline for high rank
-		if = {
-			limit = { country_rank >= rank_value:great_power }
-			add = 75
-		}
-		else_if = {
-			limit = {
-				OR = {
-					country_rank >= rank_value:major_power
-					country_rank >= rank_value:unrecognized_major_power
-				}
-			}
-			add = 50
-		}
-
 		# If trying to industrialize
 		if = {
 			limit = {
@@ -1416,28 +1401,6 @@ ai_strategy_default = {
 	# Using this value in other strategies will function additively
 	economic_vs_government_spending_balance = {
 		value = 0.0
-		if = {
-			limit = {
-				has_journal_entry = je_grunderzeit
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_variable = grunderzeit_participant_low_var
-					}
-				}
-				add = 0.4
-			}
-			else = {
-				add = 0.2
-			}
-		}
-		else_if = {
-			limit = {
-				has_journal_entry = je_spa_economic_regeneration_master
-			}
-			add = 0.2
-		}
 	}
 
 	wanted_army_size = {
@@ -1762,36 +1725,6 @@ ai_strategy_default = {
 	# root = liberator
 	# scope:target = oppressor
 	liberate_country_scores = {
-		HOL = {
-			if = {
-				limit = {
-					wants_to_solve_schleswig_holstein = yes
-					scope:target_country = {
-						is_oppressor_of_schleswig_holstein = yes
-					}
-					can_reach_target_country = no
-				}
-				add = 100
-			}
-		}
-		BUL = {
-			# Russia is inclined to want to release Bulgaria
-			if = {
-				limit = {
-					c:RUS ?= this
-				}
-				add = 200
-			}
-			if = { #especially during Eastern Crisis
-				limit = {
-					has_journal_entry = je_eastern_question_russia
-					scope:target_country = {
-						has_journal_entry = je_great_eastern_crisis
-					}
-				}
-				add = 300
-			}
-		}
 	}
 
 	# How important is it that the AI maintains an interest in a specific strategic region (added on top of region value calculations set in defines)
@@ -1971,19 +1904,6 @@ ai_strategy_default = {
 
 			score = {
 				value = 200
-				if = {
-					limit = {
-						has_journal_entry = je_the_grand_collapse
-						any_subject_or_below = {
-							count >= 1
-						}
-						scope:target_country = {
-							relations:root <= relations_threshold:cordial
-							is_subject_of = root
-						}
-					}
-					add = 500
-				}
 
 				if = {
 					limit = {
@@ -2199,59 +2119,6 @@ ai_strategy_default = {
 					add = 200
 				}
 
-				if = {
-					limit = {
-						scope:target_country = {
-							is_involved_in_journal_entry = je_peru_bolivia
-							has_variable = pbc_member
-						}
-						OR = {
-							country_has_primary_culture = cu:south_andean
-							country_has_primary_culture = cu:north_andean
-							country_has_primary_culture = cu:platinean
-							country_has_primary_culture = cu:argentine
-							country_has_primary_culture = cu:chilean
-							country_has_primary_culture = cu:colombian
-							country_has_primary_culture = cu:ecuadorian
-						}
-						NOT = { has_variable = befriend_bolivia }
-					}
-					add = -50
-
-					if = {
-						limit = {
-							has_variable = attack_bolivia
-						}
-						multiply = 5
-					}
-				}
-
-				if = { # Try to be on good terms with GBR/USA to avoid intervention
-					limit = {
-						has_journal_entry = je_reconquista
-						scope:target_country = {
-							country_rank = rank_value:great_power
-							OR = {
-								c:GBR ?= this
-								AND = {
-									is_in_geographic_region = geographic_region_americas
-									is_historical_spanish_american_colony = no
-								}
-							}
-						}
-					}
-					add = 200
-				}
-				else_if = { # Reconcile with former Spanish Colonies
-					limit = {
-						has_journal_entry = je_hispanoamerica
-						scope:target_country = {
-							has_modifier = modifier_not_recognized_by_spain
-						}
-					}
-					add = 200
-				}
-
 				multiply = {
 					value = "ai_ideological_opinion(scope:target_country)"
 					multiply = 0.05
@@ -2270,56 +2137,6 @@ ai_strategy_default = {
 						value = "lobby_in_government_foreign_anti_clout(scope:target_country)"
 						divide = 2
 					}
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_government = yes
-							scope:target_country = {
-								has_radical_leftist_government = yes
-							}
-						}
-					}
-					multiply = 1.5
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_economy = yes
-							scope:target_country = {
-								has_radical_leftist_economy = yes
-							}
-						}
-					}
-					multiply = 1.5
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_government = no
-							scope:target_country = {
-								has_radical_leftist_government = yes
-							}
-						}
-
-					}
-					multiply = 0.5
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_economy = no
-							scope:target_country = {
-								has_radical_leftist_economy = yes
-							}
-						}
-
-					}
-					multiply = 0.5
 				}
 
 				if = {
@@ -2448,56 +2265,6 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
-						AND = {
-							has_radical_leftist_government = yes
-							scope:target_country = {
-								has_radical_leftist_government = yes
-							}
-						}
-					}
-					multiply = 1.5
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_economy = yes
-							scope:target_country = {
-								has_radical_leftist_economy = yes
-							}
-						}
-					}
-					multiply = 1.5
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_government = no
-							scope:target_country = {
-								has_radical_leftist_government = yes
-							}
-						}
-
-					}
-					multiply = 0.5
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_economy = no
-							scope:target_country = {
-								has_radical_leftist_economy = yes
-							}
-						}
-
-					}
-					multiply = 0.5
-				}
-
-				if = {
-					limit = {
 						exists = c:FRA
 						c:FRA = this
 						ruler = {
@@ -2605,57 +2372,6 @@ ai_strategy_default = {
 						}
 					}
 					add = 500
-				}
-
-				if = {
-					limit = {
-						c:GBR ?= this
-						has_variable = committed_to_afghanistan_assistance
-						scope:target_country = {
-							has_variable = AFG_appealed_to_RUS
-						}
-					}
-					add = 100
-				}
-				else_if = {
-					limit = {
-						c:RUS ?= this
-						has_variable = committed_to_afghanistan_assistance
-						scope:target_country = {
-							has_variable = AFG_appealed_to_GBR
-						}
-					}
-					add = 100
-				}
-
-				if = {
-					limit = {
-						THIS = {
-							has_journal_entry = je_risorgimento
-						}
-						scope:target_country = {
-							any_scope_state = {
-								state_region = {
-									OR = {
-										is_homeland = cu:north_italian
-										is_homeland = cu:south_italian
-									}
-								}
-							}
-						}
-					}
-					add = 50
-				}
-
-				if = { # Spanish American reconquest of former colonies
-					limit = {
-						has_journal_entry = je_reconquista
-						scope:target_country = {
-							is_historical_spanish_american_colony = yes
-							NOT = { is_subject_of = root }
-						}
-					}
-					add = 100
 				}
 
 				multiply = {
@@ -2799,63 +2515,6 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
-						scope:target_country = {
-							is_involved_in_journal_entry = je_peru_bolivia
-							has_variable = pbc_member
-						}
-						OR = {
-							country_has_primary_culture = cu:south_andean
-							country_has_primary_culture = cu:north_andean
-							country_has_primary_culture = cu:platinean
-							country_has_primary_culture = cu:argentine
-							country_has_primary_culture = cu:chilean
-							country_has_primary_culture = cu:colombian
-							country_has_primary_culture = cu:ecuadorian
-						}
-						NOT = { has_variable = befriend_bolivia }
-					}
-					add = 300
-
-					if = {
-						limit = {
-							has_variable = attack_bolivia
-						}
-						add = 700
-					}
-				}
-
-				# encouraging Ethiopian unification
-				if = {
-					limit = {
-						OR = {
-							has_journal_entry = je_age_of_princes
-							c:ETH ?= this
-						}
-						scope:target_country = {
-							OR = {
-								country_has_primary_culture = cu:amhara
-								country_has_primary_culture = cu:oromo
-								country_has_primary_culture = cu:tigray
-								country_has_primary_culture = cu:sidama
-								c:AWS ?= this
-							}
-							any_scope_state = {
-								state_region = {
-									OR = {
-										s:STATE_GONDER = this
-										s:STATE_AMHARA = this
-										s:STATE_OROMIA = this
-										s:STATE_ERITREA = this # not necessary for unification but something an Ethiopian state has, historically, expressed a keen interest in
-									}
-								}
-							}
-						}
-					}
-					add = 100
-				}
-
-				if = {
-					limit = {
 						NOT = { is_country_type = unrecognized }
 						scope:target_country = { is_country_type = unrecognized }
 						scope:target_country = {
@@ -2897,16 +2556,6 @@ ai_strategy_default = {
 							power_bloc ?= { has_principle_group = principle_group:principle_group_colonial_offices }
 						}
 						add = 50
-					}
-
-					if = {
-						limit = {
-							has_journal_entry = je_scramble_for_africa
-							scope:target_country = {
-								is_in_geographic_region = geographic_region_africa
-							}
-						}
-						add = 500
 					}
 
 					if = { # Portugal wishes to eat Gaza
@@ -2974,23 +2623,6 @@ ai_strategy_default = {
 							multiply = 0.1
 						}
 					}
-
-				# Second Balkan War, pitting the balkan nations against each other
-				if = {
-					limit = {
-						has_journal_entry = je_spoils_of_war
-						scope:target_country = {
-							sr:region_balkans = {
-							any_scope_state = {
-								is_homeland_of_country_cultures = root
-								has_claim_by = root
-								}
-							}
-						}
-					}
-
-					add = 10000
-				}
 
 				if = {
 					limit = {
@@ -3202,49 +2834,10 @@ ai_strategy_default = {
 					add = 25
 
 					if = {
-						limit = { has_technology_researched = quinine }
-						add = 25
-					}
-
-					if = {
-						limit = { has_technology_researched = civilizing_mission }
-						add = 100
-
-						if = {
-							limit = {
-								is_adjacent_to_country = scope:target_country
-								"relations(scope:target_country)" < relations_threshold:amicable
-							}
-							add = 1000
-						}
-					}
-
-					if = {
 						limit = {
 							power_bloc ?= { has_principle_group = principle_group:principle_group_colonial_offices }
 						}
 						add = 50
-					}
-
-					if = {
-						limit = {
-							has_journal_entry = je_scramble_for_africa
-							scope:target_country = {
-								is_in_geographic_region = geographic_region_africa
-							}
-						}
-						add = 250
-					}
-
-					if = {
-						limit = {
-							c:DEI ?= this
-							scope:target_country = {
-								capital.region = sr:region_indonesia
-								is_country_type = unrecognized
-							}
-						}
-						add = 500
 					}
 
 					if = {
@@ -3259,30 +2852,6 @@ ai_strategy_default = {
 						}
 						multiply = 0.1
 					}
-				}
-				if = { # Britain consolidating South Africa
-					limit = {
-						country_has_primary_culture = cu:british
-						has_technology_researched = malaria_prevention
-						any_subject_or_below = {
-							capital.region = sr:region_southern_africa
-						}
-						scope:target_country = {
-							capital.region = sr:region_southern_africa
-						}
-					}
-					add = 250
-				}
-
-				if = { # Spanish American reconquest of former colonies
-					limit = {
-						has_journal_entry = je_reconquista
-						scope:target_country = {
-							is_historical_spanish_american_colony = yes
-							NOT = { is_subject_of = root }
-						}
-					}
-					add = 100
 				}
 
 				if = {

@@ -29,23 +29,6 @@ law_mercantilism = {
 			has_law_or_variant = law_type:law_free_trade
 		}
 	}
-
-	ai_enact_weight_modifier = { #Petitions
-		value = 0
-
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
-
-		if = {
-			limit = {
-				has_journal_entry = je_meiji_diplomacy
-				has_law_or_variant = law_type:law_isolationism
-			}
-			add = 1000
-		}
-	}
 }
 
 law_protectionism = {
@@ -66,23 +49,6 @@ law_protectionism = {
 		state_subvention_import_add = 0.50
 		country_leverage_resistance_mult = 0.25
 	}
-
-	ai_enact_weight_modifier = { #Petitions
-		value = 0
-
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
-
-		if = {
-			limit = {
-				has_journal_entry = je_meiji_diplomacy
-				has_law_or_variant = law_type:law_isolationism
-			}
-			add = 1000
-		}
-	}
 }
 
 law_free_trade = {
@@ -100,51 +66,11 @@ law_free_trade = {
 		free_trade
 	}
 
-	on_enact = {
-		if = {
-			limit = { is_banning_goods = g:opium }
-			remove_banned_goods = g:opium
-		}
-		if = {
-			limit = { is_banning_goods = g:liquor }
-			remove_banned_goods = g:liquor
-		}
-	}
-
-	on_activate = {
-		if = { # removes opium ban authority modifier if forced to open market via diplomacy
-			limit = {
-				AND = {
-					c:CHI ?= this
-					has_modifier = opium_ban_authority
-				}
-			}
-			remove_modifier = opium_ban_authority
-		}
-	}
-
 	modifier = {
 		state_subvention_export_add = 0.50
 		state_subvention_import_add = 0.50
 		state_trade_advantage_mult = 0.25
 		country_leverage_resistance_mult = -0.25
-	}
-
-	ai_enact_weight_modifier = { #Petitions
-		value = 0
-
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
-
-		if = {
-			limit = {
-				has_journal_entry = je_meiji_diplomacy
-				has_law_or_variant = law_type:law_isolationism
-			}
-			add = 1000
-		}
 	}
 }
 
@@ -182,27 +108,6 @@ law_isolationism = {
 		country_max_declared_interests_mult = -0.5
 
 		country_disallow_trade_bool = yes
-	}
-
-	ai_will_do = {
-		OR = {
-			has_journal_entry = je_gyojo_shinwon
-			ruler = {
-				OR = {
-					has_ideology = ideology:ideology_traditionalist
-					has_ideology = ideology:ideology_vanguardist
-				}
-			}
-		}
-	}
-
-	ai_enact_weight_modifier = { #Petitions
-		value = 0
-
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
 	}
 }
 

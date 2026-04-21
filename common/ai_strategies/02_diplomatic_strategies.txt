@@ -37,7 +37,7 @@ ai_strategy_maintain_power_balance = {
 	}
 
 	aggression = {
-		value = 0.25
+		value = 0.5
 
 		if = {
 			limit = {
@@ -165,7 +165,7 @@ ai_strategy_territorial_expansion = {
 	}
 
 	aggression = {
-		value = 1
+		value = 1.25
 
 		if = {
 			limit = {
