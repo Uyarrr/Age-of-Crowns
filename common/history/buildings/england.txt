@@ -13,16 +13,6 @@
 				reserves=1
 			}
 			create_building={
-				building="building_weapon_workshop"
-				add_ownership={
-					country={
-						country="c:ENG"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
 				building="building_logging_camp"
 				add_ownership={
 					country={
@@ -138,6 +128,16 @@
 			}
 			create_building={
 				building="building_tooling_workshop"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_weapon_workshop"
 				add_ownership={
 					country={
 						country="c:ENG"
