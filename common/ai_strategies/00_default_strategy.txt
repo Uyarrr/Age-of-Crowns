@@ -1385,11 +1385,6 @@ ai_strategy_default = {
 			multiply = 1.25
 		}
 
-		if = {
-			limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
-			multiply = 0.1
-		}
-
 		min = 2
 	}
 
@@ -1426,56 +1421,10 @@ ai_strategy_default = {
 			value = 100
 		}
 		combat_unit_group_artillery = {
-			value = 0
-			if = {
-				limit = { has_technology_researched = artillery }
-				add = 15
-			}
-			if = {
-				limit = { has_technology_researched = napoleonic_warfare }
-				add = 5
-			}
-			if = {
-				limit = { has_technology_researched = breech_loading_artillery }
-				add = 10
-			}
-			if = {
-				limit = { has_technology_researched = wargaming }
-				add = 10
-			}
-
-			if = {
-				limit = { has_law_or_variant = law_type:law_peasant_levies }
-				multiply = 0.5
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_national_militia }
-				multiply = 0.75
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_professional_army }
-				multiply = 1.25
-			}
+			value = 40
 		}
 		combat_unit_group_cavalry = {
-			value = 20
-			if = {
-				limit = { has_technology_researched = mobile_armor }
-				add = 10
-			}
-
-			if = {
-				limit = { has_law_or_variant = law_type:law_national_militia }
-				multiply = 0.5
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_professional_army }
-				multiply = 1.25
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_peasant_levies }
-				multiply = 1.5
-			}
+			value = 40
 		}
 		combat_unit_group_light_ship = {
 			value = 100
@@ -1573,68 +1522,6 @@ ai_strategy_default = {
 				has_technology_researched = artillery
 			}
 		}
-		ammunition = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = general_staff
-			}
-		}
-		aeroplanes = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = military_aviation
-				country_rank >= rank_value:major_power
-			}
-		}
-		tanks = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = mobile_armor
-				country_rank >= rank_value:major_power
-			}
-		}
-		clippers = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = navigation
-				NAND = {
-					has_technology_researched = ironclad_tech
-					has_technology_researched = gantry_cranes
-				}
-				has_port = yes
-				country_rank >= rank_value:major_power
-			}
-		}
-		manowars = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = admiralty
-				NAND = {
-					has_technology_researched = ironclad_tech
-					has_technology_researched = gantry_cranes
-				}
-				has_port = yes
-				country_rank >= rank_value:major_power
-			}
-		}
-		steamers = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = ironclad_tech
-				has_technology_researched = gantry_cranes
-				has_port = yes
-				country_rank >= rank_value:major_power
-			}
-		}
-		ironclads = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = ironclad_tech
-				has_technology_researched = gantry_cranes
-				has_port = yes
-				country_rank >= rank_value:major_power
-			}
-		}
 		paper = {
 			stance = wants_high_supply
 			trigger = {
@@ -1643,19 +1530,7 @@ ai_strategy_default = {
 				NOT = { has_law_or_variant = law_type:law_traditionalism }
 			}
 		}
-		electricity = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = electrical_generation
-			}
-		}
 		coal = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = railways
-			}
-		}
-		engines = {
 			stance = wants_high_supply
 			trigger = {
 				has_technology_researched = railways
@@ -1672,13 +1547,6 @@ ai_strategy_default = {
 			stance = wants_high_supply
 			trigger = {
 				has_building = building_textile_mill
-				total_population >= 1000000
-			}
-		}
-		hardwood = {
-			stance = wants_high_supply
-			trigger = {
-				has_building = building_furniture_manufactory
 				total_population >= 1000000
 			}
 		}
@@ -1777,14 +1645,6 @@ ai_strategy_default = {
 				limit = {
 					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
-				}
-				add = 100
-			}
-		}
-		region_baltic = {
-			if = {
-				limit = {
-					wants_to_solve_schleswig_holstein = yes
 				}
 				add = 100
 			}
@@ -1954,62 +1814,7 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
-						AND = {
-							has_radical_leftist_economy = yes
-							scope:target_country = {
-								has_radical_leftist_economy = yes
-							}
-						}
-					}
-					multiply = 1.5
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_government = no
-							scope:target_country = {
-								has_radical_leftist_government = yes
-							}
-						}
-
-					}
-					multiply = 0.5
-				}
-
-				if = {
-					limit = {
-						AND = {
-							has_radical_leftist_economy = no
-							scope:target_country = {
-								has_radical_leftist_economy = yes
-							}
-						}
-
-					}
-					multiply = 0.5
-				}
-
-				if = {
-					limit = {
 						lenient_ai_behavior_trigger = yes
-					}
-					multiply = 1.5
-				}
-
-				if = {
-					limit = {
-						exists = c:FRA
-						c:FRA = this
-						ruler = {
-							has_variable = legitimist_leader
-						}
-
-						exists = c:SPA
-						scope:target_country = {
-							c:SPA ?= this
-							has_law = law_type:law_monarchy
-						}
 					}
 					multiply = 1.5
 				}
@@ -2265,26 +2070,6 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
-						exists = c:FRA
-						c:FRA = this
-						ruler = {
-							OR = {
-								has_variable = legitimist_leader
-								has_variable = house_bonaparte
-							}
-						}
-
-						exists = c:PAP
-						scope:target_country = {
-							c:PAP = this
-							has_law_or_variant = law_type:law_theocracy
-						}
-					}
-					multiply = 1.5
-				}
-
-				if = {
-					limit = {
 						harsh_ai_behavior_trigger = yes
 					}
 					multiply = 0.75
@@ -2534,80 +2319,10 @@ ai_strategy_default = {
 					add = 50
 
 					if = {
-						limit = { has_technology_researched = quinine }
-						add = 50
-					}
-
-					if = {
-						limit = { has_technology_researched = civilizing_mission }
-						add = 200
-
-						if = {
-							limit = {
-								is_adjacent_to_country = scope:target_country
-								"relations(scope:target_country)" < relations_threshold:amicable
-							}
-							add = 1000
-						}
-					}
-
-					if = {
 						limit = {
 							power_bloc ?= { has_principle_group = principle_group:principle_group_colonial_offices }
 						}
 						add = 50
-					}
-
-					if = { # Portugal wishes to eat Gaza
-						limit = {
-							country_has_primary_culture = cu:portuguese
-							has_technology_researched = civilizing_mission
-							OR = {
-								any_scope_state = {
-									OR = {
-										state_region = s:STATE_MOCAMBIQUE
-										state_region = s:STATE_ZAMBEZIA
-										state_region = s:STATE_LOURENCO_MARQUES
-									}
-								}
-								any_subject_or_below = {
-									capital = {
-										OR = {
-											state_region = s:STATE_MOCAMBIQUE
-											state_region = s:STATE_ZAMBEZIA
-											state_region = s:STATE_LOURENCO_MARQUES
-										}
-									}
-								}
-							}
-							scope:target_country = {
-								is_country_type = unrecognized
-								any_scope_state = {
-									state_region = s:STATE_MOCAMBIQUE
-									state_region = s:STATE_ZAMBEZIA
-									state_region = s:STATE_LOURENCO_MARQUES
-								}
-							}
-						}
-						add = 250
-
-						if = {
-							limit = {
-								has_technology_researched = malaria_prevention
-							}
-							add = 500
-						}
-					}
-
-					if = {
-						limit = {
-							c:DEI ?= this
-							scope:target_country = {
-								capital.region = sr:region_indonesia
-								is_country_type = unrecognized
-							}
-						}
-						add = 1000
 					}
 
 						if = {
@@ -3252,32 +2967,6 @@ ai_strategy_default = {
 				}
 				add = 10
 			}
-
-			if = {
-				limit = {
-					AND = {
-						has_radical_leftist_government = no
-						scope:target_country = {
-							has_radical_leftist_government = yes
-						}
-					}
-
-				}
-				add = 100
-			}
-
-			if = {
-				limit = {
-					AND = {
-						has_radical_leftist_economy = no
-						scope:target_country = {
-							has_radical_leftist_economy = yes
-						}
-					}
-
-				}
-				add = 100
-			}
 		}
 
 		force_nationalization = {
@@ -3329,42 +3018,6 @@ ai_strategy_default = {
 						}
 					}
 					can_reach_target_country = yes
-				}
-				add = 50
-			}
-
-			if = {
-				limit = {
-					has_journal_entry = je_opium_wars
-					scope:target_country = {
-						has_variable = opium_wars_target
-					}
-				}
-				add = 75
-			}
-
-			if = {
-				limit = {
-					AND = {
-						has_radical_leftist_government = no
-						scope:target_country = {
-							has_radical_leftist_government = yes
-						}
-					}
-
-				}
-				add = 50
-			}
-
-			if = {
-				limit = {
-					AND = {
-						has_radical_leftist_economy = no
-						scope:target_country = {
-							has_radical_leftist_economy = yes
-						}
-					}
-
 				}
 				add = 50
 			}
