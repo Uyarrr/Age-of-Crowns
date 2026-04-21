@@ -180,16 +180,9 @@ ai_strategy_resource_expansion = {
 
 	subsidies = {
 		building_tooling_workshop = nice_to_have
-		building_explosives_factory = nice_to_have
 	}
 
 	goods_stances = {
-		explosives = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = nitroglycerin
-			}
-		}
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_export }
 		iron = { stance = wants_export }
@@ -198,6 +191,7 @@ ai_strategy_resource_expansion = {
 		lead = { stance = wants_export }
 		wood = { stance = wants_export }
 		sulfur = { stance = wants_export }
+		stone = { stance = wants_export }
 	}
 
 	possible = {
@@ -326,16 +320,6 @@ ai_strategy_industrial_expansion = {
 				}
 			}
 			add = 20
-		}
-
-		if = {
-			limit = {
-				OR = {
-					has_modifier = shogun_ig_forced_to_open_market
-					has_journal_entry = je_meiji_main
-				}
-			}
-			add = 1000
 		}
 
 		if = {

@@ -62,6 +62,16 @@
 				}
 				reserves=1
 			}
+			create_building={
+				building="building_road"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
 		}
 	}
 	s:STATE_MIDLANDS={
@@ -97,21 +107,7 @@
 				reserves=1
 			}
 			create_building={
-				building="building_paper_mill"
-				add_ownership={
-					country={
-						country="c:ENG"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-		}
-	}
-	s:STATE_WEST_COUNTRY={
-		region_state:ENG={
-			create_building={
-				building="building_tooling_workshop"
+				building="building_tin_mine"
 				add_ownership={
 					country={
 						country="c:ENG"
@@ -121,7 +117,17 @@
 				reserves=1
 			}
 			create_building={
-				building="building_stone_mine"
+				building="building_copper_mine"
+				add_ownership={
+					country={
+						country="c:ENG"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_bronze_foundry"
 				add_ownership={
 					country={
 						country="c:ENG"
@@ -131,21 +137,7 @@
 				reserves=1
 			}
 			create_building={
-				building="building_logging_camp"
-				add_ownership={
-					country={
-						country="c:ENG"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-		}
-	}
-	s:STATE_FRENCH_LOW_COUNTRIES={
-		region_state:ENG={
-			create_building={
-				building="building_port"
+				building="building_tooling_workshop"
 				add_ownership={
 					country={
 						country="c:ENG"

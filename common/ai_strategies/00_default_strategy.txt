@@ -1498,9 +1498,9 @@ ai_strategy_default = {
 	# Which buildings should the AI subsidize
 	# Using a different value in a strategy will override this value
 	subsidies = {
-		building_power_plant = must_have
 		building_railway = must_have
 		building_port = must_have
+		building_road = must_have
 	}
 
 	# Specifying values here will override subsidy priorities while at war
@@ -1510,24 +1510,28 @@ ai_strategy_default = {
 	# How should the AI plan for production and trade of specific goods
 	# Using a different value in a strategy will override this value
 	goods_stances = {
-		small_arms = {
+		weapons = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = line_infantry
+				has_technology_researched = weapon_crafting
 			}
 		}
-		artillery = {
+		cannons = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = artillery
+				has_technology_researched = cannonry
+			}
+		}
+		warhorse = {
+			stance = wants_high_supply
+			trigger = {
+				has_technology_researched = ranching
 			}
 		}
 		paper = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = centralization
-				total_population >= 1000000
-				NOT = { has_law_or_variant = law_type:law_traditionalism }
+				has_technology_researched = university
 			}
 		}
 		coal = {
@@ -1536,11 +1540,16 @@ ai_strategy_default = {
 				has_technology_researched = railways
 			}
 		}
+		tin = {
+			stance = wants_high_supply
+			trigger = {
+				has_building = building_tooling_workshop
+			}
+		}
 		dye = {
 			stance = wants_high_supply
 			trigger = {
 				has_building = building_textile_mill
-				has_technology_researched = lathe
 			}
 		}
 		silk = {
@@ -1701,20 +1710,6 @@ ai_strategy_default = {
 			score = {
 				value = 150
 
-				if = { # Monarchist Austria really does not want revolutions or secessions
-					limit = {
-						c:AUS ?= this
-						has_law = law_type:law_monarchy
-						scope:target_country = {
-							OR = {
-								is_revolutionary = yes
-								is_secessionist = yes
-							}
-						}
-					}
-					add = 500
-				}
-
 				# Minor german states shouldn't have far-reaching diplomatic ambitions
 				if = {
 					limit = {
@@ -1845,14 +1840,6 @@ ai_strategy_default = {
 						scope:target_country.infamy >= infamy_threshold:pariah
 					}
 					multiply = 0.5
-				}
-
-				if = {
-					limit = {
-						c:HAI ?= ROOT
-						scope:target_country = { has_variable = haiti_friend }
-					}
-					multiply = 3
 				}
 
 				# AI implications for Power Blocs: 'befriend' secret goal is more likely towards the Bloc members
