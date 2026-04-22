@@ -4,10 +4,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
-						country="c:SCO"
-						levels=1
-					}
+                    company={
+                        type=company_scotland_fabric_liquor
+                        country="c:SCO"
+                        levels=5
+                    }
 				}
 				reserves=1
 			}

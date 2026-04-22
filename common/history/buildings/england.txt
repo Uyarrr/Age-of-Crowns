@@ -1,7 +1,17 @@
 ﻿BUILDINGS={
-	# 10 BUILDINGS EXCLUDED ADMINISTRATION AND TRADE CENTER
 	s:STATE_HOME_COUNTIES={
 		region_state:ENG={
+			create_building={
+				building="building_textile_mill"
+				add_ownership={
+                    company={
+                        type=company_england_clothes_livestock
+                        country="c:ENG"
+                        levels=5
+                    }
+				}
+				reserves=1
+			}
 			create_building={
 				building="building_shipyard"
 				add_ownership={
@@ -78,16 +88,6 @@
 			}
 			create_building={
 				building="building_livestock_ranch"
-				add_ownership={
-					country={
-						country="c:ENG"
-						levels=1
-					}
-				}
-				reserves=1
-			}
-			create_building={
-				building="building_textile_mill"
 				add_ownership={
 					country={
 						country="c:ENG"

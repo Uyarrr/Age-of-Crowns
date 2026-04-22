@@ -350,6 +350,42 @@ tech_bureaucracy = {
 	}
 }
 
+guilds = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/guilds.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+	}
+
+	unlocking_technologies = {
+		trading
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+guild_charters = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/national_trade.dds"
+	category = society
+
+	modifier = {
+		country_free_charters_add = 2
+	}
+
+	unlocking_technologies = {
+		guilds
+	}
+
+	ai_weight = {
+		value = 1 # very important tech
+	}
+}
+
 ############# AGE 2 #################
 
 renaissance = {
@@ -591,42 +627,6 @@ double_entry_bookkeeping = {
 
 	ai_weight = {
 		value = 1 # Important in general
-	}
-}
-
-guilds = {
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/guilds.dds"
-	category = society
-
-	modifier = {
-		country_max_companies_add = 1
-	}
-
-	unlocking_technologies = {
-		banking
-	}
-
-	ai_weight = {
-		value = 2 # very important tech
-	}
-}
-
-guild_charters = {
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/national_trade.dds"
-	category = society
-
-	modifier = {
-		country_free_charters_add = 2
-	}
-
-	unlocking_technologies = {
-		guilds
-	}
-
-	ai_weight = {
-		value = 1 # very important tech
 	}
 }
 

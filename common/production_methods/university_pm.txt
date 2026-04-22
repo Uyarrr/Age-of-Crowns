@@ -3,13 +3,14 @@
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_weekly_innovation_add = 0.5
+			country_weekly_innovation_add = 1
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-
+			goods_input_paper_add = 5
+			goods_input_bronze_add = 2
 		}
 
 		level_scaled = {
@@ -34,13 +35,14 @@ pm_building_university_main_2 = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_weekly_innovation_add = 1
+			country_weekly_innovation_add = 2
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 5
+			goods_input_paper_add = 10
+			goods_input_bronze_add = 4
 		}
 
 		level_scaled = {
@@ -66,13 +68,14 @@ pm_building_university_main_3 = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_weekly_innovation_add = 2
+			country_weekly_innovation_add = 3
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_book_add = 5
+			goods_input_book_add = 10
+			goods_input_bronze_add = 6
 		}
 
 		level_scaled = {

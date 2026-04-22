@@ -1,0 +1,92 @@
+﻿company_sweden_wood_furniture = {
+	icon = "gfx/interface/icons/company_icons/wood_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_logging_camp
+	}
+
+	extension_building_types = {
+		building_furniture_manufactory
+	}
+
+	possible_prestige_goods = {
+		prestige_good_wood
+	}
+
+    potential = {
+        c:SWE ?= this
+    }
+
+	possible = {
+		c:SWE ?= this
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+	}
+}
+
+company_england_clothes_livestock = {
+	icon = "gfx/interface/icons/company_icons/wood_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_textile_mill
+	}
+
+	extension_building_types = {
+		building_livestock_ranch
+	}
+
+	possible_prestige_goods = {
+		prestige_good_clothes
+	}
+
+    potential = {
+        c:ENG ?= this
+    }
+
+	possible = {
+		c:ENG ?= this
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+	}
+}
+
+company_scotland_fabric_liquor = {
+	icon = "gfx/interface/icons/company_icons/wood_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_livestock_ranch
+	}
+
+	extension_building_types = {
+		building_distillery
+	}
+
+	possible_prestige_goods = {
+		prestige_good_fabric
+	}
+
+    potential = {
+        c:SCO ?= this
+    }
+
+	possible = {
+		c:SCO ?= this
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+	}
+}

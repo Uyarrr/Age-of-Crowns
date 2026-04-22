@@ -1,0 +1,17 @@
+﻿BUILDINGS={
+	s:STATE_SVEALAND={
+		region_state:SWE={
+			create_building={
+				building="building_logging_camp"
+                add_ownership={
+                    company={
+                        type=company_sweden_wood_furniture
+                        country="c:SWE"
+                        levels=5
+                    }
+                }
+				reserves=1
+			}
+		}
+	}
+}

@@ -1210,29 +1210,6 @@ ai_strategy_default = {
 			add = 100
 		}
 
-		# Aggression against radical leftists
-		if = {
-			limit = {
-				AND = {
-					has_radical_leftist_government = no
-					scope:target_country = {
-						has_radical_leftist_government = yes
-					}
-				}
-			}
-			add = 1
-		}
-
-		if = {
-			limit = {
-				has_radical_leftist_economy = no
-				scope:target_country = {
-					has_radical_leftist_economy = yes
-				}
-			}
-			add = 1
-		}
-
 		if = { #Indian suzerain will be aggressive against Russia
 			limit = {
 				AND = {
@@ -1329,7 +1306,7 @@ ai_strategy_default = {
 					}
 				}
 			}
-			add = 10
+			add = 5
 		}
 		else = {
 			add = {
@@ -1353,36 +1330,18 @@ ai_strategy_default = {
 		add = {
 			value = fixed_income
 
-			divide = 5000 # 1 construction output per this much income
+			divide = 4000 # 1 construction output per this much income
 
 			min = 0
 			max = 200 # Above a certain point more government income isn't going to lead to more AI government construction
 		}
 
-		add = {
-			value = total_population
-
-			divide = 2000000 # 1 construction output per this much population
-			max = 100
-		}
-
 		# Kickstart private investors If above this population value
 		if = {
 			limit = {
-				total_population >= 2000000
+				total_population >= 500000
 			}
-			add = 10
-		}
-
-		# If trying to industrialize
-		if = {
-			limit = {
-				OR = {
-					has_strategy = ai_strategy_resource_expansion
-					has_strategy = ai_strategy_industrial_expansion
-				}
-			}
-			multiply = 1.25
+			add = 2
 		}
 
 		min = 2
