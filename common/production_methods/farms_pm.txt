@@ -3,12 +3,12 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_grain_add = 20
+			goods_output_grain_add = 25
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 4000
-			building_employment_farmers_add = 1000
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
 		}
 	}
 }
@@ -26,13 +26,13 @@ pm_building_wheat_farm_main_2 = {
 			goods_input_livestock_add = 2
 
 			# output goods
-			goods_output_grain_add = 30
+			goods_output_grain_add = 35
 		}
 
 		level_scaled = {
 			# earnings
-			building_employment_laborers_add = 3500
-			building_employment_farmers_add = 1500
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
 		}
 	}
 }
@@ -50,13 +50,13 @@ pm_building_wheat_farm_main_3 = {
 			goods_input_livestock_add = 4
 
 			# output goods
-			goods_output_grain_add = 45
+			goods_output_grain_add = 55
 		}
 
 		level_scaled = {
 			# earnings
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 2000
+			building_employment_laborers_add = 3500
+			building_employment_farmers_add = 1500
 		}
 	}
 }
@@ -74,7 +74,7 @@ pm_building_wheat_farm_main_4 = {
 			goods_input_livestock_add = 6
 
 			# output goods
-			goods_output_grain_add = 60
+			goods_output_grain_add = 80
 		}
 
 		level_scaled = {
@@ -94,8 +94,8 @@ pm_building_rice_farm_main_1 = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 8000
-			building_employment_farmers_add = 2000
+			building_employment_laborers_add = 9000
+			building_employment_farmers_add = 1000
 		}
 		unscaled = {
 			building_slaves_mortality_mult = 0.2
@@ -116,13 +116,13 @@ pm_building_rice_farm_main_2 = {
 			goods_input_livestock_add = 4
 
 			# output goods
-			goods_output_grain_add = 50
+			goods_output_grain_add = 55
 		}
 
 		level_scaled = {
 			# earnings
-			building_employment_laborers_add = 7000
-			building_employment_farmers_add = 3000
+			building_employment_laborers_add = 8000
+			building_employment_farmers_add = 2000
 		}
 		unscaled = {
 			building_slaves_mortality_mult = 0.1
@@ -143,13 +143,13 @@ pm_building_rice_farm_main_3 = {
 			goods_input_livestock_add = 8
 
 			# output goods
-			goods_output_grain_add = 75
+			goods_output_grain_add = 85
 		}
 
 		level_scaled = {
 			# earnings
-			building_employment_laborers_add = 6000
-			building_employment_farmers_add = 4000
+			building_employment_laborers_add = 7000
+			building_employment_farmers_add = 3000
 		}
 	}
 }
@@ -170,8 +170,8 @@ pm_building_rice_farm_main_4 = {
 
 		level_scaled = {
 			# earnings
-			building_employment_laborers_add = 5000
-			building_employment_farmers_add = 5000
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 4000
 		}
 	}
 }

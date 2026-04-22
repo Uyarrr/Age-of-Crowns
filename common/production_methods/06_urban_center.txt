@@ -43,7 +43,7 @@ pm_covered_markets = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_glass_add = 2
-			goods_input_steel_add = 1
+			goods_input_iron_add = 1
 			goods_output_services_add = 25
 		}
 
@@ -65,7 +65,7 @@ pm_arcades = {
 		workforce_scaled = {
 			goods_input_glass_add = 2
 			goods_input_steel_add = 2
-			goods_input_electricity_add = 1
+			goods_input_oil_add = 1
 			goods_output_services_add = 30
 		}
 
@@ -122,7 +122,7 @@ pm_electric_streetlights = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 3
+			goods_input_oil_add = 3
 			goods_output_services_add = 10
 		}
 
@@ -146,7 +146,7 @@ pm_no_public_transport = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_transportation_add = 2
+			goods_output_transportation_add = 1
 		}
 	}
 }
@@ -164,7 +164,7 @@ pm_public_trams = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_horse_add = 5
+			goods_input_horse_add = 2
 			goods_output_transportation_add = 5
 		}
 
@@ -189,7 +189,7 @@ pm_public_motor_carriages = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_horse_add = 10
+			goods_input_horse_add = 5
 			goods_output_transportation_add = 10
 		}
 

@@ -5,19 +5,19 @@
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 2
+			country_construction_add = 1
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fabric_add = 25
-			goods_input_wood_add = 75
+			goods_input_fabric_add = 10
+			goods_input_wood_add = 40
 		}
 
 		level_scaled = {
-			building_employment_clerks_add = 100
-			building_employment_laborers_add = 900
+			building_employment_clerks_add = 50
+			building_employment_laborers_add = 450
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1
@@ -26,6 +26,7 @@
 
 	state_modifiers = {
 		workforce_scaled = {
+		    state_infrastructure_add = 1
 			state_construction_mult = 0.002
 		}
 	}
@@ -40,23 +41,23 @@ pm_construction_main_2 = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 5
+			country_construction_add = 2.5
 		}
 
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 30
-			goods_input_fabric_add = 20
-			goods_input_stone_add = 30
-			goods_input_tools_add = 10
+			goods_input_wood_add = 15
+			goods_input_fabric_add = 10
+			goods_input_stone_add = 15
+			goods_input_tools_add = 5
 		}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 50
-			building_employment_clerks_add = 100
-			building_employment_machinists_add = 50
-			building_employment_laborers_add = 800
+			building_employment_bureaucrats_add = 25
+			building_employment_clerks_add = 50
+			building_employment_machinists_add = 25
+			building_employment_laborers_add = 400
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1
@@ -65,6 +66,7 @@ pm_construction_main_2 = {
 
 	state_modifiers = {
 		workforce_scaled = {
+			state_infrastructure_add = 1
 			state_construction_mult = 0.004
 		}
 	}
@@ -79,24 +81,24 @@ pm_construction_main_3 = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 10
+			country_construction_add = 1
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 50
-			goods_input_fabric_add = 30
-			goods_input_stone_add = 70
-			goods_input_iron_add = 50
-			goods_input_tools_add = 20
+			goods_input_wood_add = 25
+			goods_input_fabric_add = 15
+			goods_input_stone_add = 35
+			goods_input_iron_add = 25
+			goods_input_tools_add = 10
 		}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 100
-			building_employment_clerks_add = 100
-			building_employment_machinists_add = 150
-			building_employment_laborers_add = 650
+			building_employment_bureaucrats_add = 50
+			building_employment_clerks_add = 50
+			building_employment_machinists_add = 75
+			building_employment_laborers_add = 325
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1
@@ -119,7 +121,7 @@ pm_construction_main_4 = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 15
+			country_construction_add = 1.5
 		}
 	}
 
@@ -128,20 +130,20 @@ pm_construction_main_4 = {
 		}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 100
-			building_employment_clerks_add = 100
-			building_employment_engineers_add = 50
-			building_employment_machinists_add = 150
-			building_employment_laborers_add = 600
+			building_employment_bureaucrats_add = 50
+			building_employment_clerks_add = 50
+			building_employment_engineers_add = 25
+			building_employment_machinists_add = 75
+			building_employment_laborers_add = 300
 		}
 		unscaled = {
-			building_laborers_mortality_mult = 0.1
+			building_laborers_mortality_mult = 0.01
 		}
 	}
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_construction_mult = 0.01
+			state_construction_mult = 0.001
 		}
 	}
 }
