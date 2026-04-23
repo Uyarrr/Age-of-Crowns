@@ -114,7 +114,7 @@ building_paper_mill = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
-building_steel_mill = {
+building_bloomery = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/steel_foundry_uyr.dds"
 	city_type = city
@@ -123,10 +123,11 @@ building_steel_mill = {
 	ai_nationalization_desire = 0.25 # AI will generally not privatize steel mills due to importance for construction
 
 	unlocking_technologies = {
-		steel_mills
+		iron_working
 	}
 
 	production_method_groups = {
+			pmg_building_bloomery_main
 	}
 
 	required_construction = construction_cost_very_high

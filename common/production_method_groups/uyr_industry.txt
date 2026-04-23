@@ -36,9 +36,13 @@ pmg_building_paper_mill_main = {
 	}
 }
 
-pmg_building_steel_foundry_main = {
+pmg_building_bloomery_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
+			pm_building_bloomery_main_1
+			pm_building_bloomery_main_2
+			pm_building_bloomery_main_3
+			pm_building_bloomery_main_4
 	}
 }
 
