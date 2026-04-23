@@ -27,6 +27,14 @@
 		law_by_tradition = strongly_approve
 		law_by_blood = strongly_disapprove
 	}
+
+	lawgroup_mining = {
+		law_no_mining_ownership = neutral
+		law_noble_controlled_mining = strongly_approve
+		law_burghers_controlled_mining = strongly_disapprove
+		law_commoner_controlled_mining = strongly_disapprove
+		law_royal_fifth_mining = disapprove
+	}
 }
 
 ideology_plutocratic = {
@@ -66,6 +74,14 @@ ideology_plutocratic = {
 		law_no_colonial_affairs = neutral
 		law_colonial_resettlement = neutral
 		law_frontier_colonization = neutral
+	}
+
+	lawgroup_mining = {
+		law_no_mining_ownership = neutral
+		law_noble_controlled_mining = strongly_disapprove
+		law_burghers_controlled_mining = strongly_approve
+		law_commoner_controlled_mining = strongly_disapprove
+		law_royal_fifth_mining = disapprove
 	}
 }
 
@@ -116,6 +132,14 @@ ideology_free_subjects = {
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = approve
 		law_homesteading = strongly_approve
+	}
+
+	lawgroup_mining = {
+		law_no_mining_ownership = neutral
+		law_noble_controlled_mining = disapprove
+		law_burghers_controlled_mining = disapprove
+		law_commoner_controlled_mining = strongly_approve
+		law_royal_fifth_mining = neutral
 	}
 }
 
@@ -274,8 +298,8 @@ ideology_spiritualist = {
 	icon = "gfx/interface/icons/ideology_icons/pious.dds"
 
 	lawgroup_rights_of_the_clergy = {
-		law_strengthen_clergy = strongly_approve
-		law_curtail_clergy = strongly_disapprove
+		law_strengthen_the_clergy = strongly_approve
+		law_curtail_the_clergy = strongly_disapprove
 	}
 
 	lawgroup_church_and_state = {

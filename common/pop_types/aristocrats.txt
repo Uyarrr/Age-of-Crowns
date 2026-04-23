@@ -32,10 +32,6 @@
 	qualifications_growth_desc = "ARISTOCRATS_QUALIFICATIONS_DESC"
 	qualifications = {
 		if = {
-			limit = {
-				is_peasant_under_serfdom = no
-				wealth >= 15
-			}
 			# baseline: ( wealth - 10 ) / 10 + literacy, norm 1.5 for Wealth 20 and Literacy 50%
 			add = {
 				value = wealth

@@ -38,18 +38,6 @@
 	qualifications_growth_desc = "OFFICERS_QUALIFICATIONS_DESC"
 	qualifications = {
 		if = {
-			limit = {
-				is_peasant_under_serfdom = no
-				OR = {
-					state = {
-						state_cultural_acceptance = {
-							target = PREV.culture
-						   	value > acceptance_status_4
-					   	}
-					}
-					is_pop_type = soldiers
-				}
-			}
 			# baseline: ( literacy - 0.2 ) * 10, norm 2 for Soldiers with Literacy 30%
 			add = {
 				value = literacy_rate
@@ -81,18 +69,6 @@
 				multiply = {
 					value = 5
 					desc = "QUALIFICATIONS_DEPLOYED_SERVICEMEN"
-				}
-			}
-			if = {
-				limit = {
-					owner = {
-						has_law_or_variant = law_type:law_peasant_levies
-					}
-					NOT = { is_pop_type = aristocrats }
-				}
-				multiply = {
-					value = 0.1
-					desc = "QUALIFICATIONS_OFFICERS_PEASANT_LEVIES"
 				}
 			}
 		}

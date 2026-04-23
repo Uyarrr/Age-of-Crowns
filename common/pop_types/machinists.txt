@@ -31,34 +31,6 @@
 				value = 1.5
 			}
 		}
-
-		multiply = {
-			desc = "NO_LABOR_MOVEMENT"
-			value = 1.0
-
-			if = {
-				limit = {
-					owner = {
-						NOT = { has_technology_researched = labor_movement }
-					}
-				}
-				value = 0.75
-			}
-		}
-
-		multiply = {
-			desc = "HAS_POLITICAL_AGITATION"
-			value = 1.0
-
-			if = {
-				limit = {
-					owner = {
-						has_technology_researched = political_agitation
-					}
-				}
-				value = 1.5
-			}
-		}
 	}
 
 	qualifications_growth_desc = "MACHINISTS_QUALIFICATIONS_DESC"
@@ -78,15 +50,6 @@
 			multiply = {
 				value = 2
 				desc = "QUALIFICATIONS_FAVORED_TYPE"
-			}
-		}
-		if = {
-			limit = {
-				is_peasant_under_serfdom = yes
-			}
-			multiply = {
-				value = 0.05
-				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
 			}
 		}
 	}
