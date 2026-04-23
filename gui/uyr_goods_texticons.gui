@@ -50,6 +50,16 @@ texticon = {
 }
 
 texticon = {
+	icon = IronIngot
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/bronze.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
 	icon = fiber
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/fiber_crops.dds"
