@@ -23,3 +23,15 @@ prestige_good_fabric = {
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/fabric_prestige.dds"
 }
+
+prestige_good_furniture = {
+	base_good = furniture
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/fabric_prestige.dds"
+}
+
+prestige_good_rug = {
+	base_good = luxury_furniture
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
+}
