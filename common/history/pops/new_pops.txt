@@ -14540,6 +14540,43 @@
 				religion = sunni
 				size = 687
 			}
+		}
+		region_state:T55 = {
+			create_pop = {
+				culture = maghrebi
+				religion = sunni
+				size = 15752
+			}
+			create_pop = {
+				culture = maghrebi
+				religion = sunni
+				pop_type = slaves
+				size = 687
+			}
+		}
+		region_state:T61 = {
+			create_pop = {
+				culture = berber
+				religion = sunni
+				size = 7875
+			}
+			create_pop = {
+				culture = berber
+				religion = sunni
+				size = 344
+			}
+			create_pop = {
+				culture = berber
+				religion = sunni
+				size = 22052
+			}
+			create_pop = {
+				culture = berber
+				religion = sunni
+				size = 962
+			}
+		}
+		region_state:U90 = {
 			create_pop = {
 				culture = berber
 				religion = sunni
@@ -14579,41 +14616,6 @@
 				culture = berber
 				religion = sunni
 				size = 344
-			}
-		}
-		region_state:T55 = {
-			create_pop = {
-				culture = maghrebi
-				religion = sunni
-				size = 15752
-			}
-			create_pop = {
-				culture = maghrebi
-				religion = sunni
-				pop_type = slaves
-				size = 687
-			}
-		}
-		region_state:T61 = {
-			create_pop = {
-				culture = berber
-				religion = sunni
-				size = 7875
-			}
-			create_pop = {
-				culture = berber
-				religion = sunni
-				size = 344
-			}
-			create_pop = {
-				culture = berber
-				religion = sunni
-				size = 22052
-			}
-			create_pop = {
-				culture = berber
-				religion = sunni
-				size = 962
 			}
 		}
 	}
@@ -19780,6 +19782,8 @@
 				religion = jewish
 				size = 1982
 			}
+		}
+		region_state:U90 = {
 			create_pop = {
 				culture = berber
 				religion = sunni
@@ -19795,6 +19799,8 @@
 				religion = jewish
 				size = 305
 			}
+		}
+		region_state:V91 = {
 			create_pop = {
 				culture = maghrebi
 				religion = sunni

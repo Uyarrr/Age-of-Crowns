@@ -66,10 +66,6 @@ ottoman_trait_4 = {
 	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
 	category = society
 
-	unlocking_technologies = {
-		DEN_Baltic_Convoy_System
-	}
-
     can_research = no
 
 	modifier = {
@@ -90,10 +86,6 @@ ottoman_trait_5 = {
 	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
 	category = society
 
-	unlocking_technologies = {
-		DEN_Royal_Lutheran_Church_Ordinance
-	}
-
     can_research = no
 
 	modifier = {
@@ -112,10 +104,6 @@ ottoman_trait_6 = {
 	era = era_6
 	texture = "gfx/interface/icons/invention_icons/abolished_serfdom.dds"
 	category = society
-
-	unlocking_technologies = {
-		DEN_Royal_Naval_Ordinance
-	}
 
 	modifier = {
 		state_working_adult_ratio_add = 0.05

@@ -47,7 +47,7 @@ defensive_army = {
 ranching = {
 	# Unlocks Horses PM
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/horse.dds"
+	texture = "gfx/interface/icons/goods_icons/horse.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -106,7 +106,7 @@ navigation = {
 naval_traditions = {
 	# Increases Naval Max Level
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
+	texture = "gfx/interface/icons/goods_icons/navy.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -198,12 +198,109 @@ mandatory_training = {
 	}
 }
 
+fishing = {
+	# Unlocks Fishing
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/fish.dds"
+	category = military
+
+	unlocking_technologies = {
+		shipbuilding
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+salt_collecting = {
+	# Unlocks Salt Collection PM on Fishing Wharfs
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/salt.dds"
+	category = military
+
+	unlocking_technologies = {
+		fishing
+	}
+
+	ai_weight = {
+		value = 2 # Semi Important
+	}
+}
+
 ##### ERA 2 ################
 
 professional_army = {
 	#Unlocks Professional Army Law
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/recruitment_law.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+professional_training = {
+	#Unlocks Barracks and Conscription PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/barracks.dds"
+	category = military
+
+	unlocking_technologies = {
+		professional_army
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+military_drill = {
+	#Increases Exp
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/military_drill.dds"
+	category = military
+
+	unlocking_technologies = {
+		professional_training
+	}
+
+	modifier = {
+		unit_experience_gain_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+shock_tactics = {
+	#Increases Morale Damage
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/shock_tactics.dds"
+	category = military
+
+	unlocking_technologies = {
+		cavalrymen
+	}
+
+	modifier = {
+		unit_morale_damage_mult = 0.10
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+cannonry = {
+	#Unlocks Cannon Foundry
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/cannons.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -221,22 +318,7 @@ saltpeter_works = {
 	category = military
 
 	unlocking_technologies = {
-		professional_army
-	}
-
-	ai_weight = {
-		value = 2 # Important tech in general
-	}
-}
-
-cannonry = {
-	#Unlocks Cannon Foundry
-	era = era_2
-	texture = "gfx/interface/icons/goods_icons/cannons.dds"
-	category = military
-
-	unlocking_technologies = {
-		saltpeter_works
+		cannonry
 	}
 
 	ai_weight = {
@@ -274,25 +356,6 @@ men_at_arms = {
 	}
 }
 
-military_drill = {
-	#Increases Exp
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/drill_army.dds"
-	category = military
-
-	unlocking_technologies = {
-		cavalrymen
-	}
-
-	modifier = {
-		unit_experience_gain_mult = 0.05
-	}
-
-	ai_weight = {
-		value = 2 # Important tech in general
-	}
-}
-
 cavalrymen = {
 	#Unlocks  Heavy Cavalrymen Cavalry
 	era = era_2
@@ -315,7 +378,7 @@ mediterranean_galley = {
 	category = military
 
 	unlocking_technologies = {
-		professional_army
+		net_and_line_fishing
 	}
 
 	ai_weight = {
@@ -374,7 +437,7 @@ pike_and_shot = {
 coastal_expansion = {
 	#Unlocks Port PM 2
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/safe_exploration_techniques.dds"
+	texture = "gfx/interface/icons/invention_icons/oceanic_exploration.dds"
 	category = military
 
 	modifier = {
@@ -405,80 +468,6 @@ supply_lines = {
 
 	ai_weight = {
 		value = 2 # Important tech in general
-	}
-}
-
-domineering_influence = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/crown.dds"
-	category = military
-
-	modifier = {
-		country_prestige_from_army_power_projection_mult = 0.05
-		country_prestige_from_navy_power_projection_mult = 0.05
-		country_leverage_generation_mult = 0.05
-	}
-
-	unlocking_technologies = {
-		pike_and_shot
-	}
-
-	ai_weight = {
-		value = 1.5 # Important tech in general
-	}
-}
-
-message_relays = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/expansionism.dds"
-	category = military
-
-	modifier = {
-		military_formation_movement_speed_mult = 0.1
-	}
-
-	unlocking_technologies = {
-		domineering_influence
-	}
-
-	ai_weight = {
-		value = 1.5 # Important tech in general
-	}
-}
-
-improved_spy_organization = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/spy_construction.dds"
-	category = military
-
-	modifier = {
-		country_support_separatism_strength_mult = 0.2
-	}
-
-	unlocking_technologies = {
-		pike_and_shot
-	}
-
-	ai_weight = {
-		value = 1 # Important tech in general
-	}
-}
-
-state_consolidation = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/counter_espionage.dds"
-	category = military
-
-	modifier = {
-		country_support_separatism_resistance_mult = 0.15
-	}
-
-	unlocking_technologies = {
-		improved_spy_organization
-	}
-
-	ai_weight = {
-		value = 1 # Important tech in general
 	}
 }
 
@@ -645,14 +634,162 @@ oceanic_navigation = {
 	}
 }
 
+military_communications = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/pike_and_shot.dds"
+	category = military
+
+	modifier = {
+		character_battle_condition_logistics_secured_mult = 0.10
+		character_battle_condition_broken_supply_line_mult = -0.10
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1 # Not Important
+	}
+}
+
+domineering_influence = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/crown.dds"
+	category = military
+
+	modifier = {
+		country_prestige_from_army_power_projection_mult = 0.05
+		country_prestige_from_navy_power_projection_mult = 0.05
+		country_leverage_generation_mult = 0.05
+	}
+
+	unlocking_technologies = {
+		military_communications
+	}
+
+	ai_weight = {
+		value = 1.5 # Important tech in general
+	}
+}
+
+message_relays = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/message_relays.dds"
+	category = military
+
+	modifier = {
+		military_formation_movement_speed_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		domineering_influence
+	}
+
+	ai_weight = {
+		value = 1.5 # Important tech in general
+	}
+}
+
+improved_spy_organization = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/spy_strength.dds"
+	category = military
+
+	modifier = {
+		country_support_separatism_strength_mult = 0.2
+	}
+
+	unlocking_technologies = {
+		military_communications
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+state_consolidation = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/spy.dds"
+	category = military
+
+	modifier = {
+		country_support_separatism_resistance_mult = 0.15
+	}
+
+	unlocking_technologies = {
+		improved_spy_organization
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
 ### ERA 4
 
+expanded_salt_collecting = {
+	# Unlocks Salt Collection PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/salt.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+organized_nitrary_industry = {
+	# Unlocks Main Saltpeter PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/saltpeter.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+deep_sea_fishing = {
+	# Unlocks Fishing Main PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/fish.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
 ### ERA 5
+
+steel_weapons = {
+	# Unlocks Weapon Workshop PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/weapons.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
 
 arms_industry = {
 	# Unlocks Arms Industry
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
+	texture = "gfx/interface/icons/goods_icons/firearms.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -662,8 +799,6 @@ arms_industry = {
 		value = 1
 	}
 }
-
-### ERA 5
 
 dedicated_police_force = {
 	# Unlocks Dedicated Police Force Law
@@ -678,3 +813,33 @@ dedicated_police_force = {
 		value = 1
 	}
 }
+
+chemical_nitrate_refining = {
+	# Unlocks Main Saltpeter PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/saltpeter.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+commercial_fishing_fleets = {
+	# Unlocks Fishing Main PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/fish.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+### ERA 6

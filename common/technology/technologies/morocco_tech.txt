@@ -40,9 +40,7 @@ morocco_trait_4 = {
 	texture = "gfx/interface/icons/invention_icons/islam_power.dds"
 	category = production
 
-	can_research = {
-		tag = MOR
-	}
+    can_research = no
 
 	modifier = {
 		state_conversion_mult = 0.25

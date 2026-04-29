@@ -23,11 +23,7 @@ DEN_Kalmar_Legacy = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/dan_rentekammer_advance.dds"
 	category = society
-
-	unlocking_technologies = {
-		DEN_Oresundstolden
-	}
-
+	
     can_research = no
 
 	modifier = {
@@ -46,10 +42,6 @@ DEN_Baltic_Convoy_System = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
 	category = society
-	
-	unlocking_technologies = {
-		DEN_Kalmar_Legacy
-	}
 
 	modifier = {
 		country_convoys_capacity_mult = 0.20
@@ -68,10 +60,6 @@ DEN_Royal_Lutheran_Church_Ordinance = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
 	category = society
-
-	unlocking_technologies = {
-		DEN_Baltic_Convoy_System
-	}
 
     can_research = no
 
@@ -93,10 +81,6 @@ DEN_Royal_Naval_Ordinance = {
 	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
 	category = society
 
-	unlocking_technologies = {
-		DEN_Royal_Lutheran_Church_Ordinance
-	}
-
     can_research = no
 
 	modifier = {
@@ -115,10 +99,6 @@ DEN_Peasant_Emancipation_Acts = {
 	era = era_6
 	texture = "gfx/interface/icons/invention_icons/abolished_serfdom.dds"
 	category = society
-
-	unlocking_technologies = {
-		DEN_Royal_Naval_Ordinance
-	}
 
 	modifier = {
 		state_working_adult_ratio_add = 0.05

@@ -44,7 +44,7 @@ pm_building_fishing_wharf_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
 
 	unlocking_technologies = {
-		net_and_line_fishing
+		deep_sea_fishing
 	}
 
 	building_modifiers = {
@@ -72,7 +72,7 @@ pm_building_fishing_wharf_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
 
 	unlocking_technologies = {
-		net_and_line_fishing
+		commercial_fishing_fleets
 	}
 
 	building_modifiers = {
@@ -104,8 +104,8 @@ pm_building_fishing_wharf_salt_0 = {
 pm_building_fishing_wharf_salt_1 = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 
-	unlocking_production_methods = {
-		behaviorism
+	unlocking_technologies = {
+		salt_collecting
 	}
 	
 	building_modifiers = {
@@ -121,8 +121,8 @@ pm_building_fishing_wharf_salt_1 = {
 pm_building_fishing_wharf_salt_2 = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 
-	unlocking_production_methods = {
-		behaviorism
+	unlocking_technologies = {
+		expanded_salt_collecting
 	}
 
 	building_modifiers = {

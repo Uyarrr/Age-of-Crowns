@@ -69,7 +69,7 @@ apiary = {
 metallurgy = {
 	# Unlocks Tool Workshop
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/bole_smelting.dds"
+	texture = "gfx/interface/icons/goods_icons/tools.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -84,7 +84,7 @@ metallurgy = {
 mining_laws = {
 	# Unlocks Mining Laws
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/government_reforms.dds"
+	texture = "gfx/interface/icons/invention_icons/laws.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -99,7 +99,7 @@ mining_laws = {
 bronze_working = {
 	# Unlocks Copper and Lead Mines
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/serbian_mining.dds"
+	texture = "gfx/interface/icons/invention_icons/bronze_working.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -114,7 +114,7 @@ bronze_working = {
 iron_working = {
 	# Unlocks Iron and Coal Mines
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/smithing.dds"
+	texture = "gfx/interface/icons/invention_icons/iron_working.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -172,7 +172,7 @@ serfs = {
 fine_metals_mining = {
 	# Unlocks Gold and Sulfur Mining
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/fine_metals_mining.dds"
+	texture = "gfx/interface/icons/invention_icons/precious_metal_mining.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -255,36 +255,6 @@ papermill = {
 	}
 }
 
-fishing = {
-	# Unlocks Fishing
-	era = era_1
-	texture = "gfx/interface/icons/goods_icons/fish.dds"
-	category = production
-
-	unlocking_technologies = {
-		woodcutting
-	}
-
-	ai_weight = {
-		value = 3 # Important tech in general
-	}
-}
-
-sheep_ranching = {
-	# Unlocks Wool PM for Livestock
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/sheep_ranching.dds"
-	category = production
-
-	unlocking_technologies = {
-		fishing
-	}
-
-	ai_weight = {
-		value = 3 # Important tech in general
-	}
-}
-
 tannery = {
 	# Unlocks Tannery
 	era = era_1
@@ -350,7 +320,7 @@ brewery = {
 workshop_standardization = {
 	# Increases Economy Scale Cap
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/trade_center_building_country.dds"
+	texture = "gfx/interface/icons/invention_icons/workshop.dds"
 	category = production
 
 	modifier = {
@@ -369,7 +339,7 @@ workshop_standardization = {
 fiber_paper = {
 	# Unlocks Paper Mill Main PM 2
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/paper_fiber.dds"
+	texture = "gfx/interface/icons/goods_icons/paper.dds"
 	category = production
 
 	unlocking_technologies = {

@@ -48,6 +48,7 @@ pm_building_weapon_workshop_main_3 = {
 	unlocking_technologies = {
 		iron_weapons
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -70,7 +71,7 @@ pm_building_weapon_workshop_main_3 = {
 pm_building_weapon_workshop_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 	unlocking_technologies = {
-		behaviorism
+		steel_weapons
 	}
 	building_modifiers = {
 		workforce_scaled = {

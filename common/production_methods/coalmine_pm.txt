@@ -70,12 +70,6 @@ pm_building_coal_mine_main_4 = {
 		behaviorism
 	}
 
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
-	}
-
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_tools_add = 20
@@ -131,11 +125,6 @@ pm_building_coal_mine_extraction_3 = {
 }
 pm_transport_mine = {
 	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
 
 	unlocking_technologies = {
 		railways

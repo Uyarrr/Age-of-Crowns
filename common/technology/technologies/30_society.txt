@@ -411,7 +411,7 @@ renaissance = {
 tenant_farmers = {
 	# Unlocks Tenant Farmers
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/peasants_rights_laws.dds"
+	texture = "gfx/interface/icons/law_icons/tenant_farmers.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -482,7 +482,7 @@ institutions = {
 patron_of_arts = {
 	# Unlocks Art Center
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/patron_of_art.dds"
+	texture = "gfx/interface/icons/invention_icons/patron_of_the_arts.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -559,7 +559,7 @@ renaissance_construction = {
 gravel_road = {
 	# Unlocks Gravel Road PM
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/road.dds"
+	texture = "gfx/interface/icons/invention_icons/gravel_road.dds"
 	category = society
 
 	modifier = {
@@ -709,7 +709,7 @@ confederal_union = {
 
 colonial_charters = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonies.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_charters.dds"
 	category = society
 
 	modifier = {
@@ -780,7 +780,7 @@ exploration_caribbean = {
 
 colonial_caribbean = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_caribbean.dds"
 	category = society
 
 	modifier = {
@@ -815,7 +815,7 @@ exploration_north_america = {
 
 colonial_east_north_america = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_north_america.dds"
 	category = society
 
 	modifier = {
@@ -850,7 +850,7 @@ exploration_east_mexico = {
 
 colonization_east_mexico = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_mexico.dds"
 	category = society
 
 	modifier = {
@@ -885,7 +885,7 @@ exploration_central_america = {
 
 colonial_central_america = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_central_america.dds"
 	category = society
 
 	modifier = {
@@ -920,7 +920,7 @@ exploration_south_america = {
 
 colonial_east_south_america = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/send_people_to_the_colonies.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_south_america.dds"
 	category = society
 
 	modifier = {
@@ -973,7 +973,7 @@ paved_road = {
 
 diplomatic_network = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/expanded_archives.dds"
+	texture = "gfx/interface/icons/invention_icons/diplomacy.dds"
 	category = society
 
 	modifier = {
@@ -989,24 +989,24 @@ diplomatic_network = {
 	}
 }
 
-######## ERA 4 ##########
-
-dissemination_of_knowledge = {
-	# Unlocks University PM
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/book_of_knowledge.dds"
+nation_formation = {
+	# Unlocks Basic Formables
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/nation_formation.dds"
 	category = society
 
 	unlocking_technologies = {
 	}
 
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 }
 
-nation_formation = {
-	# Unlocks Basic Formables
+######## ERA 4 ##########
+
+dissemination_of_knowledge = {
+	# Unlocks University PM
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/book_of_knowledge.dds"
 	category = society
@@ -1077,7 +1077,7 @@ behaviorism = {
 major_formation = {
 	# Unlocks Major Formables
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/book_of_knowledge.dds"
+	texture = "gfx/interface/icons/invention_icons/major_formation.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -1108,7 +1108,7 @@ absolute_leadership = {
 unitary_administration = {
 	#Unlocks Absolute Leadership Law
 	era = era_5
-	texture = "gfx/interface/icons/law_icons/absolute_leadership.dds"
+	texture = "gfx/interface/icons/law_icons/unitary_administration.dds"
 	category = society
 
 	modifier = {

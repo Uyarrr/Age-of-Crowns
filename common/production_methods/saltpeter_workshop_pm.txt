@@ -46,9 +46,11 @@ pm_building_saltpeter_workshop_main_2 = {
 
 pm_building_saltpeter_workshop_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+
 	unlocking_technologies = {
-		behaviorism
+		organized_nitrary_industry
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -70,9 +72,11 @@ pm_building_saltpeter_workshop_main_3 = {
 
 pm_building_saltpeter_workshop_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
+
 	unlocking_technologies = {
-		behaviorism
+		chemical_nitrate_refining
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
