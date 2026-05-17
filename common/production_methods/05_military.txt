@@ -32,7 +32,7 @@ pm_general_training = {
 		law_warrior_caste
 	}
 	unlocking_technologies = {
-		general_staff
+		professional_training
 	}
 	building_modifiers = {
 		unscaled = {
@@ -56,7 +56,7 @@ pm_advanced_tactics_training = {
 		law_warrior_caste
 	}
 	unlocking_technologies = {
-		military_statistics
+		advanced_tactics_training
 	}
 	building_modifiers = {
 		unscaled = {
@@ -77,10 +77,10 @@ pm_training_streamlining = {
 		officers = 15
 	}
 	disallowing_laws = {
-		law_warrior_caste
+		reformed_army_training
 	}
 	unlocking_technologies = {
-		wargaming
+		reformed_army_training
 	}
 	building_modifiers = {
 		unscaled = {
@@ -101,7 +101,7 @@ pm_nco_incorporation = {
 		officers = 20
 	}
 	disallowing_laws = {
-		law_warrior_caste
+		behaviorism
 	}
 	unlocking_technologies = {
 		nco_training
@@ -128,7 +128,7 @@ pm_mobile_warfare_tactics = {
 		law_warrior_caste
 	}
 	unlocking_technologies = {
-		mobile_armor
+		behaviorism
 	}
 	building_modifiers = {
 		unscaled = {
@@ -194,8 +194,9 @@ pm_general_training_conscription = {
 	}
 
 	unlocking_technologies = {
-		general_staff
+		professional_training
 	}
+
 	building_modifiers = {
 		unscaled = {
 			building_training_rate_add = 50
@@ -216,7 +217,7 @@ pm_advanced_tactics_training_conscription = {
 	}
 
 	unlocking_technologies = {
-		military_statistics
+		advanced_tactics_training
 	}
 	disallowing_laws = {
 		law_peasant_levies
@@ -242,7 +243,7 @@ pm_training_streamlining_conscription = {
 	}
 
 	unlocking_technologies = {
-		wargaming
+		reformed_army_training
 	}
 	disallowing_laws = {
 		law_peasant_levies
@@ -268,7 +269,7 @@ pm_nco_incorporation_conscription = {
 	}
 
 	unlocking_technologies = {
-		nco_training
+		behaviorism
 	}
 	disallowing_laws = {
 		law_peasant_levies
@@ -294,7 +295,7 @@ pm_mobile_warfare_tactics_conscription = {
 	}
 
 	unlocking_technologies = {
-		mobile_armor
+		behaviorism
 	}
 	disallowing_laws = {
 		law_peasant_levies

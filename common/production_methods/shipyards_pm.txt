@@ -9,21 +9,25 @@
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 40
-			goods_input_wood_add = 20
+			goods_input_wood_add = 30
+			goods_input_fabric_add = 5
+
+			goods_output_navalsupplies_add = 20
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2700
-			building_employment_machinists_add = 600
-			building_employment_engineers_add = 200
+			building_employment_laborers_add = 3500
 		}
 	}
 }
 
 pm_building_shipyard_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_wooden_ships.dds"
+
+	unlocking_technologies = {
+		bronze_fastened_dockyards
+	}
 
 	country_modifiers = {
 		workforce_scaled = {
@@ -33,16 +37,19 @@ pm_building_shipyard_main_2 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 60
-			goods_input_wood_add = 30
+			goods_input_wood_add = 40
+			goods_input_fabric_add = 5
+			goods_input_copper_add = 10
 			goods_input_iron_add = 10
+
+			goods_output_navalsupplies_add = 40
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2300
-			building_employment_machinists_add = 800
-			building_employment_engineers_add = 400
+			building_employment_laborers_add = 2700
+			building_employment_machinists_add = 600
+			building_employment_engineers_add = 200
 		}
 	}
 }
@@ -58,16 +65,20 @@ pm_building_shipyard_main_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 80
+			goods_input_wood_add = 20
+			goods_input_fiber_add = 10
+			goods_input_bronze_add = 10
 			goods_input_steel_add = 20
 			goods_input_coal_add = 10
+
+			goods_output_navalsupplies_add = 60
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 1500
+			building_employment_laborers_add = 1800
 			building_employment_machinists_add = 1200
-			building_employment_engineers_add = 800
+			building_employment_engineers_add = 500
 		}
 	}
 }
@@ -89,16 +100,21 @@ pm_building_shipyard_main_4 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 100
+			goods_input_wood_add = 20
+			goods_input_fiber_add = 15
+			goods_input_bronze_add = 20
+			goods_input_tools_add = 5
 			goods_input_steel_add = 30
 			goods_input_coal_add = 20
+
+			goods_output_navalsupplies_add = 80
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 700
+			building_employment_laborers_add = 1000
 			building_employment_machinists_add = 1600
-			building_employment_engineers_add = 1200
+			building_employment_engineers_add = 900
 		}
 	}
 }

@@ -887,6 +887,7 @@ carrack = {
 	category = military
 
 	unlocking_technologies = {
+		coastal_expansion
 	}
 
 	ai_weight = {
@@ -897,6 +898,45 @@ carrack = {
 			limit = { navy_size >= 5 }
 			add = 0.5
 		}
+	}
+}
+
+greater_blockades = {
+	# Unlocks Carrack
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/greater_blockade.dds"
+	category = military
+
+	unlocking_technologies = {
+		carrack
+	}
+
+	modifier = {
+		ship_blockade_strength_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+advanced_tactics_training = {
+	# Unlocks East Indiaman
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/barracks.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2
 	}
 }
 
@@ -1163,6 +1203,20 @@ galleon = {
 			limit = { navy_size >= 5 }
 			add = 0.5
 		}
+	}
+}
+
+reformed_army_training = {
+	# Unlocks Barracks PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/barracks.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2
 	}
 }
 
@@ -1558,7 +1612,7 @@ archipelago_frigate = {
 east_indiaman = {
 	# Unlocks East Indiaman
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/merchantman.dds"
+	texture = "gfx/interface/icons/invention_icons/east_indiaman.dds"
 	category = military
 
 	unlocking_technologies = {
