@@ -1,0 +1,287 @@
+﻿# Capital Ships / Heavy Ship Line
+ship_type_early_carrack = {
+    ship_group = ship_group_capital_ships
+    modification_construction_cost = 45
+    can_be_flagship = yes
+
+    is_obsolete = { has_technology_researched = carrack }
+    is_very_obsolete = { has_technology_researched = galleon }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 1200
+        ship_crew_max_add = 450
+        ship_movement_speed_add = 3.0
+        ship_supply_capacity_add = 35
+        ship_carrying_capacity_add = 0.15
+        ship_marine_capacity_add = 0.08
+
+        ship_hull_damage_add = 18
+        ship_crew_damage_add = 10
+        ship_armor_add = 10
+        ship_critical_hit_chance_add = 0.04
+        ship_critical_hit_multiplier_add = 1.5
+
+        ship_vulnerability_add = 45
+        ship_screening_add = 5
+        ship_readiness_gain_add = 8
+        ship_accuracy_add = 4
+        ship_visibility_add = 25
+        ship_detection_add = 8
+        ship_blockade_strength_add = 60
+        ship_max_distance_to_port_add = 2
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 700
+        goods_input_fabric_add = 350
+        goods_input_bronze_add = 150
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_navalsupplies_add = 0.15
+        goods_input_bronze_add = 0.05
+    }
+
+    unlocking_technologies = { early_carrack }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/early_carrack.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_carrack = {
+    ship_group = ship_group_capital_ships
+    modification_construction_cost = 60
+    can_be_flagship = yes
+
+    is_obsolete = { has_technology_researched = galleon }
+    is_very_obsolete = { has_technology_researched = two_decker }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 1550
+        ship_crew_max_add = 550
+        ship_movement_speed_add = 3.2
+        ship_supply_capacity_add = 45
+        ship_carrying_capacity_add = 0.22
+        ship_marine_capacity_add = 0.12
+
+        ship_hull_damage_add = 25
+        ship_crew_damage_add = 14
+        ship_armor_add = 15
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 1.6
+
+        ship_vulnerability_add = 55
+        ship_screening_add = 6
+        ship_readiness_gain_add = 8
+        ship_accuracy_add = 5
+        ship_visibility_add = 30
+        ship_detection_add = 10
+        ship_blockade_strength_add = 90
+        ship_max_distance_to_port_add = 2
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 900
+        goods_input_fabric_add = 400
+        goods_input_bronze_add = 250
+        goods_input_cannons_add = 75
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_navalsupplies_add = 0.2
+        goods_input_bronze_add = 0.05
+        goods_input_cannons_add = 0.05
+    }
+
+    unlocking_technologies = { carrack }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/carrack.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_galleon = {
+    ship_group = ship_group_capital_ships
+    modification_construction_cost = 75
+    can_be_flagship = yes
+
+    is_obsolete = { has_technology_researched = two_decker }
+    is_very_obsolete = { has_technology_researched = three_decker }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 2000
+        ship_crew_max_add = 700
+        ship_movement_speed_add = 3.5
+        ship_supply_capacity_add = 55
+        ship_carrying_capacity_add = 0.32
+        ship_marine_capacity_add = 0.18
+
+        ship_hull_damage_add = 38
+        ship_crew_damage_add = 20
+        ship_armor_add = 22
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 1.7
+
+        ship_vulnerability_add = 65
+        ship_screening_add = 7
+        ship_readiness_gain_add = 9
+        ship_accuracy_add = 6
+        ship_visibility_add = 35
+        ship_detection_add = 12
+        ship_blockade_strength_add = 130
+        ship_max_distance_to_port_add = 2
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 1150
+        goods_input_fabric_add = 450
+        goods_input_bronze_add = 300
+        goods_input_iron_add = 150
+        goods_input_cannons_add = 175
+        goods_input_saltpeter_add = 75
+    }
+
+    materiel_goods = {
+        goods_input_bread_add = 1
+        goods_input_navalsupplies_add = 0.25
+        goods_input_bronze_add = 0.05
+        goods_input_cannons_add = 0.1
+        goods_input_saltpeter_add = 0.05
+    }
+
+    unlocking_technologies = { galleon }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/galleon.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_two_decker = {
+    ship_group = ship_group_capital_ships
+    modification_construction_cost = 95
+    can_be_flagship = yes
+
+    is_obsolete = { has_technology_researched = three_decker }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 2600
+        ship_crew_max_add = 900
+        ship_movement_speed_add = 3.8
+        ship_supply_capacity_add = 65
+        ship_carrying_capacity_add = 0.45
+        ship_marine_capacity_add = 0.25
+
+        ship_hull_damage_add = 55
+        ship_crew_damage_add = 28
+        ship_armor_add = 32
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 1.8
+
+        ship_vulnerability_add = 75
+        ship_screening_add = 8
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 7
+        ship_visibility_add = 45
+        ship_detection_add = 15
+        ship_blockade_strength_add = 190
+        ship_max_distance_to_port_add = 2
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 1450
+        goods_input_fabric_add = 500
+        goods_input_bronze_add = 350
+        goods_input_iron_add = 300
+        goods_input_cannons_add = 350
+        goods_input_firearms_add = 150
+        goods_input_saltpeter_add = 125
+    }
+
+    materiel_goods = {
+        goods_input_bread_add = 1
+        goods_input_navalsupplies_add = 0.3
+        goods_input_cannons_add = 0.15
+        goods_input_firearms_add = 0.05
+        goods_input_saltpeter_add = 0.05
+    }
+
+    unlocking_technologies = { two_decker }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/two_decker.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_three_decker = {
+    ship_group = ship_group_capital_ships
+    modification_construction_cost = 115
+    can_be_flagship = yes
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 3200
+        ship_crew_max_add = 1100
+        ship_movement_speed_add = 4.0
+        ship_supply_capacity_add = 75
+        ship_carrying_capacity_add = 0.55
+        ship_marine_capacity_add = 0.30
+
+        ship_hull_damage_add = 75
+        ship_crew_damage_add = 38
+        ship_armor_add = 45
+        ship_critical_hit_chance_add = 0.06
+        ship_critical_hit_multiplier_add = 2.0
+
+        ship_vulnerability_add = 85
+        ship_screening_add = 10
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 8
+        ship_visibility_add = 55
+        ship_detection_add = 18
+        ship_blockade_strength_add = 260
+        ship_max_distance_to_port_add = 2
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 1800
+        goods_input_fabric_add = 600
+        goods_input_bronze_add = 400
+        goods_input_iron_add = 450
+        goods_input_steel_add = 200
+        goods_input_cannons_add = 550
+        goods_input_firearms_add = 250
+        goods_input_saltpeter_add = 200
+    }
+
+    materiel_goods = {
+        goods_input_bread_add = 1
+        goods_input_navalsupplies_add = 0.35
+        goods_input_cannons_add = 0.2
+        goods_input_firearms_add = 0.1
+        goods_input_saltpeter_add = 0.075
+        goods_input_iron_add = 0.05
+    }
+
+    unlocking_technologies = { three_decker }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/three_decker.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}

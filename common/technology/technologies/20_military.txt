@@ -125,7 +125,7 @@ naval_traditions = {
 cog = {
 	# Unlocks Cog
 	era = era_1
-	texture = "gfx/invention_icons/lightship_1.dds"
+	texture = "gfx/interface/icons/invention_icons/cog.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -133,7 +133,7 @@ cog = {
 	}
 
 	ai_weight = {
-		value = 1
+		value = 3
 
 		# Important for anyone with a navy
 		if = {
@@ -154,7 +154,7 @@ traditional_galley = {
 	}
 
 	ai_weight = {
-		value = 1
+		value = 3
 
 		# Important for anyone with a navy
 		if = {
@@ -426,6 +426,89 @@ extra_supplies = {
 
 	ai_weight = {
 		value = 2 # Important tech in general
+	}
+}
+
+hulk = {
+	# Unlocks Hulk
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/hulk.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+barque = {
+	# Unlocks Barque
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/barque.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+early_carrack = {
+	# Unlocks Barque
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/early_carrack.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+distant_markets = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/distant_markets.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	modifier = {
+		ship_max_distance_to_port_add = 1
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
 	}
 }
 
@@ -757,6 +840,66 @@ state_consolidation = {
 	}
 }
 
+flute = {
+	# Unlocks Flute
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/flute.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+caravel = {
+	# Unlocks Caravel
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/caravel.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+carrack = {
+	# Unlocks Carrack
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/carrack.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
 ### ERA 4
 engineer_corps = {
 	era = era_4
@@ -963,6 +1106,66 @@ letters_of_marque = {
 	}
 }
 
+brig = {
+	# Unlocks Brig
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/brig.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+pinnace = {
+	# Unlocks Pinnace
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/pinnace.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+galleon = {
+	# Unlocks Galleon
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/galleon.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
 ################################################### ERA 5 ##############################
 military_revolution = {
 	era = era_5
@@ -1163,6 +1366,66 @@ xebec = {
 	}
 }
 
+merchantman = {
+	# Unlocks Merchantman
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/merchantman.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+frigate = {
+	# Unlocks Frigate
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/frigate.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+two_decker = {
+	# Unlocks Two Decker
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/two_decker.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
 #################################################### ERA 6
 
 levee_en_masse = {
@@ -1283,6 +1546,66 @@ archipelago_frigate = {
 
 	ai_weight = {
 		value = 1
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+east_indiaman = {
+	# Unlocks East Indiaman
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/merchantman.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+heavy_frigate = {
+	# Unlocks Frigate
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/heavy_frigate.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+three_decker = {
+	# Unlocks Two Decker
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/three_decker.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
 
 		# Important for anyone with a navy
 		if = {

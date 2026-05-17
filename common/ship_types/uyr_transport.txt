@@ -1,0 +1,366 @@
+﻿# Transport / Merchant Ship Line
+
+ship_type_cog = {
+    ship_group = ship_group_transports
+
+    modification_construction_cost = 12
+
+    is_obsolete = { has_technology_researched = hulk }
+    is_very_obsolete = { has_technology_researched = flute }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+
+        ship_hit_points_max_add = 450
+        ship_crew_max_add = 120
+
+        ship_movement_speed_add = 2.5
+
+        ship_supply_capacity_add = 35
+        ship_carrying_capacity_add = 0.9
+        ship_marine_capacity_add = 0.45
+
+        ship_hull_damage_add = 4
+        ship_crew_damage_add = 1
+        ship_armor_add = 1
+
+        ship_critical_hit_chance_add = 0.01
+        ship_critical_hit_multiplier_add = 1.1
+
+        ship_vulnerability_add = 120
+
+        ship_screening_add = 1
+        ship_readiness_gain_add = 5
+        ship_accuracy_add = 1
+
+        ship_visibility_add = 25
+        ship_detection_add = 2
+
+        ship_blockade_strength_add = 2
+        ship_max_distance_to_port_add = 1
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 250
+        goods_input_fabric_add = 100
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_navalsupplies_add = 0.04
+    }
+
+    unlocking_technologies = { cog }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/cog.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_hulk = {
+    ship_group = ship_group_transports
+
+    modification_construction_cost = 18
+
+    is_obsolete = { has_technology_researched = flute_ship }
+    is_very_obsolete = { has_technology_researched = brig_ship }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+
+        ship_hit_points_max_add = 700
+        ship_crew_max_add = 180
+
+        ship_movement_speed_add = 2.8
+
+        ship_supply_capacity_add = 50
+        ship_carrying_capacity_add = 1.25
+        ship_marine_capacity_add = 0.6
+
+        ship_hull_damage_add = 5
+        ship_crew_damage_add = 2
+        ship_armor_add = 2
+
+        ship_critical_hit_chance_add = 0.01
+        ship_critical_hit_multiplier_add = 1.1
+
+        ship_vulnerability_add = 125
+
+        ship_screening_add = 1
+        ship_readiness_gain_add = 5
+        ship_accuracy_add = 1
+
+        ship_visibility_add = 28
+        ship_detection_add = 3
+
+        ship_blockade_strength_add = 3
+        ship_max_distance_to_port_add = 1
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 350
+        goods_input_fabric_add = 140
+        goods_input_bronze_add = 50
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_navalsupplies_add = 0.05
+    }
+
+    unlocking_technologies = { hulk }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/hulk.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_flute = {
+    ship_group = ship_group_transports
+
+    modification_construction_cost = 24
+
+    is_obsolete = { has_technology_researched = brig_ship }
+    is_very_obsolete = { has_technology_researched = merchantman }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+
+        ship_hit_points_max_add = 850
+        ship_crew_max_add = 220
+
+        ship_movement_speed_add = 3.4
+
+        ship_supply_capacity_add = 65
+        ship_carrying_capacity_add = 1.7
+        ship_marine_capacity_add = 0.8
+
+        ship_hull_damage_add = 6
+        ship_crew_damage_add = 2
+        ship_armor_add = 2
+
+        ship_critical_hit_chance_add = 0.01
+        ship_critical_hit_multiplier_add = 1.1
+
+        ship_vulnerability_add = 130
+
+        ship_screening_add = 2
+        ship_readiness_gain_add = 6
+        ship_accuracy_add = 2
+
+        ship_visibility_add = 30
+        ship_detection_add = 4
+
+        ship_blockade_strength_add = 4
+        ship_max_distance_to_port_add = 1
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 450
+        goods_input_fabric_add = 180
+        goods_input_bronze_add = 75
+    }
+
+    materiel_goods = {
+        goods_input_bread_add = 1
+        goods_input_navalsupplies_add = 0.06
+    }
+
+    unlocking_technologies = { flute }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/flute.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_brig = {
+    ship_group = ship_group_transports
+
+    modification_construction_cost = 30
+
+    is_obsolete = { has_technology_researched = merchantman }
+    is_very_obsolete = { has_technology_researched = east_indiaman }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+
+        ship_hit_points_max_add = 950
+        ship_crew_max_add = 260
+
+        ship_movement_speed_add = 4.2
+
+        ship_supply_capacity_add = 80
+        ship_carrying_capacity_add = 2.0
+        ship_marine_capacity_add = 0.9
+
+        ship_hull_damage_add = 10
+        ship_crew_damage_add = 4
+        ship_armor_add = 3
+
+        ship_critical_hit_chance_add = 0.02
+        ship_critical_hit_multiplier_add = 1.2
+
+        ship_vulnerability_add = 135
+
+        ship_screening_add = 4
+        ship_readiness_gain_add = 7
+        ship_accuracy_add = 3
+
+        ship_visibility_add = 28
+        ship_detection_add = 6
+
+        ship_blockade_strength_add = 6
+        ship_max_distance_to_port_add = 1
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 600
+        goods_input_fabric_add = 220
+        goods_input_bronze_add = 100
+        goods_input_cannons_add = 40
+    }
+
+    materiel_goods = {
+        goods_input_bread_add = 1
+        goods_input_navalsupplies_add = 0.08
+        goods_input_cannons_add = 0.02
+    }
+
+    unlocking_technologies = { brig }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/brig.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_merchantman = {
+    ship_group = ship_group_transports
+
+    modification_construction_cost = 38
+
+    is_obsolete = { has_technology_researched = east_indiaman }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+
+        ship_hit_points_max_add = 1200
+        ship_crew_max_add = 320
+
+        ship_movement_speed_add = 4.0
+
+        ship_supply_capacity_add = 105
+        ship_carrying_capacity_add = 2.8
+        ship_marine_capacity_add = 1.25
+
+        ship_hull_damage_add = 12
+        ship_crew_damage_add = 5
+        ship_armor_add = 4
+
+        ship_critical_hit_chance_add = 0.02
+        ship_critical_hit_multiplier_add = 1.2
+
+        ship_vulnerability_add = 140
+
+        ship_screening_add = 5
+        ship_readiness_gain_add = 8
+        ship_accuracy_add = 3
+
+        ship_visibility_add = 32
+        ship_detection_add = 8
+
+        ship_blockade_strength_add = 8
+        ship_max_distance_to_port_add = 1
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 850
+        goods_input_fabric_add = 280
+        goods_input_bronze_add = 125
+        goods_input_iron_add = 100
+        goods_input_cannons_add = 80
+    }
+
+    materiel_goods = {
+        goods_input_bread_add = 1
+        goods_input_navalsupplies_add = 0.1
+        goods_input_cannons_add = 0.03
+    }
+
+    unlocking_technologies = { merchantman }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/merchantman.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
+ship_type_east_indiaman = {
+    ship_group = ship_group_transports
+
+    modification_construction_cost = 50
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+
+        ship_hit_points_max_add = 1500
+        ship_crew_max_add = 420
+
+        ship_movement_speed_add = 4.2
+
+        ship_supply_capacity_add = 140
+        ship_carrying_capacity_add = 3.8
+        ship_marine_capacity_add = 1.8
+
+        ship_hull_damage_add = 18
+        ship_crew_damage_add = 8
+        ship_armor_add = 6
+
+        ship_critical_hit_chance_add = 0.03
+        ship_critical_hit_multiplier_add = 1.3
+
+        ship_vulnerability_add = 145
+
+        ship_screening_add = 6
+        ship_readiness_gain_add = 8
+        ship_accuracy_add = 4
+
+        ship_visibility_add = 38
+        ship_detection_add = 10
+
+        ship_blockade_strength_add = 12
+        ship_max_distance_to_port_add = 1
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 1100
+        goods_input_fabric_add = 350
+        goods_input_bronze_add = 150
+        goods_input_iron_add = 200
+        goods_input_cannons_add = 150
+        goods_input_firearms_add = 75
+    }
+
+    materiel_goods = {
+        goods_input_bread_add = 1
+        goods_input_navalsupplies_add = 0.12
+        goods_input_cannons_add = 0.05
+        goods_input_firearms_add = 0.02
+    }
+
+    unlocking_technologies = { east_indiaman }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/east_indiaman.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
