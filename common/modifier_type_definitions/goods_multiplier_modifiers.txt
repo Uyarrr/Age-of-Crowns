@@ -151,15 +151,6 @@ goods_input_warhorse_mult={
 	}
 }
 
-goods_input_trader_mult={
-	decimals=1
-	color=bad
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
 goods_input_bread_mult={
 	decimals=1
 	color=bad
@@ -280,15 +271,6 @@ goods_output_cannons_mult={
 goods_output_warhorse_mult={
 	decimals=1
 	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-goods_output_trader_mult={
-	decimals=1
-	color=bad
 	percent=yes
 	game_data={
 		ai_value=0

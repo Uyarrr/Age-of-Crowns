@@ -1076,6 +1076,24 @@ printing_press = {
 	}
 }
 
+colonial_outpost = {
+	#Unlocks Colonial Outpost Building
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		colonial_trade_networks
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
 paved_road = {
 	#Unlocks Road PM
 	era = era_3

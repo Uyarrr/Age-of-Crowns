@@ -3,7 +3,7 @@
 ship_type_cog = {
     ship_group = ship_group_transports
 
-    modification_construction_cost = 12
+    base_construction_cost = 12
 
     is_obsolete = { has_technology_researched = hulk }
     is_very_obsolete = { has_technology_researched = flute }
@@ -62,7 +62,7 @@ ship_type_cog = {
 ship_type_hulk = {
     ship_group = ship_group_transports
 
-    modification_construction_cost = 18
+    base_construction_cost = 18
 
     is_obsolete = { has_technology_researched = flute_ship }
     is_very_obsolete = { has_technology_researched = brig_ship }
@@ -122,7 +122,7 @@ ship_type_hulk = {
 ship_type_flute = {
     ship_group = ship_group_transports
 
-    modification_construction_cost = 24
+    base_construction_cost = 24
 
     is_obsolete = { has_technology_researched = brig_ship }
     is_very_obsolete = { has_technology_researched = merchantman }
@@ -182,7 +182,7 @@ ship_type_flute = {
 ship_type_brig = {
     ship_group = ship_group_transports
 
-    modification_construction_cost = 30
+    base_construction_cost = 30
 
     is_obsolete = { has_technology_researched = merchantman }
     is_very_obsolete = { has_technology_researched = east_indiaman }
@@ -244,7 +244,7 @@ ship_type_brig = {
 ship_type_merchantman = {
     ship_group = ship_group_transports
 
-    modification_construction_cost = 38
+    base_construction_cost = 38
 
     is_obsolete = { has_technology_researched = east_indiaman }
 
@@ -306,7 +306,7 @@ ship_type_merchantman = {
 ship_type_east_indiaman = {
     ship_group = ship_group_transports
 
-    modification_construction_cost = 50
+    base_construction_cost = 50
 
     modifier = {
         ship_construction_progress_max_add = 25

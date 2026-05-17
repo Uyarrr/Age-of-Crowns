@@ -1,7 +1,7 @@
 ﻿# Capital Ships / Heavy Ship Line
 ship_type_early_carrack = {
     ship_group = ship_group_capital_ships
-    modification_construction_cost = 45
+    base_construction_cost = 45
     can_be_flagship = yes
 
     is_obsolete = { has_technology_researched = carrack }
@@ -55,7 +55,7 @@ ship_type_early_carrack = {
 
 ship_type_carrack = {
     ship_group = ship_group_capital_ships
-    modification_construction_cost = 60
+    base_construction_cost = 60
     can_be_flagship = yes
 
     is_obsolete = { has_technology_researched = galleon }
@@ -111,7 +111,7 @@ ship_type_carrack = {
 
 ship_type_galleon = {
     ship_group = ship_group_capital_ships
-    modification_construction_cost = 75
+    base_construction_cost = 75
     can_be_flagship = yes
 
     is_obsolete = { has_technology_researched = two_decker }
@@ -170,7 +170,7 @@ ship_type_galleon = {
 
 ship_type_two_decker = {
     ship_group = ship_group_capital_ships
-    modification_construction_cost = 95
+    base_construction_cost = 95
     can_be_flagship = yes
 
     is_obsolete = { has_technology_researched = three_decker }
@@ -229,7 +229,7 @@ ship_type_two_decker = {
 
 ship_type_three_decker = {
     ship_group = ship_group_capital_ships
-    modification_construction_cost = 115
+    base_construction_cost = 115
     can_be_flagship = yes
 
     modifier = {

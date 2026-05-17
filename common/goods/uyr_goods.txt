@@ -1,10 +1,11 @@
-﻿trader = {
+﻿merchant_marine = {
 	texture = "gfx/interface/icons/goods_icons/trade.dds"
 	cost = 50
 	category = staple
-	tradeable = no
 
 	prestige_factor = 8
+	traded_quantity = 4 # 200
+	convoy_cost_multiplier = 0.05
 }
 
 stone = {

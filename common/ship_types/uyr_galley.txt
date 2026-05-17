@@ -1,7 +1,7 @@
 ﻿ship_type_traditional_galley = {
     ship_group = ship_group_cruisers
 
-    modification_construction_cost = 25
+    base_construction_cost = 25
     can_be_flagship = yes
 
     is_obsolete = { has_technology_researched = mediterranean_galley }
@@ -63,7 +63,7 @@ ship_type_mediterranean_galley = {
     ship_group = ship_group_cruisers
     can_be_flagship = yes
 
-    modification_construction_cost = 30
+    base_construction_cost = 30
 
     is_obsolete = { has_technology_researched = war_galley }
     is_very_obsolete = { has_technology_researched = galleass }
@@ -126,7 +126,7 @@ ship_type_war_galley = {
     ship_group = ship_group_cruisers
     can_be_flagship = yes
 
-    modification_construction_cost = 40
+    base_construction_cost = 40
 
     is_obsolete = { has_technology_researched = galleass }
     is_very_obsolete = { has_technology_researched = xebec }
@@ -191,7 +191,7 @@ ship_type_galleass = {
     ship_group = ship_group_cruisers
     can_be_flagship = yes
 
-    modification_construction_cost = 55
+    base_construction_cost = 55
 
     is_obsolete = { has_technology_researched = xebec }
     is_very_obsolete = { has_technology_researched = archipelago_frigate }
@@ -258,7 +258,7 @@ ship_type_xebec = {
     ship_group = ship_group_cruisers
     can_be_flagship = yes
 
-    modification_construction_cost = 50
+    base_construction_cost = 65
 
     is_obsolete = { has_technology_researched = archipelago_frigate }
 
@@ -323,7 +323,7 @@ ship_type_archipelago_frigate = {
     ship_group = ship_group_cruisers
     can_be_flagship = yes
 
-    modification_construction_cost = 65
+    base_construction_cost = 80
 
     modifier = {
         ship_construction_progress_max_add = 25

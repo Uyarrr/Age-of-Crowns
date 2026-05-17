@@ -9,15 +9,15 @@
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 30
+			goods_input_wood_add = 25
 			goods_input_fabric_add = 5
 
-			goods_output_navalsupplies_add = 20
+			goods_output_navalsupplies_add = 25
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 375
-			building_employment_laborers_add = 2625
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 2700
 		}
 	}
 }
@@ -42,12 +42,12 @@ pm_building_shipyard_main_2 = {
 			goods_input_copper_add = 10
 			goods_input_iron_add = 10
 
-			goods_output_navalsupplies_add = 40
+			goods_output_navalsupplies_add = 50
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 375
-			building_employment_laborers_add = 2025
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 2100
 			building_employment_machinists_add = 450
 			building_employment_engineers_add = 150
 		}
@@ -71,12 +71,12 @@ pm_building_shipyard_main_3 = {
 			goods_input_steel_add = 20
 			goods_input_coal_add = 10
 
-			goods_output_navalsupplies_add = 60
+			goods_output_navalsupplies_add = 75
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 375
-			building_employment_laborers_add = 1350
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 1425
 			building_employment_machinists_add = 900
 			building_employment_engineers_add = 375
 		}
@@ -92,12 +92,6 @@ pm_building_shipyard_main_4 = {
 		}
 	}
 
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 20
-		}
-	}
-
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_wood_add = 20
@@ -107,12 +101,12 @@ pm_building_shipyard_main_4 = {
 			goods_input_steel_add = 30
 			goods_input_coal_add = 20
 
-			goods_output_navalsupplies_add = 80
+			goods_output_navalsupplies_add = 100
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 375
-			building_employment_laborers_add = 750
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 825
 			building_employment_machinists_add = 1200
 			building_employment_engineers_add = 675
 		}

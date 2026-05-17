@@ -5,8 +5,8 @@
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clerks_add = 800
-			building_employment_shopkeepers_add = 200
+			building_employment_clerks_add = 700
+			building_employment_shopkeepers_add = 300
 		}
 	}
 	state_modifiers = {
@@ -34,8 +34,8 @@ pm_trade_center_principle_external_trade_2_dontuse = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clerks_add = 800
-			building_employment_shopkeepers_add = 200
+			building_employment_clerks_add = 700
+			building_employment_shopkeepers_add = 300
 		}
 	}
 	state_modifiers = {
@@ -52,7 +52,7 @@ pm_building_trade_center_trade_1 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_trader_add = 3
+			goods_input_merchant_marine_add = 3
 		}
 	}
 	state_modifiers = {
@@ -68,7 +68,7 @@ pm_building_trade_center_trade_2 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_trader_add = 4
+			goods_input_merchant_marine_add = 4
 		}
 	}
 }
@@ -80,7 +80,7 @@ pm_building_trade_center_trade_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_trader_add = 5
+			goods_input_merchant_marine_add = 5
 		}
 	}
 	state_modifiers = {
@@ -97,7 +97,7 @@ pm_building_trade_center_trade_4 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_trader_add = 6
+			goods_input_merchant_marine_add = 6
 		}
 	}
 	state_modifiers = {

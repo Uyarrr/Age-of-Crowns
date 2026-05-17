@@ -3,7 +3,7 @@
 ship_type_barque = {
     ship_group = ship_group_lights
 
-    modification_construction_cost = 18
+    base_construction_cost = 18
 
     is_obsolete = { has_technology_researched = caravel }
     is_very_obsolete = { has_technology_researched = pinnace }
@@ -64,7 +64,7 @@ ship_type_barque = {
 ship_type_caravel = {
     ship_group = ship_group_lights
 
-    modification_construction_cost = 25
+    base_construction_cost = 25
 
     is_obsolete = { has_technology_researched = pinnace }
     is_very_obsolete = { has_technology_researched = frigate }
@@ -126,7 +126,7 @@ ship_type_caravel = {
 ship_type_pinnace = {
     ship_group = ship_group_lights
 
-    modification_construction_cost = 32
+    base_construction_cost = 32
 
     is_obsolete = { has_technology_researched = frigate }
     is_very_obsolete = { has_technology_researched = heavy_frigate }
@@ -189,7 +189,7 @@ ship_type_pinnace = {
 ship_type_frigate = {
     ship_group = ship_group_lights
 
-    modification_construction_cost = 42
+    base_construction_cost = 42
 
     is_obsolete = { has_technology_researched = heavy_frigate }
 
@@ -253,7 +253,7 @@ ship_type_frigate = {
 ship_type_heavy_frigate = {
     ship_group = ship_group_lights
 
-    modification_construction_cost = 55
+    base_construction_cost = 55
 
     modifier = {
         ship_construction_progress_max_add = 25
