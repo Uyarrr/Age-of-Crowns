@@ -203,6 +203,10 @@ decree_emergency_relief = {
 decree_promote_social_mobility = {
 	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
 
+	unlocking_technologies = {
+		social_ladder
+	}
+
 	state_trigger = {
 		NOT = {
 			AND = {

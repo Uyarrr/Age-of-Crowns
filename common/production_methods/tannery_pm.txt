@@ -22,6 +22,7 @@ pm_building_tannery_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
+		guild_tannery
 	}
 
 	building_modifiers = {
@@ -44,7 +45,9 @@ pm_building_tannery_main_2 = {
 
 pm_building_tannery_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+
 	unlocking_technologies = {
+		commercial_tanneries
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -67,8 +70,11 @@ pm_building_tannery_main_3 = {
 
 pm_building_tannery_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
+
 	unlocking_technologies = {
+		leather_manufactories
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods

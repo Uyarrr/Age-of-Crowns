@@ -14,7 +14,7 @@
 	}
 }
 
-pm_building_coal_mine_main_2= {
+pm_building_coal_mine_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
@@ -39,13 +39,7 @@ pm_building_coal_mine_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
-	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 2
-		}
+		deep_shaft_coal_mining
 	}
 
 	building_modifiers = {
@@ -67,7 +61,7 @@ pm_building_coal_mine_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		mechanized_coal_mining
 	}
 
 	building_modifiers = {

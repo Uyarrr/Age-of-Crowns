@@ -1,0 +1,9 @@
+﻿l_english:
+
+  # Base IGs
+ ig_crown: "Crown"
+ ig_crown_only_icon: "@crown!"
+ ig_crown_desc: "The Crown embodies the authority of the monarch and the royal court. Surrounded by loyal advisors, bureaucrats, and sworn servants, they strive to centralize power, enforce royal will, and preserve the unity and stability of the realm."
+ ig_variant_crown: "[GetInterestGroupVariant('ig_crown',GetPlayer).GetNameWithCountryVariant]"
+ interest_group_ig_crown_pol_str_mult: "$ig_variant_crown$ [concept_political_strength]"
+ interest_group_ig_crown_pol_str_mult_desc: "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_crown$ [concept_interest_group]"

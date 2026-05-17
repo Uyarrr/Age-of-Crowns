@@ -1,0 +1,460 @@
+﻿# Capital Ships
+ship_type_traditional_galley = {
+    ship_group = ship_group_capital_ships
+
+    modification_construction_cost = 50
+
+    can_be_flagship = yes
+
+    is_obsolete = {
+        has_technology_researched = ironclad_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = monitor_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 1600
+        ship_crew_max_add = 800
+        ship_movement_speed_add = 4.0
+        ship_supply_capacity_add = 40
+        ship_carrying_capacity_add = 0.3
+        ship_marine_capacity_add = 0.2
+        ship_hull_damage_add = 20
+        ship_crew_damage_add = 10
+        ship_armor_add = 12
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 2
+        ship_vulnerability_add = 50
+        ship_screening_add = 5
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 5
+        ship_visibility_add = 25
+        ship_detection_add = 10
+        ship_blockade_strength_add = 100
+        ship_max_distance_to_port_add = 1
+
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.8
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.8
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.6
+    }
+
+    construction_goods = {
+        goods_input_hardwood_add = 650
+        goods_input_fabric_add = 390
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_hardwood_add = 0.1
+    }
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -0.8
+        ship_crew_damage_mult = -0.8
+        ship_interest_gain_mult = -1.0
+    }
+
+
+    unlocking_technologies = { traditional_galley }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/traditional_galley.dds"
+
+    ai_weight = 2
+
+    use_modifications = no
+}
+
+ship_type_mediterranean_galley = {
+
+    ship_group = ship_group_capital_ships
+
+    modification_construction_cost = 60
+
+    is_obsolete = {
+        has_technology_researched = monitor_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = dreadnought_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 1600
+        ship_crew_max_add = 200
+        ship_movement_speed_add = 4
+        ship_supply_capacity_add = 40
+        ship_hull_damage_add = 40
+        ship_crew_damage_add = 20
+        ship_armor_add = 20
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 2
+        ship_vulnerability_add = 30
+        ship_screening_add = 10
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 5
+        ship_visibility_add = 15
+        ship_detection_add = 20
+        ship_blockade_strength_add = 50
+        ship_max_distance_to_port_add = 1
+
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.2
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.2
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.2
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.1
+    }
+
+    construction_goods = {
+        goods_input_iron_add = 780
+        goods_input_engines_add = 260
+    }
+
+    materiel_goods = {
+        goods_input_groceries_add = 1
+        goods_input_coal_add = 1
+        goods_input_iron_add = 0.1
+        goods_input_ammunition_add = 0.1
+    }
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -0.8
+        ship_crew_damage_mult = -0.8
+        ship_interest_gain_mult = -1.0
+    }
+
+    unlocking_technologies = { mediterranean_galley }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/mediterranean_galley.dds"
+
+    ai_weight = 0.1
+
+    use_modifications = no
+}
+
+ship_type_war_galley = {
+
+    ship_group = ship_group_capital_ships
+
+    modification_construction_cost = 75
+
+    can_be_flagship = yes
+
+    is_obsolete = {
+        has_technology_researched = monitor_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = pre_dreadnought_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 2800
+        ship_crew_max_add = 1000
+        ship_movement_speed_add = 4.0
+        ship_supply_capacity_add = 50
+        ship_carrying_capacity_add = 1.5
+        ship_marine_capacity_add = 0.75
+        ship_hull_damage_add = 65
+        ship_crew_damage_add = 30
+        ship_armor_add = 35
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 2
+        ship_vulnerability_add = 70
+        ship_screening_add = 11
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 5
+        ship_visibility_add = 40
+        ship_detection_add = 20
+        ship_blockade_strength_add = 275
+                ship_max_distance_to_port_add = 1
+
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.8
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.8
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.6
+    }
+
+    construction_goods = {
+        goods_input_iron_add = 2080
+        goods_input_engines_add = 520
+    }
+
+    materiel_goods = {
+        goods_input_groceries_add = 1
+        goods_input_coal_add = 1
+        goods_input_iron_add = 0.1
+        goods_input_ammunition_add = 0.1
+    }
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -0.8
+        ship_crew_damage_mult = -0.8
+        ship_interest_gain_mult = -1.0
+    }
+
+
+    unlocking_technologies = { war_galley }
+
+    use_modifications = no
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/war_galley.dds"
+
+    ai_weight = 2
+}
+
+ship_type_galleass = {
+
+    ship_group = ship_group_capital_ships
+
+    modification_construction_cost = 100
+
+    is_obsolete = {
+        has_technology_researched = pre_dreadnought_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = dreadnought_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 2600
+        ship_crew_max_add = 300
+        ship_movement_speed_add = 4
+        ship_supply_capacity_add = 40
+        ship_hull_damage_add = 60
+        ship_crew_damage_add = 30
+        ship_armor_add = 30
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 2
+        ship_vulnerability_add = 60
+        ship_screening_add = 15
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 5
+        ship_visibility_add = 25
+        ship_detection_add = 30
+        ship_blockade_strength_add = 100
+        ship_max_distance_to_port_add = 1
+
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.2
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.2
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.2
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.1
+    }
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -0.8
+        ship_crew_damage_mult = -0.8
+        ship_interest_gain_mult = -1.0
+    }
+
+    construction_goods = {
+        goods_input_iron_add = 1334
+        goods_input_engines_add = 445
+    }
+
+    materiel_goods = {
+        goods_input_groceries_add = 1
+        goods_input_coal_add = 1
+        goods_input_iron_add = 0.1
+        goods_input_ammunition_add = 0.1
+    }
+
+    unlocking_technologies = { galleass }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/galleass.dds"
+
+    ai_weight = 0.1
+
+    use_modifications = no
+}
+
+ship_type_xebec = {
+
+    ship_group = ship_group_capital_ships
+
+    modification_construction_cost = 85
+
+    can_be_flagship = yes
+
+    is_obsolete = {
+        has_technology_researched = pre_dreadnought_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = dreadnought_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 3400
+        ship_crew_max_add = 1100
+        ship_movement_speed_add = 4.5
+        ship_supply_capacity_add = 60
+        ship_carrying_capacity_add = 1.8
+        ship_marine_capacity_add = 0.9
+        ship_hull_damage_add = 90
+        ship_crew_damage_add = 40
+        ship_armor_add = 75
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 2
+        ship_vulnerability_add = 80
+        ship_screening_add = 14
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 5
+        ship_visibility_add = 45
+        ship_detection_add = 25
+        ship_blockade_strength_add = 325
+        ship_max_distance_to_port_add = 1
+
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.8
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.8
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.6
+    }
+
+    construction_goods = {
+        goods_input_steel_add = 1300
+        goods_input_iron_add = 650
+        goods_input_engines_add = 650
+    }
+
+    materiel_goods = {
+        goods_input_groceries_add = 1
+        goods_input_coal_add = 1
+        goods_input_steel_add = 0.1
+        goods_input_ammunition_add = 0.1
+    }
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -0.8
+        ship_crew_damage_mult = -0.8
+        ship_interest_gain_mult = -1.0
+    }
+
+
+    unlocking_technologies = { xebec }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/xebec.dds"
+
+    ai_weight = 2
+
+    use_modifications = no
+}
+
+ship_type_archipelago_frigate = {
+
+    ship_group = ship_group_capital_ships
+
+    modification_construction_cost = 100
+
+    can_be_flagship = yes
+
+    is_obsolete = {
+        has_technology_researched = dreadnought_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = battleship_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+        ship_hit_points_max_add = 3800
+        ship_crew_max_add = 1100
+        ship_movement_speed_add = 4.5
+        ship_supply_capacity_add = 65
+        ship_carrying_capacity_add = 2.5
+        ship_marine_capacity_add = 1.25
+        ship_hull_damage_add = 108
+        ship_crew_damage_add = 40
+        ship_armor_add = 90
+        ship_critical_hit_chance_add = 0.05
+        ship_critical_hit_multiplier_add = 2
+        ship_vulnerability_add = 90
+        ship_screening_add = 16
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 5
+        ship_visibility_add = 60
+        ship_detection_add = 30
+        ship_blockade_strength_add = 375
+        ship_max_distance_to_port_add = 1
+
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.8
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.8
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.6
+    }
+
+    construction_goods = {
+        goods_input_steel_add = 1560
+        goods_input_iron_add = 1040
+        goods_input_engines_add = 1040
+    }
+
+    materiel_goods = {
+        goods_input_groceries_add = 1
+        goods_input_coal_add = 1
+        goods_input_steel_add = 0.1
+        goods_input_ammunition_add = 0.1
+    }
+
+    use_modifications = no
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -0.8
+        ship_crew_damage_mult = -0.8
+        ship_interest_gain_mult = -1.0
+    }
+
+
+    unlocking_technologies = { archipelago_frigate }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/archipelago_frigate.dds"
+
+    ai_weight = 2
+}
+
+ship_type_supply_ship = {
+    ship_group = ship_group_supply_ships
+
+    base_construction_cost = 25
+
+    modifier = {
+        ship_hit_points_max_add = 1000
+        ship_construction_progress_max_add = 5
+        ship_crew_max_add = 300
+        ship_readiness_gain_add = 10
+        ship_armor_add = 5
+        ship_supply_capacity_add = 500
+        ship_movement_speed_add = 5
+        ship_visibility_add = 10
+        ship_detection_add = 5
+        ship_vulnerability_add = 100
+    }
+
+    construction_goods = {
+        goods_input_navalsupplies_add = 130
+        goods_input_fabric_add = 130
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+    }
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -0.8
+        ship_crew_damage_mult = -0.8
+        ship_interest_gain_mult = -1.0
+    }
+
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_supply_ships.dds"
+    profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_supply_ship.dds"
+
+    use_modifications = no
+}

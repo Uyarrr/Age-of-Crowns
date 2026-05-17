@@ -148,7 +148,7 @@ building_lead_mine = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
  }
 
- building_gold_mine_uyr = {
+ building_gold_mine = {
 	building_group = bg_mining
 	icon = "gfx/interface/icons/building_icons/gold_mine_uyr.dds"
 	city_type = mine
@@ -172,7 +172,7 @@ building_lead_mine = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 }
 
-building_gold_field_uyr = {
+building_gold_field = {
 	building_group = bg_gold_fields
 	icon = "gfx/interface/icons/building_icons/gold_fields.dds"
 	city_type = mine
@@ -194,3 +194,24 @@ building_gold_field_uyr = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 }
+
+building_gem_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/gem_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		precious_metal_mining
+	}
+
+	production_method_groups = {
+		pmg_building_gem_mine_main
+		pmg_building_gem_mine_extraction
+		pmg_transportation_building_gem_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+ }

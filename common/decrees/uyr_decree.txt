@@ -1,6 +1,7 @@
 ﻿decree_assimilate_pops = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
+		assimilate_culture
 	}
 
 	country_trigger = {
@@ -85,6 +86,7 @@
 decree_convert_state = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
+		convert_religion
 	}
 
 	country_trigger = {

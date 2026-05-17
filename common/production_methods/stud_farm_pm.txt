@@ -44,7 +44,7 @@ pm_building_stud_farm_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 	
 	unlocking_technologies = {
-		behaviorism
+		selective_breeding
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -67,7 +67,7 @@ pm_building_stud_farm_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		state_stud_farms
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -106,6 +106,10 @@ pm_building_stud_farm_warhorse_0 = {
 pm_building_stud_farm_warhorse_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/refining1.dds"
 
+	unlocking_technologies = {
+		ranching
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -125,7 +129,7 @@ pm_building_stud_farm_warhorse_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/refining2.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		state_warhorse_breeding
 	}
 
 	building_modifiers = {

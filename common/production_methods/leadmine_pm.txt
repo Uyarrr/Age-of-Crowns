@@ -21,7 +21,7 @@ pm_building_lead_mine_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		refined_saiger_process
+		expanded_lead_mining
 	}
 
 	building_modifiers = {
@@ -45,7 +45,7 @@ pm_building_lead_mine_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		deep_shaft_lead_mining
 	}
 
 	state_modifiers = {
@@ -76,7 +76,7 @@ pm_building_lead_mine_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		mechanized_lead_mining
 	}
 
 	state_modifiers = {
@@ -143,11 +143,6 @@ pm_building_lead_mine_extraction_3 = {
 }
 pm_transport_mine = {
 	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
 
 	unlocking_technologies = {
 		railways

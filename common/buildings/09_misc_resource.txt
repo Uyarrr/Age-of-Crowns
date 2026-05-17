@@ -52,6 +52,7 @@ building_oil_rig = {
 	icon = "gfx/interface/icons/building_icons/oil_rig.dds"
 	city_type = mine
 	levels_per_mesh = 50
+	buildable = no
 	required_construction = construction_cost_medium
 
 	unlocking_technologies = {

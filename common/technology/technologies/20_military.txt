@@ -143,10 +143,10 @@ cog = {
 	}
 }
 
-traditional_canoe = {
+traditional_galley = {
 	# Unlocks Traditional Galley
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/galley_1.dds"
+	texture = "gfx/interface/icons/invention_icons/traditional_galley.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -374,7 +374,7 @@ cavalrymen = {
 mediterranean_galley = {
 	#Unlocks Age 2 Galley
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/galley_2.dds"
+	texture = "gfx/interface/icons/invention_icons/mediterranean_galley.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -415,6 +415,20 @@ bronze_weapons = {
 	}
 }
 
+extra_supplies = {
+	# Unlocks Extra Supplies Mobilizitation Option
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/extra_supplies.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 ####### ERA 3 #######
 
 pike_and_shot = {
@@ -430,7 +444,7 @@ pike_and_shot = {
 	}
 
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 1 # Important tech in general
 	}
 }
 
@@ -441,7 +455,7 @@ coastal_expansion = {
 	category = military
 
 	modifier = {
-		state_building_naval_base_max_level_add = 5
+		ship_max_distance_to_port_add = 1
 	}
 
 	unlocking_technologies = {
@@ -452,8 +466,25 @@ coastal_expansion = {
 	}
 }
 
+reinforced_hulls = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/reinforced_hulls.dds"
+	category = military
+
+	modifier = {
+		ship_armor_mult = 0.05
+	}
+
+	unlocking_technologies = {
+		war_galley
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
 supply_lines = {
-	#Unlocks Port PM 2
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/navy.dds"
 	category = military
@@ -463,11 +494,12 @@ supply_lines = {
 	}
 
 	modifier = {
-		country_convoys_capacity_mult = 0.1
+		character_battle_condition_broken_supply_line_mult = -0.1
+		ship_ship_type_supply_ship_supply_capacity_mult = 0.1
 	}
 
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 1 # Important tech in general
 	}
 }
 
@@ -508,7 +540,7 @@ overseas_supply_networks = {
 	category = military
 
 	modifier = {
-		character_supply_route_cost_mult = -0.1
+		ship_supply_efficiency_mult = 0.1
 	}
 
 	unlocking_technologies = {
@@ -577,7 +609,7 @@ lancer = {
 war_galley = {
 	#Unlocks Age 3 War Galley
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/galley_3.dds"
+	texture = "gfx/interface/icons/invention_icons/war_galley.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -634,17 +666,17 @@ oceanic_navigation = {
 	}
 }
 
-military_communications = {
+military_traditions = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/pike_and_shot.dds"
+	texture = "gfx/interface/icons/invention_icons/military_traditions.dds"
 	category = military
 
 	modifier = {
-		character_battle_condition_logistics_secured_mult = 0.10
-		character_battle_condition_broken_supply_line_mult = -0.10
+		country_military_tech_spread_mult = 0.15
 	}
 
 	unlocking_technologies = {
+		domineering_influence
 	}
 
 	ai_weight = {
@@ -664,7 +696,6 @@ domineering_influence = {
 	}
 
 	unlocking_technologies = {
-		military_communications
 	}
 
 	ai_weight = {
@@ -678,11 +709,11 @@ message_relays = {
 	category = military
 
 	modifier = {
-		military_formation_movement_speed_mult = 0.1
+		character_advancement_speed_mult  = 0.1
 	}
 
 	unlocking_technologies = {
-		domineering_influence
+		military_traditions
 	}
 
 	ai_weight = {
@@ -700,7 +731,7 @@ improved_spy_organization = {
 	}
 
 	unlocking_technologies = {
-		military_communications
+		domineering_influence
 	}
 
 	ai_weight = {
@@ -727,6 +758,77 @@ state_consolidation = {
 }
 
 ### ERA 4
+engineer_corps = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/engineer_corps.dds"
+	category = military
+
+	modifier = {
+		unit_devastation_mult = 0.15
+		unit_kill_rate_add = 0.03
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+pikemen = {
+	#Unlocks Pikeman Infantry Units
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/infantry_4.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		engineer_corps
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+pistoleer = {
+	#Unlocks Pistoleer Cavalry Units
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/cavalry_4.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		engineer_corps
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+chambered_cannon = {
+	#Unlocks Chambered Cannon Artillery Units
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/artillery_4.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		engineer_corps
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
 
 expanded_salt_collecting = {
 	# Unlocks Salt Collection PM
@@ -766,11 +868,119 @@ deep_sea_fishing = {
 	}
 
 	ai_weight = {
-		value = 3 # Important tech in general
+		value = 2 # Important tech in general
 	}
 }
 
-### ERA 5
+luxurious_supplies = {
+	# Unlocks Luxurious Supplies Mobilizitation Option
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/luxurious_supplies.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+selective_breeding = {
+	# Unlocks Stud Farm PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/horse.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+naval_reformation = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/great_navy.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	modifier = {
+	ship_interest_gain_mult = 0.10
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+galleass = {
+	# Unlocks Galleass
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/galleass.dds"
+	category = military
+
+	unlocking_technologies = {
+		naval_reformation
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+letters_of_marque = {
+	# Pirates!
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/piracy.dds"
+	category = military
+
+	unlocking_technologies = {
+		galleass
+	}
+
+	modifier = {
+		character_piracy_goods_capacity_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+################################################### ERA 5 ##############################
+military_revolution = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/military_reforms.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	modifier = {
+		unit_army_offense_mult = 0.05
+		unit_army_defense_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
 
 steel_weapons = {
 	# Unlocks Weapon Workshop PM
@@ -786,17 +996,18 @@ steel_weapons = {
 	}
 }
 
-arms_industry = {
+mechanized_arms_industry = {
 	# Unlocks Arms Industry
 	era = era_5
 	texture = "gfx/interface/icons/goods_icons/firearms.dds"
 	category = military
 
 	unlocking_technologies = {
+		musketeer
 	}
 
 	ai_weight = {
-		value = 1
+		value = 3
 	}
 }
 
@@ -810,7 +1021,7 @@ dedicated_police_force = {
 	}
 
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 }
 
@@ -821,6 +1032,7 @@ chemical_nitrate_refining = {
 	category = military
 
 	unlocking_technologies = {
+		royal_mortar
 	}
 
 	ai_weight = {
@@ -838,8 +1050,244 @@ commercial_fishing_fleets = {
 	}
 
 	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+musketeer = {
+	#Unlocks Musketeer Infantry Units
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/infantry_5.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		military_revolution
+	}
+
+	ai_weight = {
 		value = 3 # Important tech in general
 	}
 }
 
-### ERA 6
+hussar = {
+	#Unlocks Hussar Cavalry Units
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/cavalry_5.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		military_revolution
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+royal_mortar = {
+	#Unlocks Royal Mortar Artillery Units
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/artillery_5.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		military_revolution
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+state_stud_farms = {
+	#Unlocks Stud Farm PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/horse.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+state_warhorse_breeding = {
+	#Unlocks Stud Farm Warhorse PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/warhorse.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		hussar
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+xebec = {
+	# Unlocks Xebec
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/xebec.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+#################################################### ERA 6
+
+levee_en_masse = {
+	#Unlocks Mass Conscription Law
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/levee_en_masse.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+
+fusilier = {
+	#Unlocks Fusilier Infantry Units
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/infantry_6.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		levee_en_masse
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+cuirassier = {
+	#Unlocks Cuirassier Cavalry Units
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/cavalry_6.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		levee_en_masse
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+flying_battery = {
+	#Unlocks Flying Battery Artillery Units
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/artillery_6.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		levee_en_masse
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+esprit_de_corps = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/esprit_de_corps.dds"
+	category = military
+
+	modifier = {
+		character_advancement_speed_mult = 0.2
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+justified_conflicts = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/justified_conflicts.dds"
+	category = military
+
+	modifier = {
+		country_infamy_generation_mult = -0.15
+	}
+
+	unlocking_technologies = {
+		esprit_de_corps
+	}
+
+	ai_weight = {
+		value = 1 # Important tech in general
+	}
+}
+
+archipelago_frigate = {
+	# Unlocks Xebec
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/archipelago_frigate.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}

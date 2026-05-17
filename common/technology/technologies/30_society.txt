@@ -58,7 +58,7 @@ imperial_ambitions = {
 province_governors = {
 	# Increases Integration Speed
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/colonial_governors.dds"
+	texture = "gfx/interface/icons/invention_icons/province_governors.dds"
 	category = society
 
 	modifier = {
@@ -88,7 +88,7 @@ construction = {
 roads_and_waystones = {
 	# Unlocks Roads
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/road.dds"
+	texture = "gfx/interface/icons/goods_icons/transportation.dds"
 	category = society
 
 	modifier = {
@@ -147,7 +147,7 @@ national_guard = {
 religious_schools = {
 	# Unlocks Religious School Law
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/clergy_rights_laws.dds"
+	texture = "gfx/interface/icons/invention_icons/religious_schools.dds"
 	category = society
 
 	modifier = {
@@ -200,7 +200,7 @@ international_relations = {
 trade_fairs = {
 	# Grants Trade Advantage
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/merchant_power.dds"
+	texture = "gfx/interface/icons/invention_icons/trade_fairs.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -387,6 +387,42 @@ guild_charters = {
 	}
 }
 
+convert_religion = {
+	# Unlocks Religion Conversion Decree
+	era = era_1
+	texture = "gfx/interface/icons/decree/decree_establish_missions.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		legalism
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+assimilate_culture = {
+	# Unlocks Assimilation Decree
+	era = era_1
+	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		convert_religion
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
 ############# AGE 2 #################
 
 renaissance = {
@@ -517,14 +553,13 @@ wealth_voting = {
 	}
 }
 
-local_police_force = {
-	# Unlocks Local Police Force Law
+social_ladder = {
+	# Unlocks Qualifications Decree
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
+	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
 	category = society
 
 	modifier = {
-		country_institution_police_max_investment_add = 1
 	}
 
 	unlocking_technologies = {
@@ -536,10 +571,29 @@ local_police_force = {
 	}
 }
 
+local_police_force = {
+	# Unlocks Local Police Force Law
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
+	category = society
+
+	modifier = {
+		country_institution_police_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		social_ladder
+	}
+
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
 renaissance_construction = {
 	# Unlocks New Construction Type
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/build_advance.dds"
+	texture = "gfx/interface/icons/invention_icons/renaissance_construction.dds"
 	category = society
 
 	modifier = {
@@ -571,11 +625,9 @@ gravel_road = {
 	}
 
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 2 # Very important in general
 	}
 }
-
-## BANKING ##
 
 banking = {
 	era = era_2
@@ -650,7 +702,60 @@ formalized_administration = {
 	}
 }
 
+local_nobility = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/local_nobility.dds"
+	category = society
 
+	unlocking_technologies = {
+		renaissance
+	}
+
+	modifier = {
+		interest_group_ig_landowners_pol_str_mult = -0.05
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+sovereignty = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/sovereignty.dds"
+	category = society
+
+	unlocking_technologies = {
+		local_nobility
+	}
+
+	modifier = {
+		interest_group_ig_crown_pol_str_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 1 # Very important in general
+	}
+}
+
+anatomy = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/anatomy.dds"
+	category = society
+
+	modifier = {
+		state_harvest_condition_disease_outbreak_impact_mult = -0.15
+		state_mortality_mult = -0.02
+	}
+
+	unlocking_technologies = {
+		patron_of_arts
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
 
 ############ ERA 3 #####################
 new_world = {
@@ -674,7 +779,7 @@ new_world = {
 colonization = {
 	#Unlocks Colonial Laws
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonial_policy.dds"
+	texture = "gfx/interface/icons/invention_icons/colonization.dds"
 	category = society
 
 	modifier = {
@@ -718,6 +823,24 @@ colonial_charters = {
 
 	unlocking_technologies = {
 		colonization
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+colonial_trade_networks = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/colonial_trade_networks.dds"
+	category = society
+
+	modifier = {
+		state_market_access_price_impact  = 0.05
+	}
+
+	unlocking_technologies = {
+		new_world
 	}
 
 	ai_weight = {
@@ -967,7 +1090,7 @@ paved_road = {
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 2 # very important tech
 	}
 }
 
@@ -996,6 +1119,7 @@ nation_formation = {
 	category = society
 
 	unlocking_technologies = {
+		paved_road
 	}
 
 	ai_weight = {
@@ -1003,7 +1127,96 @@ nation_formation = {
 	}
 }
 
-######## ERA 4 ##########
+surgery = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/surgery.dds"
+	category = society
+
+	modifier = {
+		state_harvest_condition_disease_outbreak_impact_mult = -0.10
+		state_mortality_mult = -0.02
+	}
+
+	unlocking_technologies = {
+		shared_knowledge
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+artistic_prints = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/artistic_prints.dds"
+	category = society
+
+	modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		printing_press
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+print_culture = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/print_culture.dds"
+	category = society
+
+	modifier = {
+		country_production_tech_spread_mult  = 0.15
+	}
+
+	unlocking_technologies = {
+		artistic_prints
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}
+
+shared_knowledge = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/shared_knowledge.dds"
+	category = society
+
+	modifier = {
+		country_society_tech_spread_mult = 0.15
+	}
+
+	unlocking_technologies = {
+		printing_press
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}
+
+######## ERA 4 #########
+confessionalism = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/confessionalism.dds"
+	category = society
+
+	modifier = {
+		state_conversion_mult = 0.1
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
 
 dissemination_of_knowledge = {
 	# Unlocks University PM
@@ -1012,6 +1225,25 @@ dissemination_of_knowledge = {
 	category = society
 
 	unlocking_technologies = {
+		confessionalism
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+cultural_integration = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/cultural_integration.dds"
+	category = society
+
+	modifier = {
+		state_assimilation_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		confessionalism
 	}
 
 	ai_weight = {
@@ -1026,6 +1258,7 @@ census_suffrage = {
 	category = society
 
 	unlocking_technologies = {
+		confessionalism
 	}
 
 	modifier = {
@@ -1046,6 +1279,7 @@ federal_state = {
 	}
 
 	unlocking_technologies = {
+		census_suffrage
 	}
 
 	ai_weight = {
@@ -1053,17 +1287,88 @@ federal_state = {
 	}
 }
 
-######## ERA 5 ##########
+embassies = {
+	#Unlocks Embassy Building
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/embassy.dds"
+	category = society
 
-behaviorism = {
-	era = era_6
+	modifier = {
+		country_influence_mult = 0.15
+	}
+
+	unlocking_technologies = {
+		confessionalism
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+pharmacology = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/pharmacology.dds"
+	category = society
+
+	modifier = {
+		state_harvest_condition_disease_outbreak_impact_mult = -0.15
+		state_mortality_mult = -0.02
+	}
+
+	unlocking_technologies = {
+		representative_assemblies
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+administrative_suzerainty = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/administrative_suzerainty.dds"
+	category = society
+
+	modifier = {
+		country_authority_per_subject_add = 5
+	}
+
+	unlocking_technologies = {
+		representative_assemblies
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+centralized_tribute = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/centralized_tribute.dds"
+	category = society
+
+	modifier = {
+		country_subject_income_transfer_mult = 0.05
+	}
+
+	unlocking_technologies = {
+		administrative_suzerainty
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+representative_assemblies = {
+	era = era_4
 	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
 	category = society
 
 	modifier = {
-		country_influence_mult = 0.5
-		country_diplomatic_play_maneuvers_add = 20
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		country_authority_mult = 0.1
+		country_voting_power_mult = 0.1
 	}
 
 	unlocking_technologies = {
@@ -1073,6 +1378,8 @@ behaviorism = {
 		value = 1
 	}
 }
+
+######## ERA 5 ##########
 
 major_formation = {
 	# Unlocks Major Formables
@@ -1112,6 +1419,167 @@ unitary_administration = {
 	category = society
 
 	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+aggressive_demands = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/aggressive_demands.dds"
+	category = society
+
+	modifier = {
+		country_diplomatic_play_maneuvers_add = 20
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+absolute_loyalty = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/absolute_loyalty.dds"
+	category = society
+
+	modifier = {
+		country_liberty_desire_of_subjects_add = -0.05
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+modern_road = {
+	#Unlocks Road PM
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/paved_road.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+loyal_subordinates = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/loyal_subordinates.dds"
+	category = society
+
+	modifier = {
+		country_authority_mult = 0.15
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+sanitation = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/sanitation.dds"
+	category = society
+
+	modifier = {
+		state_harvest_condition_disease_outbreak_impact_mult = -0.10
+		state_mortality_mult = -0.02
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+############## ERA 6 ################
+
+enlightenment = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/enlightenment.dds"
+	category = society
+
+	modifier = {
+		country_acceptance_no_shared_religious_trait_add = 15
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+global_ambitions = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/global_ambitions.dds"
+	category = society
+
+	modifier = {
+		country_prestige_mult  = 0.1
+		country_leverage_generation_mult = 0.15
+	}
+
+	unlocking_technologies = {
+		enlightenment
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+vaccination = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/surgery.dds"
+	category = society
+
+	modifier = {
+		state_harvest_condition_disease_outbreak_impact_mult = -0.10
+		state_mortality_mult = -0.02
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+behaviorism = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+
+	modifier = {
+		country_influence_mult = 0.5
+		country_diplomatic_play_maneuvers_add = 20
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
 
 	unlocking_technologies = {

@@ -5,6 +5,9 @@ agriculture = {
 	texture = "gfx/interface/icons/invention_icons/agriculture.dds"
 	category = production
 
+	unlocking_technologies = {
+	}
+
 	ai_weight = {
 		value = 3 # Very important tech in general
 	}
@@ -13,8 +16,11 @@ agriculture = {
 quarrying = {
 	# Unlocks Stone Quarry
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/quarrying.dds"
+	texture = "gfx/interface/icons/goods_icons/stone.dds"
 	category = production
+
+	unlocking_technologies = {
+	}
 
 	ai_weight = {
 		value = 3 # Very important tech in general
@@ -190,6 +196,9 @@ woodcutting = {
 	texture = "gfx/interface/icons/goods_icons/wood.dds"
 	category = production
 
+	unlocking_technologies = {
+	}
+
 	ai_weight = {
 		value = 3
 	}
@@ -328,7 +337,6 @@ workshop_standardization = {
 	}
 
 	unlocking_technologies = {
-		quarrying
 	}
 
 	ai_weight = {
@@ -351,21 +359,18 @@ fiber_paper = {
 	}
 }
 
-expanded_quarrying = {
-	#Unlocks Second PM for Stone Quarry
+guild_bakers = {
+	# Unlocks Bakery Main PM 2
 	era = era_2
-	texture = "gfx/interface/icons/goods_icons/stone.dds"
+	texture = "gfx/interface/icons/goods_icons/bread.dds"
 	category = production
 
-	modifier = {
-	}
-
 	unlocking_technologies = {
-		fiber_paper
+		workshop_standardization
 	}
 
 	ai_weight = {
-		value = 2 # very important tech
+		value = 2 # Important tech in general
 	}
 }
 
@@ -379,7 +384,7 @@ bakery_wood_heating = {
 	}
 
 	unlocking_technologies = {
-		manured_fields
+		guild_bakers
 	}
 
 	ai_weight = {
@@ -394,7 +399,7 @@ encourage_agricultural_industry = {
 	category = production
 
 	unlocking_technologies = {
-		workshop_standardization
+		manured_fields
 	}
 
 	ai_weight = {
@@ -469,7 +474,7 @@ dyed_furnitures = {
 	category = production
 
 	unlocking_technologies = {
-		manured_fields
+		workshop_standardization
 	}
 
 	ai_weight = {
@@ -491,7 +496,144 @@ manured_fields = {
 	}
 }
 
+expanded_beekeeping = {
+	# Unlocks Apiary PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/beeswax.dds"
+	category = production
+
+	unlocking_technologies = {
+		manured_fields
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+expanded_silk_weaving = {
+	# Unlocks Silk PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/silk.dds"
+	category = production
+
+	unlocking_technologies = {
+		expanded_beekeeping
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+guild_distillery = {
+	# Unlocks Distillery Main PM 2
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/liquor.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshop_standardization
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+guild_brewery = {
+	# Unlocks Brewery Main PM 2
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/beer.dds"
+	category = production
+
+	unlocking_technologies = {
+		guild_distillery
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+guild_weaving = {
+	# Unlocks Cloth Workshop Main PM 2
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/clothes.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshop_standardization
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+guild_butchery = {
+	# Unlocks Slaughterhouse Main PM 2
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/meat.dds"
+	category = production
+
+	unlocking_technologies = {
+		guild_weaving
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+guild_tannery = {
+	# Unlocks Tannery Main PM 2
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/leather.dds"
+	category = production
+
+	unlocking_technologies = {
+		fiber_paper
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+luxury_furnitures = {
+	# Unlocks Luxury Furniture PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+		dyed_furnitures
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## AGE 3 ######
+
+resource_extraction = {
+	#Main Tech for Resource Extraction Pms
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/resource_extraction.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
 
 new_world_crops = {
 	era = era_3
@@ -503,7 +645,6 @@ new_world_crops = {
 	}
 
 	unlocking_technologies = {
-		workshop_standardization
 	}
 
 	ai_weight = {
@@ -571,10 +712,10 @@ faceting = {
 	category = production
 
 	modifier = {
-
 	}
 
 	unlocking_technologies = {
+		expanded_quarrying
 	}
 
 	ai_weight = {
@@ -646,7 +787,43 @@ expanded_iron_mining = {
 	}
 
 	unlocking_technologies = {
-		standardized_planks_and_bricks
+		resource_extraction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+expanded_lead_mining = {
+	#Unlocks Second PM for Lead Mines
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/lead.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		resource_extraction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+expanded_tin_mining = {
+	#Unlocks Second PM for Lead Mines
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/tin.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		expanded_lead_mining
 	}
 
 	ai_weight = {
@@ -664,7 +841,7 @@ expanded_logging = {
 	}
 
 	unlocking_technologies = {
-		standardized_planks_and_bricks
+		resource_extraction
 	}
 
 	ai_weight = {
@@ -693,12 +870,11 @@ potatoes = {
 apprenticeship_system = {
 	#Education
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/pop_promotion_speed.dds"
+	texture = "gfx/interface/icons/invention_icons/apprenticeship_system.dds"
 	category = production
 
 	modifier = {
-		state_pop_qualifications_mult = 0.15
-		state_education_access_wealth_add = 0.025
+		state_pop_qualifications_mult = 0.10
 	}
 
 	unlocking_technologies = {
@@ -712,11 +888,11 @@ apprenticeship_system = {
 free_trade = {
 	#Unlocks Free Trade Law
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/economical_policies_law.dds"
+	texture = "gfx/interface/icons/invention_icons/free_trade.dds"
 	category = production
 
 	unlocking_technologies = {
-		apprenticeship_system
+		standardized_planks_and_bricks
 	}
 
 	ai_weight = {
@@ -739,7 +915,88 @@ iron_tools = {
 	}
 }
 
+commercial_bakeries = {
+	# Unlocks Bakery PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/bread.dds"
+	category = production
+
+	unlocking_technologies = {
+		apprenticeship_system
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+commercial_tanneries = {
+	# Unlocks Tannery PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/leather.dds"
+	category = production
+
+	unlocking_technologies = {
+		apprenticeship_system
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+expanded_fiber_farming = {
+	# Unlocks Fiber Farm PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/fiber_crops.dds"
+	category = production
+
+	unlocking_technologies = {
+		expanded_logging
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+expanded_quarrying = {
+	#Unlocks Second PM for Stone Quarry
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/stone.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		resource_extraction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
 ######## ERA 4
+
+skilled_craftmanship = {
+	#Education
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/skilled_craftmanship.dds"
+	category = production
+
+	modifier = {
+		state_pop_qualifications_mult = 0.10
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1 # very important tech
+	}
+}
 
 wagon_transport = {
 	#Unlocks Road Transport PM
@@ -792,18 +1049,142 @@ homesteading = {
 	}
 }
 
-steel_tools = {
-	# Unlocks Tools PM
-	era = era_5
-	texture = "gfx/interface/icons/goods_icons/tools.dds"
+deep_shaft_lead_mining = {
+	#Unlocks Lead Mine PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/lead.dds"
 	category = production
 
+	modifier = {
+	}
+
 	unlocking_technologies = {
-		apprenticeship_system
 	}
 
 	ai_weight = {
-		value = 2 # Very important tech in general
+		value = 2 # very important tech
+	}
+}
+
+deep_shaft_mining = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+deep_shaft_tin_mining = {
+	#Unlocks Copper Mine PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/tin.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		deep_shaft_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+deep_shaft_copper_mining = {
+	#Unlocks Copper Mine PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/copper.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		deep_shaft_tin_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+deep_shaft_iron_mining = {
+	#Unlocks Iron Mine PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/iron.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		deep_shaft_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+deep_shaft_coal_mining = {
+	#Unlocks Coal Mine PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/coal.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		deep_shaft_iron_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+################################################ ERA 5 ################################################
+manufactories = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/manufactories.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1 # Very important tech in general
+	}
+}
+
+bureaucractic_promotions = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/bureaucractic_promotions.dds"
+	category = production
+
+	modifier = {
+		state_pop_qualifications_mult = 0.10
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1 # Very important tech in general
 	}
 }
 
@@ -814,9 +1195,325 @@ steel_mills = {
 	category = production
 
 	unlocking_technologies = {
+		manufactories
 	}
 
 	ai_weight = {
 		value = 3
+	}
+}
+
+steel_tools = {
+	# Unlocks Tools PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/tools.dds"
+	category = production
+
+	unlocking_technologies = {
+		steel_mills
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+mechanized_baking = {
+	# Unlocks Bakery PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/bread.dds"
+	category = production
+
+	unlocking_technologies = {
+		manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+leather_manufactories = {
+	# Unlocks Bakery PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/leather.dds"
+	category = production
+
+	unlocking_technologies = {
+		manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+meat_manufactories = {
+	# Unlocks Meat PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/meat.dds"
+	category = production
+
+	unlocking_technologies = {
+		manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+brewing_manufactories = {
+	# Unlocks Meat PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/beer.dds"
+	category = production
+
+	unlocking_technologies = {
+		manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+distilling_manufactories = {
+	# Unlocks Liquor PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/liquor.dds"
+	category = production
+
+	unlocking_technologies = {
+		brewing_manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+pottery_manufactories = {
+	# Unlocks Glass PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/pottery.dds"
+	category = production
+
+	unlocking_technologies = {
+		manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+glass_manufactories = {
+	# Unlocks Glass PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/glass.dds"
+	category = production
+
+	unlocking_technologies = {
+		pottery_manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+bronze_manufactories = {
+	# Unlocks Glass PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/bronze.dds"
+	category = production
+
+	unlocking_technologies = {
+		manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+mechanized_extraction = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = production
+
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.10
+		building_group_bg_mining_throughput_add = 0.10
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_iron_mining = {
+	#Unlocks Iron Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/iron.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_extraction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_lead_mining = {
+	#Unlocks Lead Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/lead.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_extraction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_copper_mining = {
+	#Unlocks Copper Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/copper.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_extraction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_tin_mining = {
+	#Unlocks Tin Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/tin.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_copper_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_wood_logging = {
+	#Unlocks Wood Logging PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/wood.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_quarrying = {
+	#Unlocks Stone Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/stone.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_wood_logging
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_coal_mining = {
+	#Unlocks Coal Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/coal.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_iron_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_gem_mining = {
+	#Unlocks Gem Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/gems.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_lead_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+######## ERA 6
+
+limited_companies = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/limited_companies.dds"
+	category = production
+
+	modifier = {
+		country_company_throughput_bonus_add = 0.25
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1 # Very important tech in general
 	}
 }

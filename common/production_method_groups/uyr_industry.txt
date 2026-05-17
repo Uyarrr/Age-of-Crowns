@@ -14,6 +14,7 @@ pmg_building_glassworks_main = {
 		pm_building_glassworks_main_1
 		pm_building_glassworks_main_2
 		pm_building_glassworks_main_3
+		pm_building_glassworks_main_4
 	}
 }
 
@@ -42,15 +43,15 @@ pmg_building_steel_foundry_main = {
 	}
 }
 
-pmg_building_shipyard_main = {
+pmg_naval_supplies_workshop_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_building_shipyards_main_1
-		pm_building_shipyards_main_2
-		pm_building_shipyards_main_3
-		pm_building_shipyards_main_4
+		pm_building_naval_supplies_workshop_main_1
+		pm_building_naval_supplies_workshop_main_2
+		pm_building_naval_supplies_workshop_main_3
+		pm_building_naval_supplies_workshop_main_4
 	}
 }
 
@@ -240,5 +241,29 @@ pmg_building_printing_mill_main = {
 		pm_building_printing_mill_main_1
 		pm_building_printing_mill_main_2
 		pm_building_printing_mill_main_3
+	}
+}
+
+########################### NAVAL SUPPLIES ##################################
+
+pmg_building_naval_supplies_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_naval_supplies_workshop_main_1
+		pm_building_naval_supplies_workshop_main_2
+		pm_building_naval_supplies_workshop_main_3
+		pm_building_naval_supplies_workshop_main_4
+	}
+}
+
+########################### SHIPYARDS ##################################
+
+pmg_building_shipyard_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_shipyard_main_1
+		pm_building_shipyard_main_2
+		pm_building_shipyard_main_3
+		pm_building_shipyard_main_4
 	}
 }

@@ -1,0 +1,275 @@
+﻿society_age_1 = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+	category = society
+
+	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = { this = c:TUR }
+			add_technology_researched = ottoman_trait_1
+		}
+		if = {
+			limit = { this = c:MOR }
+			add_technology_researched = morocco_trait_1
+		}
+	}
+
+	ai_weight = { value = 3 }
+}
+
+society_age_2 = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
+	category = society
+
+	unlocking_technologies = { society_age_1 }
+
+	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = { this = c:TUR }
+			add_technology_researched = ottoman_trait_2
+		}
+		if = {
+			limit = { this = c:MOR }
+			add_technology_researched = morocco_trait_2
+		}
+	}
+
+	ai_weight = { value = 3 }
+}
+
+society_age_3 = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+	category = society
+
+	unlocking_technologies = { society_age_2 }
+
+	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = { this = c:TUR }
+			add_technology_researched = ottoman_trait_3
+		}
+		if = {
+			limit = { this = c:MOR }
+			add_technology_researched = morocco_trait_3
+		}
+	}
+
+	ai_weight = { value = 3 }
+}
+
+society_age_4 = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+	category = society
+
+	unlocking_technologies = { society_age_3 }
+
+	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = { this = c:TUR }
+			add_technology_researched = ottoman_trait_4
+		}
+		if = {
+			limit = { this = c:MOR }
+			add_technology_researched = morocco_trait_4
+		}
+	}
+
+	ai_weight = { value = 3 }
+}
+
+society_age_5 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds"
+	category = society
+
+	unlocking_technologies = { society_age_4 }
+
+	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = { this = c:TUR }
+			add_technology_researched = ottoman_trait_5
+		}
+		if = {
+			limit = { this = c:MOR }
+			add_technology_researched = morocco_trait_5
+		}
+	}
+
+	ai_weight = { value = 3 }
+}
+
+society_age_6 = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/age_6_revolutions.dds"
+	category = society
+
+	unlocking_technologies = { society_age_5 }
+
+	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = { this = c:TUR }
+			add_technology_researched = ottoman_trait_6
+		}
+		if = {
+			limit = { this = c:MOR }
+			add_technology_researched = morocco_trait_6
+		}
+	}
+
+	ai_weight = { value = 3 }
+}
+
+production_age_1 = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+	category = production
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+production_age_2 = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
+	category = production
+
+	unlocking_technologies = { production_age_1 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+production_age_3 = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+	category = production
+
+	unlocking_technologies = { production_age_2 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+production_age_4 = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+	category = production
+
+	unlocking_technologies = { production_age_3 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+production_age_5 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds"
+	category = production
+
+	unlocking_technologies = { production_age_4 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+production_age_6 = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/age_6_revolutions.dds"
+	category = production
+
+	unlocking_technologies = { production_age_5 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+military_age_1 = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+	category = military
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+military_age_2 = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
+	category = military
+
+	unlocking_technologies = { military_age_1 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+military_age_3 = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+	category = military
+
+	unlocking_technologies = { military_age_2 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+military_age_4 = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+	category = military
+
+	unlocking_technologies = { military_age_3 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+military_age_5 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds"
+	category = military
+
+	unlocking_technologies = { military_age_4 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
+
+military_age_6 = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/age_6_revolutions.dds"
+	category = military
+
+	unlocking_technologies = { military_age_5 }
+
+	can_research = yes
+
+	ai_weight = { value = 3 }
+}
