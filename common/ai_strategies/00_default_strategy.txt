@@ -4507,52 +4507,16 @@ ai_strategy_default = {
 	# root = country
 	ship_group_weights = {
 		ship_group_capital_ships = {
-			value = 30
-
-			if = {
-				limit = { has_law_or_variant = law_type:law_professional_navy }
-				add = 10
-			}			
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_merchant_navy }
-				subtract = 15
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_jeune_ecole }
-				subtract = 10
-			}			
+			value = 30	
 		}
 		ship_group_cruisers = {
-			value = 60
-			if = {
-				limit = { has_technology_researched = self_propelled_torpedoes }
-				subtract = 20
-			}
-
-			if = {
-				limit = { has_law_or_variant = law_type:law_professional_navy }
-				subtract = 10
-			}			
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_merchant_navy }
-				add = 15
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_jeune_ecole }
-				add = 10
-			}			
+			value = 40			
 		}
-		ship_group_torpedo_craft = {
-			value = 0
-			if = {
-				limit = { has_technology_researched = self_propelled_torpedoes }
-				add = 30
-			}
-			
-			if = {
-				limit = { has_law_or_variant = law_type:law_jeune_ecole }
-				add = 20
-			}			
+		ship_group_transports = {
+			value = 10		
+		}
+		ship_group_lights = {
+			value = 10		
 		}
 	}
 

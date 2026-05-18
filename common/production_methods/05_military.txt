@@ -76,9 +76,6 @@ pm_training_streamlining = {
 		soldiers = 85
 		officers = 15
 	}
-	disallowing_laws = {
-		reformed_army_training
-	}
 	unlocking_technologies = {
 		reformed_army_training
 	}
@@ -100,11 +97,8 @@ pm_nco_incorporation = {
 		soldiers = 80
 		officers = 20
 	}
-	disallowing_laws = {
-		behaviorism
-	}
 	unlocking_technologies = {
-		nco_training
+		behaviorism
 	}
 	building_modifiers = {
 		unscaled = {

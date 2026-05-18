@@ -1,6 +1,9 @@
 ﻿COUNTRIES = {
 	c:MUS ?= {
 		add_era_researched = era_1
-		add_modifier = strong_nation
+		add_modifier = {
+			name = strong_nation
+			years = 20
+		}
 	}
 }

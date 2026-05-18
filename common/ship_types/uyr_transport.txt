@@ -64,8 +64,8 @@ ship_type_hulk = {
 
     base_construction_cost = 18
 
-    is_obsolete = { has_technology_researched = flute_ship }
-    is_very_obsolete = { has_technology_researched = brig_ship }
+    is_obsolete = { has_technology_researched = flute }
+    is_very_obsolete = { has_technology_researched = brig }
 
     modifier = {
         ship_construction_progress_max_add = 25
@@ -124,7 +124,7 @@ ship_type_flute = {
 
     base_construction_cost = 24
 
-    is_obsolete = { has_technology_researched = brig_ship }
+    is_obsolete = { has_technology_researched = brig }
     is_very_obsolete = { has_technology_researched = merchantman }
 
     modifier = {
