@@ -4740,8 +4740,8 @@ ai_strategy_default = {
 	# Which buildings should the AI subsidize
 	# Using a different value in a strategy will override this value
 	subsidies = {
-		building_power_plant = must_have
 		building_railway = must_have
+		building_road = must_have
 		building_port = must_have
 	}
 
@@ -4752,92 +4752,36 @@ ai_strategy_default = {
 	# How should the AI plan for production and trade of specific goods
 	# Using a different value in a strategy will override this value
 	goods_stances = {
-		small_arms = {
+		weapons = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = line_infantry
+				has_technology_researched = weapon_crafting
 			}
 		}
-		artillery = {
+		cannons = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = artillery
+				has_technology_researched = cannonry
 			}
 		}
-		ammunition = {
+		saltpeter = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = general_staff
+				has_technology_researched = saltpeter_works
 			}
 		}
-		aeroplanes = {
+		firearms = {
 			stance = wants_high_supply
 			trigger = {
 				has_technology_researched = military_aviation
 				country_rank >= rank_value:major_power
 			}
 		}
-		tanks = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = mobile_armor
-				country_rank >= rank_value:major_power
-			}
-		}
-		clippers = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = navigation
-				NAND = {
-					has_technology_researched = ironclad_tech
-					has_technology_researched = gantry_cranes
-				}
-				has_port_country = yes
-				country_rank >= rank_value:major_power
-			}
-		}
-		manowars = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = admiralty
-				NAND = {
-					has_technology_researched = ironclad_tech
-					has_technology_researched = gantry_cranes
-				}
-				has_port_country = yes
-				country_rank >= rank_value:major_power
-			}
-		}
-		steamers = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = ironclad_tech
-				has_technology_researched = gantry_cranes
-				has_port_country = yes
-				country_rank >= rank_value:major_power
-			}
-		}
-		ironclads = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = ironclad_tech
-				has_technology_researched = gantry_cranes
-				has_port_country = yes
-				country_rank >= rank_value:major_power
-			}
-		}
 		paper = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = centralization
+				has_technology_researched = paper_mills
 				total_population >= 1000000
-				NOT = { has_law_or_variant = law_type:law_traditionalism }
-			}
-		}
-		electricity = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = electrical_generation
 			}
 		}
 		coal = {
@@ -4846,30 +4790,16 @@ ai_strategy_default = {
 				has_technology_researched = railways
 			}
 		}
-		engines = {
+		horse = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = railways
-			}
-		}
-		dye = {
-			stance = wants_high_supply
-			trigger = {
-				has_building = building_textile_mill
-				has_technology_researched = lathe
+				has_technology_researched = ranching
 			}
 		}
 		silk = {
 			stance = wants_high_supply
 			trigger = {
 				has_building = building_textile_mill
-				total_population >= 1000000
-			}
-		}
-		hardwood = {
-			stance = wants_high_supply
-			trigger = {
-				has_building = building_furniture_manufactory
 				total_population >= 1000000
 			}
 		}
@@ -4916,36 +4846,6 @@ ai_strategy_default = {
 	# root = liberator
 	# scope:target = oppressor
 	liberate_country_scores = {
-		HOL = {
-			if = {
-				limit = {
-					wants_to_solve_schleswig_holstein = yes
-					scope:target_country = {
-						is_oppressor_of_schleswig_holstein = yes
-					}
-					can_reach_target_country = no
-				}
-				add = 100
-			}
-		}
-		BUL = {
-			# Russia is inclined to want to release Bulgaria
-			if = {
-				limit = {
-					c:RUS ?= this
-				}
-				add = 200
-			}
-			if = { #especially during Eastern Crisis
-				limit = {
-					has_journal_entry = je_eastern_question_russia
-					scope:target_country = {
-						has_journal_entry = je_great_eastern_crisis
-					}
-				}
-				add = 300
-			}
-		}
 	}
 
 	# How important is it that the AI maintains an interest in a specific strategic region (added on top of region value calculations set in defines)
@@ -5014,42 +4914,6 @@ ai_strategy_default = {
 				}
 				add = 100
 			}
-		}
-
-		# Certain Great Powers care about Egyptian-Ottoman conflict in the early game
-		if = {
-			limit = {
-				OR = {
-					has_variable = veiled_protectorate_support_ottomans
-					has_variable = veiled_protectorate_support_egypt
-				}
-				OR = {
-					navy_size >= 25
-					is_adjacent_to_country = c:TUR
-					is_adjacent_to_country = c:EGY
-				}
-				scope:region = {
-					OR = {
-						this = sr:region_near_east
-						this = sr:region_arabia
-						this = sr:region_nile_basin
-						this = sr:region_balkans
-					}
-				}
-			}
-			add = 500
-		}
-
-		# Britain is participating in the Caucasian War in a certain capacity early game.
-		if = {
-			limit = {
-				c:GBR ?= this
-				exists = c:CIR
-				country_rank = rank_value:great_power
-				navy_size >= 50
-				scope:region = sr:region_russia
-			}
-			add = 100
 		}
 
 		# Annexation of Hawaii

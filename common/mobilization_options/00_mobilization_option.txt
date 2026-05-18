@@ -29,14 +29,6 @@
 mobilization_option_extra_supplies = {
 	texture = "gfx/interface/icons/mobilization_options/extra_supplies.dds"
 
-	possible = {
-		market ?= {
-			mg:groceries ?= {
-				has_potential_supply = yes
-			}
-		}
-	}
-
 	unlocking_technologies = {
 		extra_supplies
 	}
@@ -57,12 +49,10 @@ mobilization_option_extra_supplies = {
 		goods_input_bread_add = 1.5
 	}
 	upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.25
-        goods_input_artillery_mult = 0.25
-		goods_input_ammunition_mult = 0.25
-        goods_input_oil_mult = 0.25
-        goods_input_radios_mult = 0.25
-        goods_input_tanks_mult = 0.25
+        goods_input_weapons_mult = 0.25
+		goods_input_firearms_mult = 0.25
+        goods_input_cannons_mult = 0.25
+		goods_input_saltpeter_mult = 0.25
 	}
 
 	unit_modifier = {
@@ -135,12 +125,10 @@ mobilization_option_luxurious_supplies = {
 		goods_input_wine_add = 1.5
 	}
 	upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.25
-        goods_input_artillery_mult = 0.25
-		goods_input_ammunition_mult = 0.25
-        goods_input_oil_mult = 0.25
-        goods_input_radios_mult = 0.25
-        goods_input_tanks_mult = 0.25
+        goods_input_weapons_mult = 0.25
+		goods_input_firearms_mult = 0.25
+        goods_input_cannons_mult = 0.25
+		goods_input_saltpeter_mult = 0.25
 	}
 
 	unit_modifier = {
