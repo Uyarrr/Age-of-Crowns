@@ -52,6 +52,12 @@ ship_type_barque = {
         goods_input_navalsupplies_add = 0.05
     }
 
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
+    }
+
     unlocking_technologies = { barque }
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
@@ -112,6 +118,12 @@ ship_type_caravel = {
     materiel_goods = {
         goods_input_grain_add = 1
         goods_input_navalsupplies_add = 0.06
+    }
+
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
     }
 
     unlocking_technologies = { caravel }
@@ -175,6 +187,12 @@ ship_type_pinnace = {
     materiel_goods = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.08
+    }
+
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
     }
 
     unlocking_technologies = { pinnace }
@@ -241,6 +259,12 @@ ship_type_frigate = {
         goods_input_cannons_add = 0.03
     }
 
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
+    }
+
     unlocking_technologies = { frigate }
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
@@ -302,6 +326,12 @@ ship_type_heavy_frigate = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.12
         goods_input_cannons_add = 0.05
+    }
+
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
     }
 
     unlocking_technologies = { heavy_frigate }

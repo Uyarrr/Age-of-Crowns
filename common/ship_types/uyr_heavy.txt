@@ -44,6 +44,12 @@ ship_type_early_carrack = {
         goods_input_bronze_add = 0.05
     }
 
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
+    }
+
     unlocking_technologies = { early_carrack }
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
@@ -98,6 +104,12 @@ ship_type_carrack = {
         goods_input_navalsupplies_add = 0.2
         goods_input_bronze_add = 0.05
         goods_input_cannons_add = 0.05
+    }
+
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
     }
 
     unlocking_technologies = { carrack }
@@ -159,6 +171,12 @@ ship_type_galleon = {
         goods_input_saltpeter_add = 0.05
     }
 
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
+    }
+
     unlocking_technologies = { galleon }
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
@@ -218,6 +236,12 @@ ship_type_two_decker = {
         goods_input_saltpeter_add = 0.05
     }
 
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
+    }
+
     unlocking_technologies = { two_decker }
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
@@ -275,6 +299,12 @@ ship_type_three_decker = {
         goods_input_firearms_add = 0.1
         goods_input_saltpeter_add = 0.075
         goods_input_iron_add = 0.05
+    }
+
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
     }
 
     unlocking_technologies = { three_decker }
