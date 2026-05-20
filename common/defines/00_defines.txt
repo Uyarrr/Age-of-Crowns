@@ -412,7 +412,7 @@ NEconomy = {
 	GOODS_LEADERBOARD_PRESTIGE_SCALED = 2.75	# This multiplier of prestige from being top goods producer is scaled against global GDP
 
 	MIN_GOODS_PRICE	= 1							# A good cannot have a lower base price than this
-	PRICE_RANGE = 0.75							# min price of a good is base * (1 - PRICE_RANGE), Max price is base * (1 + PRICE_RANGE), PRICE_RANGE is locked to [0-1]
+	PRICE_RANGE = 0.90							# min price of a good is base * (1 - PRICE_RANGE), Max price is base * (1 + PRICE_RANGE), PRICE_RANGE is locked to [0-1]
 	BUY_SELL_DIFF_AT_MAX_FACTOR = 2				# the difference between buy/consumption and sell/production at min/max pricing, e.g. if set to 4 then if buy orders are 4x sell orders price is maxed
 
 	GOODS_SHORTAGE_PENALTY_THRESHOLD = 0.5		# If supply / demand is lower than this, start applying output penalties, by default this should be ( 1 / BUY_SELL_DIFF_AT_MAX_FACTOR )
