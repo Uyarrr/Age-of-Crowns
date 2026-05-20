@@ -3,7 +3,7 @@
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_tools_add = 1.3
+			goods_input_tools_add = 1
 			goods_output_transportation_add = 5
 		}
 		level_scaled = {
@@ -13,7 +13,7 @@
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 2.5
+			state_infrastructure_add = 3
 			state_market_access_price_impact = 0.01
 		}
 	}
@@ -28,7 +28,7 @@ pm_building_road_main_2 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_tools_add = 2.5
+			goods_input_tools_add = 2
 			goods_input_stone_add = 7
 			goods_output_transportation_add = 5
 		}
