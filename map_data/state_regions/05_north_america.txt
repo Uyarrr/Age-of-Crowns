@@ -143,6 +143,7 @@ STATE_ALASKA = {
         building_gold_mine = 4
         building_logging_camp = 90
         building_fishing_wharf = 10
+        building_tin_mine = 4
     }
     resource = {
         type = "building_stone_mine"
@@ -161,6 +162,10 @@ STATE_ALASKA = {
     resource = {
         type = "building_coal_mine"
         undiscovered_amount = 16
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 4
     }
 
     naval_exit_id = 3119
@@ -270,6 +275,7 @@ STATE_COLORADO = {
     
         building_stone_mine = 13
         building_copper_mine = 10
+        building_tin_mine = 2
     }
     resource = {
         type = "building_lead_mine"
@@ -304,6 +310,10 @@ STATE_COLORADO = {
     resource = {
         type = "building_gem_mine"
         undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
 }
@@ -354,7 +364,7 @@ STATE_MONTANA = {
         building_logging_camp = 17
     
         building_stone_mine = 12
-        building_copper_mine = 18
+        building_copper_mine = 22
     }
     resource = {
         type = "building_coal_mine"
@@ -370,7 +380,7 @@ STATE_MONTANA = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 18
+        undiscovered_amount = 22
     }
     resource = {
         type = "building_gem_mine"
@@ -727,7 +737,7 @@ STATE_MICHIGAN = {
         building_logging_camp = 50
     
         building_stone_mine = 10
-        building_copper_mine = 24
+        building_copper_mine = 26
     }
     resource = {
         type = "building_iron_mine"
@@ -743,7 +753,7 @@ STATE_MICHIGAN = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 24
+        undiscovered_amount = 26
     }
 
 }
@@ -1371,7 +1381,7 @@ STATE_UTAH = {
         building_logging_camp = 6
     
         building_stone_mine = 12
-        building_copper_mine = 14
+        building_copper_mine = 18
     }
     resource = {
         type = "building_sulfur_mine"
@@ -1392,7 +1402,7 @@ STATE_UTAH = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 14
+        undiscovered_amount = 18
     }
 
 }
@@ -1637,7 +1647,7 @@ STATE_BRITISH_COLUMBIA = {
         building_coal_mine = 14
         building_sulfur_mine = 18
         building_stone_mine = 14
-        building_copper_mine = 12
+        building_copper_mine = 16
         building_iron_mine = 7
         building_gold_mine = 2
         building_logging_camp = 90
@@ -1649,7 +1659,7 @@ STATE_BRITISH_COLUMBIA = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 12
+        undiscovered_amount = 16
     }
     resource = {
         type = "building_iron_mine"
@@ -1748,6 +1758,7 @@ STATE_YUKON_TERRITORY = {
         building_copper_mine = 8
         building_gold_mine = 4
         building_logging_camp = 25
+        building_tin_mine = 2
     }
     resource = {
         type = "building_stone_mine"
@@ -1770,6 +1781,10 @@ STATE_YUKON_TERRITORY = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 7
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
 }
@@ -1959,7 +1974,7 @@ STATE_ARIZONA = {
         building_logging_camp = 2
     
         building_stone_mine = 15
-        building_copper_mine = 30
+        building_copper_mine = 34
     }
     resource = {
         type = "building_sulfur_mine"
@@ -1985,7 +2000,7 @@ STATE_ARIZONA = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 30
+        undiscovered_amount = 34
     }
     resource = {
         type = "building_gem_mine"
@@ -2012,6 +2027,7 @@ STATE_NEW_MEXICO = {
     
         building_stone_mine = 11
         building_copper_mine = 12
+        building_tin_mine = 2
     }
     resource = {
         type = "building_lead_mine"
@@ -2029,6 +2045,10 @@ STATE_NEW_MEXICO = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
 }
@@ -2054,6 +2074,7 @@ STATE_CALIFORNIA = {
     
         building_stone_mine = 12
         building_copper_mine = 9
+        building_tin_mine = 2
     }
     resource = {
         type = "building_gold_mine"
@@ -2081,6 +2102,10 @@ STATE_CALIFORNIA = {
         type = "building_copper_mine"
         undiscovered_amount = 9
     }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
+    }
 
     naval_exit_id = 3153
 }
@@ -2103,7 +2128,7 @@ STATE_SONORA = {
         building_fishing_wharf = 7
     
         building_stone_mine = 14
-        building_copper_mine = 24
+        building_copper_mine = 28
     }
     resource = {
         type = "building_gold_field"
@@ -2120,7 +2145,7 @@ STATE_SONORA = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 24
+        undiscovered_amount = 28
     }
 
     naval_exit_id = 3153
@@ -2142,7 +2167,7 @@ STATE_CHIHUAHUA = {
         building_logging_camp = 6
     
         building_stone_mine = 12
-        building_copper_mine = 16
+        building_copper_mine = 18
     }
     resource = {
         type = "building_lead_mine"
@@ -2154,7 +2179,7 @@ STATE_CHIHUAHUA = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 16
+        undiscovered_amount = 18
     }
 
 }
@@ -2201,6 +2226,7 @@ STATE_DURANGO = {
         building_lead_mine = 6
         building_logging_camp = 4
         building_fishing_wharf = 5
+        building_tin_mine = 4
     }
     resource = {
         type = "building_stone_mine"
@@ -2214,6 +2240,10 @@ STATE_DURANGO = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 4
     }
 
 }
@@ -2263,6 +2293,7 @@ STATE_BAJIO = {
         building_iron_mine = 12
         building_gold_mine = 2
         building_stone_mine = 10
+        building_tin_mine = 2
     }
     resource = {
         type = "building_stone_mine"
@@ -2275,6 +2306,10 @@ STATE_BAJIO = {
     }
     resource = {
         type = "building_gold_mine"
+        undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_tin_mine"
         undiscovered_amount = 2
     }
 
@@ -2532,7 +2567,7 @@ STATE_ZACATECAS = {
     
         building_stone_mine = 11
         building_copper_mine = 10
-        building_tin_mine = 6
+        building_tin_mine = 4
         building_lead_mine = 10
     }
     resource = {
@@ -2559,7 +2594,7 @@ STATE_ZACATECAS = {
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 6
+        undiscovered_amount = 4
     }
 
 }

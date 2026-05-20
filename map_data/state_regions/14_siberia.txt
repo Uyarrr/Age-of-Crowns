@@ -18,6 +18,8 @@ STATE_URAL = {
         building_gold_mine = 1
         building_stone_mine = 10
         building_logging_camp = 27
+        building_copper_mine = 18
+        building_tin_mine = 4
     }
     resource = {
         type = "building_stone_mine"
@@ -45,6 +47,14 @@ STATE_URAL = {
         depleted_type = "building_gold_mine"
         undiscovered_amount = 6
     }
+    resource = {
+        type = "building_copper_mine"
+        undiscovered_amount = 18
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 4
+    }
 }
 
 STATE_TOMSK = {
@@ -65,6 +75,7 @@ STATE_TOMSK = {
         building_iron_mine = 14
         building_stone_mine = 10
         building_logging_camp = 26
+        building_tin_mine = 3
     }
     resource = {
         type = "building_stone_mine"
@@ -78,6 +89,10 @@ STATE_TOMSK = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 13
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 3
     }
 
 }
@@ -99,6 +114,7 @@ STATE_TUVA = {
         building_iron_mine = 9
         building_stone_mine = 10
         building_logging_camp = 14
+        building_tin_mine = 3
     }
     resource = {
         type = "building_stone_mine"
@@ -112,6 +128,10 @@ STATE_TUVA = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 9
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 3
     }
 
 }
@@ -234,6 +254,7 @@ STATE_CHUKOTKA = {
         building_stone_mine = 5
         building_logging_camp = 13
         building_fishing_wharf = 9
+        building_tin_mine = 3
     }
     resource = {
         type = "building_stone_mine"
@@ -248,6 +269,10 @@ STATE_CHUKOTKA = {
     resource = {
         type = "building_coal_mine"
         undiscovered_amount = 18
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 3
     }
 
     naval_exit_id = 3041
@@ -304,6 +329,7 @@ STATE_OKHOTSK = {
         building_stone_mine = 5
         building_fishing_wharf = 10
         building_logging_camp = 10
+        building_tin_mine = 3
     }
     resource = {
         type = "building_stone_mine"
@@ -318,6 +344,10 @@ STATE_OKHOTSK = {
     resource = {
         type = "building_coal_mine"
         undiscovered_amount = 18
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 3
     }
 
     naval_exit_id = 3118
@@ -381,6 +411,7 @@ STATE_TRANS_BAIKAL = {
         building_sulfur_mine = 22
         building_stone_mine = 10
         building_logging_camp = 24
+        building_tin_mine = 5
     }
     resource = {
         type = "building_stone_mine"
@@ -403,6 +434,10 @@ STATE_TRANS_BAIKAL = {
         type = "building_sulfur_mine"
         undiscovered_amount = 22
     }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 5
+    }
 
 }
 
@@ -423,6 +458,7 @@ STATE_IRKUTSK = {
         building_iron_mine = 18
         building_stone_mine = 10
         building_logging_camp = 30
+        building_tin_mine = 3
     }
     resource = {
         type = "building_stone_mine"
@@ -436,6 +472,10 @@ STATE_IRKUTSK = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 18
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 3
     }
 
 }

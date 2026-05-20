@@ -14,7 +14,7 @@ STATE_SVEALAND = {
         building_iron_mine = 30
         building_lead_mine = 9
         building_stone_mine = 10
-        building_copper_mine = 8
+        building_copper_mine = 18
         building_logging_camp = 45
         building_fishing_wharf = 11
     }
@@ -24,7 +24,7 @@ STATE_SVEALAND = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 18
     }
 
     resource = {
@@ -116,7 +116,7 @@ STATE_NORRLAND = {
     capped_resources = {
         building_iron_mine = 50
         building_stone_mine = 10
-        building_copper_mine = 8
+        building_copper_mine = 10
         building_logging_camp = 60
         building_fishing_wharf = 12
     }
@@ -126,7 +126,7 @@ STATE_NORRLAND = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 10
     }
 
     resource = {
@@ -301,7 +301,7 @@ STATE_EASTERN_NORWAY = {
     capped_resources = {
         building_iron_mine = 9
         building_stone_mine = 14
-        building_copper_mine = 8
+        building_copper_mine = 10
         building_logging_camp = 22
         building_fishing_wharf = 5
     }
@@ -311,7 +311,7 @@ STATE_EASTERN_NORWAY = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 10
     }
 
     resource = {
@@ -468,7 +468,7 @@ STATE_WALES = {
         building_fishing_wharf = 4
     
         building_stone_mine = 15
-        building_copper_mine = 12
+        building_copper_mine = 14
         building_tin_mine = 4
     }
     resource = {
@@ -486,7 +486,7 @@ STATE_WALES = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 12
+        undiscovered_amount = 14
     }
     resource = {
         type = "building_tin_mine"
@@ -662,8 +662,8 @@ STATE_WEST_COUNTRY = {
         building_fishing_wharf = 9
     
         building_stone_mine = 18
-        building_copper_mine = 18
-        building_tin_mine = 20
+        building_copper_mine = 20
+        building_tin_mine = 24
     }
     resource = {
         type = "building_lead_mine"
@@ -675,11 +675,11 @@ STATE_WEST_COUNTRY = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 18
+        undiscovered_amount = 20
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 20
+        undiscovered_amount = 24
     }
 
     naval_exit_id = 3028
@@ -1140,6 +1140,7 @@ STATE_AUVERGNE_LIMOUSIN = {
     
         building_stone_mine = 15
         building_copper_mine = 6
+        building_tin_mine = 3
     }
     resource = {
         type = "building_coal_mine"
@@ -1156,6 +1157,10 @@ STATE_AUVERGNE_LIMOUSIN = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 3
     }
 
 }
@@ -1565,8 +1570,8 @@ STATE_BOHEMIA = {
         building_gold_mine = 3
     
         building_stone_mine = 14
-        building_copper_mine = 8
-        building_tin_mine = 8
+        building_copper_mine = 10
+        building_tin_mine = 10
     }
     resource = {
         type = "building_coal_mine"
@@ -1590,11 +1595,11 @@ STATE_BOHEMIA = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 10
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 10
     }
 
 }
@@ -1616,7 +1621,7 @@ STATE_MORAVIA = {
         building_iron_mine = 7
         building_logging_camp = 14
     
-        building_tin_mine = 4
+        building_tin_mine = 5
     }
     resource = {
         type = "building_stone_mine"
@@ -1637,7 +1642,7 @@ STATE_MORAVIA = {
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 4
+        undiscovered_amount = 5
     }
 
 }
@@ -1927,6 +1932,7 @@ STATE_ANHALT = {
         building_coal_mine = 22
         building_stone_mine = 10
         building_logging_camp = 20
+        building_copper_mine = 10
     }
     resource = {
         type = "building_stone_mine"
@@ -1936,6 +1942,10 @@ STATE_ANHALT = {
     resource = {
         type = "building_coal_mine"
         undiscovered_amount = 22
+    }
+    resource = {
+        type = "building_copper_mine"
+        undiscovered_amount = 10
     }
 
 }
@@ -2266,8 +2276,8 @@ STATE_SAXONY = {
         building_logging_camp = 6
     
         building_stone_mine = 12
-        building_copper_mine = 12
-        building_tin_mine = 18
+        building_copper_mine = 16
+        building_tin_mine = 20
     }
     resource = {
         type = "building_coal_mine"
@@ -2287,11 +2297,11 @@ STATE_SAXONY = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 12
+        undiscovered_amount = 16
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 18
+        undiscovered_amount = 20
     }
 
 }

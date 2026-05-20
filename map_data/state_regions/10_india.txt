@@ -14,6 +14,7 @@ STATE_BIHAR = {
         building_iron_mine = 15
         building_stone_mine = 10
         building_logging_camp = 17
+        building_tin_mine = 2
     }
     resource = {
         type = "building_stone_mine"
@@ -27,6 +28,10 @@ STATE_BIHAR = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 15
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
 }
@@ -441,6 +446,7 @@ STATE_CENTRAL_PROVINCES = {
         building_coal_mine = 11
         building_stone_mine = 10
         building_logging_camp = 12
+        building_tin_mine = 4
     }
     resource = {
         type = "building_stone_mine"
@@ -454,6 +460,10 @@ STATE_CENTRAL_PROVINCES = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 11
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 4
     }
 
 }
@@ -607,6 +617,7 @@ STATE_ORISSA = {
         building_iron_mine = 18
         building_coal_mine = 11
         building_fishing_wharf = 7
+        building_tin_mine = 2
     }
     resource = {
         type = "building_stone_mine"
@@ -620,6 +631,10 @@ STATE_ORISSA = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 18
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
     naval_exit_id = 3050
@@ -899,7 +914,7 @@ STATE_TENASSERIM = {
         building_iron_mine = 3
     
         building_stone_mine = 10
-        building_tin_mine = 14
+        building_tin_mine = 18
     }
     resource = {
         type = "building_rubber_plantation"
@@ -915,7 +930,7 @@ STATE_TENASSERIM = {
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 14
+        undiscovered_amount = 18
     }
 
     naval_exit_id = 3051
@@ -936,7 +951,7 @@ STATE_KACHIN = {
         building_gem_mine = 4
         building_stone_mine = 14
         building_copper_mine = 8
-        building_tin_mine = 5
+        building_tin_mine = 8
         building_logging_camp = 24
         building_iron_mine = 4
         building_gold_mine = 2
@@ -951,7 +966,7 @@ STATE_KACHIN = {
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 5
+        undiscovered_amount = 8
     }
 
     resource = {
@@ -989,7 +1004,7 @@ STATE_SHAN_STATES = {
         building_logging_camp = 17
     
         building_stone_mine = 10
-        building_tin_mine = 12
+        building_tin_mine = 16
     }
     resource = {
         type = "building_copper_mine"
@@ -1018,7 +1033,7 @@ STATE_SHAN_STATES = {
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 12
+        undiscovered_amount = 16
     }
     resource = {
         type = "building_gem_mine"

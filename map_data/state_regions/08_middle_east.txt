@@ -38,7 +38,7 @@ STATE_OMAN = {
         building_fishing_wharf = 10
     
         building_stone_mine = 9
-        building_copper_mine = 6
+        building_copper_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -46,7 +46,7 @@ STATE_OMAN = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 6
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3073
@@ -182,7 +182,7 @@ STATE_CYPRUS = {
         building_sulfur_mine = 3
     
         building_stone_mine = 10
-        building_copper_mine = 18
+        building_copper_mine = 20
     }
     resource = {
         type = "building_iron_mine"
@@ -198,7 +198,7 @@ STATE_CYPRUS = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 18
+        undiscovered_amount = 20
     }
 
     naval_exit_id = 3034
@@ -539,7 +539,7 @@ STATE_KERMAN = {
         building_iron_mine = 20
         building_sulfur_mine = 11
         building_stone_mine = 10
-        building_copper_mine = 8
+        building_copper_mine = 12
         building_logging_camp = 2
     }
     resource = {
@@ -548,7 +548,7 @@ STATE_KERMAN = {
     }
     resource = {
         type = "building_copper_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 12
     }
 
     resource = {
@@ -618,6 +618,7 @@ STATE_KHORASAN = {
         building_coal_mine = 6
     
         building_copper_mine = 6
+        building_tin_mine = 3
     }
     resource = {
         type = "building_stone_mine"
@@ -635,6 +636,10 @@ STATE_KHORASAN = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 3
     }
 
 }
@@ -957,10 +962,15 @@ STATE_HUDAVENDIGAR = {
         building_stone_mine = 8
         building_logging_camp = 9
         building_fishing_wharf = 8
+        building_tin_mine = 3
     }
     resource = {
         type = "building_stone_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 3
     }
 
     naval_exit_id = 3035
@@ -1021,6 +1031,7 @@ STATE_KONYA = {
     
         building_stone_mine = 10
         building_copper_mine = 8
+        building_tin_mine = 4
     }
     resource = {
         type = "building_stone_mine"
@@ -1029,6 +1040,10 @@ STATE_KONYA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 4
     }
 
     naval_exit_id = 3034
@@ -1225,6 +1240,7 @@ STATE_ANKARA = {
     
         building_stone_mine = 10
         building_copper_mine = 8
+        building_tin_mine = 2
     }
     resource = {
         type = "building_stone_mine"
@@ -1233,6 +1249,10 @@ STATE_ANKARA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
 }

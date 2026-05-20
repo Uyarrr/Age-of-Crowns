@@ -448,6 +448,7 @@ STATE_BANAT = {
     
         building_stone_mine = 10
         building_copper_mine = 8
+        building_tin_mine = 2
     }
     resource = {
         type = "building_stone_mine"
@@ -456,6 +457,10 @@ STATE_BANAT = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
 }
@@ -548,6 +553,7 @@ STATE_SOUTHERN_TRANSYLVANIA = {
     
         building_stone_mine = 12
         building_copper_mine = 12
+        building_tin_mine = 2
     }
     resource = {
         type = "building_iron_mine"
@@ -564,6 +570,10 @@ STATE_SOUTHERN_TRANSYLVANIA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
 }
@@ -585,6 +595,7 @@ STATE_NORTHERN_TRANSYLVANIA = {
     
         building_stone_mine = 11
         building_copper_mine = 8
+        building_tin_mine = 2
     }
     resource = {
         type = "building_coal_mine"
@@ -601,6 +612,10 @@ STATE_NORTHERN_TRANSYLVANIA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
 }

@@ -18,7 +18,7 @@ STATE_MALAYA = {
         building_fishing_wharf = 10
     
         building_stone_mine = 9
-        building_tin_mine = 30
+        building_tin_mine = 36
     }
     resource = {
         type = "building_copper_mine"
@@ -43,7 +43,7 @@ STATE_MALAYA = {
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 30
+        undiscovered_amount = 36
     }
 
     naval_exit_id = 3051
@@ -223,6 +223,7 @@ STATE_WEST_JAVA = {
         building_stone_mine = 10
         building_logging_camp = 8
         building_fishing_wharf = 11
+        building_tin_mine = 2
     }
     resource = {
         type = "building_stone_mine"
@@ -240,6 +241,10 @@ STATE_WEST_JAVA = {
     resource = {
         type = "building_sulfur_mine"
         undiscovered_amount = 16
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
     naval_exit_id = 3052
@@ -336,7 +341,7 @@ STATE_NORTH_SUMATRA = {
         building_logging_camp = 29
         building_fishing_wharf = 13
     
-        building_tin_mine = 8
+        building_tin_mine = 10
     }
     resource = {
         type = "building_stone_mine"
@@ -361,7 +366,7 @@ STATE_NORTH_SUMATRA = {
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 10
     }
 
     naval_exit_id = 3158
@@ -386,7 +391,7 @@ STATE_SOUTH_SUMATRA = {
         building_fishing_wharf = 13
     
         building_stone_mine = 9
-        building_tin_mine = 20
+        building_tin_mine = 34
     }
     resource = {
         type = "building_copper_mine"
@@ -411,7 +416,7 @@ STATE_SOUTH_SUMATRA = {
     }
     resource = {
         type = "building_tin_mine"
-        undiscovered_amount = 20
+        undiscovered_amount = 34
     }
 
     naval_exit_id = 3158
@@ -548,6 +553,7 @@ STATE_CELEBES = {
         building_stone_mine = 10
         building_logging_camp = 14
         building_fishing_wharf = 4
+        building_tin_mine = 2
     }
     resource = {
         type = "building_stone_mine"
@@ -561,6 +567,10 @@ STATE_CELEBES = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 13
+    }
+    resource = {
+        type = "building_tin_mine"
+        undiscovered_amount = 2
     }
 
     naval_exit_id = 3125
