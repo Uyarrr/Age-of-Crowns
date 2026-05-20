@@ -56,7 +56,7 @@ ship_type_barque = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
-        military_formation_fleet_movement_speed_mult = -0.95
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { barque }
@@ -125,6 +125,7 @@ ship_type_caravel = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { caravel }
@@ -194,6 +195,7 @@ ship_type_pinnace = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { pinnace }
@@ -264,6 +266,7 @@ ship_type_frigate = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { frigate }
@@ -333,6 +336,7 @@ ship_type_heavy_frigate = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { heavy_frigate }

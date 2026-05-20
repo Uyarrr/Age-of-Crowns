@@ -48,6 +48,7 @@ ship_type_early_carrack = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { early_carrack }
@@ -110,6 +111,7 @@ ship_type_carrack = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { carrack }
@@ -175,6 +177,7 @@ ship_type_galleon = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { galleon }
@@ -240,6 +243,7 @@ ship_type_two_decker = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { two_decker }
@@ -305,7 +309,7 @@ ship_type_three_decker = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
-        military_formation_fleet_movement_speed_mult = -0.95
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { three_decker }

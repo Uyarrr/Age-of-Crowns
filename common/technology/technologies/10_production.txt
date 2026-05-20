@@ -616,6 +616,51 @@ luxury_furnitures = {
 	}
 }
 
+luxury_furnitures = {
+	# Unlocks Luxury Furniture PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+		dyed_furnitures
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+grafting_techniques = {
+	# Unlocks Fruit Orchard PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/fruit.dds"
+	category = production
+
+	unlocking_technologies = {
+		manured_fields
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+refined_tea_cultivation = {
+	# Unlocks Tea PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/tea.dds"
+	category = production
+
+	unlocking_technologies = {
+		grafting_techniques
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## AGE 3 ######
 
 resource_extraction = {

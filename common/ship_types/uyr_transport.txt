@@ -50,6 +50,13 @@ ship_type_cog = {
         goods_input_navalsupplies_add = 0.04
     }
 
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
+    }
+
     unlocking_technologies = { cog }
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
@@ -114,7 +121,7 @@ ship_type_hulk = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
-        military_formation_fleet_movement_speed_mult = -0.95
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { hulk }
@@ -181,7 +188,7 @@ ship_type_flute = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
-        military_formation_fleet_movement_speed_mult = -0.95
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { flute }
@@ -250,7 +257,7 @@ ship_type_brig = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
-        military_formation_fleet_movement_speed_mult = -0.95
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { brig }
@@ -319,7 +326,7 @@ ship_type_merchantman = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
-        military_formation_fleet_movement_speed_mult = -0.95
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { merchantman }
@@ -388,7 +395,7 @@ ship_type_east_indiaman = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
         ship_interest_gain_mult = -1.0
-        military_formation_fleet_movement_speed_mult = -0.95
+        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { east_indiaman }
