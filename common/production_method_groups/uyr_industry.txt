@@ -192,7 +192,7 @@ pmg_building_bakery_heating = {
 		pm_building_bakery_heating_2
 	}
 }
-########################### Slaugtherhouse ##################################
+########################### SLAUGHTERHOUSE ##################################
 
 pmg_building_slaughterhouse_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -253,5 +253,17 @@ pmg_building_shipyard_main = {
 		pm_building_shipyard_main_2
 		pm_building_shipyard_main_3
 		pm_building_shipyard_main_4
+	}
+}
+
+########################### SHIPYARDS ##################################
+
+pmg_building_ironworks_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_ironworks_main_1
+		pm_building_ironworks_main_2
+		pm_building_ironworks_main_3
+		pm_building_ironworks_main_4
 	}
 }
