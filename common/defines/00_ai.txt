@@ -483,7 +483,7 @@
 	TECH_COST_PENALTY_FACTOR = 5.0 # AI tendency to research a tech is divided by ( 1 + this * ahead of time penalty / era base cost )
 
 	# Below data is used to determine which states the AI should incorporate
-	INCORPORATE_STATE_MAX_YEARS = 8.5 # Max years that incorporation is allowed to take for the AI to incorporate a state
+	INCORPORATE_STATE_MAX_YEARS = 35 # Max years that incorporation is allowed to take for the AI to incorporate a state
 	INCORPORATE_STATE_MIN_POPULATION = 100000 # Min population in a state for the AI to incorporate it
 
 	# Below data is used to determine which states are most important to defend
