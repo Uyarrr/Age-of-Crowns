@@ -13,24 +13,13 @@
 
 	goods_stances = {
 		grain = { stance = wants_export }
-		meat = { stance = wants_export }
 		fish = { stance = wants_export }
+		salt = { stance = wants_export }
 		fruit = { stance = wants_export }
-		liquor = { stance = wants_export }
 		wine = { stance = wants_export }
 		fabric = { stance = wants_export }
-		fertilizer = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = intensive_agriculture
-			}
-		}
-		tools = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = intensive_agriculture
-			}
-		}
+		livestock = { stance = wants_export }
+		horse = { stance = wants_export }
 	}
 
 	possible = {
@@ -49,17 +38,6 @@
 					is_in_geographic_region = geographic_region_middle_east
 					is_in_geographic_region = geographic_region_central_asia_old
 					capital.region = sr:region_oceania
-				}
-			}
-			add = 20
-		}
-
-		if = {
-			limit = {
-				exists = c:FRA
-				c:FRA = this
-				ruler = {
-					has_variable = legitimist_leader
 				}
 			}
 			add = 20
@@ -94,103 +72,6 @@
 			}
 			multiply = 1.5
 		}
-
-		if = {
-			limit = {
-				exists = overlord
-				overlord = {
-					OR = {
-						AND = {
-							is_ai = no
-							NOT = { has_law_or_variant = law_type:law_traditionalism }
-						}
-						has_strategy = ai_strategy_resource_expansion
-						has_strategy = ai_strategy_industrial_expansion
-					}
-				}
-			}
-			multiply = 0.5
-		}
-	}
-}
-
-ai_strategy_plantation_economy = {
-	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
-
-	type = administrative
-
-	goods_stances = {
-		fruit = { stance = wants_export }
-		fabric = { stance = wants_export }
-		sugar = { stance = wants_export }
-		coffee = { stance = wants_export }
-		tea = { stance = wants_export }
-		opium = { stance = wants_export }
-		tobacco = { stance = wants_export }
-		dye = { stance = wants_export }
-		silk = { stance = wants_export }
-	}
-
-	building_group_weights = {
-		bg_plantations = 2.0
-		bg_manufacturing = 0.5
-	}
-
-	possible = {
-		OR = {
-			is_in_geographic_region = geographic_region_dixie_old
-			is_in_geographic_region = geographic_region_south_america
-			is_in_geographic_region = geographic_region_central_america_old
-			is_in_geographic_region = geographic_region_india
-			is_in_geographic_region = geographic_region_south_east_asia
-			is_in_geographic_region = geographic_region_africa
-			is_in_geographic_region = geographic_region_east_asia
-			is_in_geographic_region = geographic_region_middle_east
-		}
-	}
-
-	weight = {
-		value = 10
-
-		if = {
-			limit = {
-				OR = {
-					is_in_geographic_region = geographic_region_south_america
-					is_in_geographic_region = geographic_region_central_america_old
-					is_in_geographic_region = geographic_region_india
-					is_in_geographic_region = geographic_region_south_east_asia
-					is_in_geographic_region = geographic_region_dixie_old
-				}
-			}
-			add = 20
-		}
-
-		if = {
-			limit = { is_country_type = unrecognized }
-			multiply = 0.5
-		}
-
-		if = {
-			limit = {
-				exists = ig:ig_landowners
-				ig:ig_landowners ?= { is_powerful = yes }
-			}
-			multiply = 1.5
-		}
-
-		if = {
-			limit = {
-				is_princely_state = yes
-			}
-			add = 20
-		}
-
-		if = {
-			limit = {
-				has_journal_entry = je_agricultural_development
-			}
-			add = 45
-		}
 	}
 }
 
@@ -200,8 +81,6 @@ ai_strategy_resource_expansion = {
 	type = administrative
 
 	building_group_weights = {
-		bg_rubber = 1.5
-		bg_oil_extraction = 1.5
 		bg_mining = 1.5
 		bg_logging = 1.5
 	}
@@ -267,13 +146,6 @@ ai_strategy_resource_expansion = {
 
 		if = {
 			limit = {
-				has_technology_researched = railways
-			}
-			multiply = 2.0
-		}
-
-		if = {
-			limit = {
 				exists = overlord
 				overlord = {
 					OR = {
@@ -324,8 +196,6 @@ ai_strategy_industrial_expansion = {
 
 	building_group_weights = {
 		bg_manufacturing = 1.25
-		bg_rubber = 1.25
-		bg_oil_extraction = 1.25
 		bg_mining = 1.25
 		bg_logging = 1.25
 	}
@@ -350,19 +220,6 @@ ai_strategy_industrial_expansion = {
 				}
 			}
 			add = 20
-		}
-
-		if = {
-			limit = {
-				has_radical_leftist_government = yes
-				NOT = {
-					ig:ig_rural_folk ?= {
-						is_powerful = yes
-						is_in_government = yes
-					}
-				}
-			}
-			add = 50
 		}
 
 		if = {
@@ -402,13 +259,6 @@ ai_strategy_industrial_expansion = {
 
 		if = {
 			limit = { literacy_rate >= 0.80 }
-			multiply = 1.5
-		}
-
-		if = {
-			limit = {
-				has_technology_researched = railways
-			}
 			multiply = 1.5
 		}
 	}
@@ -529,17 +379,14 @@ ai_strategy_colonial_extraction = {
         tools = { stance = wants_high_supply }
         coal = { stance = wants_export }
         iron = { stance = wants_export }
-        oil = { stance = wants_export }
         lead = { stance = wants_export }
         wood = { stance = wants_export }
-        hardwood = { stance = wants_export }
         sulfur = { stance = wants_export }
         fruit = { stance = wants_export }
         fabric = { stance = wants_export }
         sugar = { stance = wants_export }
         coffee = { stance = wants_export }
         tea = { stance = wants_export }
-        opium = { stance = wants_export }
         tobacco = { stance = wants_export }
         dye = { stance = wants_export }
         silk = { stance = wants_export }
