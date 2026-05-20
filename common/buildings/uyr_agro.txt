@@ -225,3 +225,23 @@ building_apiary = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 }
+
+building_orchard = {
+	building_group = bg_agriculture
+	icon = "gfx/interface/icons/building_icons/orchard_uyr.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_orchard_main
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
+}
