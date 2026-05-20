@@ -1,0 +1,513 @@
+﻿ai_strategy_hre_imperial_hegemony = {
+	icon = "gfx/interface/icons/ai_strategy_icons/maintain_power_balance.dds"
+
+	type = diplomatic
+
+	will_form_power_bloc = {
+		always = no
+	}
+
+	undesirable_infamy_level = {
+		value = 30
+	}
+
+	unacceptable_infamy_level = {
+		value = 60
+	}
+
+	ideological_opinion_effect_mult = {
+		value = 1.25
+	}
+
+	wargoal_maneuvers_fraction = {
+		value = 0.05
+	}
+
+	diplomatic_play_neutrality = {
+		value = -25
+	}
+
+	diplomatic_play_boldness = {
+		value = 10
+	}
+
+	recklessness = {
+		value = 0.0
+	}
+
+	diplomatic_play_support = {
+		value = 0
+
+		add = {
+			value = "scope:country.modifier:country_diplomatic_reputation_add"
+			desc = "DIPLOMATIC_REPUTATION_REASON"
+		}
+
+		# Strongly support HRE members when they are defending against outsiders
+		if = {
+			limit = {
+				NOT = { exists = scope:is_initiator }
+				scope:country = {
+					is_in_same_power_bloc = root
+				}
+				scope:enemy_country = {
+					NOT = { is_in_same_power_bloc = root }
+				}
+			}
+			add = {
+				value = 150
+				desc = "hremember_defense"
+			}
+		}
+
+		# More support if the war is in Austria's core imperial sphere
+		if = {
+			limit = {
+				NOT = { exists = scope:is_initiator }
+				scope:country = {
+					OR = {
+							capital.region = sr:region_danubia
+							capital.region = sr:region_balkans
+							capital.region = sr:region_north_germany
+							capital.region = sr:region_south_germany
+							capital.region = sr:region_italy
+							capital.region = sr:region_poland
+							capital.region = sr:region_rhine
+							capital.region = sr:region_france
+							capital.region = sr:region_occitania
+					}
+				}
+			}
+			add = {
+				value = 50
+				desc = "hremember_imperial_sphere"
+			}
+		}
+
+		# Austria should strongly refuse to support an outside attacker against HRE members
+		if = {
+			limit = {
+				exists = scope:is_initiator
+				scope:country = {
+					NOT = { is_in_same_power_bloc = root }
+				}
+				scope:enemy_country = {
+					is_in_same_power_bloc = root
+				}
+			}
+			add = {
+				value = -500
+				desc = "hremember_no_attack_support"
+			}
+		}
+
+		# Strong bias against neutrality when a bloc member is attacked
+		if = {
+			limit = {
+				NOT = { exists = scope:is_initiator }
+				scope:country = {
+					is_in_same_power_bloc = root
+				}
+			}
+			add = {
+				value = 75
+				desc = "hremember_no_neutrality"
+			}
+		}
+	}
+
+	aggression = {
+		value = 0.60
+
+		# More assertive against nearby threats to the Imperial sphere
+		if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+							capital.region = sr:region_danubia
+							capital.region = sr:region_balkans
+							capital.region = sr:region_north_germany
+							capital.region = sr:region_south_germany
+							capital.region = sr:region_italy
+							capital.region = sr:region_poland
+							capital.region = sr:region_rhine
+							capital.region = sr:region_france
+							capital.region = sr:region_occitania
+					}
+				}
+			}
+			add = 0.60
+		}
+
+		# Prefer reachable adjacent targets
+		if = {
+			limit = {
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= root.country_rank
+			}
+			add = 0.50
+		}
+
+		# Less aggressive against own subjects / imperial dependents
+		if = {
+			limit = {
+				scope:target_country = { is_subject_of = root }
+			}
+			multiply = 0.10
+		}
+
+		# A bit more assertive if the HRE uses vassalization-style principles
+		if = {
+			limit = {
+				power_bloc ?= {
+					has_identity = identity:identity_holy_roman_empire
+					has_principle_group = principle_group:principle_group_vassalization
+				}
+			}
+			add = 0.25
+		}
+
+		# Austria should not lash out at fellow bloc members
+		if = {
+			limit = {
+				is_in_same_power_bloc = scope:target_country
+			}
+			multiply = 0.05
+		}
+
+		# Less aggressive against countries we're only antagonistic toward
+		if = {
+			limit = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = antagonistic
+				}
+			}
+			multiply = 0.25
+		}
+
+		multiply = {
+			value = "ai_ideological_opinion(scope:target_country)"
+			multiply = -0.1
+			add = 1
+			max = 2.0
+			min = 0.5
+		}
+	}
+
+	building_group_weights = {
+		bg_army = 1.25
+		bg_technology = 1.15
+	}
+
+	secret_goal_weights = {
+		protect = 2.0
+		dominate = 1.75
+		reconcile = 1.25
+		befriend = 1.0
+		conquer = 0.40
+	}
+
+	wargoal_weights = {
+		make_protectorate = 2.5
+		make_dominion = 1.5
+		reduce_autonomy = 2.5
+		annex_country = 1.25
+		return_state = 1.5
+		liberate_subject = 2.0
+		liberate_country = 1.25
+		transfer_subject = 1.5
+		conquer_state = 0.50
+		force_nationalization = 0.0
+	}
+
+	secret_goal_scores = {
+		protect = {
+			trigger = {
+				OR = {
+					scope:target_country = { is_subject_of = root }
+					is_in_same_power_bloc = scope:target_country
+				}
+			}
+			score = {
+				value = 250
+
+				if = {
+					limit = {
+						is_in_same_power_bloc = scope:target_country
+					}
+					add = 150
+				}
+			}
+		}
+
+		dominate = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				NOT = { is_in_same_power_bloc = scope:target_country }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= root.country_rank
+				scope:target_country = {
+					OR = {
+						capital.region = sr:region_danubia
+						capital.region = sr:region_balkans
+						capital.region = sr:region_north_germany
+						capital.region = sr:region_south_germany
+						capital.region = sr:region_italy
+						capital.region = sr:region_poland
+						capital.region = sr:region_rhine
+						capital.region = sr:region_france
+						capital.region = sr:region_occitania
+					}
+				}
+			}
+			score = {
+				value = 200
+
+				if = {
+					limit = {
+						scope:target_country.country_rank <= rank_value:minor_power
+					}
+					add = 125
+				}
+			}
+		}
+
+		befriend = {
+			trigger = {
+				OR = {
+					scope:target_country = { is_subject_of = root }
+					is_in_same_power_bloc = scope:target_country
+				}
+			}
+			score = {
+				value = 125
+
+				if = {
+					limit = {
+						scope:target_country = { relations:root < relations_threshold:amicable }
+					}
+					add = 75
+				}
+			}
+		}
+
+		reconcile = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				NOT = { is_in_same_power_bloc = scope:target_country }
+				scope:target_country = {
+					OR = {
+							capital.region = sr:region_danubia
+							capital.region = sr:region_balkans
+							capital.region = sr:region_north_germany
+							capital.region = sr:region_south_germany
+							capital.region = sr:region_italy
+							capital.region = sr:region_poland
+							capital.region = sr:region_rhine
+							capital.region = sr:region_france
+							capital.region = sr:region_occitania
+					}
+				}
+			}
+			score = {
+				value = 75
+			}
+		}
+
+		conquer = {
+			trigger = {
+				NOT = { is_in_same_power_bloc = scope:target_country }
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= root.country_rank
+			}
+			score = {
+				value = 40
+			}
+		}
+	}
+
+	wargoal_scores = {
+		make_protectorate = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+				}
+				add = 225
+			}
+		}
+
+		make_dominion = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+				}
+				add = 125
+			}
+		}
+
+		reduce_autonomy = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = { relations:root >= relations_threshold:amicable }
+				}
+				add = 150
+			}
+		}
+
+		annex_country = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country.country_rank <= rank_value:minor_power
+					scope:target_country = { relations:root >= relations_threshold:cordial }
+				}
+				add = 125
+			}
+		}
+
+		return_state = {
+			if = {
+				limit = {
+					has_strategic_adjacency = scope:target_country
+				}
+				add = 100
+			}
+		}
+
+		liberate_subject = {
+			if = {
+				limit = {
+					scope:target_country.country_rank >= root.country_rank
+					scope:target_country = {
+						OR = {
+							capital.region = sr:region_danubia
+							capital.region = sr:region_balkans
+							capital.region = sr:region_north_germany
+							capital.region = sr:region_south_germany
+							capital.region = sr:region_italy
+							capital.region = sr:region_poland
+							capital.region = sr:region_rhine
+							capital.region = sr:region_france
+							capital.region = sr:region_occitania
+						}
+					}
+				}
+				add = 150
+			}
+		}
+
+		liberate_country = {
+			if = {
+				limit = {
+					scope:target_country.country_rank >= root.country_rank
+					scope:target_country = {
+						OR = {
+							capital.region = sr:region_danubia
+							capital.region = sr:region_balkans
+							capital.region = sr:region_north_germany
+							capital.region = sr:region_south_germany
+							capital.region = sr:region_italy
+							capital.region = sr:region_poland
+							capital.region = sr:region_rhine
+							capital.region = sr:region_france
+							capital.region = sr:region_occitania
+						}
+					}
+				}
+				add = 100
+			}
+		}
+
+		transfer_subject = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+				}
+				add = 125
+			}
+		}
+
+		conquer_state = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = conquer
+					}
+					NOT = { is_in_same_power_bloc = scope:target_country }
+				}
+				add = 40
+			}
+		}
+	}
+
+	possible = {
+		is_subject = no
+		is_power_bloc_leader = yes
+		power_bloc ?= {
+			has_identity = identity:identity_holy_roman_empire
+		}
+	}
+
+	weight = {
+		value = 200
+
+		# Austria / Emperor should strongly prefer this while the HRE exists
+		if = {
+			limit = {
+				OR = {
+					c:AUS ?= this
+				}
+			}
+			add = 150
+		}
+
+		# Stronger if there are many nearby independent minors outside direct imperial control
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					NOT = { is_subject_of = root }
+					NOT = { is_in_same_power_bloc = root }
+					OR = {
+						capital.region = sr:region_danubia
+						capital.region = sr:region_balkans
+						capital.region = sr:region_north_germany
+						capital.region = sr:region_south_germany
+						capital.region = sr:region_italy
+						capital.region = sr:region_poland
+						capital.region = sr:region_rhine
+						capital.region = sr:region_france
+						capital.region = sr:region_occitania
+					}
+				}
+			}
+			add = 75
+		}
+
+		# More committed if the bloc is using vassalization-style principles
+		if = {
+			limit = {
+				power_bloc ?= {
+					has_principle_group = principle_group:principle_group_vassalization
+				}
+			}
+			add = 50
+		}
+	}
+}

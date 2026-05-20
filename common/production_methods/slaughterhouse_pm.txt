@@ -31,7 +31,7 @@ pm_building_slaughterhouse_main_2 = {
 			goods_input_livestock_add = 10
 
 			# output goods
-			goods_output_meat_add = 50 
+			goods_output_meat_add = 40 
 		}
 
 		level_scaled = {
@@ -56,7 +56,7 @@ pm_building_slaughterhouse_main_3 = {
 			goods_input_livestock_add = 15
 
 			# output goods
-			goods_output_meat_add = 80
+			goods_output_meat_add = 60
 		}
 
 		level_scaled = {
@@ -82,7 +82,7 @@ pm_building_slaughterhouse_main_4 = {
 			goods_input_livestock_add = 20
 
 			# output goods
-			goods_output_bread_add = 80
+			goods_output_meat_add = 80
 		}
 
 		level_scaled = {
@@ -119,7 +119,7 @@ pm_building_slaughterhouse_salting_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		improved_salted_meat_preservation
 	}
 
 	building_modifiers = {

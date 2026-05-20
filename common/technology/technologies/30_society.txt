@@ -764,8 +764,8 @@ new_world = {
 	category = society
 
 	modifier = {
-		country_max_declared_interests_add = 1
 		country_resource_discovery_chance_mult = 0.15
+		country_institution_colonial_affairs_max_investment_add = 1
 	}
 
 	unlocking_technologies = {
@@ -818,7 +818,7 @@ colonial_charters = {
 	category = society
 
 	modifier = {
-		country_institution_colonial_affairs_max_investment_add = 1		
+		country_institution_colonial_affairs_max_investment_add = 1
 	}
 
 	unlocking_technologies = {

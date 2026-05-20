@@ -1,0 +1,566 @@
+﻿ai_strategy_timurid_imperial_conquest = {
+	icon = "gfx/interface/icons/ai_strategy_icons/territorial_expansion.dds"
+
+	type = diplomatic
+
+	will_form_power_bloc = {
+		always = yes
+	}
+
+	undesirable_infamy_level = {
+		value = 55
+	}
+
+	unacceptable_infamy_level = {
+		value = 90
+	}
+
+	ideological_opinion_effect_mult = {
+		value = 0.70
+	}
+
+	wargoal_maneuvers_fraction = {
+		value = 0.25
+	}
+
+	diplomatic_play_neutrality = {
+		value = 5
+	}
+
+	diplomatic_play_boldness = {
+		value = 65
+	}
+
+	recklessness = {
+		value = 0.32
+	}
+
+	aggression = {
+		value = 0.95
+
+		# Main driver: pursue countries holding Timurid claims
+		if = {
+			limit = {
+				scope:target_country = {
+					any_scope_state = {
+						has_claim_by = root
+					}
+				}
+			}
+			add = 1.20
+		}
+
+		# Strong preference for direct bordering expansion
+		if = {
+			limit = {
+				scope:target_country = {
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = root
+							is_incorporated = yes
+						}
+					}
+				}
+			}
+			add = 0.95
+		}
+
+		# Secondary preference for nearby sea expansion if the empire has naval presence
+		if = {
+			limit = {
+				root = { navy_size >= 6 }
+				scope:target_country = {
+					any_scope_state = {
+						any_sea_node_adjacent_state = {
+							owner = root
+							is_incorporated = yes
+						}
+					}
+				}
+			}
+			add = 0.20
+		}
+
+		# Opportunism: strike targets already tied up in war
+		if = {
+			limit = {
+				scope:target_country = {
+					is_in_war = yes
+				}
+			}
+			add = 0.60
+		}
+
+		# Opportunism: isolated frontier targets
+		if = {
+			limit = {
+				scope:target_country = {
+					num_allies < 1
+				}
+			}
+			add = 0.35
+		}
+
+		# Prefer weaker targets
+		if = {
+			limit = {
+				scope:target_country.country_rank < root.country_rank
+			}
+			add = 0.40
+		}
+
+		# Horde-empires should punish minor fragmentation hard
+		if = {
+			limit = {
+				scope:target_country.country_rank <= rank_value:minor_power
+			}
+			add = 0.45
+		}
+
+		# Reachable targets should matter
+		if = {
+			limit = {
+				can_reach_target_country = yes
+			}
+			add = 0.20
+		}
+
+		# Subjects are for control and later integration, not random aggression
+		if = {
+			limit = {
+				scope:target_country = { is_subject_of = root }
+			}
+			multiply = 0.20
+		}
+
+		# Reduce distant nonsense, but do not hard-disable all initiative
+		if = {
+			limit = {
+				scope:target_country = {
+					NOT = {
+						any_scope_state = {
+							has_claim_by = root
+						}
+					}
+					NOT = {
+						any_scope_state = {
+							OR = {
+								any_neighbouring_state = {
+									owner = root
+									is_incorporated = yes
+								}
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+					}
+					NOT = { is_subject_of = root }
+				}
+				NOT = { can_reach_target_country = yes }
+			}
+			multiply = 0.45
+		}
+
+		multiply = {
+			value = "ai_ideological_opinion(scope:target_country)"
+			multiply = -0.1
+			add = 1
+			max = 2.0
+			min = 0.5
+		}
+
+		max = 3.25
+	}
+
+	building_group_weights = {
+		bg_army = 1.90
+		bg_technology = 1.00
+		bg_navy = 0.70
+	}
+
+	secret_goal_weights = {
+		conquer = 2.75
+		dominate = 1.35
+		protect = 0.40
+		befriend = 0.10
+		reconcile = 0.00
+	}
+
+	wargoal_weights = {
+		conquer_state = 3.50
+		return_state = 2.75
+		make_protectorate = 1.40
+		make_dominion = 0.80
+		reduce_autonomy = 1.90
+		annex_country = 2.35
+		force_nationalization = 0.00
+	}
+
+	secret_goal_scores = {
+		conquer = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country.country_rank <= root.country_rank
+				can_reach_target_country = yes
+				scope:target_country = {
+					OR = {
+						any_scope_state = {
+							has_claim_by = root
+						}
+						any_scope_state = {
+							OR = {
+								any_neighbouring_state = {
+									owner = root
+									is_incorporated = yes
+								}
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			score = {
+				value = 125
+
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = {
+								has_claim_by = root
+							}
+						}
+					}
+					add = 320
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = {
+								any_neighbouring_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+					}
+					add = 190
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = {
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+					}
+					add = 40
+				}
+
+				if = {
+					limit = {
+						scope:target_country.country_rank <= rank_value:minor_power
+					}
+					add = 90
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							is_in_war = yes
+						}
+					}
+					add = 80
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							num_allies < 1
+						}
+					}
+					add = 45
+				}
+			}
+		}
+
+		dominate = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country.country_rank <= rank_value:minor_power
+				can_reach_target_country = yes
+				scope:target_country = {
+					OR = {
+						any_scope_state = {
+							any_neighbouring_state = {
+								owner = root
+								is_incorporated = yes
+							}
+						}
+						any_scope_state = {
+							any_sea_node_adjacent_state = {
+								owner = root
+								is_incorporated = yes
+							}
+						}
+					}
+				}
+			}
+			score = {
+				value = 85
+
+				if = {
+					limit = {
+						scope:target_country = {
+							is_in_war = yes
+						}
+					}
+					add = 35
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							num_allies < 1
+						}
+					}
+					add = 25
+				}
+			}
+		}
+
+		protect = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+			}
+			score = {
+				value = 130
+			}
+		}
+
+		befriend = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+			}
+			score = {
+				value = 50
+
+				if = {
+					limit = {
+						scope:target_country = { relations:root < relations_threshold:amicable }
+					}
+					add = 60
+				}
+			}
+		}
+
+		none = {
+			trigger = {
+				scope:target_country = {
+					NOT = {
+						any_scope_state = {
+							has_claim_by = root
+						}
+					}
+					NOT = {
+						any_scope_state = {
+							OR = {
+								any_neighbouring_state = {
+									owner = root
+									is_incorporated = yes
+								}
+								any_sea_node_adjacent_state = {
+									owner = root
+									is_incorporated = yes
+								}
+							}
+						}
+					}
+					NOT = { is_subject_of = root }
+				}
+				NOT = { can_reach_target_country = yes }
+			}
+			score = {
+				value = -250
+			}
+		}
+	}
+
+	wargoal_scores = {
+		conquer_state = {
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							has_claim_by = root
+							any_neighbouring_state = {
+								owner = root
+								is_incorporated = yes
+							}
+						}
+					}
+				}
+				add = 225
+			}
+
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = conquer
+					}
+				}
+				add = 200
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						has_claim_by = root
+					}
+				}
+				add = 320
+			}
+		}
+
+		return_state = {
+			if = {
+				limit = {
+					scope:target_state = {
+						has_claim_by = root
+					}
+				}
+				add = 280
+			}
+		}
+
+		make_protectorate = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					scope:target_country.country_rank <= rank_value:minor_power
+				}
+				add = 130
+			}
+		}
+
+		make_dominion = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					scope:target_country.country_rank <= rank_value:minor_power
+				}
+				add = 70
+			}
+		}
+
+		reduce_autonomy = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = { relations:root >= relations_threshold:amicable }
+				}
+				add = 180
+			}
+		}
+
+		annex_country = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country.country_rank <= rank_value:minor_power
+					scope:target_country = { relations:root >= relations_threshold:cordial }
+				}
+				add = 240
+			}
+		}
+	}
+
+	possible = {
+		is_subject = no
+		c:TIM ?= this
+	}
+
+	weight = {
+		value = 120
+
+		# Early Timurid momentum
+		if = {
+			limit = {
+				game_date < 1475.1.1
+			}
+			add = 110
+		}
+
+		# Stronger if claims remain unresolved
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					any_scope_state = {
+						has_claim_by = root
+					}
+				}
+			}
+			add = 140
+		}
+
+		# Stronger if adjacent non-subject targets exist
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					NOT = { is_subject_of = root }
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = root
+							is_incorporated = yes
+						}
+					}
+				}
+			}
+			add = 85
+		}
+
+		# Opportunistic snowball behavior
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					NOT = { is_subject_of = root }
+					can_reach_target_country = yes
+					is_in_war = yes
+				}
+			}
+			add = 45
+		}
+
+		# More active when nearby minors are available
+		if = {
+			limit = {
+				any_country = {
+					NOT = { this = root }
+					NOT = { is_subject_of = root }
+					scope:country_rank <= rank_value:minor_power
+					can_reach_target_country = yes
+				}
+			}
+			add = 35
+		}
+	}
+}
