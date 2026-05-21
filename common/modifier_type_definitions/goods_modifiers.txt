@@ -166,6 +166,14 @@ goods_input_ironingot_add={
 	}
 }
 
+goods_input_coins_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_output_stone_add={
 	decimals=1
 	color=good
@@ -327,6 +335,14 @@ goods_output_book_add={
 }
 
 goods_output_ironingot_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_coins_add={
 	decimals=1
 	color=good
 	game_data={

@@ -22,3 +22,40 @@ pmg_building_university_main = {
 		pm_building_university_main_3
 	}
 }
+
+################## MINTING OFFICE #######################
+pmg_building_mint_gold = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_mint_gold_0
+		pm_building_mint_gold_1
+		pm_building_mint_gold_2
+		pm_building_mint_gold_3
+	}
+}
+
+pmg_building_mint_silver = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_mint_silver_0
+		pm_building_mint_silver_1
+		pm_building_mint_silver_2
+		pm_building_mint_silver_3
+	}
+}
+
+pmg_building_mint_copper = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_mint_copper_0
+		pm_building_mint_copper_1
+		pm_building_mint_copper_2
+		pm_building_mint_copper_3
+	}
+}
