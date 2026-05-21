@@ -1,0 +1,91 @@
+﻿pm_building_gold_mine_main_1 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+
+			# output goods
+			goods_output_gold_add = 20
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 2700
+		}
+	}
+}
+
+pm_building_gold_mine_main_2 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
+
+	unlocking_technologies = {
+		expanded_gold_mining
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+
+			# output goods
+			goods_output_gold_add = 40
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 2325
+			building_employment_machinists_add = 375
+		}
+	}
+}
+
+pm_building_gold_mine_main_3 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
+
+	unlocking_technologies = {
+		deep_shaft_gold_mining
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 10
+
+			# output goods
+			goods_output_gold_add = 60
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 1950
+			building_employment_machinists_add = 375
+			building_employment_engineers_add = 375
+		}
+	}
+}
+
+pm_building_gold_mine_main_4 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
+
+	unlocking_technologies = {
+		mechanized_gold_mining
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 15
+
+			# output goods
+			goods_output_gold_add = 80
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 1575
+			building_employment_machinists_add = 750
+			building_employment_engineers_add = 375
+		}
+	}
+}

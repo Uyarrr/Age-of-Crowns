@@ -169,6 +169,15 @@ goods_input_ironingot_mult={
 	}
 }
 
+goods_input_gold_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_output_stone_mult={
 	decimals=1
 	color=good
@@ -323,6 +332,24 @@ goods_output_book_mult={
 }
 
 goods_output_ironingot_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_coins_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_gold_mult={
 	decimals=1
 	color=good
 	percent=yes

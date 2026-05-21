@@ -423,6 +423,42 @@ assimilate_culture = {
 	}
 }
 
+minting_house = {
+	# Unlocks Minting House
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/coins.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		trading
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+caravan_hub = {
+	# Unlocks Caravan Hubs
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/horse.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		minting_house
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
 ############# AGE 2 #################
 
 renaissance = {

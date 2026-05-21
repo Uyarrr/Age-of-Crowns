@@ -211,14 +211,13 @@ book = {
 	consumption_tax_cost = 200
 }
 
-gem = {
-	texture = "gfx/interface/icons/goods_icons/gem.dds"
+gems = {
+	texture = "gfx/interface/icons/goods_icons/gems.dds"
 	cost = 90
 	category = luxury
 	prestige_factor = 12
 	traded_quantity = 3
 	convoy_cost_multiplier = 0.25
-	consumption_tax_cost = 200
 }
 
 ironingot = {
@@ -237,4 +236,20 @@ coins = {
 	category = staple
 	prestige_factor = 0
 	tradeable = no
+}
+
+gold = {
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	cost = 100
+	category = luxury
+	traded_quantity = 5
+	prestige_factor = 15
+}
+
+silver = {
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	cost = 60
+	category = luxury
+	traded_quantity = 5
+	prestige_factor = 10
 }
