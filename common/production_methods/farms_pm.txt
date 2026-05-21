@@ -2,6 +2,7 @@
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
+   goods_input_coins_add = 1
 			# output goods
 			goods_output_grain_add = 25
 		}
@@ -24,6 +25,7 @@ pm_building_wheat_farm_main_2 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 2
+   goods_input_coins_add = 2
 
 			# output goods
 			goods_output_grain_add = 35
@@ -48,6 +50,7 @@ pm_building_wheat_farm_main_3 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 4
+   goods_input_coins_add = 3
 
 			# output goods
 			goods_output_grain_add = 55
@@ -72,6 +75,7 @@ pm_building_wheat_farm_main_4 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 6
+   goods_input_coins_add = 4
 
 			# output goods
 			goods_output_grain_add = 80
@@ -91,6 +95,7 @@ pm_building_rice_farm_main_1 = {
 		workforce_scaled = {
 			# output goods
 			goods_output_grain_add = 35
+   goods_input_coins_add = 2
 		}
 
 		level_scaled = {
@@ -114,6 +119,7 @@ pm_building_rice_farm_main_2 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 4
+   goods_input_coins_add = 4
 
 			# output goods
 			goods_output_grain_add = 55
@@ -141,6 +147,7 @@ pm_building_rice_farm_main_3 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 8
+   goods_input_coins_add = 8
 
 			# output goods
 			goods_output_grain_add = 85
@@ -163,6 +170,7 @@ pm_building_rice_farm_main_4 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 12
+   goods_input_coins_add = 10
 
 			# output goods
 			goods_output_grain_add = 100
