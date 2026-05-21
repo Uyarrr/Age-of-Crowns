@@ -93,6 +93,7 @@ STATE_SARDINIA = {
         building_stone_mine = 12
         building_copper_mine = 14
         building_tin_mine = 2
+        building_silver_mine = 8
     }
     resource = {
         type = "building_coal_mine"
@@ -121,6 +122,10 @@ STATE_SARDINIA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3032
@@ -397,6 +402,7 @@ STATE_TUSCANY = {
         building_stone_mine = 12
         building_copper_mine = 10
         building_tin_mine = 4
+        building_silver_mine = 8
     }
     resource = {
         type = "building_iron_mine"
@@ -417,6 +423,10 @@ STATE_TUSCANY = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3098
@@ -607,6 +617,7 @@ STATE_GALICIA = {
         building_stone_mine = 12
         building_copper_mine = 8
         building_tin_mine = 12
+        building_silver_mine = 8
     }
     resource = {
         type = "building_iron_mine"
@@ -627,6 +638,10 @@ STATE_GALICIA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3029
@@ -654,6 +669,7 @@ STATE_ASTURIAS = {
         building_stone_mine = 12
         building_copper_mine = 8
         building_tin_mine = 6
+        building_silver_mine = 8
     }
     resource = {
         type = "building_coal_mine"
@@ -678,6 +694,10 @@ STATE_ASTURIAS = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3029
@@ -903,6 +923,7 @@ STATE_LOWER_ANDALUSIA = {
         building_stone_mine = 12
         building_copper_mine = 20
         building_tin_mine = 3
+        building_silver_mine = 8
     }
     resource = {
         type = "building_iron_mine"
@@ -923,6 +944,10 @@ STATE_LOWER_ANDALUSIA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3089
@@ -949,6 +974,7 @@ STATE_UPPER_ANDALUSIA = {
         building_stone_mine = 11
         building_copper_mine = 8
         building_tin_mine = 2
+        building_silver_mine = 8
     }
     resource = {
         type = "building_iron_mine"
@@ -969,6 +995,10 @@ STATE_UPPER_ANDALUSIA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3032
@@ -1382,6 +1412,7 @@ STATE_BOSNIA = {
     
         building_stone_mine = 12
         building_copper_mine = 10
+        building_silver_mine = 6
     }
     resource = {
         type = "building_iron_mine"
@@ -1398,6 +1429,10 @@ STATE_BOSNIA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 10
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
 }
@@ -1451,6 +1486,7 @@ STATE_BULGARIA = {
         building_stone_mine = 12
         building_copper_mine = 12
         building_tin_mine = 2
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -1463,6 +1499,10 @@ STATE_BULGARIA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
     naval_exit_id = 3036
@@ -1700,6 +1740,7 @@ STATE_EASTERN_SERBIA = {
         building_stone_mine = 12
         building_copper_mine = 18
         building_tin_mine = 3
+        building_silver_mine = 8
     }
     resource = {
         type = "building_coal_mine"
@@ -1721,6 +1762,10 @@ STATE_EASTERN_SERBIA = {
         type = "building_tin_mine"
         undiscovered_amount = 3
     }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
+    }
 
 }
 
@@ -1739,6 +1784,7 @@ STATE_KOSOVO = {
         building_lead_mine = 12
         building_stone_mine = 10
         building_logging_camp = 4
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -1752,6 +1798,10 @@ STATE_KOSOVO = {
     resource = {
         type = "building_lead_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
 }
@@ -1846,6 +1896,7 @@ STATE_ATTICA = {
         building_fishing_wharf = 8
     
         building_stone_mine = 10
+        building_silver_mine = 10
     }
     resource = {
         type = "building_lead_mine"
@@ -1857,6 +1908,10 @@ STATE_ATTICA = {
     }
     resource = {
         type = "building_stone_mine"
+        undiscovered_amount = 10
+    }
+    resource = {
+        type = "building_silver_mine"
         undiscovered_amount = 10
     }
 
@@ -1932,6 +1987,7 @@ STATE_MACEDONIA = {
     
         building_stone_mine = 10
         building_copper_mine = 6
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -1940,6 +1996,10 @@ STATE_MACEDONIA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3117
@@ -2088,6 +2148,7 @@ STATE_LEON = {
         building_stone_mine = 10
         building_copper_mine = 6
         building_tin_mine = 4
+        building_silver_mine = 10
     }
     resource = {
         type = "building_coal_mine"
@@ -2108,6 +2169,10 @@ STATE_LEON = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 10
     }
 
 }

@@ -22,6 +22,7 @@ STATE_NEW_SOUTH_WALES = {
         building_stone_mine = 11
         building_copper_mine = 10
         building_tin_mine = 6
+        building_silver_mine = 12
     }
     resource = {
         type = "building_gold_mine"
@@ -60,6 +61,10 @@ STATE_NEW_SOUTH_WALES = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 12
     }
 
     naval_exit_id = 3122
@@ -133,6 +138,7 @@ STATE_TASMANIA = {
         building_stone_mine = 12
         building_copper_mine = 12
         building_tin_mine = 24
+        building_silver_mine = 10
     }
     resource = {
         type = "building_coal_mine"
@@ -164,6 +170,10 @@ STATE_TASMANIA = {
         type = "building_tin_mine"
         undiscovered_amount = 24
     }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 10
+    }
 
     naval_exit_id = 3122
 }
@@ -194,6 +204,7 @@ STATE_QUEENSLAND = {
         building_stone_mine = 12
         building_copper_mine = 14
         building_tin_mine = 12
+        building_silver_mine = 12
     }
     resource = {
         type = "building_coal_mine"
@@ -228,6 +239,10 @@ STATE_QUEENSLAND = {
         type = "building_gem_mine"
         undiscovered_amount = 4
     }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 12
+    }
 
     naval_exit_id = 3129
 }
@@ -255,6 +270,7 @@ STATE_SOUTH_AUSTRALIA = {
     
         building_stone_mine = 12
         building_copper_mine = 20
+        building_silver_mine = 8
     }
     resource = {
         type = "building_iron_mine"
@@ -279,6 +295,10 @@ STATE_SOUTH_AUSTRALIA = {
     resource = {
         type = "building_gem_mine"
         undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3121
@@ -309,6 +329,7 @@ STATE_WESTERN_AUSTRALIA = {
         building_stone_mine = 12
         building_copper_mine = 8
         building_tin_mine = 8
+        building_silver_mine = 8
     }
     resource = {
         type = "building_gold_mine"
@@ -343,6 +364,10 @@ STATE_WESTERN_AUSTRALIA = {
     resource = {
         type = "building_gem_mine"
         undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3110

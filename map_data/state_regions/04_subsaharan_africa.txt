@@ -944,6 +944,7 @@ STATE_SOUTH_MADAGASCAR = {
         building_stone_mine = 10
         building_logging_camp = 23
         building_fishing_wharf = 8
+        building_silver_mine = 4
     }
     resource = {
         type = "building_stone_mine"
@@ -960,6 +961,10 @@ STATE_SOUTH_MADAGASCAR = {
     }
     resource = {
         type = "building_gem_mine"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
         undiscovered_amount = 4
     }
 
@@ -1533,6 +1538,7 @@ STATE_KATANGA = {
     
         building_stone_mine = 18
         building_copper_mine = 44
+        building_silver_mine = 12
     }
     resource = {
         type = "building_lead_mine"
@@ -1554,6 +1560,10 @@ STATE_KATANGA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 44
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 12
     }
 
 }
@@ -1607,6 +1617,7 @@ STATE_ZAMBIA = {
     
         building_stone_mine = 15
         building_copper_mine = 36
+        building_silver_mine = 8
     }
     resource = {
         type = "building_rubber_plantation"
@@ -1627,6 +1638,10 @@ STATE_ZAMBIA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 36
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
@@ -1693,6 +1708,7 @@ STATE_ZAMBEZI = {
     
         building_stone_mine = 12
         building_copper_mine = 12
+        building_silver_mine = 6
     }
     resource = {
         type = "building_rubber_plantation"
@@ -1709,6 +1725,10 @@ STATE_ZAMBEZI = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
 }
@@ -1734,6 +1754,7 @@ STATE_NAMAQUALAND = {
     
         building_stone_mine = 12
         building_copper_mine = 14
+        building_silver_mine = 8
     }
     resource = {
         type = "building_iron_mine"
@@ -1755,6 +1776,10 @@ STATE_NAMAQUALAND = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 14
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3104
@@ -1887,6 +1912,7 @@ STATE_TRANSVAAL = {
         building_stone_mine = 14
         building_copper_mine = 8
         building_tin_mine = 4
+        building_silver_mine = 8
     }
     resource = {
         type = "building_lead_mine"
@@ -1925,6 +1951,10 @@ STATE_TRANSVAAL = {
     resource = {
         type = "building_gem_mine"
         undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }

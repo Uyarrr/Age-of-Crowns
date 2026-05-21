@@ -20,6 +20,7 @@ STATE_URAL = {
         building_logging_camp = 27
         building_copper_mine = 18
         building_tin_mine = 4
+        building_silver_mine = 10
     }
     resource = {
         type = "building_stone_mine"
@@ -54,6 +55,10 @@ STATE_URAL = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 10
     }
 }
 
@@ -412,6 +417,7 @@ STATE_TRANS_BAIKAL = {
         building_stone_mine = 10
         building_logging_camp = 24
         building_tin_mine = 5
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -437,6 +443,10 @@ STATE_TRANS_BAIKAL = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }

@@ -79,6 +79,7 @@ STATE_ARMENIA = {
     
         building_stone_mine = 12
         building_copper_mine = 9
+        building_silver_mine = 10
     }
     resource = {
         type = "building_iron_mine"
@@ -95,6 +96,10 @@ STATE_ARMENIA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 9
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 10
     }
 
 }
@@ -115,6 +120,7 @@ STATE_AZERBAIJAN = {
     
         building_stone_mine = 12
         building_copper_mine = 12
+        building_silver_mine = 8
     }
     resource = {
         type = "building_lead_mine"
@@ -127,6 +133,10 @@ STATE_AZERBAIJAN = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
@@ -152,6 +162,7 @@ STATE_GREATER_CAUCASUS = {
         building_copper_mine = 8
         building_logging_camp = 19
         building_fishing_wharf = 5
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -177,6 +188,10 @@ STATE_GREATER_CAUCASUS = {
     resource = {
         type = "building_gold_mine"
         undiscovered_amount = 1
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
     naval_exit_id = 3094

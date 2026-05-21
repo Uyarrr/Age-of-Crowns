@@ -304,6 +304,7 @@ STATE_EASTERN_NORWAY = {
         building_copper_mine = 10
         building_logging_camp = 22
         building_fishing_wharf = 5
+        building_silver_mine = 18
     }
     resource = {
         type = "building_stone_mine"
@@ -317,6 +318,10 @@ STATE_EASTERN_NORWAY = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 9
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 18
     }
 
     naval_exit_id = 3019
@@ -470,6 +475,7 @@ STATE_WALES = {
         building_stone_mine = 15
         building_copper_mine = 14
         building_tin_mine = 4
+        building_silver_mine = 4
     }
     resource = {
         type = "building_lead_mine"
@@ -490,6 +496,10 @@ STATE_WALES = {
     }
     resource = {
         type = "building_tin_mine"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
         undiscovered_amount = 4
     }
 
@@ -664,6 +674,7 @@ STATE_WEST_COUNTRY = {
         building_stone_mine = 18
         building_copper_mine = 20
         building_tin_mine = 24
+        building_silver_mine = 4
     }
     resource = {
         type = "building_lead_mine"
@@ -680,6 +691,10 @@ STATE_WEST_COUNTRY = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 24
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 4
     }
 
     naval_exit_id = 3028
@@ -1141,6 +1156,7 @@ STATE_AUVERGNE_LIMOUSIN = {
         building_stone_mine = 15
         building_copper_mine = 6
         building_tin_mine = 3
+        building_silver_mine = 6
     }
     resource = {
         type = "building_coal_mine"
@@ -1161,6 +1177,10 @@ STATE_AUVERGNE_LIMOUSIN = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
 }
@@ -1183,6 +1203,7 @@ STATE_BRITTANY = {
         building_fishing_wharf = 15
     
         building_tin_mine = 4
+        building_silver_mine = 4
     }
     resource = {
         type = "building_stone_mine"
@@ -1191,6 +1212,10 @@ STATE_BRITTANY = {
 
     resource = {
         type = "building_tin_mine"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
         undiscovered_amount = 4
     }
 
@@ -1534,6 +1559,7 @@ STATE_AUSTRIA = {
         building_stone_mine = 14
         building_lead_mine = 6
         building_logging_camp = 7
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -1547,6 +1573,10 @@ STATE_AUSTRIA = {
     resource = {
         type = "building_coal_mine"
         undiscovered_amount = 22
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
@@ -1572,6 +1602,7 @@ STATE_BOHEMIA = {
         building_stone_mine = 14
         building_copper_mine = 10
         building_tin_mine = 10
+        building_silver_mine = 24
     }
     resource = {
         type = "building_coal_mine"
@@ -1601,6 +1632,10 @@ STATE_BOHEMIA = {
         type = "building_tin_mine"
         undiscovered_amount = 10
     }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 24
+    }
 
 }
 
@@ -1622,6 +1657,7 @@ STATE_MORAVIA = {
         building_logging_camp = 14
     
         building_tin_mine = 5
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -1643,6 +1679,10 @@ STATE_MORAVIA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
@@ -1666,6 +1706,7 @@ STATE_STYRIA = {
     
         building_stone_mine = 15
         building_copper_mine = 8
+        building_silver_mine = 6
     }
     resource = {
         type = "building_coal_mine"
@@ -1686,6 +1727,10 @@ STATE_STYRIA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
 }
@@ -1708,6 +1753,7 @@ STATE_TYROL = {
     
         building_stone_mine = 18
         building_copper_mine = 8
+        building_silver_mine = 18
     }
     resource = {
         type = "building_iron_mine"
@@ -1724,6 +1770,10 @@ STATE_TYROL = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 18
     }
 
 }
@@ -1933,6 +1983,7 @@ STATE_ANHALT = {
         building_stone_mine = 10
         building_logging_camp = 20
         building_copper_mine = 10
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -1946,6 +1997,10 @@ STATE_ANHALT = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 10
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
@@ -2278,6 +2333,7 @@ STATE_SAXONY = {
         building_stone_mine = 12
         building_copper_mine = 16
         building_tin_mine = 20
+        building_silver_mine = 30
     }
     resource = {
         type = "building_coal_mine"
@@ -2302,6 +2358,10 @@ STATE_SAXONY = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 20
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 30
     }
 
 }

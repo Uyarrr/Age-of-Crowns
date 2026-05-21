@@ -182,6 +182,7 @@ STATE_ERITREA = {
         building_stone_mine = 10
         building_fishing_wharf = 5
         building_tin_mine = 2
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -195,6 +196,10 @@ STATE_ERITREA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
     naval_exit_id = 3073
@@ -416,6 +421,7 @@ STATE_INNER_MOROCCO = {
         building_gold_mine = 2
         building_coal_mine = 3
         building_tin_mine = 2
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -441,6 +447,10 @@ STATE_INNER_MOROCCO = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
     naval_exit_id = 3089

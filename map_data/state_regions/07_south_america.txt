@@ -409,6 +409,7 @@ STATE_TARAPACA = {
         building_stone_mine = 14
         building_copper_mine = 12
         building_fishing_wharf = 5
+        building_silver_mine = 10
     }
     resource = {
         type = "building_stone_mine"
@@ -426,6 +427,10 @@ STATE_TARAPACA = {
     resource = {
         type = "building_sulfur_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 10
     }
 
     naval_exit_id = 3152
@@ -450,6 +455,7 @@ STATE_ANTOFAGASTA = {
     
         building_stone_mine = 16
         building_copper_mine = 44
+        building_silver_mine = 12
     }
     resource = {
         type = "building_gold_field"
@@ -471,6 +477,10 @@ STATE_ANTOFAGASTA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 44
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 12
     }
 
     naval_exit_id = 3152
@@ -521,6 +531,7 @@ STATE_LA_PAZ = {
         building_stone_mine = 12
         building_copper_mine = 12
         building_tin_mine = 16
+        building_silver_mine = 25
     }
     resource = {
         type = "building_rubber_plantation"
@@ -541,6 +552,10 @@ STATE_LA_PAZ = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 16
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 25
     }
 
 }
@@ -564,6 +579,7 @@ STATE_POTOSI = {
         building_stone_mine = 15
         building_copper_mine = 12
         building_tin_mine = 26
+        building_silver_mine = 60
     }
     resource = {
         type = "building_lead_mine"
@@ -584,6 +600,10 @@ STATE_POTOSI = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 26
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 60
     }
 
 }
@@ -606,6 +626,7 @@ STATE_CAJAMARCA = {
         building_logging_camp = 6
         building_fishing_wharf = 7
         building_copper_mine = 12
+        building_silver_mine = 14
     }
     resource = {
         type = "building_stone_mine"
@@ -624,6 +645,10 @@ STATE_CAJAMARCA = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 14
     }
 
     naval_exit_id = 3024
@@ -652,6 +677,7 @@ STATE_LIMA = {
         building_stone_mine = 8
         building_copper_mine = 6
         building_tin_mine = 2
+        building_silver_mine = 34
     }
     resource = {
         type = "building_iron_mine"
@@ -680,6 +706,10 @@ STATE_LIMA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 34
     }
 
     naval_exit_id = 3024
@@ -742,6 +772,7 @@ STATE_AREQUIPA = {
         building_stone_mine = 11
         building_copper_mine = 14
         building_tin_mine = 3
+        building_silver_mine = 16
     }
     resource = {
         type = "building_iron_mine"
@@ -762,6 +793,10 @@ STATE_AREQUIPA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 16
     }
 
     naval_exit_id = 3152
@@ -809,6 +844,7 @@ STATE_JUJUY = {
         building_stone_mine = 10
         building_logging_camp = 8
         building_gold_mine = 2
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -826,6 +862,10 @@ STATE_JUJUY = {
     resource = {
         type = "building_gold_mine"
         undiscovered_amount = 1
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
@@ -1124,6 +1164,7 @@ STATE_SANTIAGO = {
     
         building_stone_mine = 13
         building_copper_mine = 24
+        building_silver_mine = 8
     }
     resource = {
         type = "building_iron_mine"
@@ -1144,6 +1185,10 @@ STATE_SANTIAGO = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 24
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
     naval_exit_id = 3152
@@ -1412,6 +1457,7 @@ STATE_GOIAS = {
         building_logging_camp = 16
         building_fishing_wharf = 7
         building_tin_mine = 4
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -1433,6 +1479,10 @@ STATE_GOIAS = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
 }
@@ -1631,6 +1681,7 @@ STATE_MINAS_GERAIS = {
     
         building_stone_mine = 12
         building_tin_mine = 8
+        building_silver_mine = 10
     }
     resource = {
         type = "building_gold_field"
@@ -1664,6 +1715,10 @@ STATE_MINAS_GERAIS = {
     resource = {
         type = "building_gem_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 10
     }
 
 }

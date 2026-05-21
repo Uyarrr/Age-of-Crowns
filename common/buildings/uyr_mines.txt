@@ -141,6 +141,27 @@ building_lead_mine = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
  }
 
+ building_silver_mine = {
+	building_group = bg_mining
+	icon = "gfx/interface/icons/building_icons/silver_mine_uyr.dds"
+	city_type = mine
+	levels_per_mesh = 50
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+
+	unlocking_technologies = {
+		fine_metals_mining
+	}
+
+	production_method_groups = {
+		pmg_building_silver_mine_main
+		pmg_transportation_building_silver_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
  building_gold_mine = {
 	building_group = bg_mining
 	icon = "gfx/interface/icons/building_icons/gold_mine_uyr.dds"

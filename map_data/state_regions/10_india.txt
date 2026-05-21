@@ -955,6 +955,7 @@ STATE_KACHIN = {
         building_logging_camp = 24
         building_iron_mine = 4
         building_gold_mine = 2
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -981,6 +982,10 @@ STATE_KACHIN = {
         type = "building_gem_mine"
         undiscovered_amount = 4
     }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
+    }
 
 }
 
@@ -1005,6 +1010,7 @@ STATE_SHAN_STATES = {
     
         building_stone_mine = 10
         building_tin_mine = 16
+        building_silver_mine = 6
     }
     resource = {
         type = "building_copper_mine"
@@ -1038,6 +1044,10 @@ STATE_SHAN_STATES = {
     resource = {
         type = "building_gem_mine"
         undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
 }

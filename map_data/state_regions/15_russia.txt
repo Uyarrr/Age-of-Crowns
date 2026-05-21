@@ -1177,6 +1177,7 @@ STATE_FERGANA = {
         building_stone_mine = 10
         building_logging_camp = 5
         building_tin_mine = 6
+        building_silver_mine = 12
     }
     resource = {
         type = "building_stone_mine"
@@ -1190,6 +1191,10 @@ STATE_FERGANA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 12
     }
 
 }
@@ -1209,6 +1214,7 @@ STATE_MERZ = {
         building_stone_mine = 10
         building_logging_camp = 5
         building_tin_mine = 4
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -1222,6 +1228,10 @@ STATE_MERZ = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
@@ -1242,6 +1252,7 @@ STATE_SYRDARYA = {
         building_stone_mine = 10
         building_logging_camp = 6
         building_tin_mine = 3
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -1259,6 +1270,10 @@ STATE_SYRDARYA = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
     }
 
 }
@@ -1695,6 +1710,7 @@ STATE_ALTAI = {
         building_logging_camp = 18
         building_lead_mine = 6
         building_tin_mine = 5
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -1721,6 +1737,10 @@ STATE_ALTAI = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
@@ -1820,6 +1840,7 @@ STATE_AMUR = {
         building_logging_camp = 25
         building_fishing_wharf = 6
         building_tin_mine = 3
+        building_silver_mine = 6
     }
     resource = {
         type = "building_stone_mine"
@@ -1847,6 +1868,10 @@ STATE_AMUR = {
         type = "building_tin_mine"
         undiscovered_amount = 3
     }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 6
+    }
 
     naval_exit_id = 3118
 }
@@ -1870,6 +1895,7 @@ STATE_CHELYABINSK = {
         building_logging_camp = 16
         building_gold_mine = 2
         building_tin_mine = 3
+        building_silver_mine = 8
     }
     resource = {
         type = "building_stone_mine"
@@ -1896,6 +1922,10 @@ STATE_CHELYABINSK = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_silver_mine"
+        undiscovered_amount = 8
     }
 
 }
