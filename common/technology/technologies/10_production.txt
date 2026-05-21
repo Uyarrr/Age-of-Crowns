@@ -324,6 +324,36 @@ brewery = {
 	}
 }
 
+iron_mine = {
+	# Unlocks Iron Mines
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/iron.dds"
+	category = production
+
+	unlocking_technologies = {
+		quarrying
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+coal_mine = {
+	# Unlocks Coal Mines
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/coal.dds"
+	category = production
+
+	unlocking_technologies = {
+		iron_mine
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
 ######## AGE 2 ##########
 
 workshop_standardization = {
@@ -769,10 +799,10 @@ faceting = {
 	}
 }
 
-refined_saiger_process = {
-	#Unlocks Second PM for Lead Mines
+expanded_coal_mining = {
+	#Unlocks Second PM for Coal Mines
 	era = era_3
-	texture = "gfx/interface/icons/goods_icons/gems.dds"
+	texture = "gfx/interface/icons/goods_icons/coal.dds"
 	category = production
 
 	modifier = {
@@ -780,6 +810,42 @@ refined_saiger_process = {
 
 	unlocking_technologies = {
 		expanded_iron_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+expanded_silver_mining = {
+	#Unlocks Second PM for Silver Mines
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/silver.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		resource_extraction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+expanded_gold_mining = {
+	#Unlocks Second PM for Gold Mines
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		expanded_silver_mining
 	}
 
 	ai_weight = {
@@ -1254,7 +1320,7 @@ bureaucractic_promotions = {
 }
 
 steel_mills = {
-	# Unlocks Steel Mills
+	# Unlocks Steel PM
 	era = era_5
 	texture = "gfx/interface/icons/goods_icons/steel.dds"
 	category = production
@@ -1557,6 +1623,42 @@ mechanized_gem_mining = {
 
 	unlocking_technologies = {
 		mechanized_lead_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_silver_mining = {
+	#Unlocks Silver Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/silver.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_extraction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+mechanized_gold_mining = {
+	#Unlocks Gold Mine PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		mechanized_silver_mining
 	}
 
 	ai_weight = {
