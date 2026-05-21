@@ -47,7 +47,7 @@ ship_type_early_carrack = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
@@ -110,7 +110,7 @@ ship_type_carrack = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
@@ -176,7 +176,7 @@ ship_type_galleon = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
@@ -242,7 +242,7 @@ ship_type_two_decker = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
@@ -308,7 +308,7 @@ ship_type_three_decker = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 

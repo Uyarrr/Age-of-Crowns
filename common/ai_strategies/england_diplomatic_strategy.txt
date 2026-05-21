@@ -38,21 +38,22 @@
 	aggression = {
 		value = 1.35
 
-		# Strong aggression against Scotland and Irish targets
 		if = {
 			limit = {
 				scope:target_country = {
 					OR = {
 						c:SCO ?= this
-						capital.region = sr:region_north_sea_coast
-						capital.region = sr:region_england
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_western_europe
+							}
+						}
 					}
 				}
 			}
 			add = 1.75
 		}
 
-		# Prefer nearby reachable targets
 		if = {
 			limit = {
 				can_reach_target_country = yes
@@ -61,7 +62,6 @@
 			add = 0.9
 		}
 
-		# Be less aggressive toward existing subjects
 		if = {
 			limit = {
 				scope:target_country = { is_subject_of = root }
@@ -98,16 +98,21 @@
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
-				OR = {
-					scope:target_country = { c:SCO ?= this }
-					scope:target_country = { capital.region = sr:region_north_sea_coast }
-					scope:target_country = { capital.region = sr:region_england }
+				scope:target_country = {
+					OR = {
+						c:SCO ?= this
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_western_europe
+							}
+						}
+					}
 				}
 			}
+
 			score = {
 				value = 500
 
-				# Scotland is the top target
 				if = {
 					limit = {
 						scope:target_country = { c:SCO ?= this }
@@ -115,15 +120,19 @@
 					add = 250
 				}
 
-				# Irish states are also high priority
 				if = {
 					limit = {
-						scope:target_country = { capital.region = sr:region_north_sea_coast }
+						scope:target_country = {
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_western_europe
+								}
+							}
+						}
 					}
 					add = 150
 				}
 
-				# Adjacent states are especially attractive
 				if = {
 					limit = {
 						has_strategic_adjacency = scope:target_country
@@ -138,12 +147,18 @@
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
 				has_strategic_adjacency = scope:target_country
-				OR = {
-					scope:target_country = { c:SCO ?= this }
-					scope:target_country = { capital.region = sr:region_north_sea_coast }
-					scope:target_country = { capital.region = sr:region_england }
+				scope:target_country = {
+					OR = {
+						c:SCO ?= this
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_western_europe
+							}
+						}
+					}
 				}
 			}
+
 			score = {
 				value = 90
 			}
@@ -152,12 +167,18 @@
 		protect = {
 			trigger = {
 				scope:target_country = { is_subject_of = root }
-				OR = {
-					scope:target_country = { c:SCO ?= this }
-					scope:target_country = { capital.region = sr:region_north_sea_coast }
-					scope:target_country = { capital.region = sr:region_england }
+				scope:target_country = {
+					OR = {
+						c:SCO ?= this
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_western_europe
+							}
+						}
+					}
 				}
 			}
+
 			score = {
 				value = 125
 			}
@@ -166,12 +187,18 @@
 		befriend = {
 			trigger = {
 				scope:target_country = { is_subject_of = root }
-				OR = {
-					scope:target_country = { c:SCO ?= this }
-					scope:target_country = { capital.region = sr:region_north_sea_coast }
-					scope:target_country = { capital.region = sr:region_england }
+				scope:target_country = {
+					OR = {
+						c:SCO ?= this
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_western_europe
+							}
+						}
+					}
 				}
 			}
+
 			score = {
 				value = 75
 
@@ -193,9 +220,15 @@
 						who = scope:target_country
 						secret_goal = dominate
 					}
-					OR = {
-						scope:target_country = { c:SCO ?= this }
-						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					scope:target_country = {
+						OR = {
+							c:SCO ?= this
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_western_europe
+								}
+							}
+						}
 					}
 				}
 				add = 300
@@ -209,9 +242,15 @@
 						who = scope:target_country
 						secret_goal = dominate
 					}
-					OR = {
-						scope:target_country = { c:SCO ?= this }
-						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					scope:target_country = {
+						OR = {
+							c:SCO ?= this
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_western_europe
+								}
+							}
+						}
 					}
 				}
 				add = 180
@@ -223,9 +262,15 @@
 				limit = {
 					scope:target_country = { is_subject_of = root }
 					scope:target_country = { relations:root >= relations_threshold:amicable }
-					OR = {
-						scope:target_country = { c:SCO ?= this }
-						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					scope:target_country = {
+						OR = {
+							c:SCO ?= this
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_western_europe
+								}
+							}
+						}
 					}
 				}
 				add = 250
@@ -237,9 +282,15 @@
 				limit = {
 					scope:target_country = { is_subject_of = root }
 					scope:target_country = { relations:root >= relations_threshold:cordial }
-					OR = {
-						scope:target_country = { c:SCO ?= this }
-						scope:target_country = { capital.region = sr:region_north_sea_coast }
+					scope:target_country = {
+						OR = {
+							c:SCO ?= this
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_western_europe
+								}
+							}
+						}
 					}
 				}
 				add = 300
@@ -253,10 +304,15 @@
 						who = scope:target_country
 						secret_goal = conquer
 					}
-					OR = {
-						scope:target_country = { c:SCO ?= this }
-						scope:target_country = { capital.region = sr:region_north_sea_coast }
-						scope:target_country = { capital.region = sr:region_england }
+					scope:target_country = {
+						OR = {
+							c:SCO ?= this
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_western_europe
+								}
+							}
+						}
 					}
 				}
 				add = 80
@@ -266,10 +322,15 @@
 		return_state = {
 			if = {
 				limit = {
-					OR = {
-						scope:target_country = { c:SCO ?= this }
-						scope:target_country = { capital.region = sr:region_north_sea_coast }
-						scope:target_country = { capital.region = sr:region_england }
+					scope:target_country = {
+						OR = {
+							c:SCO ?= this
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_western_europe
+								}
+							}
+						}
 					}
 				}
 				add = 100
@@ -288,19 +349,16 @@
 	weight = {
 		value = 100
 
-		# Strongest before Britain is formed
 		if = {
 			limit = { c:ENG ?= this }
 			add = 150
 		}
 
-		# After formation, still useful for finishing off holdouts
 		if = {
 			limit = { c:GBR ?= this }
 			add = 50
 		}
 
-		# If Scotland still exists independently, push harder
 		if = {
 			limit = {
 				exists = c:SCO
@@ -309,13 +367,16 @@
 			add = 100
 		}
 
-		# If any Irish target still exists independently, push harder
 		if = {
 			limit = {
 				any_country = {
 					NOT = { this = root }
 					NOT = { is_subject_of = root }
-					capital.region = sr:region_north_sea_coast
+					any_scope_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_western_europe
+						}
+					}
 				}
 			}
 			add = 75

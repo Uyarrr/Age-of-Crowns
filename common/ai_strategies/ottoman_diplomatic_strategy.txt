@@ -7,38 +7,17 @@
 		always = yes
 	}
 
-	undesirable_infamy_level = {
-		value = 60
-	}
-
-	unacceptable_infamy_level = {
-		value = 95
-	}
-
-	ideological_opinion_effect_mult = {
-		value = 0.75
-	}
-
-	wargoal_maneuvers_fraction = {
-		value = 0.25
-	}
-
-	diplomatic_play_neutrality = {
-		value = 10
-	}
-
-	diplomatic_play_boldness = {
-		value = 55
-	}
-
-	recklessness = {
-		value = 0.4
-	}
+	undesirable_infamy_level = { value = 60 }
+	unacceptable_infamy_level = { value = 95 }
+	ideological_opinion_effect_mult = { value = 0.75 }
+	wargoal_maneuvers_fraction = { value = 0.25 }
+	diplomatic_play_neutrality = { value = 10 }
+	diplomatic_play_boldness = { value = 55 }
+	recklessness = { value = 0.4 }
 
 	aggression = {
 		value = 1.4
 
-		# Main driver: pursue countries holding Ottoman claims
 		if = {
 			limit = {
 				scope:target_country = {
@@ -50,7 +29,6 @@
 			add = 2.25
 		}
 
-		# Strong preference for adjacent reachable neighbors
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
@@ -60,7 +38,6 @@
 			add = 1.5
 		}
 
-		# Tone down aggression toward non-adjacent countries unless they hold Ottoman claims
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
@@ -77,27 +54,28 @@
 			add = -1.25
 		}
 
-		# Extra hostility for adjacent countries in core Ottoman expansion zones
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
 				has_strategic_adjacency = scope:target_country
 				scope:target_country = {
-					OR = {
-						capital.region = sr:region_anatolia
-						capital.region = sr:region_balkans
-						capital.region = sr:region_caucasus
-						capital.region = sr:region_persia
-						capital.region = sr:region_arabia
-						capital.region = sr:region_nile
+					any_scope_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_ottomans
+							is_in_geographic_region = geographic_region_balkans
+							is_in_geographic_region = geographic_region_near_east
+							is_in_geographic_region = geographic_region_arabia
+							is_in_geographic_region = geographic_region_nile_basin
+							is_in_geographic_region = geographic_region_north_africa
+							is_in_geographic_region = geographic_region_greater_persia
+						}
 					}
 				}
 			}
 			add = 0.9
 		}
 
-		# Prefer weaker neighbors
 		if = {
 			limit = {
 				scope:target_country.country_rank < root.country_rank
@@ -105,7 +83,6 @@
 			add = 0.5
 		}
 
-		# Strongly tone down aggression toward existing subjects
 		if = {
 			limit = {
 				scope:target_country = { is_subject_of = root }
@@ -148,7 +125,6 @@
 			score = {
 				value = 175
 
-				# Highest priority: claimed lands
 				if = {
 					limit = {
 						scope:target_country = {
@@ -160,7 +136,6 @@
 					add = 350
 				}
 
-				# Strong preference for bordering enemies
 				if = {
 					limit = {
 						has_strategic_adjacency = scope:target_country
@@ -168,24 +143,25 @@
 					add = 125
 				}
 
-				# Extra pull for Ottoman near abroad
 				if = {
 					limit = {
 						scope:target_country = {
-							OR = {
-								capital.region = sr:region_anatolia
-								capital.region = sr:region_balkans
-								capital.region = sr:region_caucasus
-								capital.region = sr:region_persia
-								capital.region = sr:region_arabia
-								capital.region = sr:region_nile
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_ottomans
+									is_in_geographic_region = geographic_region_balkans
+									is_in_geographic_region = geographic_region_near_east
+									is_in_geographic_region = geographic_region_arabia
+									is_in_geographic_region = geographic_region_nile_basin
+									is_in_geographic_region = geographic_region_north_africa
+									is_in_geographic_region = geographic_region_greater_persia
+								}
 							}
 						}
 					}
 					add = 125
 				}
 
-				# Prefer smaller targets
 				if = {
 					limit = {
 						scope:target_country.country_rank <= rank_value:minor_power
@@ -204,7 +180,6 @@
 			score = {
 				value = 25
 
-				# Use subjugation mainly on smaller adjacent states without claims
 				if = {
 					limit = {
 						scope:target_country.country_rank <= rank_value:minor_power
@@ -225,9 +200,7 @@
 			trigger = {
 				scope:target_country = { is_subject_of = root }
 			}
-			score = {
-				value = 150
-			}
+			score = { value = 150 }
 		}
 
 		befriend = {
@@ -249,13 +222,16 @@
 		none = {
 			trigger = {
 				scope:target_country = {
-					OR = {
-						capital.region = sr:region_anatolia
-						capital.region = sr:region_balkans
-						capital.region = sr:region_caucasus
-						capital.region = sr:region_persia
-						capital.region = sr:region_arabia
-						capital.region = sr:region_nile
+					any_scope_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_ottomans
+							is_in_geographic_region = geographic_region_balkans
+							is_in_geographic_region = geographic_region_near_east
+							is_in_geographic_region = geographic_region_arabia
+							is_in_geographic_region = geographic_region_nile_basin
+							is_in_geographic_region = geographic_region_north_africa
+							is_in_geographic_region = geographic_region_greater_persia
+						}
 					}
 				}
 			}
@@ -277,7 +253,6 @@
 				add = 225
 			}
 
-			# Highest priority: Ottoman claims
 			if = {
 				limit = {
 					scope:target_state = {
@@ -287,7 +262,6 @@
 				add = 325
 			}
 
-			# Strong preference for states directly bordering Ottoman land
 			if = {
 				limit = {
 					scope:target_state = {
@@ -299,7 +273,6 @@
 				add = 250
 			}
 
-			# Penalize non-neighbour states so the AI stops grabbing random far targets
 			if = {
 				limit = {
 					NOT = {
@@ -313,17 +286,17 @@
 				add = -200
 			}
 
-			# Extra pull for Ottoman historical expansion zones
 			if = {
 				limit = {
 					scope:target_state = {
 						OR = {
-							region = sr:region_anatolia
-							region = sr:region_balkans
-							region = sr:region_caucasus
-							region = sr:region_persia
-							region = sr:region_arabia
-							region = sr:region_nile
+							is_in_geographic_region = geographic_region_ottomans
+							is_in_geographic_region = geographic_region_balkans
+							is_in_geographic_region = geographic_region_near_east
+							is_in_geographic_region = geographic_region_arabia
+							is_in_geographic_region = geographic_region_nile_basin
+							is_in_geographic_region = geographic_region_north_africa
+							is_in_geographic_region = geographic_region_greater_persia
 						}
 					}
 				}
@@ -424,7 +397,6 @@
 	weight = {
 		value = 100
 
-		# Very aggressive in the early game
 		if = {
 			limit = {
 				game_date < 1475.1.1
@@ -432,7 +404,6 @@
 			add = 150
 		}
 
-		# Stay expansionist while claims remain outside the empire
 		if = {
 			limit = {
 				any_country = {
@@ -445,7 +416,6 @@
 			add = 125
 		}
 
-		# Keep pressure on adjacent non-subject neighbors
 		if = {
 			limit = {
 				any_country = {
@@ -457,20 +427,22 @@
 			add = 75
 		}
 
-		# Extra priority if adjacent countries are in key Ottoman theaters
 		if = {
 			limit = {
 				any_country = {
 					NOT = { this = root }
 					NOT = { is_subject_of = root }
 					has_strategic_adjacency = root
-					OR = {
-						capital.region = sr:region_anatolia
-						capital.region = sr:region_balkans
-						capital.region = sr:region_arabia
-						capital.region = sr:region_nile
-						capital.region = sr:region_caucasus
-						capital.region = sr:region_persia
+					any_scope_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_ottomans
+							is_in_geographic_region = geographic_region_balkans
+							is_in_geographic_region = geographic_region_near_east
+							is_in_geographic_region = geographic_region_arabia
+							is_in_geographic_region = geographic_region_nile_basin
+							is_in_geographic_region = geographic_region_north_africa
+							is_in_geographic_region = geographic_region_greater_persia
+						}
 					}
 				}
 			}

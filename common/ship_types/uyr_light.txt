@@ -55,7 +55,7 @@ ship_type_barque = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
@@ -124,7 +124,7 @@ ship_type_caravel = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
@@ -194,7 +194,7 @@ ship_type_pinnace = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
@@ -265,7 +265,7 @@ ship_type_frigate = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
@@ -335,7 +335,7 @@ ship_type_heavy_frigate = {
     distance_to_port_modifier = {
         ship_hull_damage_mult = -1.0
         ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
+        ship_interest_gain_add = -999
         ship_movement_speed_mult = -0.95
     }
 
