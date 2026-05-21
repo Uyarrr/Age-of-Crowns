@@ -178,6 +178,33 @@ goods_input_gold_mult={
 	}
 }
 
+goods_input_silver_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_jewelry_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_gems_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_output_stone_mult={
 	decimals=1
 	color=good
@@ -340,7 +367,7 @@ goods_output_ironingot_mult={
 	}
 }
 
-goods_output_coins_mult={
+goods_output_gold_mult={
 	decimals=1
 	color=good
 	percent=yes
@@ -349,7 +376,25 @@ goods_output_coins_mult={
 	}
 }
 
-goods_output_gold_mult={
+goods_output_silver_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_jewelry_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_gems_mult={
 	decimals=1
 	color=good
 	percent=yes

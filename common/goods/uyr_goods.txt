@@ -222,20 +222,22 @@ gems = {
 
 ironingot = {
 	texture = "gfx/interface/icons/goods_icons/ironingot.dds"
-	cost = 90
-	category = luxury
-	prestige_factor = 12
-	traded_quantity = 3
-	convoy_cost_multiplier = 0.25
-	consumption_tax_cost = 200
+	cost = 50
+	category = industrial
+
+	prestige_factor = 5
+	traded_quantity = 4
 }
 
-coins = {
-	texture = "gfx/interface/icons/goods_icons/coins.dds"
-	cost = 20
-	category = staple
-	prestige_factor = 0
-	tradeable = no
+jewelry = {
+	texture = "gfx/interface/icons/goods_icons/jewelry.dds"
+	cost = 75
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 10
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 4 # 240
 }
 
 gold = {

@@ -177,26 +177,12 @@ ai_strategy_territorial_expansion = {
 			global_country_ranking <= 3
 			AND = {
 				country_rank >= rank_value:great_power
-				has_technology_researched = nationalism
 			}
 		}
 	}
 
 	undesirable_infamy_level = {
-		value = 50
-
-		if = {
-			limit = {
-				has_technology_researched = pan-nationalism
-			}
-			multiply = 1.5
-		}
-		else_if = {
-			limit = {
-				has_technology_researched = nationalism
-			}
-			multiply = 1.25
-		}
+		value = 85
 	}
 
 	unacceptable_infamy_level = {
@@ -304,17 +290,6 @@ ai_strategy_territorial_expansion = {
 	weight = {
 		value = 10
 
-		if = {
-			limit = {
-				exists = c:FRA
-				c:FRA = this
-				ruler = {
-					has_variable = house_bonaparte
-				}
-			}
-			add = 5
-		}
-
 		# AI implications for Power Blocs: 'Territorial Expansion' strategy is more likely for Blocs with Aggressive Coordination
 		if = {
 			limit = {
@@ -344,11 +319,6 @@ ai_strategy_territorial_expansion = {
 		if = {
 			limit = { is_in_geographic_region = geographic_region_europe }
 			multiply = 0.25
-		}
-
-		if = {
-			limit = { has_radical_leftist_government = yes }
-			multiply = 0.5
 		}
 	}
 }
