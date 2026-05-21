@@ -13,7 +13,7 @@ pm_building_mint_gold_1 = {
 			# input goods
 			goods_input_gold_add = 5
 			# output goods
-			goods_output_coins_add = 25
+			country_minting_add = 600
 		}
 
 		level_scaled = {
@@ -34,7 +34,7 @@ pm_building_mint_gold_2 = {
 			# input goods
 			goods_input_gold_add = 10
 			# output goods
-			goods_output_coins_add = 50
+			country_minting_add = 1200
 		}
 
 		level_scaled = {
@@ -55,7 +55,7 @@ pm_building_mint_gold_3 = {
 			# input goods
 			goods_input_gold_add = 15
 			# output goods
-			goods_output_coins_add = 75
+			country_minting_add = 1800
 		}
 
 		level_scaled = {
@@ -63,76 +63,6 @@ pm_building_mint_gold_3 = {
 		}
 	}
 }
-
-pm_building_mint_copper_0 = {
-	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
-}
-
-pm_building_mint_copper_1 = {
-	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_copper_add = 25
-
-			# output goods
-			goods_output_coins_add = 25
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 500
-			building_employment_clerks_add = 250
-		}
-	}
-}
-
-pm_building_mint_copper_2 = {
-	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
-
-	unlocking_technologies = {
-		centralized_minting
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_copper_add = 50
-
-			# output goods
-			goods_output_coins_add = 50
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 500
-			building_employment_clerks_add = 250
-		}
-	}
-}
-
-pm_building_mint_copper_3 = {
-	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
-
-	unlocking_technologies = {
-		mechanized_minting
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_copper_add = 75
-
-			# output goods
-			goods_output_coins_add = 75
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 500
-			building_employment_clerks_add = 250
-		}
-	}
-}
-
 
 pm_building_mint_silver_0 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
@@ -144,10 +74,10 @@ pm_building_mint_silver_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_silver_add = 5
+			goods_input_silver_add = 10
 
 			# output goods
-			goods_output_coins_add = 15
+			country_minting_add = 600
 		}
 
 		level_scaled = {
@@ -166,10 +96,10 @@ pm_building_mint_silver_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_silver_add = 10
+			goods_input_silver_add = 20
 
 			# output goods
-			goods_output_coins_add = 30
+			country_minting_add = 1200
 		}
 
 		level_scaled = {
@@ -188,10 +118,10 @@ pm_building_mint_silver_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_silver_add = 15
+			goods_input_silver_add = 40
 
 			# output goods
-			goods_output_coins_add = 45
+			country_minting_add = 2400
 		}
 
 		level_scaled = {

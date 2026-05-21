@@ -4,15 +4,16 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tin_add = 10
-			goods_input_copper_add = 10
+			goods_input_iron_add = 10
+			goods_input_coal_add = 5
 
 			# output goods
 			goods_output_ironingot_add = 25
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 300
+			building_employment_shopkeepers_add = 100
+			building_employment_machinists_add_add = 200
 			building_employment_laborers_add = 2700
 		}
 	}
@@ -28,17 +29,17 @@ pm_building_ironworks_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tin_add = 20
-			goods_input_copper_add = 20
+			goods_input_iron_add = 20
+			goods_input_coal_add = 10
 
 			# output goods
 			goods_output_ironingot_add = 50
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 300
-			building_employment_laborers_add = 2325
-			building_employment_machinists_add = 375
+			building_employment_shopkeepers_add = 200
+			building_employment_laborers_add = 2400
+			building_employment_machinists_add = 400
 		}
 	}
 }
@@ -53,8 +54,8 @@ pm_building_ironworks_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tin_add = 30
-			goods_input_copper_add = 30
+			goods_input_iron_add = 30
+			goods_input_coal_add = 15
 
 			# output goods
 			goods_output_ironingot_add = 75
@@ -80,7 +81,7 @@ pm_building_ironworks_main_4 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_tin_add = 40
-			goods_input_copper_add = 40
+			goods_input_copper_add = 20
 
 			# output goods
 			goods_output_ironingot_add = 100
