@@ -147,6 +147,7 @@ STATE_SINAI = {
         building_fishing_wharf = 3
         building_iron_mine = 12
         building_lead_mine = 12
+        building_gem_mine = 1
     
         building_stone_mine = 8
     }
@@ -161,6 +162,10 @@ STATE_SINAI = {
     resource = {
         type = "building_stone_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_gem_mine"
+        undiscovered_amount = 1
     }
 
     naval_exit_id = 3047

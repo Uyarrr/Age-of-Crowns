@@ -734,7 +734,6 @@ sugar_plantation = {
 	category = production
 
 	modifier = {
-		state_colony_growth_speed_mult = 0.05
 	}
 
 	unlocking_technologies = {
@@ -752,7 +751,6 @@ cotton_plantation = {
 	category = production
 
 	modifier = {
-		state_colony_growth_speed_mult = 0.05
 	}
 
 	unlocking_technologies = {
@@ -770,7 +768,6 @@ tobacco_plantation = {
 	category = production
 
 	modifier = {
-		state_colony_growth_speed_mult = 0.05
 	}
 
 	unlocking_technologies = {
@@ -856,7 +853,7 @@ expanded_gold_mining = {
 standardized_planks_and_bricks = {
 	#Upgrades Construction
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/repair.dds"
+	texture = "gfx/interface/icons/invention_icons/construction_materials.dds"
 	category = production
 
 	modifier = {
@@ -1113,7 +1110,7 @@ skilled_craftmanship = {
 wagon_transport = {
 	#Unlocks Road Transport PM
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/wagon.dds"
+	texture = "gfx/interface/icons/invention_icons/horse_wagon.dds"
 	category = production
 
 	modifier = {
@@ -1147,7 +1144,7 @@ bakery_coal_heating = {
 homesteading = {
 	#Unlocks Homesteading Law
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/peasants_rights_laws.dds"
+	texture = "gfx/interface/icons/invention_icons/homesteading_uyr.dds"
 	category = production
 
 	modifier = {
@@ -1471,12 +1468,12 @@ bronze_manufactories = {
 
 mechanized_extraction = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	texture = "gfx/interface/icons/invention_icons/mechanized_extraction.dds"
 	category = production
 
 	modifier = {
-		building_group_bg_logging_throughput_add = 0.10
-		building_group_bg_mining_throughput_add = 0.10
+		building_group_bg_logging_throughput_add = 0.15
+		building_group_bg_mining_throughput_add = 0.15
 	}
 
 	unlocking_technologies = {
@@ -1569,6 +1566,7 @@ mechanized_wood_logging = {
 	}
 
 	unlocking_technologies = {
+		mechanized_extraction
 	}
 
 	ai_weight = {

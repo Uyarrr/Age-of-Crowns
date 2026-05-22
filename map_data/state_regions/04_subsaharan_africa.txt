@@ -683,6 +683,7 @@ STATE_TANGANYIKA = {
     capped_resources = {
         building_coal_mine = 36
         building_iron_mine = 24
+        building_gem_mine = 3
         building_stone_mine = 10
         building_logging_camp = 23
         building_tin_mine = 3
@@ -703,6 +704,11 @@ STATE_TANGANYIKA = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 24
+    }
+    resource = {
+        type = "building_gem_mine"
+        undiscovered_amount = 3
+        discover_chance_mult = 0.75
     }
     resource = {
         type = "building_tin_mine"
@@ -728,6 +734,7 @@ STATE_KENYA = {
         building_logging_camp = 6
         building_fishing_wharf = 10
     
+        building_gem_mine = 2
         building_stone_mine = 9
     }
     resource = {
@@ -737,6 +744,10 @@ STATE_KENYA = {
     resource = {
         type = "building_stone_mine"
         undiscovered_amount = 9
+    }
+    resource = {
+        type = "building_gem_mine"
+        undiscovered_amount = 2
     }
 
     naval_exit_id = 3018
@@ -1075,6 +1086,7 @@ STATE_MOCAMBIQUE = {
     arable_land = 80
     arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_garden" "building_tobacco_plantation" "building_sugar_plantation" "building_orchard" }
     capped_resources = {
+        building_gem_mine = 4
         building_stone_mine = 8
         building_logging_camp = 23
         building_fishing_wharf = 8
@@ -1097,6 +1109,11 @@ STATE_MOCAMBIQUE = {
     resource = {
         type = "building_tin_mine"
         undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_gem_mine"
+        undiscovered_amount = 4
+        discover_chance_mult = 0.75
     }
 
     naval_exit_id = 3107
@@ -1613,6 +1630,7 @@ STATE_ZAMBIA = {
     capped_resources = {
         building_coal_mine = 18
         building_lead_mine = 17
+        building_gem_mine = 5
         building_logging_camp = 17
     
         building_stone_mine = 15
@@ -1642,6 +1660,10 @@ STATE_ZAMBIA = {
     resource = {
         type = "building_silver_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_gem_mine"
+        undiscovered_amount = 5
     }
 
 }
@@ -1704,6 +1726,7 @@ STATE_ZAMBEZI = {
     arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_orchard" "building_stud_farm" }
     capped_resources = {
         building_coal_mine = 22
+        building_gem_mine = 3
         building_logging_camp = 11
     
         building_stone_mine = 12
@@ -1725,6 +1748,10 @@ STATE_ZAMBEZI = {
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_gem_mine"
+        undiscovered_amount = 3
     }
     resource = {
         type = "building_silver_mine"

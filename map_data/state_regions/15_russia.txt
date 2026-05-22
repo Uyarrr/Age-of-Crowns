@@ -958,6 +958,7 @@ STATE_PERM = {
     capped_resources = {
         building_coal_mine = 40
         building_iron_mine = 38
+        building_gem_mine = 2
         building_stone_mine = 10
         building_logging_camp = 35
     }
@@ -973,6 +974,10 @@ STATE_PERM = {
     resource = {
         type = "building_iron_mine"
         undiscovered_amount = 37
+    }
+    resource = {
+        type = "building_gem_mine"
+        undiscovered_amount = 2
     }
 
 }

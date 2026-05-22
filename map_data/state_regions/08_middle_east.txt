@@ -623,6 +623,7 @@ STATE_KHORASAN = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_orchard" "building_dye_plantation" "building_opium_plantation" "building_tobacco_plantation" "building_cotton_plantation" "building_silk_farm" "building_vineyard" "building_stud_farm" "building_apiary" }
     capped_resources = {
         building_stone_mine = 10
+        building_gem_mine = 2
         building_logging_camp = 4
         building_iron_mine = 11
         building_coal_mine = 6
@@ -655,6 +656,10 @@ STATE_KHORASAN = {
     resource = {
         type = "building_silver_mine"
         undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_gem_mine"
+        undiscovered_amount = 2
     }
 
 }

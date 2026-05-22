@@ -1,0 +1,22 @@
+﻿on_colony_created = {
+    on_actions = {
+        ai_build_colonial_outpost
+    }
+}
+
+ai_build_colonial_outpost = {
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					is_player = no
+				}
+				NOT = {
+					has_building = building_colonial_outpost
+				}
+			}
+
+			start_privately_funded_building_construction = building_colonial_outpost
+		}
+	}
+}

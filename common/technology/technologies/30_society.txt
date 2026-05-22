@@ -711,7 +711,7 @@ double_entry_bookkeeping = {
 	}
 
 	unlocking_technologies = {
-		standardized_coins
+		banking
 	}
 
 	ai_weight = {
@@ -722,7 +722,7 @@ double_entry_bookkeeping = {
 formalized_administration = {
 	# Unlocks Government Administration PM
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/bureaucracy_law.dds"
+	texture = "gfx/interface/icons/invention_icons/formalized_administration.dds"
 	category = society
 
 	modifier = {
@@ -819,6 +819,8 @@ colonization = {
 	category = society
 
 	modifier = {
+		state_colony_growth_creation_factor = 0.01
+		state_colony_growth_speed_mult = -0.35
 	}
 
 	unlocking_technologies = {
@@ -884,213 +886,33 @@ colonial_trade_networks = {
 	}
 }
 
-exploration_canada = {
+silver_coinage = {
+	# Unlocks Silver Mint PM
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/exploration.dds"
+	texture = "gfx/interface/icons/invention_icons/silver_mint.dds"
 	category = society
-
-	modifier = {
-		country_institution_cost_institution_colonial_affairs_mult = -0.05
-	}
 
 	unlocking_technologies = {
 		new_world
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
+		value = 2
 	}
 }
 
-colonial_east_canada = {
+gold_coinage = {
+	# Unlocks Silver Mint PM
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonial_canada.dds"
+	texture = "gfx/interface/icons/invention_icons/gold_mint.dds"
 	category = society
 
-	modifier = {
-	}
-
 	unlocking_technologies = {
-		exploration_canada
+		silver_coinage
 	}
 
 	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-exploration_caribbean = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/exploration.dds"
-	category = society
-
-	modifier = {
-		country_institution_cost_institution_colonial_affairs_mult = -0.05
-	}
-
-	unlocking_technologies = {
-		new_world
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-colonial_caribbean = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonial_caribbean.dds"
-	category = society
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-		exploration_caribbean
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-exploration_north_america = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/exploration.dds"
-	category = society
-
-	modifier = {
-		country_institution_cost_institution_colonial_affairs_mult = -0.05
-	}
-
-	unlocking_technologies = {
-		new_world
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-colonial_east_north_america = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonial_north_america.dds"
-	category = society
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-		exploration_north_america
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-exploration_east_mexico = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/exploration.dds"
-	category = society
-
-	modifier = {
-		country_institution_cost_institution_colonial_affairs_mult = -0.05
-	}
-
-	unlocking_technologies = {
-		new_world
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-colonization_east_mexico = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonial_mexico.dds"
-	category = society
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-		exploration_east_mexico
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-exploration_central_america = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/exploration.dds"
-	category = society
-
-	modifier = {
-		country_institution_cost_institution_colonial_affairs_mult = -0.05
-	}
-
-	unlocking_technologies = {
-		new_world
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-colonial_central_america = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonial_central_america.dds"
-	category = society
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-		exploration_central_america
-	}
-
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-exploration_south_america = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/exploration.dds"
-	category = society
-
-	modifier = {
-		country_institution_cost_institution_colonial_affairs_mult = -0.05
-	}
-
-	unlocking_technologies = {
-		new_world
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-colonial_east_south_america = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonial_south_america.dds"
-	category = society
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-		exploration_south_america
-	}
-
-	ai_weight = {
-		value = 1
+		value = 2
 	}
 }
 
@@ -1253,6 +1075,37 @@ shared_knowledge = {
 		value = 2
 	}
 }
+
+gold_coinage = {
+	# Unlock Gold Coin Mint PM
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/gold_mint.dds"
+	category = society
+
+	unlocking_technologies = {
+		banking
+	}
+
+	ai_weight = {
+		value = 2 # Important in general
+	}
+}
+
+silver_coinage = {
+	# Unlock Silver Coin Mint PM
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/silver_mint.dds"
+	category = society
+
+	unlocking_technologies = {
+		gold_coinage
+	}
+
+	ai_weight = {
+		value = 2 # Important in general
+	}
+}
+
 
 ######## ERA 4 #########
 confessionalism = {
@@ -1434,6 +1287,22 @@ representative_assemblies = {
 }
 
 ######## ERA 5 ##########
+absolutism = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/absolutism.dds"
+	category = society
+
+	modifier = {
+		interest_group_ig_crown_pol_str_mult = 0.35
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
 
 major_formation = {
 	# Unlocks Major Formables
@@ -1442,6 +1311,7 @@ major_formation = {
 	category = society
 
 	unlocking_technologies = {
+		absolutism
 	}
 
 	ai_weight = {
@@ -1459,6 +1329,7 @@ absolute_leadership = {
 	}
 
 	unlocking_technologies = {
+		absolutism
 	}
 
 	ai_weight = {
@@ -1467,7 +1338,7 @@ absolute_leadership = {
 }
 
 unitary_administration = {
-	#Unlocks Absolute Leadership Law
+	#Unlocks Unitary Administration Law
 	era = era_5
 	texture = "gfx/interface/icons/law_icons/unitary_administration.dds"
 	category = society
@@ -1476,6 +1347,7 @@ unitary_administration = {
 	}
 
 	unlocking_technologies = {
+		absolute_leadership
 	}
 
 	ai_weight = {
@@ -1493,6 +1365,25 @@ aggressive_demands = {
 	}
 
 	unlocking_technologies = {
+		absolutism
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+state_centralization = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/state_centralization.dds"
+	category = society
+
+	modifier = {
+		state_contiguous_incorporation_speed_mult = 0.10
+	}
+
+	unlocking_technologies = {
+		aggressive_demands
 	}
 
 	ai_weight = {
@@ -1510,6 +1401,7 @@ absolute_loyalty = {
 	}
 
 	unlocking_technologies = {
+		loyal_subordinates
 	}
 
 	ai_weight = {
@@ -1527,6 +1419,7 @@ modern_road = {
 	}
 
 	unlocking_technologies = {
+		sanitation
 	}
 
 	ai_weight = {
@@ -1544,6 +1437,7 @@ loyal_subordinates = {
 	}
 
 	unlocking_technologies = {
+		absolutism
 	}
 
 	ai_weight = {
@@ -1566,6 +1460,36 @@ sanitation = {
 
 	ai_weight = {
 		value = 1
+	}
+}
+
+royal_silver_minting = {
+	# Unlock Gold Coin Mint PM
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/silver_mint.dds"
+	category = society
+
+	unlocking_technologies = {
+		absolutism
+	}
+
+	ai_weight = {
+		value = 2 # Important in general
+	}
+}
+
+royal_gold_minting = {
+	# Unlock Gold Coin Mint PM
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/gold_mint.dds"
+	category = society
+
+	unlocking_technologies = {
+		royal_silver_minting
+	}
+
+	ai_weight = {
+		value = 2 # Important in general
 	}
 }
 
