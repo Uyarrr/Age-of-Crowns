@@ -7180,36 +7180,32 @@ s:STATE_CHONGQING = {
 		}
 	}
 s:STATE_CHUGOKU = {
-		region_state:JAP = {
+		region_state:YMN = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 155752
+				size = 332271
 			}
+		}
+		region_state:HSK = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 173058
+				size = 192642
 			}
+		}
+		region_state:OUC = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 190364
+				size = 212698
 			}
+		}
+		region_state:AMG = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 51917
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 138446
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 121141
+				size = 93067
 			}
 		}
 	}
@@ -13771,11 +13767,42 @@ s:STATE_HOKKAIDO = {
 				size = 3692
 			}
 		}
-		region_state:JAP = {
+		region_state:NDO = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
 				size = 3692
+			}
+		}
+	}
+s:STATE_HOKUSHINETSU = {
+		# Shinano, Wakasa, Echizen, Kaga, Noto, Etchū, Echigo, and Sado provinces
+		region_state:OGS ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 620805
+			}
+		}
+		region_state:USG ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 372483
+			}
+		}
+		region_state:HTK ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 248322
+			}
+		}
+		region_state:SHB ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 124161
 			}
 		}
 	}
@@ -15644,36 +15671,39 @@ s:STATE_KANSAS = {
 		}
 	}
 s:STATE_KANTO = {
-		region_state:JAP = {
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 167782
-			}
+		region_state:USG = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
 				size = 629182
 			}
+		}
+		region_state:UTS = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 293618
+				size = 343618
 			}
+		}
+		region_state:STK = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 259727
+			}
+		}
+		region_state:CHB = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
 				size = 167782
 			}
+		}
+		region_state:ASK = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 209727
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 83891
+				size = 147782
 			}
 		}
 	}
@@ -17358,66 +17388,71 @@ s:STATE_KURSK = {
 			}
 		}
 	}
+s:STATE_KYOTO = {
+		# Ōmi, Tanba, Tango, and Tajima provinces
+		region_state:ASK = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 215506
+			}
+		}
+		region_state:ISK = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 115102
+			}
+		}
+		region_state:YMN = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 82677
+			}
+		}
+	}
 s:STATE_KYUSHU = {
-		region_state:JAP = {
+		region_state:ITO = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 169823
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 169823
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 226430
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 132084
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 150954
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 169823
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 75477
+				size = 223603
 			}
 		}
-		region_state:MCR = {
-			create_pop = {
-				culture = micronesian
-				religion = animist
-				size = 396
-			}
-		}
-		region_state:O00 = {
-			create_pop = {
-				culture = hawaiian
-				religion = protestant
-				size = 210
-			}
+		region_state:KKC = {
 			create_pop = {
 				culture = japanese
-				religion = animist
-				size = 210
+				religion = mahayana
+				size = 223603
 			}
+		}
+		region_state:OTM = {
 			create_pop = {
-				culture = yankee
-				religion = protestant
-				size = 210
+				culture = japanese
+				religion = mahayana
+				size = 209041
+			}
+		}
+		region_state:OUC = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 116641
+			}
+		}
+		region_state:SNI = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 102641
+			}
+		}
+		region_state:SHI = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 21883
 			}
 		}
 	}
@@ -25184,6 +25219,33 @@ s:STATE_ORYOL = {
 			}
 		}
 	}
+s:STATE_KANSAI = {
+		# Yamashiro, Yamato, Kawachi, Izumi, Settsu, Harima, Kii, and Awaji provinces
+		region_state:YMN = {
+			create_pop = {
+				culture = japanese
+				size = 250132
+			}
+		}
+		region_state:HSK = {
+			create_pop = {
+				culture = japanese
+				size = 212052
+			}
+		}
+		region_state:HTK = {
+			create_pop = {
+				culture = japanese
+				size = 471226
+			}
+		}
+		region_state:TSU = {
+			create_pop = {
+				culture = japanese
+				size = 244616
+			}
+		}
+	}
 s:STATE_OSTROBOTHNIA = {
 		region_state:SWE = {
 			create_pop = {
@@ -28689,17 +28751,14 @@ s:STATE_SHENGJING = {
 		}
 	}
 s:STATE_SHIKOKU = {
-		region_state:JAP = {
+		region_state:HSK = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 144503
+				size = 309649
 			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 165146
-			}
+		}
+		region_state:KNO = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
@@ -31658,36 +31717,91 @@ s:STATE_TOGO = {
 		}
 	}
 s:STATE_TOHOKU = {
-		region_state:JAP = {
+		region_state:NAN = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 273894
+			}
+		}
+		region_state:DTE = {
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 256461
+			}
+		}
+		region_state:NDO = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
 				size = 192028
 			}
+		}
+		region_state:SHB = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 246894
+				size = 164596
 			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 54865
-			}
-			create_pop = {
-				culture = japanese
-				religion = mahayana
-				size = 219461
-			}
+		}
+		region_state:USG = {
 			create_pop = {
 				culture = japanese
 				religion = mahayana
 				size = 109730
 			}
+		}
+	}
+s:STATE_TOKAI = {
+		# Iga, Ise, Shima, Owari, Mikawa, Tōtōmi, Suruga, Kai, Izu, Mino, and Hida provinces
+		region_state:KBK ={
 			create_pop = {
 				culture = japanese
 				religion = mahayana
-				size = 164596
+				size = 211565
+			}
+		}
+		region_state:TKI ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 311575
+			}
+		}
+		region_state:TKG ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 231573
+			}
+		}
+		region_state:TKD ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 251576
+			}
+		}
+		region_state:ODA ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 125788
+			}
+		}
+		region_state:IMG ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 60543
+			}
+		}
+		region_state:ASK ={
+			create_pop = {
+				culture = japanese
+				religion = mahayana
+				size = 65243
 			}
 		}
 	}
