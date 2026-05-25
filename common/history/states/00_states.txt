@@ -2135,14 +2135,6 @@ s:STATE_CHONGQING = {
 		add_homeland = cu:han
 		add_homeland = cu:yi
 	}
-s:STATE_CHUGOKU = {
-		create_state = {
-			country = c:JAP
-			owned_provinces = { x1151C0 x715101 x77D64C x89FD28 xA287B0 xB49AFB xC8AE5C xF05001 }
-			state_type = incorporated
-		}
-		add_homeland = cu:japanese
-	}
 s:STATE_CHUKOTKA = {
 		create_state = {
 			country = c:C17
@@ -4039,20 +4031,6 @@ s:STATE_HINGGAN = {
 		add_homeland = cu:mongol
 		add_claim = c:MGL
 	}
-s:STATE_HOKKAIDO = {
-		create_state = {
-			country = c:AIN
-			owned_provinces = { x03E00D x103C2B x17C8CA x1E5261 x1E9A93 x2090C0 x210B6E x3974DA x3EA37A x413F60 x420E86 x493B76 x5B9D2D x5F2A24 x601140 x6275D4 x65D8B2 x70C55B x7F67EF x85C158 x86757A x9E56C2 xA011C0 xC85C0C xEEB7F4 }
-			state_type = incorporated
-		}
-		create_state = {
-			country = c:JAP
-			owned_provinces = { x40BDB8 xA090C0 xF17C01 }
-			state_type = incorporated
-		}
-		add_homeland = cu:ainu
-		add_homeland = cu:japanese
-	}
 s:STATE_HOLLAND = {
 		create_state = {
 			country = c:T82
@@ -4587,14 +4565,6 @@ s:STATE_KANDAHAR = {
 		add_claim = c:U82
 		add_claim = c:W95
 	}
-s:STATE_KANSAI = {
-		create_state = {
-			country = c:JAP
-			owned_provinces = { x305040 x614287 x705040 x70D040 x879C25 x8EC4C9 x9BD7C1 x9E58B2 xB03EF0 xB0D0C0 xCCB03E }
-			state_type = incorporated
-		}
-		add_homeland = cu:japanese
-	}
 s:STATE_KANSAS = {
 		create_state = {
 			country = c:ARP
@@ -4618,14 +4588,6 @@ s:STATE_KANSAS = {
 		}
 		add_homeland = cu:caddoan
 		add_homeland = cu:siouan
-	}
-s:STATE_KANTO = {
-		create_state = {
-			country = c:JAP
-			owned_provinces = { x478599 x7010C0 x709040 x7090C0 x787CC4 xB94331 xD350FB xEAE893 xEF9040 xF011C0 }
-			state_type = incorporated
-		}
-		add_homeland = cu:japanese
 	}
 s:STATE_KARS = {
 		create_state = {
@@ -5065,24 +5027,6 @@ s:STATE_KURSK = {
 		}
 		add_homeland = cu:russian
 		add_homeland = cu:tatar
-	}
-s:STATE_KYUSHU = {
-		create_state = {
-			country = c:JAP
-			owned_provinces = { x1F0D2C x5C7980 x705080 x70CF00 x70D080 x73414A x906F1E xAE5874 xCEA020 xE16F98 xEF5080 xF0D000 }
-			state_type = incorporated
-		}
-		create_state = {
-			country = c:MCR
-			owned_provinces = { xEF50C0 }
-			state_type = unincorporated
-		}
-		create_state = {
-			country = c:O00
-			owned_provinces = { x800111 }
-			state_type = incorporated
-		}
-		add_homeland = cu:japanese
 	}
 s:STATE_LANCASHIRE = {
 		create_state = {
@@ -8260,14 +8204,6 @@ s:STATE_RYAZAN = {
 		add_homeland = cu:russian
 		add_homeland = cu:tatar
 	}
-s:STATE_RYUKYU_ISLANDS = {
-		create_state = {
-			country = c:DL1
-			owned_provinces = { xF0D080 xF0F061 }
-			state_type = incorporated
-		}
-		add_homeland = cu:japanese
-	}
 s:STATE_SAHARA = {
 			create_state = {
 				country = c:T55
@@ -8294,20 +8230,6 @@ s:STATE_SAHARA = {
 			add_homeland = cu:tuareg
 			add_claim = c:MOR
 		}
-s:STATE_SAKHALIN = {
-		create_state = {
-			country = c:AIN
-			owned_provinces = { x02BAB7 x1CAAE0 x2010C0 x2492AA x3405B2 x47B65C x7608FE x768145 x9628A0 x9E3A0A xA5E421 xBE16C2 xD0294D xDFA060 xE99CEA xEAFA0A xF15B61 }
-			state_type = incorporated
-		}
-		create_state = {
-			country = c:U21
-			owned_provinces = { x041FF2 x1B4E8D x1CA52F x22C190 x4ED0E9 x503660 xB8277E xC3C06E xF1B27F }
-			state_type = incorporated
-		}
-		add_homeland = cu:ainu
-		add_homeland = cu:siberian
-	}
 s:STATE_SAMARA = {
 		create_state = {
 			country = c:TAR
@@ -8632,14 +8554,6 @@ s:STATE_SHENGJING = {
 		}
 		add_homeland = cu:han
 		add_homeland = cu:manchu
-	}
-s:STATE_SHIKOKU = {
-		create_state = {
-			country = c:JAP
-			owned_provinces = { x5D5512 x7C9BEB x90D040 xEFD040 xF05040 }
-			state_type = incorporated
-		}
-		add_homeland = cu:japanese
 	}
 s:STATE_SICHUAN = {
 		create_state = {
@@ -9562,14 +9476,6 @@ s:STATE_TOGO = {
 			add_homeland = cu:fon
 			add_homeland = cu:mossi
 		}
-s:STATE_TOHOKU = {
-		create_state = {
-			country = c:JAP
-			owned_provinces = { x15EED4 x19C715 x1BAF33 x3190C0 x322F47 x3CA2FC x4C5533 x637FEB x701040 x81A720 xA26E5F xAC762F xB011C0 xB090C0 xBC2AFE xBED026 xE0D080 xE22202 xF01040 xF29D08 }
-			state_type = incorporated
-		}
-		add_homeland = cu:japanese
-	}
 s:STATE_TOMSK = {
 		create_state = {
 			country = c:ALI
