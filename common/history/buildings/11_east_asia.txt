@@ -485,6 +485,17 @@
 				reserves=1
 				activate_production_methods={ "pm_building_road_main_1" "pm_building_road_transport_0" }
 			}
+			create_building={
+				building="building_barrack"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=6
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_samurai_training" }
+			}
 		}
 	}
 	s:STATE_KYUSHU={
