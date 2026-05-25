@@ -44,13 +44,17 @@
 		}
 	}
 	s:STATE_LIBERIA={
-		region_state:N09={
+		region_state:KRU={
+		}
+		region_state:M13={
 		}
 	}
 	s:STATE_HAUSALAND={
 		region_state:OYO={
 		}
-		region_state:H99={
+		region_state:S46={
+		}
+		region_state:U20={
 		}
 	}
 	s:STATE_BENIN={
@@ -76,13 +80,13 @@
 		}
 	}
 	s:STATE_OUTER_HAUSALAND={
-		region_state:TU9={
+		region_state:AIR={
 		}
 		region_state:BOR={
 		}
-		region_state:SON={
+		region_state:GAO={
 		}
-		region_state:H99={
+		region_state:V31={
 		}
 	}
 	s:STATE_BORNU={
@@ -92,13 +96,21 @@
 	s:STATE_NIGERIA={
 		region_state:BOR={
 		}
-		region_state:N09={
+		region_state:SOK={
 		}
-		region_state:H99={
+		region_state:U20={
+		}
+		region_state:W87={
 		}
 	}
 	s:STATE_EAST_HAUSALAND={
-		region_state:H99={
+		region_state:S46={
+		}
+		region_state:U20={
+		}
+		region_state:V31={
+		}
+		region_state:W87={
 		}
 	}
 	s:STATE_GUINEA={
@@ -120,9 +132,9 @@
 		}
 	}
 	s:STATE_TOGO={
-		region_state:ASH={
+		region_state:EWE={
 		}
-		region_state:M99={
+		region_state:X95={
 		}
 	}
 	s:STATE_DAHOMEY={
@@ -130,15 +142,17 @@
 		}
 		region_state:OYO={
 		}
-		region_state:M99={
+		region_state:W56={
 		}
 	}
 	s:STATE_LINDI={
 		region_state:GGO={
 		}
-		region_state:N10={
+		region_state:HHE={
 		}
 		region_state:S41={
+		}
+		region_state:SNG={
 		}
 	}
 	s:STATE_ZANZIBAR={
@@ -174,7 +188,7 @@
 	s:STATE_RIFT_VALLEY={
 		region_state:LUO={
 		}
-		region_state:M99={
+		region_state:MSI={
 		}
 		region_state:TRK={
 		}
@@ -218,10 +232,20 @@
 		}
 	}
 	s:STATE_KAZEMBE={
-		region_state:N10={
+		region_state:BMB={
+		}
+		region_state:KZM={
+		}
+		region_state:MRV={
+		}
+		region_state:T48={
+		}
+		region_state:V37={
 		}
 	}
 	s:STATE_SOMALILAND={
+		region_state:V62={
+		}
 		region_state:V90={
 		}
 		region_state:WSG={
@@ -234,9 +258,21 @@
 	s:STATE_SOUTH_MADAGASCAR={
 		region_state:MAD={
 		}
+		region_state:U83={
+		}
+		region_state:V69={
+		}
+		region_state:X21={
+		}
 	}
 	s:STATE_NORTH_MADAGASCAR={
 		region_state:MAD={
+		}
+		region_state:U83={
+		}
+		region_state:X21={
+		}
+		region_state:X64={
 		}
 	}
 	s:STATE_UGANDA={
@@ -272,11 +308,13 @@
 		}
 	}
 	s:STATE_WADDAI={
-		region_state:N09={
+		region_state:T98={
+		}
+		region_state:WAD={
 		}
 	}
 	s:STATE_NORTH_CAMEROON={
-		region_state:N09={
+		region_state:SOK={
 		}
 	}
 	s:STATE_SOUTH_CAMEROON={
@@ -290,39 +328,47 @@
 		}
 	}
 	s:STATE_UBANGI_SHARI={
-		region_state:N09={
+		region_state:DAK={
 		}
 		region_state:ZND={
 		}
 	}
 	s:STATE_CONGO={
-		region_state:N10={
+		region_state:BOB={
 		}
-		region_state:KON={
+		region_state:LNG={
+		}
+		region_state:T77={
 		}
 	}
 	s:STATE_CONGO_ORIENTALE={
 		region_state:LBA={
 		}
-		region_state:N10={
+		region_state:LGA={
 		}
-		region_state:ZND={
+		region_state:MNB={
 		}
 		region_state:RWD={
 		}
+		region_state:ZND={
+		}
 	}
 	s:STATE_KASAI={
-		region_state:KON={
+		region_state:KBA={
 		}
 		region_state:LBA={
 		}
-		region_state:LND={
+		region_state:V16={
 		}
 	}
 	s:STATE_BAS_CONGO={
+		region_state:KBA={
+		}
 		region_state:KON={
 		}
-		region_state:N10={
+		region_state:KSN={
+		}
+		region_state:YKA={
 		}
 	}
 	s:STATE_EQUATEUR={
@@ -340,25 +386,39 @@
 		}
 	}
 	s:STATE_EAST_ANGOLA={
-		region_state:LND={
-		}
-		region_state:N10={
+		region_state:CHK={
 		}
 		region_state:KON={
+		}
+		region_state:KSN={
+		}
+		region_state:LND={
+		}
+		region_state:LZO={
+		}
+		region_state:V99={
 		}
 	}
 	s:STATE_KATANGA={
+		region_state:KZM={
+		}
 		region_state:LBA={
+		}
+		region_state:LND={
+		}
+		region_state:W99={
 		}
 	}
 	s:STATE_GABON={
-		region_state:N09={
+		region_state:FNG={
 		}
-		region_state:KON={
+		region_state:LNG={
 		}
 	}
 	s:STATE_ZAMBIA={
-		region_state:N10={
+		region_state:BMB={
+		}
+		region_state:LZO={
 		}
 	}
 	s:STATE_ZAMBEZIA={
@@ -366,33 +426,41 @@
 		}
 		region_state:U79={
 		}
-		region_state:N10={
+		region_state:V37={
 		}
 	}
 	s:STATE_ZAMBEZI={
 		region_state:S44={
 		}
+		region_state:U73={
+		}
 	}
 	s:STATE_NAMAQUALAND={
-		region_state:N10={
+		region_state:NAM={
 		}
 	}
 	s:STATE_HEREROLAND={
-		region_state:N10={
+		region_state:HRO={
 		}
 	}
 	s:STATE_ZULULAND={
+		region_state:S54={
+		}
 		region_state:ZUL={
 		}
 	}
 	s:STATE_VRYSTAAT={
-		region_state:N10={
+		region_state:S53={
 		}
 		region_state:ZUL={
 		}
 	}
 	s:STATE_TRANSVAAL={
-		region_state:N10={
+		region_state:S53={
+		}
+		region_state:TSW={
+		}
+		region_state:W07={
 		}
 		region_state:ZUL={
 		}
@@ -408,13 +476,19 @@
 		}
 	}
 	s:STATE_NORTHERN_CAPE={
-		region_state:N10={
+		region_state:K09={
+		}
+		region_state:TSW={
+		}
+		region_state:UT1={
 		}
 		region_state:XHO={
 		}
 	}
 	s:STATE_BOTSWANA={
-		region_state:N10={
+		region_state:LZO={
+		}
+		region_state:TSW={
 		}
 	}
 	s:STATE_LOURENCO_MARQUES={

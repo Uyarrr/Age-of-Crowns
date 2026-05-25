@@ -1,28 +1,260 @@
 ﻿BUILDINGS={
 	s:STATE_LOWER_EGYPT={
-		region_state:MAM={
+		region_state:EGY={
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=20
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_wheat_farm_main_1" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_livestock_main_1" "pm_building_livestock_sheep_1" }
+			}
+			create_building={
+				building="building_fiber_farm"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_fiber_farm_main_1" }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_logging_camp_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_stone_mine"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_stone_mine_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=6
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_fishing_wharf_main_1" "pm_building_fishing_wharf_salt_0" }
+			}
+			create_building={
+				building="building_shipyard"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_shipyard_main_1" }
+			}
+			create_building={
+				building="building_weapon_workshop"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_weapon_workshop_main_1" }
+			}
+			create_building={
+				building="building_tooling_workshop"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_tooling_workshop_main_1" }
+			}
+			create_building={
+				building="building_textile_mill"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_cloth_workshop_main_1" "pm_building_cloth_workshop_leather_0" }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=5
+					}
+				}
+				subsidized=no
+				reserves=1
+				activate_production_methods={ "pm_building_port_main_1" }
+			}
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=15
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
+			}
 		}
 	}
 	s:STATE_UPPER_EGYPT={
-		region_state:MAM={
+		region_state:EGY={
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_dye_plantation_main_1" }
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_wheat_farm_main_1" }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_logging_camp_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_fishing_wharf_main_1" "pm_building_fishing_wharf_salt_0" }
+			}
 		}
 	}
 	s:STATE_MIDDLE_EGYPT={
-		region_state:MAM={
+		region_state:EGY={
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_logging_camp_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_fishing_wharf_main_1" "pm_building_fishing_wharf_salt_0" }
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_wheat_farm_main_1" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_livestock_main_1" "pm_building_livestock_sheep_1" }
+			}
 		}
 	}
 	s:STATE_EGYPTIAN_DESERT={
-		region_state:N09={
+		region_state:EGY={
 		}
 		region_state:V53={
 		}
 	}
 	s:STATE_MATRUH={
-		region_state:MAM={
+		region_state:EGY={
 		}
 	}
 	s:STATE_SINAI={
-		region_state:MAM={
+		region_state:EGY={
+			create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_fishing_wharf_main_1" "pm_building_fishing_wharf_salt_0" }
+			}
 		}
 	}
 	s:STATE_ERITREA={
@@ -34,7 +266,18 @@
 	s:STATE_DONGOLA={
 		region_state:BJA={
 		}
-		region_state:MAM={
+		region_state:EGY={
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_logging_camp_main_1" "pm_road_carts" }
+			}
 		}
 		region_state:V53={
 		}
@@ -42,7 +285,7 @@
 		}
 	}
 	s:STATE_KORDOFAN={
-		region_state:N09={
+		region_state:EGY={
 		}
 	}
 	s:STATE_DARFUR={
@@ -54,7 +297,7 @@
 	s:STATE_BLUE_NILE={
 		region_state:BJA={
 		}
-		region_state:N09={
+		region_state:EGY={
 		}
 		region_state:X07={
 		}
@@ -124,15 +367,28 @@
 		}
 	}
 	s:STATE_LIBYA={
-		region_state:MAM={
+		region_state:EGY={
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:EGY"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_logging_camp_main_1" "pm_road_carts" }
+			}
 		}
-		region_state:N09={
+		region_state:S52={
 		}
 		region_state:W39={
 		}
 	}
 	s:STATE_LIBYAN_DESERT={
-		region_state:N09={
+		region_state:S49={
+		}
+		region_state:TRI={
 		}
 		region_state:W39={
 		}
@@ -148,7 +404,7 @@
 		}
 	}
 	s:STATE_EAST_SAHARA={
-		region_state:TU9={
+		region_state:AHG={
 		}
 		region_state:TUG={
 		}
@@ -156,7 +412,7 @@
 		}
 	}
 	s:STATE_WEST_SAHARA={
-		region_state:N09={
+		region_state:SAH={
 		}
 	}
 	s:STATE_MAURITANIA={
@@ -172,7 +428,7 @@
 	s:STATE_INNER_MAURITANIA={
 		region_state:MAL={
 		}
-		region_state:N09={
+		region_state:OUA={
 		}
 		region_state:T63={
 		}
@@ -180,7 +436,9 @@
 	s:STATE_EASTERN_MALI={
 		region_state:MAL={
 		}
-		region_state:M99={
+		region_state:S37={
+		}
+		region_state:W81={
 		}
 	}
 	s:STATE_WESTERN_MALI={
@@ -188,23 +446,25 @@
 		}
 	}
 	s:STATE_TIMBUKTU={
-		region_state:TU9={
+		region_state:ADG={
 		}
-		region_state:SON={
+		region_state:GAO={
 		}
-		region_state:M99={
+		region_state:S37={
 		}
 		region_state:T63={
 		}
-		region_state:MAL={
+		region_state:W81={
 		}
 	}
 	s:STATE_NIGER={
-		region_state:TU9={
+		region_state:AIR={
 		}
 	}
 	s:STATE_CHAD={
-		region_state:N09={
+		region_state:T98={
+		}
+		region_state:TBI={
 		}
 		region_state:WAD={
 		}
