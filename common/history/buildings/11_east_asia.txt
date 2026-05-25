@@ -268,53 +268,257 @@
 		}
 	}
 	s:STATE_SAKHALIN={
+		region_state:SKH={
+		}
 		region_state:AIN={
 		}
-		region_state:U21={
+		region_state:ULT={
+		}
+		region_state:AIN={
+		}
+		region_state:AIN={
 		}
 	}
 	s:STATE_HOKKAIDO={
 		region_state:AIN={
 		}
-		region_state:JAP={
+		region_state:NDO={
 		}
 	}
 	s:STATE_TOHOKU={
-		region_state:JAP={
+		region_state:USG={
+		}
+		region_state:DTE={
+		}
+		region_state:NAN={
+		}
+		region_state:NDO={
+		}
+		region_state:SHB={
 		}
 	}
 	s:STATE_KANTO={
-		region_state:JAP={
+		region_state:ASK={
+		}
+		region_state:CHB={
+		}
+		region_state:USG={
+		}
+		region_state:STK={
+		}
+		region_state:UTS={
 		}
 	}
 	s:STATE_TOKAI={
+		region_state:KBK={
+		}
+		region_state:TKI={
+		}
+		region_state:ODA={
+		}
+		region_state:TKG={
+		}
+		region_state:IMG={
+		}
+		region_state:TKD={
+		}
+		region_state:ASK={
+		}
+		region_state:HTK={
+		}
 	}
 	s:STATE_HOKUSHINETSU={
+		region_state:SHB={
+		}
+		region_state:HTK={
+		}
+		region_state:OGS={
+		}
+		region_state:USG={
+		}
 	}
 	s:STATE_KANSAI={
-		region_state:JAP={
+		region_state:YMN={
+		}
+		region_state:HSK={
+		}
+		region_state:HTK={
+		}
+		region_state:TSU={
 		}
 	}
 	s:STATE_KYOTO={
+		region_state:YMN={
+		}
+		region_state:ISK={
+		}
+		region_state:ASK={
+			create_building={
+				building="building_rice_farm"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_rice_farm_main_1" }
+			}
+			create_building={
+				building="building_silk_farm"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_silk_farm_main_1" }
+			}
+			create_building={
+				building="building_tea_garden"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_tea_garden_main_1" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_livestock_main_1" "pm_building_livestock_sheep_1" }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_logging_camp_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_stone_mine"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_stone_mine_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_weapon_workshop"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_weapon_workshop_main_1" }
+			}
+			create_building={
+				building="building_tooling_workshop"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_tooling_workshop_main_1" }
+			}
+			create_building={
+				building="building_brewery"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_brewery_main_1" }
+			}
+			create_building={
+				building="building_textile_mill"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_cloth_workshop_main_1" "pm_building_cloth_workshop_leather_0" }
+			}
+			create_building={
+				building="building_furniture_manufactory"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_furniture_workshop_main_1" "pm_building_furniture_workshop_luxury_furniture_0" }
+			}
+			create_building={
+				building="building_road"
+				add_ownership={
+					country={
+						country="c:ASK"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_road_main_1" "pm_building_road_transport_0" }
+			}
+		}
 	}
 	s:STATE_KYUSHU={
-		region_state:JAP={
+		region_state:SHI={
 		}
-		region_state:MCR={
+		region_state:ITO={
 		}
-		region_state:O00={
+		region_state:KKC={
+		}
+		region_state:OTM={
+		}
+		region_state:SNI={
+		}
+		region_state:OUC={
 		}
 	}
 	s:STATE_RYUKYU_ISLANDS={
-		region_state:DL1={
+		region_state:RYU={
 		}
 	}
 	s:STATE_CHUGOKU={
-		region_state:JAP={
+		region_state:OUC={
+		}
+		region_state:YMN={
+		}
+		region_state:AMG={
+		}
+		region_state:HSK={
 		}
 	}
 	s:STATE_SHIKOKU={
-		region_state:JAP={
+		region_state:KNO={
+		}
+		region_state:HSK={
 		}
 	}
 	s:STATE_SEOUL={

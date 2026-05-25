@@ -1,0 +1,21 @@
+MILITARY_FORMATIONS = {
+	c:ASK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_northeast_asia
+			name = Palace_Gaurd
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_infantry_1
+				state_region = s:STATE_Kyoto
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_Kyoto
+				count = 3
+			}
+		}
+	}
+}
+
