@@ -2,9 +2,10 @@
 	political_strength = 0.03
 	goods = { # Sum = 151
 		popneed_simple_clothing = 23
-		popneed_basic_food = 90
+		popneed_basic_food = 140
 		popneed_heating = 15
 		popneed_intoxicants = 23
+		popneed_seasonings = 1
 	}
 }
 
@@ -12,9 +13,10 @@ wealth_2 = {
 	political_strength = 0.04
 	goods = { # Sum = 165
 		popneed_simple_clothing = 27
-		popneed_basic_food = 94
+		popneed_basic_food = 145
 		popneed_heating = 17
 		popneed_intoxicants = 27
+		popneed_seasonings = 3
 	}
 }
 
@@ -22,9 +24,10 @@ wealth_3 = {
 	political_strength = 0.05
 	goods = { # Sum = 181
 		popneed_simple_clothing = 33
-		popneed_basic_food = 98
+		popneed_basic_food = 150
 		popneed_heating = 19
 		popneed_intoxicants = 31
+		popneed_seasonings = 5
 	}
 }
 
@@ -32,9 +35,10 @@ wealth_4 = {
 	political_strength = 0.1
 	goods = { # Sum = 200
 		popneed_simple_clothing = 37
-		popneed_basic_food = 105
+		popneed_basic_food = 155
 		popneed_heating = 21
 		popneed_intoxicants = 37
+		popneed_seasonings = 8
 	}
 }
 
@@ -43,9 +47,10 @@ wealth_5 = {
 	goods = { # Sum = 221
 		popneed_simple_clothing = 39
 		popneed_crude_items = 13
-		popneed_basic_food = 106
+		popneed_basic_food = 160
 		popneed_heating = 22
 		popneed_intoxicants = 41
+		popneed_seasonings = 10
 	}
 }
 
@@ -54,10 +59,11 @@ wealth_6 = {
 	goods = { # Sum = 241
 		popneed_simple_clothing = 41
 		popneed_crude_items = 19
-		popneed_basic_food = 110
+		popneed_basic_food = 170
 		popneed_heating = 23
 		popneed_intoxicants = 41
 		popneed_stimulants = 7
+		popneed_seasonings = 12
 	}
 }
 
@@ -66,10 +72,11 @@ wealth_7 = {
 	goods = { # Sum = 265
 		popneed_simple_clothing = 42
 		popneed_crude_items = 27
-		popneed_basic_food = 115
+		popneed_basic_food = 178
 		popneed_heating = 26
 		popneed_intoxicants = 41
 		popneed_stimulants = 14
+		popneed_seasonings = 14
 	}
 }
 
@@ -78,10 +85,11 @@ wealth_8 = {
 	goods = { # Sum = 290
 		popneed_simple_clothing = 42
 		popneed_crude_items = 38
-		popneed_basic_food = 119
+		popneed_basic_food = 185
 		popneed_heating = 27
 		popneed_intoxicants = 45
 		popneed_stimulants = 19
+		popneed_seasonings = 16
 	}
 }
 
@@ -90,10 +98,11 @@ wealth_9 = {
 	goods = { # Sum = 314
 		popneed_simple_clothing = 43
 		popneed_crude_items = 43
-		popneed_basic_food = 128
+		popneed_basic_food = 190
 		popneed_heating = 29
 		popneed_intoxicants = 48
 		popneed_stimulants = 23
+		popneed_seasonings = 20
 	}
 }
 
@@ -102,7 +111,7 @@ wealth_10 = {
 	goods = { # Sum = 355
 		popneed_simple_clothing = 41
 		popneed_crude_items = 41
-		popneed_basic_food = 131
+		popneed_basic_food = 195
 		popneed_heating = 26
 		popneed_household_items = 7
 		popneed_standard_clothing = 7
@@ -110,6 +119,7 @@ wealth_10 = {
 		popneed_intoxicants = 50
 		popneed_free_movement = 3
 		popneed_stimulants = 26
+		popneed_seasonings = 23
 	}
 }
 
@@ -118,7 +128,7 @@ wealth_11 = {
 	goods = { # Sum = 392
 		popneed_simple_clothing = 36
 		popneed_crude_items = 36
-		popneed_basic_food = 138
+		popneed_basic_food = 200
 		popneed_heating = 26
 		popneed_household_items = 19
 		popneed_standard_clothing = 19
@@ -126,6 +136,7 @@ wealth_11 = {
 		popneed_intoxicants = 52
 		popneed_free_movement = 8
 		popneed_stimulants = 30
+		popneed_seasonings = 25
 	}
 }
 
@@ -134,7 +145,7 @@ wealth_12 = {
 	goods = { # Sum = 429
 		popneed_simple_clothing = 30
 		popneed_crude_items = 25
-		popneed_basic_food = 148
+		popneed_basic_food = 215
 		popneed_heating = 26
 		popneed_household_items = 34
 		popneed_standard_clothing = 30
@@ -142,6 +153,7 @@ wealth_12 = {
 		popneed_intoxicants = 53
 		popneed_free_movement = 13
 		popneed_stimulants = 33
+		popneed_seasonings = 28
 	}
 }
 
@@ -150,7 +162,7 @@ wealth_13 = {
 	goods = { # Sum = 473
 		popneed_simple_clothing = 13
 		popneed_crude_items = 15
-		popneed_basic_food = 153
+		popneed_basic_food = 225
 		popneed_heating = 26
 		popneed_household_items = 55
 		popneed_standard_clothing = 62
@@ -158,6 +170,7 @@ wealth_13 = {
 		popneed_intoxicants = 56
 		popneed_free_movement = 14
 		popneed_stimulants = 35
+		popneed_seasonings = 30
 	}
 }
 
@@ -166,7 +179,7 @@ wealth_14 = {
 	goods = { # Sum = 519
 		popneed_simple_clothing = 7
 		popneed_crude_items = 8
-		popneed_basic_food = 157
+		popneed_basic_food = 235
 		popneed_heating = 26
 		popneed_household_items = 71
 		popneed_standard_clothing = 81
@@ -174,13 +187,14 @@ wealth_14 = {
 		popneed_intoxicants = 60
 		popneed_free_movement = 16
 		popneed_stimulants = 39
+		popneed_seasonings = 33
 	}
 }
 
 wealth_15 = {
 	political_strength = 4.6
 	goods = { # Sum = 572
-		popneed_basic_food = 159
+		popneed_basic_food = 240
 		popneed_heating = 26
 		popneed_household_items = 81
 		popneed_standard_clothing = 95
@@ -190,13 +204,14 @@ wealth_15 = {
 		popneed_free_movement = 20
 		popneed_luxury_items = 11
 		popneed_stimulants = 40
+		popneed_seasonings = 35
 	}
 }
 
 wealth_16 = {
 	political_strength = 6.8
 	goods = { # Sum = 629
-		popneed_basic_food = 161
+		popneed_basic_food = 245
 		popneed_heating = 26
 		popneed_household_items = 90
 		popneed_standard_clothing = 102
@@ -206,13 +221,14 @@ wealth_16 = {
 		popneed_free_movement = 24
 		popneed_luxury_items = 22
 		popneed_stimulants = 42
+		popneed_seasonings = 38
 	}
 }
 
 wealth_17 = {
 	political_strength = 9
 	goods = { # Sum = 690
-		popneed_basic_food = 164
+		popneed_basic_food = 250
 		popneed_heating = 26
 		popneed_household_items = 99
 		popneed_standard_clothing = 105
@@ -222,13 +238,14 @@ wealth_17 = {
 		popneed_free_movement = 26
 		popneed_luxury_items = 36
 		popneed_stimulants = 44
+		popneed_seasonings = 40
 	}
 }
 
 wealth_18 = {
 	political_strength = 12
 	goods = { # Sum = 761
-		popneed_basic_food = 166
+		popneed_basic_food = 255
 		popneed_heating = 26
 		popneed_household_items = 108
 		popneed_standard_clothing = 108
@@ -238,13 +255,14 @@ wealth_18 = {
 		popneed_free_movement = 29
 		popneed_luxury_items = 53
 		popneed_stimulants = 46
+		popneed_seasonings = 42
 	}
 }
 
 wealth_19 = {
 	political_strength = 15
 	goods = { # Sum = 836
-		popneed_basic_food = 168
+		popneed_basic_food = 260
 		popneed_heating = 26
 		popneed_household_items = 116
 		popneed_standard_clothing = 112
@@ -254,13 +272,14 @@ wealth_19 = {
 		popneed_free_movement = 37
 		popneed_luxury_items = 74
 		popneed_stimulants = 47
+		popneed_seasonings = 44
 	}
 }
 
 wealth_20 = {
 	political_strength = 18
 	goods = { # Sum = 921
-		popneed_basic_food = 158
+		popneed_basic_food = 250
 		popneed_heating = 26
 		popneed_household_items = 118
 		popneed_standard_clothing = 115
@@ -269,17 +288,18 @@ wealth_20 = {
 		popneed_luxury_drinks = 91
 		popneed_free_movement = 40
 		popneed_communication = 16
-		popneed_luxury_food = 8
+		popneed_luxury_food = 15
 		popneed_luxury_items = 95
 		popneed_leisure = 16
 		popneed_stimulants = 49
+		popneed_seasonings = 60
 	}
 }
 
 wealth_21 = {
 	political_strength = 22
 	goods = { # Sum = 1013
-		popneed_basic_food = 154
+		popneed_basic_food = 250
 		popneed_heating = 26
 		popneed_household_items = 121
 		popneed_standard_clothing = 126
@@ -288,17 +308,18 @@ wealth_21 = {
 		popneed_luxury_drinks = 109
 		popneed_free_movement = 45
 		popneed_communication = 18
-		popneed_luxury_food = 18
+		popneed_luxury_food = 35
 		popneed_luxury_items = 117
 		popneed_leisure = 18
 		popneed_stimulants = 52
+		popneed_seasonings = 70
 	}
 }
 
 wealth_22 = {
 	political_strength = 26
 	goods = { # Sum = 1114
-		popneed_basic_food = 151
+		popneed_basic_food = 250
 		popneed_heating = 26
 		popneed_household_items = 125
 		popneed_standard_clothing = 129
@@ -307,17 +328,18 @@ wealth_22 = {
 		popneed_luxury_drinks = 129
 		popneed_free_movement = 48
 		popneed_communication = 20
-		popneed_luxury_food = 28
+		popneed_luxury_food = 50
 		popneed_luxury_items = 148
 		popneed_leisure = 20
 		popneed_stimulants = 54
+		popneed_seasonings = 80
 	}
 }
 
 wealth_23 = {
 	political_strength = 30
 	goods = { # Sum = 1224
-		popneed_basic_food = 154
+		popneed_basic_food = 250
 		popneed_heating = 26
 		popneed_household_items = 126
 		popneed_standard_clothing = 132
@@ -326,17 +348,18 @@ wealth_23 = {
 		popneed_luxury_drinks = 150
 		popneed_free_movement = 51
 		popneed_communication = 21
-		popneed_luxury_food = 39
+		popneed_luxury_food = 80
 		popneed_luxury_items = 179
 		popneed_leisure = 31
 		popneed_stimulants = 56
+		popneed_seasonings = 90
 	}
 }
 
 wealth_24 = {
 	political_strength = 34
 	goods = { # Sum = 1348
-		popneed_basic_food = 157
+		popneed_basic_food = 200
 		popneed_heating = 26
 		popneed_household_items = 134
 		popneed_standard_clothing = 134
@@ -345,17 +368,18 @@ wealth_24 = {
 		popneed_luxury_drinks = 169
 		popneed_free_movement = 67
 		popneed_communication = 23
-		popneed_luxury_food = 57
+		popneed_luxury_food = 110
 		popneed_luxury_items = 210
 		popneed_leisure = 34
 		popneed_stimulants = 50
+		popneed_seasonings = 100
 	}
 }
 
 wealth_25 = {
 	political_strength = 39
 	goods = { # Sum = 1502
-		popneed_basic_food = 162
+		popneed_basic_food = 175
 		popneed_heating = 26
 		popneed_household_items = 147
 		popneed_standard_clothing = 153
@@ -364,17 +388,18 @@ wealth_25 = {
 		popneed_luxury_drinks = 184
 		popneed_free_movement = 74
 		popneed_communication = 25
-		popneed_luxury_food = 74
+		popneed_luxury_food = 150
 		popneed_luxury_items = 247
 		popneed_leisure = 38
 		popneed_stimulants = 45
+		popneed_seasonings = 105
 	}
 }
 
 wealth_26 = {
 	political_strength = 44
 	goods = { # Sum = 1653
-		popneed_basic_food = 164
+		popneed_basic_food = 175
 		popneed_heating = 26
 		popneed_household_items = 161
 		popneed_standard_clothing = 161
@@ -383,17 +408,18 @@ wealth_26 = {
 		popneed_luxury_drinks = 202
 		popneed_free_movement = 82
 		popneed_communication = 28
-		popneed_luxury_food = 84
+		popneed_luxury_food = 175
 		popneed_luxury_items = 281
 		popneed_leisure = 55
 		popneed_stimulants = 40
+		popneed_seasonings = 110
 	}
 }
 
 wealth_27 = {
 	political_strength = 49
 	goods = { # Sum = 1814
-		popneed_basic_food = 152
+		popneed_basic_food = 175
 		popneed_heating = 26
 		popneed_household_items = 183
 		popneed_standard_clothing = 161
@@ -402,17 +428,18 @@ wealth_27 = {
 		popneed_luxury_drinks = 226
 		popneed_free_movement = 91
 		popneed_communication = 31
-		popneed_luxury_food = 103
+		popneed_luxury_food = 200
 		popneed_luxury_items = 330
 		popneed_leisure = 60
 		popneed_stimulants = 35
+		popneed_seasonings = 115
 	}
 }
 
 wealth_28 = {
 	political_strength = 54
 	goods = { # Sum = 1996
-		popneed_basic_food = 127
+		popneed_basic_food = 150
 		popneed_heating = 26
 		popneed_household_items = 196
 		popneed_standard_clothing = 161
@@ -421,17 +448,18 @@ wealth_28 = {
 		popneed_luxury_drinks = 245
 		popneed_free_movement = 115
 		popneed_communication = 33
-		popneed_luxury_food = 147
+		popneed_luxury_food = 300
 		popneed_luxury_items = 379
 		popneed_leisure = 83
 		popneed_stimulants = 30
+		popneed_seasonings = 150
 	}
 }
 
 wealth_29 = {
 	political_strength = 59
 	goods = { # Sum = 2194
-		popneed_basic_food = 102
+		popneed_basic_food = 125
 		popneed_heating = 26
 		popneed_household_items = 209
 		popneed_standard_clothing = 161
@@ -440,10 +468,11 @@ wealth_29 = {
 		popneed_luxury_drinks = 270
 		popneed_free_movement = 127
 		popneed_communication = 36
-		popneed_luxury_food = 199
+		popneed_luxury_food = 400
 		popneed_luxury_items = 425
 		popneed_leisure = 89
 		popneed_stimulants = 25
+		popneed_seasonings = 175
 	}
 }
 
@@ -458,10 +487,11 @@ wealth_30 = {
 		popneed_luxury_drinks = 289
 		popneed_free_movement = 165
 		popneed_communication = 63
-		popneed_luxury_food = 265
+		popneed_luxury_food = 530
 		popneed_luxury_items = 515
 		popneed_leisure = 102
 		popneed_stimulants = 20 # Past this point, fully absorbed into luxury foods + luxury drinks + intoxicants
+		popneed_seasonings = 250
 	}
 }
 
@@ -476,9 +506,10 @@ wealth_31 = {
 		popneed_luxury_drinks = 317
 		popneed_free_movement = 181
 		popneed_communication = 91
-		popneed_luxury_food = 317
+		popneed_luxury_food = 630
 		popneed_luxury_items = 589
 		popneed_leisure = 113
+		popneed_seasonings = 315
 	}
 }
 
@@ -493,9 +524,10 @@ wealth_32 = {
 		popneed_luxury_drinks = 347
 		popneed_free_movement = 223
 		popneed_communication = 124
-		popneed_luxury_food = 347
+		popneed_luxury_food = 650
 		popneed_luxury_items = 669
 		popneed_leisure = 124
+		popneed_seasonings = 300
 	}
 }
 
@@ -513,6 +545,7 @@ wealth_33 = {
 		popneed_luxury_food = 385
 		popneed_luxury_items = 769
 		popneed_leisure = 137
+		popneed_seasonings = 300
 	}
 }
 
@@ -527,9 +560,10 @@ wealth_34 = {
 		popneed_luxury_drinks = 426
 		popneed_free_movement = 274
 		popneed_communication = 152
-		popneed_luxury_food = 426
+		popneed_luxury_food = 700
 		popneed_luxury_items = 883
 		popneed_leisure = 152
+		popneed_seasonings = 300
 	}
 }
 
@@ -544,9 +578,10 @@ wealth_35 = {
 		popneed_luxury_drinks = 430
 		popneed_free_movement = 331
 		popneed_communication = 199
-		popneed_luxury_food = 464
+		popneed_luxury_food = 750
 		popneed_luxury_items = 993
 		popneed_leisure = 199
+		popneed_seasonings = 300
 	}
 }
 
@@ -561,9 +596,10 @@ wealth_36 = {
 		popneed_luxury_drinks = 476
 		popneed_free_movement = 366
 		popneed_communication = 220
-		popneed_luxury_food = 549
+		popneed_luxury_food = 800
 		popneed_luxury_items = 1098
 		popneed_leisure = 220
+		popneed_seasonings = 300
 	}
 }
 
@@ -578,9 +614,10 @@ wealth_37 = {
 		popneed_luxury_drinks = 530
 		popneed_free_movement = 407
 		popneed_communication = 244
-		popneed_luxury_food = 611
+		popneed_luxury_food = 850
 		popneed_luxury_items = 1222
 		popneed_leisure = 244
+		popneed_seasonings = 300
 	}
 }
 
@@ -595,9 +632,10 @@ wealth_38 = {
 		popneed_luxury_drinks = 589
 		popneed_free_movement = 453
 		popneed_communication = 272
-		popneed_luxury_food = 680
+		popneed_luxury_food = 900
 		popneed_luxury_items = 1359
 		popneed_leisure = 272
+		popneed_seasonings = 300
 	}
 }
 
@@ -612,9 +650,10 @@ wealth_39 = {
 		popneed_luxury_drinks = 649
 		popneed_free_movement = 499
 		popneed_communication = 349
-		popneed_luxury_food = 749
+		popneed_luxury_food = 950
 		popneed_luxury_items = 1497
 		popneed_leisure = 299
+		popneed_seasonings = 300
 	}
 }
 
@@ -628,9 +667,10 @@ wealth_40 = {
 		popneed_luxury_drinks = 675
 		popneed_free_movement = 562
 		popneed_communication = 450
-		popneed_luxury_food = 843
+		popneed_luxury_food = 1000
 		popneed_luxury_items = 1687
 		popneed_leisure = 394
+		popneed_seasonings = 300
 	}
 }
 
@@ -644,9 +684,10 @@ wealth_41 = {
 		popneed_luxury_drinks = 754
 		popneed_free_movement = 628
 		popneed_communication = 565
-		popneed_luxury_food = 879
+		popneed_luxury_food = 1050
 		popneed_luxury_items = 1822
 		popneed_leisure = 440
+		popneed_seasonings = 300
 	}
 }
 
@@ -660,9 +701,10 @@ wealth_42 = {
 		popneed_luxury_drinks = 826
 		popneed_free_movement = 689
 		popneed_communication = 689
-		popneed_luxury_food = 964
+		popneed_luxury_food = 1100
 		popneed_luxury_items = 1997
 		popneed_leisure = 482
+		popneed_seasonings = 300
 	}
 }
 
@@ -676,9 +718,10 @@ wealth_43 = {
 		popneed_luxury_drinks = 931
 		popneed_free_movement = 776
 		popneed_communication = 776
-		popneed_luxury_food = 1009
+		popneed_luxury_food = 1150
 		popneed_luxury_items = 2173
 		popneed_leisure = 543
+		popneed_seasonings = 300
 	}
 }
 
@@ -692,9 +735,10 @@ wealth_44 = {
 		popneed_luxury_drinks = 1020
 		popneed_free_movement = 850
 		popneed_communication = 850
-		popneed_luxury_food = 1105
+		popneed_luxury_food = 1200
 		popneed_luxury_items = 2380
 		popneed_leisure = 680
+		popneed_seasonings = 300
 	}
 }
 
@@ -710,6 +754,7 @@ wealth_45 = {
 		popneed_luxury_food = 1274
 		popneed_luxury_items = 2646
 		popneed_leisure = 784
+		popneed_seasonings = 300
 	}
 }
 
@@ -725,6 +770,7 @@ wealth_46 = {
 		popneed_luxury_food = 1391
 		popneed_luxury_items = 2888
 		popneed_leisure = 963
+		popneed_seasonings = 300
 	}
 }
 
@@ -740,6 +786,7 @@ wealth_47 = {
 		popneed_luxury_food = 1533
 		popneed_luxury_items = 3065
 		popneed_leisure = 1179
+		popneed_seasonings = 300
 	}
 }
 
@@ -755,6 +802,7 @@ wealth_48 = {
 		popneed_luxury_food = 1689
 		popneed_luxury_items = 3378
 		popneed_leisure = 1299
+		popneed_seasonings = 350
 	}
 }
 
@@ -770,6 +818,7 @@ wealth_49 = {
 		popneed_luxury_food = 1879
 		popneed_luxury_items = 3614
 		popneed_leisure = 1446
+		popneed_seasonings = 400
 	}
 }
 
@@ -785,6 +834,7 @@ wealth_50 = {
 		popneed_luxury_food = 2070
 		popneed_luxury_items = 3982
 		popneed_leisure = 1593
+		popneed_seasonings = 500
 	}
 }
 
@@ -800,6 +850,7 @@ wealth_51 = {
 		popneed_luxury_food = 2126
 		popneed_luxury_items = 4430
 		popneed_leisure = 1949
+		popneed_seasonings = 600
 	}
 }
 
@@ -815,6 +866,7 @@ wealth_52 = {
 		popneed_luxury_food = 2319
 		popneed_luxury_items = 4830
 		popneed_leisure = 2319
+		popneed_seasonings = 700
 	}
 }
 
@@ -830,6 +882,7 @@ wealth_53 = {
 		popneed_luxury_food = 2528
 		popneed_luxury_items = 5267
 		popneed_leisure = 2739
+		popneed_seasonings = 800
 	}
 }
 
@@ -845,6 +898,7 @@ wealth_54 = {
 		popneed_luxury_food = 2730
 		popneed_luxury_items = 5687
 		popneed_leisure = 3412
+		popneed_seasonings = 900
 	}
 }
 
@@ -860,6 +914,7 @@ wealth_55 = {
 		popneed_luxury_food = 2755
 		popneed_luxury_items = 6261
 		popneed_leisure = 4258
+		popneed_seasonings = 1000
 	}
 }
 
@@ -875,6 +930,7 @@ wealth_56 = {
 		popneed_luxury_food = 2975
 		popneed_luxury_items = 6762
 		popneed_leisure = 5139
+		popneed_seasonings = 1000
 	}
 }
 
@@ -890,6 +946,7 @@ wealth_57 = {
 		popneed_luxury_food = 3244
 		popneed_luxury_items = 7373
 		popneed_leisure = 6193
+		popneed_seasonings = 1500
 	}
 }
 
@@ -905,6 +962,7 @@ wealth_58 = {
 		popneed_luxury_food = 3505
 		popneed_luxury_items = 7965
 		popneed_leisure = 7328
+		popneed_seasonings = 1500
 	}
 }
 
@@ -920,6 +978,7 @@ wealth_59 = {
 		popneed_luxury_food = 3857
 		popneed_luxury_items = 8767
 		popneed_leisure = 8416
+		popneed_seasonings = 1500
 	}
 }
 
@@ -935,6 +994,7 @@ wealth_60 = {
 		popneed_luxury_food = 3859
 		popneed_luxury_items = 9648
 		popneed_leisure = 9648
+		popneed_seasonings = 1500
 	}
 }
 
@@ -950,6 +1010,7 @@ wealth_61 = {
 		popneed_luxury_food = 4287
 		popneed_luxury_items = 10718
 		popneed_leisure = 10718
+		popneed_seasonings = 2500
 	}
 }
 
@@ -965,6 +1026,7 @@ wealth_62 = {
 		popneed_luxury_food = 4718
 		popneed_luxury_items = 11795
 		popneed_leisure = 11795
+		popneed_seasonings = 2500
 	}
 }
 
@@ -980,6 +1042,7 @@ wealth_63 = {
 		popneed_luxury_food = 5241
 		popneed_luxury_items = 13103
 		popneed_leisure = 13103
+		popneed_seasonings = 2500
 	}
 }
 
@@ -995,6 +1058,7 @@ wealth_64 = {
 		popneed_luxury_food = 5768
 		popneed_luxury_items = 14419
 		popneed_leisure = 14419
+		popneed_seasonings = 2500
 	}
 }
 
@@ -1010,6 +1074,7 @@ wealth_65 = {
 		popneed_luxury_food = 6347
 		popneed_luxury_items = 15866
 		popneed_leisure = 15866
+		popneed_seasonings = 3500
 	}
 }
 
@@ -1025,6 +1090,7 @@ wealth_66 = {
 		popneed_luxury_food = 6983
 		popneed_luxury_items = 17459
 		popneed_leisure = 17459
+		popneed_seasonings = 3500
 	}
 }
 
@@ -1040,6 +1106,7 @@ wealth_67 = {
 		popneed_luxury_food = 7684
 		popneed_luxury_items = 19210
 		popneed_leisure = 19210
+		popneed_seasonings = 3500
 	}
 }
 
@@ -1055,6 +1122,7 @@ wealth_68 = {
 		popneed_luxury_food = 8455
 		popneed_luxury_items = 21136
 		popneed_leisure = 21136
+		popneed_seasonings = 5000
 	}
 }
 
@@ -1070,6 +1138,7 @@ wealth_69 = {
 		popneed_luxury_food = 9302
 		popneed_luxury_items = 23255
 		popneed_leisure = 23255
+		popneed_seasonings = 5000
 	}
 }
 
@@ -1085,6 +1154,7 @@ wealth_70 = {
 		popneed_luxury_food = 10235
 		popneed_luxury_items = 25586
 		popneed_leisure = 25586
+		popneed_seasonings = 5000
 	}
 }
 
@@ -1100,6 +1170,7 @@ wealth_71 = {
 		popneed_luxury_food = 11260
 		popneed_luxury_items = 28150
 		popneed_leisure = 28150
+		popneed_seasonings = 5000
 	}
 }
 
@@ -1115,6 +1186,7 @@ wealth_72 = {
 		popneed_luxury_food = 12388
 		popneed_luxury_items = 30971
 		popneed_leisure = 30971
+		popneed_seasonings = 5000
 	}
 }
 
@@ -1130,6 +1202,7 @@ wealth_73 = {
 		popneed_luxury_food = 13629
 		popneed_luxury_items = 34074
 		popneed_leisure = 34074
+		popneed_seasonings = 5000
 	}
 }
 
@@ -1145,6 +1218,7 @@ wealth_74 = {
 		popneed_luxury_food = 14995
 		popneed_luxury_items = 37486
 		popneed_leisure = 37486
+		popneed_seasonings = 5000
 	}
 }
 
@@ -1160,6 +1234,7 @@ wealth_75 = {
 		popneed_luxury_food = 16496
 		popneed_luxury_items = 41240
 		popneed_leisure = 41240
+		popneed_seasonings = 7500
 	}
 }
 
@@ -1175,6 +1250,7 @@ wealth_76 = {
 		popneed_luxury_food = 18148
 		popneed_luxury_items = 45370
 		popneed_leisure = 45370
+		popneed_seasonings = 7500
 	}
 }
 
@@ -1190,6 +1266,7 @@ wealth_77 = {
 		popneed_luxury_food = 19965
 		popneed_luxury_items = 49912
 		popneed_leisure = 49912
+		popneed_seasonings = 7500
 	}
 }
 
@@ -1205,6 +1282,7 @@ wealth_78 = {
 		popneed_luxury_food = 21964
 		popneed_luxury_items = 54909
 		popneed_leisure = 54909
+		popneed_seasonings = 7500
 	}
 }
 
@@ -1220,6 +1298,7 @@ wealth_79 = {
 		popneed_luxury_food = 24162
 		popneed_luxury_items = 60406
 		popneed_leisure = 60406
+		popneed_seasonings = 10000
 	}
 }
 
@@ -1235,6 +1314,7 @@ wealth_80 = {
 		popneed_luxury_food = 26581
 		popneed_luxury_items = 66452
 		popneed_leisure = 66452
+		popneed_seasonings = 10000
 	}
 }
 
@@ -1250,6 +1330,7 @@ wealth_81 = {
 		popneed_luxury_food = 29241
 		popneed_luxury_items = 73102
 		popneed_leisure = 73102
+		popneed_seasonings = 10000
 	}
 }
 
@@ -1265,6 +1346,7 @@ wealth_82 = {
 		popneed_luxury_food = 32167
 		popneed_luxury_items = 80418
 		popneed_leisure = 80418
+		popneed_seasonings = 10000
 	}
 }
 
@@ -1280,6 +1362,7 @@ wealth_83 = {
 		popneed_luxury_food = 35386
 		popneed_luxury_items = 88465
 		popneed_leisure = 88465
+		popneed_seasonings = 10000
 	}
 }
 
@@ -1295,6 +1378,7 @@ wealth_84 = {
 		popneed_luxury_food = 38927
 		popneed_luxury_items = 97317
 		popneed_leisure = 97317
+		popneed_seasonings = 15000
 	}
 }
 
@@ -1310,6 +1394,7 @@ wealth_85 = {
 		popneed_luxury_food = 42822
 		popneed_luxury_items = 107055
 		popneed_leisure = 107055
+		popneed_seasonings = 15000
 	}
 }
 
@@ -1325,6 +1410,7 @@ wealth_86 = {
 		popneed_luxury_food = 47106
 		popneed_luxury_items = 117765
 		popneed_leisure = 117765
+		popneed_seasonings = 15000
 	}
 }
 
@@ -1340,6 +1426,7 @@ wealth_87 = {
 		popneed_luxury_food = 51819
 		popneed_luxury_items = 129547
 		popneed_leisure = 129547
+		popneed_seasonings = 25000
 	}
 }
 
@@ -1355,6 +1442,7 @@ wealth_88 = {
 		popneed_luxury_food = 57003
 		popneed_luxury_items = 142508
 		popneed_leisure = 142508
+		popneed_seasonings = 25000
 	}
 }
 
@@ -1370,6 +1458,7 @@ wealth_89 = {
 		popneed_luxury_food = 62706
 		popneed_luxury_items = 156764
 		popneed_leisure = 156764
+		popneed_seasonings = 25000
 	}
 }
 
@@ -1385,6 +1474,7 @@ wealth_90 = {
 		popneed_luxury_food = 68978
 		popneed_luxury_items = 172446
 		popneed_leisure = 172446
+		popneed_seasonings = 25000
 	}
 }
 
@@ -1400,6 +1490,7 @@ wealth_91 = {
 		popneed_luxury_food = 75878
 		popneed_luxury_items = 189696
 		popneed_leisure = 189696
+		popneed_seasonings = 25000
 	}
 }
 
@@ -1415,6 +1506,7 @@ wealth_92 = {
 		popneed_luxury_food = 83468
 		popneed_luxury_items = 208671
 		popneed_leisure = 208671
+		popneed_seasonings = 25000
 	}
 }
 
@@ -1430,6 +1522,7 @@ wealth_93 = {
 		popneed_luxury_food = 91817
 		popneed_luxury_items = 229544
 		popneed_leisure = 229544
+		popneed_seasonings = 50000
 	}
 }
 
@@ -1445,6 +1538,7 @@ wealth_94 = {
 		popneed_luxury_food = 101001
 		popneed_luxury_items = 252503
 		popneed_leisure = 252503
+		popneed_seasonings = 50000
 	}
 }
 
@@ -1460,6 +1554,7 @@ wealth_95 = {
 		popneed_luxury_food = 111104
 		popneed_luxury_items = 277759
 		popneed_leisure = 277759
+		popneed_seasonings = 50000
 	}
 }
 
@@ -1475,6 +1570,7 @@ wealth_96 = {
 		popneed_luxury_food = 122216
 		popneed_luxury_items = 305541
 		popneed_leisure = 305541
+		popneed_seasonings = 50000
 	}
 }
 
@@ -1490,6 +1586,7 @@ wealth_97 = {
 		popneed_luxury_food = 134440
 		popneed_luxury_items = 336100
 		popneed_leisure = 336100
+		popneed_seasonings = 50000
 	}
 }
 
@@ -1505,6 +1602,7 @@ wealth_98 = {
 		popneed_luxury_food = 147886
 		popneed_luxury_items = 369716
 		popneed_leisure = 369716
+		popneed_seasonings = 50000
 	}
 }
 
@@ -1520,5 +1618,6 @@ wealth_99 = {
 		popneed_luxury_food = 162677
 		popneed_luxury_items = 406693
 		popneed_leisure = 406693
+		popneed_seasonings = 50000
 	}
 }
