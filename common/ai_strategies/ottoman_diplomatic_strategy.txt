@@ -20,6 +20,13 @@
 
 		if = {
 			limit = {
+				scope:target_country = { c:BYZ ?= this }
+			}
+			add = 2.5
+		}
+
+		if = {
+			limit = {
 				scope:target_country = {
 					any_scope_state = {
 						has_claim_by = root
