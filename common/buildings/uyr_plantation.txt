@@ -139,9 +139,9 @@ building_sugar_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 }
 
-building_pepper_farm = {
+building_pepper_plantation = {
 	building_group = bg_plantations
-	icon = "gfx/interface/icons/building_icons/coffee_plantation_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/pepper_plantation_uyr.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {
@@ -152,14 +152,14 @@ building_pepper_farm = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_building_pepper_farm_main
+		pmg_building_pepper_plantation_main
 	}
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 }
 
-building_cloves_farm = {
+building_clove_grove = {
 	building_group = bg_plantations
 	icon = "gfx/interface/icons/building_icons/coffee_plantation_uyr.dds"
 	required_construction = construction_cost_low
@@ -172,7 +172,7 @@ building_cloves_farm = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_building_cloves_farm_main
+		pmg_building_clove_grove_main
 	}
 	ownership_type = self
 
@@ -182,6 +182,26 @@ building_cloves_farm = {
 building_saffron_farm = {
 	building_group = bg_plantations
 	icon = "gfx/interface/icons/building_icons/coffee_plantation_uyr.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_saffron_farm_main
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
+}
+
+building_chili_plantation = {
+	building_group = bg_plantations
+	icon = "gfx/interface/icons/building_icons/chili_plantation_uyr.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {

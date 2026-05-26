@@ -313,8 +313,8 @@ medicaments = {
 	convoy_cost_multiplier = 0.5
 }
 
-cocoa = {
-	texture = "gfx/interface/icons/goods_icons/cocoa.dds"
+cacao = {
+	texture = "gfx/interface/icons/goods_icons/cacao.dds"
 	cost = 30
 	category = staple
 
@@ -323,7 +323,7 @@ cocoa = {
 }
 
 chocolate = {
-	texture = "gfx/interface/icons/goods_icons/cocoa.dds"
+	texture = "gfx/interface/icons/goods_icons/chocolate.dds"
 	cost = 60
 	category = luxury
 
@@ -341,3 +341,141 @@ cutstone = {
 	convoy_cost_multiplier = 3
 }
 
+luxury_clothes = {
+	texture = "gfx/interface/icons/goods_icons/luxury_clothes.dds"
+	cost = 60
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 8
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 4 # 240
+}
+
+luxury_furniture = {
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	cost = 60
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 8
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 4 # 240
+}
+
+fine_art = {
+	texture = "gfx/interface/icons/goods_icons/fine_art.dds"
+	cost = 200
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 10
+
+	traded_quantity = 1.5 # 300
+}
+
+tobacco = {
+	texture = "gfx/interface/icons/goods_icons/tobacco.dds"
+	cost = 40
+	category = luxury
+
+	obsession_chance = 2.0
+	prestige_factor = 4
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 5 # 250
+}
+
+porcelain = {
+	texture = "gfx/interface/icons/goods_icons/porcelain.dds"
+	cost = 70
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 8
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 3.5 # 245
+}
+
+meat = {
+	texture = "gfx/interface/icons/goods_icons/meat.dds"
+	cost = 30
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 4
+
+	traded_quantity = 8 # 240
+	convoy_cost_multiplier = 0.75
+
+	consumption_tax_cost = 200
+}
+
+fruit = {
+	texture = "gfx/interface/icons/goods_icons/fruit.dds"
+	cost = 30
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 4
+
+	traded_quantity = 8 # 240
+	convoy_cost_multiplier = 0.75
+
+	consumption_tax_cost = 200
+}
+
+liquor = {
+	texture = "gfx/interface/icons/goods_icons/liquor.dds"
+	cost = 30
+	category = luxury
+
+	obsession_chance = 2.0
+	prestige_factor = 4
+
+	traded_quantity = 8 # 240
+	convoy_cost_multiplier = 0.75
+}
+
+wine = {
+	texture = "gfx/interface/icons/goods_icons/wine.dds"
+	cost = 50
+	category = luxury
+
+	obsession_chance = 2.0
+	prestige_factor = 6
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 5 # 250
+}
+
+tea = {
+	texture = "gfx/interface/icons/goods_icons/tea.dds"
+	cost = 50
+	category = luxury
+
+	obsession_chance = 1.5
+	prestige_factor = 6
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 5 # 250
+}
+
+coffee = {
+	texture = "gfx/interface/icons/goods_icons/coffee.dds"
+	cost = 50
+	category = luxury
+
+	obsession_chance = 1.5
+	prestige_factor = 6
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 5 # 250
+}
+
+sugar = {
+	texture = "gfx/interface/icons/goods_icons/sugar.dds"
+	cost = 30
+	category = luxury
+
+	obsession_chance = 1.5
+	prestige_factor = 4
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 8 # 240
+}
