@@ -504,3 +504,95 @@ building_jewelry_workshop = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
+
+building_perfumery = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/paper_mill_uyr.dds"
+
+	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
+
+	unlocking_technologies = {
+		papermill
+	}
+
+	city_type = city
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_perfumery_main
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_chocolaterie = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/bakery_uyr.dds"
+
+	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
+
+	unlocking_technologies = {
+		papermill
+	}
+
+	city_type = city
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_chocolaterie_main
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_stonecutter = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/bakery_uyr.dds"
+
+	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
+
+	unlocking_technologies = {
+		expanded_quarrying
+	}
+
+	city_type = city
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_stonecutter_main
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_apothecary = {
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/bakery_uyr.dds"
+
+	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
+
+	unlocking_technologies = {
+		alchemy
+	}
+
+	city_type = city
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_apothecary_main
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
