@@ -1,4 +1,4 @@
-identity_japanese_empire = {
+identity_chinese_empire = {
 	power_bloc_modifier = {
 		power_bloc_customs_union_bool = yes
 
@@ -16,9 +16,9 @@ identity_japanese_empire = {
 	}
 
 	leader_modifier = {
-		country_prestige_mult = 0.10
-		country_influence_add = 100
-		country_liberty_desire_of_subjects_add = -0.05
+		country_prestige_mult = 0.20
+		country_influence_add = 200
+		country_bureaucracy_population_base_cost_factor_mult
 	}
 
 	can_leave = {

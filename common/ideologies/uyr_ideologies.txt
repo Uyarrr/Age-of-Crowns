@@ -35,6 +35,10 @@
 		law_commoner_controlled_mining = strongly_disapprove
 		law_royal_fifth_mining = disapprove
 	}
+	lawgroup_recruitment_law = {
+		law_expanded_levies	= strongly_approve
+		law_noble_army = strongly_disapprove
+	}
 }
 
 ideology_plutocratic = {
@@ -200,6 +204,12 @@ ideology_absolutism = {
 		law_strengthen_the_nobility = strongly_disapprove
 		law_curtail_the_nobility = strongly_approve
 	}
+	
+	lawgroup_recruitment_law = {
+		law_expanded_levies	= strongly_disapprove
+		law_noble_army = strongly_approve
+	}
+
 }
 
 ideology_outward = {

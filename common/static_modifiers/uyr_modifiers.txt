@@ -7,3 +7,21 @@
 	state_bureaucrats_investment_pool_efficiency_mult = 0.75
 	state_aristocrats_investment_pool_efficiency_mult = 0.75
 }
+
+troubled_empire = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+			country_bureaucrats_pol_str_mult = 0.25
+			country_aristocrats_pol_str_mult = 0.25
+			country_officers_pol_str_mult = 0.25
+			country_capitalists_pol_str_mult = -0.5
+			country_government_dividends_waste_add = 0.75
+			country_liberty_desire_of_subjects_add = 0.25
+			state_bureaucracy_population_base_cost_factor_mult = -0.75
+			country_construction_goods_cost_mult = 0.50
+			state_political_strength_from_wealth_mult = 0.75
+			state_radicals_from_political_movements_mult = 0.25
+			country_radicals_from_legitimacy_mult = 0.75
+			country_legitimacy_ideological_incoherence_mult = 0.25
+			country_legitimacy_headofstate_add = 5
+			country_radicals_from_conquest_mult = 0.25
+}
