@@ -1,0 +1,120 @@
+﻿# This is executed last among all history
+GLOBAL = {
+	every_country = { # Fixes Missing Port Connections
+		limit = {
+			OR = {
+				country_tier = principality
+				country_tier = grand_principality
+				country_tier = kingdom
+				country_tier = empire
+			}
+		}
+		every_state = {
+			limit = {
+				AND = {
+					is_sea_adjacent = yes
+					OR = {
+						is_isolated_from_market = yes
+						is_capital = yes
+					}
+				}
+			}
+			create_building = {
+				building = building_port
+				level = 1
+			}
+		}
+	}
+
+	every_country = { # Basic Buildings
+		limit = {
+			OR = {
+				country_tier = principality
+				country_tier = grand_principality
+				country_tier = kingdom
+				country_tier = empire
+			}
+		}
+		every_state = {
+			limit = { is_capital = yes }
+			create_building = {
+				building = building_tooling_workshop
+				level = 1
+			}
+			create_building = {
+				building = building_pottery_workshop
+				level = 1
+			}
+			create_building = {
+				building = building_brewery
+				level = 1
+			}
+			create_building = {
+				building = building_weapon_workshop
+				level = 1
+			}
+			create_building = {
+				building = building_paper_mill
+				level = 1
+			}
+			create_building = {
+				building = building_tannery
+				level = 1
+			}
+			create_building = {
+				building = building_livestock_ranch
+				level = 1
+			}
+		}
+	}
+
+	every_country = { # Vineyards in Europe
+		every_state = {
+			limit = {
+				OR = {
+					has_state_trait = state_trait_great_terroir
+					has_state_trait = state_trait_douro_valley
+					has_state_trait = state_trait_terra_rossa
+				}
+			}
+			create_building = {
+				building = building_vineyard
+				level = 1
+			}
+		}
+	}
+
+	every_country = { # Good Soils
+		every_state = {
+			limit = {
+				OR = {
+					has_state_trait = state_trait_good_soils
+					has_state_trait = state_trait_the_golden_vale
+				}
+			}
+			create_building = {
+				building = building_orchard
+				level = 1
+			}
+		}
+	}
+
+	every_country = { # Eastern Europe
+		every_state = {
+			limit = {
+				OR = {
+					has_state_trait = state_trait_pannonian_plain
+					has_state_trait = state_trait_black_soil
+				}
+			}
+			create_building = {
+				building = building_livestock_ranch
+				level = 1
+			}
+			create_building = {
+				building = building_wheat_farm
+				level = 1
+			}
+		}
+	}
+}
