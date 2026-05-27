@@ -280,6 +280,16 @@ texticon = {
 }
 
 texticon = {
+	icon = cloves
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/cloves.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
 	icon = chili
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/chili.dds"
@@ -313,6 +323,16 @@ texticon = {
 	icon = cutstone
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/cutstone.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = cocoa
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/cocoa.dds"
 		size = { 25 25 }
 		offset = { 0 7 }
 		fontsize = 18

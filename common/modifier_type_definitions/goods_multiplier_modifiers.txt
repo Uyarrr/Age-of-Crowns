@@ -205,6 +205,24 @@ goods_input_gems_mult={
 	}
 }
 
+goods_input_pepper_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_chili_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_output_stone_mult={
 	decimals=1
 	color=good
@@ -395,6 +413,15 @@ goods_output_jewelry_mult={
 }
 
 goods_output_gems_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_pepper_mult={
 	decimals=1
 	color=good
 	percent=yes
