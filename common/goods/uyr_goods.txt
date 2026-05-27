@@ -292,6 +292,17 @@ pepper = {
 	consumption_tax_cost = 100
 }
 
+chili = {
+	texture = "gfx/interface/icons/goods_icons/chili.dds"
+	cost = 40
+	category = luxury
+
+	prestige_factor = 10
+	traded_quantity = 3
+	convoy_cost_multiplier = 0.5
+	consumption_tax_cost = 100
+}
+
 incense = {
 	texture = "gfx/interface/icons/goods_icons/incense.dds"
 	cost = 40
@@ -313,8 +324,8 @@ medicaments = {
 	convoy_cost_multiplier = 0.5
 }
 
-cacao = {
-	texture = "gfx/interface/icons/goods_icons/cacao.dds"
+cocoa = {
+	texture = "gfx/interface/icons/goods_icons/cocoa.dds"
 	cost = 30
 	category = staple
 

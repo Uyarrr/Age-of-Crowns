@@ -20,9 +20,9 @@ building_coffee_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 }
 
-building_cocoa_farm = {
+building_cocoa_plantation = {
 	building_group = bg_plantations
-	icon = "gfx/interface/icons/building_icons/coffee_plantation_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/cocoa_plantation_uyr.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {
@@ -33,8 +33,9 @@ building_cocoa_farm = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_building_cocoa_farm_main
+		pmg_building_cocoa_plantation_main
 	}
+
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
@@ -161,7 +162,7 @@ building_pepper_plantation = {
 
 building_clove_grove = {
 	building_group = bg_plantations
-	icon = "gfx/interface/icons/building_icons/coffee_plantation_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/clove_grove_uyr.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {
@@ -179,9 +180,9 @@ building_clove_grove = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 }
 
-building_saffron_farm = {
+building_saffron_field = {
 	building_group = bg_plantations
-	icon = "gfx/interface/icons/building_icons/coffee_plantation_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/saffron_field_uyr.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {
@@ -192,7 +193,7 @@ building_saffron_farm = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_building_saffron_farm_main
+		pmg_building_saffron_field_main
 	}
 	ownership_type = self
 
@@ -212,7 +213,7 @@ building_chili_plantation = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_building_saffron_farm_main
+		pmg_building_chili_plantation_main
 	}
 	ownership_type = self
 
