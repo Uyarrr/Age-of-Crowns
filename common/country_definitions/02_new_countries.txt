@@ -21,14 +21,12 @@ KAR = {
 }
 
 # Burgundy
-BGY = {
-	color = { 123 47 61 }
-
+BGY ?= {
+	color = { 148 30 70 }
 	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { french wallonian flemish }
+	tier = principality
+	cultures = { french }
+	religion = catholic
 	capital = STATE_BURGUNDY
 }
 

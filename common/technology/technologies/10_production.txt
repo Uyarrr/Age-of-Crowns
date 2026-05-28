@@ -9,7 +9,7 @@ agriculture = {
 	}
 
 	ai_weight = {
-		value = 3 # Very important tech in general
+		value = 9 # Extremely Rushing after military.
 	}
 }
 
@@ -23,7 +23,7 @@ quarrying = {
 	}
 
 	ai_weight = {
-		value = 3 # Very important tech in general
+		value = 8 # Very important tech in general
 	}
 }
 
@@ -324,7 +324,7 @@ brewery = {
 	}
 }
 
-iron_mine = {
+iron_mining = {
 	# Unlocks Iron Mines
 	era = era_1
 	texture = "gfx/interface/icons/goods_icons/iron.dds"
@@ -339,7 +339,7 @@ iron_mine = {
 	}
 }
 
-coal_mine = {
+coal_mining = {
 	# Unlocks Coal Mines
 	era = era_1
 	texture = "gfx/interface/icons/goods_icons/coal.dds"
@@ -515,7 +515,7 @@ dyed_furnitures = {
 manured_fields = {
 	# Unlocks Grain Main PM
 	era = era_2
-	texture = "gfx/interface/icons/goods_icons/wheat.dds"
+	texture = "gfx/interface/icons/goods_icons/grain.dds"
 	category = production
 
 	unlocking_technologies = {
