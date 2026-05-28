@@ -7,22 +7,22 @@
 		always = yes
 	}
 
-	undesirable_infamy_level = { value = 60 }
+	undesirable_infamy_level = { value = 65 }
 	unacceptable_infamy_level = { value = 95 }
 	ideological_opinion_effect_mult = { value = 0.75 }
-	wargoal_maneuvers_fraction = { value = 0.25 }
-	diplomatic_play_neutrality = { value = 10 }
-	diplomatic_play_boldness = { value = 55 }
-	recklessness = { value = 1.25 }
+	wargoal_maneuvers_fraction = { value = 0.35 }
+	diplomatic_play_neutrality = { value = 5 }
+	diplomatic_play_boldness = { value = 65 }
+	recklessness = { value = 1.35 }
 
 	aggression = {
-		value = 1.4
+		value = 1.5
 
 		if = {
 			limit = {
 				scope:target_country = { c:BYZ ?= this }
 			}
-			add = 2.5
+			add = 4.0
 		}
 
 		if = {
@@ -33,7 +33,7 @@
 					}
 				}
 			}
-			add = 2.25
+			add = 2.5
 		}
 
 		if = {
@@ -49,27 +49,9 @@
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
-				NOT = { has_strategic_adjacency = scope:target_country }
-				scope:target_country = {
-					NOT = {
-						any_scope_state = {
-							has_claim_by = root
-						}
-					}
-				}
-			}
-			add = -1.25
-		}
-
-		if = {
-			limit = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
-							is_in_geographic_region = geographic_region_ottomans
 							is_in_geographic_region = geographic_region_balkans
 							is_in_geographic_region = geographic_region_near_east
 							is_in_geographic_region = geographic_region_arabia
@@ -80,7 +62,23 @@
 					}
 				}
 			}
-			add = 0.9
+			add = 1.0
+		}
+
+		if = {
+			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				NOT = { has_strategic_adjacency = scope:target_country }
+				scope:target_country = {
+					NOT = {
+						any_scope_state = {
+							has_claim_by = root
+						}
+					}
+				}
+			}
+			add = -1.5
 		}
 
 		if = {
@@ -99,24 +97,24 @@
 	}
 
 	building_group_weights = {
-		bg_army = 1.75
-		bg_navy = 1.25
+		bg_army = 1.85
+		bg_navy = 1.20
 	}
 
 	secret_goal_weights = {
-		conquer = 2.8
-		dominate = 0.8
-		protect = 0.35
+		conquer = 3.5
+		dominate = 0.65
+		protect = 0.25
 		befriend = 0.0
 		reconcile = 0.0
 	}
 
 	wargoal_weights = {
-		conquer_state = 3.75
-		return_state = 2.75
-		make_protectorate = 0.85
-		make_dominion = 0.35
-		reduce_autonomy = 1.5
+		conquer_state = 4.0
+		return_state = 3.0
+		make_protectorate = 0.65
+		make_dominion = 0.25
+		reduce_autonomy = 1.25
 		annex_country = 1.75
 		force_nationalization = 0.0
 	}
@@ -126,11 +124,18 @@
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
 				scope:target_country.country_rank <= root.country_rank
 			}
+
 			score = {
-				value = 175
+				value = 150
+
+				if = {
+					limit = {
+						scope:target_country = { c:BYZ ?= this }
+					}
+					add = 1500
+				}
 
 				if = {
 					limit = {
@@ -140,14 +145,14 @@
 							}
 						}
 					}
-					add = 350
+					add = 400
 				}
 
 				if = {
 					limit = {
 						has_strategic_adjacency = scope:target_country
 					}
-					add = 125
+					add = 175
 				}
 
 				if = {
@@ -155,7 +160,6 @@
 						scope:target_country = {
 							any_scope_state = {
 								OR = {
-									is_in_geographic_region = geographic_region_ottomans
 									is_in_geographic_region = geographic_region_balkans
 									is_in_geographic_region = geographic_region_near_east
 									is_in_geographic_region = geographic_region_arabia
@@ -166,14 +170,28 @@
 							}
 						}
 					}
-					add = 125
+					add = 150
 				}
 
 				if = {
 					limit = {
 						scope:target_country.country_rank <= rank_value:minor_power
 					}
-					add = 75
+					add = 100
+				}
+
+				if = {
+					limit = {
+						NOT = { has_strategic_adjacency = scope:target_country }
+						scope:target_country = {
+							NOT = {
+								any_scope_state = {
+									has_claim_by = root
+								}
+							}
+						}
+					}
+					add = -200
 				}
 			}
 		}
@@ -183,13 +201,14 @@
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
 				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= rank_value:minor_power
 			}
+
 			score = {
-				value = 25
+				value = 40
 
 				if = {
 					limit = {
-						scope:target_country.country_rank <= rank_value:minor_power
 						scope:target_country = {
 							NOT = {
 								any_scope_state = {
@@ -198,7 +217,14 @@
 							}
 						}
 					}
-					add = 100
+					add = 80
+				}
+
+				if = {
+					limit = {
+						scope:target_country = { c:BYZ ?= this }
+					}
+					multiply = 0
 				}
 			}
 		}
@@ -207,7 +233,7 @@
 			trigger = {
 				scope:target_country = { is_subject_of = root }
 			}
-			score = { value = 150 }
+			score = { value = 125 }
 		}
 
 		befriend = {
@@ -215,14 +241,7 @@
 				scope:target_country = { is_subject_of = root }
 			}
 			score = {
-				value = 40
-
-				if = {
-					limit = {
-						scope:target_country = { relations:root < relations_threshold:amicable }
-					}
-					add = 60
-				}
+				value = 30
 			}
 		}
 
@@ -231,7 +250,6 @@
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
-							is_in_geographic_region = geographic_region_ottomans
 							is_in_geographic_region = geographic_region_balkans
 							is_in_geographic_region = geographic_region_near_east
 							is_in_geographic_region = geographic_region_arabia
@@ -243,7 +261,7 @@
 				}
 			}
 			score = {
-				value = -125
+				value = -150
 			}
 		}
 	}
@@ -257,7 +275,14 @@
 						secret_goal = conquer
 					}
 				}
-				add = 225
+				add = 250
+			}
+
+			if = {
+				limit = {
+					scope:target_country = { c:BYZ ?= this }
+				}
+				add = 750
 			}
 
 			if = {
@@ -266,7 +291,7 @@
 						has_claim_by = root
 					}
 				}
-				add = 325
+				add = 400
 			}
 
 			if = {
@@ -282,22 +307,8 @@
 
 			if = {
 				limit = {
-					NOT = {
-						scope:target_state = {
-							any_neighbouring_state = {
-								owner = root
-							}
-						}
-					}
-				}
-				add = -200
-			}
-
-			if = {
-				limit = {
 					scope:target_state = {
 						OR = {
-							is_in_geographic_region = geographic_region_ottomans
 							is_in_geographic_region = geographic_region_balkans
 							is_in_geographic_region = geographic_region_near_east
 							is_in_geographic_region = geographic_region_arabia
@@ -307,7 +318,25 @@
 						}
 					}
 				}
-				add = 75
+				add = 100
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						scope:target_state = {
+							any_neighbouring_state = {
+								owner = root
+							}
+						}
+					}
+					NOT = {
+						scope:target_state = {
+							has_claim_by = root
+						}
+					}
+				}
+				add = -175
 			}
 		}
 
@@ -318,7 +347,7 @@
 						has_claim_by = root
 					}
 				}
-				add = 250
+				add = 350
 			}
 
 			if = {
@@ -329,20 +358,7 @@
 						}
 					}
 				}
-				add = 175
-			}
-
-			if = {
-				limit = {
-					NOT = {
-						scope:target_state = {
-							any_neighbouring_state = {
-								owner = root
-							}
-						}
-					}
-				}
-				add = -125
+				add = 150
 			}
 		}
 
@@ -355,7 +371,7 @@
 					}
 					scope:target_country.country_rank <= rank_value:minor_power
 				}
-				add = 100
+				add = 75
 			}
 		}
 
@@ -368,7 +384,7 @@
 					}
 					scope:target_country.country_rank <= rank_value:minor_power
 				}
-				add = 40
+				add = 25
 			}
 		}
 
@@ -376,9 +392,8 @@
 			if = {
 				limit = {
 					scope:target_country = { is_subject_of = root }
-					scope:target_country = { relations:root >= relations_threshold:amicable }
 				}
-				add = 140
+				add = 125
 			}
 		}
 
@@ -387,18 +402,74 @@
 				limit = {
 					scope:target_country = { is_subject_of = root }
 					scope:target_country.country_rank <= rank_value:minor_power
-					scope:target_country = { relations:root >= relations_threshold:cordial }
 				}
-				add = 185
+				add = 175
 			}
 		}
 	}
 
+	state_value = {
+		value = 0
+
+		if = {
+			limit = {
+				OR = {
+					scope:target_state = { owner = root }
+					can_reach_target_state = yes
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						has_claim_by = root
+					}
+				}
+				add = 75
+			}
+
+			if = {
+				limit = {
+					scope:target_country = { c:BYZ ?= this }
+				}
+				add = 150
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						any_neighbouring_state = {
+							owner = root
+						}
+					}
+				}
+				add = 50
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_balkans
+							is_in_geographic_region = geographic_region_near_east
+							is_in_geographic_region = geographic_region_arabia
+							is_in_geographic_region = geographic_region_nile_basin
+							is_in_geographic_region = geographic_region_north_africa
+							is_in_geographic_region = geographic_region_greater_persia
+						}
+					}
+				}
+				add = 40
+			}
+		}
+
+		min = 0
+		max = 200
+	}
+
 	possible = {
 		is_subject = no
-		OR = {
-			c:TUR ?= this
-		}
+		c:TUR ?= this
 	}
 
 	weight = {
@@ -408,7 +479,17 @@
 			limit = {
 				game_date < 1475.1.1
 			}
-			add = 150
+			add = 200
+		}
+
+		if = {
+			limit = {
+				exists = c:BYZ
+				c:BYZ = {
+					NOT = { is_subject_of = root }
+				}
+			}
+			add = 300
 		}
 
 		if = {
@@ -420,7 +501,7 @@
 					}
 				}
 			}
-			add = 125
+			add = 150
 		}
 
 		if = {
@@ -442,7 +523,6 @@
 					has_strategic_adjacency = root
 					any_scope_state = {
 						OR = {
-							is_in_geographic_region = geographic_region_ottomans
 							is_in_geographic_region = geographic_region_balkans
 							is_in_geographic_region = geographic_region_near_east
 							is_in_geographic_region = geographic_region_arabia
@@ -453,7 +533,7 @@
 					}
 				}
 			}
-			add = 50
+			add = 75
 		}
 	}
 }
