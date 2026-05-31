@@ -18,14 +18,101 @@ effect_starting_technology_tier_3_tech = {
 # Starting techs for most unrecognized nations and very backwards European powers (Ottomans, etc)
 
 effect_starting_technology_tier_4_tech = {
+	#Production
+		add_technology_researched = agriculture
+		add_technology_researched = woodcutting
+		add_technology_researched = bakery
+		add_technology_researched = slaughterhouse
+		add_technology_researched = windmills
+		add_technology_researched = cloth_workshops
+		add_technology_researched = brewing
+		add_technology_researched = furniture_workshops
+		add_technology_researched = serfdom
+		add_technology_researched = quarying
+		add_technology_researched = metallurgy
+		add_technology_researched = pottery
+		add_technology_researched = apiary
+		add_technology_researched = tanneries
+		add_technology_researched = distileries
+	#Military
+		add_technology_researched = peasant_levy
+		add_technology_researched = shipbuilding
+		add_technology_researched = fishing_industry
+		add_technology_researched = navigation
+		add_technology_researched = archer
+		add_technology_researched = weapon_crafting
+		add_technology_researched = cog
+		add_technology_researched = salt_collecting
+		add_technology_researched = ranching
+		add_technology_researched = horsemen
+		add_technology_researched = traditional_galley
+	#Society
+		add_technology_researched = construction
+		add_technology_researched = trading
+		add_technology_researched = legalism
+		add_technology_researched = organized_religion
+		add_technology_researched = bureaucracy
+		add_technology_researched = roads_and_waystones
+		add_technology_researched = urbanization
+		add_technology_researched = trade_fairs
+		add_technology_researched = abacus
+		add_technology_researched = religious_schools
+		add_technology_researched = imperial_ambitions
+		add_technology_researched = convert_religion
+		add_technology_researched = master_masons
+		add_technology_researched = guilds
+		add_technology_researched = merchant_guilds
+		add_technology_researched = caravan_hub
 }
 
 # Very backwards centralized powers
 effect_starting_technology_tier_5_tech = {
+	#Production
+		add_technology_researched = agriculture
+		add_technology_researched = woodcutting
+		add_technology_researched = bakery
+		add_technology_researched = slaughterhouse
+		add_technology_researched = windmills
+		add_technology_researched = cloth_workshops
+		add_technology_researched = brewing
+		add_technology_researched = furniture_workshops
+		add_technology_researched = serfdom
+		add_technology_researched = quarying
+		add_technology_researched = metallurgy
+	#Military
+		add_technology_researched = peasant_levy
+		add_technology_researched = shipbuilding
+		add_technology_researched = fishing_industry
+		add_technology_researched = navigation
+		add_technology_researched = archer
+		add_technology_researched = weapon_crafting
+		add_technology_researched = cog
+		add_technology_researched = salt_collecting
+	#Society
+		add_technology_researched = construction
+		add_technology_researched = trading
+		add_technology_researched = legalism
+		add_technology_researched = organized_religion
+		add_technology_researched = bureaucracy
+		add_technology_researched = roads_and_waystones
+		add_technology_researched = urbanization
+		add_technology_researched = trade_fairs
+		add_technology_researched = abacus
 }
 
 # Decentralized countries with organized armies, extremely backwards centralized powers
 effect_starting_technology_tier_6_tech = {
+	#Production
+		add_technology_researched = agriculture
+		add_technology_researched = woodcutting
+	#Military
+		add_technology_researched = peasant_levy
+		add_technology_researched = shipbuilding
+		add_technology_researched = fishing_industry
+		add_technology_researched = navigation
+	#Society
+		add_technology_researched = construction
+		add_technology_researched = trading
 }
 
 # Decentralized countries with no technology
