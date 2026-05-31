@@ -1,5 +1,5 @@
 ﻿building_stud_farm = {
-	building_group = bg_agriculture
+	building_group = bg_ranching
 	icon = "gfx/interface/icons/building_icons/stud_farm_uyr.dds"
 	required_construction = construction_cost_low
 
@@ -280,6 +280,26 @@ building_tea_garden = {
 
 	production_method_groups = {
 		pmg_building_tea_garden_main
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
+}
+
+building_hunting_lodge = {
+	building_group = bg_ranching
+	icon = "gfx/interface/icons/building_icons/tea_garden_uyr.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		agriculture
+	}
+
+	city_type = farm
+	levels_per_mesh = 50
+
+	production_method_groups = {
+		pmg_building_hunting_lodge_main
 	}
 	ownership_type = self
 
