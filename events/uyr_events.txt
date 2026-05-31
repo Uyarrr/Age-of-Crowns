@@ -1,0 +1,44 @@
+﻿ namespace = uyr_events
+
+colonization_rush = {
+	type = country_event
+
+	trigger = {
+		has_technology_researched = colonization
+	}
+
+	event_image = {
+		video = "southamerica_factory_opening"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	placement = ROOT
+
+	title = colonization_rush.t
+	desc = colonization_rush.d
+	flavor = colonization_rush.f
+
+	immediate = {
+	}
+
+	option = { # Yes, Rush Colonialism Law with consuquences
+		name = colonization_rush.a
+		default_option = yes
+		add_modifier = {
+			name = colonial_rush
+			years = 10
+		}
+		activate_law = law_type:law_colonial_resettlement
+	}
+
+	option = { # No, we dont want colonialism rush.
+		name = colonization_rush.b
+	}
+}
