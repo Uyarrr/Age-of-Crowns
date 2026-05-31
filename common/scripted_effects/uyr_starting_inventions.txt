@@ -1,23 +1,23 @@
 ﻿
 # Starting techs for the cutting edge Western powers - Britain, America, France, Belgium etc
 
-effect_starting_technology_tier_1_tech = {
+effect_starting_technology_tier_1 = {
 	add_era_researched = era_1
 }
 
 # Starting techs for advanced European and American powers - Austria, Prussia, Sweden etc
 
-effect_starting_technology_tier_2_tech = {
+effect_starting_technology_tier_2 = {
 }
 
 # Starting techs for backwards European and American powers - Spain, Sicily, Russia
 
-effect_starting_technology_tier_3_tech = {
+effect_starting_technology_tier_3 = {
 }
 
 # Starting techs for most unrecognized nations and very backwards European powers (Ottomans, etc)
 
-effect_starting_technology_tier_4_tech = {
+effect_starting_technology_tier_4 = {
 	#Production
 		add_technology_researched = agriculture
 		add_technology_researched = woodcutting
@@ -66,7 +66,7 @@ effect_starting_technology_tier_4_tech = {
 }
 
 # Very backwards centralized powers
-effect_starting_technology_tier_5_tech = {
+effect_starting_technology_tier_5 = {
 	#Production
 		add_technology_researched = agriculture
 		add_technology_researched = woodcutting
@@ -77,7 +77,7 @@ effect_starting_technology_tier_5_tech = {
 		add_technology_researched = brewing
 		add_technology_researched = furniture_workshops
 		add_technology_researched = serfdom
-		add_technology_researched = quarying
+		add_technology_researched = quarrying
 		add_technology_researched = metallurgy
 	#Military
 		add_technology_researched = peasant_levy
@@ -101,7 +101,7 @@ effect_starting_technology_tier_5_tech = {
 }
 
 # Decentralized countries with organized armies, extremely backwards centralized powers
-effect_starting_technology_tier_6_tech = {
+effect_starting_technology_tier_6 = {
 	#Production
 		add_technology_researched = agriculture
 		add_technology_researched = woodcutting
