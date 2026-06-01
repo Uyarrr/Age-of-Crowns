@@ -96,11 +96,36 @@ pm_building_luxury_furniture_workshop_main_4 = {
 		}
 	}
 }
-pm_building_furniture_workshop_luxury_furniture_0 = {
+pm_building_luxury_furniture_workshop_fur_0 = {
 	texture = "gfx/interface/icons/production_method_icons/no_luxury_furniture.dds"
 }
 
-pm_building_furniture_workshop_luxury_furniture_1 = {
+pm_building_luxury_furniture_workshop_fur_1 = {
+	texture = "gfx/interface/icons/production_method_icons/luxury_furniture.dds"
+	unlocking_technologies = {
+		luxury_furnitures
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_silk_add = 5
+			goods_input_dye_add = 5
+
+			# output goods
+			goods_output_furniture_add = -25
+			goods_output_luxury_furniture_add = 25
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 300
+			building_employment_machinists_add = 100
+			building_employment_engineers_add = 100
+			
+		}
+	}
+}
+
+pm_building_luxury_furniture_workshop_fur_2 = {
 	texture = "gfx/interface/icons/production_method_icons/luxury_furniture.dds"
 	unlocking_technologies = {
 		luxury_furnitures
