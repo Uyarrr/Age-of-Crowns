@@ -490,3 +490,14 @@ sugar = {
 	convoy_cost_multiplier = 0.75
 	traded_quantity = 8 # 240
 }
+
+fur = {
+	texture = "gfx/interface/icons/goods_icons/fur.dds"
+	cost = 60
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 8
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 4 # 240
+}
