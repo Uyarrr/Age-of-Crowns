@@ -359,3 +359,23 @@ pmg_building_luxury_cloth_workshop_fur = {
 	}
 }
 
+########################### LUXURY CLOTH WORKSHOP ##################################
+
+pmg_building_luxury_furniture_workshop_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_luxury_furniture_workshop_main_1
+		pm_building_luxury_furniture_workshop_main_2
+		pm_building_luxury_furniture_workshop_main_3
+		pm_building_luxury_furniture_workshop_main_4
+	}
+}
+
+pmg_building_luxury_furniture_workshop_fur = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_building_luxury_furniture_workshop_fur_0
+		pm_building_luxury_furniture_workshop_fur_1
+		pm_building_luxury_furniture_workshop_fur_2
+	}
+}
