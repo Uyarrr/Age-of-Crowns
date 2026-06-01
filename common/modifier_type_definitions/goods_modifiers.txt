@@ -70,6 +70,14 @@ goods_input_fiber_add={
 	}
 }
 
+goods_input_fur_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_input_navalsupplies_add={
 	decimals=1
 	color=bad
@@ -513,6 +521,14 @@ goods_output_pepper_add={
 }
 
 goods_output_cloves_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_fur_add={
 	decimals=1
 	color=good
 	game_data={
