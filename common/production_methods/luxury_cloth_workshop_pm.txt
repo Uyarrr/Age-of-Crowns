@@ -6,11 +6,11 @@ pm_building_luxury_cloth_workshop_main_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fiber_add = 20
-			goods_input_fabric_add = 10
+			goods_input_fiber_add = 10
+			goods_input_silk_add = 10
 
 			# output goods
-			goods_output_clothes_add = 30
+			goods_output_luxury_clothes_add = 30
 		}
 
 		level_scaled = {
@@ -30,12 +30,12 @@ pm_building_luxury_cloth_workshop_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fiber_add = 30
-			goods_input_fabric_add = 20
-			goods_input_tools_add = 5
+			goods_input_fiber_add = 15
+			goods_input_silk_add = 15
+			goods_input_dye_add = 5
 
 			# output goods
-			goods_output_clothes_add = 60
+			goods_output_luxury_clothes_add = 50
 		}
 
 		level_scaled = {
@@ -56,13 +56,14 @@ pm_building_luxury_cloth_workshop_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fiber_add = 40
-			goods_input_fabric_add = 20
+			goods_input_fiber_add = 20
+			goods_input_silk_add = 20
 			goods_input_tools_add = 10
-			goods_input_dye_add = 5
+			goods_input_dye_add = 10
+			goods_input_gold_add = 5
 
 			# output goods
-			goods_output_clothes_add = 90
+			goods_output_luxury_clothes_add = 80
 		}
 
 		level_scaled = {
@@ -84,13 +85,14 @@ pm_building_luxury_cloth_workshop_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fiber_add = 50
-			goods_input_fabric_add = 30
-			goods_input_tools_add = 15
-			goods_input_dye_add = 10
+			goods_input_fiber_add = 20
+			goods_input_silk_add = 30
+			goods_input_tools_add = 10
+			goods_input_dye_add = 20
+			goods_input_gold_add = 10
 
 			# output goods
-			goods_output_clothes_add = 120
+			goods_output_luxury_clothes_add = 120
 		}
 
 		level_scaled = {
@@ -104,14 +106,15 @@ pm_building_luxury_cloth_workshop_main_4 = {
 
 ################################# LEATHER UPGRADE ##################################
 
-pm_building_cloth_workshop_leather_0 = {
+pm_building_luxury_cloth_workshop_fur_0 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-
+			goods_input_fur_add = 10
 			# output goods
+			goods_output_luxury_clothes_add = 20
 		}
 
 		level_scaled = {
@@ -120,16 +123,16 @@ pm_building_cloth_workshop_leather_0 = {
 	}
 }
 
-pm_building_cloth_workshop_leather_1 = {
+pm_building_luxury_cloth_workshop_fur_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation1.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_leather_add = 10
+			goods_input_fur_add = 20
 
 			# output goods
-			goods_output_clothes_add = 20
+			goods_output_luxury_clothes_add = 40
 		}
 
 		level_scaled = {
@@ -138,16 +141,16 @@ pm_building_cloth_workshop_leather_1 = {
 	}
 }
 
-pm_building_cloth_workshop_leather_2 = {
+pm_building_luxury_cloth_workshop_fur_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_leather_add = 20
+			goods_input_fur_add = 30
 
 			# output goods
-			goods_output_clothes_add = 40
+			goods_output_luxury_clothes_add = 60
 		}
 
 		level_scaled = {
