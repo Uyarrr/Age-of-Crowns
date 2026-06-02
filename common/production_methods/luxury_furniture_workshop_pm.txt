@@ -5,10 +5,10 @@
 		workforce_scaled = {
 			# input goods
 			goods_input_wood_add = 10
-			goods_input_fabric_add = 5
+			goods_input_silk_add = 5
 
 			# output goods
-			goods_output_furniture_add = 20
+			goods_output_luxury_furniture_add = 20
 		}
 
 		level_scaled = {
@@ -30,9 +30,9 @@ pm_building_luxury_furniture_workshop_main_2 = {
 			# input goods
 			goods_input_wood_add = 15
 			goods_input_tools_add = 5
-			goods_input_fabric_add = 10
+			goods_input_silk_add = 10
 			# output goods
-			goods_output_furniture_add = 40
+			goods_output_luxury_furniture_add = 40
 		}
 
 		level_scaled = {
@@ -55,10 +55,11 @@ pm_building_luxury_furniture_workshop_main_3 = {
 			# input goods
 			goods_input_wood_add = 20
 			goods_input_tools_add = 10
-			goods_input_fabric_add = 15
+			goods_input_silk_add = 15
+			goods_input_gold_add = 5
 
 			# output goods
-			goods_output_furniture_add = 60
+			goods_output_luxury_furniture_add = 80
 		}
 
 		level_scaled = {
@@ -82,10 +83,12 @@ pm_building_luxury_furniture_workshop_main_4 = {
 			# input goods
 			goods_input_wood_add = 25
 			goods_input_tools_add = 15
-			goods_input_fabric_add = 20
+			goods_input_silk_add = 20
+			goods_input_gold_add = 5
+			goods_input_silver_add = 5
 
 			# output goods
-			goods_output_furniture_add = 80
+			goods_output_luxury_furniture_add = 120
 		}
 
 		level_scaled = {
@@ -108,11 +111,10 @@ pm_building_luxury_furniture_workshop_fur_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_silk_add = 5
+			goods_input_fur_add = 10
 			goods_input_dye_add = 5
 
 			# output goods
-			goods_output_furniture_add = -25
 			goods_output_luxury_furniture_add = 25
 		}
 
@@ -133,12 +135,11 @@ pm_building_luxury_furniture_workshop_fur_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_silk_add = 5
-			goods_input_dye_add = 5
+			goods_input_fur_add = 20
+			goods_input_dye_add = 10
 
 			# output goods
-			goods_output_furniture_add = -25
-			goods_output_luxury_furniture_add = 25
+			goods_output_luxury_furniture_add = 50
 		}
 
 		level_scaled = {
