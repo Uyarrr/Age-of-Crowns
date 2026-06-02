@@ -1,0 +1,309 @@
+﻿company_wood_and_furniture = {
+	icon = "gfx/interface/icons/company_icons/company_basic_agriculture_1.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_logging_camp
+	}
+
+	extension_building_types = {
+		building_furniture_manufactory
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_logging_camp
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_logging_camp
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_stone_and_cutstone = {
+	icon = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_stone_mine
+	}
+
+	extension_building_types = {
+		building_stonework
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_stone_mine
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_stone_mine
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_livestock_and_meat = {
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_livestock_ranch
+	}
+
+	extension_building_types = {
+		building_slaughterhouse
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_livestock_ranch
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_livestock_ranch
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_iron_and_ironingot = {
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_iron_mine
+	}
+
+	extension_building_types = {
+		building_ironworks
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_iron_mine
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_iron_mine
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_wheat_and_bread = {
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_wheat_farm
+	}
+
+	extension_building_types = {
+		building_bakery
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wheat_farm
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wheat_farm
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_construction_power_bloc = {
+	icon = "gfx/interface/icons/company_icons/basic_construction.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	category = bureaucrat_owned
+
+	building_types = {
+		building_steel_mill
+		building_tooling_workshop
+		building_glassworks
+	}
+
+	extension_building_types = {
+		building_lead_mine
+	}
+
+	potential = {
+		is_in_power_bloc = yes
+	}
+
+	unlocking_principles = {
+		principle_construction_3
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mill
+					is_building_type = building_tooling_workshop
+					is_building_type = building_glassworks
+				}
+				level >= 10
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_construction_sector_throughput_add = 0.2
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mill
+					is_building_type = building_tooling_workshop
+					is_building_type = building_glassworks
+				}
+				level >= 5
+			}
+		}
+	}
+}
