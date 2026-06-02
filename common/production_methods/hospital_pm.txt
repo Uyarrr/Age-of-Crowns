@@ -1,0 +1,109 @@
+﻿pm_building_hospital_main_1 = {
+	texture = "gfx/interface/icons/production_method_icons/scholastic_education.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_medicaments_add = 15
+			goods_input_tools_add = 5
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 100
+			building_employment_laborers_add = 100
+			building_employment_academics_add = 50
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = 0.001
+			state_mortality_mult = -0.01
+		}
+	}
+}
+
+pm_building_hospital_main_2 = {
+	texture = "gfx/interface/icons/production_method_icons/philosophy_dept.dds"
+
+	unlocking_technologies = {
+		anatomy
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_medicaments_add = 40
+			goods_input_tools_add = 10
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 125
+			building_employment_laborers_add = 50
+			building_employment_academics_add = 75
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = 0.002
+			state_mortality_mult = -0.03
+		}
+	}
+}
+
+pm_building_hospital_main_3 = {
+	texture = "gfx/interface/icons/production_method_icons/analytical_philosophy_department.dds"
+
+	unlocking_technologies = {
+		surgery
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_medicaments_add = 80
+			goods_input_tools_add = 15
+			goods_input_silver_add = 5
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 150
+			building_employment_academics_add = 100
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = 0.003
+			state_mortality_mult = -0.05
+		}
+	}
+}
+
+pm_secular_hospitals = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+
+	disallowing_laws = {
+		law_state_religion
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 50
+		}
+	}
+}
+
+pm_religious_hospitals = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
+
+	disallowing_laws = {
+		law_total_separation
+		law_state_atheism
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 25
+			building_employment_academics_add = 25
+		}
+	}
+}

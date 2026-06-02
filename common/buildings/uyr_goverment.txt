@@ -109,3 +109,29 @@ building_colonial_outpost = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
+
+building_hospital = {
+	building_group = bg_technology
+
+	city_type = city
+
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		alchemy
+	}
+
+	production_method_groups = {
+		pmg_building_hospital_main
+	}
+
+	icon = "gfx/interface/icons/building_icons/university_uyr.dds"
+
+	required_construction = construction_cost_high
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
+	ai_value = {
+		value = 1000
+	}
+}
