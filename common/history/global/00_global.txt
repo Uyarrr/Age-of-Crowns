@@ -1,70 +1,38 @@
-﻿# This is executed last among all history
-GLOBAL = {
-	every_country = { # Fixes Missing Port Connections
-		limit = {
-			OR = {
-				country_tier = principality
-				country_tier = grand_principality
-				country_tier = kingdom
-				country_tier = empire
-			}
-		}
-		every_state = {
-			limit = {
-				AND = {
-					is_sea_adjacent = yes
-					OR = {
-						is_isolated_from_market = yes
-						is_capital = yes
-					}
-				}
-			}
-			create_building = {
-				building = building_port
-				level = 1
-			}
-		}
-	}
+﻿GLOBAL = {
+    every_state = {
+        limit = {
+            owner = {
+                OR = {
+                    country_tier = principality
+                    country_tier = grand_principality
+                    country_tier = kingdom
+                    country_tier = empire
+                }
+            }
+        }
 
-	every_country = { # Basic Buildings
-		limit = {
-			OR = {
-				country_tier = principality
-				country_tier = grand_principality
-				country_tier = kingdom
-				country_tier = empire
-			}
-		}
-		every_state = {
-			limit = { is_capital = yes }
-			create_building = {
-				building = building_tooling_workshop
-				level = 1
-			}
-			create_building = {
-				building = building_pottery_workshop
-				level = 1
-			}
-			create_building = {
-				building = building_brewery
-				level = 1
-			}
-			create_building = {
-				building = building_weapon_workshop
-				level = 1
-			}
-			create_building = {
-				building = building_paper_mill
-				level = 1
-			}
-			create_building = {
-				building = building_tannery
-				level = 1
-			}
-			create_building = {
-				building = building_livestock_ranch
-				level = 1
-			}
-		}
-	}
+        # Fixes Missing Port Connections
+        if = {
+            limit = {
+                is_sea_adjacent = yes
+                OR = {
+                    is_isolated_from_market = yes
+                    is_capital = yes
+                }
+            }
+            create_building = { building = building_port level = 1 }
+        }
+
+        # Basic Buildings
+        if = {
+            limit = { is_capital = yes }
+            create_building = { building = building_tooling_workshop  level = 1 }
+            create_building = { building = building_pottery_workshop   level = 1 }
+            create_building = { building = building_brewery            level = 1 }
+            create_building = { building = building_weapon_workshop    level = 1 }
+            create_building = { building = building_paper_mill         level = 1 }
+            create_building = { building = building_tannery            level = 1 }
+            create_building = { building = building_livestock_ranch    level = 1 }
+        }
+    }
 }
