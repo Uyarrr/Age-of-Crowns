@@ -253,6 +253,261 @@ company_wheat_and_bread = {
 	}
 }
 
+company_lead_and_glass = {
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_lead_mine
+	}
+
+	extension_building_types = {
+		building_glassworks
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_lead_mine
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_lead_mine
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_silk_and_luxury_cloth = {
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_silk_farm
+	}
+
+	extension_building_types = {
+		building_luxury_cloth_workshop
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_silk_farm
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_lead_mine
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_gem_and_jewelry = {
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_gem_mine
+	}
+
+	extension_building_types = {
+		building_jewelry_workshop
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_gem_mine
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_gem_mine
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_cocoa_and_chocolate = {
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_cocoa_plantation
+	}
+
+	extension_building_types = {
+		building_chocolaterie
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_cocoa_plantation
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_cocoa_plantation
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_fur_and_leather = {
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_hunting_lodge
+	}
+
+	extension_building_types = {
+		building_tannery
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_hunting_lodge
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_hunting_lodge
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
 company_construction_power_bloc = {
 	icon = "gfx/interface/icons/company_icons/basic_construction.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
@@ -305,75 +560,5 @@ company_construction_power_bloc = {
 				level >= 5
 			}
 		}
-	}
-}
-
-company_vodka_monopoly = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_vodka_monopoly.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
-
-	category = aristocrat_owned
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_INGRIA STATE_MOSCOW }
-
-	building_types = {
-		building_distillery
-		building_vineyard
-	}
-
-	extension_building_types = {
-		building_wheat_farm
-		building_rye_farm
-	}
-
-	possible_prestige_goods = {
-		prestige_good_smirnoff_vodka
-	}
-
-	potential = {
-		country_has_primary_culture = cu:russian
-	}
-
-	possible = {
-		NOT = { has_law_or_variant = law_type:law_laissez_faire }
-		any_scope_state = {
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_distillery
-				level >= 5
-			}
-		}
-	}
-
-	prosperity_modifier = {
-		state_radicals_from_political_movements_mult = -0.15
-	}
-
-	ai_will_do = {
-		NOT = { has_law_or_variant = law_type:law_laissez_faire }
-		any_scope_state = {
-			OR = {
-				state_region = s:STATE_INGRIA
-				state_region = s:STATE_MOSCOW
-			}
-		}
-	}
-
-	ai_construction_targets = {
-		building_food_industry = {
-			level = 5
-			state_trigger = {
-				OR = {
-					state_region = s:STATE_INGRIA
-					state_region = s:STATE_MOSCOW
-				}
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
 	}
 }
