@@ -1,0 +1,11 @@
+COUNTRIES = {
+	c:v76 ?= {
+		add_technology_researched = peasant_levies
+		add_technology_researched = horsemen
+		map_color = { 97  106  105 }
+		add_modifier = {
+			name = troubled_empire
+		}
+
+	}
+}

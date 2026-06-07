@@ -1,0 +1,34 @@
+namespace = jurchen_tribe_events
+
+jurchen_tribe_events.100 = { #spawn relevant characters
+	type = country_event
+	
+	cancellation_trigger = {
+	
+	}
+	immediate = {
+		scope:v76 = {
+			create_character = {
+				template = giocangga_template
+			}
+			create_character = {
+				template = taksi_template
+			}
+		}
+	}
+}
+
+jurchen_tribe_events.101 = { #spawn relevant characters
+	type = country_event
+	
+	cancellation_trigger = {
+	
+	}
+	immediate = {
+		scope:v76 = {
+			create_character = {
+				template = nuraci_template
+			}
+		}
+	}
+}

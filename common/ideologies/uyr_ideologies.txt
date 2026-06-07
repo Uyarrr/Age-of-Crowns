@@ -409,3 +409,66 @@ ideology_slaver = {
 ideology_abolitionist = {
 	icon = "gfx/interface/icons/ideology_icons/republican.dds"
 }
+
+ideology_peasant_republic = {
+	icon = "gfx/interface/icons/ideology_icons/laissez_faire.dds"
+	
+	lawgroup_distribution_of_power = {
+		law_oligarchy = disapprove
+		law_wealth_voting = neutral
+		law_technocracy = disapprove
+		law_landed_voting = strongly_approve
+		law_census_voting = neutral
+		law_single_party_state = strongly_disapprove
+		law_autocracy = strongly_disapprove
+		law_universal_suffrage = disapprove
+		law_anarchy = disapprove
+	}
+	
+	lawgroup_economic_policy = {
+		law_no_economic_policy = strongly_disapprove
+		law_lockean_proviso = strongly_disapprove
+		law_war_economy = strongly_disapprove
+		law_economic_theory = strongly_disapprove
+		law_agriculture_economy = strongly_approve
+		law_fishing_economy = disapprove
+		law_pirate_economy = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = approve
+		law_homesteading = strongly_approve
+	}
+	
+	lawgroup_rights_of_the_nobility = {
+		law_curtail_the_nobility = approve
+		law_strengthen_the_nobility = disapprove
+	}
+	
+	lawgroup_economic_system = {
+		law_traditionalism = neutral
+		law_agrarianism = approve
+		law_industry_banned = strongly_approve
+		law_interventionism = disapprove
+		law_laissez_fair = strongly_disapprove
+		law_cooperative_ownership = approve
+		law_command_economy = strongly_disapprove
+	}
+	
+	lawgroup_governance_principles = {
+		law_monarchy = strongly_disapprove
+		law_presidential_republic = disapprove
+		law_parliamentary_republic = neutral
+		law_council_republic = strongly_approve
+		law_corporate_state = strongly_disapprove	
+	}
+	
+	lawgroup_mining = {
+		law_unregulated_mining = neutral
+		law_noble_controlled_mining = strongly_disapprove
+		law_burghers_controlled_mining = disapprove
+		law_commoner_controlled_mining = strongly_approve
+		law_royal_fifth_mining = strongly_disapprove
+	}
+}

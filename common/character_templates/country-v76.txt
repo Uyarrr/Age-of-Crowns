@@ -1,0 +1,45 @@
+nuraci_template = {
+	first_name = Nurhaci 		# Picks a random first and last name from the culture, combines those together to make one name
+	last_name = gioro
+	historical = yes
+	religion = confucian # Valid inputs: random_accepted/random/specific key. random & random_accepted weight based on share of political strength within the character's culture. If home region is specified, random is based on home state, otherwise home country.
+	culture = primary_culture # Valid inputs: primary_culture/random_accepted/random/ig_before_primary_culture/ig_before_random_accepted/ig_before_random/specific key. random/random_accepted weight based on share of political strength within the country. If home region is specified, random is based on home state, otherwise home country.
+	female = no
+	home_region = 489		# valid inputs: state region key, state scope, random
+	holding_type = random		# valid inputs: building type key, building type scope, random
+	dna = random 				# Generate random dna from a random ethnicity in the culture
+	age = 12 				
+	interest_group = ig_landowners
+	birth_date = 1559.5.14
+	heir = yes
+}
+taksi_template = {
+	first_name = taksi 		# Picks a random first and last name from the culture, combines those together to make one name
+	last_name = gioro
+	historical = yes
+	religion = confucian # Valid inputs: random_accepted/random/specific key. random & random_accepted weight based on share of political strength within the character's culture. If home region is specified, random is based on home state, otherwise home country.
+	culture = primary_culture # Valid inputs: primary_culture/random_accepted/random/ig_before_primary_culture/ig_before_random_accepted/ig_before_random/specific key. random/random_accepted weight based on share of political strength within the country. If home region is specified, random is based on home state, otherwise home country.
+	female = no
+	home_region = 489		# valid inputs: state region key, state scope, random
+	holding_type = random		# valid inputs: building type key, building type scope, random
+	dna = random 				# Generate random dna from a random ethnicity in the culture
+	age = 28 				
+	interest_group = ig_landowners
+	birth_date = 1543.5.14
+	heir = yes
+}
+giocangga_template = {
+	first_name = giocangga 		# Picks a random first and last name from the culture, combines those together to make one name
+	last_name = gioro
+	historical = yes
+	religion = confucian # Valid inputs: random_accepted/random/specific key. random & random_accepted weight based on share of political strength within the character's culture. If home region is specified, random is based on home state, otherwise home country.
+	culture = primary_culture # Valid inputs: primary_culture/random_accepted/random/ig_before_primary_culture/ig_before_random_accepted/ig_before_random/specific key. random/random_accepted weight based on share of political strength within the country. If home region is specified, random is based on home state, otherwise home country.
+	female = no
+	home_region = 489		# valid inputs: state region key, state scope, random
+	holding_type = random		# valid inputs: building type key, building type scope, random
+	dna = random 				# Generate random dna from a random ethnicity in the culture
+	age = 16 				
+	interest_group = ig_landowners
+	birth_date = 1526.5.14
+	ruler = yes
+}
