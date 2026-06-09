@@ -197,8 +197,7 @@ pm_building_grain_farm_plow_1 = {
 	}
 	
 	level_scaled = {
-		building_employment_laborers_mult = -0.2
-		building_employment_farmers_mult = -0.2
+		building_employment_laborers_add = -1000
 	}
 }
 
@@ -219,7 +218,6 @@ pm_building_grain_farm_plow_2 = {
 	}
 	
 	level_scaled = {
-		building_employment_laborers_mult = -0.4
-		building_employment_farmers_mult = -0.4
+		building_employment_laborers_add = -2000
 	}
 }
