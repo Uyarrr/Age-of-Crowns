@@ -54,6 +54,7 @@ building_rye_farm = {
 
 	production_method_groups = {
 		pmg_building_farm_main
+		pmg_building_grain_farm_plow
 	}
 
 	required_construction = construction_cost_low
@@ -78,6 +79,7 @@ building_wheat_farm = {
 
 	production_method_groups = {
 		pmg_building_farm_main
+		pmg_building_grain_farm_plow
 	}
 
 	required_construction = construction_cost_low
@@ -102,6 +104,7 @@ building_rice_farm = {
 
 	production_method_groups = {
 		pmg_building_ricefarm_main
+		pmg_building_grain_farm_plow
 	}
 
 	required_construction = construction_cost_low
@@ -126,6 +129,7 @@ building_maize_farm = {
 
 	production_method_groups = {
 		pmg_building_farm_main
+		pmg_building_grain_farm_plow
 	}
 
 	required_construction = construction_cost_low
@@ -150,6 +154,7 @@ building_millet_farm = {
 
 	production_method_groups = {
 		pmg_building_farm_main
+		pmg_building_grain_farm_plow
 	}
 
 	required_construction = construction_cost_low

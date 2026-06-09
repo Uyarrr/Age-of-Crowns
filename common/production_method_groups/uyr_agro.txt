@@ -8,7 +8,14 @@ pmg_building_farm_main = {
 		pm_building_wheat_farm_main_4
 	}
 }
-
+pmg_building_grain_farm_plow = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_building_grain_farm_plow_0
+		pm_building_grain_farm_plow_1
+		pm_building_grain_farm_plow_2
+	}
+}
 pmg_building_ricefarm_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
