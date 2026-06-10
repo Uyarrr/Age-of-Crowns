@@ -844,3 +844,23 @@ FRR ?= {
 	religion = catholic
 	capital = STATE_ROMAGNA
 }
+
+# Orleans
+ORL ?= {
+	color = { 216 121 139 }
+	country_type = recognized
+	tier = principality
+	cultures = { french }
+	religion = catholic
+	capital = STATE_ORLEANS
+}
+
+# Bourbonnais
+BOU ?= {
+	color = { 0 140 165 }
+	country_type = recognized
+	tier = principality
+	cultures = { french }
+	religion = catholic
+	capital = STATE_AUVERGNE_LIMOUSIN
+}

@@ -100,11 +100,11 @@
 	}
 	c:FRA ?= {
 		create_diplomatic_pact = {
-			country = c:U27
+			country = c:ORL
 			type = puppet
 		}
 	}
-	c:U27 ?= {
+	c:ORL ?= {
 		add_liberty_desire = -2.575
 	}
 	c:FRA ?= {
@@ -136,11 +136,11 @@
 	}
 	c:FRA ?= {
 		create_diplomatic_pact = {
-			country = c:X52
+			country = c:BOU
 			type = puppet
 		}
 	}
-	c:X52 ?= {
+	c:BOU ?= {
 		add_liberty_desire = -17.1
 	}
 	c:PRO ?= {

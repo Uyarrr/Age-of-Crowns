@@ -508,3 +508,59 @@ LEI = { # Leinster
 		priority = 1
 	}
 }
+
+ORL = { # Orléans
+	flag_definition = {
+		coa = ORL
+		subject_canton = ORL
+		allow_overlord_canton = no
+		coa_with_overlord_canton = ORL
+		priority = 1
+	}
+	flag_definition = {
+		coa = ORL_three_fleurs
+		subject_canton = ORL_three_fleurs
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = ORL_three_fleurs
+		priority = 3
+		trigger = {
+			has_technology_researched = new_world
+		}
+	}
+}
+
+BOU = { # Bourbonnais
+	flag_definition = {
+		coa = BOU_ancient
+		subject_canton = BOU_ancient
+		allow_overlord_canton = no
+		coa_with_overlord_canton = BOU_ancient
+		priority = 1
+	}
+	flag_definition = {
+		coa = BOU
+		subject_canton = BOU
+		allow_overlord_canton = no
+		coa_with_overlord_canton = BOU
+		priority = 2
+		trigger = {
+			OR = {
+				coa_def_capetian_trigger = yes
+				coa_def_FRA_ensign_trigger = yes
+			}
+		}
+	}
+	flag_definition = {
+		coa = BOU_three_fleurs
+		subject_canton = BOU_three_fleurs
+		allow_overlord_canton = no
+		coa_with_overlord_canton = BOU_three_fleurs
+		priority = 3
+		trigger = {
+			OR = {
+				coa_def_capetian_trigger = yes
+				coa_def_FRA_ensign_trigger = yes
+			}
+		}
+	}
+}

@@ -1157,3 +1157,157 @@ PEG_subject = { # Perugia - Subject
 		instance = { position = { 0.75 0.5 } scale = { 0.65 0.65 } }
 	}
 }
+
+ORL = { # Valois-Orléans 14th c.
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_semy_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds" # Label 03 France
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.27 } scale = { 1.0 0.05 }  }				
+		instance = { position = { 0.198 0.45 } scale = { 0.1 0.38 }  }		
+		instance = { position = { 0.50 0.45 } scale = { 0.1 0.38 }  }		
+		instance = { position = { 0.802 0.45 } scale = { 0.1 0.38 }  }				
+    }	
+}
+
+ORL_three_fleurs = { # Bourbon-Orléans
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.31 0.30 } scale = { 0.60 0.60 }  }
+		instance = { position = { 0.69 0.30 } scale = { 0.60 0.60 }  }
+		instance = { position = { 0.5 0.66 } scale = { 0.60 0.60 }  }					
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds" # Label 03 France
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.35 } scale = { 1.0 0.05 }  }				
+		instance = { position = { 0.198 0.53 } scale = { 0.1 0.38 }  }		
+		instance = { position = { 0.50 0.53 } scale = { 0.1 0.38 }  }		
+		instance = { position = { 0.802 0.53 } scale = { 0.1 0.38 }  }				
+    }		
+}
+
+BOU_ancient = { # Bourbon Ancient (Dampierre)
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_scallop.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.06 0.09 } scale = { 0.175 0.175 } }			
+		instance = { position = { 0.28 0.09 } scale = { 0.175 0.175 } }				
+		instance = { position = { 0.50 0.09 } scale = { 0.175 0.175 } }			
+		instance = { position = { 0.72 0.09 } scale = { 0.175 0.175 } }				
+		instance = { position = { 0.94 0.09 } scale = {  0.175 0.175 } }		
+		instance = { position = { 0.06 0.35 } scale = {  0.175 0.175 } }			
+		instance = { position = { 0.94 0.35 } scale = {  0.175 0.175 } }		
+		instance = { position = { 0.06 0.65 } scale = {  0.175 0.175 } }			
+		instance = { position = { 0.94 0.65 } scale = {  0.175 0.175 } }						
+		instance = { position = { 0.06 0.91 } scale = {  0.175 0.175 } }			
+		instance = { position = { 0.28 0.91 } scale = {  0.175 0.175 } }				
+		instance = { position = { 0.50 0.91 } scale = {  0.175 0.175 } }		
+		instance = { position = { 0.72 0.91 } scale = {  0.175 0.175 } }				
+		instance = { position = { 0.94 0.91 } scale = {  0.175 0.175 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 0.85 0.82 } }	
+	}
+}
+
+BOU = { # Bourbon
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.20 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.60 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.00 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.20 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.40 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.60 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.80 1.00 } scale = { @semy @semy } }
+		instance = { position = { 1.00 1.00 } scale = { @semy @semy } }
+	}
+	colored_emblem = {
+		texture = "ce_bend.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+BOU_three_fleurs = { # Bourbon modern
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.31 0.30 } scale = { 0.60 0.60 }  }
+		instance = { position = { 0.69 0.30 } scale = { 0.60 0.60 }  }
+		instance = { position = { 0.5 0.66 } scale = { 0.60 0.60 }  }					
+	}	
+	colored_emblem = {
+		texture = "ce_bend_bendlet.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
