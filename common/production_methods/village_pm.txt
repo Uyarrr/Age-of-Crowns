@@ -4,22 +4,14 @@
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_bread_add = 10
-			goods_output_clothes_add = 5
-			goods_output_beer_add = 3
-			goods_output_furniture_add = 3
-			goods_output_tools_add = 3
 			
-			
-			goods_input_grain_add = 10
-			goods_input_cloth_add = 3
-			goods_input_fiber_add = 1
-			goods_input_wood_add = 3
-			goods_input_stone_add = 1
+			goods_input_grain_add = 6
+			goods_input_wood_add = 1
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 4000
-			building_employment_laborers_add = 1000
+			building_employment_laborers_add = 900
+			building_employment_shopkeepers_add = 100
 		}
 	}
 }
@@ -30,24 +22,15 @@ pm_building_village_main_2 = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_bread_add = 5
 			goods_output_clothes_add = 10
-			goods_output_wine_add = 10
-			goods_output_furniture_add = 3
-			goods_output_tools_add = 3
-			
-			
-			goods_input_grain_add = 5
-			goods_input_fruit_add = 10
-			goods_input_cloth_add = 5
-			goods_input_fiber_add = 3
-			goods_input_wood_add = 3
-			goods_input_stone_add = 1
+
+			goods_input_fabric_add = 4
+			goods_input_fiber_add = 5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 4000
-			building_employment_laborers_add = 1000
+			building_employment_laborers_add = 900
+			building_employment_shopkeepers_add = 100
 
 		}
 	}
@@ -58,22 +41,15 @@ pm_building_village_main_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_clothes_add = 10
-			goods_output_beer_add = 5
-			goods_output_furniture_add = 3
-			goods_output_tools_add = 3
-			
-			
-			goods_input_grain_add = 5
-			goods_input_cloth_add = 7
-			goods_input_fiber_add = 3
-			goods_input_wood_add = 3
-			goods_input_stone_add = 1
+			goods_output_furniture_add = 10
+
+			goods_input_fabric_add = 2
+			goods_input_wood_add = 5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 4000
-			building_employment_laborers_add = 1000
+			building_employment_laborers_add = 900
+			building_employment_shopkeepers_add = 100
 		}
 	}
 }
@@ -83,22 +59,223 @@ pm_building_village_main_4 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_clothes_add = 10
-			goods_output_furniture_add = 5
-			goods_output_tools_add = 3
 			goods_output_salt_add = 5
 			goods_output_naval_supplies_add = 2
 			
-			goods_input_cloth_add = 5
-			goods_input_fiber_add = 5
-			goods_input_wood_add = 5
-			goods_input_stone_add = 1
-			goods_input_fish_add = 5
+			goods_input_cloth_add = 1
+			goods_input_fiber_add = 1
+			goods_input_wood_add = 2
+			goods_input_fish_add = 4
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 4000
-			building_employment_laborers_add = 1000
+			building_employment_laborers_add = 900
+			building_employment_shopkeepers_add = 100
+		}
+	}
+}
+
+# Secondary building 1
+
+pm_building_village_side1_0 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+		
+	}
+	
+	level_scaled = {
+
+	}
+}
+
+pm_building_village_side1_1 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+	
+		workforce_scaled = {
+			goods_input_grain_add = 2
+			goods_input_wood_add = 1
+		
+			goods_output_beer_add = 5
+		}
+	
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
+		}
+	}
+}
+
+pm_building_village_side1_2 = {
+	texture = ""
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fruit_add = 3
+			
+		
+			goods_output_wine_add = 5
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
+		}
+	}
+}
+
+pm_building_village_side1_3 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_stone_add = 2
+			goods_input_wood_add = 1
+		
+			goods_output_pottery_add = 5
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
+		}
+	}
+}
+
+# Secondary building 2
+
+pm_building_village_side2_0 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+	
+	}
+	
+	level_scaled = {
+
+	}
+}
+
+pm_building_village_side2_1 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 2
+			goods_input_stone_add = 1
+		
+			goods_output_tools_add = 5
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
+		}
+	}
+}
+
+pm_building_village_side2_2 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 2
+			goods_input_stone_add = 1
+		
+			goods_output_weapons_add = 5
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
+		}
+	}
+}
+
+pm_building_village_side2_3 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_livestock_add = 1
+			goods_input_wood_add = 1
+		
+			goods_output_leather_add = 5
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
+		}
+	}
+}
+
+# Secondary building 3
+
+pm_building_village_side3_0 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+	
+	}
+	
+	level_scaled = {
+
+	}
+}
+
+pm_building_village_side3_1 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_silk_add = 2
+			goods_input_fiber_add = 2
+		
+			goods_output_luxury_clothes_add = 3
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
+		}
+	}
+}
+
+pm_building_village_side3_2 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 2
+			goods_input_silk_add = 2
+		
+			goods_output_luxury_furniture_add = 3
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
+		}
+	}
+}
+
+pm_building_village_side3_3 = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_livestock_add = 2
+		
+			goods_output_meat_add = 5
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_shopkeepers_add = 50
 		}
 	}
 }
