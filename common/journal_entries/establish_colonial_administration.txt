@@ -1,0 +1,158 @@
+﻿je_colonial_administration = {
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		NOT = { is_country_type = unrecognized }
+		is_not_in_geographic_region = geographic_region_africa
+		OR = {
+			has_interest_marker_in_region = sr:region_west_africa
+			has_interest_marker_in_region = sr:region_east_africa
+			has_interest_marker_in_region = sr:region_southern_africa
+			has_interest_marker_in_region = sr:region_equatorial_africa
+
+			has_interest_marker_in_region = sr:region_canada
+			has_interest_marker_in_region = sr:region_atlantic_coast
+			has_interest_marker_in_region = sr:region_pacific_coast
+			has_interest_marker_in_region = sr:region_great_plains
+			has_interest_marker_in_region = sr:region_central_america
+			has_interest_marker_in_region = sr:region_gran_colombia
+			has_interest_marker_in_region = sr:region_andes
+			has_interest_marker_in_region = sr:region_la_plata
+			has_interest_marker_in_region = sr:region_brazil
+		}
+	}
+
+	possible = {
+		NOT = { is_country_type = unrecognized }
+		is_subject = no
+		any_scope_state = {
+			OR = {
+				is_in_geographic_region = geographic_region_subsaharan_africa
+				is_in_geographic_region = geographic_region_north_america
+				is_in_geographic_region = geographic_region_central_america
+				is_in_geographic_region = geographic_region_south_america
+			}
+		}
+		has_technology_researched = colonization
+	}
+
+	immediate = {
+		random_state_region = {
+			limit = {
+				region = sr:region_west_africa
+			}
+			save_scope_as = senegal_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_east_africa
+			}
+			save_scope_as = zanj_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_southern_africa
+			}
+			save_scope_as = southern_africa_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_equatorial_africa
+			}
+			save_scope_as = congo_region_scope
+		}
+
+		random_state_region = {
+			limit = {
+				region = sr:region_canada
+			}
+			save_scope_as = canada_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_atlantic_coast
+			}
+			save_scope_as = atlantic_coast_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_pacific_coast
+			}
+			save_scope_as = pacific_coast_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_great_plains
+			}
+			save_scope_as = great_plains_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_central_america
+			}
+			save_scope_as = central_america_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_gran_colombia
+			}
+			save_scope_as = gran_colombia_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_andes
+			}
+			save_scope_as = andes_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_la_plata
+			}
+			save_scope_as = la_plata_region_scope
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_brazil
+			}
+			save_scope_as = brazil_region_scope
+		}
+	}
+
+	# Establish Colonial Administration
+	scripted_button = je_colonial_administration_button_senegal
+	scripted_button = je_colonial_administration_button_zanj
+	scripted_button = je_colonial_administration_button_southern_africa
+	scripted_button = je_colonial_administration_button_congo
+
+	scripted_button = je_colonial_administration_button_canada
+	scripted_button = je_colonial_administration_button_atlantic_coast
+	scripted_button = je_colonial_administration_button_pacific_coast
+	scripted_button = je_colonial_administration_button_great_plains
+	scripted_button = je_colonial_administration_button_central_america
+	scripted_button = je_colonial_administration_button_gran_colombia
+	scripted_button = je_colonial_administration_button_andes
+	scripted_button = je_colonial_administration_button_la_plata
+	scripted_button = je_colonial_administration_button_brazil
+
+	# Expand Colonial Administration
+	scripted_button = je_colonial_administration_button_expand_senegal
+	scripted_button = je_colonial_administration_button_expand_zanj
+	scripted_button = je_colonial_administration_button_expand_southern_africa
+	scripted_button = je_colonial_administration_button_expand_congo
+
+	scripted_button = je_colonial_administration_button_expand_canada
+	scripted_button = je_colonial_administration_button_expand_atlantic_coast
+	scripted_button = je_colonial_administration_button_expand_pacific_coast
+	scripted_button = je_colonial_administration_button_expand_great_plains
+	scripted_button = je_colonial_administration_button_expand_central_america
+	scripted_button = je_colonial_administration_button_expand_gran_colombia
+	scripted_button = je_colonial_administration_button_expand_andes
+	scripted_button = je_colonial_administration_button_expand_la_plata
+	scripted_button = je_colonial_administration_button_expand_brazil
+
+	weight = 100
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

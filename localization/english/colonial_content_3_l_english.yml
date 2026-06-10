@@ -1,0 +1,120 @@
+﻿l_english:
+
+ je_colonial_administration: "Establish Colonial Administration"
+ je_colonial_administration_reason: "In order to best leverage our rule over our overseas holdings, a #bold Colonial Administration#! may be established over a given region. #bold Colonial Administrations#! will expand into neighboring [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] on their own, and may be given jurisdiction over our other regional holdings."
+
+ je_colonial_administration_button_senegal: "Establish Colony in [SCOPE.sStateRegion('senegal_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_senegal_desc: "The western coast of Africa offers valuable agricultural land, tropical crops, and access to major trade routes crossing the Atlantic."
+
+ je_colonial_administration_button_zanj: "Establish Colony in [SCOPE.sStateRegion('zanj_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_zanj_desc: "East Africa controls vital trade routes linking the Indian Ocean with the African interior. Ivory, spices, and valuable resources flow through its ports."
+
+ je_colonial_administration_button_southern_africa: "Establish Colony in [SCOPE.sStateRegion('southern_africa_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_southern_africa_desc: "Southern Africa contains vast mineral wealth, fertile grasslands, and strategic ports controlling access between the Atlantic and Indian Oceans."
+
+ je_colonial_administration_button_congo: "Establish Colony in [SCOPE.sStateRegion('congo_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_congo_desc: "The Congo Basin contains immense forests, rivers, and untapped resources that can fuel industrial growth and imperial ambitions."
+
+ je_colonial_administration_button_canada: "Establish Colony in [SCOPE.sStateRegion('canada_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_canada_desc: "Canada's forests, fisheries, and frontier settlements provide vast opportunities for expansion and economic development."
+
+ je_colonial_administration_button_atlantic_coast: "Establish Colony in [SCOPE.sStateRegion('atlantic_coast_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_atlantic_coast_desc: "The Atlantic Coast contains thriving ports, fertile farmland, and serves as the gateway between Europe and the New World."
+
+ je_colonial_administration_button_pacific_coast: "Establish Colony in [SCOPE.sStateRegion('pacific_coast_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_pacific_coast_desc: "Rich in timber, fisheries, and trade potential, the Pacific Coast opens access to the markets of Asia and the Pacific."
+
+ je_colonial_administration_button_great_plains: "Establish Colony in [SCOPE.sStateRegion('great_plains_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_great_plains_desc: "The Great Plains offer vast agricultural potential, grazing land, and room for rapid settler expansion."
+
+ je_colonial_administration_button_central_america: "Establish Colony in [SCOPE.sStateRegion('central_america_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_central_america_desc: "Central America commands strategic trade routes between two oceans and produces valuable tropical goods."
+
+ je_colonial_administration_button_gran_colombia: "Establish Colony in [SCOPE.sStateRegion('gran_colombia_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_gran_colombia_desc: "Northern South America is rich in agricultural land, precious resources, and important Caribbean trade connections."
+
+ je_colonial_administration_button_andes: "Establish Colony in [SCOPE.sStateRegion('andes_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_andes_desc: "The Andes contain rich mineral deposits, productive highlands, and long-established centers of commerce."
+
+ je_colonial_administration_button_la_plata: "Establish Colony in [SCOPE.sStateRegion('la_plata_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_la_plata_desc: "La Plata possesses fertile plains, abundant livestock, and access to the great river systems of southern South America."
+
+ je_colonial_administration_button_brazil: "Establish Colony in [SCOPE.sStateRegion('brazil_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_brazil_desc: "Brazil combines immense agricultural potential, tropical resources, and one of the largest coastlines in the world."
+
+ je_colonial_administration_button_tt_1: "When establishing a local colonial administration, we will be able to tailor its [Concept('concept_law', '$concept_laws$')] and [concept_government] to best suit the needs of the metropole, and its constituent [Concept('concept_interest_group','$concept_interest_groups$')]."
+ je_colonial_administration_button_tt_2: "Any [SCOPE.GetRootScope.GetCountry.GetAdjective] lands within the relevant [concept_strategic_region] will be transferred to our new colonial [concept_subject]. If a [concept_state] has the [GetDecreeType('decree_greener_grass_campaign').GetName] [concept_decree], a random state with that decree will be designated as its capital."
+
+ je_colonial_administration_button_expand_senegal: "Expand Our Colony in [SCOPE.sStateRegion('senegal_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_senegal_desc: "We currently hold lands in [SCOPE.sStateRegion('senegal_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_zanj: "Expand Our Colony in [SCOPE.sStateRegion('zanj_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_zanj_desc: "We currently hold lands in [SCOPE.sStateRegion('zanj_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_southern_africa: "Expand Our Colony in [SCOPE.sStateRegion('southern_africa_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_southern_africa_desc: "We currently hold lands in [SCOPE.sStateRegion('southern_africa_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_congo: "Expand Our Colony in [SCOPE.sStateRegion('congo_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_congo_desc: "We currently hold lands in [SCOPE.sStateRegion('congo_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_canada: "Expand Our Colony in [SCOPE.sStateRegion('canada_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_canada_desc: "We currently hold lands in [SCOPE.sStateRegion('canada_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_atlantic_coast: "Expand Our Colony in [SCOPE.sStateRegion('atlantic_coast_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_atlantic_coast_desc: "We currently hold lands in [SCOPE.sStateRegion('atlantic_coast_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_pacific_coast: "Expand Our Colony in [SCOPE.sStateRegion('pacific_coast_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_pacific_coast_desc: "We currently hold lands in [SCOPE.sStateRegion('pacific_coast_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_great_plains: "Expand Our Colony in [SCOPE.sStateRegion('great_plains_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_great_plains_desc: "We currently hold lands in [SCOPE.sStateRegion('great_plains_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_central_america: "Expand Our Colony in [SCOPE.sStateRegion('central_america_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_central_america_desc: "We currently hold lands in [SCOPE.sStateRegion('central_america_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_gran_colombia: "Expand Our Colony in [SCOPE.sStateRegion('gran_colombia_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_gran_colombia_desc: "We currently hold lands in [SCOPE.sStateRegion('gran_colombia_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_andes: "Expand Our Colony in [SCOPE.sStateRegion('andes_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_andes_desc: "We currently hold lands in [SCOPE.sStateRegion('andes_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_la_plata: "Expand Our Colony in [SCOPE.sStateRegion('la_plata_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_la_plata_desc: "We currently hold lands in [SCOPE.sStateRegion('la_plata_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ je_colonial_administration_button_expand_brazil: "Expand Our Colony in [SCOPE.sStateRegion('brazil_region_scope').GetStrategicRegion.GetName]"
+ je_colonial_administration_button_expand_brazil_desc: "We currently hold lands in [SCOPE.sStateRegion('brazil_region_scope').GetStrategicRegion.GetName] that would be better administered by our colonial subject. If we have more than one colonial [concept_subject] in this [concept_strategic_region], they will be merged together."
+
+ colonial_transfer_two_subjects_tt: "We have more than one colonial [concept_subject] in this [concept_strategic_region]."
+ transfer_stuff_to_subject_tt: "All owned states and subjects within this strategic region will be transferred to our designated #bold Colonial Administration#!"
+
+ colonial_administration_cooldown: "We can only establish a new colonial administration every #variable 3#! months."
+
+ colonial_administration_events.1.t: "The Nature of Administration"
+ colonial_administration_events.1.d: "With the establishment of [SCOPE.sCountry('newly_formed_colonial_nation_scope').GetName], we must decide the direction of our new colonial administration."
+ colonial_administration_events.1.f: ""Right, now take this down. And you remembered your pen this time? Ah, good. So it is in [SCOPE.sCountry('newly_formed_colonial_nation_scope').GetNameNoFormatting], where we may begin the work of administration, extraction, and order. From there, proper management of resources for the glory of- My God, man, strike out me asking about your pen! This is for the annals!""
+
+ colonial_administration_events.1.a: "It will be administered by a chartered [SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjectiveNoFormatting] Company."
+ colonial_administration_events.1.b: "The [SCOPE.sPop('majority_religion').GetReligion.GetName] missions will uplift the local populace."
+ colonial_administration_events.1.c: "A new [SCOPE.GetRootScope.GetCountry.GetNameNoFormatting] shall emerge overseas."
+ colonial_administration_events.1.e: "The whip shall crack, and the colony provide."
+
+ colonial_administration_events.1_tt_1: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjective] [Concept('concept_law', '$concept_laws$')] will be tailored around #bold commerce#! and #bold private enterprise.#!"
+ colonial_administration_events.1_tt_2: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjective] [Concept('concept_law', '$concept_laws$')] will be tailored around #bold conversion#! and #bold education.#!"
+ colonial_administration_events.1_tt_3: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjective] [Concept('concept_law', '$concept_laws$')] will be tailored around #bold immigration#! and #bold colonial settlement.#!"
+ colonial_administration_events.1_tt_4: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjective] [Concept('concept_law', '$concept_laws$')] will be tailored around #bold forced labor#! and #bold ruthless exploitation.#!"
+
+ unbridled_profits_modifier: "Unbridled Profits"
+ civilizing_mission_modifier: "Civilizing Mission"
+ colonial_enterprise_modifier: "Colonial Entrepreneurship"
+ settler_colonialism_modifier: "Plus Ultra"
+ settlement_campaigns_modifier: "Colonial Settlement Campaigns"
+ resource_extraction_colony_modifier: "Extraction at Any Cost"
+ religious_missions_colonial_modifier: "Religious Mission Stations"
+ resource_extraction_charter_modifier: "Colonial Enterprises"
+
+ colonial_administration_events.2.t: "The Severed Limb"
+ colonial_administration_events.2.d: "With our administrative ties to the metropole cut off, massive protests have erupted throughout [ROOT.GetCountry.GetName]. Protests that our understaffed colonial forces are hard pressed to handle."
+ colonial_administration_events.2.f: ""[SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')] has created us free, and did not make us into heritage or estate. So by [SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')], we shall be bequeathed or enslaved no more.""
+ colonial_administration_events.2.a: "May [SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')] preserve [ROOT.GetCountry.GetNameNoFormatting], for we may lack the means to."
+
+ colony_alone_modifier: "Masterless Colony"

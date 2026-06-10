@@ -1,4 +1,6 @@
-﻿je_colonial_administration_button_senegal = {
+﻿# Establish Colonial Administration
+
+je_colonial_administration_button_senegal = {
 	name = "je_colonial_administration_button_senegal"
 	desc = "je_colonial_administration_button_senegal_desc"
 
@@ -23,7 +25,6 @@
 			count >= 2
 		}
 
-		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 
@@ -108,7 +109,7 @@
 				type = colony
 			}
 			scope:overlord_country ?= {
-				every_primary_culture = { # ROOT's primary cultures
+				every_primary_culture = {
 					limit = {
 						NOT = {
 							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
@@ -152,7 +153,6 @@ je_colonial_administration_button_zanj = {
 			count >= 2
 		}
 
-		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 
@@ -237,7 +237,7 @@ je_colonial_administration_button_zanj = {
 				type = colony
 			}
 			scope:overlord_country ?= {
-				every_primary_culture = { # ROOT's primary cultures
+				every_primary_culture = {
 					limit = {
 						NOT = {
 							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
@@ -281,7 +281,6 @@ je_colonial_administration_button_southern_africa = {
 			count >= 2
 		}
 
-		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 
@@ -366,7 +365,7 @@ je_colonial_administration_button_southern_africa = {
 				type = colony
 			}
 			scope:overlord_country ?= {
-				every_primary_culture = { # ROOT's primary cultures
+				every_primary_culture = {
 					limit = {
 						NOT = {
 							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
@@ -410,7 +409,6 @@ je_colonial_administration_button_congo = {
 			count >= 2
 		}
 
-		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 
@@ -495,7 +493,7 @@ je_colonial_administration_button_congo = {
 				type = colony
 			}
 			scope:overlord_country ?= {
-				every_primary_culture = { # ROOT's primary cultures
+				every_primary_culture = {
 					limit = {
 						NOT = {
 							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
@@ -514,6 +512,1157 @@ je_colonial_administration_button_congo = {
 	}
 }
 
+je_colonial_administration_button_canada = {
+	name = "je_colonial_administration_button_canada"
+	desc = "je_colonial_administration_button_canada_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_north_america
+		any_scope_state = {
+			region = sr:region_canada
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = canada_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_canada
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_canada
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_canada
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_canada
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_canada
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = canada_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_atlantic_coast = {
+	name = "je_colonial_administration_button_atlantic_coast"
+	desc = "je_colonial_administration_button_atlantic_coast_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_north_america
+		any_scope_state = {
+			region = sr:region_atlantic_coast
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = atlantic_coast_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_atlantic_coast
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_atlantic_coast
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_atlantic_coast
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_atlantic_coast
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_atlantic_coast
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = atlantic_coast_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_pacific_coast = {
+	name = "je_colonial_administration_button_pacific_coast"
+	desc = "je_colonial_administration_button_pacific_coast_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_north_america
+		any_scope_state = {
+			region = sr:region_pacific_coast
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = pacific_coast_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_pacific_coast
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_pacific_coast
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_pacific_coast
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_pacific_coast
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_pacific_coast
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = pacific_coast_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_great_plains = {
+	name = "je_colonial_administration_button_great_plains"
+	desc = "je_colonial_administration_button_great_plains_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_north_america
+		any_scope_state = {
+			region = sr:region_great_plains
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = great_plains_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_great_plains
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_great_plains
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_great_plains
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_great_plains
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_great_plains
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = great_plains_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_central_america = {
+	name = "je_colonial_administration_button_central_america"
+	desc = "je_colonial_administration_button_central_america_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_central_america
+		any_scope_state = {
+			region = sr:region_central_america
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = central_america_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_central_america
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_central_america
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_central_america
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_central_america
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_central_america
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = central_america_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_gran_colombia = {
+	name = "je_colonial_administration_button_gran_colombia"
+	desc = "je_colonial_administration_button_gran_colombia_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_south_america
+		any_scope_state = {
+			region = sr:region_gran_colombia
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = gran_colombia_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_gran_colombia
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_gran_colombia
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_gran_colombia
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_gran_colombia
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_gran_colombia
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = gran_colombia_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_andes = {
+	name = "je_colonial_administration_button_andes"
+	desc = "je_colonial_administration_button_andes_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_south_america
+		any_scope_state = {
+			region = sr:region_andes
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = andes_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_andes
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_andes
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_andes
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_andes
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_andes
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = andes_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_la_plata = {
+	name = "je_colonial_administration_button_la_plata"
+	desc = "je_colonial_administration_button_la_plata_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_south_america
+		any_scope_state = {
+			region = sr:region_la_plata
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = la_plata_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_la_plata
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_la_plata
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_la_plata
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_la_plata
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_la_plata
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = la_plata_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_brazil = {
+	name = "je_colonial_administration_button_brazil"
+	desc = "je_colonial_administration_button_brazil_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_south_america
+		any_scope_state = {
+			region = sr:region_brazil
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = brazil_subject_var
+			}
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_brazil
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		save_scope_as = overlord_country
+		ordered_primary_culture = {
+			order_by = "root.culture_percent_country(this)"
+			position = 0
+			save_scope_as = colony_culture_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_brazil
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_brazil
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_brazil
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_brazil
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			culture = scope:colony_culture_scope
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = {
+				set_variable = brazil_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_colonial_administration
+				add_modifier = {
+					name = colonial_administration
+				}
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:newly_formed_colonial_nation_capital_scope.owner
+				type = colony
+			}
+			scope:overlord_country ?= {
+				every_primary_culture = {
+					limit = {
+						NOT = {
+							is_primary_culture_of = scope:newly_formed_colonial_nation_capital_scope.owner
+						}
+					}
+					save_temporary_scope_as = temp_primary_culture
+					scope:newly_formed_colonial_nation_capital_scope.owner ?= {
+						add_primary_culture = scope:temp_primary_culture
+					}
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
 
 # Expand Colonial Administration
 
@@ -531,7 +1680,6 @@ je_colonial_administration_button_expand_senegal = {
 	cooldown = { days = 90 }
 
 	possible = {
-		#prevents expanding during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 
@@ -623,7 +1771,6 @@ je_colonial_administration_button_expand_zanj = {
 	cooldown = { days = 90 }
 
 	possible = {
-		#prevents expanding during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 
@@ -632,6 +1779,7 @@ je_colonial_administration_button_expand_zanj = {
 				region = sr:region_east_africa
 				is_under_colonization = no
 			}
+
 			custom_tooltip = {
 				text = colonial_transfer_two_subjects_tt
 				any_subject_or_below = {
@@ -714,7 +1862,6 @@ je_colonial_administration_button_expand_southern_africa = {
 	cooldown = { days = 90 }
 
 	possible = {
-		#prevents expanding during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 
@@ -723,6 +1870,7 @@ je_colonial_administration_button_expand_southern_africa = {
 				region = sr:region_southern_africa
 				is_under_colonization = no
 			}
+
 			custom_tooltip = {
 				text = colonial_transfer_two_subjects_tt
 				any_subject_or_below = {
@@ -805,7 +1953,6 @@ je_colonial_administration_button_expand_congo = {
 	cooldown = { days = 90 }
 
 	possible = {
-		#prevents expanding during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 
@@ -814,6 +1961,7 @@ je_colonial_administration_button_expand_congo = {
 				region = sr:region_equatorial_africa
 				is_under_colonization = no
 			}
+
 			custom_tooltip = {
 				text = colonial_transfer_two_subjects_tt
 				any_subject_or_below = {
@@ -877,6 +2025,825 @@ je_colonial_administration_button_expand_congo = {
 			}
 			scope:congo_subject_scope = {
 				annex = scope:congo_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_canada = {
+	name = "je_colonial_administration_button_expand_canada"
+	desc = "je_colonial_administration_button_expand_canada_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_north_america
+		any_subject_or_below = {
+			has_variable = canada_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_canada
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = canada_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = canada_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_canada
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_canada
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = canada_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = canada_subject_var
+				}
+				save_scope_as = canada_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = canada_subject_var
+					NOT = {
+						this = scope:canada_subject_scope
+					}
+				}
+				save_scope_as = canada_subject_scope_2
+			}
+			scope:canada_subject_scope = {
+				annex = scope:canada_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_atlantic_coast = {
+	name = "je_colonial_administration_button_expand_atlantic_coast"
+	desc = "je_colonial_administration_button_expand_atlantic_coast_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_north_america
+		any_subject_or_below = {
+			has_variable = atlantic_coast_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_atlantic_coast
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = atlantic_coast_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = atlantic_coast_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_atlantic_coast
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_atlantic_coast
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = atlantic_coast_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = atlantic_coast_subject_var
+				}
+				save_scope_as = atlantic_coast_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = atlantic_coast_subject_var
+					NOT = {
+						this = scope:atlantic_coast_subject_scope
+					}
+				}
+				save_scope_as = atlantic_coast_subject_scope_2
+			}
+			scope:atlantic_coast_subject_scope = {
+				annex = scope:atlantic_coast_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_pacific_coast = {
+	name = "je_colonial_administration_button_expand_pacific_coast"
+	desc = "je_colonial_administration_button_expand_pacific_coast_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_north_america
+		any_subject_or_below = {
+			has_variable = pacific_coast_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_pacific_coast
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = pacific_coast_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = pacific_coast_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_pacific_coast
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_pacific_coast
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = pacific_coast_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = pacific_coast_subject_var
+				}
+				save_scope_as = pacific_coast_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = pacific_coast_subject_var
+					NOT = {
+						this = scope:pacific_coast_subject_scope
+					}
+				}
+				save_scope_as = pacific_coast_subject_scope_2
+			}
+			scope:pacific_coast_subject_scope = {
+				annex = scope:pacific_coast_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_great_plains = {
+	name = "je_colonial_administration_button_expand_great_plains"
+	desc = "je_colonial_administration_button_expand_great_plains_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_north_america
+		any_subject_or_below = {
+			has_variable = great_plains_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_great_plains
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = great_plains_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = great_plains_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_great_plains
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_great_plains
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = great_plains_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = great_plains_subject_var
+				}
+				save_scope_as = great_plains_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = great_plains_subject_var
+					NOT = {
+						this = scope:great_plains_subject_scope
+					}
+				}
+				save_scope_as = great_plains_subject_scope_2
+			}
+			scope:great_plains_subject_scope = {
+				annex = scope:great_plains_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_central_america = {
+	name = "je_colonial_administration_button_expand_central_america"
+	desc = "je_colonial_administration_button_expand_central_america_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_central_america
+		any_subject_or_below = {
+			has_variable = central_america_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_central_america
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = central_america_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = central_america_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_central_america
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_central_america
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = central_america_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = central_america_subject_var
+				}
+				save_scope_as = central_america_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = central_america_subject_var
+					NOT = {
+						this = scope:central_america_subject_scope
+					}
+				}
+				save_scope_as = central_america_subject_scope_2
+			}
+			scope:central_america_subject_scope = {
+				annex = scope:central_america_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_gran_colombia = {
+	name = "je_colonial_administration_button_expand_gran_colombia"
+	desc = "je_colonial_administration_button_expand_gran_colombia_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_south_america
+		any_subject_or_below = {
+			has_variable = gran_colombia_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_gran_colombia
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = gran_colombia_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = gran_colombia_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_gran_colombia
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_gran_colombia
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = gran_colombia_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = gran_colombia_subject_var
+				}
+				save_scope_as = gran_colombia_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = gran_colombia_subject_var
+					NOT = {
+						this = scope:gran_colombia_subject_scope
+					}
+				}
+				save_scope_as = gran_colombia_subject_scope_2
+			}
+			scope:gran_colombia_subject_scope = {
+				annex = scope:gran_colombia_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_andes = {
+	name = "je_colonial_administration_button_expand_andes"
+	desc = "je_colonial_administration_button_expand_andes_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_south_america
+		any_subject_or_below = {
+			has_variable = andes_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_andes
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = andes_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = andes_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_andes
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_andes
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = andes_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = andes_subject_var
+				}
+				save_scope_as = andes_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = andes_subject_var
+					NOT = {
+						this = scope:andes_subject_scope
+					}
+				}
+				save_scope_as = andes_subject_scope_2
+			}
+			scope:andes_subject_scope = {
+				annex = scope:andes_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_la_plata = {
+	name = "je_colonial_administration_button_expand_la_plata"
+	desc = "je_colonial_administration_button_expand_la_plata_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_south_america
+		any_subject_or_below = {
+			has_variable = la_plata_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_la_plata
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = la_plata_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = la_plata_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_la_plata
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_la_plata
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = la_plata_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = la_plata_subject_var
+				}
+				save_scope_as = la_plata_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = la_plata_subject_var
+					NOT = {
+						this = scope:la_plata_subject_scope
+					}
+				}
+				save_scope_as = la_plata_subject_scope_2
+			}
+			scope:la_plata_subject_scope = {
+				annex = scope:la_plata_subject_scope_2
+			}
+		}
+	}
+}
+
+je_colonial_administration_button_expand_brazil = {
+	name = "je_colonial_administration_button_expand_brazil"
+	desc = "je_colonial_administration_button_expand_brazil_desc"
+
+	visible = {
+		is_not_in_geographic_region = geographic_region_south_america
+		any_subject_or_below = {
+			has_variable = brazil_subject_var
+		}
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		OR = {
+			any_scope_state = {
+				region = sr:region_brazil
+				is_under_colonization = no
+			}
+
+			custom_tooltip = {
+				text = colonial_transfer_two_subjects_tt
+				any_subject_or_below = {
+					has_variable = brazil_subject_var
+					count >= 2
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
+		random_subject_or_below = {
+			limit = {
+				has_variable = brazil_subject_var
+			}
+			save_scope_as = colonial_transfer_subject_scope
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_brazil
+					is_under_colonization = no
+				}
+			}
+			every_scope_state = {
+				limit = {
+					region = sr:region_brazil
+					is_under_colonization = no
+				}
+				set_state_owner = scope:colonial_transfer_subject_scope
+			}
+		}
+		if = {
+			limit = {
+				any_subject_or_below = {
+					has_variable = brazil_subject_var
+					count >= 2
+				}
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = brazil_subject_var
+				}
+				save_scope_as = brazil_subject_scope
+			}
+			random_subject_or_below = {
+				limit = {
+					has_variable = brazil_subject_var
+					NOT = {
+						this = scope:brazil_subject_scope
+					}
+				}
+				save_scope_as = brazil_subject_scope_2
+			}
+			scope:brazil_subject_scope = {
+				annex = scope:brazil_subject_scope_2
 			}
 		}
 	}

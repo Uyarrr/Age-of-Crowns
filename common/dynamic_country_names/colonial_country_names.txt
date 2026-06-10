@@ -1,0 +1,187 @@
+﻿DEFAULT = {
+	# Colonial Administrations - Africa
+
+	dynamic_country_name = {
+		name = colonial_admin_congo
+		adjective = colonial_admin_congo_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = congo_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_senegal
+		adjective = colonial_admin_senegal_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = senegal_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_southern_africa
+		adjective = colonial_admin_southern_africa_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = southern_africa_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_zanj
+		adjective = colonial_admin_zanj_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = zanj_subject_var
+			}
+		}
+	}
+
+	# Colonial Administrations - Americas
+
+	dynamic_country_name = {
+		name = colonial_admin_andes
+		adjective = colonial_admin_andes_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = andes_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_atlantic_coast
+		adjective = colonial_admin_atlantic_coast_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = atlantic_coast_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_brazil
+		adjective = colonial_admin_brazil_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = brazil_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_canada
+		adjective = colonial_admin_canada_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = canada_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_central_america
+		adjective = colonial_admin_central_america_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = central_america_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_gran_colombia
+		adjective = colonial_admin_gran_colombia_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = gran_colombia_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_great_plains
+		adjective = colonial_admin_great_plains_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = great_plains_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_la_plata
+		adjective = colonial_admin_la_plata_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = la_plata_subject_var
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = colonial_admin_pacific_coast
+		adjective = colonial_admin_pacific_coast_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = pacific_coast_subject_var
+			}
+		}
+	}
+}

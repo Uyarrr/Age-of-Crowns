@@ -1,5 +1,5 @@
 ﻿company_wood_and_furniture = {
-	icon = "gfx/interface/icons/company_icons/company_basic_agriculture_1.dds"
+	icon = "gfx/interface/icons/company_icons/wood_and_furniture.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 
 	flavored_company = no
@@ -50,7 +50,7 @@
 }
 
 company_stone_and_cutstone = {
-	icon = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
+	icon = "gfx/interface/icons/company_icons/stone_and_cutstone.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 
 	flavored_company = no
@@ -101,7 +101,7 @@ company_stone_and_cutstone = {
 }
 
 company_livestock_and_meat = {
-	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	icon = "gfx/interface/icons/company_icons/livestock_and_meat.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = no
@@ -203,7 +203,7 @@ company_iron_and_ironingot = {
 }
 
 company_wheat_and_bread = {
-	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	icon = "gfx/interface/icons/company_icons/wheat_and_bread.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = no
@@ -254,7 +254,7 @@ company_wheat_and_bread = {
 }
 
 company_lead_and_glass = {
-	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	icon = "gfx/interface/icons/company_icons/lead_and_glass.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = no
@@ -305,7 +305,7 @@ company_lead_and_glass = {
 }
 
 company_silk_and_luxury_cloth = {
-	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	icon = "gfx/interface/icons/company_icons/silk_and_luxury_cloth.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = no
@@ -457,8 +457,8 @@ company_cocoa_and_chocolate = {
 	}
 }
 
-company_fur_and_leather = {
-	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+company_fur_and_luxury_furniture = {
+	icon = "gfx/interface/icons/company_icons/fur_and_luxury_furniture.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = no
@@ -478,7 +478,7 @@ company_fur_and_leather = {
 	}
 
 	extension_building_types = {
-		building_tannery
+		building_luxury_furniture_workshop
 	}
 
 	possible = {
@@ -501,6 +501,210 @@ company_fur_and_leather = {
 			any_scope_building = {
 				OR = {
 					is_building_type = building_hunting_lodge
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_road_and_stone = {
+	icon = "gfx/interface/icons/company_icons/road_and_stone.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_road
+	}
+
+	extension_building_types = {
+		building_stone_mine
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_road
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_road
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_tin_and_bronze = {
+	icon = "gfx/interface/icons/company_icons/tin_and_bronze.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_tin_mine
+	}
+
+	extension_building_types = {
+		building_bronze_foundry
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tin_mine
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tin_mine
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_copper_and_cannon = {
+	icon = "gfx/interface/icons/company_icons/copper_and_cannon.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_copper_mine
+	}
+
+	extension_building_types = {
+		building_cannon_foundry
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_copper_mine
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_copper_mine
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_beeswax_and_medicament = {
+	icon = "gfx/interface/icons/company_icons/beeswax_and_medicament.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_apiary
+	}
+
+	extension_building_types = {
+		building_apothecary
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_apiary
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_apiary
 				}
 				level >= 3
 			}
