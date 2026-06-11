@@ -618,68 +618,6 @@ DEFAULT = {
 			}
 		}
 	}
-	dynamic_country_name = {
-		name = colonial_admin_zanj
-		adjective = colonial_admin_zanj_adj
-		use_overlord_prefix = yes
-
-		priority = 100
-
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = zanj_subject_var
-			}
-		}
-	}
-	dynamic_country_name = {
-		name = colonial_admin_southern_africa
-		adjective = colonial_admin_southern_africa_adj
-		use_overlord_prefix = yes
-
-		priority = 100
-
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = southern_africa_subject_var
-			}
-			NOT = {
-				scope:actor ?= {
-					c:SAF ?= this
-					c:GBR ?= this.overlord
-				}
-			}
-		}
-	}
-	dynamic_country_name = {
-		name = colonial_admin_congo
-		adjective = colonial_admin_congo_adj
-		use_overlord_prefix = yes
-
-		priority = 100
-
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = congo_subject_var
-			}
-		}
-	}
-	dynamic_country_name = {
-		name = colonial_admin_senegal
-		adjective = colonial_admin_senegal_adj
-		use_overlord_prefix = yes
-
-		priority = 100
-
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = senegal_subject_var
-			}
-		}
-	}
 }
 
 SWE = {

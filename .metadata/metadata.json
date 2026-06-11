@@ -10,6 +10,7 @@
     "multiplayer_synchronized" : true,
     "replace_paths" : [ 
     "common/country_definitions",
+    "common/defines",
     "common/history/ai", 
     "common/history/buildings", 
     "common/history/characters", 
@@ -30,8 +31,7 @@
     "common/history/states", 
     "common/history/trade", 
     "common/history/treaties", 
-    "common/on_actions/00_code_on_actions.txt", 
-    "map_data/state_regions",
+    "common/on_actions/00_code_on_actions.txt",
     "common/laws",
     "common/law_groups",
     "common/buildings",
@@ -47,7 +47,9 @@
     "common/journal_entry_groups",
     "common/company_types",
     "common/political_movements",
+    "common/dynamic_country_names",
     "events/japan_events",
-    "gfx/map/front_entities"]
+    "gfx/map/front_entities",
+    "map_data/state_regions"]
   }
 }
