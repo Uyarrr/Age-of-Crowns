@@ -59,28 +59,6 @@ building_government_administration = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
 
-building_mint = {
-	building_group = bg_bureaucracy
-	city_type = city
-
-	levels_per_mesh = 50
-
-	unlocking_technologies = {
-		minting_house
-	}
-
-	production_method_groups = {
-		pmg_building_mint_gold
-		pmg_building_mint_silver
-	}
-
-	icon = "gfx/interface/icons/building_icons/mint_uyr.dds"
-
-	required_construction = construction_cost_medium
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
-}
-
 building_colonial_outpost = {
 	building_group = bg_private_infrastructure
 	city_type = city

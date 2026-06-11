@@ -29,7 +29,7 @@ building_tin_mine = {
 	terrain_manipulator = mining
 
 	unlocking_technologies = {
-		bronze_working
+		tin_mining
 	}
 
 	production_method_groups = {
@@ -49,7 +49,7 @@ building_copper_mine = {
 	required_construction = construction_cost_medium
 	terrain_manipulator = mining
 	unlocking_technologies = {
-		bronze_working
+		copper_mining
 	}
 
 	production_method_groups = {
@@ -151,7 +151,7 @@ building_lead_mine = {
 	terrain_manipulator = mining
 
 	unlocking_technologies = {
-		fine_metals_mining
+		silver_mining
 	}
 
 	production_method_groups = {
@@ -172,7 +172,7 @@ building_lead_mine = {
 	terrain_manipulator = mining
 
 	unlocking_technologies = {
-		fine_metals_mining
+		gold_mining
 	}
 
 	ai_value = 5000 # Gold mines are very nice for minting revenue and guaranteed profits
@@ -199,7 +199,7 @@ building_gold_field = {
 	terrain_manipulator = mining
 
 	unlocking_technologies = {
-		fine_metals_mining
+		gold_mining
 	}
 
 	production_method_groups = {
@@ -217,8 +217,9 @@ building_gem_mine = {
 	levels_per_mesh = 50
 	required_construction = construction_cost_medium
 	terrain_manipulator = mining
+	
 	unlocking_technologies = {
-		precious_metal_mining
+		gem_mining
 	}
 
 	production_method_groups = {

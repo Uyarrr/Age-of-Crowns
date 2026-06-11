@@ -886,36 +886,6 @@ colonial_trade_networks = {
 	}
 }
 
-silver_coinage = {
-	# Unlocks Silver Mint PM
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/silver_mint.dds"
-	category = society
-
-	unlocking_technologies = {
-		new_world
-	}
-
-	ai_weight = {
-		value = 2
-	}
-}
-
-gold_coinage = {
-	# Unlocks Silver Mint PM
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/gold_mint.dds"
-	category = society
-
-	unlocking_technologies = {
-		silver_coinage
-	}
-
-	ai_weight = {
-		value = 2
-	}
-}
-
 printing_press = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/printing_press.dds"
@@ -1076,37 +1046,6 @@ shared_knowledge = {
 	}
 }
 
-gold_coinage = {
-	# Unlock Gold Coin Mint PM
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/gold_mint.dds"
-	category = society
-
-	unlocking_technologies = {
-		banking
-	}
-
-	ai_weight = {
-		value = 2 # Important in general
-	}
-}
-
-silver_coinage = {
-	# Unlock Silver Coin Mint PM
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/silver_mint.dds"
-	category = society
-
-	unlocking_technologies = {
-		gold_coinage
-	}
-
-	ai_weight = {
-		value = 2 # Important in general
-	}
-}
-
-
 ######## ERA 4 #########
 confessionalism = {
 	era = era_4
@@ -1213,25 +1152,6 @@ embassies = {
 	}
 }
 
-pharmacology = {
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/pharmacology.dds"
-	category = society
-
-	modifier = {
-		state_harvest_condition_disease_outbreak_impact_mult = -0.15
-		state_mortality_mult = -0.02
-	}
-
-	unlocking_technologies = {
-		representative_assemblies
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 administrative_suzerainty = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/administrative_suzerainty.dds"
@@ -1279,6 +1199,42 @@ representative_assemblies = {
 	}
 
 	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+monumental_construction = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		representative_assemblies
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+pharmacology = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/pharmacology.dds"
+	category = society
+
+	modifier = {
+		state_harvest_condition_disease_outbreak_impact_mult = -0.15
+		state_mortality_mult = -0.02
+	}
+
+	unlocking_technologies = {
+		monumental_construction
 	}
 
 	ai_weight = {
@@ -1409,24 +1365,6 @@ absolute_loyalty = {
 	}
 }
 
-modern_road = {
-	#Unlocks Road PM
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/paved_road.dds"
-	category = society
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-		sanitation
-	}
-
-	ai_weight = {
-		value = 2 # very important tech
-	}
-}
-
 loyal_subordinates = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/loyal_subordinates.dds"
@@ -1445,6 +1383,40 @@ loyal_subordinates = {
 	}
 }
 
+scientific_revolution = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+iron_framed_construction = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+
+	modifier = {
+		absolutism
+	}
+
+	unlocking_technologies = {
+		scientific_revolution
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 sanitation = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/sanitation.dds"
@@ -1456,6 +1428,7 @@ sanitation = {
 	}
 
 	unlocking_technologies = {
+		scientific_revolution
 	}
 
 	ai_weight = {
@@ -1463,33 +1436,21 @@ sanitation = {
 	}
 }
 
-royal_silver_minting = {
-	# Unlock Gold Coin Mint PM
+modern_road = {
+	#Unlocks Road PM
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/silver_mint.dds"
+	texture = "gfx/interface/icons/invention_icons/paved_road.dds"
 	category = society
 
+	modifier = {
+	}
+
 	unlocking_technologies = {
-		absolutism
+		iron_framed_construction
 	}
 
 	ai_weight = {
-		value = 2 # Important in general
-	}
-}
-
-royal_gold_minting = {
-	# Unlock Gold Coin Mint PM
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/gold_mint.dds"
-	category = society
-
-	unlocking_technologies = {
-		royal_silver_minting
-	}
-
-	ai_weight = {
-		value = 2 # Important in general
+		value = 2 # very important tech
 	}
 }
 

@@ -109,7 +109,7 @@ bronze_working = {
 	category = production
 
 	unlocking_technologies = {
-		metallurgy
+		iron_working
 	}
 
 	ai_weight = {
@@ -124,7 +124,7 @@ iron_working = {
 	category = production
 
 	unlocking_technologies = {
-		metallurgy
+		workshops
 	}
 
 	ai_weight = {
@@ -133,60 +133,20 @@ iron_working = {
 }
 
 windmill = {
-	# Improves Grain Crop throughput
+	# Unlocks Plow PM
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/windmill.dds"
 	category = production
 
 	unlocking_technologies = {
-		agriculture
+		woodcutting
 	}
 
 	modifier = {
-		building_wheat_farm_throughput_add = 0.05
-		building_maize_farm_throughput_add = 0.05
-		building_millet_farm_throughput_add = 0.05
-		building_rye_farm_throughput_add = 0.05
-		building_rice_farm_throughput_add = 0.05
 	}
 
 	ai_weight = {
 		value = 1 # Very important tech in general
-	}
-}
-
-serfs = {
-	# Increases Food Production
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/serfdom.dds"
-	category = production
-
-	unlocking_technologies = {
-		windmill
-	}
-
-	modifier = {
-		building_group_bg_agriculture_throughput_add = 0.05
-		state_peasants_mortality_mult = -0.03
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-fine_metals_mining = {
-	# Unlocks Gold and Sulfur Mining
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/precious_metal_mining.dds"
-	category = production
-
-	unlocking_technologies = {
-		furniture_workshop
-	}
-
-	ai_weight = {
-		value = 3
 	}
 }
 
@@ -197,6 +157,7 @@ woodcutting = {
 	category = production
 
 	unlocking_technologies = {
+		agriculture
 	}
 
 	ai_weight = {
@@ -219,36 +180,6 @@ glassworks = {
 	}
 }
 
-furniture_workshop = {
-	# Unlocks Furniture Workshop
-	era = era_1
-	texture = "gfx/interface/icons/goods_icons/furniture.dds"
-	category = production
-
-	unlocking_technologies = {
-		woodcutting
-	}
-
-	ai_weight = {
-		value = 3
-	}
-}
-
-cloth_workshop = {
-	# Unlocks Cloth Workshop
-	era = era_1
-	texture = "gfx/interface/icons/goods_icons/clothes.dds"
-	category = production
-
-	unlocking_technologies = {
-		agriculture
-	}
-
-	ai_weight = {
-		value = 3
-	}
-}
-
 papermill = {
 	# Unlocks Papermill
 	era = era_1
@@ -256,7 +187,7 @@ papermill = {
 	category = production
 
 	unlocking_technologies = {
-		woodcutting
+		workshops
 	}
 
 	ai_weight = {
@@ -346,13 +277,162 @@ coal_mining = {
 	category = production
 
 	unlocking_technologies = {
-		iron_mine
+		iron_mining
 	}
 
 	ai_weight = {
 		value = 3 # Important tech in general
 	}
 }
+
+copper_mining = {
+	# Unlocks Copper Mines
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/copper.dds"
+	category = production
+
+	unlocking_technologies = {
+		quarrying
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+tin_mining = {
+	# Unlocks Tin Mines
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/tin.dds"
+	category = production
+
+	unlocking_technologies = {
+		copper_mining
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+silver_mining = {
+	# Unlocks Silver Mines
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/silver.dds"
+	category = production
+
+	unlocking_technologies = {
+		quarrying
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+gold_mining = {
+	# Unlocks Gold Mines
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	category = production
+
+	unlocking_technologies = {
+		silver_mining
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+gem_mining = {
+	# Unlocks Gold Mines
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/gems.dds"
+	category = production
+
+	unlocking_technologies = {
+		mining_laws
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+workshops = {
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/behaviorism.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+cloth_workshop = {
+	# Unlocks Cloth Workshop
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/clothes.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshops
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+luxury_cloth_workshop = {
+	# Unlocks Luxury Cloth Workshop
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/luxury_clothes.dds"
+	category = production
+
+	unlocking_technologies = {
+		cloth_workshop
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+furniture_workshop = {
+	# Unlocks Furniture Workshop
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshops
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+luxury_furniture_workshop = {
+	# Unlocks Furniture Workshop
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+		furniture_workshop
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
 
 ######## AGE 2 ##########
 
@@ -628,21 +708,6 @@ guild_tannery = {
 
 	ai_weight = {
 		value = 2 # Important tech in general
-	}
-}
-
-luxury_furnitures = {
-	# Unlocks Luxury Furniture PM
-	era = era_2
-	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
-	category = production
-
-	unlocking_technologies = {
-		dyed_furnitures
-	}
-
-	ai_weight = {
-		value = 2 # Very important tech in general
 	}
 }
 
@@ -1275,6 +1340,42 @@ deep_shaft_gem_mining = {
 
 	unlocking_technologies = {
 		deep_shaft_lead_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+deep_shaft_silver_mining = {
+	#Unlocks Silver Mine PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/silver.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		deep_shaft_mining
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+deep_shaft_gold_mining = {
+	#Unlocks Gold Mine PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		deep_shaft_silver_mining
 	}
 
 	ai_weight = {
