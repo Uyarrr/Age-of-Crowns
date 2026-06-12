@@ -7,8 +7,8 @@
 
 ### Infantry
 
-combat_unit_type_infantry_1 = {
-    group = combat_unit_group_infantry
+combat_unit_type_heavy_infantry_1 = {
+    group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
     conscript_peasant_levies = yes
@@ -68,20 +68,20 @@ combat_unit_type_infantry_1 = {
 
     combat_unit_image = {
 		# fallback
-        texture = "gfx/unit_illustrations/infantry_1.dds"
+        texture = "gfx/unit_illustrations/heavy_infantry_1.dds"
     }
 
 	upgrades = {
-        combat_unit_type_infantry_2
-        combat_unit_type_infantry_3
-		combat_unit_type_infantry_4
-		combat_unit_type_infantry_5
-		combat_unit_type_infantry_6
+        combat_unit_type_heavy_infantry_2
+        combat_unit_type_heavy_infantry_3
+		combat_unit_type_heavy_infantry_4
+		combat_unit_type_heavy_infantry_5
+		combat_unit_type_heavy_infantry_6
 	}
 }
 
-combat_unit_type_infantry_2 = {
-    group = combat_unit_group_infantry
+combat_unit_type_heavy_infantry_2 = {
+    group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
     conscript_peasant_levies = yes
@@ -141,19 +141,19 @@ combat_unit_type_infantry_2 = {
 
     combat_unit_image = {
 		# fallback
-        texture = "gfx/unit_illustrations/infantry_2.dds"
+        texture = "gfx/unit_illustrations/heavy_infantry_2.dds"
     }
 
 	upgrades = {
-        combat_unit_type_infantry_3
-		combat_unit_type_infantry_4
-		combat_unit_type_infantry_5
-		combat_unit_type_infantry_6
+        combat_unit_type_heavy_infantry_3
+		combat_unit_type_heavy_infantry_4
+		combat_unit_type_heavy_infantry_5
+		combat_unit_type_heavy_infantry_6
 	}
 }
 
-combat_unit_type_infantry_3 = {
-    group = combat_unit_group_infantry
+combat_unit_type_heavy_infantry_3 = {
+    group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
     conscript_peasant_levies = yes
@@ -214,18 +214,18 @@ combat_unit_type_infantry_3 = {
 
     combat_unit_image = {
 		# fallback
-        texture = "gfx/unit_illustrations/infantry_3.dds"
+        texture = "gfx/unit_illustrations/heavy_infantry_3.dds"
     }
 
 	upgrades = {
-		combat_unit_type_infantry_4
-		combat_unit_type_infantry_5
-		combat_unit_type_infantry_6
+		combat_unit_type_heavy_infantry_4
+		combat_unit_type_heavy_infantry_5
+		combat_unit_type_heavy_infantry_6
 	}
 }
 
-combat_unit_type_infantry_4 = {
-    group = combat_unit_group_infantry
+combat_unit_type_heavy_infantry_4 = {
+    group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
     conscript_peasant_levies = yes
@@ -286,17 +286,17 @@ combat_unit_type_infantry_4 = {
 
     combat_unit_image = {
 		# fallback
-        texture = "gfx/unit_illustrations/infantry_4.dds"
+        texture = "gfx/unit_illustrations/heavy_infantry_4.dds"
     }
 
 	upgrades = {
-		combat_unit_type_infantry_5
-		combat_unit_type_infantry_6
+		combat_unit_type_heavy_infantry_5
+		combat_unit_type_heavy_infantry_6
 	}
 }
 
-combat_unit_type_infantry_5 = {
-    group = combat_unit_group_infantry
+combat_unit_type_heavy_infantry_5 = {
+    group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
     conscript_peasant_levies = yes
@@ -358,16 +358,16 @@ combat_unit_type_infantry_5 = {
 
     combat_unit_image = {
 		# fallback
-        texture = "gfx/unit_illustrations/infantry_5.dds"
+        texture = "gfx/unit_illustrations/heavy_infantry_5.dds"
     }
 
 	upgrades = {
-		combat_unit_type_infantry_6
+		combat_unit_type_heavy_infantry_6
 	}
 }
 
-combat_unit_type_infantry_6 = {
-    group = combat_unit_group_infantry
+combat_unit_type_heavy_infantry_6 = {
+    group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
     conscript_peasant_levies = yes
@@ -429,7 +429,7 @@ combat_unit_type_infantry_6 = {
 
     combat_unit_image = {
 		# fallback
-        texture = "gfx/unit_illustrations/infantry_6.dds"
+        texture = "gfx/unit_illustrations/heavy_infantry_6.dds"
     }
 
 	upgrades = {

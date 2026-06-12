@@ -2,7 +2,13 @@
 # NOTE: When adding new Groups, add correspondig entry to texticons.gui
 #
 
-combat_unit_group_infantry = {
+combat_unit_group_light_infantry = {
+    default_group = yes
+    color = { 230  69  80 }
+    icon = "gfx/interface/icons/generic_icons/battalions.dds"
+}
+
+combat_unit_group_heavy_infantry = {
     default_group = yes
     color = { 230  69  80 }
     icon = "gfx/interface/icons/generic_icons/battalions.dds"
@@ -23,4 +29,3 @@ combat_unit_group_marines = {
     color = { 95 210 230 }
     icon = "gfx/interface/icons/generic_icons/battalions.dds"
 }
-
