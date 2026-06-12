@@ -228,6 +228,21 @@ salt_collecting = {
 	}
 }
 
+hunting = {
+	# Unlocks Hunting Lodge
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/fur.dds"
+	category = military
+
+	unlocking_technologies = {
+		peasant_levy
+	}
+
+	ai_weight = {
+		value = 2 # Semi Important
+	}
+}
+
 ##### ERA 2 ################
 
 professional_army = {

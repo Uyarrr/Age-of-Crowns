@@ -202,7 +202,7 @@ tannery = {
 	category = production
 
 	unlocking_technologies = {
-		cloth_workshop
+		workshops
 	}
 
 	ai_weight = {
@@ -426,6 +426,21 @@ luxury_furniture_workshop = {
 
 	unlocking_technologies = {
 		furniture_workshop
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+perfumery = {
+	# Unlocks Perfumery
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/incense.dds"
+	category = production
+
+	unlocking_technologies = {
+		tannery
 	}
 
 	ai_weight = {
@@ -811,6 +826,7 @@ sugar_plantation = {
 }
 
 cotton_plantation = {
+	# Unlocks Cotton Plantations
 	era = era_3
 	texture = "gfx/interface/icons/goods_icons/cotton.dds"
 	category = production
@@ -828,6 +844,7 @@ cotton_plantation = {
 }
 
 tobacco_plantation = {
+	# Unlocks Tobacco Plantations
 	era = era_3
 	texture = "gfx/interface/icons/goods_icons/tobacco.dds"
 	category = production
@@ -837,6 +854,59 @@ tobacco_plantation = {
 
 	unlocking_technologies = {
 		new_world_crops
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+cocoa_plantation = {
+	# Unlocks Cocoa Plantations
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/cocoa.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		new_world_crops
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+chili_plantation = {
+	# Unlocks Chili Plantations
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/chili.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		tobacco_plantation
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+chocolatery = {
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/chocolate.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		cocoa_plantation
 	}
 
 	ai_weight = {
