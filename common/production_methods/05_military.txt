@@ -135,30 +135,6 @@ pm_mobile_warfare_tactics = {
 	}
 }
 
-pm_samurai_training = {
-	texture = "gfx/interface/icons/production_method_icons/samurai_training.dds"
-
-	is_hidden_when_unavailable = yes
-
-	profession_ratio = {
-		soldiers = 75
-		officers = 25
-	}
-	unlocking_laws = {
-		law_warrior_caste
-	}
-	
-	building_modifiers = {
-		unscaled = {
-			building_training_rate_add = 25
-		}
-
-		level_scaled = {
-			building_training_rate_add = 5
-		}
-	}
-}
-
 pm_no_organization_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
 	is_default = yes
