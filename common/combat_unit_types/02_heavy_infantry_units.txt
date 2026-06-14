@@ -20,6 +20,8 @@ combat_unit_type_heavy_infantry_1 = {
         unit_defense_add = 15
         unit_morale_loss_add = 5
 		battle_casualties_mult = -0.05
+		military_formation_mobilization_speed_mult = -0.1
+        military_formation_movement_speed_mult = -0.1
     }
 
     upkeep_modifier = {
@@ -95,6 +97,8 @@ combat_unit_type_heavy_infantry_2 = {
         unit_offense_add = 15
         unit_defense_add = 25
 		battle_casualties_mult = -0.08
+		military_formation_mobilization_speed_mult = -0.1
+        military_formation_movement_speed_mult = -0.1
     }
 
     upkeep_modifier = {
@@ -171,6 +175,8 @@ combat_unit_type_heavy_infantry_3 = {
         unit_offense_add = 25
         unit_defense_add = 35
 		battle_casualties_mult = -0.10
+		military_formation_mobilization_speed_mult = -0.1
+        military_formation_movement_speed_mult = -0.1
     }
 
     upkeep_modifier = {
@@ -245,6 +251,8 @@ combat_unit_type_heavy_infantry_4 = {
         unit_offense_add = 30
         unit_defense_add = 45
 		battle_casualties_mult = -0.15
+		military_formation_mobilization_speed_mult = -0.1
+        military_formation_movement_speed_mult = -0.1
     }
 
     upkeep_modifier = {
@@ -317,6 +325,8 @@ combat_unit_type_heavy_infantry_5 = {
     battle_modifier = { 
         unit_offense_add = 45
         unit_defense_add = 45
+		military_formation_mobilization_speed_mult = -0.1
+        military_formation_movement_speed_mult = -0.1
     }
 
     upkeep_modifier = {
@@ -388,6 +398,8 @@ combat_unit_type_heavy_infantry_6 = {
     battle_modifier = { 
         unit_offense_add = 55
         unit_defense_add = 55
+		military_formation_mobilization_speed_mult = -0.1
+        military_formation_movement_speed_mult = -0.1
     }
 
     upkeep_modifier = {
