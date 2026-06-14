@@ -1,0 +1,210 @@
+﻿# common variables
+@coa_width = 768
+@coa_height = 512
+@canton_scale_cross_x = @[ ( 333 / coa_width ) + 0.001 ]
+@canton_scale_cross_y = @[ ( 205 / coa_height ) + 0.001 ]
+@canton_scale_sweden_x = @[ ( 255 / coa_width ) + 0.001 ]
+@canton_scale_sweden_y = @[ ( 204 / coa_height ) + 0.001 ]
+@canton_scale_norway_x = @[ ( 192 / coa_width ) + 0.001 ]
+@canton_scale_norway_y = @[ ( 192 / coa_height ) + 0.001 ]
+@canton_scale_denmark_x = @[ ( 220 / coa_width ) + 0.001 ]
+@canton_scale_denmark_y = @[ ( 220 / coa_height ) + 0.001 ]
+@third = @[1/3]
+
+HUN = { # Hungary
+	flag_definition = {
+		coa = HUN
+		priority = 999
+	}
+	flag_definition = {
+		coa = HUN_quarterly
+		priority = 2
+		trigger = {
+			coa_def_discovery_age_3_trigger = yes
+		}
+	}	
+	
+	# Dynasties
+	
+	flag_definition = {
+		coa = HUN_luxembourg
+		priority = 5
+		trigger = {
+			OR = {
+				coa_def_luxembourg_dynasty_trigger = yes
+				coa_def_BOH_ensign_trigger = yes
+			}
+		}
+	}
+	flag_definition = {
+		coa = HUN_Anjou
+		priority = 6
+		trigger = {
+			coa_def_capetian_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HUN_anjou_quarterly
+		priority = 7
+		trigger = {
+			coa_def_capetian_trigger = yes
+			coa_def_discovery_age_3_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HUN_quarterly_hunyadi
+		priority = 8
+		trigger = {
+			coa_def_hunyadi_dynasty_trigger = yes
+		}
+	}
+	
+	# Bohemia
+
+	flag_definition = { # Early per pale design
+		coa = HUN_bohemia_per_pale
+		priority = 40
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = HUN_bohemia_habsburg_per_pale
+		priority = 41
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+			coa_def_habsburg_dynasty_trigger = yes
+		}
+	}		
+	flag_definition = { # Quartering in other cases
+		coa = HUN_bohemia
+		priority = 50
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+			coa_def_discovery_age_3_trigger = yes # otherwise per pale above
+		}
+	}
+	flag_definition = {
+		coa = HUN_bohemia_angevine
+		priority = 51
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+			coa_def_capetian_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HUN_bohemia_habsburg
+		priority = 52
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+			coa_def_habsburg_dynasty_trigger = yes
+			coa_def_discovery_age_3_trigger = yes # otherwise per pale above
+		}
+	}	
+	flag_definition = {
+		coa = HUN_quarterly_bohemia_hunyadi
+		priority = 53
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+			coa_def_hunyadi_dynasty_trigger = yes
+		}
+	}		
+	
+	# Poland
+	
+	flag_definition = {
+		coa = HUN_poland
+		priority = 55
+		trigger = {
+			coa_def_poland_ownership_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HUN_poland_angevine
+		priority = 56
+		trigger = {
+			coa_def_poland_ownership_trigger = yes
+			coa_def_capetian_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HUN_poland_habsburg
+		priority = 57
+		trigger = {
+			coa_def_poland_ownership_trigger = yes
+			coa_def_habsburg_dynasty_trigger = yes
+		}
+	}	
+	
+	# Austria
+	
+	flag_definition = {
+		coa = HUN_austria
+		priority = 60
+		trigger = {
+			coa_def_austria_ownership_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HUN_austria_angevine
+		priority = 61
+		trigger = {
+			coa_def_austria_ownership_trigger = yes
+			coa_def_capetian_trigger = yes
+		}
+	}		
+	
+	# BOH POL
+	flag_definition = {
+		coa = HUN_bohemia_poland
+		priority = 70
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+			coa_def_poland_ownership_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HUN_bohemia_poland_angevine
+		priority = 71
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+			coa_def_poland_ownership_trigger = yes
+			coa_def_capetian_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HUN_bohemia_poland_habsburg
+		priority = 72
+		trigger = {
+			coa_def_bohemia_ownership_trigger = yes
+			coa_def_poland_ownership_trigger = yes
+			coa_def_habsburg_dynasty_trigger = yes
+		}
+	}	
+	
+	# BOH HAB
+	flag_definition = {
+		coa = HUN_austria_bohemia
+		priority = 75
+		trigger = {
+			coa_def_austria_ownership_trigger = yes
+			coa_def_bohemia_ownership_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = HUN_austria_bohemia_angevine
+		priority = 76
+		trigger = {
+			coa_def_austria_ownership_trigger = yes
+			coa_def_capetian_trigger = yes
+		}
+	}		
+	
+	flag_definition = {
+		coa = HUN_revolutionary_republic
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}

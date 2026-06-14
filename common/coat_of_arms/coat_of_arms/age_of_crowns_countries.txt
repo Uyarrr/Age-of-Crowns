@@ -88,10 +88,12 @@ NOV = { # Novgorod - Cross calvary from seal & banners
 GRH = { # Great Horde - Default
 	pattern = "pattern_solid.tga"
 	color1 = "white"
-
+	color2 = "red"
 	colored_emblem = {
-		texture = "ce_great_horde.dds"
-		color1 = red
+		texture = "ce_tamgha_crescent_golden_horde.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }
 	}
 }
 
@@ -139,19 +141,22 @@ NOG = { # Nogai - Default
 		texture = "ce_nogai.dds"
 		color1 = green_light
 		color2 = orange
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }	
 	}
 }
 
 TVR = { # Tver - Default
 	pattern = "pattern_solid.tga"
 	color1 = "red"
+	color2 = "yellow"
+	color3 = "green"
 
 	colored_emblem = {
-		texture = "ce_crown_tver.dds"
-		color1 = yellow
-		color2 = green
-		color3 = green_light
-		instance = { position = { 0.5 0.5 } scale = { 1.05 1.05 } }		
+		texture = "ce_throne_tver.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "green_light"
+		instance = { position = { 0.5 0.51 } scale = { 1.05 1.05 } }		
 	}
 }
 
@@ -1310,4 +1315,230 @@ BOU_three_fleurs = { # Bourbon modern
 		color1 = color3
 		color2 = color3
 	}
+}
+
+POL = { # Poland
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_eagle_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}		
+	colored_emblem = {
+		texture = "ce_eagle_bones_trefly.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}	
+}
+
+POL_per_fess = { # Modern Poland
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "red_mid"
+	
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}		
+}
+
+AUV = { # Auvergne
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_gonfanon_fringed_wide.dds"
+		color1 = color2
+		color2 = color3
+	}
+}
+
+AMG = { # Armagnac
+	pattern = "pattern_quarterly_inverse_flag.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = "red"
+		color2 = "red"
+		color3 = "white"
+		instance = { position = { 0.75 0.75 } scale = { 0.5 0.5 } }
+		instance = { position = { 0.25 0.25 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_guardant_wide.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		color3 = "red"
+		instance = { position = { 0.75 0.25 } scale = { 0.5 0.5 } }
+		instance = { position = { 0.25 0.75 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_divider_quarterly.dds"
+		color1 = "red_light"
+	}
+}
+
+NOR = { # Norway 14th c. (& modern) design with the regular axe
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_holding_axe_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+NOR_late = { # Norway - from mid 15th c. with the commoner's axe
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_holding_axe_crowned_wide_norway.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+NOR_cross = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_cross_scandinavian_fimbriated.dds"
+		color1 = color2
+		color2 = color3
+	}
+}
+NOR_cross_lion = { # Norway 19th c merchant
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.375 0.5 } scale = { 0.10 1.0 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0 0.15 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_holding_axe_crowned_wide_norway.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.175 0.215 } scale = { -0.475 0.475 } }
+	}
+}
+NOR_bjalbo = { # Norway-Sweden historical Quarterly
+	pattern = "pattern_quarterly_flag.dds"
+	color1 = "red"
+	color2 = "blue"
+	color3 = "white"
+
+    sub = {
+        parent = "NOR_late" # Q1 Norway
+		instance = { scale = { 0.49 0.49 } offset = { 0.0 0.0 } }
+		instance = { scale = { 0.49 0.49 } offset = { 0.51 0.51 } }
+    }
+    sub = {
+        parent = "SWE_bjalbo" # Q2 Bjalbo Sweden
+		instance = { scale = { 0.49 0.49 } offset = { 0.51 0.0 } }
+		instance = { scale = { 0.49 0.49 } offset = { 0.0 0.51 } }
+    }
+    sub = {
+        parent = "sub_quarterly_overall_cross_patty"
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+    }
+}
+
+NEV = { # Nevers - Original design from Nevers dynasty (only own arms for the county)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.30 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.50 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.70 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.90 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.00 0.20 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.20 0.20 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.80 0.20 } scale = { 0.04 0.125 } }
+		instance = { position = { 1.00 0.20 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.10 0.40 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.30 0.40 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.90 0.40 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.00 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.20 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.40 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.80 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 1.00 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.10 0.80 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.30 0.80 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.50 0.80 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.90 0.80 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.00 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.20 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.40 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.60 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.80 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 1.00 1.00 } scale = { 0.04 0.125 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}		
+}
+NEV_flanders = { # Nevers qtly Dampierre-Flanders
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_secondary"
+
+    sub = {
+        parent = "sub_NEV" # Q1-Q4 Nevers
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+    }
+    sub = {
+        parent = "FLA" # Q2-Q3 Flanders
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+    }
+    sub = {
+        parent = "sub_quartered_bold"
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+    }
 }

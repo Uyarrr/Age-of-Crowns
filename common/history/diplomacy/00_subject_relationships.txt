@@ -91,11 +91,11 @@
 	}
 	c:BGY ?= {
 		create_diplomatic_pact = {
-			country = c:U00
+			country = c:NEV
 			type = puppet
 		}
 	}
-	c:U00 ?= {
+	c:NEV ?= {
 		add_liberty_desire = -50
 	}
 	c:FRA ?= {
@@ -109,20 +109,20 @@
 	}
 	c:FRA ?= {
 		create_diplomatic_pact = {
-			country = c:X18
+			country = c:AMG
 			type = puppet
 		}
 	}
-	c:X18 ?= {
+	c:AMG ?= {
 		add_liberty_desire = -12.5
 	}
 	c:FRA ?= {
 		create_diplomatic_pact = {
-			country = c:X34
+			country = c:AUV
 			type = puppet
 		}
 	}
-	c:X34 ?= {
+	c:AUV ?= {
 		add_liberty_desire = -19.95
 	}
 	c:FRA ?= {

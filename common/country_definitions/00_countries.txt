@@ -253,17 +253,6 @@ FIN = {
 	capital = STATE_UUSIMAA
 }
 
-NOR = {
-	color = { 117  165  188 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	cultures= { norwegian }
-	capital = STATE_EASTERN_NORWAY
-}
-
 SWE = {
 	color = { 87  130  199 }
 
@@ -833,21 +822,6 @@ EST = {
 	capital = STATE_TALINN
 }
 
-HUN = {
-	color = { 152  85  92 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { hungarian }
-	capital = STATE_CENTRAL_HUNGARY
-
-	primary_unit_color = { 170 117 83 }
-	secondary_unit_color  = { 198 196 207 }
-	tertiary_unit_color = { 20 20 20 }
-}
-
 LIT = {
 	color = { 154  69  116 }
 
@@ -868,17 +842,6 @@ LAT = {
 
 	cultures = { latvian }
 	capital = STATE_RIGA
-}
-
-POL = {
-	color = { 197  92  106 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { polish }
-	capital = STATE_GREATER_POLAND
 }
 
 GAL = {

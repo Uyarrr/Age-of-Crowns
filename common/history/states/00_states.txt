@@ -565,7 +565,7 @@ s:STATE_AQUITAINE = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:X18
+			country = c:AMG
 			owned_provinces = { x5F7F2D xD957E6 }
 			state_type = incorporated
 		}
@@ -573,7 +573,7 @@ s:STATE_AQUITAINE = {
 		add_homeland = cu:occitan
 		add_claim = c:ENG
 		add_claim = c:FRA
-		add_claim = c:X18
+		add_claim = c:AMG
 	}
 s:STATE_ARAGON = {
 		create_state = {
@@ -830,12 +830,12 @@ s:STATE_AUVERGNE_LIMOUSIN = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:X18
+			country = c:AMG
 			owned_provinces = { x50A0C0 x61609A }
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:X34
+			country = c:AUV
 			owned_provinces = { x368F00 xA27EFD xABE045 xBED0F4 }
 			state_type = incorporated
 		}
@@ -1606,7 +1606,7 @@ s:STATE_BUNDELKHAND = {
 	}
 s:STATE_BURGUNDY = {
 		create_state = {
-			country = c:U00
+			country = c:NEV
 			owned_provinces = { x09BB96 x10DF00 x999D4B xC69235 }
 			state_type = incorporated
 		}
@@ -1986,7 +1986,7 @@ s:STATE_CHAMPAGNE = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:U00
+			country = c:NEV
 			owned_provinces = { x669027 xEFBF20 }
 			state_type = incorporated
 		}
@@ -3684,7 +3684,7 @@ s:STATE_GUYENNE = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:X18
+			country = c:AMG
 			owned_provinces = { x061121 x106080 x7BCDC4 xAF89BC }
 			state_type = incorporated
 		}
@@ -4988,7 +4988,7 @@ s:STATE_LANGUEDOC = {
 		}
 		add_homeland = cu:catalan
 		add_homeland = cu:occitan
-		add_claim = c:X18
+		add_claim = c:AMG
 	}
 s:STATE_LAOS = {
 		create_state = {
