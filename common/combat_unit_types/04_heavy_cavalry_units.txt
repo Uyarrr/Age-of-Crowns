@@ -4,20 +4,23 @@ combat_unit_type_heavy_cavalry_1 = {
     group = combat_unit_group_heavy_cavalry
     max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
     unlocking_technologies = { horsemen }
 
     upkeep_modifier = {
         goods_input_warhorse_add = 1
+		goods_input_weapons_add = 1
+		goods_input_bronze_add = 1
+		goods_input_leather_add = 1
     }
 
     battle_modifier = {
-        unit_offense_add = 12
-        unit_defense_add = 8
+        unit_offense_add = 25
+        unit_defense_add = 10
         unit_morale_loss_add = 15
-        unit_morale_damage_mult = 0.2
-        unit_occupation_mult = 0.3
+        unit_morale_damage_mult = 0.3
+		battle_casualties_mult = -0.03
     }
 
     combat_unit_image = {
@@ -80,21 +83,24 @@ combat_unit_type_heavy_cavalry_2 = {
     group = combat_unit_group_heavy_cavalry
     max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
     unlocking_technologies = { cavalrymen }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 1
+        goods_input_weapons_add = 2
         goods_input_warhorse_add = 1
+		goods_input_ironingot_add = 1 
+		goods_input_leather_add = 2
     }
 
     battle_modifier = {
-        unit_offense_add = 24
-        unit_defense_add = 16
-        unit_morale_loss_add = 10
-        unit_morale_damage_mult = 0.2
-        unit_occupation_mult = 0.3
+        unit_offense_add = 30
+        unit_defense_add = 15
+        unit_morale_loss_add = 5
+        unit_morale_damage_mult = 0.3
+		battle_casualties_mult = -0.05
+
     }
 
     combat_unit_image = {
@@ -161,16 +167,17 @@ combat_unit_type_heavy_cavalry_3 = {
     unlocking_technologies = { lancer }
 
     battle_modifier = {
-        unit_offense_add = 34
-        unit_defense_add = 26
-        unit_morale_damage_mult = 0.2
-        unit_occupation_mult = 0.3
+        unit_offense_add = 40
+        unit_defense_add = 25
+        unit_morale_damage_mult = 0.3
+		battle_casualties_mult = -0.10
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 2
-        goods_input_leather_add = 4
+        goods_input_weapons_add = 3
         goods_input_warhorse_add = 2
+		goods_input_ironingot_add = 2 
+		goods_input_leather_add = 3
     }
 
     combat_unit_image = {
@@ -236,15 +243,17 @@ combat_unit_type_heavy_cavalry_4 = {
     unlocking_technologies = { pistoleer }
 
     battle_modifier = {
-        unit_offense_add = 44
-        unit_defense_add = 36
-        unit_morale_damage_mult = 0.2
-        unit_occupation_mult = 0.3
+        unit_offense_add = 55
+        unit_defense_add = 30
+        unit_morale_damage_mult = 0.3
+		battle_casualties_mult = -0.15
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 3
-        goods_input_leather_add = 2
+        goods_input_weapons_add = 4
+        goods_input_warhorse_add = 3
+		goods_input_ironingot_add = 3 
+		goods_input_leather_add = 4
     }
 
     combat_unit_image = {
@@ -309,16 +318,19 @@ combat_unit_type_heavy_cavalry_5 = {
     unlocking_technologies = { hussar }
 
     battle_modifier = {
-        unit_offense_add = 55
-        unit_defense_add = 45
-        unit_morale_damage_mult = 0.2
-        unit_occupation_mult = 0.3
+        unit_offense_add = 50
+        unit_defense_add = 40
+        unit_morale_damage_mult = 0.3
+		battle_casualties_mult = -0.1
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 4
-        goods_input_leather_add = 3
-        goods_input_saltpeter_add = 3
+         goods_input_weapons_add = 2
+        goods_input_warhorse_add = 3
+		goods_input_ironingot_add = 2 
+		goods_input_leather_add = 6
+		goods_input_firearms_add = 2
+		goods_input_saltpeter_add = 1
     }
 
     combat_unit_image = {
@@ -382,16 +394,19 @@ combat_unit_type_heavy_cavalry_6 = {
     unlocking_technologies = { cuirassier }
 
     battle_modifier = {
-        unit_offense_add = 66
-        unit_defense_add = 54
-        unit_morale_damage_mult = 0.2
-        unit_occupation_mult = 0.3
+        unit_offense_add = 55
+        unit_defense_add = 55
+        unit_morale_damage_mult = 0.3
+        unit_occupation_mult = 0.5
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 5
-        goods_input_leather_add = 4
-        goods_input_saltpeter_add = 4
+        goods_input_weapons_add = 2
+        goods_input_warhorse_add = 3
+		goods_input_ironingot_add = 1 
+		goods_input_leather_add = 8
+		goods_input_firearms_add = 4
+		goods_input_saltpeter_add = 2
     }
 
     combat_unit_image = {

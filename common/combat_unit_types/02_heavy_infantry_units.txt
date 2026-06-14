@@ -11,17 +11,20 @@ combat_unit_type_heavy_infantry_1 = {
     group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { peasant_levy }
 
     battle_modifier = {
         unit_offense_add = 8
-        unit_defense_add = 12
-        unit_morale_loss_add = 15
+        unit_defense_add = 15
+        unit_morale_loss_add = 5
+		battle_casualties_mult = -0.05
     }
 
     upkeep_modifier = {
+		goods_input_leather_add = 1
+		goods_input_weapons_add = 1
     }
 
     combat_unit_image = {
@@ -84,17 +87,21 @@ combat_unit_type_heavy_infantry_2 = {
     group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { men_at_arms }
 
     battle_modifier = { 
         unit_offense_add = 15
         unit_defense_add = 25
+		battle_casualties_mult = -0.08
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 1
+        goods_input_weapons_add = 2
+		goods_input_ironingot_add = 1
+		goods_input_leather_add = 1
+		
     }
 
     combat_unit_image = {
@@ -156,18 +163,20 @@ combat_unit_type_heavy_infantry_3 = {
     group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { halberdier }
 
     battle_modifier = { 
         unit_offense_add = 25
         unit_defense_add = 35
+		battle_casualties_mult = -0.10
     }
 
     upkeep_modifier = {
         goods_input_weapons_add = 2
-        goods_input_leather_add = 1
+        goods_input_ironingot_add = 1
+		goods_input_leather_add = 2
     }
 
     combat_unit_image = {
@@ -228,17 +237,19 @@ combat_unit_type_heavy_infantry_4 = {
     group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { pikemen }
 
     battle_modifier = { 
-        unit_offense_add = 35
+        unit_offense_add = 30
         unit_defense_add = 45
+		battle_casualties_mult = -0.15
     }
 
     upkeep_modifier = {
         goods_input_weapons_add = 3
+		goods_input_ironingot_add = 2
         goods_input_leather_add = 2
     }
 
@@ -299,18 +310,18 @@ combat_unit_type_heavy_infantry_5 = {
     group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { musketeer }
 
     battle_modifier = { 
         unit_offense_add = 45
-        unit_defense_add = 55
+        unit_defense_add = 45
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 4
-        goods_input_leather_add = 3
+        goods_input_firearms_add = 5
+        goods_input_leather_add = 4
         goods_input_saltpeter_add = 3
     }
 
@@ -370,18 +381,18 @@ combat_unit_type_heavy_infantry_6 = {
     group = combat_unit_group_heavy_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { fusilier }
 
     battle_modifier = { 
         unit_offense_add = 55
-        unit_defense_add = 65
+        unit_defense_add = 55
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 5
-        goods_input_leather_add = 4
+        goods_input_firearms_add = 6
+        goods_input_leather_add = 5
         goods_input_saltpeter_add = 4
     }
 

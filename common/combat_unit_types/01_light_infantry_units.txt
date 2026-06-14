@@ -16,8 +16,8 @@ combat_unit_type_light_infantry_1 = {
 	unlocking_technologies = { peasant_levy }
 
     battle_modifier = {
-        unit_offense_add = 8
-        unit_defense_add = 12
+        unit_offense_add = 5
+        unit_defense_add = 10
         unit_morale_loss_add = 15
     }
 
@@ -90,7 +90,8 @@ combat_unit_type_light_infantry_2 = {
 
     battle_modifier = { 
         unit_offense_add = 15
-        unit_defense_add = 25
+        unit_defense_add = 15
+		unit_kill_rate_add = 0.10
     }
 
     upkeep_modifier = {
@@ -161,13 +162,15 @@ combat_unit_type_light_infantry_3 = {
 	unlocking_technologies = { halberdier }
 
     battle_modifier = { 
-        unit_offense_add = 25
-        unit_defense_add = 35
+        unit_offense_add = 30
+        unit_defense_add = 10
+		unit_kill_rate_add = 0.12
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 2
+        goods_input_firearms_add = 1
         goods_input_leather_add = 1
+		goods_input_saltpeter_add = 1
     }
 
     combat_unit_image = {
@@ -234,12 +237,14 @@ combat_unit_type_light_infantry_4 = {
 
     battle_modifier = { 
         unit_offense_add = 35
-        unit_defense_add = 45
+        unit_defense_add = 15
+		unit_kill_rate_add = 0.15
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 3
+        goods_input_firearms_add = 2
         goods_input_leather_add = 2
+		goods_input_saltpeter_add = 1
     }
 
     combat_unit_image = {
@@ -304,14 +309,15 @@ combat_unit_type_light_infantry_5 = {
 	unlocking_technologies = { musketeer }
 
     battle_modifier = { 
-        unit_offense_add = 45
-        unit_defense_add = 55
+        unit_offense_add = 40
+        unit_defense_add = 20
+		unit_kill_rate_add = 0.15
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 4
+        goods_input_firearms_add = 4
         goods_input_leather_add = 3
-        goods_input_saltpeter_add = 3
+        goods_input_saltpeter_add = 2
     }
 
     combat_unit_image = {
@@ -375,14 +381,15 @@ combat_unit_type_light_infantry_6 = {
 	unlocking_technologies = { fusilier }
 
     battle_modifier = { 
-        unit_offense_add = 55
-        unit_defense_add = 65
+        unit_offense_add = 50
+        unit_defense_add = 35
+		unit_kill_rate_add = 0.15
     }
 
     upkeep_modifier = {
-        goods_input_weapons_add = 5
-        goods_input_leather_add = 4
-        goods_input_saltpeter_add = 4
+        goods_input_firearms_add = 3
+        goods_input_leather_add = 3
+        goods_input_saltpeter_add = 3
     }
 
     combat_unit_image = {
