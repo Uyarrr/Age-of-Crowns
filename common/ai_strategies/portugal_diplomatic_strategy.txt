@@ -1,0 +1,451 @@
+ai_strategy_portuguese_maritime_empire = {
+	icon = "gfx/interface/icons/ai_strategy_icons/colonial_expansion.dds"
+
+	type = diplomatic
+
+	will_form_power_bloc = {
+		always = yes
+	}
+
+	undesirable_infamy_level = { value = 35 }
+	unacceptable_infamy_level = { value = 65 }
+	ideological_opinion_effect_mult = { value = 0.85 }
+	wargoal_maneuvers_fraction = { value = 0.20 }
+	diplomatic_play_neutrality = { value = 10 }
+	diplomatic_play_boldness = { value = 35 }
+	recklessness = { value = 0.50 }
+
+	aggression = {
+		value = 0.25
+
+		# Portugal initially follows the African coast rather than rushing Brazil.
+		if = {
+			limit = {
+				can_reach_target_country = yes
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							region = sr:region_west_africa
+							region = sr:region_north_africa
+						}
+					}
+				}
+			}
+			add = 1.0
+		}
+
+		if = {
+			limit = {
+				game_date >= 1500.1.1
+				can_reach_target_country = yes
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country = {
+					any_scope_state = {
+						region = sr:region_brazil
+					}
+				}
+			}
+			add = 2.5
+		}
+
+		if = {
+			limit = {
+				exists = c:BRZ
+				scope:target_country = { c:BRZ ?= this }
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+			}
+			add = 2.0
+		}
+
+		if = {
+			limit = {
+				game_date >= 1500.1.1
+				can_reach_target_country = yes
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							region = sr:region_southern_africa
+							region = sr:region_east_africa
+							region = sr:region_south_india
+							region = sr:region_indonesia
+						}
+					}
+				}
+			}
+			add = 0.75
+		}
+
+		if = {
+			limit = {
+				can_reach_target_country = yes
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country = {
+					NOT = {
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_iberia_old
+								is_in_geographic_region = geographic_region_africa
+								is_in_geographic_region = geographic_region_latin_america
+								is_in_geographic_region = geographic_region_india
+								is_in_geographic_region = geographic_region_south_east_asia
+							}
+						}
+					}
+				}
+			}
+			add = -0.75
+		}
+
+		if = {
+			limit = { scope:target_country = { is_subject_of = root } }
+			multiply = 0.10
+		}
+	}
+
+	building_group_weights = {
+		bg_navy = 2.0
+		bg_technology = 1.25
+		bg_army = 0.9
+	}
+
+	colonial_interest_ratio = {
+		value = 0.50
+
+		if = {
+			limit = { navy_size >= 25 }
+			add = 0.10
+		}
+
+		if = {
+			limit = { navy_size >= 50 }
+			add = 0.10
+		}
+	}
+
+	strategic_region_scores = {
+		if = {
+			limit = { scope:region = sr:region_west_africa }
+			add = 450
+
+			if = {
+				limit = { game_date < 1500.1.1 }
+				add = 250
+			}
+		}
+
+		if = {
+			limit = { scope:region = sr:region_north_africa }
+			add = 175
+		}
+
+		if = {
+			limit = { scope:region = sr:region_brazil }
+			add = 250
+
+			if = {
+				limit = { game_date >= 1500.1.1 }
+				add = 700
+			}
+
+			if = {
+				limit = {
+					scope:region = {
+						any_scope_state = {
+							OR = {
+								owner = root
+								owner = { is_subject_of = root }
+							}
+						}
+					}
+				}
+				add = 500
+			}
+		}
+
+		if = {
+			limit = { scope:region = sr:region_southern_africa }
+			add = 350
+		}
+
+		if = {
+			limit = { scope:region = sr:region_east_africa }
+			add = 300
+		}
+
+		if = {
+			limit = { scope:region = sr:region_arabia }
+			add = 175
+		}
+
+		if = {
+			limit = { scope:region = sr:region_south_india }
+			add = 300
+		}
+
+		if = {
+			limit = { scope:region = sr:region_indonesia }
+			add = 250
+		}
+
+		if = {
+			limit = {
+				scope:region = {
+					any_scope_state = {
+						OR = {
+							owner = root
+							owner = { is_subject_of = root }
+						}
+					}
+				}
+			}
+			add = 400
+		}
+	}
+
+	secret_goal_weights = {
+		dominate = 3.0
+		conquer = 0.75
+		protect = 1.0
+		befriend = 0.35
+		reconcile = 0.0
+	}
+
+	wargoal_weights = {
+		make_protectorate = 3.5
+		make_dominion = 2.5
+		take_treaty_port = 3.0
+		conquer_state = 0.75
+		return_state = 0.5
+		reduce_autonomy = 2.0
+		annex_country = 0.5
+		force_nationalization = 0.0
+	}
+
+	secret_goal_scores = {
+		dominate = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							region = sr:region_west_africa
+							region = sr:region_brazil
+							region = sr:region_southern_africa
+							region = sr:region_east_africa
+							region = sr:region_south_india
+							region = sr:region_indonesia
+						}
+					}
+				}
+			}
+			score = {
+				value = 175
+
+				if = {
+					limit = {
+						game_date >= 1500.1.1
+						scope:target_country = {
+							any_scope_state = { region = sr:region_brazil }
+						}
+					}
+					add = 300
+				}
+
+				if = {
+					limit = {
+						exists = c:BRZ
+						scope:target_country = { c:BRZ ?= this }
+					}
+					add = 350
+				}
+
+				if = {
+					limit = { scope:target_country.country_rank <= rank_value:minor_power }
+					add = 100
+				}
+			}
+		}
+
+		conquer = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							region = sr:region_brazil
+							region = sr:region_west_africa
+						}
+					}
+				}
+			}
+			score = { value = 75 }
+		}
+
+		protect = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+			}
+			score = {
+				value = 125
+
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = { region = sr:region_brazil }
+						}
+					}
+					add = 175
+				}
+			}
+		}
+	}
+
+	wargoal_scores = {
+		make_protectorate = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+				}
+				add = 250
+			}
+
+			if = {
+				limit = {
+					scope:target_country = {
+						any_scope_state = { region = sr:region_brazil }
+					}
+				}
+				add = 200
+			}
+		}
+
+		make_dominion = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+				}
+				add = 175
+			}
+		}
+
+		take_treaty_port = {
+			if = {
+				limit = {
+					scope:target_country = {
+						any_scope_state = {
+							OR = {
+								region = sr:region_west_africa
+								region = sr:region_east_africa
+								region = sr:region_south_india
+								region = sr:region_indonesia
+							}
+						}
+					}
+				}
+				add = 300
+			}
+		}
+
+		conquer_state = {
+			if = {
+				limit = {
+					game_date >= 1500.1.1
+					scope:target_state = { region = sr:region_brazil }
+				}
+				add = 225
+			}
+		}
+
+		reduce_autonomy = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						any_scope_state = { region = sr:region_brazil }
+					}
+				}
+				add = 250
+			}
+		}
+	}
+
+	state_value = {
+		value = 0
+
+		if = {
+			limit = { can_reach_target_state = yes }
+
+			if = {
+				limit = {
+					game_date >= 1500.1.1
+					scope:target_state = { region = sr:region_brazil }
+				}
+				add = 100
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							region = sr:region_west_africa
+							region = sr:region_southern_africa
+							region = sr:region_east_africa
+						}
+					}
+				}
+				add = 50
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							region = sr:region_south_india
+							region = sr:region_indonesia
+						}
+					}
+				}
+				add = 35
+			}
+		}
+
+		min = 0
+		max = 200
+	}
+
+	possible = {
+		is_subject = no
+		c:POR ?= this
+	}
+
+	weight = {
+		value = 400
+
+		if = {
+			limit = { game_date < 1500.1.1 }
+			add = 100
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_technology_researched = colonization
+					has_law_or_variant = law_type:law_colonial_resettlement
+					has_law_or_variant = law_type:law_colonial_exploitation
+				}
+			}
+			add = 100
+		}
+	}
+}

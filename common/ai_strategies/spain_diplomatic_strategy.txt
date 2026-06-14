@@ -1,0 +1,453 @@
+ai_strategy_spanish_new_world_empire = {
+	icon = "gfx/interface/icons/ai_strategy_icons/colonial_expansion.dds"
+
+	type = diplomatic
+
+	will_form_power_bloc = {
+		always = yes
+	}
+
+	undesirable_infamy_level = { value = 45 }
+	unacceptable_infamy_level = { value = 75 }
+	ideological_opinion_effect_mult = { value = 0.75 }
+	wargoal_maneuvers_fraction = { value = 0.25 }
+	diplomatic_play_neutrality = { value = 5 }
+	diplomatic_play_boldness = { value = 50 }
+	recklessness = { value = 0.75 }
+
+	aggression = {
+		value = 0.35
+
+		if = {
+			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_latin_america
+							is_in_geographic_region = geographic_region_colonial_new_spain
+						}
+					}
+				}
+			}
+			add = 2.25
+		}
+
+		if = {
+			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							region = sr:region_central_america
+							region = sr:region_gran_colombia
+							region = sr:region_andes
+						}
+					}
+				}
+			}
+			add = 1.0
+		}
+
+		if = {
+			limit = {
+				NOT = { is_country_type = unrecognized }
+				scope:target_country = { is_country_type = unrecognized }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						is_in_geographic_region = geographic_region_americas
+					}
+				}
+			}
+			add = 0.75
+		}
+
+		if = {
+			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					NOT = {
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_americas
+								is_in_geographic_region = geographic_region_iberia_old
+								is_in_geographic_region = geographic_region_north_africa
+							}
+						}
+					}
+				}
+			}
+			add = -0.75
+		}
+
+		if = {
+			limit = {
+				scope:target_country = { is_subject_of = root }
+			}
+			multiply = 0.10
+		}
+	}
+
+	building_group_weights = {
+		bg_navy = 2.0
+		bg_army = 1.25
+	}
+
+	colonial_interest_ratio = {
+		value = 0.55
+
+		if = {
+			limit = { navy_size >= 30 }
+			add = 0.10
+		}
+
+		if = {
+			limit = { navy_size >= 60 }
+			add = 0.10
+		}
+	}
+
+	strategic_region_scores = {
+		if = {
+			limit = {
+				scope:region = {
+					is_in_geographic_region = geographic_region_americas
+				}
+			}
+			add = 250
+		}
+
+		if = {
+			limit = { scope:region = sr:region_central_america }
+			add = 750
+		}
+
+		if = {
+			limit = { scope:region = sr:region_gran_colombia }
+			add = 600
+		}
+
+		if = {
+			limit = { scope:region = sr:region_andes }
+			add = 500
+		}
+
+		if = {
+			limit = { scope:region = sr:region_la_plata }
+			add = 350
+		}
+
+		if = {
+			limit = {
+				scope:region = {
+					OR = {
+						this = sr:region_pacific_coast
+						this = sr:region_great_plains
+					}
+				}
+			}
+			add = 250
+		}
+
+		if = {
+			limit = { scope:region = sr:region_brazil }
+			add = 150
+		}
+
+		if = {
+			limit = {
+				scope:region = {
+					any_scope_state = {
+						OR = {
+							owner = root
+							owner = { is_subject_of = root }
+						}
+					}
+					is_in_geographic_region = geographic_region_americas
+				}
+			}
+			add = 500
+		}
+	}
+
+	secret_goal_weights = {
+		dominate = 3.0
+		conquer = 1.75
+		protect = 0.75
+		befriend = 0.20
+		reconcile = 0.0
+	}
+
+	wargoal_weights = {
+		make_protectorate = 3.5
+		make_dominion = 2.5
+		conquer_state = 1.75
+		return_state = 1.0
+		reduce_autonomy = 2.5
+		annex_country = 1.5
+		take_treaty_port = 0.5
+		force_nationalization = 0.0
+	}
+
+	secret_goal_scores = {
+		dominate = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_latin_america
+							is_in_geographic_region = geographic_region_colonial_new_spain
+						}
+					}
+				}
+			}
+			score = {
+				value = 250
+
+				if = {
+					limit = {
+						scope:target_country.country_rank <= rank_value:minor_power
+					}
+					add = 150
+				}
+
+				if = {
+					limit = {
+						scope:target_country = { is_country_type = unrecognized }
+					}
+					add = 100
+				}
+			}
+		}
+
+		conquer = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_latin_america
+							is_in_geographic_region = geographic_region_colonial_new_spain
+						}
+					}
+				}
+			}
+			score = {
+				value = 125
+
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = {
+								region = sr:region_central_america
+							}
+						}
+					}
+					add = 150
+				}
+			}
+		}
+
+		protect = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+				scope:target_country = {
+					any_scope_state = {
+						is_in_geographic_region = geographic_region_americas
+					}
+				}
+			}
+			score = { value = 200 }
+		}
+
+		befriend = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+			}
+			score = { value = 50 }
+		}
+	}
+
+	wargoal_scores = {
+		make_protectorate = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					scope:target_country = {
+						any_scope_state = {
+							is_in_geographic_region = geographic_region_latin_america
+						}
+					}
+				}
+				add = 350
+			}
+		}
+
+		make_dominion = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					scope:target_country = {
+						any_scope_state = {
+							is_in_geographic_region = geographic_region_latin_america
+						}
+					}
+				}
+				add = 250
+			}
+		}
+
+		conquer_state = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = conquer
+					}
+				}
+				add = 175
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_latin_america
+							is_in_geographic_region = geographic_region_colonial_new_spain
+						}
+					}
+				}
+				add = 225
+			}
+
+			if = {
+				limit = {
+					scope:target_state = { region = sr:region_central_america }
+				}
+				add = 125
+			}
+		}
+
+		reduce_autonomy = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						any_scope_state = {
+							is_in_geographic_region = geographic_region_americas
+						}
+					}
+				}
+				add = 300
+			}
+		}
+
+		annex_country = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						any_scope_state = {
+							is_in_geographic_region = geographic_region_americas
+						}
+					}
+				}
+				add = 150
+			}
+		}
+	}
+
+	state_value = {
+		value = 0
+
+		if = {
+			limit = {
+				can_reach_target_state = yes
+				scope:target_state = {
+					OR = {
+						is_in_geographic_region = geographic_region_latin_america
+						is_in_geographic_region = geographic_region_colonial_new_spain
+					}
+				}
+			}
+			add = 75
+
+			if = {
+				limit = {
+					scope:target_state = { region = sr:region_central_america }
+				}
+				add = 50
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							region = sr:region_gran_colombia
+							region = sr:region_andes
+						}
+					}
+				}
+				add = 35
+			}
+		}
+
+		min = 0
+		max = 200
+	}
+
+	possible = {
+		is_subject = no
+		OR = {
+			c:CAS ?= this
+			c:SPA ?= this
+		}
+	}
+
+	weight = {
+		value = 250
+
+		if = {
+			limit = { c:CAS ?= this }
+			add = 100
+		}
+
+		if = {
+			limit = { c:SPA ?= this }
+			add = 150
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_technology_researched = colonization
+					has_law_or_variant = law_type:law_colonial_resettlement
+					has_law_or_variant = law_type:law_colonial_exploitation
+				}
+			}
+			add = 100
+		}
+
+		if = {
+			limit = {
+				any_scope_state = {
+					is_in_geographic_region = geographic_region_americas
+				}
+			}
+			add = 150
+		}
+	}
+}
