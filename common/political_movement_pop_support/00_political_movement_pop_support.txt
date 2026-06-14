@@ -247,40 +247,6 @@ movement_support_je_positivist_movement = {
 	}
 }
 
-movement_support_je_communal_divides = {
-	name = je_communal_divides
-
-	visible = {
-		owner ?= { has_journal_entry = je_communal_divides }
-	}
-}
-
-movement_support_je_sick_man_main = {
-	name = FAILED_TANZIMAT_REFORMS
-
-	visible = {
-		owner ?= { has_variable = failed_tanzimat }
-		culture ?= { has_discrimination_trait_group = heritage_group_european }
-	}
-}
-
-movement_support_je_matter_of_hungary = {
-	name = je_matter_of_hungary
-
-	visible = {
-		owner ?= { has_journal_entry = je_matter_of_hungary }
-		culture ?= cu:hungarian
-	}
-}
-
-movement_support_je_hungarian_revolution = {
-	name = je_hungarian_revolution
-
-	visible = {
-		owner ?= { has_journal_entry = je_hungarian_revolution }
-	}
-}
-
 ## COUNTRY FACTORS ##
 
 movement_support_number_of_claims = {

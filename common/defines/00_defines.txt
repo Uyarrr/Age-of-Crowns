@@ -677,7 +677,7 @@ NEconomy = {
 	MIN_FAKE_CONSTRUCTION_COST = 100					# Min construction cost for the matters of nationalization and privatization
 	COMPANY_COUNT_OF_REGIONAL_HQ_TYPES = 3				# Count of building types in state reserved for flavored companies
 
-	COMPANY_MINIMUM_LEVELS_PER_HQ = 5							# Minimum building levels per HQ required to establish or maintain a company
+	COMPANY_MINIMUM_LEVELS_PER_HQ = 3							# Minimum building levels per HQ required to establish or maintain a company
 	BASE_REGIONAL_HQS = 1								# Base level of regional HQs available to a company after granted investment charter
 	LEVELS_PER_REGIONAL_HQ = 50							# How many levels company needs to aquire to get a new regional HQ
 	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 60			# Cooldown in months after establishing a company before you can disband it
