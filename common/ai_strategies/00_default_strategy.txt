@@ -4251,16 +4251,16 @@ ai_strategy_default = {
 	# scope:military_formation = military formation
 	combat_unit_group_weights = {
 		combat_unit_group_light_infantry = {
-			value = 100
+			value = 80
 		}
 		combat_unit_group_heavy_infantry = {
-			value = 100
+			value = 50
 		}
 		combat_unit_group_artillery = {
-			value = 20
+			value = 50
 		}
 		combat_unit_group_light_cavalry = {
-			value = 20
+			value = 40
 		}
 		combat_unit_group_heavy_cavalry = {
 			value = 20
