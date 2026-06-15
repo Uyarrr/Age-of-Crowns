@@ -4325,6 +4325,18 @@ ai_strategy_default = {
 				has_technology_researched = cannonry
 			}
 		}
+		bronze = {
+			stance = wants_high_supply
+			trigger = {
+				has_technology_researched = bronze_working
+			}
+		}
+		ironingot = {
+			stance = wants_high_supply
+			trigger = {
+				has_technology_researched = iron_working
+			}
+		}
 		saltpeter = {
 			stance = wants_high_supply
 			trigger = {
