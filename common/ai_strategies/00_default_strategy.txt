@@ -196,28 +196,6 @@ ai_strategy_default = {
 			}
 		}
 
-		if = { # Britain will step in in favour of an Afghan country that it's supporting
-			limit = {
-				OR = {
-					c:GBR ?= this
-				}
-				has_variable = committed_to_afghanistan_assistance
-				scope:country = {
-					has_variable = AFG_appealed_to_GBR
-				}
-				scope:enemy_country = {
-					OR = {
-						country_has_primary_culture = cu:pashtun
-						country_has_primary_culture = cu:tajik
-					}
-				}
-			}
-			add = {
-				value = 50
-				desc = "support_for_afghan_claimant"
-			}
-		}
-
 		if = { # Subjects of an overlord that has committed to assisting a claimant will be more inclined to help.
 			limit = {
 				overlord ?= {
@@ -304,44 +282,6 @@ ai_strategy_default = {
 			}
 		}
 
-		if = { # Qing and other Central Asian Khanates will be more willing help a player Kenesary Khan
-			limit = {
-				scope:country = {
-					c:KAZ ?= this
-					is_player = yes
-				}
-				has_strategic_adjacency = scope:country
-				OR = {
-					c:CHI ?= this
-					capital.region = sr:region_central_asia
-				}
-				scope:enemy_country = {
-					country_has_primary_culture = cu:russian
-				}
-			}
-			add = {
-				value = 50
-				desc = "supporting_kenesary"
-			}
-		}
-
-		if = { # Recognition of Kenesary
-			limit = {
-				scope:country = {
-					c:KAZ ?= this
-				}
-				has_strategic_adjacency = scope:country
-				has_variable = kenesary_recognizer_var
-				scope:enemy_country = {
-					country_has_primary_culture = cu:russian
-				}
-			}
-			add = {
-				value = 100
-				desc = "recognised_kenesary"
-			}
-		}
-
 		### Chinese unification warlord coalitions
 		if = {
 			limit = {
@@ -413,23 +353,6 @@ ai_strategy_default = {
 			add = {
 				value = -200
 				desc = "focus_on_bosnia"
-			}
-		}
-
-		### The Balkan League countries supporting each other against the Ottomans
-		if = {
-			limit = {
-				has_journal_entry = je_the_balkan_league
-				scope:country = {
-					has_journal_entry = je_the_balkan_league
-				}
-				scope:enemy_country = {
-					c:TUR ?= this
-				}
-			}
-			add = {
-				value = 1000
-				desc = "support_for_balkan_league"
 			}
 		}
 
@@ -1531,56 +1454,6 @@ ai_strategy_default = {
 					has_technology_researched = malaria_prevention
 					scope:target_state = {
 						region = sr:region_southern_africa
-					}
-				}
-				add = 50
-			}
-
-			if = { # Spain wants to take Al Rif
-				limit = {
-					has_journal_entry = je_conquest_of_tetouan
-					scope:target_state ?= {
-						owner = {
-							is_country_type = unrecognized
-						}
-						state_region = s:STATE_AL_RIF
-					}
-				}
-				add = 50
-			}
-
-			if = { # Portugal wants Gaza
-				limit = {
-					country_has_primary_culture = cu:portuguese
-					has_technology_researched = malaria_prevention
-					OR = {
-						has_state_in_state_region = STATE_MOCAMBIQUE
-						has_state_in_state_region = STATE_ZAMBEZIA
-						has_state_in_state_region = STATE_LOURENCO_MARQUES
-					}
-					scope:target_state = {
-						OR = {
-							state_region = s:STATE_MOCAMBIQUE
-							state_region = s:STATE_ZAMBEZIA
-							state_region = s:STATE_LOURENCO_MARQUES
-						}
-					}
-				}
-				add = 50
-			}
-
-			if = {
-				limit = {
-					has_journal_entry = je_struggle_for_the_highveld
-					scope:target_state = {
-						is_in_geographic_region = geographic_region_south_africa
-						owner = {
-							NOT = {
-								any_primary_culture = {
-									is_primary_culture_of = ROOT
-								}
-							}
-						}
 					}
 				}
 				add = 50
@@ -3802,25 +3675,18 @@ ai_strategy_default = {
 		}
 
 		add = {
-			value = fixed_income
+			value = net_total_income
 
-			divide = 5000 # 1 construction output per this much income
+			divide = 3000 # 1 construction output per this much income
 
 			min = 0
 			max = 200 # Above a certain point more government income isn't going to lead to more AI government construction
 		}
 
-		add = {
-			value = total_population
-
-			divide = 2000000 # 1 construction output per this much population
-			max = 100
-		}
-
 		# Kickstart private investors If above this population value
 		if = {
 			limit = {
-				total_population >= 2000000
+				total_population >= 500000
 			}
 			add = 10
 		}
@@ -3838,46 +3704,6 @@ ai_strategy_default = {
 				}
 			}
 			add = 5
-		}
-
-		# If trying to industrialize
-		if = {
-			limit = {
-				OR = {
-					has_strategy = ai_strategy_resource_expansion
-					has_strategy = ai_strategy_industrial_expansion
-				}
-			}
-			multiply = 1.25
-		}
-
-		# If has Grunderzeit
-		if = {
-			limit = {
-				has_journal_entry = je_grunderzeit
-			}
-			multiply = 1.5
-		}
-
-		if = {
-			limit = {
-				OR = {
-					has_journal_entry = je_meiji_restoration
-					has_journal_entry = je_meiji_main
-				}
-			}
-			multiply = 1.5
-		}
-
-		if = {
-			limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
-			multiply = 0.1
-		}
-
-		# Multiply final value by diplomatic pact expenses ratio - countries paying a lot to pacts have lower spending ambitions
-		multiply = {
-			value = 1
-			subtract = diplomatic_pact_expense_ratio
 		}
 
 		min = 2
@@ -4144,7 +3970,7 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
-						has_technology_researched = civilizing_mission
+						has_technology_researched = new_world
 					}
 					multiply = {
 						desc = "AI_REGION_STANCE_CIVILIZING_MISSION_RESEARCHED"
@@ -4153,31 +3979,11 @@ ai_strategy_default = {
 				}
 				else_if = {
 					limit = {
-						has_technology_researched = quinine
+						has_technology_researched = colonization
 					}
 					multiply = {
 						desc = "AI_REGION_STANCE_QUININE_RESEARCHED"
 						value = 2.5
-					}
-				}
-
-				if = {
-					limit = {
-						has_journal_entry = je_scramble_for_africa
-						scope:target_region = {
-							OR = {
-								this = sr:region_nile_basin
-								this = sr:region_north_africa
-								this = sr:region_west_africa
-								this = sr:region_equatorial_africa
-								this = sr:region_southern_africa
-								this = sr:region_east_africa
-							}
-						}
-					}
-					multiply = {
-						desc = "je_scramble_for_africa"
-						value = 10
 					}
 				}
 			}
@@ -4444,60 +4250,20 @@ ai_strategy_default = {
 	# root = country
 	# scope:military_formation = military formation
 	combat_unit_group_weights = {
-		combat_unit_group_infantry = {
+		combat_unit_group_light_infantry = {
+			value = 100
+		}
+		combat_unit_group_heavy_infantry = {
 			value = 100
 		}
 		combat_unit_group_artillery = {
-			value = 0
-			if = {
-				limit = { has_technology_researched = artillery }
-				add = 15
-			}
-			if = {
-				limit = { has_technology_researched = napoleonic_warfare }
-				add = 5
-			}
-			if = {
-				limit = { has_technology_researched = breech_loading_artillery }
-				add = 10
-			}
-			if = {
-				limit = { has_technology_researched = wargaming }
-				add = 10
-			}
-
-			if = {
-				limit = { has_law_or_variant = law_type:law_peasant_levies }
-				multiply = 0.5
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_national_militia }
-				multiply = 0.75
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_professional_army }
-				multiply = 1.25
-			}
-		}
-		combat_unit_group_cavalry = {
 			value = 20
-			if = {
-				limit = { has_technology_researched = mobile_armor }
-				add = 10
-			}
-
-			if = {
-				limit = { has_law_or_variant = law_type:law_national_militia }
-				multiply = 0.5
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_professional_army }
-				multiply = 1.25
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_peasant_levies }
-				multiply = 1.5
-			}
+		}
+		combat_unit_group_light_cavalry = {
+			value = 20
+		}
+		combat_unit_group_heavy_cavalry = {
+			value = 20
 		}
 	}
 
@@ -4506,50 +4272,7 @@ ai_strategy_default = {
 	# scope:military_formation = military formation
 	# Using this value in other strategies will function additively
 	conscript_battalion_ratio = {
-		value = 0.5
-		if = {
-			limit = { has_law_or_variant = law_type:law_national_militia }
-			add = 2.5
-		}
-		else_if = {
-			limit = { has_law_or_variant = law_type:law_peasant_levies }
-			add = 0.5
-		}
-		else_if = {
-			limit = { has_law_or_variant = law_type:law_mass_conscription }
-			add = 0.5
-		}
-
-		if = {
-			limit = {
-				has_technology_researched = mandatory_service
-			}
-			multiply = 1.15
-		}
-		if = {
-			limit = {
-				has_technology_researched = army_reserves
-			}
-			multiply = 1.15
-		}
-		if = {
-			limit = {
-				has_technology_researched = logistics
-			}
-			multiply = 1.2
-		}
-		if = {
-			limit = {
-				has_technology_researched = enlistment_offices
-			}
-			multiply = 1.2
-		}
-		if = {
-			limit = {
-				has_technology_researched = war_propaganda
-			}
-			multiply = 1.25
-		}
+		value = 2
 	}
 
 	# What's the base AI desire to nationalize/privatize buildings
@@ -4577,9 +4300,9 @@ ai_strategy_default = {
 	# Which buildings should the AI subsidize
 	# Using a different value in a strategy will override this value
 	subsidies = {
-		building_railway = must_have
+		building_railway = should_have
 		building_road = should_have
-		building_port = must_have
+		building_port = should_have
 		building_colonial_outpost = must_have
 	}
 
@@ -4619,13 +4342,13 @@ ai_strategy_default = {
 			stance = wants_high_supply
 			trigger = {
 				has_technology_researched = paper_mills
-				total_population >= 1000000
+				total_population >= 500000
 			}
 		}
 		coal = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = railways
+				has_technology_researched = coal_mining
 			}
 		}
 		horse = {
@@ -4638,7 +4361,7 @@ ai_strategy_default = {
 			stance = wants_high_supply
 			trigger = {
 				has_building = building_textile_mill
-				total_population >= 1000000
+				total_population >= 500000
 			}
 		}
 		grain = {

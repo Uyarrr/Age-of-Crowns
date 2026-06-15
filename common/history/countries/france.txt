@@ -2,6 +2,13 @@
 	c:FRA ?= {
 		add_era_researched = era_1
 		add_technology_researched = bronze_tools
+		
+		add_company = company_type:company_france_wine
+		company:company_france_wine = {
+			set_company_establishment_date = 1444.11.11
+			set_company_state_region = s:STATE_ILE_DE_FRANCE
+		}
+		
 		add_modifier = {
 			name = strong_nation
 			years = 25

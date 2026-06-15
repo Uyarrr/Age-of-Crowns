@@ -1,37 +1,43 @@
 ﻿# prestige_goods types
 
-prestige_good_wood = {
-	base_good = wood
+prestige_good_bronze_1 = {
+	base_good = bronze
 	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/wood_prestige.dds"
-}
-
-prestige_good_clothes = {
-	base_good = clothes
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/clothes_prestige.dds"
-}
-
-prestige_good_cannons = {
-	base_good = cannons
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/cannons_prestige.dds"
-}
-
-prestige_good_fabric = {
-	base_good = fabric
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/fabric_prestige.dds"
-}
-
-prestige_good_furniture = {
-	base_good = furniture
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/fabric_prestige.dds"
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/bronze_prestige_1.dds"
 }
 
 prestige_good_rug = {
 	base_good = luxury_furniture
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
+}
+
+prestige_good_tin_1 = {
+	base_good = tin
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
+}
+
+prestige_good_wood_1 = {
+	base_good = wood
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
+}
+
+prestige_good_iron_1 = {
+	base_good = iron
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
+}
+
+prestige_good_wine_1 = {
+	base_good = wine
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
+}
+
+prestige_good_cloth_1 = {
+	base_good = clothes
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
 }

@@ -1,13 +1,4 @@
-﻿###
-### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
-### by the last defined unit type that it can build
-###
-
-### ARMY
-
-### Infantry
-
-combat_unit_type_light_infantry_1 = {
+﻿combat_unit_type_light_infantry_1 = {
     group = combat_unit_group_light_infantry
 	max_manpower = 1000
 
@@ -25,49 +16,6 @@ combat_unit_type_light_infantry_1 = {
     }
 
     combat_unit_image = {
-        trigger = {
-			has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = polynesian
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = east_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = south_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = african
-        }
-        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = arabic
-        }
-        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
-    }
-
-    combat_unit_image = {
-		# fallback
         texture = "gfx/unit_illustrations/light_infantry_1.dds"
     }
 
@@ -99,49 +47,6 @@ combat_unit_type_light_infantry_2 = {
     }
 
     combat_unit_image = {
-        trigger = {
-			has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = polynesian
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = east_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = south_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = african
-        }
-        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = arabic
-        }
-        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
-    }
-
-    combat_unit_image = {
-		# fallback
         texture = "gfx/unit_illustrations/light_infantry_2.dds"
     }
 
@@ -174,49 +79,6 @@ combat_unit_type_light_infantry_3 = {
     }
 
     combat_unit_image = {
-        trigger = {
-			has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = polynesian
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = east_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = south_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = african
-        }
-        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = arabic
-        }
-        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
-    }
-
-    combat_unit_image = {
-		# fallback
         texture = "gfx/unit_illustrations/light_infantry_3.dds"
     }
 
@@ -248,49 +110,6 @@ combat_unit_type_light_infantry_4 = {
     }
 
     combat_unit_image = {
-        trigger = {
-			has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = polynesian
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = east_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = south_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = african
-        }
-        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = arabic
-        }
-        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
-    }
-
-    combat_unit_image = {
-		# fallback
         texture = "gfx/unit_illustrations/light_infantry_4.dds"
     }
 
@@ -321,49 +140,6 @@ combat_unit_type_light_infantry_5 = {
     }
 
     combat_unit_image = {
-        trigger = {
-			has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = polynesian
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = east_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = south_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = african
-        }
-        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = arabic
-        }
-        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
-    }
-
-    combat_unit_image = {
-		# fallback
         texture = "gfx/unit_illustrations/light_infantry_5.dds"
     }
 
@@ -393,49 +169,6 @@ combat_unit_type_light_infantry_6 = {
     }
 
     combat_unit_image = {
-        trigger = {
-			has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = polynesian
-        }
-        texture = "gfx/unit_illustrations/infantry_decentralised_polynesian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = east_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = south_asian
-        }
-        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = african
-        }
-        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
-    }
-
-    combat_unit_image = {
-        trigger = {
-            has_culture_graphics = arabic
-        }
-        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
-    }
-
-    combat_unit_image = {
-		# fallback
         texture = "gfx/unit_illustrations/light_infantry_6.dds"
     }
 
