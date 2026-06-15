@@ -9,37 +9,11 @@ ai_strategy_maintain_power_balance = {
 	}
 
 	undesirable_infamy_level = {
-		value = 25
-
-		if = {
-			limit = {
-				has_technology_researched = pan-nationalism
-			}
-			multiply = 1.5
-		}
-		else_if = {
-			limit = {
-				has_technology_researched = nationalism
-			}
-			multiply = 1.25
-		}
+		value = 50
 	}
 
 	unacceptable_infamy_level = {
-		value = 50
-
-		if = {
-			limit = {
-				has_technology_researched = pan-nationalism
-			}
-			multiply = 1.5
-		}
-		else_if = {
-			limit = {
-				has_technology_researched = nationalism
-			}
-			multiply = 1.25
-		}
+		value = 75
 	}
 
 	ideological_opinion_effect_mult = {
@@ -144,25 +118,6 @@ ai_strategy_maintain_power_balance = {
 		if = {
 			limit = { country_rank < rank_value:major_power }
 			add = 10
-		}
-
-		if = { # Metternich System
-			limit = {
-				c:AUS ?= this
-				has_journal_entry = je_metternich
-			}
-			add = 50
-		}
-
-		if = {
-			limit = {
-				exists = c:FRA
-				c:FRA = this
-				ruler = {
-					has_variable = legitimist_leader # strict adherence to the Congress of Vienna
-				}
-			}
-			add = 20
 		}
 	}
 }
@@ -314,11 +269,6 @@ ai_strategy_territorial_expansion = {
 		if = {
 			limit = { ig:ig_armed_forces ?= { is_powerful = yes } }
 			multiply = 1.5
-		}
-
-		if = {
-			limit = { is_in_geographic_region = geographic_region_europe }
-			multiply = 0.25
 		}
 	}
 }
@@ -658,24 +608,6 @@ ai_strategy_colonial_expansion = {
 		value = 10
 
 		if = {
-			limit = {
-				exists = c:FRA
-				c:FRA = this
-				ruler = {
-					has_variable = house_bonaparte
-				}
-			}
-			add = 10
-		}
-
-		if = {
-			limit = {
-				has_journal_entry = je_scramble_for_africa
-			}
-			add = 20
-		}
-
-		if = {
 			limit = { country_rank = rank_value:major_power }
 			add = 5
 		}
@@ -706,7 +638,7 @@ ai_strategy_colonial_expansion = {
 		}
 
 		if = {
-			limit = { has_technology_researched = civilizing_mission }
+			limit = { has_technology_researched = colonization }
 			multiply = 1.5
 		}
 
@@ -715,18 +647,6 @@ ai_strategy_colonial_expansion = {
 				power_bloc ?= { has_principle_group = principle_group:principle_group_colonial_offices }
 			}
 			multiply = 1.5
-		}
-
-		if = {
-			limit = {
-				has_journal_entry = je_hispanoamerica
-			}
-			multiply = 0.5
-		}
-
-		if = {
-			limit = { has_radical_leftist_government = yes }
-			multiply = 0.01
 		}
 	}
 }
@@ -737,37 +657,11 @@ ai_strategy_armed_isolationism = {
 	type = diplomatic
 
 	undesirable_infamy_level = {
-		value = 25
-
-		if = {
-			limit = {
-				has_technology_researched = pan-nationalism
-			}
-			multiply = 1.5
-		}
-		else_if = {
-			limit = {
-				has_technology_researched = nationalism
-			}
-			multiply = 1.25
-		}
+		value = 50
 	}
 
 	unacceptable_infamy_level = {
-		value = 50
-
-		if = {
-			limit = {
-				has_technology_researched = pan-nationalism
-			}
-			multiply = 1.5
-		}
-		else_if = {
-			limit = {
-				has_technology_researched = nationalism
-			}
-			multiply = 1.25
-		}
+		value = 75
 	}
 
 	ideological_opinion_effect_mult = {
@@ -873,37 +767,11 @@ ai_strategy_economic_imperialism = {
 	}
 
 	undesirable_infamy_level = {
-		value = 25
-
-		if = {
-			limit = {
-				has_technology_researched = pan-nationalism
-			}
-			multiply = 1.5
-		}
-		else_if = {
-			limit = {
-				has_technology_researched = nationalism
-			}
-			multiply = 1.25
-		}
+		value = 50
 	}
 
 	unacceptable_infamy_level = {
-		value = 50
-
-		if = {
-			limit = {
-				has_technology_researched = pan-nationalism
-			}
-			multiply = 1.5
-		}
-		else_if = {
-			limit = {
-				has_technology_researched = nationalism
-			}
-			multiply = 1.25
-		}
+		value = 75
 	}
 
 	ideological_opinion_effect_mult = {
