@@ -7,10 +7,13 @@
 	unlocking_technologies = { peasant_levy }
 
     battle_modifier = {
-        unit_offense_add = 8
-        unit_defense_add = 15
+        unit_offense_add = 10
+        unit_defense_add = 14
         unit_morale_loss_add = 5
-		military_formation_mobilization_speed_mult = -0.1
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.1
         military_formation_movement_speed_mult = -0.1
     }
 
@@ -41,9 +44,12 @@ combat_unit_type_heavy_infantry_2 = {
 	unlocking_technologies = { men_at_arms }
 
     battle_modifier = { 
-        unit_offense_add = 15
-        unit_defense_add = 25
-		military_formation_mobilization_speed_mult = -0.1
+        unit_offense_add = 14
+        unit_defense_add = 20
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.1
         military_formation_movement_speed_mult = -0.1
     }
 
@@ -74,9 +80,12 @@ combat_unit_type_heavy_infantry_3 = {
 	unlocking_technologies = { halberdier }
 
     battle_modifier = { 
-        unit_offense_add = 25
-        unit_defense_add = 35
-		military_formation_mobilization_speed_mult = -0.1
+        unit_offense_add = 20
+        unit_defense_add = 34
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.1
         military_formation_movement_speed_mult = -0.1
     }
 
@@ -106,9 +115,12 @@ combat_unit_type_heavy_infantry_4 = {
 	unlocking_technologies = { pikemen }
 
     battle_modifier = { 
-        unit_offense_add = 30
-        unit_defense_add = 45
-		military_formation_mobilization_speed_mult = -0.1
+        unit_offense_add = 34
+        unit_defense_add = 47
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.1
         military_formation_movement_speed_mult = -0.1
     }
 
@@ -137,14 +149,17 @@ combat_unit_type_heavy_infantry_5 = {
 	unlocking_technologies = { musketeer }
 
     battle_modifier = { 
-        unit_offense_add = 45
-        unit_defense_add = 45
-		military_formation_mobilization_speed_mult = -0.1
+        unit_offense_add = 47
+        unit_defense_add = 61
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.1
         military_formation_movement_speed_mult = -0.1
     }
 
     upkeep_modifier = {
-        goods_input_firearms_add = 5
+        goods_input_firearms_add = 7
         goods_input_leather_add = 4
         goods_input_saltpeter_add = 3
     }
@@ -167,14 +182,17 @@ combat_unit_type_heavy_infantry_6 = {
 	unlocking_technologies = { fusilier }
 
     battle_modifier = { 
-        unit_offense_add = 55
-        unit_defense_add = 55
-		military_formation_mobilization_speed_mult = -0.1
+        unit_offense_add = 61
+        unit_defense_add = 74
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.1
         military_formation_movement_speed_mult = -0.1
     }
 
     upkeep_modifier = {
-        goods_input_firearms_add = 6
+        goods_input_firearms_add = 9
         goods_input_leather_add = 5
         goods_input_saltpeter_add = 4
     }
