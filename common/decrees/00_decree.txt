@@ -77,17 +77,6 @@ decree_road_maintenance = {
 			}
 			multiply = 0
 		}
-
-		# Place instances where content should ignore weights here
-		if = {
-			limit = {
-				scope:country = {
-					has_journal_entry = je_lands_of_anarchy
-				}
-				is_capital = yes
-			}
-			add = 1000
-		}
 	}
 }
 
@@ -137,40 +126,6 @@ decree_violent_suppression = {
 				}
 			}
 			multiply = 0.5
-		}
-	}
-}
-
-decree_emergency_relief = {
-	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
-
-	unlocking_technologies = {
-	}
-
-	modifier = {
-		state_tax_collection_mult = -0.75
-		state_infrastructure_mult = 0.1
-		state_market_access_price_impact = 0.05
-		state_food_security_add = 0.15
-		state_working_adult_ratio_add = 0.25
-	}
-
-	state_trigger = {
-		any_scope_pop = {
-			state_population <= 150000
-			}
-	}
-
-	cost = 200
-
-	ai_weight = {
-		value = 0
-
-		if = {
-			limit = {
-				state_population <= 150000
-			}
-			add = 100 
 		}
 	}
 }
