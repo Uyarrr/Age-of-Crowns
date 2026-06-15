@@ -186,7 +186,7 @@ mandatory_training = {
 	category = military
 
 	modifier = {
-		state_conscription_rate_mult = 0.2
+		state_conscription_rate_mult = 0.1
 	}
 
 	unlocking_technologies = {
@@ -948,6 +948,36 @@ advanced_tactics_training = {
 	category = military
 
 	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}
+
+firearms = {
+	# Unlocks Firearms Industry
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/firearms.dds"
+	category = military
+
+	unlocking_technologies = {
+		pike_and_shot
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}
+
+handgonner = {
+	# Unlocks Handgonner Infantry
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/light_infantry_3.dds"
+	category = military
+
+	unlocking_technologies = {
+		firearms
 	}
 
 	ai_weight = {

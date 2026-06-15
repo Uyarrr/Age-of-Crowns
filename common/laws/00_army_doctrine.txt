@@ -78,21 +78,37 @@ law_infantry_warfare = {
 	progressiveness = 50
 
 	modifier = {
-		# Infantry Offense
-		unit_combat_unit_type_infantry_1_offense_mult = 0.10
-		unit_combat_unit_type_infantry_2_offense_mult = 0.10
-		unit_combat_unit_type_infantry_3_offense_mult = 0.10
-		unit_combat_unit_type_infantry_4_offense_mult = 0.10
-		unit_combat_unit_type_infantry_5_offense_mult = 0.10
-		unit_combat_unit_type_infantry_6_offense_mult = 0.10
+		# Light Infantry Offense
+		unit_combat_unit_type_light_infantry_1_offense_mult = 0.10
+		unit_combat_unit_type_light_infantry_2_offense_mult = 0.10
+		unit_combat_unit_type_light_infantry_3_offense_mult = 0.10
+		unit_combat_unit_type_light_infantry_4_offense_mult = 0.10
+		unit_combat_unit_type_light_infantry_5_offense_mult = 0.10
+		unit_combat_unit_type_light_infantry_6_offense_mult = 0.10
 
-		# Infantry Defense
-		unit_combat_unit_type_infantry_1_defense_mult = 0.10
-		unit_combat_unit_type_infantry_2_defense_mult = 0.10
-		unit_combat_unit_type_infantry_3_defense_mult = 0.10
-		unit_combat_unit_type_infantry_4_defense_mult = 0.10
-		unit_combat_unit_type_infantry_5_defense_mult = 0.10
-		unit_combat_unit_type_infantry_6_defense_mult = 0.10
+		# Light Infantry Defense
+		unit_combat_unit_type_light_infantry_1_defense_mult = 0.10
+		unit_combat_unit_type_light_infantry_2_defense_mult = 0.10
+		unit_combat_unit_type_light_infantry_3_defense_mult = 0.10
+		unit_combat_unit_type_light_infantry_4_defense_mult = 0.10
+		unit_combat_unit_type_light_infantry_5_defense_mult = 0.10
+		unit_combat_unit_type_light_infantry_6_defense_mult = 0.10
+
+		# Heavy Infantry Offense
+		unit_combat_unit_type_heavy_infantry_1_offense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_2_offense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_3_offense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_4_offense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_5_offense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_6_offense_mult = 0.10
+
+		# Heavy Infantry Defense
+		unit_combat_unit_type_heavy_infantry_1_defense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_2_defense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_3_defense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_4_defense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_5_defense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_6_defense_mult = 0.10
 
 		unit_recovery_rate_add = 0.05
 
@@ -111,21 +127,37 @@ law_cavalry_warfare = {
 	progressiveness = 50
 
 	modifier = {
-	# Cavalry Offense
-	unit_combat_unit_type_cavalry_1_offense_mult = 0.10
-	unit_combat_unit_type_cavalry_2_offense_mult = 0.10
-	unit_combat_unit_type_cavalry_3_offense_mult = 0.10
-	unit_combat_unit_type_cavalry_4_offense_mult = 0.10
-	unit_combat_unit_type_cavalry_5_offense_mult = 0.10
-	unit_combat_unit_type_cavalry_6_offense_mult = 0.10
+		# Light Cavalry Offense
+		unit_combat_unit_type_light_cavalry_1_offense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_2_offense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_3_offense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_4_offense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_5_offense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_6_offense_mult = 0.10
 
-	# Cavalry Defense
-	unit_combat_unit_type_cavalry_1_defense_mult = 0.10
-	unit_combat_unit_type_cavalry_2_defense_mult = 0.10
-	unit_combat_unit_type_cavalry_3_defense_mult = 0.10
-	unit_combat_unit_type_cavalry_4_defense_mult = 0.10
-	unit_combat_unit_type_cavalry_5_defense_mult = 0.10
-	unit_combat_unit_type_cavalry_6_defense_mult = 0.10
+		# Light Cavalry Defense
+		unit_combat_unit_type_light_cavalry_1_defense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_2_defense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_3_defense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_4_defense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_5_defense_mult = 0.10
+		unit_combat_unit_type_light_cavalry_6_defense_mult = 0.10
+
+		# Heavy Cavalry Offense
+		unit_combat_unit_type_heavy_cavalry_1_offense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_2_offense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_3_offense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_4_offense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_5_offense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_6_offense_mult = 0.10
+
+		# Heavy Cavalry Defense
+		unit_combat_unit_type_heavy_cavalry_1_defense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_2_defense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_3_defense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_4_defense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_5_defense_mult = 0.10
+		unit_combat_unit_type_heavy_cavalry_6_defense_mult = 0.10
 
 		unit_occupation_mult = 0.15
 

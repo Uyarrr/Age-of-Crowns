@@ -4318,7 +4318,7 @@ ai_strategy_default = {
 		paper = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = paper_mills
+				has_technology_researched = papermill
 				total_population >= 500000
 			}
 		}
@@ -4476,13 +4476,6 @@ ai_strategy_default = {
 					}
 				}
 				add = 50
-
-				if = {
-					limit = {
-						has_journal_entry = je_german_unification
-					}
-					add = 1000
-				}
 			}
 			else_if = {
 				limit = {
@@ -4543,20 +4536,6 @@ ai_strategy_default = {
 				c:RUS ?= this
 				country_rank >= rank_value:great_power
 				scope:region = sr:region_balkans
-			}
-			add = 500
-		}
-
-		# GBR and RUS care about Afghanistan believe it or not
-		if = {
-			limit = {
-				has_journal_entry = je_great_game_control
-				OR = {
-					c:GBR ?= this
-					exists = c:CIR
-					country_rank = rank_value:great_power
-					navy_size >= 50
-				}
 			}
 			add = 500
 		}

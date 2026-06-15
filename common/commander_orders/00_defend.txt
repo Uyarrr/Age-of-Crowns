@@ -82,25 +82,73 @@ defend_desperate_charge = {
             OR = {
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_hussars
+                        target = unit_type:combat_unit_type_light_cavalry_1
                         value >= 0.5
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_dragoons
+                        target = unit_type:combat_unit_type_light_cavalry_2
                         value >= 0.5
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_cuirassiers
+                        target = unit_type:combat_unit_type_light_cavalry_3
                         value >= 0.5
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_lancers
+                        target = unit_type:combat_unit_type_light_cavalry_4
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_light_cavalry_5
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_light_cavalry_6
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_1
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_2
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_3
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_4
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_5
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_6
                         value >= 0.5
                     }
                 }
@@ -184,19 +232,37 @@ defend_guerilla_warfare = {
             OR = {
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_irregular_infantry
+                        target = unit_type:combat_unit_type_light_infantry_1
                         value >= 0.8
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_skirmish_infantry
+                        target = unit_type:combat_unit_type_light_infantry_2
                         value >= 0.8
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_squad_infantry
+                        target = unit_type:combat_unit_type_light_infantry_3
+                        value >= 0.8
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_light_infantry_4
+                        value >= 0.8
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_light_infantry_5
+                        value >= 0.8
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_light_infantry_6
                         value >= 0.8
                     }
                 }
@@ -222,4 +288,3 @@ defend_guerilla_warfare = {
 		value = 2
 	}
 }
-

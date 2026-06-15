@@ -1,81 +1,81 @@
 ﻿# =========================
-# INFANTRY
+# LIGHT INFANTRY
 # =========================
 
-unit_combat_unit_type_infantry_1_offense_mult={
+unit_combat_unit_type_light_infantry_1_offense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_infantry_1_defense_mult={
+unit_combat_unit_type_light_infantry_1_defense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_infantry_2_offense_mult={
+unit_combat_unit_type_light_infantry_2_offense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_infantry_2_defense_mult={
+unit_combat_unit_type_light_infantry_2_defense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_infantry_3_offense_mult={
+unit_combat_unit_type_light_infantry_3_offense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
-unit_combat_unit_type_infantry_3_defense_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={ ai_value=0 }
-}
-
-unit_combat_unit_type_infantry_4_offense_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={ ai_value=0 }
-}
-unit_combat_unit_type_infantry_4_defense_mult={
+unit_combat_unit_type_light_infantry_3_defense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_infantry_5_offense_mult={
+unit_combat_unit_type_light_infantry_4_offense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
-unit_combat_unit_type_infantry_5_defense_mult={
+unit_combat_unit_type_light_infantry_4_defense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_infantry_6_offense_mult={
+unit_combat_unit_type_light_infantry_5_offense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
-unit_combat_unit_type_infantry_6_defense_mult={
+unit_combat_unit_type_light_infantry_5_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_light_infantry_6_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+unit_combat_unit_type_light_infantry_6_defense_mult={
 	decimals=0
 	color=good
 	percent=yes
@@ -84,81 +84,259 @@ unit_combat_unit_type_infantry_6_defense_mult={
 
 
 # =========================
-# CAVALRY
+# HEAVY INFANTRY
 # =========================
 
-unit_combat_unit_type_cavalry_1_offense_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={ ai_value=0 }
-}
-unit_combat_unit_type_cavalry_1_defense_mult={
+unit_combat_unit_type_heavy_infantry_1_offense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_cavalry_2_offense_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={ ai_value=0 }
-}
-unit_combat_unit_type_cavalry_2_defense_mult={
+unit_combat_unit_type_heavy_infantry_1_defense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_cavalry_3_offense_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={ ai_value=0 }
-}
-unit_combat_unit_type_cavalry_3_defense_mult={
+unit_combat_unit_type_heavy_infantry_2_offense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_cavalry_4_offense_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={ ai_value=0 }
-}
-unit_combat_unit_type_cavalry_4_defense_mult={
+unit_combat_unit_type_heavy_infantry_2_defense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_cavalry_5_offense_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={ ai_value=0 }
-}
-unit_combat_unit_type_cavalry_5_defense_mult={
+unit_combat_unit_type_heavy_infantry_3_offense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
 
-unit_combat_unit_type_cavalry_6_offense_mult={
+unit_combat_unit_type_heavy_infantry_3_defense_mult={
 	decimals=0
 	color=good
 	percent=yes
 	game_data={ ai_value=0 }
 }
-unit_combat_unit_type_cavalry_6_defense_mult={
+
+unit_combat_unit_type_heavy_infantry_4_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_infantry_4_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_infantry_5_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_infantry_5_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_infantry_6_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_infantry_6_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+
+# =========================
+# LIGHT CAVALRY
+# =========================
+
+unit_combat_unit_type_light_cavalry_1_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+unit_combat_unit_type_light_cavalry_1_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_light_cavalry_2_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+unit_combat_unit_type_light_cavalry_2_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_light_cavalry_3_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+unit_combat_unit_type_light_cavalry_3_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_light_cavalry_4_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+unit_combat_unit_type_light_cavalry_4_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_light_cavalry_5_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+unit_combat_unit_type_light_cavalry_5_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_light_cavalry_6_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+unit_combat_unit_type_light_cavalry_6_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+
+# =========================
+# HEAVY CAVALRY
+# =========================
+
+unit_combat_unit_type_heavy_cavalry_1_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_1_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_2_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_2_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_3_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_3_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_4_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_4_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_5_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_5_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_6_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_heavy_cavalry_6_defense_mult={
 	decimals=0
 	color=good
 	percent=yes

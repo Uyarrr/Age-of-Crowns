@@ -365,6 +365,10 @@ ROM = {
 			c:KUK ?= this
 		}
 	}
+
+	possible = {
+		has_technology_researched = nation_formation
+	}
 }
 
 ARA = {

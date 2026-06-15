@@ -176,16 +176,16 @@ advance_heavy_barrage = {
                     }
                 }
                 commander_military_formation ?= {
-                   formation_army_unit_type_fraction = {
-                      target = unit_type:combat_unit_type_artillery_5
-                      value >= 0.2
-                   }
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_artillery_5
+                        value >= 0.2
+                    }
                 }
                 commander_military_formation ?= {
-                   formation_army_unit_type_fraction = {
-                      target = unit_type:combat_unit_type_artillery_6
-                      value >= 0.2
-                   }
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_artillery_6
+                        value >= 0.2
+                    }
                 }
             }
         }
@@ -227,39 +227,75 @@ advance_cavalry_assualt = {
             OR = {
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_cavalry_1
+                        target = unit_type:combat_unit_type_light_cavalry_1
                         value >= 0.3
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_cavalry_2
+                        target = unit_type:combat_unit_type_light_cavalry_2
                         value >= 0.3
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_cavalry_3
+                        target = unit_type:combat_unit_type_light_cavalry_3
                         value >= 0.3
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_cavalry_4
+                        target = unit_type:combat_unit_type_light_cavalry_4
                         value >= 0.3
                     }
                 }
                 commander_military_formation ?= {
-                   formation_army_unit_type_fraction = {
-                      target = unit_type:combat_unit_type_cavalry_5
-                      value >= 0.3
-                   }
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_light_cavalry_5
+                        value >= 0.3
+                    }
                 }
                 commander_military_formation ?= {
-                   formation_army_unit_type_fraction = {
-                      target = unit_type:combat_unit_type_cavalry_6
-                      value >= 0.3
-                   }
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_light_cavalry_6
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_1
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_2
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_3
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_4
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_5
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_6
+                        value >= 0.3
+                    }
                 }
             }
         }
@@ -282,3 +318,76 @@ advance_cavalry_assualt = {
 	}
 }
 
+advance_tank_assualt = {
+    texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+
+    military_type = army
+    behavior = advance
+
+	visible = {
+		has_role_of_type = general
+	}
+
+    possible = {
+		has_role_of_type = general
+        has_trait = innovative
+        trigger_if = {
+            limit = {
+                has_role_of_type = general
+            }
+            OR = {
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_1
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_2
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_3
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_4
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_5
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_cavalry_6
+                        value >= 0.3
+                    }
+                }
+            }
+        }
+    }
+
+    modifier = {
+        character_advancement_speed_add = 2
+        unit_occupation_mult = -0.1
+        unit_morale_loss_mult = -0.05
+        unit_offense_mult = 0.15
+    }
+
+    entity_animation = "advance"
+    clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+    experience = 0.1 # This much extra experience per week while executing Order
+
+	ai_weight = {
+		value = 2
+	}
+}
