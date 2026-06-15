@@ -1,4 +1,4 @@
-﻿ai_strategy_england_unite_britain = {
+ai_strategy_england_unite_britain = {
 	icon = "gfx/interface/icons/ai_strategy_icons/unification.dds"
 
 	type = diplomatic
@@ -7,161 +7,214 @@
 		always = yes
 	}
 
-	undesirable_infamy_level = {
-		value = 40
-	}
-
-	unacceptable_infamy_level = {
-		value = 75
-	}
-
-	ideological_opinion_effect_mult = {
-		value = 0.75
-	}
-
-	wargoal_maneuvers_fraction = {
-		value = 0.20
-	}
-
-	diplomatic_play_neutrality = {
-		value = 10
-	}
-
-	diplomatic_play_boldness = {
-		value = 40
-	}
-
-	recklessness = {
-		value = 1
-	}
+	undesirable_infamy_level = { value = 65 }
+	unacceptable_infamy_level = { value = 95 }
+	ideological_opinion_effect_mult = { value = 0.60 }
+	wargoal_maneuvers_fraction = { value = 0.45 }
+	diplomatic_play_neutrality = { value = 0 }
+	diplomatic_play_boldness = { value = 70 }
+	recklessness = { value = 1.15 }
 
 	aggression = {
-		value = 1.35
+		value = 0.25
 
 		if = {
 			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
 				scope:target_country = {
 					OR = {
-						c:SCO ?= this
-						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_western_europe
-							}
-						}
+						has_state_in_state_region = STATE_HOME_COUNTIES
+						has_state_in_state_region = STATE_MIDLANDS
+						has_state_in_state_region = STATE_EAST_ANGLIA
+						has_state_in_state_region = STATE_WEST_COUNTRY
+						has_state_in_state_region = STATE_YORKSHIRE
+						has_state_in_state_region = STATE_LANCASHIRE
+						has_state_in_state_region = STATE_WALES
+						has_state_in_state_region = STATE_LOWLANDS
+						has_state_in_state_region = STATE_HIGHLANDS
+						has_state_in_state_region = STATE_ULSTER
+						has_state_in_state_region = STATE_LEINSTER
+						has_state_in_state_region = STATE_CONNAUGHT
+						has_state_in_state_region = STATE_MUNSTER
 					}
 				}
 			}
-			add = 1.75
+			add = 5.0
 		}
 
 		if = {
 			limit = {
-				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
+				OR = {
+					NOT = { owns_entire_state_region = STATE_HOME_COUNTIES }
+					NOT = { owns_entire_state_region = STATE_MIDLANDS }
+					NOT = { owns_entire_state_region = STATE_EAST_ANGLIA }
+					NOT = { owns_entire_state_region = STATE_WEST_COUNTRY }
+					NOT = { owns_entire_state_region = STATE_YORKSHIRE }
+					NOT = { owns_entire_state_region = STATE_LANCASHIRE }
+					NOT = { owns_entire_state_region = STATE_WALES }
+					NOT = { owns_entire_state_region = STATE_LOWLANDS }
+					NOT = { owns_entire_state_region = STATE_HIGHLANDS }
+					NOT = { owns_entire_state_region = STATE_ULSTER }
+					NOT = { owns_entire_state_region = STATE_LEINSTER }
+					NOT = { owns_entire_state_region = STATE_CONNAUGHT }
+					NOT = { owns_entire_state_region = STATE_MUNSTER }
+				}
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country = {
+					NOR = {
+						has_state_in_state_region = STATE_HOME_COUNTIES
+						has_state_in_state_region = STATE_MIDLANDS
+						has_state_in_state_region = STATE_EAST_ANGLIA
+						has_state_in_state_region = STATE_WEST_COUNTRY
+						has_state_in_state_region = STATE_YORKSHIRE
+						has_state_in_state_region = STATE_LANCASHIRE
+						has_state_in_state_region = STATE_WALES
+						has_state_in_state_region = STATE_LOWLANDS
+						has_state_in_state_region = STATE_HIGHLANDS
+						has_state_in_state_region = STATE_ULSTER
+						has_state_in_state_region = STATE_LEINSTER
+						has_state_in_state_region = STATE_CONNAUGHT
+						has_state_in_state_region = STATE_MUNSTER
+					}
+				}
 			}
-			add = 0.9
+			add = -1.5
 		}
 
 		if = {
-			limit = {
-				scope:target_country = { is_subject_of = root }
-			}
+			limit = { scope:target_country = { is_subject_of = root } }
 			multiply = 0.10
 		}
 	}
 
 	building_group_weights = {
+		bg_navy = 3.0
 		bg_army = 1.5
-		bg_navy = 1.5
+		bg_technology = 1.25
+	}
+
+	# England should maintain a fleet far above the normal requirement.
+	wanted_navy_size = {
+		value = 75
+
+		if = {
+			limit = { country_rank >= rank_value:major_power }
+			add = 25
+		}
+
+		if = {
+			limit = { country_rank >= rank_value:great_power }
+			add = 50
+		}
+	}
+
+	wanted_num_supply_ships = {
+		value = 25
+	}
+
+	ship_construction_output_multiplier = {
+		value = 15
+	}
+
+	# Added to the default 30/30/20/20 distribution.
+	ship_group_weights = {
+		ship_group_capital_ships = { value = 120 }
+		ship_group_cruisers = { value = 20 }
+		ship_group_transports = { value = 90 }
+		ship_group_lights = { value = 10 }
+	}
+
+	max_ship_design_complexity = {
+		value = 5
+	}
+
+	target_marine_formation_size = {
+		value = 15
 	}
 
 	secret_goal_weights = {
-		dominate = 2.75
-		conquer = 0.6
-		protect = 0.35
-		befriend = 0.2
+		conquer = 4.0
+		dominate = 2.0
+		protect = 0.5
+		befriend = 0.0
 		reconcile = 0.0
 	}
 
 	wargoal_weights = {
-		make_protectorate = 3.0
-		make_dominion = 1.75
-		reduce_autonomy = 2.5
-		annex_country = 2.75
-		conquer_state = 0.5
-		return_state = 0.75
+		conquer_state = 5.0
+		return_state = 2.5
+		make_protectorate = 2.5
+		make_dominion = 0.5
+		reduce_autonomy = 4.0
+		annex_country = 5.0
 		force_nationalization = 0.0
 	}
 
 	secret_goal_scores = {
-		dominate = {
+		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
 				scope:target_country = {
 					OR = {
-						c:SCO ?= this
-						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_western_europe
-							}
-						}
+						has_state_in_state_region = STATE_HOME_COUNTIES
+						has_state_in_state_region = STATE_MIDLANDS
+						has_state_in_state_region = STATE_EAST_ANGLIA
+						has_state_in_state_region = STATE_WEST_COUNTRY
+						has_state_in_state_region = STATE_YORKSHIRE
+						has_state_in_state_region = STATE_LANCASHIRE
+						has_state_in_state_region = STATE_WALES
+						has_state_in_state_region = STATE_LOWLANDS
+						has_state_in_state_region = STATE_HIGHLANDS
+						has_state_in_state_region = STATE_ULSTER
+						has_state_in_state_region = STATE_LEINSTER
+						has_state_in_state_region = STATE_CONNAUGHT
+						has_state_in_state_region = STATE_MUNSTER
 					}
 				}
 			}
-
 			score = {
-				value = 500
+				value = 750
 
 				if = {
-					limit = {
-						scope:target_country = { c:SCO ?= this }
-					}
+					limit = { scope:target_country = { c:SCO ?= this } }
 					add = 250
 				}
 
 				if = {
 					limit = {
 						scope:target_country = {
-							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_western_europe
-								}
+							OR = {
+								has_state_in_state_region = STATE_ULSTER
+								has_state_in_state_region = STATE_LEINSTER
+								has_state_in_state_region = STATE_CONNAUGHT
+								has_state_in_state_region = STATE_MUNSTER
 							}
 						}
 					}
-					add = 150
-				}
-
-				if = {
-					limit = {
-						has_strategic_adjacency = scope:target_country
-					}
-					add = 75
+					add = 200
 				}
 			}
 		}
 
-		conquer = {
+		dominate = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= rank_value:minor_power
 				scope:target_country = {
 					OR = {
-						c:SCO ?= this
-						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_western_europe
-							}
-						}
+						has_state_in_state_region = STATE_LOWLANDS
+						has_state_in_state_region = STATE_HIGHLANDS
+						has_state_in_state_region = STATE_ULSTER
+						has_state_in_state_region = STATE_LEINSTER
+						has_state_in_state_region = STATE_CONNAUGHT
+						has_state_in_state_region = STATE_MUNSTER
 					}
 				}
 			}
-
-			score = {
-				value = 90
-			}
+			score = { value = 250 }
 		}
 
 		protect = {
@@ -169,134 +222,20 @@
 				scope:target_country = { is_subject_of = root }
 				scope:target_country = {
 					OR = {
-						c:SCO ?= this
-						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_western_europe
-							}
-						}
+						has_state_in_state_region = STATE_LOWLANDS
+						has_state_in_state_region = STATE_HIGHLANDS
+						has_state_in_state_region = STATE_ULSTER
+						has_state_in_state_region = STATE_LEINSTER
+						has_state_in_state_region = STATE_CONNAUGHT
+						has_state_in_state_region = STATE_MUNSTER
 					}
 				}
 			}
-
-			score = {
-				value = 125
-			}
-		}
-
-		befriend = {
-			trigger = {
-				scope:target_country = { is_subject_of = root }
-				scope:target_country = {
-					OR = {
-						c:SCO ?= this
-						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_western_europe
-							}
-						}
-					}
-				}
-			}
-
-			score = {
-				value = 75
-
-				if = {
-					limit = {
-						scope:target_country = { relations:root < relations_threshold:amicable }
-					}
-					add = 75
-				}
-			}
+			score = { value = 150 }
 		}
 	}
 
 	wargoal_scores = {
-		make_protectorate = {
-			if = {
-				limit = {
-					has_secret_goal = {
-						who = scope:target_country
-						secret_goal = dominate
-					}
-					scope:target_country = {
-						OR = {
-							c:SCO ?= this
-							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_western_europe
-								}
-							}
-						}
-					}
-				}
-				add = 300
-			}
-		}
-
-		make_dominion = {
-			if = {
-				limit = {
-					has_secret_goal = {
-						who = scope:target_country
-						secret_goal = dominate
-					}
-					scope:target_country = {
-						OR = {
-							c:SCO ?= this
-							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_western_europe
-								}
-							}
-						}
-					}
-				}
-				add = 180
-			}
-		}
-
-		reduce_autonomy = {
-			if = {
-				limit = {
-					scope:target_country = { is_subject_of = root }
-					scope:target_country = { relations:root >= relations_threshold:amicable }
-					scope:target_country = {
-						OR = {
-							c:SCO ?= this
-							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_western_europe
-								}
-							}
-						}
-					}
-				}
-				add = 250
-			}
-		}
-
-		annex_country = {
-			if = {
-				limit = {
-					scope:target_country = { is_subject_of = root }
-					scope:target_country = { relations:root >= relations_threshold:cordial }
-					scope:target_country = {
-						OR = {
-							c:SCO ?= this
-							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_western_europe
-								}
-							}
-						}
-					}
-				}
-				add = 300
-			}
-		}
-
 		conquer_state = {
 			if = {
 				limit = {
@@ -304,38 +243,138 @@
 						who = scope:target_country
 						secret_goal = conquer
 					}
-					scope:target_country = {
+				}
+				add = 300
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
 						OR = {
-							c:SCO ?= this
-							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_western_europe
-								}
-							}
+							state_region = s:STATE_HOME_COUNTIES
+							state_region = s:STATE_MIDLANDS
+							state_region = s:STATE_EAST_ANGLIA
+							state_region = s:STATE_WEST_COUNTRY
+							state_region = s:STATE_YORKSHIRE
+							state_region = s:STATE_LANCASHIRE
+							state_region = s:STATE_WALES
+							state_region = s:STATE_LOWLANDS
+							state_region = s:STATE_HIGHLANDS
+							state_region = s:STATE_ULSTER
+							state_region = s:STATE_LEINSTER
+							state_region = s:STATE_CONNAUGHT
+							state_region = s:STATE_MUNSTER
 						}
 					}
 				}
-				add = 80
+				add = 600
 			}
 		}
 
 		return_state = {
 			if = {
 				limit = {
-					scope:target_country = {
+					scope:target_state = {
 						OR = {
-							c:SCO ?= this
-							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_western_europe
-								}
-							}
+							state_region = s:STATE_HOME_COUNTIES
+							state_region = s:STATE_MIDLANDS
+							state_region = s:STATE_EAST_ANGLIA
+							state_region = s:STATE_WEST_COUNTRY
+							state_region = s:STATE_YORKSHIRE
+							state_region = s:STATE_LANCASHIRE
+							state_region = s:STATE_WALES
+							state_region = s:STATE_LOWLANDS
+							state_region = s:STATE_HIGHLANDS
+							state_region = s:STATE_ULSTER
+							state_region = s:STATE_LEINSTER
+							state_region = s:STATE_CONNAUGHT
+							state_region = s:STATE_MUNSTER
 						}
 					}
 				}
-				add = 100
+				add = 400
 			}
 		}
+
+		make_protectorate = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+				}
+				add = 200
+			}
+		}
+
+		reduce_autonomy = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						OR = {
+							has_state_in_state_region = STATE_LOWLANDS
+							has_state_in_state_region = STATE_HIGHLANDS
+							has_state_in_state_region = STATE_ULSTER
+							has_state_in_state_region = STATE_LEINSTER
+							has_state_in_state_region = STATE_CONNAUGHT
+							has_state_in_state_region = STATE_MUNSTER
+						}
+					}
+				}
+				add = 450
+			}
+		}
+
+		annex_country = {
+			if = {
+				limit = {
+					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						OR = {
+							has_state_in_state_region = STATE_LOWLANDS
+							has_state_in_state_region = STATE_HIGHLANDS
+							has_state_in_state_region = STATE_ULSTER
+							has_state_in_state_region = STATE_LEINSTER
+							has_state_in_state_region = STATE_CONNAUGHT
+							has_state_in_state_region = STATE_MUNSTER
+						}
+					}
+				}
+				add = 700
+			}
+		}
+	}
+
+	state_value = {
+		value = 0
+
+		if = {
+			limit = {
+				scope:target_state = {
+					OR = {
+						state_region = s:STATE_HOME_COUNTIES
+						state_region = s:STATE_MIDLANDS
+						state_region = s:STATE_EAST_ANGLIA
+						state_region = s:STATE_WEST_COUNTRY
+						state_region = s:STATE_YORKSHIRE
+						state_region = s:STATE_LANCASHIRE
+						state_region = s:STATE_WALES
+						state_region = s:STATE_LOWLANDS
+						state_region = s:STATE_HIGHLANDS
+						state_region = s:STATE_ULSTER
+						state_region = s:STATE_LEINSTER
+						state_region = s:STATE_CONNAUGHT
+						state_region = s:STATE_MUNSTER
+					}
+				}
+			}
+			add = 175
+		}
+
+		min = 0
+		max = 200
 	}
 
 	possible = {
@@ -347,39 +386,26 @@
 	}
 
 	weight = {
-		value = 100
+		value = 500
 
 		if = {
-			limit = { c:ENG ?= this }
-			add = 150
+			limit = {
+				OR = {
+					NOT = { owns_entire_state_region = STATE_WALES }
+					NOT = { owns_entire_state_region = STATE_LOWLANDS }
+					NOT = { owns_entire_state_region = STATE_HIGHLANDS }
+					NOT = { owns_entire_state_region = STATE_ULSTER }
+					NOT = { owns_entire_state_region = STATE_LEINSTER }
+					NOT = { owns_entire_state_region = STATE_CONNAUGHT }
+					NOT = { owns_entire_state_region = STATE_MUNSTER }
+				}
+			}
+			add = 500
 		}
 
 		if = {
 			limit = { c:GBR ?= this }
-			add = 50
-		}
-
-		if = {
-			limit = {
-				exists = c:SCO
-				NOT = { c:SCO = { is_subject_of = root } }
-			}
 			add = 100
-		}
-
-		if = {
-			limit = {
-				any_country = {
-					NOT = { this = root }
-					NOT = { is_subject_of = root }
-					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_western_europe
-						}
-					}
-				}
-			}
-			add = 75
 		}
 	}
 }

@@ -3675,12 +3675,12 @@ ai_strategy_default = {
 		}
 
 		add = {
-			value = net_total_income
+			value = fixed_income
 
-			divide = 3000 # 1 construction output per this much income
+			divide = 2000 # 1 construction output per this much income
 
 			min = 0
-			max = 200 # Above a certain point more government income isn't going to lead to more AI government construction
+			max = 500 # Above a certain point more government income isn't going to lead to more AI government construction
 		}
 
 		# Kickstart private investors If above this population value
@@ -3688,7 +3688,7 @@ ai_strategy_default = {
 			limit = {
 				total_population >= 500000
 			}
-			add = 10
+			add = 5
 		}
 
 		# Add a baseline for high rank
@@ -3698,12 +3698,21 @@ ai_strategy_default = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					country_rank >= rank_value:major_power
-					country_rank >= rank_value:unrecognized_major_power
-				}
+				country_rank >= rank_value:major_power
 			}
 			add = 5
+		}
+		else_if = {
+			limit = {
+				country_rank >= rank_value:unrecognized_major_power
+			}
+			add = 5
+		}
+
+		# Multiply final value by diplomatic pact expenses ratio - countries paying a lot to pacts have lower spending ambitions
+		multiply = {
+			value = 1
+			subtract = diplomatic_pact_expense_ratio
 		}
 
 		min = 2
@@ -3758,28 +3767,6 @@ ai_strategy_default = {
 					}
 				}
 
-				if = {
-					limit = {
-						scope:target_region = {
-							this = sr:region_northeast_asia
-						}
-					}
-
-					if = {
-						limit = {
-							country_rank = rank_value:great_power
-							navy_size >= 25
-							has_technology_researched = nationalism
-							c:JAP ?= {
-								has_law_or_variant = law_type:law_isolationism
-							}
-						}
-						add = {
-							desc = "AI_REGION_STANCE_WANTS_TO_OPEN_UP_JAPAN"
-							value = 1000
-						}
-					}
-				}
 
 				if = {
 					limit = {
@@ -4068,28 +4055,6 @@ ai_strategy_default = {
 	# Using this value in other strategies will function additively
 	economic_vs_government_spending_balance = {
 		value = 0.0
-		if = {
-			limit = {
-				has_journal_entry = je_grunderzeit
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_variable = grunderzeit_participant_low_var
-					}
-				}
-				add = 0.4
-			}
-			else = {
-				add = 0.2
-			}
-		}
-		else_if = {
-			limit = {
-				has_journal_entry = je_spa_economic_regeneration_master
-			}
-			add = 0.2
-		}
 	}
 
 	# How many levels of barracks with non-marine units should the AI have
@@ -4487,61 +4452,6 @@ ai_strategy_default = {
 				}
 				add = 100
 			}
-		}
-
-		# Annexation of Hawaii
-		if = {
-			limit = {
-				OR = {
-					has_variable = hawaii_interest
-					c:USA ?= this
-					AND = {
-						has_global_variable = gp_hawaii_interest
-						country_rank = rank_value:great_power
-						OR = {
-							is_in_geographic_region = geographic_region_north_america
-							is_in_geographic_region = geographic_region_south_america
-						}
-					}
-				}
-				scope:region = sr:region_oceania
-			}
-			add = 200
-		}
-
-		# Sakoku
-		if = {
-			limit = {
-				exists = c:JAP
-				c:JAP = { has_law_or_variant = law_type:law_isolationism }
-				NOT = { country_rank = rank_value:great_power }
-				scope:region = sr:region_northeast_asia
-			}
-			add = -50
-		}
-
-		# Scramble for Africa
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						country_rank = rank_value:great_power
-						has_technology_researched = malaria_prevention
-					}
-					has_journal_entry = je_scramble_for_africa
-				}
-				scope:region = {
-					OR = {
-						this = sr:region_nile_basin
-						this = sr:region_north_africa
-						this = sr:region_west_africa
-						this = sr:region_equatorial_africa
-						this = sr:region_southern_africa
-						this = sr:region_east_africa
-					}
-				}
-			}
-			add = 200
 		}
 
 		# Great Powers always care about Europe somehwat
