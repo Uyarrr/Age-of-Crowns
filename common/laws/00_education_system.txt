@@ -86,17 +86,6 @@ law_religious_schools = {
 				has_law_or_variant = law_type:law_no_schools
 			}
 			add = 500
-
-			if = {
-				limit = {
-					OR = {
-						has_journal_entry = je_sick_man_education
-						has_journal_entry = je_terakoya
-						has_journal_entry = je_portugal_regeneration_institutions
-					}
-				}
-				add = 500
-			}
 		}
 	}
 
@@ -120,20 +109,6 @@ law_religious_schools = {
 				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
 			}
 			add = 10
-		}
-
-		if = {
-			limit = {
-				scope:target_country = {
-					c:BIC ?= this
-					OR = {
-						has_journal_entry = je_british_dictate_plantations
-						has_journal_entry = je_british_dictate_military
-						has_journal_entry = je_british_dictate_universities
-					}
-				}
-			}
-			multiply = 0
 		}
 	}
 }

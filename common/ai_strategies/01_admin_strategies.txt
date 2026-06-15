@@ -99,6 +99,8 @@ ai_strategy_resource_expansion = {
 		wood = { stance = wants_export }
 		stone = { stance = wants_export }
 		sulfur = { stance = wants_export }
+		ironingot = { stance = wants_export }
+		bronze = { stance = wants_export }
 	}
 
 	possible = {
@@ -107,16 +109,6 @@ ai_strategy_resource_expansion = {
 
 	weight = {
 		value = 10
-
-		if = {
-			limit = {
-				OR = {
-					is_in_geographic_region = geographic_region_europe
-					is_in_geographic_region = geographic_region_north_america
-				}
-			}
-			add = 20
-		}
 
 		if = {
 			limit = {
@@ -183,6 +175,7 @@ ai_strategy_industrial_expansion = {
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_high_supply }
 		iron = { stance = wants_high_supply }
+		ironingot = {stance = wants_high_supply }
 		copper = { stance = wants_high_supply }
 		tin = { stance = wants_high_supply }
 		steel = { stance = wants_high_supply }
@@ -191,7 +184,7 @@ ai_strategy_industrial_expansion = {
 		sulfur = { stance = wants_high_supply }
 		wood = { stance = wants_high_supply }
 		sugar = { stance = wants_high_supply }
-		saltpeter = { stance = wants_export }
+		saltpeter = { stance = wants_high_supply }
 	}
 
 	building_group_weights = {
@@ -276,7 +269,6 @@ ai_strategy_placate_population = {
 	building_group_weights = {
 		bg_agriculture = 2.0
 		bg_ranching = 2.0
-		bg_oil_extraction = 0.5
 		bg_mining = 0.5
 		bg_construction = 0.5
 		bg_manufacturing = 0.25
@@ -289,7 +281,6 @@ ai_strategy_placate_population = {
 		fruit = { stance = wants_high_supply }
 		fabric = { stance = wants_high_supply }
 		wood = { stance = wants_high_supply }
-		opium = { stance = does_not_want }
 	}
 
 	possible = {
@@ -316,13 +307,6 @@ ai_strategy_placate_population = {
 
 		if = {
 			limit = { literacy_rate >= 0.50 }
-			multiply = 0.5
-		}
-
-		if = {
-			limit = {
-				has_technology_researched = railways
-			}
 			multiply = 0.5
 		}
 
@@ -358,8 +342,6 @@ ai_strategy_colonial_extraction = {
 
     type = administrative
     building_group_weights = {
-        bg_rubber = 1.5
-        bg_oil_extraction = 1.5
         bg_mining = 1.5
         bg_logging = 1.5
         bg_plantations = 1.5
@@ -379,6 +361,8 @@ ai_strategy_colonial_extraction = {
         tools = { stance = wants_high_supply }
         coal = { stance = wants_export }
         iron = { stance = wants_export }
+        copper = { stance = wants_export }
+        tin = { stance = wants_export }
         lead = { stance = wants_export }
         wood = { stance = wants_export }
         sulfur = { stance = wants_export }
