@@ -1,309 +1,311 @@
-﻿ai_strategy_hre_imperial_hegemony = {
+ai_strategy_hre_imperial_hegemony = {
 	icon = "gfx/interface/icons/ai_strategy_icons/maintain_power_balance.dds"
 
 	type = diplomatic
 
+	# Austria begins as leader of the historical HRE bloc. This strategy maintains
+	# and expands that bloc rather than creating a replacement.
 	will_form_power_bloc = {
 		always = no
 	}
 
-	undesirable_infamy_level = {
-		value = 30
-	}
+	undesirable_infamy_level = { value = 25 }
+	unacceptable_infamy_level = { value = 50 }
+	ideological_opinion_effect_mult = { value = 0.75 }
+	wargoal_maneuvers_fraction = { value = 0.10 }
+	diplomatic_play_neutrality = { value = -20 }
+	diplomatic_play_boldness = { value = 40 }
+	recklessness = { value = 0.50 }
 
-	unacceptable_infamy_level = {
-		value = 60
-	}
-
-	ideological_opinion_effect_mult = {
-		value = 1.25
-	}
-
-	wargoal_maneuvers_fraction = {
-		value = 0.05
-	}
-
-	diplomatic_play_neutrality = {
-		value = -25
-	}
-
-	diplomatic_play_boldness = {
-		value = 10
-	}
-
-	recklessness = {
-		value = 1
-	}
-
+	# Defend cordial imperial members against countries outside the Empire.
+	# Internal wars and members with poor relations do not receive automatic aid.
 	diplomatic_play_support = {
 		value = 0
-
-		add = {
-			value = "scope:country.modifier:country_diplomatic_reputation_add"
-			desc = "DIPLOMATIC_REPUTATION_REASON"
-		}
-
-		if = {
-			limit = {
-				NOT = { exists = scope:is_initiator }
-				scope:country = { is_in_same_power_bloc = root }
-				scope:enemy_country = { NOT = { is_in_same_power_bloc = root } }
-			}
-			add = {
-				value = 150
-				desc = "hremember_defense"
-			}
-		}
 
 		if = {
 			limit = {
 				NOT = { exists = scope:is_initiator }
 				scope:country = {
-					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_western_europe
-							is_in_geographic_region = geographic_region_central_europe
-							is_in_geographic_region = geographic_region_southern_europe
-							is_in_geographic_region = geographic_region_balkans
-							is_in_geographic_region = geographic_region_eastern_europe
-						}
-					}
+					is_in_same_power_bloc = root
+					relations:root >= relations_threshold:cordial
+				}
+				scope:enemy_country = {
+					NOT = { is_in_same_power_bloc = root }
 				}
 			}
-			add = {
-				value = 50
-				desc = "hremember_imperial_sphere"
-			}
+			add = 350
 		}
 
+		# Never help an outsider launch a play against a friendly HRE member.
 		if = {
 			limit = {
 				exists = scope:is_initiator
+				scope:country = {
+					NOT = { is_in_same_power_bloc = root }
+				}
+				scope:enemy_country = {
+					is_in_same_power_bloc = root
+					relations:root >= relations_threshold:cordial
+				}
+			}
+			add = -1000
+		}
+
+		# Do not take sides with an outsider in an internal imperial conflict.
+		if = {
+			limit = {
 				scope:country = { NOT = { is_in_same_power_bloc = root } }
 				scope:enemy_country = { is_in_same_power_bloc = root }
 			}
-			add = {
-				value = -500
-				desc = "hremember_no_attack_support"
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = { exists = scope:is_initiator }
-				scope:country = { is_in_same_power_bloc = root }
-			}
-			add = {
-				value = 75
-				desc = "hremember_no_neutrality"
-			}
+			add = -250
 		}
 	}
 
+	# Austria is diplomatic inside the HRE and only mildly aggressive outside it.
 	aggression = {
-		value = 0.60
+		value = 0.25
 
 		if = {
-			limit = {
-				scope:target_country = {
-					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_western_europe
-							is_in_geographic_region = geographic_region_central_europe
-							is_in_geographic_region = geographic_region_southern_europe
-							is_in_geographic_region = geographic_region_balkans
-							is_in_geographic_region = geographic_region_eastern_europe
-						}
-					}
-				}
-			}
-			add = 0.60
+			limit = { is_in_same_power_bloc = scope:target_country }
+			multiply = 0
 		}
 
 		if = {
-			limit = {
-				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
-				scope:target_country.country_rank <= root.country_rank
-			}
-			add = 0.50
-		}
-
-		if = {
-			limit = {
-				scope:target_country = { is_subject_of = root }
-			}
-			multiply = 0.10
-		}
-
-		if = {
-			limit = {
-				power_bloc ?= {
-					has_identity = identity:identity_holy_roman_empire
-					has_principle_group = principle_group:principle_group_vassalization
-				}
-			}
-			add = 0.25
-		}
-
-		if = {
-			limit = {
-				is_in_same_power_bloc = scope:target_country
-			}
+			limit = { scope:target_country = { is_subject_of = root } }
 			multiply = 0.05
 		}
 
 		if = {
 			limit = {
-				has_attitude = {
-					who = scope:target_country
-					attitude = antagonistic
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= rank_value:minor_power
+				scope:target_country = {
+					is_subject = no
+					is_in_power_bloc = no
 				}
 			}
-			multiply = 0.25
+			add = 0.35
 		}
 
 		multiply = {
 			value = "ai_ideological_opinion(scope:target_country)"
-			multiply = -0.1
+			multiply = -0.05
 			add = 1
-			max = 2.0
-			min = 0.5
+			min = 0.75
+			max = 1.25
 		}
+
+		max = 1.0
 	}
 
 	building_group_weights = {
-		bg_army = 1.25
-		bg_technology = 1.15
+		bg_army = 1.40
+		bg_technology = 1.20
+		bg_navy = 0.50
 	}
 
 	secret_goal_weights = {
-		protect = 2.0
-		dominate = 1.75
-		reconcile = 1.25
-		befriend = 1.0
-		conquer = 0.40
+		protect = 3.0
+		befriend = 3.0
+		reconcile = 2.0
+		dominate = 1.25
+		conquer = 0.10
+	}
+
+	# Encourage defensive agreements and every diplomatic route that can add
+	# countries to the imperial power bloc.
+	treaty_category_scores = {
+		economy = { value = 4 }
+		trade = { value = 5 }
+		military = { value = 3 }
+		military_defense = { value = 8 }
+		ideology = { value = 1 }
+		expansion = { value = 3 }
+		power_bloc = { value = 10 }
+		other = { value = 1 }
+		none = { value = 0 }
 	}
 
 	wargoal_weights = {
-		make_protectorate = 2.5
-		make_dominion = 1.5
-		reduce_autonomy = 2.5
-		annex_country = 1.25
-		return_state = 1.5
-		liberate_subject = 2.0
+		join_power_bloc = 5.0
+		make_protectorate = 1.0
+		make_dominion = 0.25
+		reduce_autonomy = 1.5
+		annex_country = 0.50
+		liberate_subject = 1.5
 		liberate_country = 1.25
-		transfer_subject = 1.5
-		conquer_state = 0.50
+		return_state = 0.75
+		conquer_state = 0.10
 		force_nationalization = 0.0
 	}
 
 	secret_goal_scores = {
 		protect = {
 			trigger = {
-				OR = {
-					scope:target_country = { is_subject_of = root }
-					is_in_same_power_bloc = scope:target_country
+				is_in_same_power_bloc = scope:target_country
+				scope:target_country = {
+					relations:root >= relations_threshold:cordial
 				}
 			}
+
 			score = {
-				value = 250
+				value = 500
 
 				if = {
 					limit = {
-						is_in_same_power_bloc = scope:target_country
+						scope:target_country = {
+							relations:root >= relations_threshold:amicable
+						}
 					}
 					add = 150
+				}
+
+				if = {
+					limit = { scope:target_country = { is_subject_of = root } }
+					add = 100
 				}
 			}
 		}
 
-		dominate = {
+		# Keep improving relations with every member until the imperial interior
+		# is friendly and cohesive.
+		befriend = {
 			trigger = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				NOT = { is_in_same_power_bloc = scope:target_country }
-				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
-				scope:target_country.country_rank <= root.country_rank
-				scope:target_country = {
-					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_western_europe
-							is_in_geographic_region = geographic_region_central_europe
-							is_in_geographic_region = geographic_region_southern_europe
-							is_in_geographic_region = geographic_region_balkans
-							is_in_geographic_region = geographic_region_eastern_europe
+				OR = {
+					is_in_same_power_bloc = scope:target_country
+					AND = {
+						has_strategic_adjacency = scope:target_country
+						scope:target_country.country_rank <= rank_value:minor_power
+						scope:target_country = {
+							is_subject = no
+							is_in_power_bloc = no
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_western_europe
+									is_in_geographic_region = geographic_region_central_europe
+									is_in_geographic_region = geographic_region_southern_europe
+								}
+							}
 						}
 					}
 				}
 			}
+
 			score = {
-				value = 200
+				value = 100
 
 				if = {
-					limit = {
-						scope:target_country.country_rank <= rank_value:minor_power
-					}
-					add = 125
-				}
-			}
-		}
+					limit = { is_in_same_power_bloc = scope:target_country }
+					add = 350
 
-		befriend = {
-			trigger = {
-				OR = {
-					scope:target_country = { is_subject_of = root }
-					is_in_same_power_bloc = scope:target_country
+					if = {
+						limit = {
+							scope:target_country = {
+								relations:root < relations_threshold:cordial
+							}
+						}
+						add = 300
+					}
+
+					if = {
+						limit = {
+							scope:target_country = {
+								relations:root < relations_threshold:friendly
+							}
+						}
+						add = 100
+					}
 				}
-			}
-			score = {
-				value = 125
 
 				if = {
-					limit = {
-						scope:target_country = { relations:root < relations_threshold:amicable }
+					limit = { NOT = { is_in_same_power_bloc = scope:target_country } }
+					add = 250
+
+					if = {
+						limit = {
+							scope:target_country = {
+								relations:root < relations_threshold:amicable
+							}
+						}
+						add = 200
 					}
-					add = 75
 				}
 			}
 		}
 
 		reconcile = {
 			trigger = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				NOT = { is_in_same_power_bloc = scope:target_country }
+				is_in_same_power_bloc = scope:target_country
 				scope:target_country = {
+					relations:root < relations_threshold:cordial
+				}
+			}
+			score = { value = 400 }
+		}
+
+		# Coercion is a fallback for nearby, unaligned imperial candidates that
+		# cannot be brought into the bloc through friendly diplomacy.
+		dominate = {
+			trigger = {
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= rank_value:minor_power
+				scope:target_country = {
+					is_subject = no
+					is_in_power_bloc = no
+					relations:root < relations_threshold:cordial
 					any_scope_state = {
 						OR = {
 							is_in_geographic_region = geographic_region_western_europe
 							is_in_geographic_region = geographic_region_central_europe
 							is_in_geographic_region = geographic_region_southern_europe
-							is_in_geographic_region = geographic_region_balkans
-							is_in_geographic_region = geographic_region_eastern_europe
 						}
 					}
 				}
 			}
+
 			score = {
-				value = 75
+				value = 150
+
+				if = {
+					limit = { scope:target_country = { num_allies < 1 } }
+					add = 75
+				}
+
+				if = {
+					limit = { scope:target_country = { is_in_war = yes } }
+					add = 50
+				}
 			}
 		}
 
-		conquer = {
+		none = {
 			trigger = {
-				NOT = { is_in_same_power_bloc = scope:target_country }
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
-				scope:target_country.country_rank <= root.country_rank
+				is_in_same_power_bloc = scope:target_country
+				scope:target_country = {
+					relations:root < relations_threshold:cordial
+				}
 			}
-			score = {
-				value = 40
-			}
+			score = { value = 50 }
 		}
 	}
 
 	wargoal_scores = {
+		join_power_bloc = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+					scope:target_country = {
+						is_subject = no
+						is_in_power_bloc = no
+					}
+				}
+				add = 500
+			}
+		}
+
 		make_protectorate = {
 			if = {
 				limit = {
@@ -312,29 +314,14 @@
 						secret_goal = dominate
 					}
 				}
-				add = 225
-			}
-		}
-
-		make_dominion = {
-			if = {
-				limit = {
-					has_secret_goal = {
-						who = scope:target_country
-						secret_goal = dominate
-					}
-				}
-				add = 125
+				add = 100
 			}
 		}
 
 		reduce_autonomy = {
 			if = {
-				limit = {
-					scope:target_country = { is_subject_of = root }
-					scope:target_country = { relations:root >= relations_threshold:amicable }
-				}
-				add = 150
+				limit = { scope:target_country = { is_subject_of = root } }
+				add = 100
 			}
 		}
 
@@ -343,89 +330,15 @@
 				limit = {
 					scope:target_country = { is_subject_of = root }
 					scope:target_country.country_rank <= rank_value:minor_power
-					scope:target_country = { relations:root >= relations_threshold:cordial }
 				}
-				add = 125
-			}
-		}
-
-		return_state = {
-			if = {
-				limit = {
-					has_strategic_adjacency = scope:target_country
-				}
-				add = 100
-			}
-		}
-
-		liberate_subject = {
-			if = {
-				limit = {
-					scope:target_country.country_rank >= root.country_rank
-					scope:target_country = {
-						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_western_europe
-								is_in_geographic_region = geographic_region_central_europe
-								is_in_geographic_region = geographic_region_southern_europe
-								is_in_geographic_region = geographic_region_balkans
-								is_in_geographic_region = geographic_region_eastern_europe
-							}
-						}
-					}
-				}
-				add = 150
-			}
-		}
-
-		liberate_country = {
-			if = {
-				limit = {
-					scope:target_country.country_rank >= root.country_rank
-					scope:target_country = {
-						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_western_europe
-								is_in_geographic_region = geographic_region_central_europe
-								is_in_geographic_region = geographic_region_southern_europe
-								is_in_geographic_region = geographic_region_balkans
-								is_in_geographic_region = geographic_region_eastern_europe
-							}
-						}
-					}
-				}
-				add = 100
-			}
-		}
-
-		transfer_subject = {
-			if = {
-				limit = {
-					has_secret_goal = {
-						who = scope:target_country
-						secret_goal = dominate
-					}
-				}
-				add = 125
-			}
-		}
-
-		conquer_state = {
-			if = {
-				limit = {
-					has_secret_goal = {
-						who = scope:target_country
-						secret_goal = conquer
-					}
-					NOT = { is_in_same_power_bloc = scope:target_country }
-				}
-				add = 40
+				add = 50
 			}
 		}
 	}
 
 	possible = {
 		is_subject = no
+		c:AUS ?= this
 		is_power_bloc_leader = yes
 		power_bloc ?= {
 			has_identity = identity:identity_holy_roman_empire
@@ -433,44 +346,6 @@
 	}
 
 	weight = {
-		value = 200
-
-		if = {
-			limit = {
-				OR = {
-					c:AUS ?= this
-				}
-			}
-			add = 150
-		}
-
-		if = {
-			limit = {
-				any_country = {
-					NOT = { this = root }
-					NOT = { is_subject_of = root }
-					NOT = { is_in_same_power_bloc = root }
-					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_western_europe
-							is_in_geographic_region = geographic_region_central_europe
-							is_in_geographic_region = geographic_region_southern_europe
-							is_in_geographic_region = geographic_region_balkans
-							is_in_geographic_region = geographic_region_eastern_europe
-						}
-					}
-				}
-			}
-			add = 75
-		}
-
-		if = {
-			limit = {
-				power_bloc ?= {
-					has_principle_group = principle_group:principle_group_vassalization
-				}
-			}
-			add = 50
-		}
+		value = 1000
 	}
 }

@@ -970,6 +970,11 @@ nation_formation = {
 
 	ai_weight = {
 		value = 2
+
+		if = {
+			limit = { c:MUS ?= this }
+			add = 8
+		}
 	}
 }
 

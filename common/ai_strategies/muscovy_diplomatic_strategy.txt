@@ -1,0 +1,392 @@
+ai_strategy_muscovy_form_russia = {
+	icon = "gfx/interface/icons/ai_strategy_icons/territorial_expansion.dds"
+
+	type = diplomatic
+
+	will_form_power_bloc = {
+		always = no
+	}
+
+	undesirable_infamy_level = { value = 60 }
+	unacceptable_infamy_level = { value = 100 }
+	ideological_opinion_effect_mult = { value = 0.25 }
+	wargoal_maneuvers_fraction = { value = 0.35 }
+	diplomatic_play_neutrality = { value = -25 }
+	diplomatic_play_boldness = { value = 85 }
+	recklessness = { value = 1.0 }
+
+	# The immediate objective is control of the Russian homelands needed to form
+	# Russia. Novgorod, Tver, Ryazan, and the western Rus states come first.
+	aggression = {
+		value = 0.20
+
+		if = {
+			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country = {
+					any_scope_state = {
+						is_homeland_of_country_cultures = root
+					}
+				}
+			}
+			add = 4.0
+
+			if = {
+				limit = {
+					scope:target_country = {
+						OR = {
+							c:NOV ?= this
+							c:TVR ?= this
+							c:RYZ ?= this
+							c:U67 ?= this
+							c:ODO ?= this
+						}
+					}
+				}
+				add = 1.5
+			}
+
+			if = {
+				limit = { has_strategic_adjacency = scope:target_country }
+				add = 0.75
+			}
+
+			if = {
+				limit = { scope:target_country.country_rank < root.country_rank }
+				add = 0.50
+			}
+
+			if = {
+				limit = { scope:target_country = { is_in_war = yes } }
+				add = 0.50
+			}
+
+			if = {
+				limit = { scope:target_country = { num_allies < 1 } }
+				add = 0.25
+			}
+		}
+
+		# Once the Rus core is being consolidated, weaker neighboring powers remain
+		# valid targets for subjugation and frontier security.
+		if = {
+			limit = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= rank_value:minor_power
+			}
+			add = 0.75
+		}
+
+		if = {
+			limit = { scope:target_country = { is_subject_of = root } }
+			multiply = 0.02
+		}
+
+		if = {
+			limit = {
+				NOT = { has_strategic_adjacency = scope:target_country }
+				NOT = {
+					scope:target_country = {
+						any_scope_state = {
+							is_homeland_of_country_cultures = root
+						}
+					}
+				}
+			}
+			multiply = 0.05
+		}
+
+		max = 7.0
+	}
+
+	building_group_weights = {
+		bg_army = 2.25
+		bg_military_industry = 1.75
+		bg_technology = 1.20
+		bg_navy = 0.35
+	}
+
+	secret_goal_weights = {
+		conquer = 5.0
+		dominate = 2.0
+		protect = 0.50
+		befriend = 0.10
+		reconcile = 0.0
+	}
+
+	wargoal_weights = {
+		conquer_state = 5.0
+		return_state = 4.0
+		make_protectorate = 2.0
+		make_dominion = 0.50
+		reduce_autonomy = 4.0
+		annex_country = 5.0
+		transfer_subject = 1.0
+		force_nationalization = 0.0
+	}
+
+	secret_goal_scores = {
+		conquer = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						is_homeland_of_country_cultures = root
+					}
+				}
+			}
+
+			score = {
+				value = 700
+
+				if = {
+					limit = {
+						scope:target_country = {
+							OR = {
+								c:NOV ?= this
+								c:TVR ?= this
+								c:RYZ ?= this
+								c:U67 ?= this
+								c:ODO ?= this
+							}
+						}
+					}
+					add = 300
+				}
+
+				if = {
+					limit = { has_strategic_adjacency = scope:target_country }
+					add = 200
+				}
+
+				if = {
+					limit = { scope:target_country = { is_in_war = yes } }
+					add = 100
+				}
+
+				if = {
+					limit = { scope:target_country = { num_allies < 1 } }
+					add = 100
+				}
+			}
+		}
+
+		dominate = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= rank_value:minor_power
+				NOT = {
+					scope:target_country = {
+						any_scope_state = {
+							is_homeland_of_country_cultures = root
+						}
+					}
+				}
+			}
+
+			score = {
+				value = 175
+
+				if = {
+					limit = { scope:target_country = { num_allies < 1 } }
+					add = 75
+				}
+
+				if = {
+					limit = { scope:target_country = { is_in_war = yes } }
+					add = 75
+				}
+			}
+		}
+
+		protect = {
+			trigger = {
+				scope:target_country = { is_subject_of = root }
+			}
+			score = { value = 100 }
+		}
+
+		none = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				NOT = { has_strategic_adjacency = scope:target_country }
+				NOT = {
+					scope:target_country = {
+						any_scope_state = {
+							is_homeland_of_country_cultures = root
+						}
+					}
+				}
+			}
+			score = { value = 1000 }
+		}
+	}
+
+	wargoal_scores = {
+		conquer_state = {
+			if = {
+				limit = {
+					scope:target_state = {
+						is_homeland_of_country_cultures = root
+					}
+				}
+				add = 800
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							state_region = s:STATE_NOVGOROD
+							state_region = s:STATE_TVER
+							state_region = s:STATE_YAROSLAVL
+							state_region = s:STATE_PSKOV
+							state_region = s:STATE_SMOLENSK
+							state_region = s:STATE_RYAZAN
+							state_region = s:STATE_ORYOL
+							state_region = s:STATE_KURSK
+							state_region = s:STATE_TAMBOV
+							state_region = s:STATE_VYATKA
+							state_region = s:STATE_ARKHANGELSK
+							state_region = s:STATE_KHARKOV
+						}
+					}
+				}
+				add = 400
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						any_neighbouring_state = { owner = root }
+					}
+				}
+				add = 150
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							state_region = s:STATE_OB
+							state_region = s:STATE_SURGUT
+							state_region = s:STATE_TOMSK
+							state_region = s:STATE_YAKUTSK
+						}
+					}
+				}
+				add = -500
+			}
+		}
+
+		return_state = {
+			if = {
+				limit = {
+					scope:target_state = {
+						is_homeland_of_country_cultures = root
+					}
+				}
+				add = 700
+			}
+		}
+
+		make_protectorate = {
+			if = {
+				limit = {
+					has_secret_goal = {
+						who = scope:target_country
+						secret_goal = dominate
+					}
+				}
+				add = 225
+			}
+		}
+
+		reduce_autonomy = {
+			if = {
+				limit = { scope:target_country = { is_subject_of = root } }
+				add = 400
+			}
+		}
+
+		annex_country = {
+			if = {
+				limit = { scope:target_country = { is_subject_of = root } }
+				add = 600
+			}
+		}
+	}
+
+	state_value = {
+		value = 0
+
+		if = {
+			limit = {
+				scope:target_state = {
+					is_homeland_of_country_cultures = root
+				}
+			}
+			add = 175
+		}
+
+		if = {
+			limit = {
+				scope:target_state = {
+					OR = {
+						state_region = s:STATE_NOVGOROD
+						state_region = s:STATE_TVER
+						state_region = s:STATE_YAROSLAVL
+						state_region = s:STATE_PSKOV
+						state_region = s:STATE_SMOLENSK
+						state_region = s:STATE_RYAZAN
+						state_region = s:STATE_ORYOL
+						state_region = s:STATE_KURSK
+						state_region = s:STATE_TAMBOV
+						state_region = s:STATE_VYATKA
+						state_region = s:STATE_ARKHANGELSK
+						state_region = s:STATE_KHARKOV
+					}
+				}
+			}
+			add = 225
+		}
+
+		if = {
+			limit = {
+				scope:target_state = {
+					any_neighbouring_state = { owner = root }
+				}
+			}
+			add = 75
+		}
+
+		if = {
+			limit = {
+				scope:target_state = {
+					OR = {
+						state_region = s:STATE_OB
+						state_region = s:STATE_SURGUT
+						state_region = s:STATE_TOMSK
+						state_region = s:STATE_YAKUTSK
+					}
+				}
+			}
+			add = -125
+		}
+
+		min = 0
+		max = 500
+	}
+
+	possible = {
+		is_subject = no
+		c:MUS ?= this
+	}
+
+	weight = {
+		value = 1000
+	}
+}
