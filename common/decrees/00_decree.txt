@@ -170,7 +170,7 @@ decree_emergency_relief = {
 			limit = {
 				state_population <= 150000
 			}
-			multiply = 0
+			add = 100 
 		}
 	}
 }
