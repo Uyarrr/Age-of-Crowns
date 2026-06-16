@@ -59,10 +59,25 @@ ranching = {
 	}
 }
 
-horsemen = {
-	# Unlocks Horsemen
+horseman = {
+	# Unlocks Horseman
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/cavalry_1.dds"
+	texture = "gfx/interface/icons/invention_icons/light_cavalry_1.dds"
+	category = military
+
+	unlocking_technologies = {
+		ranching
+	}
+
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+armored_horseman = {
+	# Unlocks Armored Horseman
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/heavy_cavalry_1.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -356,10 +371,10 @@ houfnice = {
 	}
 }
 
-men_at_arms = {
+man_at_arms = {
 	#Unlocks Man at Arms Infantry
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/infantry_2.dds"
+	texture = "gfx/interface/icons/invention_icons/heavy_infantry_2.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -371,10 +386,10 @@ men_at_arms = {
 	}
 }
 
-cavalrymen = {
-	#Unlocks  Heavy Cavalrymen Cavalry
+cavalryman = {
+	#Unlocks  Heavy Cavalryman Cavalry
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/cavalry_2.dds"
+	texture = "gfx/interface/icons/invention_icons/light_cavalry_2.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -653,7 +668,7 @@ overseas_supply_networks = {
 halberdier = {
 	#Unlocks Halberdier Infantry Unit
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/infantry_3.dds"
+	texture = "gfx/interface/icons/invention_icons/heavy_infantry_3.dds"
 	category = military
 
 	modifier = {
@@ -1007,7 +1022,7 @@ engineer_corps = {
 pikemen = {
 	#Unlocks Pikeman Infantry Units
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/infantry_4.dds"
+	texture = "gfx/interface/icons/invention_icons/heavy_infantry_4.dds"
 	category = military
 
 	modifier = {
@@ -1377,14 +1392,32 @@ musketeer = {
 hussar = {
 	#Unlocks Hussar Cavalry Units
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/cavalry_5.dds"
+	texture = "gfx/interface/icons/invention_icons/light_cavalry_5.dds"
 	category = military
 
 	modifier = {
 	}
 
 	unlocking_technologies = {
-		military_revolution
+		state_warhorse_breeding
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+gallop_cavalry = {
+	#Unlocks Gallop Cavalry Units
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/heavy_cavalry_5.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		state_warhorse_breeding
 	}
 
 	ai_weight = {
@@ -1566,7 +1599,7 @@ fusilier = {
 cuirassier = {
 	#Unlocks Cuirassier Cavalry Units
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/cavalry_6.dds"
+	texture = "gfx/interface/icons/invention_icons/heavy_cavalry_6.dds"
 	category = military
 
 	modifier = {

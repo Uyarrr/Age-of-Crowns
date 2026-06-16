@@ -809,6 +809,21 @@ new_world = {
 
 	ai_weight = {
 		value = 1
+
+		if = {
+			limit = {
+				OR = {
+					c:POR ?= this
+					c:CAS ?= this
+					c:ENG ?= this
+					c:GBR ?= this
+					c:FRA ?= this
+					c:NOR ?= this
+					c:SPA ?= this
+				}
+			}
+			add = 50
+		}
 	}
 }
 
@@ -829,6 +844,21 @@ colonization = {
 
 	ai_weight = {
 		value = 1
+
+		if = {
+			limit = {
+				OR = {
+					c:POR ?= this
+					c:CAS ?= this
+					c:ENG ?= this
+					c:GBR ?= this
+					c:FRA ?= this
+					c:NOR ?= this
+					c:SPA ?= this
+				}
+			}
+			add = 50
+		}
 	}
 }
 
@@ -907,7 +937,7 @@ printing_press = {
 colonial_outpost = {
 	#Unlocks Colonial Outpost Building
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_outpost.dds"
 	category = society
 
 	modifier = {
@@ -1195,7 +1225,7 @@ centralized_tribute = {
 
 representative_assemblies = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	texture = "gfx/interface/icons/invention_icons/representative_assemblies.dds"
 	category = society
 
 	modifier = {
@@ -1406,7 +1436,7 @@ scientific_revolution = {
 
 iron_framed_construction = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	texture = "gfx/interface/icons/invention_icons/iron_framed_construction.dds"
 	category = society
 
 	modifier = {

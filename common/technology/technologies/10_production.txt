@@ -592,6 +592,21 @@ pack_animal_transport = {
 	}
 }
 
+heavy_plow = {
+	# Unlocks Farm PM
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/heavy_plow.dds"
+	category = production
+
+	unlocking_technologies = {
+		pack_animal_transport
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 dyed_furnitures = {
 	# Unlocks Furniture PM
 	era = era_2

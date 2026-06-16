@@ -1,0 +1,8 @@
+effect_destroy_colonial_outpost = {
+	if = {
+		limit = {
+			has_building = building_colonial_outpost
+		}
+		remove_building = building_colonial_outpost
+	}
+}

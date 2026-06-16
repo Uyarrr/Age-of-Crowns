@@ -41,6 +41,9 @@
  je_colonial_administration_button_brazil: "Establish Colony in [SCOPE.sStateRegion('brazil_region_scope').GetStrategicRegion.GetName]"
  je_colonial_administration_button_brazil_desc: "Brazil combines immense agricultural potential, tropical resources, and one of the largest coastlines in the world."
 
+ je_colonial_administration_button_cape_verde: "Establish Island Colony in Cape Verde"
+ je_colonial_administration_button_cape_verde_desc: "Cape Verde is small, distant, and strategically placed. A dedicated island administration will keep it useful without tying it directly to the metropole."
+
  je_colonial_administration_button_tt_1: "When establishing a local colonial administration, we will be able to tailor its [Concept('concept_law', '$concept_laws$')] and [concept_government] to best suit the needs of the metropole, and its constituent [Concept('concept_interest_group','$concept_interest_groups$')]."
  je_colonial_administration_button_tt_2: "Any [SCOPE.GetRootScope.GetCountry.GetAdjective] lands within the relevant [concept_strategic_region] will be transferred to our new colonial [concept_subject]. If a [concept_state] has the [GetDecreeType('decree_greener_grass_campaign').GetName] [concept_decree], a random state with that decree will be designated as its capital."
 
