@@ -243,7 +243,7 @@ salt_collecting = {
 	}
 }
 
-hunting = {
+fur_hunting = {
 	# Unlocks Hunting Lodge
 	era = era_1
 	texture = "gfx/interface/icons/goods_icons/fur.dds"
@@ -251,6 +251,21 @@ hunting = {
 
 	unlocking_technologies = {
 		peasant_levy
+	}
+
+	ai_weight = {
+		value = 2 # Semi Important
+	}
+}
+
+ivory_hunting = {
+	# Unlocks Ivory Camps
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/ivory.dds"
+	category = military
+
+	unlocking_technologies = {
+		fur_hunting
 	}
 
 	ai_weight = {
