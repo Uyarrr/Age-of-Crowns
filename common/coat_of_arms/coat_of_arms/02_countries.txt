@@ -5,7 +5,8 @@
 
 @canton_scale_cross_x = @[ ( 333 / 768 ) + 0.001 ]
 @canton_scale_cross_y = @[ ( 205 / 512 ) + 0.001 ]
-
+@canton_scale_cross_x_new = @[ ( 384 / coa_width ) + 0.001 ]
+@canton_scale_cross_y_new = @[ ( 256 / coa_height ) + 0.001 ]
 @canton_scale_sweden_x = @[ ( 255 / 768 ) + 0.001 ]
 @canton_scale_sweden_y = @[ ( 204 / 512 ) + 0.001 ]
 

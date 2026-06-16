@@ -429,6 +429,36 @@ MAG = { # Magdeburg
 	}
 }
 
+TRT = { # Trent
+	flag_definition = {
+		coa = TRT
+		subject_canton = TRT
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = TRT_subject
+		priority = 1
+	}
+}
+
+CAS = { # Castile
+	flag_definition = {
+		coa = CAS
+		subject_canton = CAS
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = CAS
+		priority = 1
+	}
+}
+
+GNA = { # Genoa
+	flag_definition = {
+		coa = GNA
+		subject_canton = GNA
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = CAS
+		priority = 1
+	}
+}
+
 GOS = { # Goslar
 	flag_definition = {
 		coa = GOS
