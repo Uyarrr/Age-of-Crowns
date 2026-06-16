@@ -679,7 +679,7 @@ halberdier = {
 	}
 
 	ai_weight = {
-		value = 1 # Important tech in general
+		value = 3 # Important tech in general
 	}
 }
 
@@ -697,14 +697,14 @@ falconet = {
 	}
 
 	ai_weight = {
-		value = 1 # Important tech in general
+		value = 3 # Important tech in general
 	}
 }
 
-lancer = {
+light_lancer = {
 	#Unlocks Lancers Cavalry Units
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/cavalry_3.dds"
+	texture = "gfx/interface/icons/invention_icons/light_cavalry_3.dds"
 	category = military
 
 	modifier = {
@@ -715,7 +715,25 @@ lancer = {
 	}
 
 	ai_weight = {
-		value = 1 # Important tech in general
+		value = 3 # Important tech in general
+	}
+}
+
+lancer = {
+	#Unlocks Lancers Cavalry Units
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/heavy_cavalry_3.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		pike_and_shot
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
 	}
 }
 
@@ -1040,7 +1058,7 @@ pikemen = {
 pistoleer = {
 	#Unlocks Pistoleer Cavalry Units
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/cavalry_4.dds"
+	texture = "gfx/interface/icons/invention_icons/light_cavalry_4.dds"
 	category = military
 
 	modifier = {
@@ -1277,6 +1295,20 @@ reformed_army_training = {
 
 	ai_weight = {
 		value = 2
+	}
+}
+
+arquebusier = {
+	# Unlocks Arquebusier Unit
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/light_infantry_4.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
 	}
 }
 
@@ -1744,5 +1776,19 @@ three_decker = {
 			limit = { navy_size >= 5 }
 			add = 0.5
 		}
+	}
+}
+
+light_dragoon = {
+	# Unlocks Light Dragoon
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/light_cavalry_6.dds"
+	category = military
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
 	}
 }

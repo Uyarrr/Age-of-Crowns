@@ -6,7 +6,7 @@ combat_unit_type_heavy_cavalry_1 = {
 
     conscript_peasant_levies = no
 
-    unlocking_technologies = { horsemen }
+    unlocking_technologies = { armored_horseman }
 
     upkeep_modifier = {
         goods_input_warhorse_add = 1
@@ -40,7 +40,7 @@ combat_unit_type_heavy_cavalry_2 = {
 
     conscript_peasant_levies = no
 
-    unlocking_technologies = { cavalrymen }
+    unlocking_technologies = { armored_cavalryman }
 
     upkeep_modifier = {
         goods_input_weapons_add = 2
@@ -105,7 +105,7 @@ combat_unit_type_heavy_cavalry_4 = {
 
     conscript_peasant_levies = no
 
-    unlocking_technologies = { pistoleer }
+    unlocking_technologies = { heavy_lancer }
 
     battle_modifier = {
         unit_offense_add = 58
@@ -136,7 +136,7 @@ combat_unit_type_heavy_cavalry_5 = {
 
     conscript_peasant_levies = no
 
-    unlocking_technologies = { hussar }
+    unlocking_technologies = { gallop_cavalry }
 
     battle_modifier = {
         unit_offense_add = 65
