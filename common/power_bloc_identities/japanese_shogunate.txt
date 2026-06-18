@@ -1,7 +1,5 @@
-identity_japanese_empire = {
+identity_japanese_shogunate = {
 	power_bloc_modifier = {
-		power_bloc_customs_union_bool = yes
-
 		power_bloc_mandate_progress_per_great_power_member_add = -15
 		power_bloc_mandate_progress_per_major_power_member_add = -8
 		power_bloc_mandate_progress_per_minor_power_member_add = 3
@@ -18,7 +16,6 @@ identity_japanese_empire = {
 	leader_modifier = {
 		country_prestige_mult = 0.10
 		country_influence_add = 100
-		country_liberty_desire_of_subjects_add = -0.05
 	}
 
 	can_leave = {
@@ -136,16 +133,6 @@ identity_japanese_empire = {
 				has_law = law_type:law_monarchy
 			}
 			add = 100
-		}
-
-		if = {
-			limit = {
-				OR = {
-					has_strategy = ai_strategy_maintain_power_balance
-					has_strategy = ai_strategy_austrian_hegemony
-				}
-			}
-			add = 150
 		}
 
 		if = {
