@@ -282,8 +282,7 @@ alchemy = {
 
 	modifier = {
 		state_harvest_condition_disease_outbreak_impact_mult = -0.1
-		country_weekly_innovation_add = 5
-		country_weekly_innovation_max_add = 5
+		state_building_hospital_max_level_add = 1
 	}
 
 	unlocking_technologies = {
@@ -782,6 +781,7 @@ anatomy = {
 	modifier = {
 		state_harvest_condition_disease_outbreak_impact_mult = -0.15
 		state_mortality_mult = -0.02
+		state_building_hospital_max_level_add = 1
 	}
 
 	unlocking_technologies = {
@@ -1016,6 +1016,7 @@ surgery = {
 	modifier = {
 		state_harvest_condition_disease_outbreak_impact_mult = -0.10
 		state_mortality_mult = -0.02
+		state_building_hospital_max_level_add = 1
 	}
 
 	unlocking_technologies = {
@@ -1266,6 +1267,7 @@ pharmacology = {
 	modifier = {
 		state_harvest_condition_disease_outbreak_impact_mult = -0.15
 		state_mortality_mult = -0.02
+		state_building_hospital_max_level_add = 1
 	}
 
 	unlocking_technologies = {
@@ -1460,6 +1462,7 @@ sanitation = {
 	modifier = {
 		state_harvest_condition_disease_outbreak_impact_mult = -0.10
 		state_mortality_mult = -0.02
+		state_building_hospital_max_level_add = 1
 	}
 
 	unlocking_technologies = {
@@ -1535,6 +1538,7 @@ vaccination = {
 	modifier = {
 		state_harvest_condition_disease_outbreak_impact_mult = -0.10
 		state_mortality_mult = -0.02
+		state_building_hospital_max_level_add = 1
 	}
 
 	unlocking_technologies = {

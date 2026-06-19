@@ -14,9 +14,15 @@
 		}
 	}
 
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 3
+			country_weekly_innovation_add = 2
+		}
+	}
+
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = 0.001
 			state_mortality_mult = -0.01
 		}
 	}
@@ -42,9 +48,15 @@ pm_building_hospital_main_2 = {
 		}
 	}
 
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 6
+			country_weekly_innovation_add = 4
+		}
+	}
+
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = 0.002
 			state_mortality_mult = -0.03
 		}
 	}
@@ -70,9 +82,15 @@ pm_building_hospital_main_3 = {
 		}
 	}
 
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 9
+			country_weekly_innovation_add = 6
+		}
+	}
+
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = 0.003
 			state_mortality_mult = -0.05
 		}
 	}

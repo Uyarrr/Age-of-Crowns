@@ -270,6 +270,14 @@ goods_input_medicaments_add={
 	}
 }
 
+goods_input_incense_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
 ##################################################### OUTPUT ##############################################
 
 goods_output_stone_add={
@@ -537,6 +545,14 @@ goods_output_fur_add={
 }
 
 goods_output_medicaments_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_incense_add={
 	decimals=1
 	color=bad
 	game_data={

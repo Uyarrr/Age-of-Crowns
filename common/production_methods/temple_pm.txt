@@ -5,7 +5,7 @@
 		workforce_scaled = {
 			# input goods
 			goods_input_glass_add = 1
-			goods_input_cloth_add = 2
+			goods_input_clothes_add = 2
 			goods_input_copper_add = 2
 			goods_input_paper_add = 1
 			goods_input_tools_add = 1
@@ -21,11 +21,17 @@
 		}
 	}
 
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 10
+			country_weekly_innovation_add = 5
+		}
+	}
+
 	state_modifiers = {
 		workforce_scaled = {
-			state_pop_support_movement_radical_mult = -0.10
-			state_clergymen_education_access_add = 0.90
-			state_clerks_education_access_add = 0.90
+			state_radicals_from_political_movements_mult = -0.10
+			state_education_access_add = 0.05
 		}
 	}
 }

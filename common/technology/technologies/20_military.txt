@@ -1033,7 +1033,23 @@ handgonner = {
 	}
 }
 
+ordnance_casting = {
+	# Unlocks Cannonry PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/cannons.dds"
+	category = military
+
+	unlocking_technologies = {
+		falconet
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}
+
 ### ERA 4
+
 engineer_corps = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/engineer_corps.dds"
@@ -1113,6 +1129,7 @@ expanded_salt_collecting = {
 	category = military
 
 	unlocking_technologies = {
+		deep_sea_fishing
 	}
 
 	ai_weight = {
@@ -1141,6 +1158,7 @@ deep_sea_fishing = {
 	category = military
 
 	unlocking_technologies = {
+		naval_reformation
 	}
 
 	ai_weight = {
@@ -1279,6 +1297,21 @@ pinnace = {
 	}
 }
 
+matchlock_mechanisms = {
+	# Unlocks Firearms PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/firearms.dds"
+	category = military
+
+	unlocking_technologies = {
+		arquebusier
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}
+
 galleon = {
 	# Unlocks Galleon
 	era = era_4
@@ -1327,6 +1360,21 @@ arquebusier = {
 	}
 }
 
+barrel_boring = {
+	# Unlocks Cannonry PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/cannons.dds"
+	category = military
+
+	unlocking_technologies = {
+		chambered_cannon
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
 ################################################### ERA 5 ##############################
 military_revolution = {
 	era = era_5
@@ -1360,14 +1408,14 @@ steel_weapons = {
 	}
 }
 
-mechanized_arms_industry = {
+state_armories = {
 	# Unlocks Arms Industry
 	era = era_5
 	texture = "gfx/interface/icons/goods_icons/firearms.dds"
 	category = military
 
 	unlocking_technologies = {
-		musketeer
+		military_revolution
 	}
 
 	ai_weight = {
@@ -1421,14 +1469,32 @@ commercial_fishing_fleets = {
 musketeer = {
 	#Unlocks Musketeer Infantry Units
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/infantry_5.dds"
+	texture = "gfx/interface/icons/invention_icons/heavy_infantry_5.dds"
 	category = military
 
 	modifier = {
 	}
 
 	unlocking_technologies = {
-		military_revolution
+		state_armories
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+skirmisher = {
+	#Unlocks Skirmisher Infantry Units
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/light_infantry_5.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		state_armories
 	}
 
 	ai_weight = {
@@ -1446,7 +1512,7 @@ hussar = {
 	}
 
 	unlocking_technologies = {
-		state_warhorse_breeding
+		military_revolution
 	}
 
 	ai_weight = {
@@ -1464,7 +1530,7 @@ gallop_cavalry = {
 	}
 
 	unlocking_technologies = {
-		state_warhorse_breeding
+		hussar
 	}
 
 	ai_weight = {
@@ -1605,6 +1671,21 @@ two_decker = {
 	}
 }
 
+state_arsenals = {
+	# Unlocks Cannonry PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/cannons.dds"
+	category = military
+
+	unlocking_technologies = {
+		royal_mortar
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
 #################################################### ERA 6
 
 levee_en_masse = {
@@ -1624,11 +1705,28 @@ levee_en_masse = {
 	}
 }
 
+rifleman = {
+	#Unlocks Rifleman Infantry Units
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/light_infantry_6.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		esprit_de_corps
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
 
 fusilier = {
 	#Unlocks Fusilier Infantry Units
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/infantry_6.dds"
+	texture = "gfx/interface/icons/invention_icons/heavy_infantry_6.dds"
 	category = military
 
 	modifier = {
@@ -1636,6 +1734,24 @@ fusilier = {
 
 	unlocking_technologies = {
 		levee_en_masse
+	}
+
+	ai_weight = {
+		value = 3 # Important tech in general
+	}
+}
+
+interchangeable_parts = {
+	#Unlocks Firearms PM
+	era = era_6
+	texture = "gfx/interface/icons/goods_icons/firearms.dds"
+	category = military
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		fusilier
 	}
 
 	ai_weight = {
@@ -1801,6 +1917,7 @@ light_dragoon = {
 	category = military
 
 	unlocking_technologies = {
+		esprit_de_corps
 	}
 
 	ai_weight = {
