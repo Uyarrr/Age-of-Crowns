@@ -220,11 +220,11 @@ building_chili_plantation = {
 
 building_ivory_camp = {
 	building_group = bg_plantations
-	icon = "gfx/interface/icons/building_icons/chili_plantation_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/ivory_camp_uyr.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {
-		hunting
+		ivory_hunting
 	}
 
 	city_type = farm

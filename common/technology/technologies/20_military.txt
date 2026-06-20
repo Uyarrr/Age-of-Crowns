@@ -311,7 +311,7 @@ military_drill = {
 	category = military
 
 	unlocking_technologies = {
-		professional_training
+		professional_army
 	}
 
 	modifier = {
@@ -330,7 +330,7 @@ shock_tactics = {
 	category = military
 
 	unlocking_technologies = {
-		cavalrymen
+		professional_training
 	}
 
 	modifier = {
@@ -416,6 +416,21 @@ cavalryman = {
 	}
 }
 
+armored_cavalryman = {
+	#Unlocks  Heavy Cavalryman Cavalry
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/heavy_cavalry_2.dds"
+	category = military
+
+	unlocking_technologies = {
+		cavalryman
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 mediterranean_galley = {
 	#Unlocks Age 2 Galley
 	era = era_2
@@ -423,7 +438,7 @@ mediterranean_galley = {
 	category = military
 
 	unlocking_technologies = {
-		net_and_line_fishing
+		renaissance_shipbuilding
 	}
 
 	ai_weight = {
@@ -438,6 +453,7 @@ net_and_line_fishing = {
 	category = military
 
 	unlocking_technologies = {
+		distant_markets
 	}
 
 	ai_weight = {
@@ -467,6 +483,7 @@ extra_supplies = {
 	category = military
 
 	unlocking_technologies = {
+		military_drill
 	}
 
 	ai_weight = {
@@ -474,17 +491,41 @@ extra_supplies = {
 	}
 }
 
-hulk = {
-	# Unlocks Hulk
+early_carrack = {
+	# Unlocks Barque
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/hulk.dds"
+	texture = "gfx/interface/icons/invention_icons/early_carrack.dds"
+	category = military
+
+	unlocking_technologies = {
+		mediterranean_galley
+	}
+
+	ai_weight = {
+		value = 3
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
+renaissance_shipbuilding = {
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/navy.dds"
 	category = military
 
 	unlocking_technologies = {
 	}
 
+	modifier = {
+		ship_max_distance_to_port_add = 1
+	}
+
 	ai_weight = {
-		value = 3
+		value = 2
 
 		# Important for anyone with a navy
 		if = {
@@ -501,6 +542,7 @@ barque = {
 	category = military
 
 	unlocking_technologies = {
+		renaissance_shipbuilding
 	}
 
 	ai_weight = {
@@ -514,13 +556,14 @@ barque = {
 	}
 }
 
-early_carrack = {
-	# Unlocks Barque
+hulk = {
+	# Unlocks Hulk
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/early_carrack.dds"
+	texture = "gfx/interface/icons/invention_icons/hulk.dds"
 	category = military
 
 	unlocking_technologies = {
+		barque
 	}
 
 	ai_weight = {
@@ -540,6 +583,7 @@ distant_markets = {
 	category = military
 
 	unlocking_technologies = {
+		renaissance_shipbuilding
 	}
 
 	modifier = {
@@ -1187,6 +1231,7 @@ selective_breeding = {
 	category = military
 
 	unlocking_technologies = {
+		heavy_lancer
 	}
 
 	ai_weight = {
@@ -1353,6 +1398,21 @@ arquebusier = {
 	category = military
 
 	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+heavy_lancer = {
+	# Unlocks Heavy Lancer Unit
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/heavy_cavalry_4.dds"
+	category = military
+
+	unlocking_technologies = {
+		engineer_corps
 	}
 
 	ai_weight = {

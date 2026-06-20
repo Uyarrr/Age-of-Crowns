@@ -7,8 +7,7 @@
 			goods_input_weapons_add = 5
 
 			# output goods
-			goods_output_fur_add = 15
-			goods_output_meat_add = 5
+			goods_output_ivory_add = 20
 		}
 
 		level_scaled = {
@@ -22,7 +21,7 @@ pm_building_ivory_camp_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		expanded_fiber_farming
+		behaviorism
 	}
 
 	building_modifiers = {
@@ -31,8 +30,7 @@ pm_building_ivory_camp_main_2 = {
 			goods_input_weapons_add = 10
 
 			# output goods
-			goods_output_fur_add = 35
-			goods_output_meat_add = 15
+			goods_output_ivory_add = 40
 		}
 
 		level_scaled = {
@@ -55,8 +53,7 @@ pm_building_ivory_camp_main_3 = {
 			goods_input_firearms_add = 15
 
 			# output goods
-			goods_output_fur_add = 55
-			goods_output_meat_add = 25
+			goods_output_ivory_add = 60
 		}
 
 		level_scaled = {
@@ -79,8 +76,7 @@ pm_building_ivory_camp_main_4 = {
 			goods_input_firearms_add = 20
 
 			# output goods
-			goods_output_fur_add = 75
-			goods_output_meat_add = 35
+			goods_output_ivory_add = 80
 		}
 
 		level_scaled = {
