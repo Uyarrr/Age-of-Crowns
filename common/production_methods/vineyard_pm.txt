@@ -22,7 +22,7 @@ pm_building_vineyard_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		grafting_techniques
 	}
 
 	building_modifiers = {
@@ -30,7 +30,7 @@ pm_building_vineyard_main_2 = {
 			# input goods
 			goods_input_fruit_add = 15
 			goods_input_wood_add = 4
-			goods_input_glass_add = 2
+			goods_input_pottery_add = 2
 			# output goods
 			goods_output_wine_add = 25
 		}
@@ -78,7 +78,7 @@ pm_building_vineyard_main_4 = {
 			# input goods
 			goods_input_fruit_add = 35
 			goods_input_wood_add = 12
-			goods_input_pottery_add = 8
+			goods_input_glass_add = 8
 			# output goods
 			goods_output_wine_add = 75
 		}
