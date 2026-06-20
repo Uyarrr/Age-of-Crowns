@@ -360,14 +360,11 @@ ROM = {
 	ai_will_do = { always = yes }
 
 	possible = {
+		has_technology_researched = nation_formation
 		NOR = {
 			c:AUS ?= this
 			c:KUK ?= this
 		}
-	}
-
-	possible = {
-		has_technology_researched = nation_formation
 	}
 }
 

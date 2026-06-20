@@ -461,14 +461,14 @@ net_and_line_fishing = {
 	}
 }
 
-bronze_weapons = {
-	# Unlocks Weapon Workshop Bronze PM
+iron_weapons = {
+	# Unlocks Weapon Workshop PM
 	era = era_2
 	texture = "gfx/interface/icons/goods_icons/weapons.dds"
 	category = military
 
 	unlocking_technologies = {
-		men_at_arms
+		man_at_arms
 	}
 
 	ai_weight = {
@@ -826,7 +826,7 @@ colonial_horse_breeding = {
 	}
 }
 
-iron_weapons = {
+pattern_welding = {
 	# Unlocks Weapon Workshop PM
 	era = era_3
 	texture = "gfx/interface/icons/goods_icons/weapons.dds"

@@ -448,6 +448,21 @@ perfumery = {
 	}
 }
 
+jewelry = {
+	# Unlocks Jewelry Workshop
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/jewelry.dds"
+	category = production
+
+	unlocking_technologies = {
+		metallurgy
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
 
 ######## AGE 2 ##########
 
@@ -1016,23 +1031,6 @@ standardized_planks_and_bricks = {
 
 	ai_weight = {
 		value = 3 # very important tech
-	}
-}
-
-patio_process = {
-	#Unlocks Second PM for Gold and Silver Mines
-	era = era_3
-	texture = "gfx/interface/icons/goods_icons/gold.dds"
-	category = production
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 2 # very important tech
 	}
 }
 
