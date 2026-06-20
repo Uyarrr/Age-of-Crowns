@@ -4,14 +4,16 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-
+			goods_input_fruit_add = 10
+			goods_input_wood_add = 2
+			goods_input_pottery_add = 1
 			# output goods
 			goods_output_wine_add = 15
 		}
 
 		level_scaled = {
 			building_employment_laborers_add = 2250
-			building_employment_farmers_add = 750
+			building_employment_shopkeepers_add = 750
 		}
 	}
 }
@@ -26,15 +28,16 @@ pm_building_vineyard_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
-
+			goods_input_fruit_add = 15
+			goods_input_wood_add = 4
+			goods_input_glass_add = 2
 			# output goods
-			goods_output_wine_add = 30
+			goods_output_wine_add = 25
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 1875
-			building_employment_farmers_add = 1125
+			building_employment_laborers_add = 2250
+			building_employment_shopkeepers_add = 750
 		}
 	}
 }
@@ -49,15 +52,16 @@ pm_building_vineyard_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 10
-
+			goods_input_fruit_add = 25
+			goods_input_wood_add = 8
+			goods_input_glass_add = 6
 			# output goods
-			goods_output_wine_add = 60
+			goods_output_wine_add = 40
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 1500
-			building_employment_farmers_add = 1500
+			building_employment_laborers_add = 2250
+			building_employment_shopkeepers_add = 750
 		}
 	}
 }
@@ -72,15 +76,16 @@ pm_building_vineyard_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 15
-
+			goods_input_fruit_add = 35
+			goods_input_wood_add = 12
+			goods_input_pottery_add = 8
 			# output goods
-			goods_output_wine_add = 45
+			goods_output_wine_add = 75
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 1125
-			building_employment_farmers_add = 1875
+			building_employment_laborers_add = 2250
+			building_employment_shopkeepers_add = 750
 		}
 	}
 }
