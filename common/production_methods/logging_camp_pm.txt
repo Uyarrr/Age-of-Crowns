@@ -19,9 +19,6 @@
 pm_building_logging_camp_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
-	unlocking_technologies = {
-		expanded_logging
-	}
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -44,7 +41,7 @@ pm_building_logging_camp_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		expanded_logging
 	}
 
 	building_modifiers = {
