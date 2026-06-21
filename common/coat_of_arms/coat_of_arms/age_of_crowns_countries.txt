@@ -1560,3 +1560,47 @@ NEV_flanders = { # Nevers qtly Dampierre-Flanders
 		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
     }
 }
+
+DMS = { # Desmond
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "black"
+
+	@dms_scale = 0.26
+
+	colored_emblem = {
+		texture = "ce_ermine_spot.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.26 0.02 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.50 0.02 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.74 0.02 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.38 0.14 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.62 0.14 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.50 0.26 } scale = { @dms_scale @dms_scale } }			
+		instance = { position = { 0.0 0.24 } scale = { @dms_scale @dms_scale } }	
+		instance = { position = { 0.135 0.37 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.27 0.50 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.0 0.50 } scale = { @dms_scale @dms_scale } }		
+		instance = { position = { 0.0 0.76 } scale = { @dms_scale @dms_scale } }	
+		instance = { position = { 0.135 0.63 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 1.0 0.24 } scale = { @dms_scale @dms_scale } }	
+		instance = { position = { 0.865 0.37 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.73 0.50 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 1.0 0.50 } scale = { @dms_scale @dms_scale } }		
+		instance = { position = { 1.0 0.76 } scale = { @dms_scale @dms_scale } }		
+		instance = { position = { 0.865 0.63 } scale = { @dms_scale @dms_scale } }	
+		instance = { position = { 0.26 0.98 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.50 0.98 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.74 0.98 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.38 0.86 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.62 0.86 } scale = { @dms_scale @dms_scale } }
+		instance = { position = { 0.50 0.74 } scale = { @dms_scale @dms_scale } }		
+	}
+	colored_emblem = {
+		texture = "ce_saltire_thin.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
