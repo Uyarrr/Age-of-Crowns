@@ -461,7 +461,7 @@ s:STATE_ANHALT = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:T56
+			country = c:THU
 			owned_provinces = { x3C9B93 }
 			state_type = incorporated
 		}
@@ -1505,7 +1505,7 @@ s:STATE_BRUNSWICK = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:T56
+			country = c:THU
 			owned_provinces = { x4C16EA }
 			state_type = incorporated
 		}
@@ -2244,17 +2244,17 @@ s:STATE_CONGO_ORIENTALE = {
 		}
 s:STATE_CONNAUGHT = {
 	create_state = {
-		country = c:C21
+		country = c:CLR
 		owned_provinces = { x641238 x656D90 xC7847D xE5C4FE }
 		state_type = incorporated
 	}
 	create_state = {
-		country = c:U84
+		country = c:SLN
 		owned_provinces = { x5DEF58 x85F13B xA060C0 }
 		state_type = incorporated
 	}
 	create_state = {
-		country = c:V86
+		country = c:THO
 		owned_provinces = { x20E0C0 }
 		state_type = incorporated
 	}
@@ -2990,7 +2990,7 @@ s:STATE_ELIZAVETPOL = {
 	}
 s:STATE_EMILIA = {
 		create_state = {
-			country = c:LOM
+			country = c:MLO
 			owned_provinces = { x0B3B43 x700120 }
 			state_type = incorporated
 		}
@@ -5081,7 +5081,7 @@ s:STATE_LEINSTER = {
 		state_type = unincorporated
 	}
 	create_state = {
-		country = c:TE1
+		country = c:TYR
 		owned_provinces = { xAEAF93 }
 		state_type = incorporated
 	}
@@ -5091,12 +5091,12 @@ s:STATE_LEINSTER = {
 		state_type = incorporated
 	}
 	create_state = {
-		country = c:W35
+		country = c:FLY
 		owned_provinces = { x1E9CB2 xCC3E24 }
 		state_type = incorporated
 	}
 	create_state = {
-		country = c:W97
+		country = c:KID
 		owned_provinces = { x2060C0 xA2A933 }
 		state_type = incorporated
 	}
@@ -5233,7 +5233,7 @@ s:STATE_LINDI = {
 		}
 s:STATE_LOMBARDY = {
 		create_state = {
-			country = c:LOM
+			country = c:MLO
 			owned_provinces = { x3F1E38 xD04060 }
 			state_type = incorporated
 		}
@@ -5248,7 +5248,7 @@ s:STATE_LOMBARDY = {
 			state_type = incorporated
 		}
 		add_homeland = cu:north_italian
-		add_claim = c:LOM
+		add_claim = c:MLO
 	}
 s:STATE_LORRAINE = {
 		create_state = {
@@ -6122,17 +6122,17 @@ s:STATE_MUNSTER = {
 		state_type = incorporated
 	}
 	create_state = {
-		country = c:U07
+		country = c:ORD
 		owned_provinces = { xBDAB32 xD9BB34 }
 		state_type = incorporated
 	}
 	create_state = {
-		country = c:MNS
+		country = c:MCM
 		owned_provinces = { xE06040 xECB3A5 xF53F9B }
 		state_type = incorporated
 	}
 	create_state = {
-		country = c:V86
+		country = c:THO
 		owned_provinces = { x02061B x849939 }
 		state_type = incorporated
 	}
@@ -7597,7 +7597,7 @@ s:STATE_PICARDY = {
 	}
 s:STATE_PIEDMONT = {
 		create_state = {
-			country = c:LOM
+			country = c:MLO
 			owned_provinces = { x1140E0 xACB500 xF00544 }
 			state_type = incorporated
 		}
@@ -8250,12 +8250,12 @@ s:STATE_SAXONY = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:T56
+			country = c:THU
 			owned_provinces = { x5141A0 x51C021 x66FE0A xC00A37 xD0C021 }
 			state_type = incorporated
 		}
 		add_homeland = cu:north_german
-		add_claim = c:T56
+		add_claim = c:THU
 		add_claim = c:MAI
 	}
 s:STATE_SCANIA = {
@@ -9668,12 +9668,12 @@ s:STATE_ULSTER = {
 		state_type = unincorporated
 	}
 	create_state = {
-		country = c:TC1
+		country = c:TRY
 		owned_provinces = { xA0C0E0 }
 		state_type = incorporated
 	}
 	create_state = {
-		country = c:TE1
+		country = c:TYR
 		owned_provinces = { x0A38AF x2BE1C8 xA06040 xAA6FA1 xCFCD2B }
 		state_type = incorporated
 	}

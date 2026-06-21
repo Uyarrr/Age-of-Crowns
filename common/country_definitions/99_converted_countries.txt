@@ -1755,7 +1755,7 @@ C20 ?= {
 	capital = STATE_WEST_COUNTRY
 }
 
-C21 ?= {
+CLR ?= {
 	color = { 43 229 108 }
 	country_type = recognized
 	tier = principality
@@ -2326,15 +2326,6 @@ DE2 ?= {
 	tier = principality
 	cultures = { athabaskan }
 	capital = STATE_NORTHWEST_TERRITORIES
-}
-
-DMS ?= {
-	color = { 100 221 90 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_MUNSTER
 }
 
 DEI ?= {
@@ -5311,7 +5302,7 @@ LNG ?= {
 	capital = STATE_CONGO
 }
 
-LOM ?= {
+MLO ?= {
 	color = { 146 108 146 }
 	country_type = recognized
 	tier = kingdom
@@ -9432,7 +9423,7 @@ T55 ?= {
 	capital = STATE_INNER_MOROCCO
 }
 
-T56 ?= {
+THU ?= {
 	color = { 66 126 157 }
 	country_type = recognized
 	tier = principality
@@ -9853,24 +9844,6 @@ TBI ?= {
 	capital = STATE_CHAD
 }
 
-TC1 ?= {
-	color = { 25 190 31 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_ULSTER
-}
-
-TE1 ?= {
-	color = { 66 157 22 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_ULSTER
-}
-
 TEK ?= {
 	color = { 93 64 156 }
 	country_type = decentralized
@@ -10274,7 +10247,7 @@ U06 ?= {
 	capital = STATE_ULSTER
 }
 
-U07 ?= {
+ORD ?= {
 	color = { 95 221 121 }
 	country_type = recognized
 	tier = city_state
@@ -10965,15 +10938,6 @@ U83 ?= {
 	capital = STATE_SOUTH_MADAGASCAR
 }
 
-U84 ?= {
-	color = { 191 155 203 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_CONNAUGHT
-}
-
 U85 ?= {
 	color = { 129 109 9 }
 	country_type = recognized
@@ -11148,15 +11112,6 @@ ULR ?= {
 	tier = principality
 	cultures = { aborigine }
 	capital = STATE_NORTHERN_TERRITORY
-}
-
-ULS ?= {
-	color = { 204 84 40 }
-	country_type = recognized
-	tier = principality
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_ULSTER
 }
 
 UM1 ?= {
@@ -12058,15 +12013,6 @@ V85 ?= {
 	capital = STATE_SHAN_STATES
 }
 
-V86 ?= {
-	color = { 104 137 140 }
-	country_type = recognized
-	tier = principality
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_MUNSTER
-}
-
 V87 ?= {
 	color = { 168 121 129 }
 	country_type = recognized
@@ -12540,15 +12486,6 @@ W34 ?= {
 	cultures = { maghrebi }
 	religion = sunni
 	capital = STATE_FEZ
-}
-
-W35 ?= {
-	color = { 237 138 22 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_LEINSTER
 }
 
 W36 ?= {
@@ -13100,15 +13037,6 @@ W96 ?= {
 	capital = STATE_GUATEMALA
 }
 
-W97 ?= {
-	color = { 104 130 172 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_LEINSTER
-}
-
 W98 ?= {
 	color = { 81 123 210 }
 	country_type = recognized
@@ -13498,15 +13426,6 @@ X23 ?= {
 	cultures = { north_italian }
 	religion = catholic
 	capital = STATE_VENETIA
-}
-
-X24 ?= {
-	color = { 166 68 72 }
-	country_type = recognized
-	tier = kingdom
-	cultures = { catalan }
-	religion = catholic
-	capital = STATE_CATALONIA
 }
 
 X25 ?= {

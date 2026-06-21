@@ -231,17 +231,6 @@ KUK = {
 	cultures = { south_german hungarian romanian croat czech slovak slovene }
 }
 
-DEN = {
-	color = hsv{ 1.01  0.8  0.5 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { danish }
-	capital = STATE_ZEALAND
-}
-
 FIN = {
 	color = { 205  212  228 }
 
@@ -251,17 +240,6 @@ FIN = {
 
 	cultures = { finnish swedish }
 	capital = STATE_UUSIMAA
-}
-
-SWE = {
-	color = { 87  130  199 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { swedish }
-	capital = STATE_SVEALAND
 }
 
 SCN = {
@@ -344,17 +322,6 @@ POR = {
 	capital = STATE_ESTREMADURA
 }
 
-SCO = {
-	color = { 199  175  12 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { scottish scottish_gaelic }
-	capital = STATE_LOWLANDS
-}
-
 ALA = {
 	color = { 0 140 230 }
 
@@ -364,30 +331,6 @@ ALA = {
 
 	cultures = { scottish_gaelic }
 	capital = STATE_HIGHLANDS
-}
-
-ENG = {
-	color = { 180 99 58 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { british }
-	capital = STATE_HOME_COUNTIES
-}
-
-ULS = {
-	color = hsv360{ 16  80  80 }
-
-	country_type = recognized
-
-	tier = principality
-
-	cultures = { scottish irish }
-	religion = protestant
-	capital = STATE_ULSTER
-	is_named_from_capital = yes
 }
 
 WLS = {
@@ -625,18 +568,6 @@ OLD = {
 	capital = STATE_HANNOVER
 }
 
-SAX = {
-	color = { 155  147  180 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	cultures = { north_german }
-	capital = STATE_SAXONY
-	is_named_from_capital = yes
-}
-
 WUR = {
 	color = { 111  162  128 }
 
@@ -647,18 +578,6 @@ WUR = {
 	cultures = { south_german }
 	religion = protestant
 	capital = STATE_WURTTEMBERG
-	is_named_from_capital = yes
-}
-
-LOM = {
-	color = { 146  108  146 }
-
-	country_type = recognized
-
-	tier = principality
-
-	cultures = { north_italian }
-	capital = STATE_LOMBARDY
 	is_named_from_capital = yes
 }
 
@@ -2422,7 +2341,7 @@ ICL = {
 	is_named_from_capital = yes
 }
 
-ARA = {
+AIA = {
 	color = { 66  111  19 }
 
 	country_type = unrecognized

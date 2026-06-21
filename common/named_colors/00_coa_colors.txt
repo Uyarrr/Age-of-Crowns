@@ -37,7 +37,15 @@ colors = {
 	blue_steel = { 32 112 165 }
 	asturian_blue = { 0 102 255 }
 
-	red_secondary = hsv360 	{	358 75 60 }
+	# Secondaries
+	white_secondary = 	hsv360 	{	0		0	90	} 	
+	black_secondary = 	hsv360 	{	0		0		18	}	
+	red_secondary = 	hsv360 	{	358	75	60	}
+	blue_secondary = 	hsv360 	{	216	75	52	} 	
+	green_secondary = 	hsv360 	{	97	70	45	}
+
+	#Others
+	red_mid = 			hsv360 	{	358 	78	55	}
 
 	# Japan	
 	indigo = 				hsv360 	{	232	64	32	}		# ai
@@ -46,5 +54,7 @@ colors = {
 	green_pine = 		hsv360 	{	130	70	35	}		# midori
 	brown_tea = 			hsv360 	{	24	45	33	} 		# kobicha	
 	red_scarlet = 			hsv360 	{	08 	82	60	}  		# japanese red-orange
-	yellow_pale = 		hsv360 	{	45	65	85	}	
+	yellow_pale = 		hsv360 	{	45	65	85	}
+
+
 }
