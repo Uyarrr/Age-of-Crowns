@@ -1,0 +1,109 @@
+﻿# Leinster
+LEI ?= {
+	color = { 0 170 0 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_LEINSTER
+}
+
+# Tyrconnell
+TRY ?= {
+	color = { 255 140 0 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_ULSTER
+}
+
+# Tyrone
+TYR ?= {
+	color = { 206 17 38 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_ULSTER
+}
+
+# Thomond
+THO ?= {
+	color = { 120 180 255 }
+	country_type = recognized
+	tier = principality
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_MUNSTER
+}
+
+# Munster
+MCM ?= {
+	color = { 0 51 153 }
+	country_type = recognized
+	tier = principality
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_MUNSTER
+}
+
+# Offaly
+FLY ?= {
+	color = { 128 0 128 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_LEINSTER
+}
+
+# Desmond
+DMS ?= {
+	color = { 255 215 0 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_MUNSTER
+}
+
+# Ulster
+ULS ?= {
+	color = { 139 69 19 }
+	country_type = recognized
+	tier = principality
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_ULSTER
+}
+
+# Kildare
+KID ?= {
+	color = { 255 255 255 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_LEINSTER
+}
+
+# Clanricarde
+CLR ?= {
+	color = { 0 102 51 }
+	country_type = recognized
+	tier = principality
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_CONNAUGHT
+}
+
+# Sligo
+SLN ?= {
+	color = { 0 140 140 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_CONNAUGHT
+}

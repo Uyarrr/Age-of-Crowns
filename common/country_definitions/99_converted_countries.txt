@@ -1636,7 +1636,7 @@ C06 ?= {
 	country_type = decentralized
 	tier = principality
 	cultures = { taino }
-	capital = STATE_ARKANSAS
+	capital = STATE_CUBA
 }
 
 C07 ?= {
@@ -1755,7 +1755,7 @@ C20 ?= {
 	capital = STATE_WEST_COUNTRY
 }
 
-C21 ?= {
+CLR ?= {
 	color = { 43 229 108 }
 	country_type = recognized
 	tier = principality
@@ -2328,15 +2328,6 @@ DE2 ?= {
 	capital = STATE_NORTHWEST_TERRITORIES
 }
 
-DE3 ?= {
-	color = { 100 221 90 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_MUNSTER
-}
-
 DEI ?= {
 	color = { 20 80 80 }
 	country_type = colonial
@@ -2733,7 +2724,14 @@ EE1 ?= {
 	capital = STATE_ANTIOQUIA
 }
 
-
+EGY ?= {
+	color = { 255 205 155 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { misri }
+	religion = sunni
+	capital = STATE_LOWER_EGYPT
+}
 
 EI1 ?= {
 	color = { 218 233 117 }
@@ -2969,6 +2967,15 @@ G01 ?= {
 	capital = STATE_EASTERN_NORWAY
 }
 
+G02 ?= {
+	color = { 41 39 64 }
+	country_type = recognized
+	tier = principality
+	cultures = { swedish }
+	religion = catholic
+	capital = STATE_GOTLAND
+}
+
 G03 ?= {
 	color = { 190 131 81 }
 	country_type = decentralized
@@ -2982,7 +2989,7 @@ G04 ?= {
 	country_type = decentralized
 	tier = city_state
 	cultures = { waroid }
-	capital = STATE_ARKANSAS
+	capital = STATE_CUBA
 }
 
 G05 ?= {
@@ -3684,6 +3691,15 @@ HTH ?= {
 	capital = STATE_PEGU
 }
 
+HUN ?= {
+	color = { 152 85 92 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { hungarian }
+	religion = catholic
+	capital = STATE_CENTRAL_HUNGARY
+}
+
 HYD ?= {
 	color = { 89 141 140 }
 	country_type = unrecognized
@@ -4238,7 +4254,7 @@ K11 ?= {
 	country_type = decentralized
 	tier = principality
 	cultures = { japanese }
-	capital = STATE_KYUSHU
+	capital = STATE_CHUBU
 }
 
 K12 ?= {
@@ -5089,6 +5105,15 @@ L14 ?= {
 	capital = STATE_LEINSTER
 }
 
+L15 ?= {
+	color = { 110 50 50 }
+	country_type = recognized
+	tier = principality
+	cultures = { east_german }
+	religion = catholic
+	capital = STATE_TARTU
+}
+
 L16 ?= {
 	color = { 56 125 113 }
 	country_type = decentralized
@@ -5277,7 +5302,7 @@ LNG ?= {
 	capital = STATE_CONGO
 }
 
-LOM ?= {
+MLO ?= {
 	color = { 146 108 146 }
 	country_type = recognized
 	tier = kingdom
@@ -5641,6 +5666,15 @@ M33 ?= {
 	tier = city_state
 	cultures = { berber }
 	capital = STATE_CANARY_ISLANDS
+}
+
+M34 ?= {
+	color = { 125 46 36 }
+	country_type = recognized
+	tier = principality
+	cultures = { polish }
+	religion = catholic
+	capital = STATE_GREATER_POLAND
 }
 
 M35 ?= {
@@ -6656,6 +6690,15 @@ NNV ?= {
 	capital = STATE_NUNAVUT
 }
 
+NOR ?= {
+	color = { 117 165 188 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { norwegian }
+	religion = catholic
+	capital = STATE_WESTERN_NORWAY
+}
+
 NPU ?= {
 	color = { 157 55 55 }
 	country_type = recognized
@@ -7446,6 +7489,15 @@ PNS ?= {
 	tier = empire
 	cultures = { hawaiian maori melanesian micronesian polynesian yuanzhumin }
 	capital = STATE_HAWAIIAN_ISLANDS
+}
+
+POL ?= {
+	color = { 197 92 106 }
+	country_type = recognized
+	tier = principality
+	cultures = { polish }
+	religion = catholic
+	capital = STATE_WEST_GALICIA
 }
 
 POM ?= {
@@ -9353,6 +9405,15 @@ T53 ?= {
 	capital = STATE_AL_RIF
 }
 
+T54 ?= {
+	color = { 102 105 104 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_EAST_PRUSSIA
+}
+
 T55 ?= {
 	color = { 140 45 100 }
 	country_type = unrecognized
@@ -9362,7 +9423,7 @@ T55 ?= {
 	capital = STATE_INNER_MOROCCO
 }
 
-T56 ?= {
+THU ?= {
 	color = { 66 126 157 }
 	country_type = recognized
 	tier = principality
@@ -9378,6 +9439,15 @@ T57 ?= {
 	cultures = { moluccan }
 	religion = animist
 	capital = STATE_MOLUCCAS
+}
+
+T58 ?= {
+	color = { 213 0 39 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { uzbek }
+	religion = sunni
+	capital = STATE_HERAT
 }
 
 T59 ?= {
@@ -9443,6 +9513,15 @@ T65 ?= {
 	capital = STATE_MADRAS
 }
 
+T66 ?= {
+	color = { 148 122 151 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_german }
+	religion = catholic
+	capital = STATE_SOUTH_TYROL
+}
+
 T67 ?= {
 	color = { 81 144 126 }
 	country_type = unrecognized
@@ -9468,6 +9547,15 @@ T69 ?= {
 	cultures = { occitan }
 	religion = catholic
 	capital = STATE_GUYENNE
+}
+
+T70 ?= {
+	color = { 40 164 157 }
+	country_type = recognized
+	tier = grand_principality
+	cultures = { greek }
+	religion = orthodox
+	capital = STATE_TRABZON
 }
 
 T71 ?= {
@@ -9515,7 +9603,7 @@ T75 ?= {
 	capital = STATE_NORTH_ISLAND
 }
 
-TVR ?= {
+T76 ?= {
 	color = { 136 158 183 }
 	country_type = recognized
 	tier = principality
@@ -9603,6 +9691,15 @@ T85 ?= {
 	cultures = { north_german }
 	religion = catholic
 	capital = STATE_ELBE
+}
+
+T86 ?= {
+	color = { 246 196 24 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { kannada }
+	religion = hindu
+	capital = STATE_KURNOOL
 }
 
 T87 ?= {
@@ -9713,6 +9810,24 @@ T98 ?= {
 	capital = STATE_CHAD
 }
 
+T99 ?= {
+	color = { 131 141 142 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_YAROSLAVL
+}
+
+TAR ?= {
+	color = { 31 218 229 }
+	country_type = recognized
+	tier = principality
+	cultures = { tatar }
+	religion = sunni
+	capital = STATE_CHUVASHIA
+}
+
 TAS ?= {
 	color = { 224 194 152 }
 	country_type = colonial
@@ -9727,15 +9842,6 @@ TBI ?= {
 	tier = principality
 	cultures = { teda }
 	capital = STATE_CHAD
-}
-
-TC1 ?= {
-	color = { 25 190 31 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_ULSTER
 }
 
 TEK ?= {
@@ -10081,6 +10187,15 @@ TY2 ?= {
 	capital = STATE_SOUTH_AUSTRALIA
 }
 
+U00 ?= {
+	color = { 195 104 228 }
+	country_type = recognized
+	tier = principality
+	cultures = { french }
+	religion = catholic
+	capital = STATE_BURGUNDY
+}
+
 U01 ?= {
 	color = { 245 40 145 }
 	country_type = decentralized
@@ -10132,7 +10247,7 @@ U06 ?= {
 	capital = STATE_ULSTER
 }
 
-U07 ?= {
+ORD ?= {
 	color = { 95 221 121 }
 	country_type = recognized
 	tier = city_state
@@ -10202,7 +10317,25 @@ U14 ?= {
 	capital = STATE_JIANGXI
 }
 
-NRM ?= {
+U15 ?= {
+	color = { 0 120 145 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { tatar }
+	religion = sunni
+	capital = STATE_URALSK
+}
+
+U16 ?= {
+	color = { 97 126 37 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_NOVGOROD
+}
+
+U17 ?= {
 	color = { 131 138 116 }
 	country_type = recognized
 	tier = city_state
@@ -10274,6 +10407,15 @@ U24 ?= {
 	capital = STATE_OROMIA
 }
 
+U25 ?= {
+	color = { 43 136 207 }
+	country_type = recognized
+	tier = city_state
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_ORYOL
+}
+
 U26 ?= {
 	color = { 117 140 36 }
 	country_type = recognized
@@ -10283,7 +10425,23 @@ U26 ?= {
 	capital = STATE_UPPER_SILESIA
 }
 
+U27 ?= {
+	color = { 216 121 139 }
+	country_type = recognized
+	tier = principality
+	cultures = { french }
+	religion = catholic
+	capital = STATE_ORLEANS
+}
 
+U28 ?= {
+	color = { 234 233 124 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { bedouin }
+	religion = sunni
+	capital = STATE_LARISTAN
+}
 
 U29 ?= {
 	color = { 134 175 31 }
@@ -10384,6 +10542,15 @@ U39 ?= {
 	capital = STATE_CONNECTICUT
 }
 
+U40 ?= {
+	color = { 157 174 219 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_UMBRIA
+}
+
 U41 ?= {
 	color = { 69 22 59 }
 	country_type = unrecognized
@@ -10447,7 +10614,7 @@ U47 ?= {
 	capital = STATE_MALAYA
 }
 
-PRO ?= {
+U48 ?= {
 	color = { 93 160 163 }
 	country_type = recognized
 	tier = principality
@@ -10465,7 +10632,7 @@ U49 ?= {
 	capital = STATE_ACEH
 }
 
-PKV ?= {
+U50 ?= {
 	color = { 82 123 95 }
 	country_type = recognized
 	tier = principality
@@ -10618,6 +10785,15 @@ U66 ?= {
 	capital = STATE_BADEN
 }
 
+U67 ?= {
+	color = { 227 221 77 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_YAROSLAVL
+}
+
 U68 ?= {
 	color = { 66 126 118 }
 	country_type = unrecognized
@@ -10652,6 +10828,15 @@ U71 ?= {
 	cultures = { north_german }
 	religion = catholic
 	capital = STATE_RUHR
+}
+
+U72 ?= {
+	color = { 146 134 77 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_RYAZAN
 }
 
 U73 ?= {
@@ -10726,6 +10911,15 @@ U80 ?= {
 	capital = STATE_SICILY
 }
 
+U81 ?= {
+	color = { 165 171 115 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_TUSCANY
+}
+
 U82 ?= {
 	color = { 224 74 54 }
 	country_type = unrecognized
@@ -10742,15 +10936,6 @@ U83 ?= {
 	cultures = { malagasy }
 	religion = animist
 	capital = STATE_SOUTH_MADAGASCAR
-}
-
-U84 ?= {
-	color = { 191 155 203 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_CONNAUGHT
 }
 
 U85 ?= {
@@ -10861,6 +11046,15 @@ U96 ?= {
 	capital = STATE_QUEBEC
 }
 
+U97 ?= {
+	color = { 33 119 58 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_POMERANIA
+}
+
 U98 ?= {
 	color = { 59 126 59 }
 	country_type = recognized
@@ -10918,15 +11112,6 @@ ULR ?= {
 	tier = principality
 	cultures = { aborigine }
 	capital = STATE_NORTHERN_TERRITORY
-}
-
-ULS ?= {
-	color = { 204 84 40 }
-	country_type = recognized
-	tier = principality
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_ULSTER
 }
 
 UM1 ?= {
@@ -11270,6 +11455,24 @@ V23 ?= {
 	capital = STATE_CEYLON
 }
 
+V24 ?= {
+	color = { 106 127 183 }
+	country_type = recognized
+	tier = city_state
+	cultures = { occitan }
+	religion = catholic
+	capital = STATE_EAST_AEGEAN_ISLANDS
+}
+
+V25 ?= {
+	color = { 255 133 59 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_german }
+	religion = catholic
+	capital = STATE_BADEN
+}
+
 V26 ?= {
 	color = { 84 124 48 }
 	country_type = recognized
@@ -11342,6 +11545,15 @@ V33 ?= {
 	capital = STATE_FIJI
 }
 
+V34 ?= {
+	color = { 236 47 47 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_TUSCANY
+}
+
 V35 ?= {
 	color = { 79 139 99 }
 	country_type = recognized
@@ -11376,6 +11588,15 @@ V38 ?= {
 	cultures = { irish }
 	religion = catholic
 	capital = STATE_LEINSTER
+}
+
+V39 ?= {
+	color = { 149 186 37 }
+	country_type = recognized
+	tier = principality
+	cultures = { wallonian }
+	religion = catholic
+	capital = STATE_WALLONIA
 }
 
 V40 ?= {
@@ -11423,6 +11644,15 @@ V44 ?= {
 	capital = STATE_HANNOVER
 }
 
+V45 ?= {
+	color = { 135 109 147 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_ELBE
+}
+
 V46 ?= {
 	color = { 132 133 197 }
 	country_type = unrecognized
@@ -11466,6 +11696,24 @@ V50 ?= {
 	cultures = { tamil }
 	religion = hindu
 	capital = STATE_MADRAS
+}
+
+V51 ?= {
+	color = { 189 115 99 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_ANHALT
+}
+
+V52 ?= {
+	color = { 178 145 87 }
+	country_type = recognized
+	tier = grand_principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_HESSE
 }
 
 V53 ?= {
@@ -11529,6 +11777,15 @@ V59 ?= {
 	cultures = { south_german }
 	religion = catholic
 	capital = STATE_TYROL
+}
+
+V60 ?= {
+	color = { 150 231 150 }
+	country_type = recognized
+	tier = city_state
+	cultures = { irish }
+	religion = catholic
+	capital = STATE_MUNSTER
 }
 
 V61 ?= {
@@ -11693,6 +11950,15 @@ V78 ?= {
 	capital = STATE_MALAYA
 }
 
+V79 ?= {
+	color = { 155 170 136 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_german }
+	religion = catholic
+	capital = STATE_ALSACE_LORRAINE
+}
+
 V80 ?= {
 	color = { 153 210 135 }
 	country_type = decentralized
@@ -11747,15 +12013,6 @@ V85 ?= {
 	capital = STATE_SHAN_STATES
 }
 
-V86 ?= {
-	color = { 104 137 140 }
-	country_type = recognized
-	tier = principality
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_MUNSTER
-}
-
 V87 ?= {
 	color = { 168 121 129 }
 	country_type = recognized
@@ -11763,6 +12020,15 @@ V87 ?= {
 	cultures = { greek }
 	religion = orthodox
 	capital = STATE_PELOPONNESE
+}
+
+V88 ?= {
+	color = { 206 181 97 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_MOSCOW
 }
 
 V89 ?= {
@@ -12047,6 +12313,15 @@ W14 ?= {
 	capital = STATE_QUEENSLAND
 }
 
+W15 ?= {
+	color = { 121 163 58 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_POMERANIA
+}
+
 W16 ?= {
 	color = { 241 45 53 }
 	country_type = decentralized
@@ -12103,6 +12378,15 @@ W22 ?= {
 	cultures = { burmese }
 	religion = mahayana
 	capital = STATE_PEGU
+}
+
+W23 ?= {
+	color = { 72 194 212 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_SCHLESWIG_HOLSTEIN
 }
 
 W24 ?= {
@@ -12186,6 +12470,15 @@ W32 ?= {
 	capital = STATE_CRIMEA
 }
 
+W33 ?= {
+	color = { 21 128 21 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_ROMAGNA
+}
+
 W34 ?= {
 	color = { 224 146 113 }
 	country_type = unrecognized
@@ -12193,15 +12486,6 @@ W34 ?= {
 	cultures = { maghrebi }
 	religion = sunni
 	capital = STATE_FEZ
-}
-
-W35 ?= {
-	color = { 237 138 22 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_LEINSTER
 }
 
 W36 ?= {
@@ -12220,6 +12504,15 @@ W37 ?= {
 	cultures = { siouan }
 	religion = animist
 	capital = STATE_MICHIGAN
+}
+
+W38 ?= {
+	color = { 165 89 27 }
+	country_type = recognized
+	tier = principality
+	cultures = { dutch }
+	religion = catholic
+	capital = STATE_FRIESLAND
 }
 
 W39 ?= {
@@ -12257,6 +12550,16 @@ W42 ?= {
 	religion = catholic
 	capital = STATE_GELRE
 }
+
+W43 ?= {
+	color = { 218 215 56 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_PIEDMONT
+}
+
 W44 ?= {
 	color = { 255 133 15 }
 	country_type = unrecognized
@@ -12300,6 +12603,33 @@ W48 ?= {
 	cultures = { telegu }
 	religion = hindu
 	capital = STATE_HYDERABAD
+}
+
+W49 ?= {
+	color = { 193 179 127 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { tatar }
+	religion = sunni
+	capital = STATE_ASTRAKHAN
+}
+
+W50 ?= {
+	color = { 88 45 148 }
+	country_type = recognized
+	tier = city_state
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_BRUNSWICK
+}
+
+W51 ?= {
+	color = { 210 220 175 }
+	country_type = recognized
+	tier = principality
+	cultures = { andalucian }
+	religion = sunni
+	capital = STATE_UPPER_ANDALUSIA
 }
 
 W52 ?= {
@@ -12635,7 +12965,7 @@ W88 ?= {
 	capital = STATE_GUATEMALA
 }
 
-KAR ?= {
+W89 ?= {
 	color = { 90 160 190 }
 	country_type = recognized
 	tier = principality
@@ -12705,15 +13035,6 @@ W96 ?= {
 	cultures = { mayan }
 	religion = animist
 	capital = STATE_GUATEMALA
-}
-
-W97 ?= {
-	color = { 104 130 172 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_LEINSTER
 }
 
 W98 ?= {
@@ -13053,6 +13374,15 @@ X17 ?= {
 	capital = STATE_GEORGIA
 }
 
+X18 ?= {
+	color = { 187 206 247 }
+	country_type = recognized
+	tier = principality
+	cultures = { occitan }
+	religion = catholic
+	capital = STATE_AQUITAINE
+}
+
 X19 ?= {
 	color = { 83 30 157 }
 	country_type = decentralized
@@ -13143,6 +13473,15 @@ X29 ?= {
 	capital = STATE_ALABAMA
 }
 
+X30 ?= {
+	color = { 113 112 96 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_italian }
+	religion = catholic
+	capital = STATE_ATTICA
+}
+
 X31 ?= {
 	color = { 61 248 196 }
 	country_type = decentralized
@@ -13168,6 +13507,15 @@ X33 ?= {
 	cultures = { south_german }
 	religion = catholic
 	capital = STATE_BAVARIA
+}
+
+X34 ?= {
+	color = { 218 155 75 }
+	country_type = recognized
+	tier = city_state
+	cultures = { occitan }
+	religion = catholic
+	capital = STATE_AUVERGNE_LIMOUSIN
 }
 
 X35 ?= {
@@ -13287,6 +13635,15 @@ X47 ?= {
 	capital = STATE_EAST_JAVA
 }
 
+X48 ?= {
+	color = { 66 32 81 }
+	country_type = recognized
+	tier = principality
+	cultures = { russian }
+	religion = orthodox
+	capital = STATE_NOVGOROD
+}
+
 X49 ?= {
 	color = { 36 109 194 }
 	country_type = unrecognized
@@ -13314,6 +13671,15 @@ X51 ?= {
 	capital = STATE_GOLD_COAST
 }
 
+X52 ?= {
+	color = { 0 140 165 }
+	country_type = recognized
+	tier = principality
+	cultures = { french }
+	religion = catholic
+	capital = STATE_AUVERGNE_LIMOUSIN
+}
+
 X53 ?= {
 	color = { 229 153 34 }
 	country_type = unrecognized
@@ -13332,6 +13698,15 @@ X54 ?= {
 	capital = STATE_MANDALAY
 }
 
+X55 ?= {
+	color = { 123 90 90 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_BRANDENBURG
+}
+
 X56 ?= {
 	color = { 118 193 153 }
 	country_type = recognized
@@ -13341,7 +13716,7 @@ X56 ?= {
 	capital = STATE_FLANDERS
 }
 
-BGG ?= {
+X57 ?= {
 	color = { 240 205 140 }
 	country_type = recognized
 	tier = principality
@@ -13411,6 +13786,15 @@ X64 ?= {
 	cultures = { malagasy }
 	religion = animist
 	capital = STATE_NORTH_MADAGASCAR
+}
+
+X65 ?= {
+	color = { 148 30 70 }
+	country_type = recognized
+	tier = principality
+	cultures = { french }
+	religion = catholic
+	capital = STATE_BURGUNDY
 }
 
 X66 ?= {
@@ -13555,6 +13939,15 @@ X81 ?= {
 	cultures = { gujarati }
 	religion = hindu
 	capital = STATE_MALWA
+}
+
+X82 ?= {
+	color = { 114 70 103 }
+	country_type = recognized
+	tier = principality
+	cultures = { turkish }
+	religion = sunni
+	capital = STATE_KASTAMONU
 }
 
 X83 ?= {

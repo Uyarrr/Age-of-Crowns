@@ -765,16 +765,6 @@ GOS ?= {
 	capital = STATE_BRUNSWICK
 }
 
-# Leinster
-LEI ?= {
-	color = { 66 157 22 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_LEINSTER
-}
-
 # Beloozero
 BLZ ?= {
 	color = { 66 32 81 }
@@ -785,16 +775,6 @@ BLZ ?= {
 	capital = STATE_NOVGOROD
 }
 
-# Munster
-MNS ?= {
-	color = { 150 231 150 }
-	country_type = recognized
-	tier = city_state
-	cultures = { irish }
-	religion = catholic
-	capital = STATE_MUNSTER
-}
-
 # Mazovia
 MZV ?= {
 	color = { 125 46 36 }
@@ -803,16 +783,6 @@ MZV ?= {
 	cultures = { polish }
 	religion = catholic
 	capital = STATE_GREATER_POLAND
-}
-
-# Aragon
-ARA ?= {
-	color = { 166 68 72 }
-	country_type = recognized
-	tier = kingdom
-	cultures = { aragonese }
-	religion = catholic
-	capital = STATE_CATALONIA
 }
 
 # Siena
@@ -923,4 +893,14 @@ NEV ?= {
 	cultures = { french }
 	religion = catholic
 	capital = STATE_BURGUNDY
+}
+
+# Aragon
+ARA ?= {
+	color = { 166 68 72 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { aragonese }
+	religion = catholic
+	capital = STATE_CATALONIA
 }

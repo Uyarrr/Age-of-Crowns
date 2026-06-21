@@ -1466,6 +1466,23 @@ deep_shaft_gold_mining = {
 	}
 }
 
+horse_harnessing = {
+	#Unlocks Farm Plow PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	category = production
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
 ################################################ ERA 5 ################################################
 manufactories = {
 	era = era_5

@@ -172,11 +172,11 @@
 	}
 	c:SAX ?= {
 		create_diplomatic_pact = {
-			country = c:T56
+			country = c:THU
 			type = personal_union
 		}
 	}
-	c:T56 ?= {
+	c:THU ?= {
 		add_liberty_desire = -21
 	}
 	c:T91 ?= {

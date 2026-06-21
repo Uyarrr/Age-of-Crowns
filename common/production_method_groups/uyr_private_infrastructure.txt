@@ -58,6 +58,16 @@ pmg_building_port_main = {
 	}
 }
 
+pmg_building_port_extra = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_port_extra_0
+		pm_building_port_extra_england
+	}
+}
+
 ################## Caravan Hub #######################
 pmg_building_caravan_hub_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"

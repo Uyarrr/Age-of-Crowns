@@ -1,21 +1,15 @@
 ﻿england_production_1 = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/dan_royal_danish_navy.dds"
-	category = society
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = production
 
     can_research = no
 
 	modifier = {
-		state_contiguous_incorporation_speed_mult = 0.25
+		goods_output_fabric_mult = 0.2
 	}
 
 	on_researched = {
-		every_state_region = {
-			limit = {
-				region = sr:region_anatolia
-			}
-			add_claim = root
-		}
 	}
 
 	ai_weight = {
@@ -23,18 +17,70 @@
 	}
 }
 
-ottoman_trait_2 = {
-	# The Kalmar Union (Denmark–Norway–Sweden) forced Denmark to develop unusually centralized royal administration and noble management for the period.
+england_military_1 = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = military
+
+    can_research = no
+
+	modifier = {
+		unit_combat_unit_type_light_infantry_1_offense_mult = 0.10
+		unit_combat_unit_type_light_infantry_1_defense_mult = 0.20
+		unit_combat_unit_type_light_infantry_2_offense_mult = 0.10
+		unit_combat_unit_type_light_infantry_2_defense_mult = 0.20
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_society_1 = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_sailors_max_add = 8000
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_production_2 = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/dan_rentekammer_advance.dds"
-	category = society
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = production
+
+	modifier = {
+		goods_output_navalsupplies_mult = 0.2
+	}
+
+    can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_military_2 = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = military
 
     can_research = no
 
 	modifier = {
-		country_authority_mult = 0.05
-		interest_group_ig_landowners_pol_str_mult = -0.10
-		country_liberty_desire_of_subjects_add = -0.04
+		ship_hit_points_max_mult = 0.20
+		ship_max_distance_to_port_add = 1
 	}
 
 	ai_weight = {
@@ -42,15 +88,29 @@ ottoman_trait_2 = {
 	}
 }
 
-ottoman_trait_3 = {
-	# Denmark invested heavily in protecting Baltic shipping lanes, convoying grain, timber, iron, and naval supplies vital to European powers.
+england_society_2 = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_weekly_innovation_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_production_3 = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
-	category = society
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = production
 
 	modifier = {
-		country_convoys_capacity_mult = 0.20
-		state_trade_advantage_mult = 0.10
+		state_trade_capacity_mult = 0.2
 	}
 
     can_research = no
@@ -60,19 +120,61 @@ ottoman_trait_3 = {
 	}
 }
 
-ottoman_trait_4 = {
-	# Denmark was one of the earliest adopters of Lutheranism (1536). Unlike many realms, the Reformation was not a chaotic bottom-up movement but a top-down royal project: monasteries were dissolved, church lands confiscated, and the king became head of the national church. This massively strengthened the crown, stabilized religion internally, and redirected church wealth into the state.
+england_military_3 = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = military
+
+    can_research = no
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_society_3 = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_influence_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_production_4 = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
-	category = society
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = production
+
+	modifier = {
+	}
+
+    can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_military_4 = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = military
 
     can_research = no
 
 	modifier = {
-		country_conversion_delta_threshold_add = 0.15
-		country_clergymen_pol_str_mult = -0.20
-		country_institution_cost_institution_schools_mult = -0.10
-		country_authority_mult = 0.05
+		goods_output_firearms_mult = 0.2
 	}
 
 	ai_weight = {
@@ -80,18 +182,46 @@ ottoman_trait_4 = {
 	}
 }
 
-ottoman_trait_5 = {
-	# The Danish crown professionalized the navy earlier than many continental states, treating it as a permanent arm of royal power.
+england_society_4 = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_production_5 = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
-	category = society
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = production
+
+	modifier = {
+		goods_output_tools_mult = 0.25
+	}
+
+    can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_military_5 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = military
 
     can_research = no
 
 	modifier = {
-		unit_navy_offense_mult = 0.1
-		unit_navy_defense_mult = 0.1
-		state_building_naval_base_max_level_add = 10
+		country_navy_goods_cost_mult  = -0.15
 	}
 
 	ai_weight = {
@@ -99,19 +229,65 @@ ottoman_trait_5 = {
 	}
 }
 
-ottoman_trait_6 = {
-	# Denmark abolished serfdom earlier and more peacefully than most of Europe, integrating peasants into a productive agrarian economy.
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/abolished_serfdom.dds"
+england_society_5 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = society
 
+    can_research = no
+
 	modifier = {
-		state_working_adult_ratio_add = 0.05
-		interest_group_ig_landowners_pol_str_mult = -0.10
-		building_group_bg_agriculture_throughput_add = 0.15
+		state_construction_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_production_6 = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = production
+
+	modifier = {
+		goods_output_clothes_mult = 0.25
 	}
 
     can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_military_6 = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = military
+
+    can_research = no
+
+	modifier = {
+		ship_blockade_strength_mult = 0.40
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_society_6 = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		unit_combat_unit_type_light_infantry_6_offense_mult = 0.10
+		unit_combat_unit_type_light_infantry_6_defense_mult = 0.10
+	}
 
 	ai_weight = {
 		value = 1

@@ -134,7 +134,7 @@ pm_building_rice_farm_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		potatoes
 	}
 
 	building_modifiers = {
@@ -183,9 +183,11 @@ pm_building_grain_farm_plow_0 = {
 
 pm_building_grain_farm_plow_1 = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+
 	unlocking_technologies = {
-		windmill
+		heavy_plow
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -204,9 +206,11 @@ pm_building_grain_farm_plow_1 = {
 
 pm_building_grain_farm_plow_2 = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+
 	unlocking_technologies = {
-		manured_fields
+		horse_harnessing
 	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -220,6 +224,4 @@ pm_building_grain_farm_plow_2 = {
 		building_employment_laborers_add = -2000
 		}
 	}
-	
-	
 }

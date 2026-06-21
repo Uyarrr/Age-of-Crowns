@@ -469,10 +469,10 @@ GOS = { # Goslar
 	}
 }
 
-MNS = { # Munster
+MCM = { # Munster
 	flag_definition = {
-		coa = MNS
-		subject_canton = MNS
+		coa = MCM
+		subject_canton = MCM
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = MNS_subject
 		priority = 1
@@ -671,4 +671,49 @@ NEV = { # Nevers
 			coa_def_hre_emperor_trigger = yes
 		}
 	}	
+}
+
+ULS = { # Ulster
+	flag_definition = {
+		coa = ULS
+		priority = 1
+	}
+	flag_definition = {
+		coa = ULS_escutcheon
+		priority = 10
+	}
+}
+
+MLO = { # Milan
+	flag_definition = {
+		coa = MLO
+		priority = 1
+	}
+	flag_definition = {
+		coa = MLO_duchy
+		priority = 999
+	}
+	flag_definition = {
+		coa = MLO_duchy_france
+		priority = 50
+		trigger = {
+			coa_def_capetian_trigger = yes
+			coa_def_duchy_or_higher_trigger = yes
+			coa_def_discovery_age_3_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = MLO_cross_ambrosian
+		priority = 100
+		trigger = {
+			has_reform = government_reform:ambrosian_republic_reform
+		}
+	}
+	flag_definition = {
+		coa = MLO_revolutionary_republic
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
 }

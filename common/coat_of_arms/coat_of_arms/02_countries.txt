@@ -908,44 +908,6 @@ AOT = {
 	}
 }
 
-ARA = {
-	pattern = "pattern_solid.tga"
-	color1 = "black"
-	color2 = "white"
-	color3 = "green"
-
-	colored_emblem = {
-		texture = "ce_tricolor_horizontal.dds"
-		color1 = "white"
-		color2 = "green"
-	}
-	colored_emblem = {
-		texture = "ce_rhombus.dds"
-		color1 = "red"
-		color2 = "red"
-		instance = { position = { 0 0.5 } }
-	}
-}
-ARA_republic = {
-	pattern = "pattern_solid.tga"
-	color1 = "red"
-	color2 = "white"
-	color3 = "black"
-
-	colored_emblem = {
-		texture = "ce_tricolor_horizontal.dds"
-		color1 = "white"
-		color2 = "black"
-	}
- 	colored_emblem = {
-		texture = "ce_star_05.dds"
-		color1 = "green"
-		color2 = "green"
-		instance = { scale = { 0.25 0.25 } position = { 0.33 0.5 } }
-		instance = { scale = { 0.25 0.25 } position = { 0.66 0.5 } }
-	}
-}
-
 ARG = { # Argentina
 	# Monarchy default flag
 
@@ -5208,7 +5170,7 @@ CHL_monarchy = {
 	}
 }
 CHL_fascist = {
-	# MNS/Partido Nacista
+	# MCM/Partido Nacista
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -13819,17 +13781,6 @@ LKT = { # Lakota Sioux
 	}
 }
 
-LOM = {
-	pattern = "pattern_solid.tga"
-	color1 = "white"
-
-	colored_emblem = {
-		texture = "ce_cross_england.dds"
-		color1 = "red"
-		color2 = "red"
-	}
-}
-
 LUA = { # Luang Prabang
 	pattern = "pattern_border_of_4.dds"
 	color1 = "red"
@@ -19045,7 +18996,7 @@ POR_communist = {
 	}
 }
 POR_fascist = {
-	# MNS flag
+	# MCM flag
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 

@@ -8865,45 +8865,6 @@ SAV = { # Savoy
 	}
 }
 
-SAX = { # Saxony
-	flag_definition = {
-		coa = SAX
-		allow_overlord_canton = yes
-		subject_canton = SAX
-		priority = 1
-	}
-	flag_definition = {
-		coa = SAX_republic
-		subject_canton = SAX_republic
-		priority = 10
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = SAX_absolute_monarchy
-		subject_canton = SAX_absolute_monarchy
-		priority = 20
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = SAX_communist
-		priority = 1500
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = SAX_subject_PRU
-		priority = 50
-		trigger = {
-			coa_def_prussian_ensign_trigger = yes
-		}
-	}
-}
-
 SCA = { # Scandinavia
 	flag_definition = {
 		coa = SCA
@@ -10120,47 +10081,6 @@ UKR = { # Ukraine
 		priority = 1500
 		trigger = {
 			coa_def_fascist_flag_trigger = yes
-		}
-	}
-}
-
-ULS = { # Ulster / Northern Ireland flegs
-	flag_definition = {
-		coa = ULS_uk
-		priority = 5
-		trigger = {
-			coa_def_british_ensign_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = ULS_uk_monarchy
-		priority = 6
-		trigger = {
-			coa_def_british_ensign_trigger = yes
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = ULS_third_way
-		priority = 10
-		trigger = {
-			coa_def_independent_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = ULS_third_way
-		priority = 11
-		trigger = {
-			coa_def_independent_trigger = yes
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = ULS_theocracy
-		subject_canton = ENG
-		priority = 15
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
 		}
 	}
 }

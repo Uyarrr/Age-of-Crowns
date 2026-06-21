@@ -1530,7 +1530,7 @@ s:STATE_ANHALT = {
 				size = 146
 			}
 		}
-		region_state:T56 = {
+		region_state:THU = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -5194,7 +5194,7 @@ s:STATE_BRUNSWICK = {
 				size = 33655
 			}
 		}
-		region_state:T56 = {
+		region_state:THU = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -7524,24 +7524,28 @@ s:STATE_CONGO_ORIENTALE = {
 		}
 	}
 s:STATE_CONNAUGHT = {
-		region_state:C21 = {
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 150172
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 200229
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 66743
-			}
+	region_state:CLR = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 150172
 		}
 	}
+	region_state:SLN = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 200229
+		}
+	}
+	region_state:THO = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 66743
+		}
+	}
+}
 s:STATE_CONNECTICUT = {
 		region_state:N04 = {
 			create_pop = {
@@ -10081,7 +10085,7 @@ s:STATE_ELIZAVETPOL = {
 		}
 	}
 s:STATE_EMILIA = {
-		region_state:LOM = {
+		region_state:MLO = {
 			create_pop = {
 				culture = north_italian
 				religion = catholic
@@ -17925,61 +17929,67 @@ s:STATE_LEBANON = {
 		}
 	}
 s:STATE_LEINSTER = {
-		region_state:ENG = {
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 116055
-			}
-			create_pop = {
-				culture = irish
-				religion = jewish
-				size = 14
-			}
+	region_state:ENG = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 116055
 		}
-		region_state:LEI = {
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 29014
-			}
-			create_pop = {
-				culture = irish
-				religion = jewish
-				size = 4
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 130562
-			}
-			create_pop = {
-				culture = irish
-				religion = jewish
-				size = 16
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 108802
-			}
-			create_pop = {
-				culture = irish
-				religion = jewish
-				size = 13
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 195843
-			}
-			create_pop = {
-				culture = irish
-				religion = jewish
-				size = 24
-			}
+		create_pop = {
+			culture = irish
+			religion = jewish
+			size = 14
 		}
 	}
+	region_state:TYR = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 29014
+		}
+		create_pop = {
+			culture = irish
+			religion = jewish
+			size = 4
+		}
+	}
+	region_state:LEI = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 130562
+		}
+		create_pop = {
+			culture = irish
+			religion = jewish
+			size = 16
+		}
+	}
+	region_state:FLY = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 108802
+		}
+		create_pop = {
+			culture = irish
+			religion = jewish
+			size = 13
+		}
+	}
+	region_state:KID = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 195843
+		}
+		create_pop = {
+			culture = irish
+			religion = jewish
+			size = 24
+		}
+	}
+}
 s:STATE_LEON = {
 		region_state:CAS = {
 			create_pop = {
@@ -18526,7 +18536,7 @@ s:STATE_LINDI = {
 		}
 	}
 s:STATE_LOMBARDY = {
-		region_state:LOM = {
+		region_state:MLO = {
 			create_pop = {
 				culture = north_italian
 				religion = catholic
@@ -21554,29 +21564,35 @@ s:STATE_MOSUL = {
 		}
 	}
 s:STATE_MUNSTER = {
-		region_state:MNS = {
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 173705
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 202656
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 173705
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 154405
-			}
+	region_state:DMS = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 173705
 		}
 	}
+	region_state:ORD = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 202656
+		}
+	}
+	region_state:MCM = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 173705
+		}
+	}
+	region_state:THO = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 154405
+		}
+	}
+}
 s:STATE_MURCIA = {
 		region_state:CAS = {
 			create_pop = {
@@ -26076,7 +26092,7 @@ s:STATE_PICARDY = {
 		}
 	}
 s:STATE_PIEDMONT = {
-		region_state:LOM = {
+		region_state:MLO = {
 			create_pop = {
 				culture = north_italian
 				religion = catholic
@@ -28114,7 +28130,7 @@ s:STATE_SAXONY = {
 				size = 15
 			}
 		}
-		region_state:T56 = {
+		region_state:THU = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -32949,31 +32965,35 @@ s:STATE_ULIASTAI = {
 		}
 	}
 s:STATE_ULSTER = {
-		region_state:ENG = {
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 84220
-			}
-		}
-		region_state:ULS = {
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 157913
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 210550
-			}
-			create_pop = {
-				culture = irish
-				religion = catholic
-				size = 252661
-			}
+	region_state:ENG = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 84220
 		}
 	}
+	region_state:TRY = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 157913
+		}
+	}
+	region_state:TYR = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 210550
+		}
+	}
+	region_state:ULS = {
+		create_pop = {
+			culture = irish
+			religion = catholic
+			size = 252661
+		}
+	}
+}
 s:STATE_UMBRIA = {
 		region_state:PAP = {
 			create_pop = {
