@@ -676,11 +676,17 @@ NEV = { # Nevers
 ULS = { # Ulster
 	flag_definition = {
 		coa = ULS
-		priority = 1
+		priority = 999
 	}
 	flag_definition = {
 		coa = ULS_escutcheon
 		priority = 10
+		trigger = {
+			OR = {
+				coa_def_celtic_group_trigger = yes
+				coa_def_oneill_dynasty_trigger = yes
+			}
+		}
 	}
 }
 
@@ -721,7 +727,7 @@ MLO = { # Milan
 MFA = { # Montferrat
 	flag_definition = {
 		coa = MFA
-		priority = 1
+		priority = 999
 	}
 	flag_definition = {
 		coa = MFA_tricolor
@@ -735,7 +741,7 @@ MFA = { # Montferrat
 WAL = { # Wallachia
 	flag_definition = {
 		coa = WAL
-		priority = 1
+		priority = 999
 	}
 	flag_definition = {
 		coa = WAL_BYZ
@@ -749,7 +755,7 @@ WAL = { # Wallachia
 SER = { # Serbia
 	flag_definition = {
 		coa = SER
-		priority = 1
+		priority = 999
 	}
 	flag_definition = {
 		coa = SER_firesteels
