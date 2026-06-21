@@ -7,12 +7,13 @@
 
 	on_researched = {
 		if = {
-			limit = { this = c:TUR }
-			add_technology_researched = ottoman_trait_1
-		}
-		if = {
-			limit = { this = c:MOR }
-			add_technology_researched = morocco_trait_1
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_society_1
 		}
 	}
 
@@ -30,12 +31,13 @@ society_age_2 = {
 
 	on_researched = {
 		if = {
-			limit = { this = c:TUR }
-			add_technology_researched = ottoman_trait_2
-		}
-		if = {
-			limit = { this = c:MOR }
-			add_technology_researched = morocco_trait_2
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_society_2
 		}
 	}
 
@@ -53,12 +55,13 @@ society_age_3 = {
 
 	on_researched = {
 		if = {
-			limit = { this = c:TUR }
-			add_technology_researched = ottoman_trait_3
-		}
-		if = {
-			limit = { this = c:MOR }
-			add_technology_researched = morocco_trait_3
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_society_3
 		}
 	}
 
@@ -76,12 +79,13 @@ society_age_4 = {
 
 	on_researched = {
 		if = {
-			limit = { this = c:TUR }
-			add_technology_researched = ottoman_trait_4
-		}
-		if = {
-			limit = { this = c:MOR }
-			add_technology_researched = morocco_trait_4
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_society_4
 		}
 	}
 
@@ -99,12 +103,13 @@ society_age_5 = {
 
 	on_researched = {
 		if = {
-			limit = { this = c:TUR }
-			add_technology_researched = ottoman_trait_5
-		}
-		if = {
-			limit = { this = c:MOR }
-			add_technology_researched = morocco_trait_5
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_society_5
 		}
 	}
 
@@ -122,12 +127,13 @@ society_age_6 = {
 
 	on_researched = {
 		if = {
-			limit = { this = c:TUR }
-			add_technology_researched = ottoman_trait_6
-		}
-		if = {
-			limit = { this = c:MOR }
-			add_technology_researched = morocco_trait_6
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_society_6
 		}
 	}
 
@@ -141,6 +147,18 @@ production_age_1 = {
 
 	can_research = yes
 
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_production_1
+		}
+	}
+
 	ai_weight = { value = 3 }
 }
 
@@ -152,6 +170,18 @@ production_age_2 = {
 	unlocking_technologies = { production_age_1 }
 
 	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_production_2
+		}
+	}
 
 	ai_weight = { value = 3 }
 }
@@ -165,6 +195,18 @@ production_age_3 = {
 
 	can_research = yes
 
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_production_3
+		}
+	}
+
 	ai_weight = { value = 3 }
 }
 
@@ -176,6 +218,18 @@ production_age_4 = {
 	unlocking_technologies = { production_age_3 }
 
 	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_production_4
+		}
+	}
 
 	ai_weight = { value = 3 }
 }
@@ -189,6 +243,18 @@ production_age_5 = {
 
 	can_research = yes
 
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_production_5
+		}
+	}
+
 	ai_weight = { value = 3 }
 }
 
@@ -201,6 +267,18 @@ production_age_6 = {
 
 	can_research = yes
 
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_production_6
+		}
+	}
+
 	ai_weight = { value = 3 }
 }
 
@@ -210,6 +288,18 @@ military_age_1 = {
 	category = military
 
 	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_military_1
+		}
+	}
 
 	ai_weight = { value = 3 }
 }
@@ -223,6 +313,18 @@ military_age_2 = {
 
 	can_research = yes
 
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_military_2
+		}
+	}
+
 	ai_weight = { value = 3 }
 }
 
@@ -234,6 +336,18 @@ military_age_3 = {
 	unlocking_technologies = { military_age_2 }
 
 	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_military_3
+		}
+	}
 
 	ai_weight = { value = 3 }
 }
@@ -247,6 +361,18 @@ military_age_4 = {
 
 	can_research = yes
 
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_military_4
+		}
+	}
+
 	ai_weight = { value = 3 }
 }
 
@@ -259,6 +385,18 @@ military_age_5 = {
 
 	can_research = yes
 
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_military_5
+		}
+	}
+
 	ai_weight = { value = 3 }
 }
 
@@ -270,6 +408,18 @@ military_age_6 = {
 	unlocking_technologies = { military_age_5 }
 
 	can_research = yes
+
+	on_researched = {
+		if = {
+			limit = {
+				OR = {
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+			add_technology_researched = england_military_6
+		}
+	}
 
 	ai_weight = { value = 3 }
 }
