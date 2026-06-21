@@ -1,6 +1,6 @@
 ﻿england_production_1 = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/dan_royal_danish_navy.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = production
 
     can_research = no
@@ -19,7 +19,7 @@
 
 england_military_1 = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/dan_royal_danish_navy.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = military
 
     can_research = no
@@ -41,7 +41,7 @@ england_military_1 = {
 
 england_society_1 = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/dan_rentekammer_advance.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = society
 
     can_research = no
@@ -57,7 +57,7 @@ england_society_1 = {
 
 england_production_2 = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = production
 
 	modifier = {
@@ -73,7 +73,7 @@ england_production_2 = {
 
 england_military_2 = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = military
 
     can_research = no
@@ -90,7 +90,7 @@ england_military_2 = {
 
 england_society_2 = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = society
 
     can_research = no
@@ -106,7 +106,7 @@ england_society_2 = {
 
 england_production_3 = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = production
 
 	modifier = {
@@ -122,7 +122,7 @@ england_production_3 = {
 
 england_military_3 = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = military
 
     can_research = no
@@ -137,7 +137,7 @@ england_military_3 = {
 
 england_society_3 = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = society
 
     can_research = no
@@ -153,7 +153,7 @@ england_society_3 = {
 
 england_production_4 = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = production
 
 	modifier = {
@@ -168,7 +168,7 @@ england_production_4 = {
 
 england_military_4 = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = military
 
     can_research = no
@@ -184,7 +184,7 @@ england_military_4 = {
 
 england_society_4 = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = society
 
     can_research = no
@@ -199,10 +199,11 @@ england_society_4 = {
 
 england_production_5 = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = production
 
 	modifier = {
+		goods_output_tools_mult = 0.25
 	}
 
     can_research = no
@@ -214,13 +215,13 @@ england_production_5 = {
 
 england_military_5 = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = military
 
     can_research = no
 
 	modifier = {
-		goods_output_firearms_mult = 0.2
+		country_navy_goods_cost_mult  = -0.15
 	}
 
 	ai_weight = {
@@ -230,12 +231,13 @@ england_military_5 = {
 
 england_society_5 = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = society
 
     can_research = no
 
 	modifier = {
+		state_construction_mult = 0.05
 	}
 
 	ai_weight = {
@@ -245,7 +247,7 @@ england_society_5 = {
 
 england_production_6 = {
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/old_naval_traditions.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = production
 
 	modifier = {
@@ -261,7 +263,7 @@ england_production_6 = {
 
 england_military_6 = {
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/dan_danish_legislation.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = military
 
     can_research = no
@@ -277,7 +279,7 @@ england_military_6 = {
 
 england_society_6 = {
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/dan_admiralty_college.dds"
+	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = society
 
     can_research = no
