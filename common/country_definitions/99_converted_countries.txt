@@ -9558,7 +9558,7 @@ T70 ?= {
 	capital = STATE_TRABZON
 }
 
-T71 ?= {
+TRI ?= {
 	color = { 208 104 44 }
 	country_type = recognized
 	tier = grand_principality
@@ -11842,7 +11842,7 @@ V66 ?= {
 	capital = STATE_DELHI
 }
 
-V67 ?= {
+MFA ?= {
 	color = { 96 183 6 }
 	country_type = recognized
 	tier = city_state
@@ -12488,7 +12488,7 @@ W34 ?= {
 	capital = STATE_FEZ
 }
 
-W36 ?= {
+FOI ?= {
 	color = { 105 106 182 }
 	country_type = recognized
 	tier = principality
@@ -13071,6 +13071,7 @@ WAL ?= {
 	cultures = { romanian }
 	religion = orthodox
 	capital = STATE_WALLACHIA
+	is_named_from_capital = yes
 }
 
 WAS ?= {
@@ -13356,7 +13357,7 @@ X15 ?= {
 	capital = STATE_BLUE_NILE
 }
 
-X16 ?= {
+SFC ?= {
 	color = { 246 223 15 }
 	country_type = recognized
 	tier = city_state

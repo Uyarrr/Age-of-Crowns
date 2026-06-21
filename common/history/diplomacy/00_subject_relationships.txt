@@ -127,11 +127,11 @@
 	}
 	c:FRA ?= {
 		create_diplomatic_pact = {
-			country = c:W36
+			country = c:FOI
 			type = puppet
 		}
 	}
-	c:W36 ?= {
+	c:FOI ?= {
 		add_liberty_desire = -17.275
 	}
 	c:FRA ?= {
@@ -226,11 +226,11 @@
 	}
 	c:SAV ?= {
 		create_diplomatic_pact = {
-			country = c:V67
+			country = c:MFA
 			type = puppet
 		}
 	}
-	c:V67 ?= {
+	c:MFA ?= {
 		add_liberty_desire = -28
 	}
 	c:VEN ?= {

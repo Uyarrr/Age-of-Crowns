@@ -2208,3 +2208,306 @@ AIA_republic = {
 		instance = { scale = { 0.25 0.25 } position = { 0.66 0.5 } }
 	}
 }
+MFA = { # Montferrat
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chief.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+}
+MFA_tricolor = { # Montferrat - Simple Tricolor
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	97	70	35	}
+	color2 = "red_mid"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}
+}
+TRI = { # Trier - Diapering for difference
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = hsv360 	{	0		0		64	} 
+
+	colored_emblem = {
+		texture = "ce_cross.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
+	}
+	colored_emblem = {
+		texture = "ce_cross_diapering.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
+	}	
+}
+TRI_cross = { # Without diapering
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_cross.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+FLA = { # Flanders
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
+	}
+}
+FOI = { # Foix
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_pales_03.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+SFC = { # Strasbourg (Civic)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_bend.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+WAL = { # Wallachia - Ancient
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "yellow"
+	color4 = "red_secondary"
+	color5 = "green_light"
+	
+	colored_emblem = {
+		texture = "ce_mount_rock_in_base.dds"
+		color1 = color5
+		color2 = color5
+		instance = { position = { 0.51 0.715 } scale = { 1.0 0.65 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_falcon_rising_cross_wallachia.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.49 0.51 } scale = { 1.0 1.0 } }			
+	}	
+}
+WAL_blue = { # Wallachia - Late 15th c.
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	216	70	55	} 
+	color2 = "black"
+	color3 = "yellow"
+	color4 = "white"
+	
+	colored_emblem = {
+		texture = "ce_frame_circle.dds" # Eye BG
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.49 0.19 } scale = { 0.03 0.03 } }			
+	}
+	colored_emblem = {
+		texture = "ce_falcon_rising_cross_wallachia.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.49 0.51 } scale = { 1.0 1.0 } }			
+	}	
+}
+WAL_BYZ = { # Wallachia - Byzantine variant Basarab with canton of Byzantium (same design as Bulgaria)
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "yellow"
+	color2 = "green"
+	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+		mask = { 2 }
+	}	
+	colored_emblem = {
+		texture = "ce_barry_08.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	sub = {
+		parent = "sub_BYZ_annulets"
+		instance = { scale = { 0.5 0.5 } }
+	}	
+}
+WAL_late = { # Wallachia - Modern eagle variant in Romanian arms
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_eagle_wallachia_late.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.5 }  scale = { 0.95 0.95 } }
+	}
+	colored_emblem = {
+		texture = "ce_sun_radiant_small.dds"
+		color1 = color2
+		color2 = color2
+		color3= color1
+		instance = { position = { 0.10 0.15 }  scale = { 0.275 0.275 } }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_increscent_shield_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.90 0.16 } scale = { 0.225 0.225 } }
+	}
+}
+BRG = { # Berg
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "blue_light"
+	color4 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_lion_queue_forchee_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}
+}
+BRG_grand_duchy = { # Berg - Gd Duchy
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2				
+	}
+} 
+BRG_Julich = { # Berg-Jülich (inversion of the design)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+	color4 = "white"
+	color5 = "red"
+
+    sub = {
+        parent = "sub_lion_cr_qf_flag" # Q1 Q4 Berg
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		color1 = "yellow"
+		color2 = "black"
+		color3 = "red_secondary"
+    }
+    sub = {
+        parent = "sub_lion_flag" # Q2 Q3 Jülich
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		color1 = "yellow"
+		color2 = "black"
+		color3 = "red_secondary"
+    }
+    sub = {
+        parent = "sub_quartered_bold"
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+    }
+}
+SER = { # Serbia
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_eagle_doubleheaded_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.505 } scale = { 0.95 0.95 } }		
+	}
+}
+SER_empire = { # Serbia - Empire
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "white"
+	
+	colored_emblem = {
+		texture = "ce_solid.dds" # Eyes
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.385 0.157 } scale = { 0.025 0.025 } }			
+		instance = { position = { 0.615 0.157 } scale = { 0.025 0.025 } }					
+	}	
+	colored_emblem = {
+		texture = "ce_eagle_doubleheaded_crowned_wide.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "red_secondary"
+		instance = { position = { 0.5 0.505 } scale = { 0.95 0.95 } }		
+	}
+}
+SER_firesteels = { # Serbia - Variant of byzantine tetragrammatic cross
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	
+	colored_emblem = {
+		texture = "ce_cross_cantoned.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_fire_steel_serbia.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.24 0.22 } scale = { -0.525 0.45 } }
+		instance = { position = { 0.76 0.22 } scale = { 0.525 0.45 } }
+		instance = { position = { 0.24 0.78 } scale = { -0.525 0.45 } }
+		instance = { position = { 0.76 0.78 } scale = { 0.525 0.45 } }		
+	}
+}

@@ -297,7 +297,7 @@ s:STATE_ALSACE_LORRAINE = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:X16
+			country = c:SFC
 			owned_provinces = { x6E4891 }
 			state_type = incorporated
 		}
@@ -560,7 +560,7 @@ s:STATE_AQUITAINE = {
 			state_type = unincorporated
 		}
 		create_state = {
-			country = c:W36
+			country = c:FOI
 			owned_provinces = { xCD8E77 xF02080 }
 			state_type = incorporated
 		}
@@ -4987,7 +4987,7 @@ s:STATE_LANGUEDOC = {
 			state_type = unincorporated
 		}
 		create_state = {
-			country = c:W36
+			country = c:FOI
 			owned_provinces = { x3784B2 x5615DD x7C1D57 }
 			state_type = incorporated
 		}
@@ -6910,7 +6910,7 @@ s:STATE_NORTH_MADAGASCAR = {
 		}
 s:STATE_NORTH_RHINE = {
 		create_state = {
-			country = c:T71
+			country = c:TRI
 			owned_provinces = { x29CCD6 }
 			state_type = incorporated
 		}
@@ -7607,7 +7607,7 @@ s:STATE_PIEDMONT = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:V67
+			country = c:MFA
 			owned_provinces = { x11C061 }
 			state_type = incorporated
 		}
@@ -7884,7 +7884,7 @@ s:STATE_RAJPUTANA = {
 	}
 s:STATE_RHINELAND = {
 		create_state = {
-			country = c:T71
+			country = c:TRI
 			owned_provinces = { xC1B963 xD080A0 }
 			state_type = incorporated
 		}

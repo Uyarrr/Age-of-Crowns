@@ -952,7 +952,7 @@ s:STATE_ALSACE_LORRAINE = {
 				size = 2496
 			}
 		}
-		region_state:X16 = {
+		region_state:SFC = {
 			create_pop = {
 				culture = south_german
 				religion = catholic
@@ -1916,7 +1916,7 @@ s:STATE_AQUITAINE = {
 				size = 289
 			}
 		}
-		region_state:W36 = {
+		region_state:FOI = {
 			create_pop = {
 				culture = occitan
 				religion = catholic
@@ -17537,7 +17537,7 @@ s:STATE_LANGUEDOC = {
 				size = 28
 			}
 		}
-		region_state:W36 = {
+		region_state:FOI = {
 			create_pop = {
 				culture = occitan
 				religion = catholic
@@ -23889,7 +23889,7 @@ s:STATE_NORTH_MADAGASCAR = {
 		}
 	}
 s:STATE_NORTH_RHINE = {
-		region_state:T71 = {
+		region_state:TRI = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -26141,7 +26141,7 @@ s:STATE_PIEDMONT = {
 				size = 68
 			}
 		}
-		region_state:V67 = {
+		region_state:MFA = {
 			create_pop = {
 				culture = north_italian
 				religion = catholic
@@ -27126,7 +27126,7 @@ s:STATE_RAJPUTANA = {
 		}
 	}
 s:STATE_RHINELAND = {
-		region_state:T71 = {
+		region_state:TRI = {
 			create_pop = {
 				culture = south_german
 				religion = catholic

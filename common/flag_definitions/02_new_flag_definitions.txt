@@ -717,3 +717,52 @@ MLO = { # Milan
 		}
 	}
 }
+
+MFA = { # Montferrat
+	flag_definition = {
+		coa = MFA
+		priority = 1
+	}
+	flag_definition = {
+		coa = MFA_tricolor
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}	
+}
+
+WAL = { # Wallachia
+	flag_definition = {
+		coa = WAL
+		priority = 1
+	}
+	flag_definition = {
+		coa = WAL_BYZ
+		priority = 10
+		trigger = {
+			coa_def_BYZ_ensign_trigger = yes
+		}
+	}
+}
+
+SER = { # Serbia
+	flag_definition = {
+		coa = SER
+		priority = 1
+	}
+	flag_definition = {
+		coa = SER_firesteels
+		priority = 10
+		trigger = {
+			coa_def_BYZ_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SER_empire
+		priority = 50
+		trigger = {
+			coa_def_empire_trigger = yes
+		}
+	}
+}
