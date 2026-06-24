@@ -1,0 +1,166 @@
+﻿je_england_1 = {
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+
+	should_be_pinned_by_default = yes
+
+	group = je_group_historical_content
+
+    is_shown_in_lobby = {
+		c:ENG ?= this
+    }
+
+	is_shown_when_inactive = {
+		c:ENG ?= this
+	}
+
+	possible = {
+		c:ENG ?= this
+	}
+
+	immediate = {
+	}
+
+	complete = {
+		any_state = {
+			count >= 8
+
+			is_in_geographic_region = geographic_region_france
+
+			owner = {
+				OR = {
+					this = root
+					is_subject_of = root
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = england.100
+			popup = yes
+		}
+	}
+
+	event_outcome_completed_desc = {
+		
+	}
+
+	fail = {
+		any_state = {
+			count <= 2
+			is_in_geographic_region = geographic_region_france
+
+			owner = {
+				OR = {
+					this = root
+					is_subject_of = root
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		trigger_event = {
+			id = england.101
+			popup = yes
+		}
+	}
+	
+	weight = 100
+}
+
+je_england_2 = {
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	should_be_pinned_by_default = yes
+
+	group = je_group_historical_content
+
+    is_shown_in_lobby = {
+		c:ENG ?= this
+    }
+
+	is_shown_when_inactive = {
+		c:ENG ?= this
+	}
+
+	possible = {
+		c:ENG ?= this
+	}
+
+	immediate = {
+	}
+
+	on_monthly_pulse = {
+	}
+
+	on_yearly_pulse = {
+	}
+
+	complete = {
+	}
+
+	on_complete = {
+	}
+
+	event_outcome_completed_desc = {
+	}
+
+	fail = {
+	}
+	
+	weight = 200
+}
+
+je_england_3 = {
+	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
+
+	should_be_pinned_by_default = yes
+
+	group = je_group_historical_content
+
+    is_shown_in_lobby = {
+		c:ENG ?= this
+    }
+
+	is_shown_when_inactive = {
+		c:ENG ?= this
+	}
+
+	possible = {
+		c:ENG ?= this
+	}
+
+	complete = {
+		owns_entire_state_region = STATE_WEST_COUNTRY
+		owns_entire_state_region = STATE_HOME_COUNTIES
+		owns_entire_state_region = STATE_EAST_ANGLIA
+		owns_entire_state_region = STATE_MIDLANDS
+		owns_entire_state_region = STATE_WALES
+		owns_entire_state_region = STATE_YORKSHIRE
+		owns_entire_state_region = STATE_LANCASHIRE
+		owns_entire_state_region = STATE_LOWLANDS
+		owns_entire_state_region = STATE_HIGHLANDS
+		owns_entire_state_region = STATE_ULSTER
+		owns_entire_state_region = STATE_CONNAUGHT
+		owns_entire_state_region = STATE_MUNSTER
+		owns_entire_state_region = STATE_LEINSTER
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = rise_of_great_britain
+			years = 20
+		}
+	}
+
+	event_outcome_completed_desc = {
+	}
+
+	fail = {
+
+	}
+	
+	weight = 300
+}

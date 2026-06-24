@@ -1,0 +1,165 @@
+﻿namespace = england_events
+
+england.1 = {
+	type = country_event
+
+	title = england_hyw_victory_title
+	desc = england_hyw_victory_desc
+	flavor = england_hyw_victory_flavor
+
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	event_image = {
+		texture = "gfx/event_pictures/hundred_years_war.dds"
+	}
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	option = {
+		name = england_hyw_victory_option
+
+		add_modifier = {
+			name = hundred_years_war_won
+			years = 20
+		}
+
+		set_variable = {
+			name = hundred_years_war_resolved
+			value = 1
+		}
+	}
+}
+
+england.2 = {
+	type = country_event
+
+	title = england_hyw_defeat_title
+	desc = england_hyw_defeat_desc
+	flavor = england_hyw_defeat_flavor
+
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	event_image = {
+		texture = "gfx/event_pictures/hundred_years_war.dds"
+	}
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	option = {
+		name = england_hyw_defeat_option
+
+		add_modifier = {
+			name = hundred_years_war_lost
+			years = 20
+		}
+
+		set_variable = {
+			name = hundred_years_war_resolved
+			value = 1
+		}
+	}
+}
+
+england.3 = {
+	type = country_event
+
+	title = england_new_world_canada_title
+	desc = england_new_world_canada_desc
+	flavor = england_new_world_canada_flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/new_world_canada.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {
+		has_technology_researched = new_world
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+	}
+
+	option = {
+		name = england_new_world_canada_option_yes
+
+		add_involvement = {
+			strategic_region = sr:region_canada
+			value = 2000  
+		}
+
+		add_modifier = {
+			name = canada_expedition
+			years = 10
+		}
+	}
+
+	option = {
+		name = england_new_world_canada_option_no
+	}
+}
+
+england.4 = {
+	type = country_event
+
+	title = england_the_justices_of_peace_title
+	desc = england_the_justices_of_peace_desc
+	flavor = england_the_justices_of_peace_flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/new_world_canada.dds"
+	}
+
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+		game_date >= 1485.1.1
+		game_date < 1509.1.1
+	}
+
+	cooldown = {
+		years = 1000
+	}
+
+	option = {
+		name = england_the_justices_of_peace.yes
+
+		add_modifier = {
+			name = the_justices_of_peace
+			years = 10
+		}
+	}
+
+	option = {
+		name = england_the_justices_of_peace.no
+	}
+}

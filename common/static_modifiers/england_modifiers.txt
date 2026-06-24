@@ -1,0 +1,32 @@
+﻿rise_of_great_britain = {
+	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
+
+	country_prestige_add = 25
+	ship_interest_gain_mult = 0.25
+	state_construction_mult = 0.15
+}
+
+hundred_years_war_won = {
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+
+	country_prestige_mult = 0.20
+	country_legitimacy_add = 20
+	country_authority_mult = 0.20
+	interest_group_ig_crown_pol_str_mult = 0.25
+	interest_group_ig_landowners_approval_add = 3
+}
+
+hundred_years_war_lost = {
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+
+	country_prestige_mult = -0.15
+	country_legitimacy_add = -15
+	country_authority_mult = -0.15
+	interest_group_ig_crown_pol_str_mult = -0.20
+	interest_group_ig_landowners_approval_add = -2
+}
+
+canada_expedition = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_expenses_add = 3000
+}
