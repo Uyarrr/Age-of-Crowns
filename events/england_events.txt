@@ -1,19 +1,17 @@
-﻿namespace = england_events
+﻿namespace = england
 
-england.1 = {
+england.100 = {
 	type = country_event
 
-	title = england_hyw_victory_title
-	desc = england_hyw_victory_desc
-	flavor = england_hyw_victory_flavor
-
-	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
-
-	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	title = england_the_justices_of_peace.title
+	desc = england_the_justices_of_peace.desc
+	flavor = england_the_justices_of_peace.flavor
 
 	event_image = {
-		texture = "gfx/event_pictures/hundred_years_war.dds"
+		texture = "gfx/event_pictures/the_justices_of_peace.dds"
 	}
+
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
 
 	cooldown = {
 		years = 999
@@ -21,35 +19,47 @@ england.1 = {
 
 	duration = 3
 
+	trigger = {
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+		game_date >= 1485.1.1
+		game_date < 1509.1.1
+	}
+
 	option = {
-		name = england_hyw_victory_option
+		name = england_the_justices_of_peace.a
+		default_option = yes
 
 		add_modifier = {
-			name = hundred_years_war_won
-			years = 20
+			name = the_justices_of_peace_a
+			days = long_modifier_time
 		}
+	}
 
-		set_variable = {
-			name = hundred_years_war_resolved
-			value = 1
+	option = {
+		name = england_the_justices_of_peace.b
+
+		add_modifier = {
+			name = the_justices_of_peace_b
+			days = long_modifier_time
 		}
 	}
 }
 
-england.2 = {
+england.101 = {
 	type = country_event
 
-	title = england_hyw_defeat_title
-	desc = england_hyw_defeat_desc
-	flavor = england_hyw_defeat_flavor
-
-	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
-
-	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	title = england_the_yorkist_tradition.title
+	desc = england_the_yorkist_tradition.desc
+	flavor = england_the_yorkist_tradition.flavor
 
 	event_image = {
-		texture = "gfx/event_pictures/hundred_years_war.dds"
+		texture = "gfx/event_pictures/yorkist.dds"
 	}
+
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
 
 	cooldown = {
 		years = 999
@@ -57,27 +67,41 @@ england.2 = {
 
 	duration = 3
 
+	trigger = {
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+		game_date >= 1485.1.1
+		game_date < 1550.1.1
+	}
+
 	option = {
-		name = england_hyw_defeat_option
+		name = england_the_yorkist_tradition.a
+		default_option = yes
 
 		add_modifier = {
-			name = hundred_years_war_lost
-			years = 20
+			name = england_the_yorkist_tradition_a
+			days = long_modifier_time
 		}
+	}
 
-		set_variable = {
-			name = hundred_years_war_resolved
-			value = 1
+	option = {
+		name = england_the_yorkist_tradition.b
+
+		add_modifier = {
+			name = england_the_yorkist_tradition_b
+			days = long_modifier_time
 		}
 	}
 }
 
-england.3 = {
+england.200 = {
 	type = country_event
 
-	title = england_new_world_canada_title
-	desc = england_new_world_canada_desc
-	flavor = england_new_world_canada_flavor
+	title = england_new_world_canada.title
+	desc = england_new_world_canada.desc
+	flavor = england_new_world_canada.flavor
 
 	event_image = {
 		texture = "gfx/event_pictures/new_world_canada.dds"
@@ -100,7 +124,8 @@ england.3 = {
 	}
 
 	option = {
-		name = england_new_world_canada_option_yes
+		name = england_new_world_canada.a
+		default_option = yes
 
 		add_involvement = {
 			strategic_region = sr:region_canada
@@ -114,22 +139,22 @@ england.3 = {
 	}
 
 	option = {
-		name = england_new_world_canada_option_no
+		name = england_new_world_canada.b
 	}
 }
 
-england.4 = {
+england.201 = {
 	type = country_event
 
-	title = england_the_justices_of_peace_title
-	desc = england_the_justices_of_peace_desc
-	flavor = england_the_justices_of_peace_flavor
+	title = england_new_world_atlantic_coast.title
+	desc = england_new_world_atlantic_coast.desc
+	flavor = england_new_world_atlantic_coast.flavor
 
 	event_image = {
-		texture = "gfx/event_pictures/new_world_canada.dds"
+		texture = "gfx/event_pictures/new_world_atlantic_coast.dds"
 	}
 
-	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
 
 	cooldown = {
 		years = 999
@@ -138,28 +163,107 @@ england.4 = {
 	duration = 3
 
 	trigger = {
+		has_technology_researched = new_world
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG
 		}
-		game_date >= 1485.1.1
-		game_date < 1509.1.1
-	}
+		any_state = {
+			count >= 4
 
-	cooldown = {
-		years = 1000
+			is_in_geographic_region = geographic_region_canada
+
+			owner = {
+				OR = {
+					this = root
+					is_subject_of = root
+				}
+			}
+		}
 	}
 
 	option = {
-		name = england_the_justices_of_peace.yes
+		name = england_new_world_atlantic_coast.a
+		default_option = yes
+
+		add_involvement = {
+			strategic_region = sr:region_atlantic_coast
+			value = 2000
+		}
 
 		add_modifier = {
-			name = the_justices_of_peace
+			name = atlantic_coast_expedition
 			years = 10
 		}
 	}
 
 	option = {
-		name = england_the_justices_of_peace.no
+		name = england_new_world_atlantic_coast.b
+	}
+}
+
+england.300 = {
+	type = country_event
+
+	title = england_hyw_victory.title
+	desc = england_hyw_victory.desc
+	flavor = england_hyw_victory.flavor
+
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	event_image = {
+		texture = "gfx/event_pictures/hundred_years_war.dds"
+	}
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_hyw_victory.a
+
+		add_modifier = {
+			name = hundred_years_war_won
+			years = 20
+		}
+	}
+}
+
+england.301 = {
+	type = country_event
+
+	title = england_hyw_defeat.title
+	desc = england_hyw_defeat.desc
+	flavor = england_hyw_defeat.flavor
+
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	event_image = {
+		texture = "gfx/event_pictures/hundred_years_war.dds"
+	}
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_hyw_defeat.a
+
+		add_modifier = {
+			name = hundred_years_war_lost
+			years = 20
+		}
 	}
 }

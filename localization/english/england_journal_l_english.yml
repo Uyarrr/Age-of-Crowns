@@ -1,12 +1,5 @@
 ﻿l_english:
- hundred_years_war_won: "The Angevin Triumph"
- hundred_years_war_won_desc: "The English Crown has emerged victorious from its centuries-long struggle for France. The prestige of the monarchy has reached unprecedented heights, while the nobility rally behind a ruler whose claim has been vindicated through conquest and diplomacy alike. Though the challenges of governing a vast trans-Channel realm remain, the triumph has strengthened royal authority and secured England's place among the foremost powers of Europe."
-
- hundred_years_war_lost: "The Loss of France"
- hundred_years_war_lost_desc: "The dream of an Anglo-French monarchy has come to an end. England's continental possessions have been lost, and with them much of the prestige and legitimacy once derived from the French claim. Noble confidence in the Crown has been shaken, political divisions deepen, and the authority of the monarchy faces growing challenges at home. The war is over, but its consequences will shape the kingdom for generations."
-
  rise_of_great_britain: "Rise of Great Britain"
- rise_of_great_britain_desc: "The British Isles stand united beneath a single authority. Centuries of rivalry, conquest, and diplomacy have forged a stronger kingdom whose influence reaches far beyond its shores. The emergence of Great Britain marks the beginning of a new era of prosperity, ambition, and power."
 
  je_england_1: "The Hundred Years War"
  je_england_1_reason: "For more than a century, the kings of England have claimed the throne of France. Though fortunes have risen and fallen, the struggle for the French Crown remains unfinished. Whether through conquest, diplomacy, or sheer determination, England must decide the fate of its continental ambitions and secure its place among the great powers of Europe." 
@@ -15,22 +8,50 @@
  je_england_3: "Unification of Britain"
  je_england_3_reason: "The British Isles remain divided among rival kingdoms, lordships, and clans. To secure the future of England and establish unquestioned dominance over the region, the Crown must bring the Isles under a single authority and lay the foundations for a united British state."
 
- england_hyw_victory_title: "The Angevin Triumph"
- england_hyw_victory_desc: "Against all expectation, the English Crown has restored its power across France. What began as a fading dynastic claim has become a living political reality, and nobles on both sides of the Channel now look to England as the arbiter of the French realm."
- england_hyw_victory_flavor: "The old claim has not merely survived — it has been vindicated. From London to Paris, the victory is proclaimed as proof that the Crown was destined to rule on both shores of the Channel."
- england_hyw_victory_option: "The dream of our forefathers is restored."
+ england_hyw_victory.title: "The Angevin Triumph"
+ england_hyw_victory.desc: "Against all expectation, the English Crown has restored its power across France. What began as a fading dynastic claim has become a living political reality, and nobles on both sides of the Channel now look to England as the arbiter of the French realm."
+ england_hyw_victory.flavor: "The old claim has not merely survived — it has been vindicated. From London to Paris, the victory is proclaimed as proof that the Crown was destined to rule on both shores of the Channel."
+ england_hyw_victory.a: "The dream of our forefathers is restored"
+ hundred_years_war_won: "The Angevin Triumph"
 
- england_hyw_defeat_title: "The Loss of France"
- england_hyw_defeat_desc: "The last hopes of an English dominion in France have collapsed. Decades of war, taxation, and noble sacrifice have ended not in triumph, but in retreat. The authority of the Crown is wounded, and those who bled for the French claim now question the judgment of the throne."
- england_hyw_defeat_flavor: "With the continental dream shattered, England must turn inward. Yet peace brings no certainty, for the defeat has left behind debts, grievances, and ambitious nobles eager to exploit the weakness of the Crown."
- england_hyw_defeat_option: "England must endure the shame."
+ england_hyw_defeat.title: "The Loss of France"
+ england_hyw_defeat.desc: "The last hopes of an English dominion in France have collapsed. Decades of war, taxation, and noble sacrifice have ended not in triumph, but in retreat. The authority of the Crown is wounded, and those who bled for the French claim now question the judgment of the throne."
+ england_hyw_defeat.flavor: "With the continental dream shattered, England must turn inward. Yet peace brings no certainty, for the defeat has left behind debts, grievances, and ambitious nobles eager to exploit the weakness of the Crown."
+ england_hyw_defeat.a: "England must endure the shame".
+ hundred_years_war_lost: "The Loss of France"
 
-england_new_world_canada.title: "The Northern Dominion"
-england_new_world_canada.desc: "Reports brought back by fishermen, merchants, and daring explorers speak of a vast northern land beyond the Atlantic. Rich forests stretch to the horizon, rivers teem with fish, and untapped resources await those bold enough to claim them. While rival powers look south toward gold and conquest, many within the Crown argue that Britain's future may lie in these colder shores. The opportunity to establish a lasting presence in the northern reaches of the New World has captured the imagination of nobles, merchants, and adventurers alike."
-england_new_world_canada.a: "The northern lands shall be ours."
+ england_new_world_canada.title: "The Northern Dominion"
+ england_new_world_canada.desc: "Reports brought back by fishermen, merchants, and daring explorers speak of a vast northern land beyond the Atlantic. Rich forests stretch to the horizon, rivers teem with fish, and untapped resources await those bold enough to claim them. While rival powers look south toward gold and conquest, many within the Crown argue that Britain's future may lie in these colder shores."
+ england_new_world_canada.flavor: "The opportunity to establish a lasting presence in the northern reaches of the New World has captured the imagination of nobles, merchants, and adventurers alike."
+ england_new_world_canada.a: "The northern lands shall be ours"
+ england_new_world_canada.b: "We are not interested"
+ canada_expedition: "Canada Expedition"
 
-england_the_justices_of_peace_title: The Justices of Peace
-england_the_justices_of_peace_desc: The position of Justice of the Peace originated in England in about the 12th Century, believed to be from a Royal Edict issued by King Richard I and the Archbishop of Canterbury in the year 1195. The title was first known as Custodes Pacis, but was later changed to Justices of the Peace. An act concerning Justices of the Peace was passed in 1489. It required that justices devote part of every quarter session to acknowledgment of the areas in which they themselves are particularly weak. The same act provided the general populace with the right to complain about the actions of justices directly to the monarch or his council. The appointment of the justices by the Lord Chancellor at irregular annual intervals allowed for the possible removal of uncooperative gentlemen at the next annual re-issue of the commissions.
-england_the_justices_of_peace.a: Yes, we need them
-england_the_justices_of_peace.b: No, that is the Noblemen's job
-	flavor = england_the_justices_of_peace_flavor
+ england_the_justices_of_peace.title: "The Justices of the Peace"
+ england_the_justices_of_peace.desc: "The Crown increasingly relies upon Justices of the Peace to administer local affairs, uphold order, and enforce royal authority throughout the kingdom."
+ england_the_justices_of_peace.flavor: "As the realm grows more populous and complex, the maintenance of law and order can no longer depend solely upon the authority of great lords. Across England, Justices of the Peace have become indispensable servants of the Crown, overseeing local administration, settling disputes, and enforcing the King's laws. Recent reforms have sought to improve their conduct and accountability, requiring greater scrutiny of their duties and allowing complaints against them to be brought directly before royal authorities. Supporters argue that these measures strengthen justice and reinforce royal authority in the shires, while critics contend that they undermine the traditional privileges of local noblemen. The question now before the Crown is whether these officials should continue to play an expanding role in the governance of England."
+ england_the_justices_of_peace.a: "Yes, we need them"
+ england_the_justices_of_peace.b: "No, that is the Noblemen's job"
+
+ england_the_yorkist_tradition.title: "The Yorkist Tradition"
+ england_the_yorkist_tradition.desc: "Promoting government officers from the middle class, particularly clerics, lawyers, and educated administrators, has long been a Yorkist tradition. As the responsibilities of the Crown continue to expand, many now look to us for guidance on whether this policy shall endure."
+ england_the_yorkist_tradition.flavor: "The administration of England has grown increasingly complex. Royal courts demand learned judges, taxes require diligent clerks, and the King's authority must be enforced throughout the realm by capable officials. For decades, the Crown has relied upon educated men drawn from the clergy, the legal profession, and the emerging middle classes, valuing competence and loyalty above noble birth. Yet many among the aristocracy resent this practice, viewing it as an erosion of their ancient privileges and rightful place within the government. As the kingdom's administrative needs continue to grow, both the nobility and the educated classes await our decision. Shall service to the Crown be determined by merit and learning, or reserved for those of noble blood?"
+ england_the_yorkist_tradition.a: "Yes, we need their talents"
+ england_the_yorkist_tradition.b: "Office belongs to the Nobility"
+ england_the_yorkist_tradition_a: "Yorkist Administrators"
+ england_the_yorkist_tradition_b: "Hereditary Officeholders"
+
+england_inns_of_court.title: "The Inns of Court"
+england_inns_of_court.desc: "The Inns of Court continue to attract ambitious young men seeking careers in law, administration, and royal service. Their graduates increasingly occupy positions throughout the kingdom, providing the Crown with a growing pool of educated officials."
+england_inns_of_court.flavor: "In generations past, the governance of England rested largely in the hands of noble households and local magnates. Yet as the responsibilities of the Crown have expanded, a new class of servant has emerged. Within the halls of the Inns of Court, aspiring lawyers study the laws of the realm, debate matters of governance, and prepare themselves for service in royal courts and administrations. Their influence now stretches across the kingdom, from county offices to the councils of the Crown itself. Supporters praise these institutions for cultivating capable and loyal officials, while critics argue that lawyers and clerks increasingly encroach upon the ancient privileges of England's nobility. As their influence continues to grow, the Crown must decide whether to encourage their expansion or preserve the traditional order."
+england_inns_of_court.yes: "The realm needs learned men"
+england_inns_of_court.no: "Office belongs to the Nobility"
+england_inns_of_court_yes: "Educated Administrators"
+england_inns_of_court_no: "Aristocratic Governance"
+
+england_new_world_atlantic_coast.title: "The Colonial Frontier"
+england_new_world_atlantic_coast.desc: "Reports from across the Atlantic speak of fertile lands, sheltered harbors, and vast opportunities for settlement along the eastern coast of North America."
+england_new_world_atlantic_coast.flavor: "What began as seasonal voyages by fishermen and explorers has revealed the immense potential of the Atlantic coast. From the rocky shores of the north to the temperate lands farther south, the coastline offers abundant resources, valuable trade opportunities, and favorable locations for permanent settlements. Merchants envision profitable enterprises, adventurers seek fortune and land, and statesmen speak of extending the Crown's influence across the ocean. Yet such ambitions demand ships, supplies, and considerable expense. The question before us is whether England shall commit itself to the establishment of new settlements upon this distant frontier."
+england_new_world_atlantic_coast.a: "Claim the Atlantic Coast"
+england_new_world_atlantic_coast.b: "The venture is too costly"
+england_new_world_atlantic_coast_a: "Atlantic Coast Expedition"

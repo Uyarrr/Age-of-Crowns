@@ -30,3 +30,43 @@ canada_expedition = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	country_expenses_add = 3000
 }
+
+the_justices_of_peace_a = {
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+	country_expenses_add = 1000
+	country_government_wages_mult = -0.10
+	country_weekly_innovation_add = 5
+	interest_group_ig_landowners_approval_add = -2
+}
+
+the_justices_of_peace_b = {
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+	country_legitimacy_base_add = 10
+	interest_group_ig_landowners_approval_add = 2
+}
+
+england_support_middle_class_bureaucrats_a = {
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+	country_bureaucrats_pol_str_mult = 0.25
+	country_clergymen_pol_str_mult = 0.25
+	country_clerks_pol_str_mult = 0.25
+	country_academics_pol_str_mult = 0.25
+	country_bureaucracy_mult = 0.1
+	interest_group_ig_crown_pol_str_mult = 0.25
+	interest_group_ig_landowners_approval_add = -3
+}
+
+england_support_middle_class_bureaucrats_b = {
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+	country_aristocrats_pol_str_mult = 0.25
+	country_authority_mult = 0.10
+	country_legitimacy_add = 5
+	interest_group_ig_landowners_pol_str_mult = 0.25
+	interest_group_ig_landowners_approval_add = 3
+	interest_group_ig_intelligentsia_approval_add = -3
+}
+
+atlantic_coast_expedition = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_expenses_add = 3000
+}
