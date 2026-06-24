@@ -1,0 +1,54 @@
+﻿adopt_local_culture_decision = {
+    is_shown = {
+        is_player = yes
+    }
+
+    possible = {
+        is_at_war = no
+        capital = {
+            any_scope_culture = {
+                has_homeland = PREV
+                NOT = { is_primary_culture_of = ROOT }
+                PREV = {
+                    culture_percent_state = {
+                        target = PREV
+                        value >= 0.5
+                    }
+                }
+            }
+        }
+    }
+
+    when_taken = {
+        # 1. Saves the new culture
+        capital = {
+            random_scope_culture = {
+                limit = {
+                    has_homeland = PREV
+                    NOT = { is_primary_culture_of = ROOT }
+                    PREV = {
+                        culture_percent_state = {
+                            target = PREV
+                            value >= 0.5
+                        }
+                    }
+                }
+                save_temporary_scope_as = new_primary_culture
+            }
+        }
+
+        # 2. Removes the main culture
+        every_primary_culture = {
+            ROOT = {
+                remove_primary_culture = PREV
+            }
+        }
+
+        # 3. Adds the new one
+        add_primary_culture = scope:new_primary_culture
+    }
+
+    ai_chance = {
+        value = 0
+    }
+}
