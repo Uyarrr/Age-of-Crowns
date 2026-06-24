@@ -1,0 +1,370 @@
+# England
+ENG = { # St George Cross
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"	
+	sub = {
+        parent = "sub_ENG_cross" 
+	}
+}
+ENG_nordic = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_cross_scandinavian.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+ENG_monarchy = { # England
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue_light"
+	
+	colored_emblem = {
+		texture = "ce_lion_passant_guardant_long_thin.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.20 } scale = { 1.0 0.95 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0 0.95 } }
+		instance = { position = { 0.5 0.80 } scale = { 1.0 0.95 } }
+	}
+}
+ENG_REVOLT = { # English Revolt
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	sub = {
+        parent = "sub_ENG_cross" 
+		instance = { scale = { 0.5 0.5 } }
+	}
+}
+ENG_revolutionary_republic = { # English tricolor
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}	
+}
+ENG_tudor = { # St George Cross with tudor rose
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "green"
+	color3 = "red"	
+	color4 = hsv360 	{	97	70	50	}	
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.25 0.5 } scale = { 0.5 1.0 } }				
+	}		
+	textured_emblem = {
+		texture = "te_tudor_rose.dds"
+		instance = { position = { 0.75 0.5 } scale = { 0.725 0.725 } }
+	}		
+	colored_emblem = {
+		texture = "ce_cross_per_pale.dds"
+		color1 = color3
+		color2 = color3
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+ENG_yorkist = { # St George Cross with York rose
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "white"	
+	color4 = "yellow"	
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.25 0.5 } scale = { 0.5 1.0 } }				
+	}	
+	colored_emblem = {
+		texture = "ce_sun_radiant_simple.dds"
+		color1 = color4
+		instance = { position = { 0.75 0.5 } scale = { 0.85 0.85 } }
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = white
+		color2 = green
+		color3 = yellow
+		instance = { position = { 0.75 0.5 } scale = { 0.7 -0.7 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_per_pale.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+ENG_yorkist_per_pale = { # Yorkist rose on per pale
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "white"	
+	color4 = "yellow"	
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_sun_radiant_simple.dds"
+		color1 = color4
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } }
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = white
+		color2 = green
+		color3 = yellow
+		instance = { position = { 0.5 0.5 } scale = { 0.85 -0.85 } }
+	}
+}
+ENG_yorkist_sun = { # Edward IV's sun banner
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "yellow"	
+	color4 = hsv360 	{	42	65	50	}
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_sun_in_splendor.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } }
+	}
+}
+ENG_yorkist_boar = { # Yorkist banner with Boar badge
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "white"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.15 0.5 } scale = { 0.3 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_sun_radiant_persia_random.dds"
+		color1 = color4
+		color2 = color4
+		color3 = "yellow_mid"
+		instance = { position = { 0.4 0.15 } scale = { 0.30 0.30 } }
+		instance = { position = { 0.4 0.85 } scale = { 0.30 0.30 } }
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = white
+		color2 = green
+		color3 = yellow
+		instance = { position = { 0.4 0.15 } scale = { 0.225 -0.225 } }
+		instance = { position = { 0.4 0.85 } scale = { 0.225 -0.225 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.15 0.5 } scale = { 0.1 1.0 } }
+		instance = { position = { 0.15 0.5 } scale = { 0.3 0.15 } }
+	}
+	colored_emblem = {
+		texture = "ce_boar_passant_mane.dds"
+		color1 = color3
+		color2 = color4
+		color3 = "red_light"
+		instance = { position = { 0.66 0.505 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.3 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+ENG_lancastrian = { # St George Cross with Lancaster rose
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "white"	
+	color4 = "yellow"
+	color5 = hsv360 	{	97	70	50	}
+
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color2
+		color2 = color5
+		color3 = color4
+		instance = { position = { 0.75 0.5 } scale = { 0.8 0.8 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_per_pale.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}		
+}
+ENG_quarterly_france_ancient = { # England-France - Quarterly design (Plantagenet 14th c.)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue"
+	color4 = "yellow"
+	
+    sub = {
+        parent = "sub_FRA_fleury_variant" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+    }
+    sub = {
+        parent = "sub_england_three_lions" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+    }
+    sub = { # quartering
+        parent = "sub_div_quarterly_mid" 
+    }	
+}
+ENG_quarterly_france = { # England-France Modern - Quarterly design (15th-16th c.)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue"
+	color4 = "yellow"
+	
+    sub = {
+        parent = "sub_france_three_fleurs" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+    }
+    sub = {
+        parent = "sub_england_three_lions" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+    }
+    sub = { # quartering
+        parent = "sub_div_quarterly_mid" 
+    }	
+}
+ENG_capetian = { # Per pale France & England
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+	color4 = "blue_light"
+	
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.20 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.60 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.00 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.20 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.40 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.60 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.80 1.00 } scale = { @semy @semy } }
+		instance = { position = { 1.00 1.00 } scale = { @semy @semy } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.75 0.5 }  scale = { 0.5 1.0 } }
+	}	
+	colored_emblem = {
+		texture = "ce_lion_passant_guardant_long_wide.dds"
+		color1 = color2
+		color2 = color4
+		color3 = color3
+		instance = { position = { 0.75 0.20 } scale = { 0.55 0.6 } }
+		instance = { position = { 0.75 0.50 } scale = { 0.55 0.6 } }
+		instance = { position = { 0.75 0.80 } scale = { 0.55 0.6 } }	
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale.dds"
+		color1 = "black"
+	}		
+}

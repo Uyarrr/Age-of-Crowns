@@ -46,11 +46,11 @@
 	}
 	c:SCO ?= {
 		create_diplomatic_pact = {
-			country = c:DR2
+			country = c:LOI
 			type = puppet
 		}
 	}
-	c:DR2 ?= {
+	c:LOI ?= {
 		add_liberty_desire = -50
 	}
 	c:POL ?= {
@@ -181,11 +181,11 @@
 	}
 	c:T91 ?= {
 		create_diplomatic_pact = {
-			country = c:X39
+			country = c:BAM
 			type = puppet
 		}
 	}
-	c:X39 ?= {
+	c:BAM ?= {
 		add_liberty_desire = -37.825
 	}
 	c:ARA ?= {

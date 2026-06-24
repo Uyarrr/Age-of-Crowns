@@ -6,7 +6,7 @@
     can_research = no
 
 	modifier = {
-		goods_output_fabric_mult = 0.2
+		building_livestock_ranch_throughput_add = 0.20
 	}
 
 	on_researched = {
@@ -60,7 +60,7 @@ england_production_2 = {
 	category = production
 
 	modifier = {
-		goods_output_navalsupplies_mult = 0.2
+		building_shipyard_throughput_add = 0.20
 	}
 
     can_research = no
@@ -95,7 +95,8 @@ england_society_2 = {
     can_research = no
 
 	modifier = {
-		country_weekly_innovation_mult = 0.15
+		country_weekly_innovation_mult = 0.10
+		country_weekly_innovation_max_add = 20
 	}
 
 	ai_weight = {
@@ -173,7 +174,7 @@ england_military_4 = {
     can_research = no
 
 	modifier = {
-		goods_output_firearms_mult = 0.2
+		building_gunsmith_workshop_throughput_add = 0.20
 	}
 
 	ai_weight = {
@@ -202,7 +203,7 @@ england_production_5 = {
 	category = production
 
 	modifier = {
-		goods_output_tools_mult = 0.25
+		building_tooling_workshop_throughput_add = 0.25
 	}
 
     can_research = no
@@ -250,7 +251,7 @@ england_production_6 = {
 	category = production
 
 	modifier = {
-		goods_output_clothes_mult = 0.25
+		building_textile_mill_throughput_add = 0.25
 	}
 
     can_research = no
