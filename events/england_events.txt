@@ -96,6 +96,54 @@ england.101 = {
 	}
 }
 
+england.102 = {
+	type = country_event
+
+	title = england_the_enclosure_movement.title
+	desc = england_the_enclosure_movement.desc
+	flavor = england_the_enclosure_movement.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/enclosure.dds"
+	}
+
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+		game_date >= 1509.1.1
+		game_date < 1521.1.1
+	}
+
+	option = {
+		name = england_the_enclosure_movement.a
+		default_option = yes
+
+		add_modifier = {
+			name = england_the_enclosure_movement_a
+			days = long_modifier_time
+		}
+	}
+
+	option = {
+		name = england_the_enclosure_movement.b
+
+		add_modifier = {
+			name = england_the_enclosure_movement_b
+			days = long_modifier_time
+		}
+	}
+}
+
 england.200 = {
 	type = country_event
 

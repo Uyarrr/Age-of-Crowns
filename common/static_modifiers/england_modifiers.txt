@@ -70,3 +70,30 @@ atlantic_coast_expedition = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	country_expenses_add = 3000
 }
+
+england_the_enclosure_movement_a = {
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+
+	building_group_bg_agriculture_throughput_add = 0.15
+	building_group_bg_light_industry_throughput_add = 0.10
+	interest_group_ig_landowners_pol_str_mult = 0.25
+	interest_group_ig_landowners_approval_add = 4
+	interest_group_ig_rural_folk_approval_add = -4
+	building_peasants_standard_of_living_add = -1
+	building_laborers_standard_of_living_add = -1
+	building_farmers_standard_of_living_add = -1
+	state_radicals_and_loyalists_from_sol_change_mult = 0.15
+}
+
+england_the_enclosure_movement_b = {
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+	
+	building_group_bg_agriculture_throughput_add = -0.10
+	building_group_bg_light_industry_throughput_add = -0.05
+	country_legitimacy_add = 10
+	building_peasants_standard_of_living_add = 1
+	building_laborers_standard_of_living_add = 1
+	building_farmers_standard_of_living_add = 1
+	interest_group_ig_rural_folk_approval_add = 4
+	interest_group_ig_landowners_approval_add = -4
+}

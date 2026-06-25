@@ -12,3 +12,33 @@
 		value = 0
 	}
 }
+
+law_magna_carta = {
+	group = lawgroup_major_government_reform
+
+	icon = "gfx/interface/icons/law_icons/magna_carta.dds"
+
+	progressiveness = -25
+
+	unlocking_technologies = {
+		england_society_1
+	}
+
+	modifier = {
+		country_legitimacy_base_add = 15
+		country_authority_mult = -0.15
+		interest_group_ig_landowners_approval_add = 2
+		interest_group_ig_crown_pol_str_mult = -0.15
+	}
+
+	is_visible = {
+		OR = {
+			c:ENG ?= this # For the Austrian Empire and its subjects
+			c:GBR ?= this # For the Austrian Empire and its subjects
+		}
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+	}
+}
