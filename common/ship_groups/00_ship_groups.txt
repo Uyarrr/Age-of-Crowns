@@ -1,29 +1,29 @@
-﻿ship_group_capital_ships = {
-    icon = "gfx/unit_illustrations/unused/unit_flotilla_battleship.dds"
+﻿ship_group_heavy = {
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_heavy_ships.dds"
     color = { 143 63 205 }
 
-    category = capital_group
+    category = heavy_group
 }
 
-ship_group_galleys = {
+ship_group_galley = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_galley.dds"
     color = { 121 175 235 }
 
-    category = cruiser_group
+    category = galley_group
 }
 
-ship_group_transports = {
-    icon = "gfx/unit_illustrations/unused/unit_flotilla_ironclad_ship.dds"
+ship_group_transport = {
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_transport.dds"
     color = { 121 175 235 }
 
     category = transport_group
 }
 
-ship_group_lights = {
-    icon = "gfx/unit_illustrations/unused/unit_flotilla_ironclad_ship.dds"
+ship_group_light = {
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_light.dds"
     color = { 121 175 235 }
 
-    category = lights_group
+    category = light_group
 }
 
 ship_group_supply_ships = {

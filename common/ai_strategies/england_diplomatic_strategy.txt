@@ -119,10 +119,10 @@ ai_strategy_england_unite_britain = {
 
 	# Added to the default 30/30/20/20 distribution.
 	ship_group_weights = {
-		ship_group_capital_ships = { value = 120 }
-		ship_group_cruisers = { value = 20 }
-		ship_group_transports = { value = 90 }
-		ship_group_lights = { value = 10 }
+		ship_group_heavy = { value = 120 }
+		ship_group_galley = { value = 20 }
+		ship_group_transport = { value = 90 }
+		ship_group_light = { value = 10 }
 	}
 
 	max_ship_design_complexity = {

@@ -3970,16 +3970,16 @@ ai_strategy_default = {
 	# Using this value in other strategies will function additively
 	# root = country
 	ship_group_weights = {
-		ship_group_capital_ships = {
+		ship_group_heavy = {
 			value = 30	
 		}
-		ship_group_cruisers = {
+		ship_group_galley = {
 			value = 30		
 		}
-		ship_group_transports = {
+		ship_group_transport = {
 			value = 20	
 		}
-		ship_group_lights = {
+		ship_group_light = {
 			value = 20		
 		}
 	}
