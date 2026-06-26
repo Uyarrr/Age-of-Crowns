@@ -164,7 +164,7 @@ england.200 = {
 	duration = 3
 
 	trigger = {
-		has_technology_researched = new_world
+		has_technology_researched = colonization
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG
@@ -211,7 +211,7 @@ england.201 = {
 	duration = 3
 
 	trigger = {
-		has_technology_researched = new_world
+		has_technology_researched = colonization
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG
