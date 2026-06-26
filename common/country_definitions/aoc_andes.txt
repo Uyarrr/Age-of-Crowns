@@ -141,3 +141,130 @@ CCH = { # Calchaqui
 	religion = animist
 	capital = STATE_JUJUY
 }
+
+# Decentralizeds
+
+QTR = { # Quitor
+	color = rgb {214 217 176}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_TUCUMAN
+}
+
+CBY = { # Chiribaya
+	color = rgb {108 16 34}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_AREQUIPA
+}
+
+AMN = { # Camana
+	color = rgb {82 217 155}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { quechua }
+	capital = STATE_AREQUIPA
+}
+
+AVA = { # Ava
+	color = rgb { 42 174 101}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { amazonian }
+	capital = STATE_SANTA_CRUZ
+}
+
+KWY = { # Kallawaya
+	color = rgb {233 190 100}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_LA_PAZ
+}
+
+# Chile
+
+CYC = { # Copayacu
+	color = rgb {110 85 52}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_TUCUMAN
+}
+
+CPU = { # Cuquimpu
+	color = rgb {110 185 152}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_TUCUMAN
+}
+
+PHE = { # Picunche
+	color = rgb {246 187 241}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_TUCUMAN
+}
+
+# Tucuman & Mendoza
+
+ALC = { # Allentiac
+	color = rgb {236 252 252}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_TUCUMAN
+}
+
+MYC = { # Millcayac
+	color = rgb {110 85 152}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_TUCUMAN
+}
+
+QIM = { # Quimes
+	color = rgb {210 85 252}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { aimara }
+	capital = STATE_TUCUMAN
+}

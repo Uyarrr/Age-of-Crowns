@@ -1,0 +1,316 @@
+# South America
+
+# Guarani Regions
+
+CUA = { # Charrua
+	color = rgb { 175 126 0}
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { guarani }
+	capital = STATE_BAJO_PARAGUAY
+}
+
+# Sul do Brasil
+
+NDV = { # Ñandeva
+	color = rgb { 142 174 101}
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { guarani }
+	capital = STATE_BAJO_PARAGUAY
+}
+
+CRJ = { # Carijó
+	color = rgb { 217 13 173}
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { guarani }
+	capital = STATE_BAJO_PARAGUAY
+}
+
+KHG = { # Kanhgag
+	color = rgb { 241 196 180}
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { tupinamba }
+	capital = STATE_BAJO_PARAGUAY
+}
+
+MBK = { # Mebengokre
+	color = rgb { 5 230 143}
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { je }
+	capital = STATE_MINAS_GERAIS
+}
+
+AKW = { # Akwê
+	color = rgb { 169 199 163}
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { je }
+	capital = STATE_GOIAS
+}
+
+TPQ = { # Tupiniquim
+	color = rgb { 112 142 208}
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { tupinamba }
+	capital = STATE_RIO_DE_JANEIRO
+}
+
+AIM = { # Aimoré
+	color = rgb { 186 109 94}
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { je }
+	capital = STATE_MINAS_GERAIS
+}
+
+TPA = { # Tupinamba
+	color = { 157 209 192 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_BAHIA
+}
+
+REPLACE:TBI = { # Timbira
+	color = rgb { 92 212 17}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { je }
+	capital = STATE_PIAUI
+}
+
+KRR = { # Kiriri
+	color = rgb { 2 178 85}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { je }
+	capital = STATE_PERNAMBUCO
+}
+
+CAE = { # Caeté
+	color = rgb { 54 97 90}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_PERNAMBUCO
+}
+
+POT = { # Potiguara
+	color = rgb { 162 83 5}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_RIO_GRANDE_DO_NORTE
+}
+
+SUC = { # Sucuru
+	color = rgb { 72 125 45}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_CEARA
+}
+
+TRM = { # Tremembé
+	color = rgb { 129 62 74}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_MARANHAO
+}
+
+KAP = { # Kaapor
+	color = rgb { 56 158 183}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_PARA
+}
+
+REPLACE:AMZ = { # Amazonia
+	color = { 42 102 64 }
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { amazonian }
+	capital = STATE_AMAZONAS
+}
+
+KIO = { # Kaiowá
+	color = rgb { 242 174 101}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { amazonian }
+	capital = STATE_MATO_GROSSO
+}
+
+JEE = { # Jê / Gê
+	color = { 42 102 64 }
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { tupinamba }
+	capital = STATE_GOIAS
+}
+
+KGN = { # Carib
+	color = hsv{ 0.28 0.79 0.47 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { cariban }
+
+	capital = STATE_MIRANDA
+}
+
+ZIP = { # Zipa
+	color = rgb { 204 186 1}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { muisca }
+	capital = STATE_PATAGONIA
+}
+
+ZAQ = { # Zaque
+	color = rgb { 122 171 216}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { muisca }
+	capital = STATE_PATAGONIA
+}
+
+# Playable
+
+TPAC = { # Tupinamba
+	color = { 157 209 192 }
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_BAHIA
+}
+
+POTC = { # Potiguara
+	color = rgb { 162 83 5}
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_CEARA
+}
+
+TPQC = { # Tupiniquim
+	color = rgb { 112 142 208}
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_RIO_DE_JANEIRO
+}
+
+AIMC = { # Tapuia
+	color = rgb { 186 109 94}
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { je }
+	capital = STATE_RIO_DE_JANEIRO
+}
+
+NDVC = { # Guarani
+	color = rgb { 142 174 101}
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { tupinamba }
+	capital = STATE_RIO_DE_JANEIRO
+}
+
+CUAC = { # Charrua
+	color = rgb { 175 126 0}
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { guarani }
+	capital = STATE_BAJO_PARAGUAY
+}
