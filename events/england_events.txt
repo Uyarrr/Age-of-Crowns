@@ -104,7 +104,7 @@ england.102 = {
 	flavor = england_the_enclosure_movement.flavor
 
 	event_image = {
-		texture = "gfx/event_pictures/enclosure.dds"
+		texture = "gfx/event_pictures/enclosure_movement.dds"
 	}
 
 	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
@@ -152,7 +152,7 @@ england.200 = {
 	flavor = england_new_world_canada.flavor
 
 	event_image = {
-		texture = "gfx/event_pictures/new_world_canada.dds"
+		texture = "gfx/event_pictures/english_discovery.dds"
 	}
 
 	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
@@ -164,7 +164,7 @@ england.200 = {
 	duration = 3
 
 	trigger = {
-		has_technology_researched = new_world
+		has_technology_researched = colonization
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG
@@ -199,7 +199,7 @@ england.201 = {
 	flavor = england_new_world_atlantic_coast.flavor
 
 	event_image = {
-		texture = "gfx/event_pictures/new_world_atlantic_coast.dds"
+		texture = "gfx/event_pictures/discovery.dds"
 	}
 
 	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
@@ -211,7 +211,7 @@ england.201 = {
 	duration = 3
 
 	trigger = {
-		has_technology_researched = new_world
+		has_technology_researched = colonization
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG

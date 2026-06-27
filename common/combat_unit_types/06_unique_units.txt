@@ -1,0 +1,58 @@
+﻿combat_unit_type_england_longbowman = {
+    group = combat_unit_group_light_infantry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+	unlocking_technologies = { england_military_1 }
+
+    battle_modifier = {
+        unit_offense_add = 10
+        unit_defense_add = 12
+        unit_morale_loss_add = 15
+    }
+
+    upkeep_modifier = {
+    }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/english_longbowman.dds"
+    }
+
+	upgrades = {
+        combat_unit_type_england_elite_longbowman
+        combat_unit_type_light_infantry_3
+		combat_unit_type_light_infantry_4
+		combat_unit_type_light_infantry_5
+		combat_unit_type_light_infantry_6
+	}
+}
+
+combat_unit_type_england_elite_longbowman = {
+    group = combat_unit_group_light_infantry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+	unlocking_technologies = { england_military_2 }
+
+    battle_modifier = { 
+        unit_offense_add = 12
+        unit_defense_add = 18
+    }
+
+    upkeep_modifier = {
+        goods_input_weapons_add = 1
+    }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/english_longbowman_2.dds"
+    }
+
+	upgrades = {
+        combat_unit_type_light_infantry_3
+		combat_unit_type_light_infantry_4
+		combat_unit_type_light_infantry_5
+		combat_unit_type_light_infantry_6
+	}
+}

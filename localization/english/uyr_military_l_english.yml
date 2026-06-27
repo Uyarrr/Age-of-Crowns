@@ -8,6 +8,9 @@
  combat_unit_type_light_infantry_5: "Skirmisher"
  combat_unit_type_light_infantry_6: "Rifleman"
 
+ combat_unit_type_england_longbowman: "Longbowman"
+ combat_unit_type_england_elite_longbowman: "Elite Longbowman"
+
  # Heavy Infantry
  combat_unit_group_heavy_infantry: "Heavy Infantry"
  combat_unit_type_heavy_infantry_1: "Footman"
@@ -50,3 +53,51 @@
  combat_unit_type_logistics_4: "Baggage Train"
  combat_unit_type_logistics_5: "Wagon Train"
  combat_unit_type_logistics_6: "Logistics Corps"
+
+  # Galleys
+ ship_group_galley: "Galleys"
+ ship_group_galley_desc: "Galleys sacrifice durability for overwhelming offensive power. Deadly in coastal waters and inland seas, they excel at delivering devastating attacks but rely on screening and favorable conditions to survive."
+
+ ship_type_traditional_galley: "Traditional Galley"
+ ship_type_mediterranean_galley: "Mediterranean Galley"
+ ship_type_war_galley: "War Galley"
+ ship_type_galleass: "Galleass"
+ ship_type_xebec: "Xebec"
+ ship_type_archipelago_frigate: "Archipelago Frigate"
+
+  # Heavy Ships
+ ship_group_heavy: "Heavy Ships"
+ ship_group_heavy_desc: "Heavy ships are the backbone of any battle fleet. Combining powerful broadsides with exceptional durability, they dominate naval engagements and serve as the fleet's primary damage dealers."
+
+ ship_type_early_carrack: "Early Carrack"
+ ship_type_carrack: "Carrack"
+ ship_type_galleon: "Galleon"
+ ship_type_war_galleon: "War Galleon"
+ ship_type_two_decker: "Two Decker"
+ ship_type_three_decker: "Three Decker"
+ ship_type_first_rate_ship_of_the_line: "First Rate Ship of the Line"
+
+  # Transports
+ ship_group_transport: "Transport Ships"
+ ship_group_transport_desc: "Transport ships prioritize cargo capacity over combat power. Essential for moving armies, supplies, and settlers, they form the logistical backbone of every maritime nation."
+
+ ship_type_canoe: "Canoe"
+ ship_type_cog: "Cog"
+ ship_type_hulk: "Hulk"
+ ship_type_flute: "Fluyt"
+ ship_type_brig: "Brig"
+ ship_type_merchantman: "Merchantman"
+ ship_type_east_indiaman: "East Indiaman"
+ ship_type_first_rate_ship_of_the_line: "First Rate Ship of the Line"
+
+
+# Light Ships
+ship_group_light: "Light Ships"
+ship_group_light_desc: "Light ships prioritize speed and maneuverability over firepower. They screen the fleet, protecting heavier warships while intercepting enemy scouts and raiders."
+
+ship_type_barque: "Barque"
+ship_type_caravel: "Caravel"
+ship_type_pinnace: "Pinnace"
+ship_type_frigate: "Frigate"
+ship_type_heavy_frigate: "Heavy Frigate"
+ship_type_bomb_ketch: "Bomb Ketch"

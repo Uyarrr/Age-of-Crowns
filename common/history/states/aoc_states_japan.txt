@@ -1,0 +1,271 @@
+﻿STATES = {
+	s:STATE_RYUKYU_ISLANDS = {
+		create_state = {
+			country = c:RYU
+			owned_provinces = { xf0f061 xBB27F6 xf0d080 }
+		}
+
+		add_homeland = cu:ryukyuan
+	}
+
+	s:STATE_KYUSHU = {
+		create_state = {
+			country = c:SMZ
+			owned_provinces = { x70D080 x1F0D2C xCEA020 x5C7980 }
+		}
+		create_state = {
+			country = c:ITO
+			owned_provinces = { xEF5080 x906F1E }
+		}
+		create_state = {
+			country = c:KKC
+			owned_provinces = { x705080 }
+		}
+		create_state = {
+			country = c:OTM
+			owned_provinces = { x73414A }
+		}
+		create_state = {
+			country = c:SHN
+			owned_provinces = { xE16F98 xAE5874 xF0D000 }
+		}
+		create_state = {
+			country = c:OUC
+			owned_provinces = { x70CF00 }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_CHUGOKU = {
+		create_state = {
+			country = c:OUC
+			owned_provinces = { xF05001 }
+		}
+		create_state = {
+			country = c:YMN
+			owned_provinces = { xA287B0 xC8AE5C x1151C0 }
+		}
+		create_state = {
+			country = c:AAO
+			owned_provinces = { x77D64C }
+		}
+		create_state = {
+			country = c:HSK
+			owned_provinces = { x715101 xB49AFB x89FD28 }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_SHIKOKU = {
+		create_state = {
+			country = c:KOO
+			owned_provinces = { x5D5512 }
+		}
+		create_state = {
+			country = c:HSK
+			owned_provinces = { x7C9BEB xEFD040 x90D040 xF05040 }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_KYOTO = {
+		create_state = {
+			country = c:YMN
+			owned_provinces = { x9BD7C1 }
+		}
+		create_state = {
+			country = c:ISK
+			owned_provinces = { x879C25 x8EC4C9 }
+		}
+		create_state = {
+			country = c:ASK
+			owned_provinces = { x705040 }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_KANSAI = {
+		create_state = {
+			country = c:YMN
+			owned_provinces = { x9E58B2 }
+		}
+		create_state = {
+			country = c:HSK
+			owned_provinces = { x70D040 xB0D0C0 xB03EF0 }
+		}
+		create_state = {
+			country = c:HTK
+			owned_provinces = { x614287 }
+		}
+		create_state = {
+			country = c:TSU
+			owned_provinces = { x305040 }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_HOKUSHINETSU = {
+		create_state = {
+			country = c:SBA
+			owned_provinces = { xB0D040 }
+		}
+		create_state = {
+			country = c:HTK
+			owned_provinces = { x5A57C3 x88595F }
+		}
+		create_state = {
+			country = c:OGS
+			owned_provinces = { x779089 xD12DC5 xB050C0 }
+		}
+		create_state = {
+			country = c:UES
+			owned_provinces = { xEF90C0 xE76E8F xB5F9BD }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_TOKAI = {
+		create_state = {
+			country = c:KTB
+			owned_provinces = { xCCB03E }
+		}
+		create_state = {
+			country = c:TKI
+			owned_provinces = { x9B2E00 x4942D2 xC02285 }
+		}
+		create_state = {
+			country = c:ODA
+			owned_provinces = { x910F25 }
+		}
+		create_state = {
+			country = c:TKG
+			owned_provinces = { x3050C0 }
+		}
+		create_state = {
+			country = c:IMG
+			owned_provinces = { x31D0C0 }
+		}
+		create_state = {
+			country = c:TKD
+			owned_provinces = { x5E87A1 }
+		}
+		create_state = {
+			country = c:ASK
+			owned_provinces = { xADE732 }
+		}
+		create_state = {
+			country = c:HTK
+			owned_provinces = { x205FEB }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_KANTO = {
+		create_state = {
+			country = c:ASK
+			owned_provinces = { xEF9040 x7010C0 }
+		}
+		create_state = {
+			country = c:CBA
+			owned_provinces = { x478599 x800111 }
+		}
+		create_state = {
+			country = c:UES
+			owned_provinces = { x7090C0 xB94331 x787CC4 xF011C0 }
+		}
+		create_state = {
+			country = c:STK
+			owned_provinces = { xEAE893 x709040 }
+		}
+		create_state = {
+			country = c:UTN
+			owned_provinces = { xD350FB }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_TOHOKU = {
+		create_state = {
+			country = c:UES
+			owned_provinces = { xAC762F x322F47 }
+		}
+		create_state = {
+			country = c:DTE
+			owned_provinces = { xF01040 x3CA2FC xA26E5F x19C715 xB090C0 }
+		}
+		create_state = {
+			country = c:NAN
+			owned_provinces = { xE0D080 xE22202 xBC2AFE x4C5533 xBED026 x1BAF33 xB011C0 x81A720 }
+		}
+		create_state = {
+			country = c:AKT
+			owned_provinces = { x15EED4 x3190C0 }
+		}
+		create_state = {
+			country = c:SBA
+			owned_provinces = { xF29D08 x637FEB x701040 }
+		}
+
+		add_homeland = cu:japanese
+	}
+
+	s:STATE_HOKKAIDO = {
+		create_state = {
+			country = c:AIN
+			owned_provinces = {
+				x6275D4 x65D8B2 x5F2A24 x103C2B xEEB7F4 x413F60 x03E00D x86757A xC85C0C x1E9A93 x70C55B x17C8CA x210B6E x85C158 x2090C0 x3EA37A x493B76 x9E56C2 xA011C0 x3974DA
+			}
+			state_type = unincorporated
+		}
+		create_state = {
+			country = c:AKT
+			owned_provinces = {
+				xA090C0 x40BDB8 xF17C01 x420E86
+			}
+		}
+
+		add_homeland = cu:japanese
+		add_homeland = cu:ainu
+	}
+
+	s:STATE_SAKHALIN = {
+		create_state = {
+			country = c:SKH
+			owned_provinces = { xF1B27F x041FF2  x9628A0 x4ED0E9 x768145 x1B4E8D x1CA52F xC3C06E x22C190  xB8277E x503660 x02BAB7 }
+		}
+		create_state = {
+			country = c:AIN
+			owned_provinces = { x2010C0 x9E3A0A x2492AA xD0294D x47B65C xE99CEA xA5E421 }
+		}
+
+		create_state = {
+			country = c:ULT
+			owned_provinces = { x3405B2 xBE16C2 xF15B61 xDFA060 x7608FE x1CAAE0 xEAFA0A }
+		}
+		create_state = {
+			country = c:AIN
+			owned_provinces = {
+				x1E5261 x5B9D2D x7F67EF
+			}
+			state_type = unincorporated
+		}
+		create_state = {
+			country = c:AIN
+			owned_provinces = {
+				x601140 xA060DF
+			}
+			state_type = unincorporated
+		}
+
+		add_homeland = cu:siberian
+		add_homeland = cu:ainu
+	}
+}

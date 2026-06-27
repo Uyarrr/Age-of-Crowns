@@ -1,0 +1,57 @@
+﻿
+MPC = { # Mapuche / Patagonia
+	color = rgb {204 44 52}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { patagonian }
+	capital = STATE_PATAGONIA
+}
+
+MGR = { # Mataco-Guaikuru
+	color = rgb { 255 167 70}
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { matacoan guaicuruan }
+	capital = STATE_PATAGONIA
+}
+
+THL = {
+	color = { 57 124 138 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { patagonian }
+	capital = STATE_PATAGONIA
+}
+
+SLK = {
+	color = { 122 14 52 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { patagonian }
+	capital = STATE_ARAUCANIA
+}
+
+# Playable
+
+MPCC = { # Mapuche / Patagonia
+	color = rgb {204 44 52}
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { patagonian }
+	capital = STATE_PATAGONIA
+}

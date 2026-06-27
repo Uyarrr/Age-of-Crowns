@@ -129,7 +129,7 @@ naval_traditions = {
 	}
 
 	modifier = {
-		ship_max_distance_to_port_add = 1
+		ship_max_distance_to_port_mult = 500
 	}
 
 	ai_weight = {
@@ -304,10 +304,10 @@ professional_training = {
 	}
 }
 
-military_drill = {
-	#Increases Exp
+crossbowman = {
+	#Unlocks Crossbowman Unit
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/military_drill.dds"
+	texture = "gfx/interface/icons/invention_icons/light_infantry_2.dds"
 	category = military
 
 	unlocking_technologies = {
@@ -483,7 +483,7 @@ extra_supplies = {
 	category = military
 
 	unlocking_technologies = {
-		military_drill
+		crossbowman
 	}
 
 	ai_weight = {

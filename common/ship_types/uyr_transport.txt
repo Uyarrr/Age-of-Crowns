@@ -1,7 +1,73 @@
 ﻿# Transport / Merchant Ship Line
 
+ship_type_canoe = {
+    ship_group = ship_group_transport
+
+    base_construction_cost = 12
+
+    is_obsolete = { has_technology_researched = cog }
+    is_very_obsolete = { has_technology_researched = hulk }
+
+    modifier = {
+        ship_construction_progress_max_add = 25
+
+        ship_hit_points_max_add = 450
+        ship_crew_max_add = 120
+
+        ship_movement_speed_add = 2.5
+
+        ship_supply_capacity_add = 35
+        ship_carrying_capacity_add = 0.9
+        ship_marine_capacity_add = 0.45
+
+        ship_hull_damage_add = 4
+        ship_crew_damage_add = 1
+        ship_armor_add = 1
+
+        ship_critical_hit_chance_add = 0.01
+        ship_critical_hit_multiplier_add = 1.1
+
+        ship_vulnerability_add = 120
+
+        ship_screening_add = 1
+        ship_readiness_gain_add = 5
+        ship_accuracy_add = 1
+
+        ship_visibility_add = 25
+        ship_detection_add = 2
+
+        ship_blockade_strength_add = 2
+        ship_max_distance_to_port_add = 1
+    }
+
+    construction_goods = {
+        goods_input_wood_add = 250
+        goods_input_fabric_add = 100
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_navalsupplies_add = 0.04
+    }
+
+    distance_to_port_modifier = {
+        ship_hull_damage_mult = -1.0
+        ship_crew_damage_mult = -1.0
+        ship_interest_gain_mult = -1.0
+        ship_movement_speed_mult = -0.95
+    }
+
+    unlocking_technologies = { cog }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/canoe.dds"
+
+    ai_weight = 2
+    use_modifications = no
+}
+
 ship_type_cog = {
-    ship_group = ship_group_transports
+    ship_group = ship_group_transport
 
     base_construction_cost = 12
 
@@ -67,7 +133,7 @@ ship_type_cog = {
 }
 
 ship_type_hulk = {
-    ship_group = ship_group_transports
+    ship_group = ship_group_transport
 
     base_construction_cost = 18
 
@@ -134,7 +200,7 @@ ship_type_hulk = {
 }
 
 ship_type_flute = {
-    ship_group = ship_group_transports
+    ship_group = ship_group_transport
 
     base_construction_cost = 24
 
@@ -201,7 +267,7 @@ ship_type_flute = {
 }
 
 ship_type_brig = {
-    ship_group = ship_group_transports
+    ship_group = ship_group_transport
 
     base_construction_cost = 30
 
@@ -270,7 +336,7 @@ ship_type_brig = {
 }
 
 ship_type_merchantman = {
-    ship_group = ship_group_transports
+    ship_group = ship_group_transport
 
     base_construction_cost = 38
 
@@ -339,7 +405,7 @@ ship_type_merchantman = {
 }
 
 ship_type_east_indiaman = {
-    ship_group = ship_group_transports
+    ship_group = ship_group_transport
 
     base_construction_cost = 50
 

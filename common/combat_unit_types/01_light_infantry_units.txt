@@ -16,7 +16,7 @@
     }
 
     combat_unit_image = {
-        texture = "gfx/unit_illustrations/light_infantry_1.dds"
+        texture = "gfx/unit_illustrations/levy.dds"
     }
 
 	upgrades = {
@@ -34,7 +34,7 @@ combat_unit_type_light_infantry_2 = {
 
     conscript_peasant_levies = yes
 
-	unlocking_technologies = { men_at_arms }
+	unlocking_technologies = { crossbowman }
 
     battle_modifier = { 
         unit_offense_add = 10
