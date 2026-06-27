@@ -135,8 +135,7 @@ building_tax_office = {
 
 	production_method_groups = {
 		pmg_building_tax_office_main
-		pmg_government_administration_bureaucrat_professionalism
-		pmg_government_administration_religious_administration
+		pmg_building_tax_office_coinage
 	}
 
 	icon = "gfx/interface/icons/building_icons/tax_office_uyr.dds"
@@ -164,6 +163,7 @@ building_bailiff = {
 
 	production_method_groups = {
 		pmg_building_bailiff_main
+		pm_building_bailiff_taxation_rights
 	}
 
 	icon = "gfx/interface/icons/building_icons/bailiff_uyr.dds"

@@ -9,10 +9,7 @@
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 15
-			goods_input_book_add = 5
-			goods_input_gold_add = 10
-			goods_input_silver_add = 10
+			goods_input_paper_add = 20
 		}
 
 		level_scaled = {
@@ -38,10 +35,8 @@ pm_building_tax_office_main_2 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 30
-			goods_input_book_add = 10
-			goods_input_gold_add = 10
-			goods_input_silver_add = 10
+			goods_input_paper_add = 20
+			goods_input_book_add = 5
 		}
 
 		level_scaled = {
@@ -66,10 +61,40 @@ pm_building_tax_office_main_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 45
-			goods_input_book_add = 15
-			goods_input_luxury_clothes_add = 15
-			goods_input_luxury_furniture_add = 15
+			goods_input_paper_add = 30
+			goods_input_book_add = 10
+		}
+
+		level_scaled = {
+			building_employment_aristocrats_add = 500
+			building_employment_bureaucrats_add = 250
+			building_employment_laborers_add = 250
+		}
+	}
+}
+
+pm_building_tax_office_coinage_1 = {
+	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_silver_add = 10
+		}
+	}
+}
+
+pm_building_tax_office_coinage_2 = {
+	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gold_add = 5
 		}
 
 		level_scaled = {

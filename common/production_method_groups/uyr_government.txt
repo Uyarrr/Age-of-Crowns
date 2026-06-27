@@ -56,6 +56,16 @@ pmg_building_tax_office_main = {
 	}
 }
 
+pmg_building_tax_office_coinage = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_tax_office_coinage_1
+		pm_building_tax_office_coinage_2
+	}
+}
+
 ################## Bailiff #######################
 pmg_building_bailiff_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -63,5 +73,16 @@ pmg_building_bailiff_main = {
 
 	production_methods = {
 		pm_building_bailiff_main_1
+	}
+}
+
+pmg_building_bailiff_taxation_rights = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_bailiff_taxation_rights_0
+		pm_building_bailiff_taxation_rights_1
+		pm_building_bailiff_taxation_rights_2
 	}
 }
