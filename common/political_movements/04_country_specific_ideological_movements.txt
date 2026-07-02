@@ -7,8 +7,7 @@
 	}
 
 	creation_trigger = {
-		exists = c:ENG
-		has_journal_entry = je_england_2
+		always = no
 	}
 	creation_weight = {
 		value = 100

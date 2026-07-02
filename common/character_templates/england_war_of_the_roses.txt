@@ -1,0 +1,62 @@
+ENG_henry_vi_lancaster_wotr = {
+	# Henry VI of Lancaster
+	first_name = Henry_VI
+	last_name = Lancaster
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = no
+	noble = yes
+	birth_date = 1421.12.6
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_HOME_COUNTIES
+	traits = {
+		pious
+		reserved
+		sickly
+	}
+	trait_generation = { }
+}
+
+ENG_richard_of_york_wotr = {
+	# Richard Plantagenet, Duke of York
+	first_name = Richard
+	last_name = York
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = no
+	noble = yes
+	birth_date = 1411.9.21
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	home_region = STATE_YORKSHIRE
+	traits = {
+		ambitious
+		meticulous
+		basic_political_operator
+	}
+	trait_generation = { }
+}
+
+ENG_edward_iv_york_wotr = {
+	# Edward IV of York
+	first_name = Edward_IV
+	last_name = York
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = no
+	noble = yes
+	birth_date = 1442.4.28
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_YORKSHIRE
+	traits = {
+		charismatic
+		brave
+		reckless
+	}
+	trait_generation = { }
+}

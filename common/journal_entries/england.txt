@@ -82,32 +82,132 @@ je_england_2 = {
     }
 
 	is_shown_when_inactive = {
-		c:ENG ?= this
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
 	}
 
 	possible = {
-		c:ENG ?= this
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+		is_revolutionary = no
+		is_secessionist = no
+	}
+
+	scripted_progress_bar = je_war_of_the_roses_balance_bar
+	scripted_progress_bar = je_war_of_the_roses_tension_bar
+
+	modifiers_while_active = {
+		war_of_the_roses_dynastic_tension
 	}
 
 	immediate = {
+		set_variable = { name = war_of_roses_balance_current_var value = 50 }
+		set_variable = { name = war_of_roses_tension_current_var value = 45 }
+		trigger_event = { id = england.302 popup = yes }
 	}
 
 	on_monthly_pulse = {
+		effect = {
+			set_variable = { name = war_of_roses_balance_current_var value = "scope:journal_entry.scripted_bar_progress(je_war_of_the_roses_balance_bar)" }
+			set_variable = { name = war_of_roses_tension_current_var value = "scope:journal_entry.scripted_bar_progress(je_war_of_the_roses_tension_bar)" }
+			if = {
+				limit = {
+					var:war_of_roses_tension_current_var >= 70
+				}
+				add_modifier = {
+					name = war_of_the_roses_high_tension
+					months = 2
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_political_movement = {
+								OR = {
+									is_political_movement_type = movement_war_of_roses_yorkist
+									is_political_movement_type = movement_war_of_roses_lancastrian
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							var:war_of_roses_balance_current_var <= 50
+						}
+						create_political_movement = { type = movement_war_of_roses_yorkist }
+					}
+					else = {
+						create_political_movement = { type = movement_war_of_roses_lancastrian }
+					}
+				}
+			}
+		}
 	}
 
-	on_yearly_pulse = {
-	}
+	custom_completion_header = je_war_of_the_roses_lancaster_header
 
 	complete = {
+		custom_tooltip = {
+			text = war_of_the_roses_lancaster_victory_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(je_war_of_the_roses_balance_bar)" >= 80
+			}
+		}
 	}
 
 	on_complete = {
+		trigger_event = {
+			id = england.303
+			popup = yes
+		}
 	}
 
 	event_outcome_completed_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = event_effects_war_of_the_roses_lancaster_tt
+			}
+		}
 	}
 
+	custom_failure_header = je_war_of_the_roses_york_header
+
 	fail = {
+		custom_tooltip = {
+			text = war_of_the_roses_york_victory_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(je_war_of_the_roses_balance_bar)" <= 20
+			}
+		}
+	}
+
+	on_fail = {
+		trigger_event = {
+			id = england.304
+			popup = yes
+		}
+	}
+
+	event_outcome_failed_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = event_effects_war_of_the_roses_york_tt
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			is_revolutionary = yes
+			is_secessionist = yes
+			AND = {
+				NOT = { c:ENG ?= this }
+				NOT = { was_formed_from = ENG }
+			}
+		}
 	}
 	
 	weight = 200

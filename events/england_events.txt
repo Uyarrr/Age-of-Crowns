@@ -144,6 +144,132 @@ england.102 = {
 	}
 }
 
+england.302 = {
+	type = country_event
+
+	title = england_war_of_the_roses_start.title
+	desc = england_war_of_the_roses_start.desc
+	flavor = england_war_of_the_roses_start.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_start.a
+		default_option = yes
+	}
+}
+
+england.303 = {
+	type = country_event
+
+	title = england_war_of_the_roses_lancaster.title
+	desc = england_war_of_the_roses_lancaster.desc
+	flavor = england_war_of_the_roses_lancaster.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/the_justices_of_peace.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_lancaster.a
+		default_option = yes
+
+		create_character = {
+			template = ENG_henry_vi_lancaster_wotr
+			on_created = {
+				set_character_as_ruler = yes
+			}
+		}
+		set_variable = war_of_the_roses_lancaster_victory
+		add_modifier = {
+			name = war_of_the_roses_lancaster_settlement
+			years = 20
+			is_decaying = yes
+		}
+		add_loyalists = {
+			value = small_radicals
+			strata = upper
+		}
+	}
+}
+
+england.304 = {
+	type = country_event
+
+	title = england_war_of_the_roses_york.title
+	desc = england_war_of_the_roses_york.desc
+	flavor = england_war_of_the_roses_york.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_york.a
+		default_option = yes
+
+		if = {
+			limit = { year < 1461 }
+			create_character = {
+				template = ENG_richard_of_york_wotr
+				on_created = {
+					set_character_as_ruler = yes
+				}
+			}
+		}
+		else = {
+			create_character = {
+				template = ENG_edward_iv_york_wotr
+				on_created = {
+					set_character_as_ruler = yes
+				}
+			}
+		}
+		set_variable = war_of_the_roses_york_victory
+		add_modifier = {
+			name = war_of_the_roses_york_settlement
+			years = 20
+			is_decaying = yes
+		}
+		add_loyalists = {
+			value = small_radicals
+			strata = middle
+		}
+	}
+}
+
 england.200 = {
 	type = country_event
 

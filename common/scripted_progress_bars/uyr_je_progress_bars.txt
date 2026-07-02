@@ -1,0 +1,132 @@
+je_war_of_the_roses_balance_bar = {
+	name = "je_war_of_the_roses_balance_bar"
+	desc = "je_war_of_the_roses_balance_bar_left_desc"
+	second_desc = "je_war_of_the_roses_balance_bar_right_desc"
+
+	double_sided_two_spains = yes
+
+	monthly_progress = {
+		owner = {
+			add = {
+				desc = "war_of_the_roses_lancaster_landowners_tt"
+				value = ig:ig_landowners.ig_clout
+				multiply = 0.45
+			}
+			add = {
+				desc = "war_of_the_roses_lancaster_crown_tt"
+				value = ig:ig_crown.ig_clout
+				multiply = 0.35
+			}
+			subtract = {
+				desc = "war_of_the_roses_york_armed_forces_tt"
+				value = ig:ig_armed_forces.ig_clout
+				multiply = 0.45
+			}
+			subtract = {
+				desc = "war_of_the_roses_york_intelligentsia_tt"
+				value = ig:ig_intelligentsia.ig_clout
+				multiply = 0.25
+			}
+			if = {
+				limit = { legitimacy >= 60 }
+				add = {
+					desc = "war_of_the_roses_high_legitimacy_tt"
+					value = 0.25
+				}
+			}
+			if = {
+				limit = { legitimacy < 40 }
+				subtract = {
+					desc = "war_of_the_roses_low_legitimacy_tt"
+					value = 0.35
+				}
+			}
+			if = {
+				limit = { has_modifier = hundred_years_war_won }
+				add = {
+					desc = "war_of_the_roses_hyw_victory_tt"
+					value = 0.40
+				}
+			}
+			if = {
+				limit = { has_modifier = hundred_years_war_lost }
+				subtract = {
+					desc = "war_of_the_roses_hyw_defeat_tt"
+					value = 0.40
+				}
+			}
+			if = {
+				limit = { has_variable = war_of_roses_balance_current_var }
+				add = {
+					desc = "war_of_the_roses_balance_moderating_factor_tt"
+					value = 50
+					subtract = var:war_of_roses_balance_current_var
+					multiply = 0.02
+				}
+			}
+		}
+	}
+	start_value = 50
+	min_value = 0
+	max_value = 100
+}
+
+je_war_of_the_roses_tension_bar = {
+	name = "je_war_of_the_roses_tension_bar"
+	desc = "je_war_of_the_roses_tension_bar_desc"
+
+	default_bad = yes
+	is_inverted = yes
+
+	monthly_progress = {
+		owner = {
+			add = {
+				desc = "war_of_the_roses_legitimacy_tension_tt"
+				value = 55
+				subtract = legitimacy
+				multiply = 0.04
+			}
+			if = {
+				limit = { has_modifier = hundred_years_war_lost }
+				add = {
+					desc = "war_of_the_roses_hyw_defeat_tension_tt"
+					value = 0.35
+				}
+			}
+			if = {
+				limit = { has_modifier = hundred_years_war_won }
+				subtract = {
+					desc = "war_of_the_roses_hyw_victory_tension_tt"
+					value = 0.20
+				}
+			}
+			if = {
+				limit = {
+					has_variable = war_of_roses_balance_current_var
+					var:war_of_roses_balance_current_var > 50
+				}
+				add = {
+					desc = "war_of_the_roses_partisan_tension_tt"
+					value = var:war_of_roses_balance_current_var
+					subtract = 50
+					multiply = 0.02
+				}
+			}
+			if = {
+				limit = {
+					has_variable = war_of_roses_balance_current_var
+					var:war_of_roses_balance_current_var < 50
+				}
+				add = {
+					desc = "war_of_the_roses_partisan_tension_tt"
+					value = 50
+					subtract = var:war_of_roses_balance_current_var
+					multiply = 0.02
+				}
+			}
+		}
+	}
+	start_value = 45
+	min_value = 0
+	max_value = 100
+}
