@@ -67,6 +67,70 @@ war_of_the_roses_york_settlement = {
 	interest_group_ig_landowners_approval_add = -2
 }
 
+war_of_the_roses_great_council = {
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	country_legitimacy_add = 5
+	country_expenses_add = 1000
+	interest_group_ig_landowners_approval_add = 1
+	interest_group_ig_intelligentsia_approval_add = 1
+}
+
+war_of_the_roses_lancastrian_patronage = {
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	country_authority_mult = 0.05
+	interest_group_ig_landowners_approval_add = 2
+	interest_group_ig_crown_pol_str_mult = 0.10
+	interest_group_ig_intelligentsia_approval_add = -1
+}
+
+war_of_the_roses_yorkist_patronage = {
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	country_bureaucracy_mult = 0.05
+	interest_group_ig_intelligentsia_approval_add = 2
+	interest_group_ig_armed_forces_approval_add = 1
+	interest_group_ig_landowners_approval_add = -2
+}
+
+war_of_the_roses_livery_restrained = {
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	country_authority_mult = -0.05
+	country_legitimacy_add = 5
+	interest_group_ig_landowners_approval_add = -2
+	interest_group_ig_armed_forces_approval_add = -1
+}
+
+war_of_the_roses_loveday_procession = {
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	country_legitimacy_add = 10
+	country_prestige_add = 10
+	interest_group_ig_landowners_approval_add = 1
+	interest_group_ig_devout_approval_add = 1
+}
+
+war_of_the_roses_warwick_affinity = {
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	country_bureaucracy_mult = 0.05
+	country_authority_mult = -0.05
+	interest_group_ig_armed_forces_approval_add = 2
+	interest_group_ig_intelligentsia_approval_add = 1
+	interest_group_ig_landowners_approval_add = -1
+}
+
+war_of_the_roses_royal_attainders = {
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	country_authority_mult = 0.10
+	country_radicals_from_legitimacy_mult = 0.25
+	interest_group_ig_landowners_approval_add = -2
+	interest_group_ig_armed_forces_approval_add = -2
+}
+
 canada_expedition = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	country_expenses_add = 3000

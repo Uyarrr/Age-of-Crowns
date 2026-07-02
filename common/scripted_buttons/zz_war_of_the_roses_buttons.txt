@@ -1,0 +1,117 @@
+wotr_summon_great_council_button = {
+	name = "wotr_summon_great_council_button"
+	desc = "wotr_summon_great_council_button_desc"
+
+	visible = {
+		has_journal_entry = je_england_2
+	}
+
+	cooldown = { months = 48 }
+
+	ai_chance = {
+		base = 10
+		if = {
+			limit = { var:war_of_roses_tension_current_var >= 70 }
+			add = 40
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = wotr_has_active_crisis_tt
+			has_journal_entry = je_england_2
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = wotr_summon_great_council_button_effect_tt
+			change_variable = { name = war_of_roses_tension_offset_var add = -10 }
+			clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+			add_modifier = {
+				name = war_of_the_roses_great_council
+				months = 36
+			}
+		}
+	}
+}
+
+wotr_favor_lancaster_button = {
+	name = "wotr_favor_lancaster_button"
+	desc = "wotr_favor_lancaster_button_desc"
+
+	visible = {
+		has_journal_entry = je_england_2
+	}
+
+	cooldown = { months = 36 }
+
+	ai_chance = {
+		base = 10
+		if = {
+			limit = { legitimacy >= 60 }
+			add = 20
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = wotr_has_active_crisis_tt
+			has_journal_entry = je_england_2
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = wotr_favor_lancaster_button_effect_tt
+			change_variable = { name = war_of_roses_balance_offset_var add = 10 }
+			change_variable = { name = war_of_roses_tension_offset_var add = 4 }
+			clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+			clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+			add_modifier = {
+				name = war_of_the_roses_lancastrian_patronage
+				months = 36
+			}
+		}
+	}
+}
+
+wotr_favor_york_button = {
+	name = "wotr_favor_york_button"
+	desc = "wotr_favor_york_button_desc"
+
+	visible = {
+		has_journal_entry = je_england_2
+	}
+
+	cooldown = { months = 36 }
+
+	ai_chance = {
+		base = 10
+		if = {
+			limit = { legitimacy < 45 }
+			add = 25
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = wotr_has_active_crisis_tt
+			has_journal_entry = je_england_2
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = wotr_favor_york_button_effect_tt
+			change_variable = { name = war_of_roses_balance_offset_var add = -10 }
+			change_variable = { name = war_of_roses_tension_offset_var add = 4 }
+			clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+			clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+			add_modifier = {
+				name = war_of_the_roses_yorkist_patronage
+				months = 36
+			}
+		}
+	}
+}

@@ -64,6 +64,14 @@ je_war_of_the_roses_balance_bar = {
 					multiply = 0.02
 				}
 			}
+			if = {
+				limit = { has_variable = war_of_roses_balance_offset_var }
+				add = {
+					desc = "war_of_the_roses_balance_player_actions_tt"
+					value = var:war_of_roses_balance_offset_var
+					multiply = 0.12
+				}
+			}
 		}
 	}
 	start_value = 50
@@ -122,6 +130,14 @@ je_war_of_the_roses_tension_bar = {
 					value = 50
 					subtract = var:war_of_roses_balance_current_var
 					multiply = 0.02
+				}
+			}
+			if = {
+				limit = { has_variable = war_of_roses_tension_offset_var }
+				add = {
+					desc = "war_of_the_roses_tension_player_actions_tt"
+					value = var:war_of_roses_tension_offset_var
+					multiply = 0.12
 				}
 			}
 		}

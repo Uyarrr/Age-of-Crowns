@@ -1,0 +1,50 @@
+wotr_ruler_is_lancastrian_dynasty = {
+	OR = {
+		has_variable = war_of_the_roses_lancaster_victory
+		AND = {
+			exists = dynasty:lancaster_dynasty
+			has_ruler = yes
+			ruler.dynasty ?= dynasty:lancaster_dynasty
+		}
+		AND = {
+			exists = dynasty:lancaster_dynasty
+			has_ruler = no
+			has_heir = yes
+			heir.dynasty ?= dynasty:lancaster_dynasty
+		}
+	}
+}
+
+wotr_ruler_is_yorkist_dynasty = {
+	OR = {
+		has_variable = war_of_the_roses_york_victory
+		AND = {
+			exists = dynasty:york_dynasty
+			has_ruler = yes
+			ruler.dynasty ?= dynasty:york_dynasty
+		}
+		AND = {
+			exists = dynasty:york_dynasty
+			has_ruler = no
+			has_heir = yes
+			heir.dynasty ?= dynasty:york_dynasty
+		}
+	}
+}
+
+wotr_ruler_is_tudor_dynasty = {
+	OR = {
+		has_variable = war_of_the_roses_tudor_victory
+		AND = {
+			exists = dynasty:tudor_dynasty
+			has_ruler = yes
+			ruler.dynasty ?= dynasty:tudor_dynasty
+		}
+		AND = {
+			exists = dynasty:tudor_dynasty
+			has_ruler = no
+			has_heir = yes
+			heir.dynasty ?= dynasty:tudor_dynasty
+		}
+	}
+}

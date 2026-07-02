@@ -205,6 +205,18 @@ movement_war_of_roses_yorkist = {
 			limit = {
 				owner ?= {
 					has_journal_entry = je_england_2
+					var:war_of_roses_tension_current_var >= 85
+				}
+			}
+			add = {
+				value = 0.25
+				desc = "WAR_OF_THE_ROSES_WAR_WARNING"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_journal_entry = je_england_2
 					var:war_of_roses_balance_current_var <= 35
 				}
 			}
@@ -437,6 +449,18 @@ movement_war_of_roses_lancastrian = {
 			add = {
 				value = 0.25
 				desc = "WAR_OF_THE_ROSES_HIGH_TENSION"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_journal_entry = je_england_2
+					var:war_of_roses_tension_current_var >= 85
+				}
+			}
+			add = {
+				value = 0.25
+				desc = "WAR_OF_THE_ROSES_WAR_WARNING"
 			}
 		}
 		if = {

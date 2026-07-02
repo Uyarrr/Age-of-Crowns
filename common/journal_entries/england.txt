@@ -99,6 +99,9 @@ je_england_2 = {
 
 	scripted_progress_bar = je_war_of_the_roses_balance_bar
 	scripted_progress_bar = je_war_of_the_roses_tension_bar
+	scripted_button = wotr_summon_great_council_button
+	scripted_button = wotr_favor_lancaster_button
+	scripted_button = wotr_favor_york_button
 
 	modifiers_while_active = {
 		war_of_the_roses_dynastic_tension
@@ -107,6 +110,8 @@ je_england_2 = {
 	immediate = {
 		set_variable = { name = war_of_roses_balance_current_var value = 50 }
 		set_variable = { name = war_of_roses_tension_current_var value = 45 }
+		set_variable = { name = war_of_roses_balance_offset_var value = 0 }
+		set_variable = { name = war_of_roses_tension_offset_var value = 0 }
 		trigger_event = { id = england.302 popup = yes }
 	}
 
@@ -114,6 +119,26 @@ je_england_2 = {
 		effect = {
 			set_variable = { name = war_of_roses_balance_current_var value = "scope:journal_entry.scripted_bar_progress(je_war_of_the_roses_balance_bar)" }
 			set_variable = { name = war_of_roses_tension_current_var value = "scope:journal_entry.scripted_bar_progress(je_war_of_the_roses_tension_bar)" }
+			if = {
+				limit = { var:war_of_roses_balance_offset_var > 0 }
+				change_variable = { name = war_of_roses_balance_offset_var add = -0.35 }
+				clamp_variable = { name = war_of_roses_balance_offset_var min = 0 max = 30 }
+			}
+			else_if = {
+				limit = { var:war_of_roses_balance_offset_var < 0 }
+				change_variable = { name = war_of_roses_balance_offset_var add = 0.35 }
+				clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 0 }
+			}
+			if = {
+				limit = { var:war_of_roses_tension_offset_var > 0 }
+				change_variable = { name = war_of_roses_tension_offset_var add = -0.25 }
+				clamp_variable = { name = war_of_roses_tension_offset_var min = 0 max = 35 }
+			}
+			else_if = {
+				limit = { var:war_of_roses_tension_offset_var < 0 }
+				change_variable = { name = war_of_roses_tension_offset_var add = 0.25 }
+				clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 0 }
+			}
 			if = {
 				limit = {
 					var:war_of_roses_tension_current_var >= 70
@@ -142,6 +167,119 @@ je_england_2 = {
 					else = {
 						create_political_movement = { type = movement_war_of_roses_lancastrian }
 					}
+				}
+			}
+			if = {
+				limit = {
+					var:war_of_roses_tension_current_var >= 85
+					NOT = { has_variable = war_of_the_roses_war_warning }
+				}
+				set_variable = war_of_the_roses_war_warning
+				trigger_event = { id = england.305 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1450.1.1
+					game_date < 1462.1.1
+					var:war_of_roses_tension_current_var >= 55
+					NOT = { has_variable = war_of_the_roses_cade_unrest }
+				}
+				random = {
+					chance = 4
+					set_variable = war_of_the_roses_cade_unrest
+					trigger_event = { id = england.306 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1452.1.1
+					game_date < 1460.1.1
+					var:war_of_roses_tension_current_var >= 60
+					NOT = { has_variable = war_of_the_roses_york_protectorate }
+				}
+				random = {
+					chance = 3
+					set_variable = war_of_the_roses_york_protectorate
+					trigger_event = { id = england.307 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1448.1.1
+					var:war_of_roses_tension_current_var >= 50
+					NOT = { has_variable = war_of_the_roses_livery_event }
+				}
+				random = {
+					chance = 4
+					set_variable = war_of_the_roses_livery_event
+					trigger_event = { id = england.308 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1450.1.1
+					var:war_of_roses_tension_current_var >= 55
+					var:war_of_roses_balance_current_var >= 55
+					NOT = { has_variable = war_of_the_roses_queen_party_event }
+				}
+				random = {
+					chance = 4
+					set_variable = war_of_the_roses_queen_party_event
+					trigger_event = { id = england.309 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1453.1.1
+					var:war_of_roses_tension_current_var >= 55
+					var:war_of_roses_balance_current_var <= 45
+					NOT = { has_variable = war_of_the_roses_warwick_event }
+				}
+				random = {
+					chance = 4
+					set_variable = war_of_the_roses_warwick_event
+					trigger_event = { id = england.310 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1455.1.1
+					var:war_of_roses_tension_current_var >= 70
+					NOT = { has_variable = war_of_the_roses_st_albans_event }
+				}
+				random = {
+					chance = 6
+					set_variable = war_of_the_roses_st_albans_event
+					trigger_event = { id = england.311 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1458.1.1
+					var:war_of_roses_tension_current_var >= 60
+					has_variable = war_of_the_roses_st_albans_event
+					NOT = { has_variable = war_of_the_roses_loveday_event }
+				}
+				random = {
+					chance = 5
+					set_variable = war_of_the_roses_loveday_event
+					trigger_event = { id = england.312 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1459.1.1
+					var:war_of_roses_tension_current_var >= 75
+					OR = {
+						var:war_of_roses_balance_current_var <= 35
+						var:war_of_roses_balance_current_var >= 65
+					}
+					NOT = { has_variable = war_of_the_roses_attainders_event }
+				}
+				random = {
+					chance = 5
+					set_variable = war_of_the_roses_attainders_event
+					trigger_event = { id = england.313 popup = yes }
 				}
 			}
 		}

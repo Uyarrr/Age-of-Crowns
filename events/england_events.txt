@@ -270,6 +270,481 @@ england.304 = {
 	}
 }
 
+england.305 = {
+	type = country_event
+
+	title = england_war_of_the_roses_realm_arms.title
+	desc = england_war_of_the_roses_realm_arms.desc
+	flavor = england_war_of_the_roses_realm_arms.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_realm_arms.a
+		default_option = yes
+
+		change_variable = { name = war_of_roses_tension_offset_var add = -10 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_great_council
+			months = 36
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_realm_arms.b
+
+		if = {
+			limit = { var:war_of_roses_balance_current_var <= 50 }
+			change_variable = { name = war_of_roses_balance_offset_var add = -10 }
+			add_modifier = {
+				name = war_of_the_roses_yorkist_patronage
+				months = 36
+			}
+		}
+		else = {
+			change_variable = { name = war_of_roses_balance_offset_var add = 10 }
+			add_modifier = {
+				name = war_of_the_roses_lancastrian_patronage
+				months = 36
+			}
+		}
+		change_variable = { name = war_of_roses_tension_offset_var add = 8 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = {
+			value = small_radicals
+			strata = upper
+		}
+	}
+}
+
+england.306 = {
+	type = country_event
+
+	title = england_war_of_the_roses_cade.title
+	desc = england_war_of_the_roses_cade.desc
+	flavor = england_war_of_the_roses_cade.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_cade.a
+		default_option = yes
+
+		change_variable = { name = war_of_roses_balance_offset_var add = -5 }
+		change_variable = { name = war_of_roses_tension_offset_var add = -8 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_yorkist_patronage
+			months = 24
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_cade.b
+
+		change_variable = { name = war_of_roses_balance_offset_var add = 5 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 10 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = {
+			value = small_radicals
+			strata = lower
+		}
+	}
+}
+
+england.307 = {
+	type = country_event
+
+	title = england_war_of_the_roses_protectorate.title
+	desc = england_war_of_the_roses_protectorate.desc
+	flavor = england_war_of_the_roses_protectorate.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_protectorate.a
+		default_option = yes
+
+		change_variable = { name = war_of_roses_balance_offset_var add = -12 }
+		change_variable = { name = war_of_roses_tension_offset_var add = -4 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_yorkist_patronage
+			months = 48
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_protectorate.b
+
+		change_variable = { name = war_of_roses_balance_offset_var add = 8 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 10 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = {
+			value = small_radicals
+			strata = upper
+		}
+	}
+}
+
+england.308 = {
+	type = country_event
+
+	title = england_war_of_the_roses_livery.title
+	desc = england_war_of_the_roses_livery.desc
+	flavor = england_war_of_the_roses_livery.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_livery.a
+		default_option = yes
+
+		change_variable = { name = war_of_roses_tension_offset_var add = -6 }
+		change_variable = { name = war_of_roses_balance_offset_var add = 2 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_livery_restrained
+			months = 36
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_livery.b
+
+		if = {
+			limit = { var:war_of_roses_balance_current_var <= 50 }
+			change_variable = { name = war_of_roses_balance_offset_var add = -6 }
+		}
+		else = {
+			change_variable = { name = war_of_roses_balance_offset_var add = 6 }
+		}
+		change_variable = { name = war_of_roses_tension_offset_var add = 8 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_high_tension
+			months = 12
+		}
+	}
+}
+
+england.309 = {
+	type = country_event
+
+	title = england_war_of_the_roses_queen_party.title
+	desc = england_war_of_the_roses_queen_party.desc
+	flavor = england_war_of_the_roses_queen_party.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/the_justices_of_peace.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_queen_party.a
+		default_option = yes
+
+		change_variable = { name = war_of_roses_balance_offset_var add = 10 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 5 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_lancastrian_patronage
+			months = 48
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_queen_party.b
+
+		change_variable = { name = war_of_roses_balance_offset_var add = -5 }
+		change_variable = { name = war_of_roses_tension_offset_var add = -5 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_great_council
+			months = 24
+		}
+	}
+}
+
+england.310 = {
+	type = country_event
+
+	title = england_war_of_the_roses_warwick.title
+	desc = england_war_of_the_roses_warwick.desc
+	flavor = england_war_of_the_roses_warwick.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_warwick.a
+		default_option = yes
+
+		change_variable = { name = war_of_roses_balance_offset_var add = -10 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 4 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_warwick_affinity
+			months = 48
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_warwick.b
+
+		change_variable = { name = war_of_roses_balance_offset_var add = 6 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 9 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = {
+			value = small_radicals
+			strata = upper
+		}
+	}
+}
+
+england.311 = {
+	type = country_event
+
+	title = england_war_of_the_roses_st_albans.title
+	desc = england_war_of_the_roses_st_albans.desc
+	flavor = england_war_of_the_roses_st_albans.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_st_albans.a
+		default_option = yes
+
+		change_variable = { name = war_of_roses_balance_offset_var add = -10 }
+		change_variable = { name = war_of_roses_tension_offset_var add = -5 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_yorkist_patronage
+			months = 36
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_st_albans.b
+
+		change_variable = { name = war_of_roses_balance_offset_var add = 8 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 12 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = {
+			value = medium_radicals
+			strata = upper
+		}
+	}
+}
+
+england.312 = {
+	type = country_event
+
+	title = england_war_of_the_roses_loveday.title
+	desc = england_war_of_the_roses_loveday.desc
+	flavor = england_war_of_the_roses_loveday.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/the_justices_of_peace.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_loveday.a
+		default_option = yes
+
+		if = {
+			limit = { var:war_of_roses_balance_current_var > 50 }
+			change_variable = { name = war_of_roses_balance_offset_var add = -5 }
+		}
+		else = {
+			change_variable = { name = war_of_roses_balance_offset_var add = 5 }
+		}
+		change_variable = { name = war_of_roses_tension_offset_var add = -14 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_loveday_procession
+			months = 36
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_loveday.b
+
+		change_variable = { name = war_of_roses_tension_offset_var add = 7 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = {
+			value = small_radicals
+			strata = upper
+		}
+	}
+}
+
+england.313 = {
+	type = country_event
+
+	title = england_war_of_the_roses_attainders.title
+	desc = england_war_of_the_roses_attainders.desc
+	flavor = england_war_of_the_roses_attainders.flavor
+
+	event_image = {
+		texture = "gfx/event_pictures/yorkist.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+
+	cooldown = {
+		years = 999
+	}
+
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_attainders.a
+		default_option = yes
+
+		if = {
+			limit = { var:war_of_roses_balance_current_var >= 50 }
+			change_variable = { name = war_of_roses_balance_offset_var add = 8 }
+		}
+		else = {
+			change_variable = { name = war_of_roses_balance_offset_var add = -8 }
+		}
+		change_variable = { name = war_of_roses_tension_offset_var add = 12 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_royal_attainders
+			months = 48
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_attainders.b
+
+		if = {
+			limit = { var:war_of_roses_balance_current_var > 50 }
+			change_variable = { name = war_of_roses_balance_offset_var add = -6 }
+		}
+		else = {
+			change_variable = { name = war_of_roses_balance_offset_var add = 6 }
+		}
+		change_variable = { name = war_of_roses_tension_offset_var add = -8 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_loyalists = {
+			value = small_radicals
+			strata = upper
+		}
+	}
+}
+
 england.200 = {
 	type = country_event
 

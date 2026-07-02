@@ -273,18 +273,7 @@ ENG = { # England
 		priority = 120
 		trigger = {
 			coa_def_monarchy_trigger = yes
-			exists = dynasty:tudor_dynasty
-			OR = {
-				AND = {
-					has_ruler = yes
-					ruler.dynasty ?= dynasty:tudor_dynasty
-				}
-				AND = {
-					has_ruler = no
-					has_heir = yes
-					heir.dynasty ?= dynasty:tudor_dynasty
-				}
-			}
+			wotr_ruler_is_tudor_dynasty = yes
 		}
 	}
 	flag_definition = {
@@ -294,18 +283,7 @@ ENG = { # England
 		priority = 120
 		trigger = {
 			coa_def_monarchy_trigger = yes
-			exists = dynasty:york_dynasty
-			OR = {
-				AND = {
-					has_ruler = yes
-					ruler.dynasty ?= dynasty:york_dynasty
-				}
-				AND = {
-					has_ruler = no
-					has_heir = yes
-					heir.dynasty ?= dynasty:york_dynasty
-				}
-			}
+			wotr_ruler_is_yorkist_dynasty = yes
 		}
 	}
 	flag_definition = {
@@ -315,18 +293,7 @@ ENG = { # England
 		priority = 120
 		trigger = {
 			coa_def_monarchy_trigger = yes
-			exists = dynasty:lancaster_dynasty
-			OR = {
-				AND = {
-					has_ruler = yes
-					ruler.dynasty ?= dynasty:lancaster_dynasty
-				}
-				AND = {
-					has_ruler = no
-					has_heir = yes
-					heir.dynasty ?= dynasty:lancaster_dynasty
-				}
-			}
+			wotr_ruler_is_lancastrian_dynasty = yes
 		}
 	}
 	flag_definition = {
@@ -9587,4 +9554,4 @@ CSI = { # Li Siqi
 			coa_def_empire_trigger = yes
 		}
 	}
-}                                             
+}
