@@ -59,6 +59,12 @@ wotr_favor_lancaster_button = {
 			text = wotr_has_active_crisis_tt
 			has_journal_entry = je_england_2
 		}
+		NOT = {
+			custom_tooltip = {
+				text = wotr_side_patronage_cooldown_tt
+				has_variable = wotr_side_patronage_cooldown
+			}
+		}
 	}
 
 	effect = {
@@ -72,6 +78,10 @@ wotr_favor_lancaster_button = {
 				name = war_of_the_roses_lancastrian_patronage
 				months = 36
 			}
+		}
+		set_variable = {
+			name = wotr_side_patronage_cooldown
+			months = 36
 		}
 	}
 }
@@ -99,6 +109,12 @@ wotr_favor_york_button = {
 			text = wotr_has_active_crisis_tt
 			has_journal_entry = je_england_2
 		}
+		NOT = {
+			custom_tooltip = {
+				text = wotr_side_patronage_cooldown_tt
+				has_variable = wotr_side_patronage_cooldown
+			}
+		}
 	}
 
 	effect = {
@@ -112,6 +128,10 @@ wotr_favor_york_button = {
 				name = war_of_the_roses_yorkist_patronage
 				months = 36
 			}
+		}
+		set_variable = {
+			name = wotr_side_patronage_cooldown
+			months = 36
 		}
 	}
 }
