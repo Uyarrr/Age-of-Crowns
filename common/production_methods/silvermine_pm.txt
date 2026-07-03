@@ -7,7 +7,7 @@ pm_building_silver_mine_main_1 = {
 			goods_input_tools_add = 5
 
 			# output goods
-			goods_output_silver_add = 20
+			goods_output_silver_add = 10
 		}
 
 		level_scaled = {
@@ -18,7 +18,7 @@ pm_building_silver_mine_main_1 = {
 	}
 	country_modifiers = {
 		workforce_scaled = {
-			country_minting_add = 75
+			country_minting_add = 300
 		}
 	}
 }
@@ -32,7 +32,7 @@ pm_building_silver_mine_main_2 = {
 	
 	country_modifiers = {
 		workforce_scaled = {
-			country_minting_add = 150
+			country_minting_add = 600
 		}
 	}
 
@@ -42,7 +42,7 @@ pm_building_silver_mine_main_2 = {
 			goods_input_tools_add = 10
 
 			# output goods
-			goods_output_silver_add = 40
+			goods_output_silver_add = 20
 		}
 
 		level_scaled = {
@@ -61,8 +61,7 @@ pm_building_silver_mine_main_3 = {
 	}
 	
 	country_modifiers = {
-		workforce_scaled = {
-			country_minting_add = 300
+		workforce_scaled = { 1200
 		}
 	}
 
@@ -72,7 +71,7 @@ pm_building_silver_mine_main_3 = {
 			goods_input_tools_add = 15
 
 			# output goods
-			goods_output_silver_add = 60
+			goods_output_silver_add = 30
 		}
 
 		level_scaled = {
@@ -93,7 +92,7 @@ pm_building_silver_mine_main_4 = {
 	
 		country_modifiers = {
 		workforce_scaled = {
-			country_minting_add = 600
+			country_minting_add = 2400
 		}
 	}
 
@@ -103,7 +102,7 @@ pm_building_silver_mine_main_4 = {
 			goods_input_tools_add = 20
 
 			# output goods
-			goods_output_silver_add = 80
+			goods_output_silver_add = 40
 		}
 
 		level_scaled = {
