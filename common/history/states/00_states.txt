@@ -4920,13 +4920,6 @@ s:STATE_LAZIO = {
 		}
 		add_homeland = cu:north_italian
 	}
-s:STATE_LA_PAMPA = {
-		create_state = {
-			country = c:N10
-			owned_provinces = { x008C72 x02454E x056575 x05B0FE x0BAC41 x20BF71 x236485 x2D53E4 x31058F x33F60A x3EDCA2 x3F05DB x41303C x4B8DCF x5625B7 x6A7C85 x6CB61C x6D8C54 x6F875E x6FD2C8 x700090 x708090 x71796D x766A95 x7A3CE9 x7B3596 x7BF818 x7C6219 x7D5593 x7E58AD x7ED632 x88F9B3 x8C3F3B x8C72BB x95DAD0 x9B19FC x9C4EE3 xA1069A xA7889F xA7B670 xAEEA79 xB0D16A xB74055 xB8A863 xC11A96 xC347D2 xC60A9F xCA7105 xCD2F84 xDA28FF xDC526D xDF6BB7 xE1E756 xE3B67F xEDB33D xEF8010 xF08090 xF1A586 }
-			state_type = incorporated
-		}
-	}
 s:STATE_LEBANON = {
 		create_state = {
 			country = c:SYR
@@ -8384,28 +8377,6 @@ s:STATE_SOUTH_ANGOLA = {
 			}
 			add_homeland = cu:ovimbundu
 		}
-s:STATE_SOUTH_ATLANTIC_ISLANDS = {
-		create_state = {
-			country = c:NM1
-			owned_provinces = { x0CB556 }
-			state_type = incorporated
-		}
-		create_state = {
-			country = c:SH1
-			owned_provinces = { xB5760C }
-			state_type = incorporated
-		}
-		create_state = {
-			country = c:SL1
-			owned_provinces = { xB0BDDF xB5100C }
-			state_type = incorporated
-		}
-		create_state = {
-			country = c:T24
-			owned_provinces = { x3020D0 x5E9DB3 x9EF337 }
-			state_type = incorporated
-		}
-	}
 s:STATE_SOUTH_AUSTRALIA = {
 		create_state = {
 			country = c:KAU
@@ -9491,13 +9462,6 @@ s:STATE_URMIA = {
 		}
 		add_homeland = cu:azerbaijani
 		add_homeland = cu:kurdish
-	}
-s:STATE_URUGUAY = {
-		create_state = {
-			country = c:C23
-			owned_provinces = { x02C6DE x061EE6 x08CCA6 x104529 x139DC8 x302DDA x3588C8 x3AF263 x3D3A57 x3EA75C x3F05CB x449F06 x44A7CD x466506 x46C43D x490187 x4934E2 x49D0F9 x4E1442 x65E74D x754BF8 x7764E0 x7AADBF x8136C4 x9C6453 xA282BC xA46ED2 xA7EB2E xABC305 xC2A28B xC53004 xC707C7 xCB8D8C xD45E0C xD5325F xD8A185 xD8A44F xDD1206 xE25670 xE2BE85 xE2D434 xE69F06 xEE9484 xFEBAD0 }
-			state_type = incorporated
-		}
 	}
 s:STATE_UTAH = {
 		create_state = {
