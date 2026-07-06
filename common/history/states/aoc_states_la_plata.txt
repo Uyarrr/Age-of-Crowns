@@ -5,21 +5,24 @@ STATES = {
 			country = c:NDV
 			owned_provinces = { xE6CEFA x0EF9D4 xAAE517 xB196C3 xD099E7 x4AC29E xF3F73C x988988 xAAAE72 x7D7684 xBCA186 x55BC51 xDDA329 xA5787E x759354 x092C5E x9A6092 x910C5C x238A1A x9C2131 x92BEE9 x64BE0D x7EB6F0 x06F100 xFB9D5C xF07AA3 xCD9FE6 x778AFC x84FBF5 }
 		}
-		add_homeland = cu:guarani	}
+		add_homeland = cu:guarani
+		add_homeland = cu:platinean	}
 
 	s:STATE_BAJO_PARAGUAY = {
 		create_state = {
 			country = c:NDV
 			owned_provinces = { xB74540 xB63BAD x9CDC33 xCD9F44 xF72535 x8D0A9E xC4AB87 x361EE6 xFBD28B x0B832C x0E946E x651796 x0FC5DF x5A795B x3674BC x2594A3 x088648 x369F44 x4F8725 xCB6C17 x73B395 x4DC624 x334783 xBF51C8 xCD1FE6 xCCC385 x1DCC94 xFCD325 x0F5F2B xF4DD1F xCD1E44 }
 		}
-		add_homeland = cu:guarani	}
+		add_homeland = cu:guarani
+		add_homeland = cu:platinean	}
 
 	s:STATE_ALTO_PARAGUAY = {
 		create_state = {
 			country = c:MGR
 			owned_provinces = { x7F122F x8E584E xF6D2AB xFA7666 x5E4391 x00B4D8 x0F3CD6 x94589F x454794 xBBF9A0 x3A504C xC7CB16 x7EA30A xDA6F61 xC61ADF x60C0F0 x1FB9E5 xDC3EF4 xC8DC41 xDA1836 xD5F9CD xD88F59 xAFCC81 x466E2C xCE33D1 xB10505 xB7D892 x42596B xABB36B xF0B1F6 xD90F3A xA67B3F x841D25 x31CD31 xF81AEB xF9F050 xACC25D x1B710F x8CCFFD x10DCC5 xF56551 x0021B0 x03A9D5 x4DC9E5 x24FD6F x8706BD x89DBD1 x257980 xA6FC81 xDE11F9 x4D49C2 xA04170 x4D1F19 x8A3F78 x907EFD x4A6B07 x067D66 xF610F7 xAD31E7 xEF7E14 x1148FC xF30D3D xBD3AF3 x4D929D x2C6C50 x727FD6 x03443A }
 		}
-		add_homeland = cu:guarani	}
+		add_homeland = cu:guarani
+		add_homeland = cu:platinean	}
 
 	s:STATE_CHACO = {
 		create_state = {
@@ -27,7 +30,8 @@ STATES = {
 			state_type = unincorporated
 			owned_provinces = { x07D26B xECF85F x5AB63C xF4329F xC37562 xBB1FAD xEE670B xB00050 xB2711B x517902 xD84595 x4A2296 xFDFEA2 x677EEB x2A9B2C xB0C011 x60F33C x64D769 x52353A xEA944C xA080F0 x4E5F59 xBB6154 x3F7BB5 x9D1DC2 x1BAD65 x455239 x06C8A5 x9E3116 x840395 x4D4F5E xC1E078 xC75C36 xC7FF96 x42AED6 x9A3B4F x476F91 x76C8E9 xE0C49E x98A799 x26CE16 x0E777E x5040D0 xD041D0 x1DFDAC xBFE416 x8B722D xB315A7 }
 		}
-		add_homeland = cu:guarani	}
+		add_homeland = cu:guarani
+		add_homeland = cu:platinean	}
 
 	s:STATE_SANTA_FE = {
 		create_state = {
@@ -38,7 +42,8 @@ STATES = {
 			country = c:CUA
 			owned_provinces = { x704010 x4CF210 x6A3C9B xF145AE x32AD9F x841A8E xABCFB1 x839A16 xF04011 x9AE49A x3ED92C xC69BB9 x455F31 x5C52A5 x76565D xDB4C3B xF1F90D x7177B9 x87CEFA }
 		}
-		add_homeland = cu:guarani	}
+		add_homeland = cu:guarani
+		add_homeland = cu:platinean	}
 
 	s:STATE_BUENOS_AIRES = {
 		create_state = {
@@ -49,14 +54,17 @@ STATES = {
 			country = c:CUAC
 			owned_provinces = { x365A5B xB42CFD xCA746C x9FC353 x257F09 xB0C090 x3724A0 }
 		}
-		add_homeland = cu:patagonian	}
+		add_homeland = cu:patagonian
+		add_homeland = cu:charruan
+		add_homeland = cu:platinean	}
 
 	s:STATE_LA_PAMPA = { # Córdoba
 		create_state = {
 			country = c:MPC
 			owned_provinces = { x31058F x6A7C85 x41303C x6D8C54 xE1E756 xEF8010 x6FD2C8 x71796D x7BF818 x7B3596 x056575 xF1A586 x2D53E4 x3EDCA2 x9C4EE3 x7A3CE9 x700090 x008C72 x8C72BB x7E58AD xDA28FF x7D5593 xE3B67F x766A95 x05B0FE xCD2F84 x5625B7 x20BF71 x0BAC41 xA7889F xEDB33D x9B19FC xC11A96 x7C6219 xB0D16A x8C3F3B xC60A9F xC347D2 xAEEA79 x3F05DB x236485 x7ED632 x6F875E x02454E x4B8DCF xDF6BB7 x708090 x95DAD0 xCA7105 xA1069A x88F9B3 x33F60A xB74055 xDC526D xF08090 x6CB61C xA7B670 xB8A863 }
 		}
-		add_homeland = cu:patagonian	}
+		add_homeland = cu:patagonian
+		add_homeland = cu:platinean	}
 
 	s:STATE_RIO_NEGRO = { # Mendoza
 		create_state = {
@@ -79,7 +87,8 @@ STATES = {
 			country = c:PHE
 			owned_provinces = { xDAE7CA xAAA21B x29AFD4 xD78C29 }
 		}
-		add_homeland = cu:patagonian	}
+		add_homeland = cu:patagonian
+		add_homeland = cu:south_andean	}
 
 	s:STATE_PATAGONIA = {
 		create_state = {
@@ -112,5 +121,6 @@ STATES = {
 			country = c:SLK
 			owned_provinces = { xB5760C x0CB556 xB0BDDF xB5100C x3020D0 x5E9DB3 x9EF337 }
 		}
-		add_homeland = cu:patagonian	}
+		add_homeland = cu:patagonian
+		add_homeland = cu:british	}
 }
