@@ -1,0 +1,60 @@
+﻿### Earning Recognition functions
+on_wargoal_enforced = {
+	effect = {
+		if = {
+			limit = {
+				scope:target ?= {
+					has_journal_entry = je_earn_recognition
+				}
+			}
+			scope:target ?= {
+				set_variable = {
+					name = temp_wargoal_impact
+					value = {
+						value = scope:wargoal_impact
+						multiply = -4
+					}
+				}
+				if = {
+					limit = {
+						has_variable = temp_wargoal_impact
+					}
+					je:je_earn_recognition ?= {
+						add_progress = { value = owner.var:temp_wargoal_impact name = earn_recognition_progress_bar }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_journal_entry = je_earn_recognition
+				}
+				scope:target ?= {
+					OR = {
+						is_country_type = recognized
+						country_is_colonial_or_company = yes
+					}
+					country_rank >= rank_value:major_power
+				}
+			}
+			owner = {
+				set_variable = {
+					name = temp_wargoal_impact
+					value = {
+						value = scope:wargoal_impact
+						multiply = 4
+					}
+				}
+				if = {
+					limit = {
+						has_variable = temp_wargoal_impact
+					}
+					je:je_earn_recognition ?= {
+						add_progress = { value = owner.var:temp_wargoal_impact name = earn_recognition_progress_bar }
+					}
+				}
+			}
+		}
+	}
+}
