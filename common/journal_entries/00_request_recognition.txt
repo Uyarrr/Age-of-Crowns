@@ -25,15 +25,15 @@
 					}
 					country_rank >= rank_value:unrecognized_major_power
 				}
-				has_technology_researched = colonization
+				has_technology_researched = renaissance
 			}
 			AND = {
 				country_rank >= rank_value:unrecognized_regional_power
-				has_technology_researched = civilizing_mission
+				has_technology_researched = new_world
 			}
 			AND = {
 				country_rank >= rank_value:unrecognized_power
-				has_technology_researched = international_exchange_standards
+				has_technology_researched = confessionalism
 			}
 		}
 	}
