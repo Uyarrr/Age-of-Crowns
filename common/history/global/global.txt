@@ -2,12 +2,7 @@
     every_state = {
         limit = {
             owner = {
-                OR = {
-                    country_tier = principality
-                    country_tier = grand_principality
-                    country_tier = kingdom
-                    country_tier = empire
-                }
+                NOT = { is_country_type = decentralized }
             }
         }
 
@@ -25,7 +20,6 @@
 
         # Basic Buildings
         if = {
-            limit = { is_capital = yes }
             create_building = { building = building_village  level = 1 }
         }
     }
