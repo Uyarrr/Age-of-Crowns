@@ -2104,25 +2104,6 @@ s:STATE_CONNECTICUT = {
 		}
 		add_homeland = cu:algonquian
 	}
-s:STATE_CONSTANTINE = {
-			create_state = {
-				country = c:TUG
-				owned_provinces = { x01D0A0 x01EE15 x0C42E2 x137E91 x3AD789 x8FFB18 xB04F35 xC3090D xD99A74 }
-				state_type = incorporated
-			}
-			create_state = {
-				country = c:TUN
-				owned_provinces = { x0050A0 x0090A0 x0C5C65 x1AF7B7 x265E07 x2DF9DB x3A0E38 x429B12 x7C6240 x8050A0 x8090DF x8E7690 x9AF6A4 xA12B39 xA31194 xA39A15 xB1BCFF xB5486B xC65997 xDC0687 xDF1F38 xFCF985 }
-				state_type = incorporated
-			}
-			create_state = {
-				country = c:V97
-				owned_provinces = { x3EE58D x79D029 x991E79 }
-				state_type = incorporated
-			}
-			add_homeland = cu:berber
-			add_homeland = cu:maghrebi
-		}
 s:STATE_CORSICA = {
 		create_state = {
 			country = c:GNA
@@ -8787,25 +8768,6 @@ s:STATE_TRAVANCORE = {
 		}
 		add_homeland = cu:malayalam
 	}
-s:STATE_TRIPOLI = {
-			create_state = {
-				country = c:TUN
-				owned_provinces = { x1E8A25 x40CFA0 x43C678 x505BF8 x84D04D x8E70B1 x8EDC4D xA3B5DA xC050A0 xC6722B xFAB002 }
-				state_type = incorporated
-			}
-			create_state = {
-				country = c:W39
-				owned_provinces = { x02CCF5 x0C98CD x1845BE x188727 x26FEF6 x281051 x321C7F x3293BF x37034A x4C7050 x4E480E x5183F2 x522D29 x671156 x725A37 x77D1BA x8010E0 x83708C x85204C x87E9E0 x8967B5 x909C77 x96B6AF xA14DC8 xAAA267 xACF78C xADD677 xAFD438 xB01814 xBD52A2 xC0D0A0 xC3C4EC xC49FA7 xCD6775 xD3A4B1 xD5C61D xD61033 xD9A89D xE0D870 xE9B457 xF42EA1 xF8A389 }
-				state_type = incorporated
-			}
-			create_state = {
-				country = c:W44
-				owned_provinces = { x00AA38 x06135E x163759 x41960C x4D4A58 x6316C9 x67758E x68DB95 x6951D5 x7EE2C1 x976D70 xB55E99 xD7CBD9 xFD5B11 xFF8008 }
-				state_type = incorporated
-			}
-			add_homeland = cu:maghrebi
-			add_claim = c:TRI
-		}
 s:STATE_TUNISIA = {
 			create_state = {
 				country = c:TUN
