@@ -13440,11 +13440,6 @@ s:STATE_HOME_COUNTIES = {
 			}
 			create_pop = {
 				culture = british
-				religion = catholic
-				size = 216466
-			}
-			create_pop = {
-				culture = british
 				religion = jewish
 				size = 1554
 			}
@@ -33631,6 +33626,11 @@ s:STATE_WEST_COUNTRY = {
 				culture = welsh
 				religion = catholic
 				size = 50597
+			}
+			create_pop = {
+				culture = british
+				religion = catholic
+				size = 216466
 			}
 			create_pop = {
 				culture = british
