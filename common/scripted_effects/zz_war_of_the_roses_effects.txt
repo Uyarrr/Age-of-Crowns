@@ -1,0 +1,177 @@
+wotr_set_lancaster_dynasty_effect = {
+	remove_variable = wotr_dynasty_york
+	remove_variable = wotr_dynasty_tudor
+	set_variable = wotr_dynasty_lancaster
+}
+
+wotr_set_york_dynasty_effect = {
+	remove_variable = wotr_dynasty_lancaster
+	remove_variable = wotr_dynasty_tudor
+	set_variable = wotr_dynasty_york
+}
+
+wotr_set_tudor_dynasty_effect = {
+	remove_variable = wotr_dynasty_lancaster
+	remove_variable = wotr_dynasty_york
+	set_variable = wotr_dynasty_tudor
+}
+
+wotr_ensure_henry_vi_effect = {
+	if = {
+		limit = {
+			NOT = {
+				any_scope_character = {
+					has_variable = wotr_henry_vi_character
+				}
+			}
+		}
+		create_character = {
+			template = ENG_henry_vi_lancaster_wotr
+			on_created = {
+				set_variable = wotr_henry_vi_character
+			}
+		}
+	}
+}
+
+wotr_ensure_richard_of_york_effect = {
+	if = {
+		limit = {
+			NOT = {
+				any_scope_character = {
+					has_variable = wotr_richard_of_york_character
+				}
+			}
+		}
+		create_character = {
+			template = ENG_richard_of_york_wotr
+			on_created = {
+				set_variable = wotr_richard_of_york_character
+			}
+		}
+	}
+}
+
+wotr_ensure_edward_iv_effect = {
+	if = {
+		limit = {
+			NOT = {
+				any_scope_character = {
+					has_variable = wotr_edward_iv_character
+				}
+			}
+		}
+		create_character = {
+			template = ENG_edward_iv_york_wotr
+			on_created = {
+				set_variable = wotr_edward_iv_character
+			}
+		}
+	}
+}
+
+wotr_ensure_edward_westminster_effect = {
+	if = {
+		limit = {
+			NOT = {
+				any_scope_character = {
+					has_variable = wotr_edward_westminster_character
+				}
+			}
+		}
+		create_character = {
+			template = ENG_edward_of_westminster_wotr
+			on_created = {
+				set_variable = wotr_edward_westminster_character
+			}
+		}
+	}
+}
+
+wotr_ensure_henry_tudor_effect = {
+	if = {
+		limit = {
+			NOT = {
+				any_scope_character = {
+					has_variable = wotr_henry_tudor_character
+				}
+			}
+		}
+		create_character = {
+			template = ENG_henry_vii_tudor_wotr
+			on_created = {
+				set_variable = wotr_henry_tudor_character
+			}
+		}
+	}
+}
+
+wotr_install_lancaster_ruler_effect = {
+	if = {
+		limit = { game_date < 1471.5.4 }
+		wotr_ensure_henry_vi_effect = yes
+		random_scope_character = {
+			limit = { has_variable = wotr_henry_vi_character }
+			set_character_as_ruler = yes
+		}
+	}
+	else = {
+		wotr_ensure_edward_westminster_effect = yes
+		random_scope_character = {
+			limit = { has_variable = wotr_edward_westminster_character }
+			set_character_as_ruler = yes
+		}
+	}
+	wotr_set_lancaster_dynasty_effect = yes
+}
+
+wotr_install_york_ruler_effect = {
+	if = {
+		limit = { game_date < 1461.1.1 }
+		wotr_ensure_richard_of_york_effect = yes
+		random_scope_character = {
+			limit = { has_variable = wotr_richard_of_york_character }
+			set_character_as_ruler = yes
+		}
+	}
+	else = {
+		wotr_ensure_edward_iv_effect = yes
+		random_scope_character = {
+			limit = { has_variable = wotr_edward_iv_character }
+			set_character_as_ruler = yes
+		}
+	}
+	wotr_set_york_dynasty_effect = yes
+}
+
+wotr_install_tudor_ruler_effect = {
+	wotr_ensure_henry_tudor_effect = yes
+	random_scope_character = {
+		limit = { has_variable = wotr_henry_tudor_character }
+		set_character_as_ruler = yes
+	}
+	wotr_set_tudor_dynasty_effect = yes
+}
+
+wotr_clear_civil_war_variables_effect = {
+	remove_variable = wotr_civil_war_active
+	remove_variable = wotr_active_rebellion_york
+	remove_variable = wotr_active_rebellion_lancaster
+	remove_variable = wotr_active_rebellion_tudor
+	remove_variable = wotr_rebel_side_york
+	remove_variable = wotr_rebel_side_lancaster
+	remove_variable = wotr_rebel_side_tudor
+}
+
+wotr_record_war_fought_effect = {
+	if = {
+		limit = { has_variable = wotr_wars_fought_var }
+		change_variable = { name = wotr_wars_fought_var add = 1 }
+	}
+	else = {
+		set_variable = { name = wotr_wars_fought_var value = 1 }
+	}
+	set_variable = { name = wotr_phase_var value = 4 }
+	set_variable = { name = wotr_stability_months_var value = 0 }
+	set_variable = { name = war_of_roses_tension_offset_var value = -15 }
+}

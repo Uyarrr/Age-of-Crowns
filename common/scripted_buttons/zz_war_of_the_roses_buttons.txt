@@ -21,6 +21,12 @@ wotr_summon_great_council_button = {
 			text = wotr_has_active_crisis_tt
 			has_journal_entry = je_england_2
 		}
+		NOT = {
+			custom_tooltip = {
+				text = wotr_no_active_civil_war_tt
+				has_variable = wotr_civil_war_active
+			}
+		}
 	}
 
 	effect = {
@@ -63,6 +69,12 @@ wotr_favor_lancaster_button = {
 			custom_tooltip = {
 				text = wotr_side_patronage_cooldown_tt
 				has_variable = wotr_side_patronage_cooldown
+			}
+		}
+		NOT = {
+			custom_tooltip = {
+				text = wotr_no_active_civil_war_tt
+				has_variable = wotr_civil_war_active
 			}
 		}
 	}
@@ -113,6 +125,12 @@ wotr_favor_york_button = {
 			custom_tooltip = {
 				text = wotr_side_patronage_cooldown_tt
 				has_variable = wotr_side_patronage_cooldown
+			}
+		}
+		NOT = {
+			custom_tooltip = {
+				text = wotr_no_active_civil_war_tt
+				has_variable = wotr_civil_war_active
 			}
 		}
 	}

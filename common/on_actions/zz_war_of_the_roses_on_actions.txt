@@ -1,0 +1,210 @@
+on_revolution_start = {
+	on_actions = { wotr_on_revolution_start }
+}
+
+wotr_on_revolution_start = {
+	trigger = {
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+		has_journal_entry = je_england_2
+		any_civil_war = {
+			is_civil_war_type = revolution
+			this.political_movement ?= {
+				OR = {
+					is_political_movement_type = movement_war_of_roses_yorkist
+					is_political_movement_type = movement_war_of_roses_lancastrian
+					is_political_movement_type = movement_war_of_roses_tudor
+				}
+			}
+		}
+	}
+
+	effect = {
+		set_variable = wotr_civil_war_active
+		set_variable = { name = wotr_phase_var value = 4 }
+		set_variable = { name = wotr_stability_months_var value = 0 }
+
+		random_civil_war = {
+			limit = {
+				is_civil_war_type = revolution
+				this.political_movement ?= {
+					is_political_movement_type = movement_war_of_roses_yorkist
+				}
+			}
+			ROOT = {
+				set_variable = wotr_active_rebellion_york
+				if = {
+					limit = { game_date < 1461.1.1 }
+					wotr_ensure_richard_of_york_effect = yes
+					random_scope_character = {
+						limit = { has_variable = wotr_richard_of_york_character }
+						transfer_character = scope:target
+					}
+				}
+				else = {
+					wotr_ensure_edward_iv_effect = yes
+					random_scope_character = {
+						limit = { has_variable = wotr_edward_iv_character }
+						transfer_character = scope:target
+					}
+				}
+			}
+			scope:target ?= {
+				set_variable = wotr_civil_war_active
+				set_variable = wotr_rebel_side_york
+				set_variable = { name = wotr_wars_fought_var value = root.var:wotr_wars_fought_var }
+				set_variable = { name = war_of_roses_balance_current_var value = root.var:war_of_roses_balance_current_var }
+				set_variable = { name = war_of_roses_tension_current_var value = root.var:war_of_roses_tension_current_var }
+				wotr_set_york_dynasty_effect = yes
+				if = {
+					limit = { NOT = { has_journal_entry = je_england_2 } }
+					add_journal_entry = { type = je_england_2 }
+				}
+				if = {
+					limit = {
+						any_scope_character = { has_variable = wotr_richard_of_york_character }
+					}
+					random_scope_character = {
+						limit = { has_variable = wotr_richard_of_york_character }
+						set_character_as_ruler = yes
+					}
+				}
+				else = {
+					random_scope_character = {
+						limit = { has_variable = wotr_edward_iv_character }
+						set_character_as_ruler = yes
+					}
+				}
+				trigger_event = { id = england.320 popup = yes }
+			}
+		}
+
+		random_civil_war = {
+			limit = {
+				is_civil_war_type = revolution
+				this.political_movement ?= {
+					is_political_movement_type = movement_war_of_roses_lancastrian
+				}
+			}
+			ROOT = {
+				set_variable = wotr_active_rebellion_lancaster
+				if = {
+					limit = { game_date < 1471.5.4 }
+					wotr_ensure_henry_vi_effect = yes
+					random_scope_character = {
+						limit = { has_variable = wotr_henry_vi_character }
+						transfer_character = scope:target
+					}
+				}
+				else = {
+					wotr_ensure_edward_westminster_effect = yes
+					random_scope_character = {
+						limit = { has_variable = wotr_edward_westminster_character }
+						transfer_character = scope:target
+					}
+				}
+			}
+			scope:target ?= {
+				set_variable = wotr_civil_war_active
+				set_variable = wotr_rebel_side_lancaster
+				set_variable = { name = wotr_wars_fought_var value = root.var:wotr_wars_fought_var }
+				set_variable = { name = war_of_roses_balance_current_var value = root.var:war_of_roses_balance_current_var }
+				set_variable = { name = war_of_roses_tension_current_var value = root.var:war_of_roses_tension_current_var }
+				wotr_set_lancaster_dynasty_effect = yes
+				if = {
+					limit = { NOT = { has_journal_entry = je_england_2 } }
+					add_journal_entry = { type = je_england_2 }
+				}
+				if = {
+					limit = {
+						any_scope_character = { has_variable = wotr_henry_vi_character }
+					}
+					random_scope_character = {
+						limit = { has_variable = wotr_henry_vi_character }
+						set_character_as_ruler = yes
+					}
+				}
+				else = {
+					random_scope_character = {
+						limit = { has_variable = wotr_edward_westminster_character }
+						set_character_as_ruler = yes
+					}
+				}
+				trigger_event = { id = england.320 popup = yes }
+			}
+		}
+
+		random_civil_war = {
+			limit = {
+				is_civil_war_type = revolution
+				this.political_movement ?= {
+					is_political_movement_type = movement_war_of_roses_tudor
+				}
+			}
+			ROOT = {
+				set_variable = wotr_active_rebellion_tudor
+				wotr_ensure_henry_tudor_effect = yes
+				random_scope_character = {
+					limit = { has_variable = wotr_henry_tudor_character }
+					transfer_character = scope:target
+				}
+			}
+			scope:target ?= {
+				set_variable = wotr_civil_war_active
+				set_variable = wotr_rebel_side_tudor
+				set_variable = { name = wotr_wars_fought_var value = root.var:wotr_wars_fought_var }
+				set_variable = { name = war_of_roses_balance_current_var value = root.var:war_of_roses_balance_current_var }
+				set_variable = { name = war_of_roses_tension_current_var value = root.var:war_of_roses_tension_current_var }
+				wotr_set_tudor_dynasty_effect = yes
+				if = {
+					limit = { NOT = { has_journal_entry = je_england_2 } }
+					add_journal_entry = { type = je_england_2 }
+				}
+				random_scope_character = {
+					limit = { has_variable = wotr_henry_tudor_character }
+					set_character_as_ruler = yes
+				}
+				trigger_event = { id = england.320 popup = yes }
+			}
+		}
+
+		trigger_event = { id = england.320 popup = yes }
+	}
+}
+
+on_civil_war_won = {
+	on_actions = { wotr_on_civil_war_won }
+}
+
+wotr_on_civil_war_won = {
+	trigger = {
+		OR = {
+			has_variable = wotr_rebel_side_york
+			has_variable = wotr_rebel_side_lancaster
+			has_variable = wotr_rebel_side_tudor
+			has_variable = wotr_active_rebellion_york
+			has_variable = wotr_active_rebellion_lancaster
+			has_variable = wotr_active_rebellion_tudor
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_variable = wotr_rebel_side_york }
+			trigger_event = { id = england.322 popup = yes }
+		}
+		else_if = {
+			limit = { has_variable = wotr_rebel_side_lancaster }
+			trigger_event = { id = england.321 popup = yes }
+		}
+		else_if = {
+			limit = { has_variable = wotr_rebel_side_tudor }
+			trigger_event = { id = england.323 popup = yes }
+		}
+		else = {
+			trigger_event = { id = england.324 popup = yes }
+		}
+	}
+}

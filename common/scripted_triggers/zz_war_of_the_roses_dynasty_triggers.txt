@@ -1,5 +1,6 @@
 wotr_ruler_is_lancastrian_dynasty = {
 	OR = {
+		has_variable = wotr_dynasty_lancaster
 		has_variable = war_of_the_roses_lancaster_victory
 		AND = {
 			exists = dynasty:lancaster_dynasty
@@ -17,6 +18,7 @@ wotr_ruler_is_lancastrian_dynasty = {
 
 wotr_ruler_is_yorkist_dynasty = {
 	OR = {
+		has_variable = wotr_dynasty_york
 		has_variable = war_of_the_roses_york_victory
 		AND = {
 			exists = dynasty:york_dynasty
@@ -34,6 +36,7 @@ wotr_ruler_is_yorkist_dynasty = {
 
 wotr_ruler_is_tudor_dynasty = {
 	OR = {
+		has_variable = wotr_dynasty_tudor
 		has_variable = war_of_the_roses_tudor_victory
 		AND = {
 			exists = dynasty:tudor_dynasty

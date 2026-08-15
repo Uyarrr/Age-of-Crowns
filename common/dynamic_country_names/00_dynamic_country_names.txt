@@ -502,6 +502,21 @@ DEFAULT = {
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = generic_revolt_tudor
+		adjective = generic_revolt_tudor_adj
+
+		is_revolutionary = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				var:civil_war_type_var ?= movement_type:movement_war_of_roses_tudor
+			}
+		}
+	}
 
 	# Majority movements
 	dynamic_country_name = {

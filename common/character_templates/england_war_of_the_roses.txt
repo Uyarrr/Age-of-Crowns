@@ -31,6 +31,8 @@ ENG_richard_of_york_wotr = {
 	birth_date = 1411.9.21
 	interest_group = ig_landowners
 	ideology = ideology_royalist
+	is_general = yes
+	commander_rank = commander_rank_3
 	home_region = STATE_YORKSHIRE
 	traits = {
 		ambitious
@@ -52,11 +54,126 @@ ENG_edward_iv_york_wotr = {
 	birth_date = 1442.4.28
 	interest_group = ig_armed_forces
 	ideology = ideology_jingoist_leader
+	is_general = yes
+	commander_rank = commander_rank_3
 	home_region = STATE_YORKSHIRE
 	traits = {
 		charismatic
 		brave
 		reckless
+	}
+	trait_generation = { }
+}
+
+ENG_margaret_of_anjou_wotr = {
+	# Margaret of Anjou, leader of the Lancastrian court party
+	first_name = Margaret_of_Anjou
+	last_name = Anjou
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = yes
+	noble = yes
+	birth_date = 1430.3.23
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_HOME_COUNTIES
+	traits = {
+		ambitious
+		imperious
+		brave
+	}
+	trait_generation = { }
+}
+
+ENG_richard_neville_warwick_wotr = {
+	# Richard Neville, Earl of Warwick
+	first_name = Richard_Neville
+	last_name = Warwick
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = no
+	noble = yes
+	birth_date = 1428.11.22
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	is_general = yes
+	commander_rank = commander_rank_3
+	home_region = STATE_YORKSHIRE
+	traits = {
+		ambitious
+		charismatic
+		basic_political_operator
+	}
+	trait_generation = { }
+}
+
+ENG_edward_of_westminster_wotr = {
+	# Edward of Westminster, Prince of Wales
+	first_name = Edward_of_Westminster
+	last_name = Lancaster
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = no
+	noble = yes
+	birth_date = 1453.10.13
+	interest_group = ig_armed_forces
+	ideology = ideology_traditionalist
+	is_general = yes
+	commander_rank = commander_rank_2
+	home_region = STATE_HOME_COUNTIES
+	traits = {
+		brave
+		reckless
+		imperious
+	}
+	trait_generation = { }
+}
+
+ENG_richard_iii_york_wotr = {
+	# Richard III of York
+	first_name = Richard_III
+	last_name = York
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = no
+	noble = yes
+	birth_date = 1452.10.2
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	is_general = yes
+	commander_rank = commander_rank_3
+	home_region = STATE_YORKSHIRE
+	traits = {
+		ambitious
+		meticulous
+		basic_political_operator
+	}
+	trait_generation = { }
+}
+
+ENG_henry_vii_tudor_wotr = {
+	# Henry Tudor, later Henry VII
+	first_name = Henry_VII
+	last_name = Tudor
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = no
+	noble = yes
+	birth_date = 1457.1.28
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	is_general = yes
+	commander_rank = commander_rank_3
+	home_region = STATE_WALES
+	traits = {
+		ambitious
+		reserved
+		meticulous
 	}
 	trait_generation = { }
 }

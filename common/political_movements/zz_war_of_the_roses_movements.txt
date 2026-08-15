@@ -15,15 +15,16 @@ movement_war_of_roses_yorkist = {
 		}
 		has_journal_entry = je_england_2
 		has_law = law_type:law_monarchy
-		NOT = { has_variable = war_of_the_roses_lancaster_victory }
+		has_variable = wotr_dynasty_lancaster
+		NOT = { has_variable = wotr_final_settlement }
 	}
 	creation_weight = {
 		value = 0
 		if = {
 			limit = {
 				has_variable = war_of_roses_tension_current_var
-				var:war_of_roses_tension_current_var >= 70
-				var:war_of_roses_balance_current_var <= 50
+				var:wotr_phase_var >= 2
+				var:war_of_roses_tension_current_var >= 60
 			}
 			add = 100
 		}
@@ -35,7 +36,9 @@ movement_war_of_roses_yorkist = {
 	disband_trigger = {
 		OR = {
 			NOT = { has_journal_entry = je_england_2 }
-			has_variable = war_of_the_roses_lancaster_victory
+			has_variable = wotr_dynasty_york
+			has_variable = wotr_dynasty_tudor
+			has_variable = wotr_final_settlement
 		}
 	}
 
@@ -193,6 +196,18 @@ movement_war_of_roses_yorkist = {
 			limit = {
 				owner ?= {
 					has_journal_entry = je_england_2
+					var:wotr_phase_var >= 3
+				}
+			}
+			add = {
+				value = 0.35
+				desc = "WAR_OF_THE_ROSES_OPEN_CONFLICT"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_journal_entry = je_england_2
 					var:war_of_roses_tension_current_var >= 70
 				}
 			}
@@ -264,15 +279,17 @@ movement_war_of_roses_lancastrian = {
 		}
 		has_journal_entry = je_england_2
 		has_law = law_type:law_monarchy
-		NOT = { has_variable = war_of_the_roses_york_victory }
+		has_variable = wotr_dynasty_york
+		NOT = { has_variable = wotr_tudor_claim_unlocked }
+		NOT = { has_variable = wotr_final_settlement }
 	}
 	creation_weight = {
 		value = 0
 		if = {
 			limit = {
 				has_variable = war_of_roses_tension_current_var
-				var:war_of_roses_tension_current_var >= 70
-				var:war_of_roses_balance_current_var > 50
+				var:wotr_phase_var >= 2
+				var:war_of_roses_tension_current_var >= 60
 			}
 			add = 100
 		}
@@ -284,7 +301,10 @@ movement_war_of_roses_lancastrian = {
 	disband_trigger = {
 		OR = {
 			NOT = { has_journal_entry = je_england_2 }
-			has_variable = war_of_the_roses_york_victory
+			has_variable = wotr_dynasty_lancaster
+			has_variable = wotr_dynasty_tudor
+			has_variable = wotr_tudor_claim_unlocked
+			has_variable = wotr_final_settlement
 		}
 	}
 
@@ -443,6 +463,18 @@ movement_war_of_roses_lancastrian = {
 			limit = {
 				owner ?= {
 					has_journal_entry = je_england_2
+					var:wotr_phase_var >= 3
+				}
+			}
+			add = {
+				value = 0.35
+				desc = "WAR_OF_THE_ROSES_OPEN_CONFLICT"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_journal_entry = je_england_2
 					var:war_of_roses_tension_current_var >= 70
 				}
 			}
@@ -482,6 +514,209 @@ movement_war_of_roses_lancastrian = {
 			add = {
 				value = 0.10
 				desc = "HUNDRED_YEARS_WAR_LOST"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+movement_war_of_roses_tudor = {
+	category = movement_category_ideological
+
+	ideology = ideology_legitimist_movement
+	character_ideologies = {
+		ideology_royalist
+		ideology_reformer
+	}
+
+	creation_trigger = {
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+		has_journal_entry = je_england_2
+		has_law = law_type:law_monarchy
+		has_variable = wotr_tudor_claim_unlocked
+		NOT = { has_variable = wotr_dynasty_tudor }
+		NOT = { has_variable = wotr_final_settlement }
+	}
+
+	creation_weight = {
+		value = 0
+		if = {
+			limit = {
+				game_date >= 1483.1.1
+				var:war_of_roses_tension_current_var >= 60
+			}
+			add = 100
+		}
+	}
+
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		OR = {
+			NOT = { has_journal_entry = je_england_2 }
+			has_variable = wotr_dynasty_tudor
+			has_variable = wotr_final_settlement
+		}
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_royalist
+			has_ideology = ideology:ideology_reformer
+			has_ideology = ideology:ideology_jingoist_leader
+		}
+	}
+
+	character_support_weight = {
+		value = 150
+		if = {
+			limit = { has_ideology = ideology:ideology_royalist }
+			multiply = { value = 3 }
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_aristocrats
+		movement_support_officers
+		movement_support_soldiers
+		movement_support_farmers
+		movement_support_bureaucrats
+	}
+
+	pop_support_weight = {
+		add = {
+			value = 4
+			desc = "POP_BASE_SUPPORT"
+		}
+		if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 20
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 18
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = soldiers }
+			add = {
+				value = 14
+				desc = "POP_SOLDIERS"
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_pop_type = farmers
+					is_pop_type = bureaucrats
+				}
+			}
+			add = {
+				value = 10
+				desc = "MIDDLE_NO_ICON"
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					state_region = s:STATE_WALES
+					state_region = s:STATE_WEST_COUNTRY
+					state_region = s:STATE_HOME_COUNTIES
+				}
+			}
+			multiply = {
+				value = 2
+				desc = "WAR_OF_THE_ROSES_TUDOR_HEARTLAND"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+		weight = { value = 100 }
+		state_weight = {
+			value = 1
+			add = scope:clout
+			if = {
+				limit = {
+					OR = {
+						state_region = s:STATE_WALES
+						state_region = s:STATE_WEST_COUNTRY
+						state_region = s:STATE_HOME_COUNTIES
+					}
+				}
+				multiply = 4
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+		weight = { value = 1000 }
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= {
+					has_variable = wotr_tudor_claim_unlocked
+				}
+			}
+			add = {
+				value = 0.40
+				desc = "WAR_OF_THE_ROSES_TUDOR_CLAIM"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					var:war_of_roses_tension_current_var >= 70
+				}
+			}
+			add = {
+				value = 0.25
+				desc = "WAR_OF_THE_ROSES_HIGH_TENSION"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					var:war_of_roses_tension_current_var >= 85
+				}
+			}
+			add = {
+				value = 0.25
+				desc = "WAR_OF_THE_ROSES_WAR_WARNING"
 			}
 		}
 		if = {

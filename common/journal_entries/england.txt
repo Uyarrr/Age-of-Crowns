@@ -93,7 +93,10 @@ je_england_2 = {
 			c:ENG ?= this
 			was_formed_from = ENG
 		}
-		is_revolutionary = no
+		OR = {
+			is_revolutionary = no
+			has_variable = wotr_civil_war_active
+		}
 		is_secessionist = no
 	}
 
@@ -108,17 +111,73 @@ je_england_2 = {
 	}
 
 	immediate = {
-		set_variable = { name = war_of_roses_balance_current_var value = 50 }
-		set_variable = { name = war_of_roses_tension_current_var value = 45 }
-		set_variable = { name = war_of_roses_balance_offset_var value = 0 }
-		set_variable = { name = war_of_roses_tension_offset_var value = 0 }
-		trigger_event = { id = england.302 popup = yes }
+		if = {
+			limit = { NOT = { has_variable = wotr_civil_war_active } }
+			set_variable = { name = war_of_roses_balance_current_var value = 60 }
+			set_variable = { name = war_of_roses_tension_current_var value = 25 }
+			set_variable = { name = war_of_roses_balance_offset_var value = 0 }
+			set_variable = { name = war_of_roses_tension_offset_var value = 0 }
+			set_variable = { name = wotr_phase_var value = 1 }
+			set_variable = { name = wotr_wars_fought_var value = 0 }
+			set_variable = { name = wotr_stability_months_var value = 0 }
+			set_variable = { name = wotr_peaceful_months_var value = 0 }
+			wotr_install_lancaster_ruler_effect = yes
+			wotr_ensure_richard_of_york_effect = yes
+			trigger_event = { id = england.302 popup = yes }
+		}
+		else = {
+			set_variable = { name = wotr_phase_var value = 4 }
+			set_variable = { name = war_of_roses_balance_offset_var value = 0 }
+			set_variable = { name = war_of_roses_tension_offset_var value = 0 }
+			set_variable = { name = wotr_stability_months_var value = 0 }
+			set_variable = { name = wotr_peaceful_months_var value = 0 }
+		}
 	}
 
 	on_monthly_pulse = {
 		effect = {
 			set_variable = { name = war_of_roses_balance_current_var value = "scope:journal_entry.scripted_bar_progress(je_war_of_the_roses_balance_bar)" }
 			set_variable = { name = war_of_roses_tension_current_var value = "scope:journal_entry.scripted_bar_progress(je_war_of_the_roses_tension_bar)" }
+
+			# The crisis advances through historical phases, but player choices determine its intensity and outcome.
+			if = {
+				limit = {
+					var:wotr_phase_var = 1
+					game_date >= 1450.1.1
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = { name = wotr_phase_var value = 2 }
+				set_variable = war_of_the_roses_cade_unrest
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.306 popup = yes }
+			}
+			if = {
+				limit = {
+					var:wotr_phase_var = 2
+					game_date >= 1453.8.1
+					NOT = { has_variable = war_of_the_roses_york_protectorate }
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = war_of_the_roses_york_protectorate
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.307 popup = yes }
+			}
+			if = {
+				limit = {
+					var:wotr_phase_var < 3
+					game_date >= 1455.1.1
+					OR = {
+						var:war_of_roses_tension_current_var >= 60
+						game_date >= 1457.1.1
+					}
+					NOT = { has_variable = war_of_the_roses_st_albans_event }
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = { name = wotr_phase_var value = 3 }
+				set_variable = war_of_the_roses_st_albans_event
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.311 popup = yes }
+			}
 			if = {
 				limit = { var:war_of_roses_balance_offset_var > 0 }
 				change_variable = { name = war_of_roses_balance_offset_var add = -0.35 }
@@ -141,7 +200,9 @@ je_england_2 = {
 			}
 			if = {
 				limit = {
-					var:war_of_roses_tension_current_var >= 70
+					var:wotr_phase_var >= 2
+					var:war_of_roses_tension_current_var >= 60
+					NOT = { has_variable = wotr_civil_war_active }
 				}
 				add_modifier = {
 					name = war_of_the_roses_high_tension
@@ -154,17 +215,25 @@ je_england_2 = {
 								OR = {
 									is_political_movement_type = movement_war_of_roses_yorkist
 									is_political_movement_type = movement_war_of_roses_lancastrian
+									is_political_movement_type = movement_war_of_roses_tudor
 								}
 							}
 						}
 					}
 					if = {
-						limit = {
-							var:war_of_roses_balance_current_var <= 50
-						}
+						limit = { has_variable = wotr_dynasty_lancaster }
 						create_political_movement = { type = movement_war_of_roses_yorkist }
 					}
-					else = {
+					else_if = {
+						limit = {
+							has_variable = wotr_dynasty_york
+							has_variable = wotr_tudor_claim_unlocked
+							game_date >= 1483.1.1
+						}
+						create_political_movement = { type = movement_war_of_roses_tudor }
+					}
+					else_if = {
+						limit = { has_variable = wotr_dynasty_york }
 						create_political_movement = { type = movement_war_of_roses_lancastrian }
 					}
 				}
@@ -173,6 +242,7 @@ je_england_2 = {
 				limit = {
 					var:war_of_roses_tension_current_var >= 85
 					NOT = { has_variable = war_of_the_roses_war_warning }
+					NOT = { has_variable = wotr_civil_war_active }
 				}
 				set_variable = war_of_the_roses_war_warning
 				trigger_event = { id = england.305 popup = yes }
@@ -183,10 +253,13 @@ je_england_2 = {
 					game_date < 1462.1.1
 					var:war_of_roses_tension_current_var >= 55
 					NOT = { has_variable = war_of_the_roses_cade_unrest }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				random = {
 					chance = 4
 					set_variable = war_of_the_roses_cade_unrest
+					set_variable = { name = wotr_recent_historical_event months = 8 }
 					trigger_event = { id = england.306 popup = yes }
 				}
 			}
@@ -196,10 +269,13 @@ je_england_2 = {
 					game_date < 1460.1.1
 					var:war_of_roses_tension_current_var >= 60
 					NOT = { has_variable = war_of_the_roses_york_protectorate }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				random = {
 					chance = 3
 					set_variable = war_of_the_roses_york_protectorate
+					set_variable = { name = wotr_recent_historical_event months = 8 }
 					trigger_event = { id = england.307 popup = yes }
 				}
 			}
@@ -208,10 +284,13 @@ je_england_2 = {
 					game_date >= 1448.1.1
 					var:war_of_roses_tension_current_var >= 50
 					NOT = { has_variable = war_of_the_roses_livery_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				random = {
 					chance = 4
 					set_variable = war_of_the_roses_livery_event
+					set_variable = { name = wotr_recent_historical_event months = 8 }
 					trigger_event = { id = england.308 popup = yes }
 				}
 			}
@@ -221,10 +300,13 @@ je_england_2 = {
 					var:war_of_roses_tension_current_var >= 55
 					var:war_of_roses_balance_current_var >= 55
 					NOT = { has_variable = war_of_the_roses_queen_party_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				random = {
 					chance = 4
 					set_variable = war_of_the_roses_queen_party_event
+					set_variable = { name = wotr_recent_historical_event months = 8 }
 					trigger_event = { id = england.309 popup = yes }
 				}
 			}
@@ -234,10 +316,13 @@ je_england_2 = {
 					var:war_of_roses_tension_current_var >= 55
 					var:war_of_roses_balance_current_var <= 45
 					NOT = { has_variable = war_of_the_roses_warwick_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				random = {
 					chance = 4
 					set_variable = war_of_the_roses_warwick_event
+					set_variable = { name = wotr_recent_historical_event months = 8 }
 					trigger_event = { id = england.310 popup = yes }
 				}
 			}
@@ -246,10 +331,14 @@ je_england_2 = {
 					game_date >= 1455.1.1
 					var:war_of_roses_tension_current_var >= 70
 					NOT = { has_variable = war_of_the_roses_st_albans_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				random = {
 					chance = 6
 					set_variable = war_of_the_roses_st_albans_event
+					set_variable = { name = wotr_phase_var value = 3 }
+					set_variable = { name = wotr_recent_historical_event months = 8 }
 					trigger_event = { id = england.311 popup = yes }
 				}
 			}
@@ -259,10 +348,13 @@ je_england_2 = {
 					var:war_of_roses_tension_current_var >= 60
 					has_variable = war_of_the_roses_st_albans_event
 					NOT = { has_variable = war_of_the_roses_loveday_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				random = {
 					chance = 5
 					set_variable = war_of_the_roses_loveday_event
+					set_variable = { name = wotr_recent_historical_event months = 8 }
 					trigger_event = { id = england.312 popup = yes }
 				}
 			}
@@ -275,71 +367,188 @@ je_england_2 = {
 						var:war_of_roses_balance_current_var >= 65
 					}
 					NOT = { has_variable = war_of_the_roses_attainders_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				random = {
 					chance = 5
 					set_variable = war_of_the_roses_attainders_event
+					set_variable = { name = wotr_recent_historical_event months = 8 }
 					trigger_event = { id = england.313 popup = yes }
 				}
 			}
-		}
-	}
 
-	custom_completion_header = je_war_of_the_roses_lancaster_header
+			if = {
+				limit = {
+					var:wotr_phase_var = 3
+					game_date >= 1460.1.1
+					NOT = { has_variable = wotr_act_of_accord_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = wotr_act_of_accord_event
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.314 popup = yes }
+			}
+			if = {
+				limit = {
+					has_variable = wotr_act_of_accord
+					game_date >= 1460.12.1
+					NOT = { has_variable = wotr_wakefield_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = wotr_wakefield_event
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.315 popup = yes }
+			}
+			if = {
+				limit = {
+					has_variable = wotr_dynasty_york
+					var:wotr_wars_fought_var >= 1
+					game_date >= 1464.1.1
+					NOT = { has_variable = wotr_kingmaker_price_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = wotr_kingmaker_price_event
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.316 popup = yes }
+			}
+			if = {
+				limit = {
+					has_variable = wotr_warwick_alienated
+					has_variable = wotr_dynasty_york
+					game_date >= 1470.1.1
+					NOT = { has_variable = wotr_readeption_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = wotr_readeption_event
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.317 popup = yes }
+			}
+			if = {
+				limit = {
+					has_variable = wotr_dynasty_york
+					game_date >= 1483.1.1
+					NOT = { has_variable = wotr_princes_event }
+					NOT = { has_variable = wotr_final_settlement }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = wotr_princes_event
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.318 popup = yes }
+			}
+			if = {
+				limit = {
+					has_variable = wotr_tudor_claim_unlocked
+					game_date >= 1483.6.1
+					NOT = { has_variable = wotr_tudor_claimant_event }
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { has_variable = wotr_recent_historical_event }
+				}
+				set_variable = wotr_tudor_claimant_event
+				set_variable = { name = wotr_recent_historical_event months = 8 }
+				trigger_event = { id = england.319 popup = yes }
+			}
 
-	complete = {
-		custom_tooltip = {
-			text = war_of_the_roses_lancaster_victory_tt
-			scope:journal_entry = {
-				"scripted_bar_progress(je_war_of_the_roses_balance_bar)" >= 80
+			# A dynasty must survive the war and then govern a quiet realm before the settlement is secure.
+			if = {
+				limit = {
+					var:wotr_wars_fought_var >= 1
+					NOT = { has_variable = wotr_civil_war_active }
+					NOT = { any_revolution_ongoing = yes }
+					var:war_of_roses_tension_current_var <= 30
+					OR = {
+						AND = {
+							has_variable = wotr_dynasty_lancaster
+							var:war_of_roses_balance_current_var >= 65
+						}
+						AND = {
+							has_variable = wotr_dynasty_york
+							var:war_of_roses_balance_current_var <= 35
+						}
+						has_variable = wotr_dynasty_tudor
+					}
+				}
+				change_variable = { name = wotr_stability_months_var add = 1 }
+			}
+			else = {
+				set_variable = { name = wotr_stability_months_var value = 0 }
+			}
+			if = {
+				limit = {
+					var:wotr_stability_months_var >= 24
+					OR = {
+						game_date >= 1472.1.1
+						var:wotr_wars_fought_var >= 2
+					}
+					NOT = { has_variable = wotr_final_settlement }
+				}
+				if = {
+					limit = { has_variable = wotr_dynasty_lancaster }
+					trigger_event = { id = england.303 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = wotr_dynasty_york }
+					trigger_event = { id = england.304 popup = yes }
+				}
+				else = {
+					trigger_event = { id = england.323 popup = yes }
+				}
+			}
+
+			# Exceptional royal government can prevent the cousins' quarrel from becoming a war.
+			if = {
+				limit = {
+					var:wotr_wars_fought_var = 0
+					game_date >= 1460.1.1
+					has_variable = wotr_dynasty_lancaster
+					var:war_of_roses_tension_current_var <= 20
+					var:war_of_roses_balance_current_var >= 65
+					NOT = { any_revolution_ongoing = yes }
+				}
+				change_variable = { name = wotr_peaceful_months_var add = 1 }
+			}
+			else = {
+				set_variable = { name = wotr_peaceful_months_var value = 0 }
+			}
+			if = {
+				limit = {
+					var:wotr_peaceful_months_var >= 36
+					NOT = { has_variable = wotr_final_settlement }
+				}
+				trigger_event = { id = england.303 popup = yes }
 			}
 		}
 	}
 
-	on_complete = {
-		trigger_event = {
-			id = england.303
-			popup = yes
-		}
+	custom_completion_header = je_war_of_the_roses_settlement_header
+
+	complete = {
+		has_variable = wotr_final_settlement
 	}
+
+	on_complete = { }
 
 	event_outcome_completed_desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = event_effects_war_of_the_roses_lancaster_tt
+				trigger = { has_variable = wotr_dynasty_tudor }
+				desc = event_effects_war_of_the_roses_tudor_tt
 			}
-		}
-	}
-
-	custom_failure_header = je_war_of_the_roses_york_header
-
-	fail = {
-		custom_tooltip = {
-			text = war_of_the_roses_york_victory_tt
-			scope:journal_entry = {
-				"scripted_bar_progress(je_war_of_the_roses_balance_bar)" <= 20
-			}
-		}
-	}
-
-	on_fail = {
-		trigger_event = {
-			id = england.304
-			popup = yes
-		}
-	}
-
-	event_outcome_failed_desc = {
-		first_valid = {
 			triggered_desc = {
+				trigger = { has_variable = wotr_dynasty_york }
 				desc = event_effects_war_of_the_roses_york_tt
 			}
+			triggered_desc = { desc = event_effects_war_of_the_roses_lancaster_tt }
 		}
 	}
 
 	invalid = {
 		OR = {
-			is_revolutionary = yes
 			is_secessionist = yes
 			AND = {
 				NOT = { c:ENG ?= this }

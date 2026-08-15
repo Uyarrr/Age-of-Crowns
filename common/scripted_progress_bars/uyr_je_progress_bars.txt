@@ -74,7 +74,7 @@ je_war_of_the_roses_balance_bar = {
 			}
 		}
 	}
-	start_value = 50
+	start_value = 60
 	min_value = 0
 	max_value = 100
 }
@@ -88,6 +88,36 @@ je_war_of_the_roses_tension_bar = {
 
 	monthly_progress = {
 		owner = {
+			if = {
+				limit = {
+					has_variable = wotr_phase_var
+					var:wotr_phase_var = 1
+				}
+				subtract = {
+					desc = "war_of_the_roses_uneasy_realm_tension_tt"
+					value = 0.15
+				}
+			}
+			if = {
+				limit = {
+					has_variable = wotr_phase_var
+					var:wotr_phase_var = 2
+				}
+				add = {
+					desc = "war_of_the_roses_royal_crisis_tension_tt"
+					value = 0.20
+				}
+			}
+			if = {
+				limit = {
+					has_variable = wotr_phase_var
+					var:wotr_phase_var >= 3
+				}
+				add = {
+					desc = "war_of_the_roses_open_conflict_tension_tt"
+					value = 0.40
+				}
+			}
 			add = {
 				desc = "war_of_the_roses_legitimacy_tension_tt"
 				value = 55
@@ -142,7 +172,7 @@ je_war_of_the_roses_tension_bar = {
 			}
 		}
 	}
-	start_value = 45
+	start_value = 25
 	min_value = 0
 	max_value = 100
 }

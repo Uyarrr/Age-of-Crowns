@@ -196,13 +196,9 @@ england.303 = {
 		name = england_war_of_the_roses_lancaster.a
 		default_option = yes
 
-		create_character = {
-			template = ENG_henry_vi_lancaster_wotr
-			on_created = {
-				set_character_as_ruler = yes
-			}
-		}
 		set_variable = war_of_the_roses_lancaster_victory
+		set_variable = wotr_final_settlement
+		wotr_clear_civil_war_variables_effect = yes
 		add_modifier = {
 			name = war_of_the_roses_lancaster_settlement
 			years = 20
@@ -240,24 +236,9 @@ england.304 = {
 		name = england_war_of_the_roses_york.a
 		default_option = yes
 
-		if = {
-			limit = { year < 1461 }
-			create_character = {
-				template = ENG_richard_of_york_wotr
-				on_created = {
-					set_character_as_ruler = yes
-				}
-			}
-		}
-		else = {
-			create_character = {
-				template = ENG_edward_iv_york_wotr
-				on_created = {
-					set_character_as_ruler = yes
-				}
-			}
-		}
 		set_variable = war_of_the_roses_york_victory
+		set_variable = wotr_final_settlement
+		wotr_clear_civil_war_variables_effect = yes
 		add_modifier = {
 			name = war_of_the_roses_york_settlement
 			years = 20
@@ -351,6 +332,31 @@ england.306 = {
 	duration = 3
 
 	trigger = {}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_scope_character = { has_variable = wotr_margaret_anjou_character }
+				}
+			}
+			create_character = {
+				template = ENG_margaret_of_anjou_wotr
+				on_created = { set_variable = wotr_margaret_anjou_character }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_scope_character = { has_variable = wotr_warwick_character }
+				}
+			}
+			create_character = {
+				template = ENG_richard_neville_warwick_wotr
+				on_created = { set_variable = wotr_warwick_character }
+			}
+		}
+	}
 
 	option = {
 		name = england_war_of_the_roses_cade.a
@@ -741,6 +747,412 @@ england.313 = {
 		add_loyalists = {
 			value = small_radicals
 			strata = upper
+		}
+	}
+}
+
+england.314 = {
+	type = country_event
+
+	title = england_war_of_the_roses_accord.title
+	desc = england_war_of_the_roses_accord.desc
+	flavor = england_war_of_the_roses_accord.flavor
+
+	event_image = { texture = "gfx/event_pictures/the_justices_of_peace.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_accord.a
+		default_option = yes
+		ai_chance = { base = 55 }
+
+		set_variable = wotr_act_of_accord
+		change_variable = { name = war_of_roses_balance_offset_var add = -15 }
+		change_variable = { name = war_of_roses_tension_offset_var add = -8 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = {
+			name = war_of_the_roses_act_of_accord
+			years = 5
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_accord.b
+		ai_chance = { base = 45 }
+
+		change_variable = { name = war_of_roses_balance_offset_var add = 10 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 15 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = { value = medium_radicals strata = upper }
+	}
+}
+
+england.315 = {
+	type = country_event
+
+	title = england_war_of_the_roses_wakefield.title
+	desc = england_war_of_the_roses_wakefield.desc
+	flavor = england_war_of_the_roses_wakefield.flavor
+
+	event_image = { texture = "gfx/event_pictures/yorkist.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_wakefield.a
+		default_option = yes
+		ai_chance = { base = 65 }
+
+		random_scope_character = {
+			limit = { has_variable = wotr_richard_of_york_character }
+			kill_character = yes
+		}
+		wotr_ensure_edward_iv_effect = yes
+		set_variable = wotr_edward_leads_york
+		change_variable = { name = war_of_roses_balance_offset_var add = -12 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 14 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = { value = medium_radicals strata = upper }
+	}
+
+	option = {
+		name = england_war_of_the_roses_wakefield.b
+		ai_chance = { base = 35 }
+
+		remove_variable = wotr_act_of_accord
+		change_variable = { name = war_of_roses_balance_offset_var add = 8 }
+		change_variable = { name = war_of_roses_tension_offset_var add = -6 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = { name = war_of_the_roses_guarded_court months = 36 }
+	}
+}
+
+england.316 = {
+	type = country_event
+
+	title = england_war_of_the_roses_kingmaker.title
+	desc = england_war_of_the_roses_kingmaker.desc
+	flavor = england_war_of_the_roses_kingmaker.flavor
+
+	event_image = { texture = "gfx/event_pictures/yorkist.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_kingmaker.a
+		default_option = yes
+		ai_chance = { base = 40 }
+
+		change_variable = { name = war_of_roses_balance_offset_var add = -8 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 4 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = { name = war_of_the_roses_kingmakers_price years = 6 }
+	}
+
+	option = {
+		name = england_war_of_the_roses_kingmaker.b
+		ai_chance = { base = 60 }
+
+		set_variable = wotr_warwick_alienated
+		change_variable = { name = war_of_roses_balance_offset_var add = 10 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 12 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = { name = war_of_the_roses_royal_household years = 6 }
+	}
+}
+
+england.317 = {
+	type = country_event
+
+	title = england_war_of_the_roses_readeption.title
+	desc = england_war_of_the_roses_readeption.desc
+	flavor = england_war_of_the_roses_readeption.flavor
+
+	event_image = { texture = "gfx/event_pictures/yorkist.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	immediate = {
+		remove_variable = war_of_the_roses_war_warning
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_war_of_roses_lancastrian
+					}
+				}
+			}
+			create_political_movement = { type = movement_war_of_roses_lancastrian }
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_readeption.a
+		default_option = yes
+
+		change_variable = { name = war_of_roses_balance_offset_var add = 18 }
+		change_variable = { name = war_of_roses_tension_offset_var add = 18 }
+		clamp_variable = { name = war_of_roses_balance_offset_var min = -30 max = 30 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = { name = war_of_the_roses_readeption months = 36 }
+	}
+
+	option = {
+		name = england_war_of_the_roses_readeption.b
+
+		change_variable = { name = war_of_roses_tension_offset_var add = 25 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_radicals = { value = large_radicals strata = upper }
+	}
+}
+
+england.318 = {
+	type = country_event
+
+	title = england_war_of_the_roses_princes.title
+	desc = england_war_of_the_roses_princes.desc
+	flavor = england_war_of_the_roses_princes.flavor
+
+	event_image = { texture = "gfx/event_pictures/the_justices_of_peace.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_princes.a
+		default_option = yes
+		ai_chance = { base = 65 }
+
+		random_scope_character = {
+			limit = { has_variable = wotr_edward_iv_character }
+			kill_character = yes
+		}
+		if = {
+			limit = {
+				NOT = { any_scope_character = { has_variable = wotr_richard_iii_character } }
+			}
+			create_character = {
+				template = ENG_richard_iii_york_wotr
+				on_created = { set_variable = wotr_richard_iii_character }
+			}
+		}
+		random_scope_character = {
+			limit = { has_variable = wotr_richard_iii_character }
+			set_character_as_ruler = yes
+		}
+		set_variable = wotr_tudor_claim_unlocked
+		change_variable = { name = war_of_roses_tension_offset_var add = 25 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = { name = war_of_the_roses_usurpation years = 5 }
+	}
+
+	option = {
+		name = england_war_of_the_roses_princes.b
+		ai_chance = { base = 35 }
+
+		change_variable = { name = war_of_roses_tension_offset_var add = -12 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = { name = war_of_the_roses_protected_succession years = 10 }
+		add_loyalists = { value = medium_radicals strata = middle }
+	}
+}
+
+england.319 = {
+	type = country_event
+
+	title = england_war_of_the_roses_tudor_claimant.title
+	desc = england_war_of_the_roses_tudor_claimant.desc
+	flavor = england_war_of_the_roses_tudor_claimant.flavor
+
+	event_image = { texture = "gfx/event_pictures/yorkist.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	immediate = {
+		wotr_ensure_henry_tudor_effect = yes
+		remove_variable = war_of_the_roses_war_warning
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_war_of_roses_tudor
+					}
+				}
+			}
+			create_political_movement = { type = movement_war_of_roses_tudor }
+		}
+	}
+
+	option = {
+		name = england_war_of_the_roses_tudor_claimant.a
+		default_option = yes
+		ai_chance = { base = 70 }
+
+		change_variable = { name = war_of_roses_tension_offset_var add = 20 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = { name = war_of_the_roses_tudor_invasion months = 36 }
+	}
+
+	option = {
+		name = england_war_of_the_roses_tudor_claimant.b
+		ai_chance = { base = 30 }
+
+		change_variable = { name = war_of_roses_tension_offset_var add = -8 }
+		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
+		add_modifier = { name = war_of_the_roses_offered_pardon months = 24 }
+	}
+}
+
+england.320 = {
+	type = country_event
+
+	title = england_war_of_the_roses_civil_war.title
+	desc = england_war_of_the_roses_civil_war.desc
+	flavor = england_war_of_the_roses_civil_war.flavor
+
+	event_image = { texture = "gfx/event_pictures/yorkist.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_civil_war.a
+		default_option = yes
+
+		add_modifier = { name = war_of_the_roses_civil_war_exhaustion years = 5 is_decaying = yes }
+		add_radicals = { value = small_radicals }
+	}
+}
+
+england.321 = {
+	type = country_event
+
+	title = england_war_of_the_roses_lancaster_restored.title
+	desc = england_war_of_the_roses_lancaster_restored.desc
+	flavor = england_war_of_the_roses_lancaster_restored.flavor
+
+	event_image = { texture = "gfx/event_pictures/the_justices_of_peace.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_lancaster_restored.a
+		default_option = yes
+
+		wotr_install_lancaster_ruler_effect = yes
+		wotr_record_war_fought_effect = yes
+		set_variable = { name = war_of_roses_balance_offset_var value = 20 }
+		wotr_clear_civil_war_variables_effect = yes
+		add_modifier = { name = war_of_the_roses_lancastrian_restoration years = 8 is_decaying = yes }
+		add_loyalists = { value = medium_radicals strata = upper }
+		if = {
+			limit = { game_date >= 1485.1.1 }
+			set_variable = war_of_the_roses_lancaster_victory
+			set_variable = wotr_final_settlement
+		}
+	}
+}
+
+england.322 = {
+	type = country_event
+
+	title = england_war_of_the_roses_york_accession.title
+	desc = england_war_of_the_roses_york_accession.desc
+	flavor = england_war_of_the_roses_york_accession.flavor
+
+	event_image = { texture = "gfx/event_pictures/yorkist.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_york_accession.a
+		default_option = yes
+
+		wotr_install_york_ruler_effect = yes
+		wotr_record_war_fought_effect = yes
+		set_variable = { name = war_of_roses_balance_offset_var value = -20 }
+		wotr_clear_civil_war_variables_effect = yes
+		add_modifier = { name = war_of_the_roses_yorkist_accession years = 8 is_decaying = yes }
+		add_loyalists = { value = medium_radicals strata = middle }
+		if = {
+			limit = { game_date >= 1485.1.1 }
+			set_variable = war_of_the_roses_york_victory
+			set_variable = wotr_final_settlement
+		}
+	}
+}
+
+england.323 = {
+	type = country_event
+
+	title = england_war_of_the_roses_tudor_victory.title
+	desc = england_war_of_the_roses_tudor_victory.desc
+	flavor = england_war_of_the_roses_tudor_victory.flavor
+
+	event_image = { texture = "gfx/event_pictures/yorkist.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_tudor_victory.a
+		default_option = yes
+
+		wotr_install_tudor_ruler_effect = yes
+		wotr_record_war_fought_effect = yes
+		wotr_clear_civil_war_variables_effect = yes
+		set_variable = war_of_the_roses_tudor_victory
+		set_variable = wotr_final_settlement
+		add_modifier = { name = war_of_the_roses_tudor_settlement years = 20 is_decaying = yes }
+		add_loyalists = { value = large_radicals }
+	}
+}
+
+england.324 = {
+	type = country_event
+
+	title = england_war_of_the_roses_crown_victory.title
+	desc = england_war_of_the_roses_crown_victory.desc
+	flavor = england_war_of_the_roses_crown_victory.flavor
+
+	event_image = { texture = "gfx/event_pictures/the_justices_of_peace.dds" }
+	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
+	duration = 3
+	trigger = {}
+
+	option = {
+		name = england_war_of_the_roses_crown_victory.a
+		default_option = yes
+
+		wotr_record_war_fought_effect = yes
+		wotr_clear_civil_war_variables_effect = yes
+		add_modifier = { name = war_of_the_roses_crown_victory years = 8 is_decaying = yes }
+		add_loyalists = { value = medium_radicals }
+		if = {
+			limit = { game_date >= 1485.1.1 }
+			set_variable = wotr_final_settlement
+			if = {
+				limit = { has_variable = wotr_dynasty_lancaster }
+				set_variable = war_of_the_roses_lancaster_victory
+			}
+			else_if = {
+				limit = { has_variable = wotr_dynasty_york }
+				set_variable = war_of_the_roses_york_victory
+			}
 		}
 	}
 }
