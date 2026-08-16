@@ -1235,6 +1235,21 @@ expanded_quarrying = {
 	}
 }
 
+aromatic_spice_trade = {
+	# Unlocks Parfurmery PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/incense.dds"
+	category = production
+
+	unlocking_technologies = {
+		free_trade
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## ERA 4
 
 skilled_craftmanship = {
@@ -1480,6 +1495,36 @@ horse_harnessing = {
 
 	ai_weight = {
 		value = 2 # very important tech
+	}
+}
+
+distilled_aromatics = {
+	# Unlocks Parfurmery PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/incense.dds"
+	category = production
+
+	unlocking_technologies = {
+		skilled_craftmanship
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+rag_pulping = {
+	# Unlocks Paper PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/paper.dds"
+	category = production
+
+	unlocking_technologies = {
+		skilled_craftmanship
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
 	}
 }
 
@@ -1862,6 +1907,36 @@ mechanized_gold_mining = {
 
 	ai_weight = {
 		value = 2 # very important tech
+	}
+}
+
+court_perfumery = {
+	# Unlocks Parfurmery PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/incense.dds"
+	category = production
+
+	unlocking_technologies = {
+		bronze_manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+paper_standardization = {
+	# Unlocks Paper PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/paper.dds"
+	category = production
+
+	unlocking_technologies = {
+		leather_manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
 	}
 }
 

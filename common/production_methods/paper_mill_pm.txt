@@ -47,7 +47,7 @@ pm_building_paper_mill_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		rag_pulping
 	}
 
 	building_modifiers = {
@@ -73,8 +73,9 @@ pm_building_paper_mill_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 	
 	unlocking_technologies = {
-		behaviorism
+		paper_standardization
 	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
