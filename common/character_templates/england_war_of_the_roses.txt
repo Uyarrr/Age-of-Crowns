@@ -155,6 +155,26 @@ ENG_richard_iii_york_wotr = {
 	trait_generation = { }
 }
 
+ENG_edward_v_york_wotr = {
+	# Edward V, whose protected succession creates an alternate Yorkist settlement
+	first_name = Edward_V
+	last_name = York
+	historical = yes
+	culture = primary_culture
+	religion = catholic
+	female = no
+	noble = yes
+	birth_date = 1470.11.2
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	home_region = STATE_HOME_COUNTIES
+	traits = {
+		reserved
+		pious
+	}
+	trait_generation = { }
+}
+
 ENG_henry_vii_tudor_wotr = {
 	# Henry Tudor, later Henry VII
 	first_name = Henry_VII

@@ -168,6 +168,7 @@ england.302 = {
 	option = {
 		name = england_war_of_the_roses_start.a
 		default_option = yes
+		custom_tooltip = wotr_phase_one_begins_tt
 	}
 }
 
@@ -275,6 +276,7 @@ england.305 = {
 	option = {
 		name = england_war_of_the_roses_realm_arms.a
 		default_option = yes
+		ai_chance = { base = 65 }
 
 		change_variable = { name = war_of_roses_tension_offset_var add = -10 }
 		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
@@ -286,6 +288,7 @@ england.305 = {
 
 	option = {
 		name = england_war_of_the_roses_realm_arms.b
+		ai_chance = { base = 35 }
 
 		if = {
 			limit = { var:war_of_roses_balance_current_var <= 50 }
@@ -361,6 +364,8 @@ england.306 = {
 	option = {
 		name = england_war_of_the_roses_cade.a
 		default_option = yes
+		custom_tooltip = wotr_phase_two_begins_tt
+		ai_chance = { base = 35 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = -5 }
 		change_variable = { name = war_of_roses_tension_offset_var add = -8 }
@@ -374,6 +379,8 @@ england.306 = {
 
 	option = {
 		name = england_war_of_the_roses_cade.b
+		custom_tooltip = wotr_phase_two_begins_tt
+		ai_chance = { base = 65 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = 5 }
 		change_variable = { name = war_of_roses_tension_offset_var add = 10 }
@@ -410,6 +417,7 @@ england.307 = {
 	option = {
 		name = england_war_of_the_roses_protectorate.a
 		default_option = yes
+		ai_chance = { base = 60 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = -12 }
 		change_variable = { name = war_of_roses_tension_offset_var add = -4 }
@@ -423,6 +431,7 @@ england.307 = {
 
 	option = {
 		name = england_war_of_the_roses_protectorate.b
+		ai_chance = { base = 40 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = 8 }
 		change_variable = { name = war_of_roses_tension_offset_var add = 10 }
@@ -459,6 +468,7 @@ england.308 = {
 	option = {
 		name = england_war_of_the_roses_livery.a
 		default_option = yes
+		ai_chance = { base = 45 }
 
 		change_variable = { name = war_of_roses_tension_offset_var add = -6 }
 		change_variable = { name = war_of_roses_balance_offset_var add = 2 }
@@ -472,6 +482,7 @@ england.308 = {
 
 	option = {
 		name = england_war_of_the_roses_livery.b
+		ai_chance = { base = 55 }
 
 		if = {
 			limit = { var:war_of_roses_balance_current_var <= 50 }
@@ -514,6 +525,7 @@ england.309 = {
 	option = {
 		name = england_war_of_the_roses_queen_party.a
 		default_option = yes
+		ai_chance = { base = 65 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = 10 }
 		change_variable = { name = war_of_roses_tension_offset_var add = 5 }
@@ -527,6 +539,7 @@ england.309 = {
 
 	option = {
 		name = england_war_of_the_roses_queen_party.b
+		ai_chance = { base = 35 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = -5 }
 		change_variable = { name = war_of_roses_tension_offset_var add = -5 }
@@ -563,6 +576,7 @@ england.310 = {
 	option = {
 		name = england_war_of_the_roses_warwick.a
 		default_option = yes
+		ai_chance = { base = 65 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = -10 }
 		change_variable = { name = war_of_roses_tension_offset_var add = 4 }
@@ -576,6 +590,7 @@ england.310 = {
 
 	option = {
 		name = england_war_of_the_roses_warwick.b
+		ai_chance = { base = 35 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = 6 }
 		change_variable = { name = war_of_roses_tension_offset_var add = 9 }
@@ -612,6 +627,8 @@ england.311 = {
 	option = {
 		name = england_war_of_the_roses_st_albans.a
 		default_option = yes
+		custom_tooltip = wotr_phase_three_begins_tt
+		ai_chance = { base = 60 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = -10 }
 		change_variable = { name = war_of_roses_tension_offset_var add = -5 }
@@ -625,6 +642,8 @@ england.311 = {
 
 	option = {
 		name = england_war_of_the_roses_st_albans.b
+		custom_tooltip = wotr_phase_three_begins_tt
+		ai_chance = { base = 40 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = 8 }
 		change_variable = { name = war_of_roses_tension_offset_var add = 12 }
@@ -661,6 +680,7 @@ england.312 = {
 	option = {
 		name = england_war_of_the_roses_loveday.a
 		default_option = yes
+		ai_chance = { base = 70 }
 
 		if = {
 			limit = { var:war_of_roses_balance_current_var > 50 }
@@ -680,6 +700,7 @@ england.312 = {
 
 	option = {
 		name = england_war_of_the_roses_loveday.b
+		ai_chance = { base = 30 }
 
 		change_variable = { name = war_of_roses_tension_offset_var add = 7 }
 		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
@@ -714,6 +735,7 @@ england.313 = {
 	option = {
 		name = england_war_of_the_roses_attainders.a
 		default_option = yes
+		ai_chance = { base = 65 }
 
 		if = {
 			limit = { var:war_of_roses_balance_current_var >= 50 }
@@ -733,6 +755,7 @@ england.313 = {
 
 	option = {
 		name = england_war_of_the_roses_attainders.b
+		ai_chance = { base = 35 }
 
 		if = {
 			limit = { var:war_of_roses_balance_current_var > 50 }
@@ -900,6 +923,7 @@ england.317 = {
 	option = {
 		name = england_war_of_the_roses_readeption.a
 		default_option = yes
+		ai_chance = { base = 55 }
 
 		change_variable = { name = war_of_roses_balance_offset_var add = 18 }
 		change_variable = { name = war_of_roses_tension_offset_var add = 18 }
@@ -910,6 +934,7 @@ england.317 = {
 
 	option = {
 		name = england_war_of_the_roses_readeption.b
+		ai_chance = { base = 45 }
 
 		change_variable = { name = war_of_roses_tension_offset_var add = 25 }
 		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
@@ -929,15 +954,18 @@ england.318 = {
 	duration = 3
 	trigger = {}
 
+	immediate = {
+		random_scope_character = {
+			limit = { has_variable = wotr_edward_iv_character }
+			kill_character = yes
+		}
+	}
+
 	option = {
 		name = england_war_of_the_roses_princes.a
 		default_option = yes
 		ai_chance = { base = 65 }
 
-		random_scope_character = {
-			limit = { has_variable = wotr_edward_iv_character }
-			kill_character = yes
-		}
 		if = {
 			limit = {
 				NOT = { any_scope_character = { has_variable = wotr_richard_iii_character } }
@@ -947,6 +975,7 @@ england.318 = {
 				on_created = { set_variable = wotr_richard_iii_character }
 			}
 		}
+		wotr_prepare_crown_accession_effect = yes
 		random_scope_character = {
 			limit = { has_variable = wotr_richard_iii_character }
 			set_interest_group = PREV.ig:ig_crown
@@ -962,6 +991,13 @@ england.318 = {
 		name = england_war_of_the_roses_princes.b
 		ai_chance = { base = 35 }
 
+		wotr_ensure_edward_v_effect = yes
+		wotr_prepare_crown_accession_effect = yes
+		random_scope_character = {
+			limit = { has_variable = wotr_edward_v_character }
+			set_interest_group = PREV.ig:ig_crown
+			set_character_as_ruler = yes
+		}
 		change_variable = { name = war_of_roses_tension_offset_var add = -12 }
 		clamp_variable = { name = war_of_roses_tension_offset_var min = -30 max = 35 }
 		add_modifier = { name = war_of_the_roses_protected_succession years = 10 }
@@ -1031,6 +1067,7 @@ england.320 = {
 	option = {
 		name = england_war_of_the_roses_civil_war.a
 		default_option = yes
+		custom_tooltip = wotr_phase_four_begins_tt
 
 		add_modifier = { name = war_of_the_roses_civil_war_exhaustion years = 5 is_decaying = yes }
 		add_radicals = { value = small_radicals }

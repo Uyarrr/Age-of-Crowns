@@ -143,7 +143,7 @@ je_england_2 = {
 			if = {
 				limit = {
 					var:wotr_phase_var = 1
-					game_date >= 1450.1.1
+					game_date >= 1450.6.1
 					NOT = { has_variable = wotr_recent_historical_event }
 				}
 				set_variable = { name = wotr_phase_var value = 2 }
@@ -154,7 +154,7 @@ je_england_2 = {
 			if = {
 				limit = {
 					var:wotr_phase_var = 2
-					game_date >= 1453.8.1
+					game_date >= 1454.3.27
 					NOT = { has_variable = war_of_the_roses_york_protectorate }
 					NOT = { has_variable = wotr_recent_historical_event }
 				}
@@ -165,7 +165,7 @@ je_england_2 = {
 			if = {
 				limit = {
 					var:wotr_phase_var < 3
-					game_date >= 1455.1.1
+					game_date >= 1455.5.22
 					OR = {
 						var:war_of_roses_tension_current_var >= 60
 						game_date >= 1457.1.1
@@ -249,7 +249,7 @@ je_england_2 = {
 			}
 			if = {
 				limit = {
-					game_date >= 1450.1.1
+					game_date >= 1450.6.1
 					game_date < 1462.1.1
 					var:war_of_roses_tension_current_var >= 55
 					NOT = { has_variable = war_of_the_roses_cade_unrest }
@@ -265,7 +265,7 @@ je_england_2 = {
 			}
 			if = {
 				limit = {
-					game_date >= 1452.1.1
+					game_date >= 1454.3.27
 					game_date < 1460.1.1
 					var:war_of_roses_tension_current_var >= 60
 					NOT = { has_variable = war_of_the_roses_york_protectorate }
@@ -328,7 +328,7 @@ je_england_2 = {
 			}
 			if = {
 				limit = {
-					game_date >= 1455.1.1
+					game_date >= 1455.5.22
 					var:war_of_roses_tension_current_var >= 70
 					NOT = { has_variable = war_of_the_roses_st_albans_event }
 					NOT = { has_variable = wotr_civil_war_active }
@@ -344,7 +344,7 @@ je_england_2 = {
 			}
 			if = {
 				limit = {
-					game_date >= 1458.1.1
+					game_date >= 1458.3.25
 					var:war_of_roses_tension_current_var >= 60
 					has_variable = war_of_the_roses_st_albans_event
 					NOT = { has_variable = war_of_the_roses_loveday_event }
@@ -360,7 +360,7 @@ je_england_2 = {
 			}
 			if = {
 				limit = {
-					game_date >= 1459.1.1
+					game_date >= 1459.10.1
 					var:war_of_roses_tension_current_var >= 75
 					OR = {
 						var:war_of_roses_balance_current_var <= 35
@@ -381,7 +381,7 @@ je_england_2 = {
 			if = {
 				limit = {
 					var:wotr_phase_var = 3
-					game_date >= 1460.1.1
+					game_date >= 1460.10.25
 					NOT = { has_variable = wotr_act_of_accord_event }
 					NOT = { has_variable = wotr_civil_war_active }
 					NOT = { has_variable = wotr_recent_historical_event }
@@ -393,7 +393,7 @@ je_england_2 = {
 			if = {
 				limit = {
 					has_variable = wotr_act_of_accord
-					game_date >= 1460.12.1
+					game_date >= 1460.12.30
 					NOT = { has_variable = wotr_wakefield_event }
 					NOT = { has_variable = wotr_civil_war_active }
 					NOT = { has_variable = wotr_recent_historical_event }
@@ -419,7 +419,7 @@ je_england_2 = {
 				limit = {
 					has_variable = wotr_warwick_alienated
 					has_variable = wotr_dynasty_york
-					game_date >= 1470.1.1
+					game_date >= 1470.10.3
 					NOT = { has_variable = wotr_readeption_event }
 					NOT = { has_variable = wotr_civil_war_active }
 					NOT = { has_variable = wotr_recent_historical_event }
@@ -431,7 +431,7 @@ je_england_2 = {
 			if = {
 				limit = {
 					has_variable = wotr_dynasty_york
-					game_date >= 1483.1.1
+					game_date >= 1483.4.9
 					NOT = { has_variable = wotr_princes_event }
 					NOT = { has_variable = wotr_final_settlement }
 					NOT = { has_variable = wotr_civil_war_active }

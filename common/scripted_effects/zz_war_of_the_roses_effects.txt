@@ -95,6 +95,24 @@ wotr_ensure_edward_westminster_effect = {
 	}
 }
 
+wotr_ensure_edward_v_effect = {
+	if = {
+		limit = {
+			NOT = {
+				any_scope_character = {
+					has_variable = wotr_edward_v_character
+				}
+			}
+		}
+		create_character = {
+			template = ENG_edward_v_york_wotr
+			on_created = {
+				set_variable = wotr_edward_v_character
+			}
+		}
+	}
+}
+
 wotr_ensure_henry_tudor_effect = {
 	if = {
 		limit = {
