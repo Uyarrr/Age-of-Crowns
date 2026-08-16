@@ -58,6 +58,7 @@ wotr_on_revolution_start = {
 				set_variable = { name = war_of_roses_balance_current_var value = root.var:war_of_roses_balance_current_var }
 				set_variable = { name = war_of_roses_tension_current_var value = root.var:war_of_roses_tension_current_var }
 				wotr_set_york_dynasty_effect = yes
+				wotr_prepare_crown_accession_effect = yes
 				if = {
 					limit = { NOT = { has_journal_entry = je_england_2 } }
 					add_journal_entry = { type = je_england_2 }
@@ -68,12 +69,14 @@ wotr_on_revolution_start = {
 					}
 					random_scope_character = {
 						limit = { has_variable = wotr_richard_of_york_character }
+						set_interest_group = PREV.ig:ig_crown
 						set_character_as_ruler = yes
 					}
 				}
 				else = {
 					random_scope_character = {
 						limit = { has_variable = wotr_edward_iv_character }
+						set_interest_group = PREV.ig:ig_crown
 						set_character_as_ruler = yes
 					}
 				}
@@ -113,6 +116,7 @@ wotr_on_revolution_start = {
 				set_variable = { name = war_of_roses_balance_current_var value = root.var:war_of_roses_balance_current_var }
 				set_variable = { name = war_of_roses_tension_current_var value = root.var:war_of_roses_tension_current_var }
 				wotr_set_lancaster_dynasty_effect = yes
+				wotr_prepare_crown_accession_effect = yes
 				if = {
 					limit = { NOT = { has_journal_entry = je_england_2 } }
 					add_journal_entry = { type = je_england_2 }
@@ -123,12 +127,14 @@ wotr_on_revolution_start = {
 					}
 					random_scope_character = {
 						limit = { has_variable = wotr_henry_vi_character }
+						set_interest_group = PREV.ig:ig_crown
 						set_character_as_ruler = yes
 					}
 				}
 				else = {
 					random_scope_character = {
 						limit = { has_variable = wotr_edward_westminster_character }
+						set_interest_group = PREV.ig:ig_crown
 						set_character_as_ruler = yes
 					}
 				}
@@ -158,12 +164,14 @@ wotr_on_revolution_start = {
 				set_variable = { name = war_of_roses_balance_current_var value = root.var:war_of_roses_balance_current_var }
 				set_variable = { name = war_of_roses_tension_current_var value = root.var:war_of_roses_tension_current_var }
 				wotr_set_tudor_dynasty_effect = yes
+				wotr_prepare_crown_accession_effect = yes
 				if = {
 					limit = { NOT = { has_journal_entry = je_england_2 } }
 					add_journal_entry = { type = je_england_2 }
 				}
 				random_scope_character = {
 					limit = { has_variable = wotr_henry_tudor_character }
+					set_interest_group = PREV.ig:ig_crown
 					set_character_as_ruler = yes
 				}
 				trigger_event = { id = england.320 popup = yes }

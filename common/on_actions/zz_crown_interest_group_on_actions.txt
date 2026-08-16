@@ -1,0 +1,36 @@
+on_game_started = {
+	on_actions = { uyr_initialize_crown_interest_group }
+}
+
+uyr_initialize_crown_interest_group = {
+	effect = {
+		every_country = {
+			limit = {
+				has_law = law_type:law_monarchy
+			}
+			ruler ?= {
+				set_interest_group = PREV.ig:ig_crown
+			}
+		}
+	}
+}
+
+on_new_ruler = {
+	on_actions = { uyr_assign_new_monarch_to_crown_interest_group }
+}
+
+uyr_assign_new_monarch_to_crown_interest_group = {
+	trigger = {
+		owner ?= {
+			has_law = law_type:law_monarchy
+		}
+	}
+
+	effect = {
+		owner ?= {
+			ruler ?= {
+				set_interest_group = PREV.ig:ig_crown
+			}
+		}
+	}
+}

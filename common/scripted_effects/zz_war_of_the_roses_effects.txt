@@ -16,6 +16,13 @@ wotr_set_tudor_dynasty_effect = {
 	set_variable = wotr_dynasty_tudor
 }
 
+# The Crown IG follows the throne, while a displaced monarch returns to the noble estate.
+wotr_prepare_crown_accession_effect = {
+	ruler ?= {
+		set_interest_group = PREV.ig:ig_landowners
+	}
+}
+
 wotr_ensure_henry_vi_effect = {
 	if = {
 		limit = {
@@ -107,11 +114,13 @@ wotr_ensure_henry_tudor_effect = {
 }
 
 wotr_install_lancaster_ruler_effect = {
+	wotr_prepare_crown_accession_effect = yes
 	if = {
 		limit = { game_date < 1471.5.4 }
 		wotr_ensure_henry_vi_effect = yes
 		random_scope_character = {
 			limit = { has_variable = wotr_henry_vi_character }
+			set_interest_group = PREV.ig:ig_crown
 			set_character_as_ruler = yes
 		}
 	}
@@ -119,6 +128,7 @@ wotr_install_lancaster_ruler_effect = {
 		wotr_ensure_edward_westminster_effect = yes
 		random_scope_character = {
 			limit = { has_variable = wotr_edward_westminster_character }
+			set_interest_group = PREV.ig:ig_crown
 			set_character_as_ruler = yes
 		}
 	}
@@ -126,11 +136,13 @@ wotr_install_lancaster_ruler_effect = {
 }
 
 wotr_install_york_ruler_effect = {
+	wotr_prepare_crown_accession_effect = yes
 	if = {
 		limit = { game_date < 1461.1.1 }
 		wotr_ensure_richard_of_york_effect = yes
 		random_scope_character = {
 			limit = { has_variable = wotr_richard_of_york_character }
+			set_interest_group = PREV.ig:ig_crown
 			set_character_as_ruler = yes
 		}
 	}
@@ -138,6 +150,7 @@ wotr_install_york_ruler_effect = {
 		wotr_ensure_edward_iv_effect = yes
 		random_scope_character = {
 			limit = { has_variable = wotr_edward_iv_character }
+			set_interest_group = PREV.ig:ig_crown
 			set_character_as_ruler = yes
 		}
 	}
@@ -145,9 +158,11 @@ wotr_install_york_ruler_effect = {
 }
 
 wotr_install_tudor_ruler_effect = {
+	wotr_prepare_crown_accession_effect = yes
 	wotr_ensure_henry_tudor_effect = yes
 	random_scope_character = {
 		limit = { has_variable = wotr_henry_tudor_character }
+		set_interest_group = PREV.ig:ig_crown
 		set_character_as_ruler = yes
 	}
 	wotr_set_tudor_dynasty_effect = yes

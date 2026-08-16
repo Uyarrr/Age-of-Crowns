@@ -10,7 +10,7 @@ hundred_years_war_won = {
 	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 
 	country_prestige_mult = 0.20
-	country_legitimacy_add = 20
+	country_legitimacy_base_add = 20
 	country_authority_mult = 0.20
 	interest_group_ig_crown_pol_str_mult = 0.25
 	interest_group_ig_landowners_approval_add = 3
@@ -20,7 +20,7 @@ hundred_years_war_lost = {
 	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 
 	country_prestige_mult = -0.15
-	country_legitimacy_add = -15
+	country_legitimacy_base_add = -15
 	country_authority_mult = -0.15
 	interest_group_ig_crown_pol_str_mult = -0.20
 	interest_group_ig_landowners_approval_add = -2
@@ -29,8 +29,9 @@ hundred_years_war_lost = {
 war_of_the_roses_dynastic_tension = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = -5
+	country_legitimacy_base_add = -15
 	country_radicals_from_legitimacy_mult = 0.25
+	interest_group_ig_crown_pol_str_mult = -0.15
 	interest_group_ig_landowners_approval_add = -1
 	interest_group_ig_armed_forces_approval_add = -1
 }
@@ -38,8 +39,9 @@ war_of_the_roses_dynastic_tension = {
 war_of_the_roses_high_tension = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = -10
+	country_legitimacy_base_add = -25
 	country_radicals_from_legitimacy_mult = 0.50
+	interest_group_ig_crown_pol_str_mult = -0.25
 	interest_group_ig_landowners_approval_add = -2
 	interest_group_ig_armed_forces_approval_add = -2
 }
@@ -47,7 +49,7 @@ war_of_the_roses_high_tension = {
 war_of_the_roses_lancaster_settlement = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 15
+	country_legitimacy_base_add = 15
 	country_authority_mult = 0.10
 	country_aristocrats_pol_str_mult = 0.20
 	interest_group_ig_crown_pol_str_mult = 0.15
@@ -70,7 +72,7 @@ war_of_the_roses_york_settlement = {
 war_of_the_roses_great_council = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 5
+	country_legitimacy_base_add = 5
 	country_expenses_add = 1000
 	interest_group_ig_landowners_approval_add = 1
 	interest_group_ig_intelligentsia_approval_add = 1
@@ -98,7 +100,7 @@ war_of_the_roses_livery_restrained = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
 	country_authority_mult = -0.05
-	country_legitimacy_add = 5
+	country_legitimacy_base_add = 5
 	interest_group_ig_landowners_approval_add = -2
 	interest_group_ig_armed_forces_approval_add = -1
 }
@@ -106,7 +108,7 @@ war_of_the_roses_livery_restrained = {
 war_of_the_roses_loveday_procession = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 10
+	country_legitimacy_base_add = 10
 	country_prestige_add = 10
 	interest_group_ig_landowners_approval_add = 1
 	interest_group_ig_devout_approval_add = 1
@@ -127,6 +129,7 @@ war_of_the_roses_royal_attainders = {
 
 	country_authority_mult = 0.10
 	country_radicals_from_legitimacy_mult = 0.25
+	interest_group_ig_crown_pol_str_mult = 0.15
 	interest_group_ig_landowners_approval_add = -2
 	interest_group_ig_armed_forces_approval_add = -2
 }
@@ -134,8 +137,9 @@ war_of_the_roses_royal_attainders = {
 war_of_the_roses_act_of_accord = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 10
+	country_legitimacy_base_add = 10
 	country_authority_mult = -0.10
+	interest_group_ig_crown_pol_str_mult = -0.10
 	interest_group_ig_landowners_approval_add = -1
 	interest_group_ig_intelligentsia_approval_add = 2
 }
@@ -144,7 +148,8 @@ war_of_the_roses_guarded_court = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
 	country_authority_mult = 0.10
-	country_legitimacy_add = 5
+	country_legitimacy_base_add = 5
+	interest_group_ig_crown_pol_str_mult = 0.10
 	interest_group_ig_armed_forces_approval_add = 2
 	interest_group_ig_landowners_approval_add = -1
 }
@@ -153,7 +158,8 @@ war_of_the_roses_kingmakers_price = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
 	country_authority_mult = -0.10
-	country_legitimacy_add = 5
+	country_legitimacy_base_add = 5
+	interest_group_ig_crown_pol_str_mult = -0.10
 	interest_group_ig_armed_forces_approval_add = 3
 	interest_group_ig_landowners_approval_add = 1
 }
@@ -162,7 +168,7 @@ war_of_the_roses_royal_household = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
 	country_authority_mult = 0.10
-	country_legitimacy_add = -5
+	country_legitimacy_base_add = -5
 	interest_group_ig_armed_forces_approval_add = -3
 	interest_group_ig_crown_pol_str_mult = 0.15
 }
@@ -170,8 +176,9 @@ war_of_the_roses_royal_household = {
 war_of_the_roses_readeption = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = -10
+	country_legitimacy_base_add = -10
 	country_radicals_from_legitimacy_mult = 0.50
+	interest_group_ig_crown_pol_str_mult = -0.20
 	interest_group_ig_landowners_approval_add = -2
 	interest_group_ig_armed_forces_approval_add = -2
 }
@@ -179,17 +186,19 @@ war_of_the_roses_readeption = {
 war_of_the_roses_usurpation = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = -20
+	country_legitimacy_base_add = -20
 	country_authority_mult = 0.15
 	country_radicals_from_legitimacy_mult = 0.75
+	interest_group_ig_crown_pol_str_mult = 0.20
 	interest_group_ig_landowners_approval_add = -3
 }
 
 war_of_the_roses_protected_succession = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 15
+	country_legitimacy_base_add = 15
 	country_authority_mult = -0.05
+	interest_group_ig_crown_pol_str_mult = 0.10
 	interest_group_ig_landowners_approval_add = 2
 	interest_group_ig_intelligentsia_approval_add = 1
 }
@@ -198,7 +207,8 @@ war_of_the_roses_tudor_invasion = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
 	country_expenses_add = 2000
-	country_legitimacy_add = -10
+	country_legitimacy_base_add = -10
+	interest_group_ig_crown_pol_str_mult = -0.10
 	interest_group_ig_armed_forces_approval_add = -2
 }
 
@@ -206,7 +216,7 @@ war_of_the_roses_offered_pardon = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
 	country_authority_mult = -0.05
-	country_legitimacy_add = 5
+	country_legitimacy_base_add = 5
 	interest_group_ig_devout_approval_add = 1
 }
 
@@ -214,8 +224,9 @@ war_of_the_roses_civil_war_exhaustion = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
 	country_expenses_add = 3000
-	country_legitimacy_add = -10
+	country_legitimacy_base_add = -10
 	country_radicals_from_legitimacy_mult = 0.50
+	interest_group_ig_crown_pol_str_mult = -0.25
 	interest_group_ig_landowners_approval_add = -2
 	interest_group_ig_armed_forces_approval_add = -2
 }
@@ -223,7 +234,7 @@ war_of_the_roses_civil_war_exhaustion = {
 war_of_the_roses_lancastrian_restoration = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 10
+	country_legitimacy_base_add = 10
 	country_authority_mult = 0.10
 	interest_group_ig_landowners_approval_add = 3
 	interest_group_ig_crown_pol_str_mult = 0.15
@@ -232,8 +243,9 @@ war_of_the_roses_lancastrian_restoration = {
 war_of_the_roses_yorkist_accession = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 10
+	country_legitimacy_base_add = 10
 	country_bureaucracy_mult = 0.10
+	interest_group_ig_crown_pol_str_mult = 0.15
 	interest_group_ig_armed_forces_approval_add = 2
 	interest_group_ig_intelligentsia_approval_add = 2
 }
@@ -241,7 +253,7 @@ war_of_the_roses_yorkist_accession = {
 war_of_the_roses_tudor_settlement = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 20
+	country_legitimacy_base_add = 20
 	country_authority_mult = 0.15
 	country_bureaucracy_mult = 0.10
 	country_radicals_from_legitimacy_mult = -0.25
@@ -252,9 +264,10 @@ war_of_the_roses_tudor_settlement = {
 war_of_the_roses_crown_victory = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	country_legitimacy_add = 15
+	country_legitimacy_base_add = 15
 	country_authority_mult = 0.10
 	country_radicals_from_legitimacy_mult = -0.15
+	interest_group_ig_crown_pol_str_mult = 0.25
 	interest_group_ig_landowners_approval_add = 2
 	interest_group_ig_armed_forces_approval_add = 2
 }
@@ -293,7 +306,7 @@ england_support_middle_class_bureaucrats_b = {
 	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
 	country_aristocrats_pol_str_mult = 0.25
 	country_authority_mult = 0.10
-	country_legitimacy_add = 5
+	country_legitimacy_base_add = 5
 	interest_group_ig_landowners_pol_str_mult = 0.25
 	interest_group_ig_landowners_approval_add = 3
 	interest_group_ig_intelligentsia_approval_add = -3
@@ -323,7 +336,7 @@ england_the_enclosure_movement_b = {
 	
 	building_group_bg_agriculture_throughput_add = -0.10
 	building_group_bg_light_industry_throughput_add = -0.05
-	country_legitimacy_add = 10
+	country_legitimacy_base_add = 10
 	building_peasants_standard_of_living_add = 1
 	building_laborers_standard_of_living_add = 1
 	building_farmers_standard_of_living_add = 1

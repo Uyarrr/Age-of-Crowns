@@ -949,6 +949,7 @@ england.318 = {
 		}
 		random_scope_character = {
 			limit = { has_variable = wotr_richard_iii_character }
+			set_interest_group = PREV.ig:ig_crown
 			set_character_as_ruler = yes
 		}
 		set_variable = wotr_tudor_claim_unlocked
