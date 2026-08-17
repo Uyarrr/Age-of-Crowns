@@ -23,7 +23,7 @@ pm_building_glassworks_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/leaded_glass.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		glassblowing
 	}
 
 	building_modifiers = {
@@ -49,7 +49,7 @@ pm_building_glassworks_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/crystal_glass.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		stained_glassmaking
 	}
 
 	building_modifiers = {
@@ -76,7 +76,7 @@ pm_building_glassworks_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/crystal_glass.dds"
 
 	unlocking_technologies = {
-		glass_manufactories
+		leaded_crystal_glass
 	}
 
 	building_modifiers = {

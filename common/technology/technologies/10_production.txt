@@ -801,6 +801,21 @@ refined_tea_cultivation = {
 	}
 }
 
+glassblowing = {
+	# Unlocks Glass PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/glass.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshop_standardization
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## AGE 3 ######
 
 resource_extraction = {
@@ -1528,6 +1543,21 @@ rag_pulping = {
 	}
 }
 
+stained_glassmaking = {
+	# Unlocks Glass PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/glass.dds"
+	category = production
+
+	unlocking_technologies = {
+		rag_pulping
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ################################################ ERA 5 ################################################
 manufactories = {
 	era = era_5
@@ -1682,7 +1712,7 @@ pottery_manufactories = {
 	}
 }
 
-glass_manufactories = {
+leaded_crystal_glass = {
 	# Unlocks Glass PM
 	era = era_5
 	texture = "gfx/interface/icons/goods_icons/glass.dds"
