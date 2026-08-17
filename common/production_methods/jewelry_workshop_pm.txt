@@ -97,9 +97,22 @@ pm_building_jewelry_workshop_main_4 = {
 	}
 }
 
-################################# LEATHER UPGRADE ##################################
+################################# GOLD USE ##################################
 
 pm_building_jewelry_workshop_gold_0 = {
+	texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+		}
+
+		level_scaled = {
+
+		}
+	}
+}
+
+pm_building_jewelry_workshop_gold_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
 
 	building_modifiers = {
@@ -116,7 +129,7 @@ pm_building_jewelry_workshop_gold_0 = {
 	}
 }
 
-pm_building_jewelry_workshop_gold_1 = {
+pm_building_jewelry_workshop_gold_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation1.dds"
 
 	building_modifiers = {
@@ -133,7 +146,7 @@ pm_building_jewelry_workshop_gold_1 = {
 	}
 }
 
-pm_building_jewelry_workshop_gold_2 = {
+pm_building_jewelry_workshop_gold_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
 
 	building_modifiers = {
