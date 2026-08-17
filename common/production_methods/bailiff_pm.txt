@@ -3,15 +3,13 @@
 
 	country_modifiers = {
 		workforce_scaled = {
-			interest_group_ig_landowners_pop_attraction_mult = 0.01
+			interest_group_ig_landowners_pop_attraction_mult = 0.02
 		}
 	}
 	state_modifiers = {
 		workforce_scaled = {
 			state_bureaucracy_population_base_cost_factor_mult = -0.05
-			state_incorporation_speed_mult = 0.05
 			state_institution_impact_add = 0.05
-			state_pop_pol_str_mult = -0.15
 			
 		}
 	}
@@ -29,11 +27,11 @@
 	}
 }
 
-pm_building_bailiff_taxation_rights_0 = {
+pm_building_bailiff_taxation_rights_silver_0 = {
 	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
 }
 
-pm_building_bailiff_taxation_rights_1 = {
+pm_building_bailiff_taxation_rights_silver_1 = {
 	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
 
 	state_modifiers = {
@@ -53,7 +51,11 @@ pm_building_bailiff_taxation_rights_1 = {
 	}
 }
 
-pm_building_bailiff_taxation_rights_1 = {
+pm_building_bailiff_taxation_rights_gold_0 = {
+	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
+}
+
+pm_building_bailiff_taxation_rights_gold_1 = {
 	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
 
 	state_modifiers = {
