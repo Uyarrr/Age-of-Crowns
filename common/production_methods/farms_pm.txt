@@ -183,12 +183,12 @@ pm_building_rice_farm_main_4 = {
 }
 
 pm_building_grain_farm_plow_0 = {
-	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 
 }
 
 pm_building_grain_farm_plow_1 = {
-	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/unused/automation1.dds"
 
 	unlocking_technologies = {
 		heavy_plow
@@ -211,7 +211,7 @@ pm_building_grain_farm_plow_1 = {
 }
 
 pm_building_grain_farm_plow_2 = {
-	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
 
 	unlocking_technologies = {
 		horse_harnessing

@@ -846,6 +846,21 @@ pasture_management = {
 	}
 }
 
+improved_dye_cultivation = {
+	# Unlocks Dye PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/dye.dds"
+	category = production
+
+	unlocking_technologies = {
+		pasture_management
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## AGE 3 ######
 
 resource_extraction = {
@@ -1310,10 +1325,38 @@ aromatic_spice_trade = {
 	}
 }
 
+organized_orchards = {
+	# Unlocks Orchard PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/fruit.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 large_scale_ranching = {
 	# Unlocks Livestock PM
 	era = era_3
 	texture = "gfx/interface/icons/goods_icons/livestock.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+indigo_cultivation = {
+	# Unlocks Dye PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/dye.dds"
 	category = production
 
 	unlocking_technologies = {
@@ -2065,6 +2108,36 @@ scientific_stockbreeding = {
 
 	unlocking_technologies = {
 		estate_agriculture
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+intensive_fruit_cultivation = {
+	# Unlocks Orchard PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/fruit.dds"
+	category = production
+
+	unlocking_technologies = {
+		estate_agriculture
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+dye_estates = {
+	# Unlocks Dye PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/dye.dds"
+	category = production
+
+	unlocking_technologies = {
+		intensive_fruit_cultivation
 	}
 
 	ai_weight = {
