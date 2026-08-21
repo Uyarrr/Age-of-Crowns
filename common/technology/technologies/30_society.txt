@@ -606,8 +606,8 @@ social_ladder = {
 	}
 }
 
-local_police_force = {
-	# Unlocks Local Police Force Law
+town_watch = {
+	# Unlocks Town Watch Law
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
 	category = society
@@ -1271,11 +1271,47 @@ pharmacology = {
 	}
 
 	unlocking_technologies = {
-		monumental_construction
+		dissemination_of_knowledge
 	}
 
 	ai_weight = {
 		value = 1
+	}
+}
+
+wagon_transport = {
+	#Unlocks Road Transport PM
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/horse_wagon.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		monumental_construction
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
+state_constabulary = {
+	#Unlocks Police PM
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/horse_wagon.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		representative_assemblies
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
 	}
 }
 
@@ -1489,6 +1525,21 @@ modern_road = {
 
 	ai_weight = {
 		value = 2 # very important tech
+	}
+}
+
+armed_police_corps = {
+	# Unlocks Police Law
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+
+	unlocking_technologies = {
+		major_formation
+	}
+
+	ai_weight = {
+		value = 1
 	}
 }
 

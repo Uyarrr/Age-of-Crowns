@@ -10,21 +10,6 @@ peasant_levy = {
 	}
 }
 
-archer = {
-	# Unlocks Archer
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/archer.dds"
-	category = military
-
-	unlocking_technologies = {
-		peasant_levy
-	}
-
-	ai_weight = {
-		value = 3 # Very important tech in general
-	}
-}
-
 defensive_army = {
 	# Unlocks Archer
 	era = era_1
@@ -36,7 +21,7 @@ defensive_army = {
 	}
 
 	unlocking_technologies = {
-		archer
+		mandatory_training
 	}
 
 	ai_weight = {
@@ -205,7 +190,7 @@ mandatory_training = {
 	}
 
 	unlocking_technologies = {
-		weapon_crafting
+		peasant_levy
 	}
 
 	ai_weight = {
@@ -273,6 +258,36 @@ ivory_hunting = {
 	}
 }
 
+footman = {
+	# Unlocks Footman
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/heavy_infantry_1.dds"
+	category = military
+
+	unlocking_technologies = {
+		weapon_crafting
+	}
+
+	ai_weight = {
+		value = 2 # Semi Important
+	}
+}
+
+trebutchet = {
+	# Unlocks Trebutchet
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/artillery_1.dds"
+	category = military
+
+	unlocking_technologies = {
+		weapon_crafting
+	}
+
+	ai_weight = {
+		value = 2 # Semi Important
+	}
+}
+
 ##### ERA 2 ################
 
 professional_army = {
@@ -315,7 +330,6 @@ crossbowman = {
 	}
 
 	modifier = {
-		unit_experience_gain_mult = 0.05
 	}
 
 	ai_weight = {
@@ -770,7 +784,7 @@ light_lancer = {
 	}
 
 	unlocking_technologies = {
-		pike_and_shot
+		colonial_horse_breeding
 	}
 
 	ai_weight = {
@@ -788,7 +802,7 @@ lancer = {
 	}
 
 	unlocking_technologies = {
-		pike_and_shot
+		colonial_horse_breeding
 	}
 
 	ai_weight = {
@@ -818,7 +832,7 @@ colonial_horse_breeding = {
 	category = military
 
 	unlocking_technologies = {
-		lancer
+		pike_and_shot
 	}
 
 	ai_weight = {
@@ -1040,6 +1054,7 @@ advanced_tactics_training = {
 	category = military
 
 	unlocking_technologies = {
+		pike_and_shot
 	}
 
 	ai_weight = {
@@ -1140,7 +1155,7 @@ pistoleer = {
 	}
 
 	unlocking_technologies = {
-		engineer_corps
+		selective_breeding
 	}
 
 	ai_weight = {
@@ -1158,7 +1173,7 @@ chambered_cannon = {
 	}
 
 	unlocking_technologies = {
-		engineer_corps
+		barrel_boring
 	}
 
 	ai_weight = {
@@ -1188,6 +1203,7 @@ organized_nitrary_industry = {
 	category = military
 
 	unlocking_technologies = {
+		barrel_boring
 	}
 
 	ai_weight = {
@@ -1217,6 +1233,7 @@ luxurious_supplies = {
 	category = military
 
 	unlocking_technologies = {
+		reformed_army_training
 	}
 
 	ai_weight = {
@@ -1231,7 +1248,7 @@ selective_breeding = {
 	category = military
 
 	unlocking_technologies = {
-		heavy_lancer
+		engineer_corps
 	}
 
 	ai_weight = {
@@ -1309,6 +1326,7 @@ brig = {
 	category = military
 
 	unlocking_technologies = {
+		naval_reformation
 	}
 
 	ai_weight = {
@@ -1329,6 +1347,7 @@ pinnace = {
 	category = military
 
 	unlocking_technologies = {
+		naval_reformation
 	}
 
 	ai_weight = {
@@ -1364,6 +1383,7 @@ galleon = {
 	category = military
 
 	unlocking_technologies = {
+		naval_reformation
 	}
 
 	ai_weight = {
@@ -1398,6 +1418,7 @@ arquebusier = {
 	category = military
 
 	unlocking_technologies = {
+		engineer_corps
 	}
 
 	ai_weight = {
@@ -1412,7 +1433,7 @@ heavy_lancer = {
 	category = military
 
 	unlocking_technologies = {
-		engineer_corps
+		selective_breeding
 	}
 
 	ai_weight = {
@@ -1427,7 +1448,7 @@ barrel_boring = {
 	category = military
 
 	unlocking_technologies = {
-		chambered_cannon
+		engineer_corps
 	}
 
 	ai_weight = {

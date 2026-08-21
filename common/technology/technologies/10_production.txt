@@ -666,7 +666,7 @@ expanded_beekeeping = {
 	}
 }
 
-expanded_silk_weaving = {
+mulberry_cultivation = {
 	# Unlocks Silk PM
 	era = era_2
 	texture = "gfx/interface/icons/goods_icons/silk.dds"
@@ -711,7 +711,7 @@ guild_brewery = {
 	}
 }
 
-guild_weaving = {
+broadcloth_weaving = {
 	# Unlocks Cloth Workshop Main PM 2
 	era = era_2
 	texture = "gfx/interface/icons/goods_icons/clothes.dds"
@@ -726,6 +726,21 @@ guild_weaving = {
 	}
 }
 
+velvet_weaving = {
+	# Unlocks Luxury Cloth Workshop Main PM 2
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/luxury_clothes.dds"
+	category = production
+
+	unlocking_technologies = {
+		broadcloth_weaving
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
 guild_butchery = {
 	# Unlocks Slaughterhouse Main PM 2
 	era = era_2
@@ -733,7 +748,7 @@ guild_butchery = {
 	category = production
 
 	unlocking_technologies = {
-		guild_weaving
+		workshop_standardization
 	}
 
 	ai_weight = {
@@ -868,7 +883,7 @@ bronze_casting = {
 	category = production
 
 	unlocking_technologies = {
-		workshop_standardizations
+		workshop_standardization
 	}
 
 	ai_weight = {
@@ -1404,6 +1419,37 @@ bronze_alloying = {
 	category = production
 
 	unlocking_technologies = {
+		standardized_planks_and_bricks
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+putting_out_system = {
+	# Unlocks Cloth Workshop Main PM 3
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/clothes.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshop_standardization
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+brocade_weaving = {
+	# Unlocks Luxury Clothes PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/luxury_clothes.dds"
+	category = production
+
+	unlocking_technologies = {
+		putting_out_system
 	}
 
 	ai_weight = {
@@ -1428,23 +1474,6 @@ skilled_craftmanship = {
 
 	ai_weight = {
 		value = 1 # very important tech
-	}
-}
-
-wagon_transport = {
-	#Unlocks Road Transport PM
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/horse_wagon.dds"
-	category = production
-
-	modifier = {
-	}
-
-	unlocking_technologies = {
-	}
-
-	ai_weight = {
-		value = 2 # very important tech
 	}
 }
 
@@ -2153,7 +2182,7 @@ paper_standardization = {
 	category = production
 
 	unlocking_technologies = {
-		leather_manufactories
+		mechanized_baking
 	}
 
 	ai_weight = {
@@ -2213,6 +2242,36 @@ dye_estates = {
 
 	unlocking_technologies = {
 		intensive_fruit_cultivation
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+flying_shuttle = {
+	# Unlocks Clothes PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/clothes.dds"
+	category = production
+
+	unlocking_technologies = {
+		manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+silk_manufactories = {
+	# Unlocks Luxury Clothes PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/luxury_clothes.dds"
+	category = production
+
+	unlocking_technologies = {
+		flying_shuttle
 	}
 
 	ai_weight = {
