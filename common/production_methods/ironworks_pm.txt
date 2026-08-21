@@ -22,7 +22,7 @@ pm_building_ironworks_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		bronze_tools
+		iron_casting
 	}
 
 	building_modifiers = {
@@ -47,7 +47,7 @@ pm_building_ironworks_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		iron_tools
+		blast_furnaces
 	}
 
 	building_modifiers = {
@@ -79,8 +79,8 @@ pm_building_ironworks_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tin_add = 40
-			goods_input_copper_add = 20
+			goods_input_iron_add = 40
+			goods_input_coal_add = 20
 
 			# output goods
 			goods_output_steel_add = 100

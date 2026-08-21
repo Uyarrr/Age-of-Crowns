@@ -861,6 +861,36 @@ improved_dye_cultivation = {
 	}
 }
 
+bronze_casting = {
+	# Unlocks Bronze PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/bronze.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshop_standardizations
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+iron_casting = {
+	# Unlocks Iron PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/ironingot.dds"
+	category = production
+
+	unlocking_technologies = {
+		bronze_casting
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## AGE 3 ######
 
 resource_extraction = {
@@ -1367,6 +1397,20 @@ indigo_cultivation = {
 	}
 }
 
+bronze_alloying = {
+	# Unlocks Bronze PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/bronze.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## ERA 4
 
 skilled_craftmanship = {
@@ -1440,7 +1484,7 @@ homesteading = {
 
 deep_shaft_mining = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	texture = "gfx/interface/icons/invention_icons/deep_shaft_mining.dds"
 	category = production
 
 	modifier = {
@@ -1601,7 +1645,7 @@ deep_shaft_gold_mining = {
 horse_harnessing = {
 	#Unlocks Farm Plow PM
 	era = era_4
-	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	texture = "gfx/interface/icons/invention_icons/horse_harness.dds"
 	category = production
 
 	modifier = {
@@ -1674,7 +1718,38 @@ managed_forestry = {
 	}
 }
 
+blast_furnaces = {
+	# Unlocks Iron PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/ironingot.dds"
+	category = production
+
+	unlocking_technologies = {
+		skilled_craftmanship
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+refined_distillation = {
+	# Unlocks Distillery PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/liquor.dds"
+	category = production
+
+	unlocking_technologies = {
+		distilled_aromatics
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ################################################ ERA 5 ################################################
+
 manufactories = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/manufactories.dds"
@@ -1844,7 +1919,7 @@ leaded_crystal_glass = {
 }
 
 bronze_manufactories = {
-	# Unlocks Glass PM
+	# Unlocks Bronze PM
 	era = era_5
 	texture = "gfx/interface/icons/goods_icons/bronze.dds"
 	category = production
