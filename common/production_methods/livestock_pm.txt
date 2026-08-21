@@ -16,12 +16,12 @@ pm_building_livestock_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		pasture_management
 	}
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_livestock_add = 15
+			goods_output_livestock_add = 20
 		}
 
 		level_scaled = {
@@ -35,12 +35,12 @@ pm_building_livestock_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/slaughterhouses.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		large_scale_ranching
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_livestock_add = 25
+			goods_output_livestock_add = 30
 		}
 
 		level_scaled = {
@@ -54,11 +54,12 @@ pm_building_livestock_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/mechanized_slaughtering.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		scientific_stockbreeding
 	}
+	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_livestock_add = 35
+			goods_output_livestock_add = 40
 		}
 
 		level_scaled = {

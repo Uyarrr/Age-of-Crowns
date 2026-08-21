@@ -129,8 +129,9 @@ building_lead_mine = {
 	levels_per_mesh = 50
 	required_construction = construction_cost_medium
 	terrain_manipulator = mining
+	buildable = no
+
 	unlocking_technologies = {
-		fine_metals_mining
 	}
 
 	production_method_groups = {

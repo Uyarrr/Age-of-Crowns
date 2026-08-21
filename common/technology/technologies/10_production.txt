@@ -816,6 +816,36 @@ glassblowing = {
 	}
 }
 
+organized_quarrying = {
+	# Unlocks Stone Mine PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/stone.dds"
+	category = production
+
+	unlocking_technologies = {
+		glassblowing
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+pasture_management = {
+	# Unlocks Livestock PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/livestock.dds"
+	category = production
+
+	unlocking_technologies = {
+		manured_fields
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 ######## AGE 3 ######
 
 resource_extraction = {
@@ -1187,6 +1217,21 @@ iron_tools = {
 	}
 }
 
+stoneworks = {
+	# Unlocks Stoneworks Building
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/cutstone.dds"
+	category = production
+
+	unlocking_technologies = {
+		iron_tools
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
 commercial_bakeries = {
 	# Unlocks Bakery PM
 	era = era_3
@@ -1258,6 +1303,20 @@ aromatic_spice_trade = {
 
 	unlocking_technologies = {
 		free_trade
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+large_scale_ranching = {
+	# Unlocks Livestock PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/livestock.dds"
+	category = production
+
+	unlocking_technologies = {
 	}
 
 	ai_weight = {
@@ -1551,6 +1610,20 @@ stained_glassmaking = {
 
 	unlocking_technologies = {
 		rag_pulping
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+managed_forestry = {
+	# Unlocks Lumber PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/wood.dds"
+	category = production
+
+	unlocking_technologies = {
 	}
 
 	ai_weight = {
@@ -1963,6 +2036,35 @@ paper_standardization = {
 
 	unlocking_technologies = {
 		leather_manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+estate_agriculture = {
+	# Unlocks Farm PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/grain.dds"
+	category = production
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+scientific_stockbreeding = {
+	# Unlocks Livestock PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/livestock.dds"
+	category = production
+
+	unlocking_technologies = {
+		estate_agriculture
 	}
 
 	ai_weight = {

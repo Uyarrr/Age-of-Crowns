@@ -26,7 +26,7 @@ pm_building_wheat_farm_main_2 = {
 			goods_input_livestock_add = 2
 
 			# output goods
-			goods_output_grain_add = 35
+			goods_output_grain_add = 40
 		}
 
 		level_scaled = {
@@ -66,7 +66,7 @@ pm_building_wheat_farm_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		estate_agriculture
 	}
 
 	building_modifiers = {
@@ -75,7 +75,7 @@ pm_building_wheat_farm_main_4 = {
 			goods_input_livestock_add = 6
 
 			# output goods
-			goods_output_grain_add = 85
+			goods_output_grain_add = 80
 		}
 
 		level_scaled = {
@@ -118,7 +118,7 @@ pm_building_rice_farm_main_2 = {
 			goods_input_livestock_add = 4
 
 			# output goods
-			goods_output_grain_add = 70
+			goods_output_grain_add = 80
 		}
 
 		level_scaled = {
@@ -145,7 +145,7 @@ pm_building_rice_farm_main_3 = {
 			goods_input_livestock_add = 8
 
 			# output goods
-			goods_output_grain_add = 95
+			goods_output_grain_add = 120
 		}
 
 		level_scaled = {
@@ -159,16 +159,18 @@ pm_building_rice_farm_main_3 = {
 
 pm_building_rice_farm_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+
 	unlocking_technologies = {
-		behaviorism
+		estate_agriculture
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_livestock_add = 12
 
 			# output goods
-			goods_output_grain_add = 110
+			goods_output_grain_add = 160
 		}
 
 		level_scaled = {

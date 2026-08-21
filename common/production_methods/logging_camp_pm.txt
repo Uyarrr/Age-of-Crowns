@@ -6,7 +6,7 @@
 			# input goods
 
 			# output goods
-			goods_output_wood_add = 25
+			goods_output_wood_add = 20
 		}
 
 		level_scaled = {
@@ -19,6 +19,9 @@
 pm_building_logging_camp_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
+	unlocking_technologies = {
+		expanded_logging
+	}
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -41,7 +44,7 @@ pm_building_logging_camp_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		expanded_logging
+		managed_forestry
 	}
 
 	building_modifiers = {
@@ -50,7 +53,7 @@ pm_building_logging_camp_main_3 = {
 			goods_input_tools_add = 10
 
 			# output goods
-			goods_output_wood_add = 75
+			goods_output_wood_add = 60
 		}
 
 		level_scaled = {
@@ -86,13 +89,9 @@ pm_building_logging_camp_main_4 = {
 		}
 	}
 }
+
 pm_transport = {
 	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
 
 	unlocking_technologies = {
 		railways
