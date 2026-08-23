@@ -622,21 +622,6 @@ heavy_plow = {
 	}
 }
 
-dyed_furnitures = {
-	# Unlocks Furniture PM
-	era = era_2
-	texture = "gfx/interface/icons/goods_icons/furniture.dds"
-	category = production
-
-	unlocking_technologies = {
-		workshop_standardization
-	}
-
-	ai_weight = {
-		value = 2 # Very important tech in general
-	}
-}
-
 manured_fields = {
 	# Unlocks Grain Main PM
 	era = era_2
@@ -771,14 +756,14 @@ guild_tannery = {
 	}
 }
 
-luxury_furnitures = {
+intarsia = {
 	# Unlocks Luxury Furniture PM
 	era = era_2
 	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
 	category = production
 
 	unlocking_technologies = {
-		dyed_furnitures
+		turning_lathes
 	}
 
 	ai_weight = {
@@ -899,6 +884,21 @@ iron_casting = {
 
 	unlocking_technologies = {
 		bronze_casting
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+turning_lathes = {
+	# Unlocks Furniture PM
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+		workshop_standardization
 	}
 
 	ai_weight = {
@@ -1434,7 +1434,7 @@ putting_out_system = {
 	category = production
 
 	unlocking_technologies = {
-		workshop_standardization
+		apprenticeship_system
 	}
 
 	ai_weight = {
@@ -1450,6 +1450,20 @@ brocade_weaving = {
 
 	unlocking_technologies = {
 		putting_out_system
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+exotic_wood_veneering = {
+	# Unlocks Luxury Furniture PM
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	category = production
+
+	unlocking_technologies = {
 	}
 
 	ai_weight = {
@@ -1770,6 +1784,21 @@ refined_distillation = {
 
 	unlocking_technologies = {
 		distilled_aromatics
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+cabinetmaking = {
+	# Unlocks Furniture PM
+	era = era_4
+	texture = "gfx/interface/icons/goods_icons/furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+		skilled_craftmanship
 	}
 
 	ai_weight = {
@@ -2279,7 +2308,37 @@ silk_manufactories = {
 	}
 }
 
-######## ERA 6
+furniture_manufactories = {
+	# Unlocks Furniture PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+		manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+boulle_marquetry = {
+	# Unlocks Luxury Furniture PM
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	category = production
+
+	unlocking_technologies = {
+		furniture_manufactories
+	}
+
+	ai_weight = {
+		value = 2 # Very important tech in general
+	}
+}
+
+################################ ERA 6 ################################
 
 limited_companies = {
 	era = era_6

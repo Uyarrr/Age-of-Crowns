@@ -22,7 +22,7 @@ pm_building_luxury_furniture_workshop_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		dyed_furnitures
+		intarsia
 	}
 
 	building_modifiers = {
@@ -47,7 +47,7 @@ pm_building_luxury_furniture_workshop_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		dyed_furnitures
+		exotic_wood_veneering
 	}
 
 	building_modifiers = {
@@ -75,7 +75,7 @@ pm_building_luxury_furniture_workshop_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		boulle_marquetry
 	}
 
 	building_modifiers = {
@@ -99,6 +99,7 @@ pm_building_luxury_furniture_workshop_main_4 = {
 		}
 	}
 }
+
 pm_building_luxury_furniture_workshop_fur_0 = {
 	texture = "gfx/interface/icons/production_method_icons/no_luxury_furniture.dds"
 }
