@@ -18,8 +18,23 @@
             create_building = { building = building_port level = 1 }
         }
 
-        # Basic Buildings
-        create_building = { building = building_village  level = 1 }
+        if = {
+            limit = {
+                is_capital = yes
+            }
+            if = {
+                limit = {
+                    is_sea_adjacent = yes
+                }
+                create_building = { building = building_shipyard level = 1 }
+            }
+            if = {
+                limit = {
+                    is_sea_adjacent = no
+                }
+                create_building = { building = building_caravan_hub level = 1 }
+            }
+        }
     }
  	
     every_country = {
