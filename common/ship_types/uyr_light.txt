@@ -28,7 +28,6 @@ ship_type_barque = {
         ship_visibility_add = 6
         ship_detection_add = 15
         ship_blockade_strength_add = 25
-        ship_max_distance_to_port_add = 2
         ship_interest_gain_mult = 0.15
     }
 
@@ -41,13 +40,6 @@ ship_type_barque = {
     materiel_goods = {
         goods_input_grain_add = 1
         goods_input_navalsupplies_add = 0.06
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { barque }
@@ -87,7 +79,6 @@ ship_type_caravel = {
         ship_visibility_add = 7
         ship_detection_add = 18
         ship_blockade_strength_add = 40
-        ship_max_distance_to_port_add = 3
         ship_interest_gain_mult = 0.25
     }
 
@@ -101,13 +92,6 @@ ship_type_caravel = {
     materiel_goods = {
         goods_input_grain_add = 1
         goods_input_navalsupplies_add = 0.08
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { caravel }
@@ -147,7 +131,6 @@ ship_type_pinnace = {
         ship_visibility_add = 8
         ship_detection_add = 22
         ship_blockade_strength_add = 60
-        ship_max_distance_to_port_add = 5
         ship_interest_gain_mult = 0.35
     }
 
@@ -162,13 +145,6 @@ ship_type_pinnace = {
     materiel_goods = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.08
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { pinnace }
@@ -207,7 +183,6 @@ ship_type_frigate = {
         ship_visibility_add = 10
         ship_detection_add = 27
         ship_blockade_strength_add = 90
-        ship_max_distance_to_port_add = 6
         ship_interest_gain_mult = 0.5
     }
 
@@ -225,13 +200,6 @@ ship_type_frigate = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.1
         goods_input_cannons_add = 0.02
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { frigate }
@@ -268,7 +236,6 @@ ship_type_heavy_frigate = {
         ship_visibility_add = 12
         ship_detection_add = 33
         ship_blockade_strength_add = 135
-        ship_max_distance_to_port_add = 8
         ship_interest_gain_mult = 0.75
     }
 
@@ -285,13 +252,6 @@ ship_type_heavy_frigate = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.12
         goods_input_cannons_add = 0.04
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { heavy_frigate }
@@ -328,7 +288,6 @@ ship_type_bomb_ketch = {
         ship_visibility_add = 15
         ship_detection_add = 40
         ship_blockade_strength_add = 200
-        ship_max_distance_to_port_add = 10
         ship_interest_gain_mult = 1
     }
 
@@ -346,13 +305,6 @@ ship_type_bomb_ketch = {
         goods_input_navalsupplies_add = 0.15
         goods_input_cannons_add = 0.06
         goods_input_firearms_add = 0.02
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { heavy_frigate }

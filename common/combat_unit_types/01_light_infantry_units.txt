@@ -1,4 +1,4 @@
-﻿combat_unit_type_light_infantry_1 = {
+﻿combat_unit_type_levy = {
     group = combat_unit_group_light_infantry
 	max_manpower = 1000
 
@@ -20,6 +20,30 @@
     }
 
 	upgrades = {
+	}
+}
+
+combat_unit_type_light_infantry_1 = {
+    group = combat_unit_group_light_infantry
+	max_manpower = 1000
+
+    conscript_peasant_levies = no
+
+	unlocking_technologies = { peasant_levy }
+
+    battle_modifier = {
+        unit_offense_add = 7
+        unit_defense_add = 10
+    }
+
+    upkeep_modifier = {
+    }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_infantry_1.dds"
+    }
+
+	upgrades = {
         combat_unit_type_light_infantry_2
         combat_unit_type_light_infantry_3
 		combat_unit_type_light_infantry_4
@@ -32,7 +56,7 @@ combat_unit_type_light_infantry_2 = {
     group = combat_unit_group_light_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { crossbowman }
 
@@ -61,7 +85,7 @@ combat_unit_type_light_infantry_3 = {
     group = combat_unit_group_light_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { handgonner }
 
@@ -91,7 +115,7 @@ combat_unit_type_light_infantry_4 = {
     group = combat_unit_group_light_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { arquebusier }
 
@@ -120,7 +144,7 @@ combat_unit_type_light_infantry_5 = {
     group = combat_unit_group_light_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { skirmisher }
 
@@ -148,7 +172,7 @@ combat_unit_type_light_infantry_6 = {
     group = combat_unit_group_light_infantry
 	max_manpower = 1000
 
-    conscript_peasant_levies = yes
+    conscript_peasant_levies = no
 
 	unlocking_technologies = { rifleman }
 

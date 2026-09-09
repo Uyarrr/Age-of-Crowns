@@ -27,7 +27,6 @@ ship_type_early_carrack = {
         ship_visibility_add = 25
         ship_detection_add = 10
         ship_blockade_strength_add = 80
-        ship_max_distance_to_port_add = 2
         ship_battle_against_ship_type_traditional_galley_accuracy_mult = -0.5
         ship_battle_against_ship_type_mediterranean_galley_accuracy_mult = -0.5
     }
@@ -42,13 +41,6 @@ ship_type_early_carrack = {
         goods_input_grain_add = 1
         goods_input_navalsupplies_add = 0.15
         goods_input_bronze_add = 0.05
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { early_carrack }
@@ -88,7 +80,6 @@ ship_type_carrack = {
         ship_visibility_add = 30
         ship_detection_add = 12
         ship_blockade_strength_add = 120
-        ship_max_distance_to_port_add = 3
         ship_battle_against_ship_type_mediterranean_galley_accuracy_mult = -0.5
         ship_battle_against_ship_type_war_galley_accuracy_mult = -0.5
     }
@@ -104,13 +95,6 @@ ship_type_carrack = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.18
         goods_input_bronze_add = 0.05
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { carrack }
@@ -150,7 +134,6 @@ ship_type_galleon = {
         ship_visibility_add = 35
         ship_detection_add = 15
         ship_blockade_strength_add = 180
-        ship_max_distance_to_port_add = 4
         ship_battle_against_ship_type_war_galley_accuracy_mult = -0.5
         ship_battle_against_ship_type_galleass_accuracy_mult = -0.5
     }
@@ -167,13 +150,6 @@ ship_type_galleon = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.22
         goods_input_cannons_add = 0.05
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { galleon }
@@ -212,7 +188,6 @@ ship_type_war_galleon = {
         ship_visibility_add = 40
         ship_detection_add = 18
         ship_blockade_strength_add = 260
-        ship_max_distance_to_port_add = 5
         ship_battle_against_ship_type_galleass_accuracy_mult = -0.66
         ship_battle_against_ship_type_xebec_accuracy_mult = -0.66
     }
@@ -232,13 +207,6 @@ ship_type_war_galleon = {
         goods_input_navalsupplies_add = 0.27
         goods_input_cannons_add = 0.08
         goods_input_saltpeter_add = 0.03
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { two_decker }
@@ -275,7 +243,6 @@ ship_type_two_decker = {
         ship_visibility_add = 50
         ship_detection_add = 22
         ship_blockade_strength_add = 380
-        ship_max_distance_to_port_add = 7
         ship_battle_against_ship_type_xebec_accuracy_mult = -0.66
         ship_battle_against_ship_type_archipelago_frigate_accuracy_mult = -0.5
     }
@@ -296,13 +263,6 @@ ship_type_two_decker = {
         goods_input_cannons_add = 0.1
         goods_input_firearms_add = 0.04
         goods_input_saltpeter_add = 0.04
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { three_decker }
@@ -339,7 +299,6 @@ ship_type_three_decker = {
         ship_visibility_add = 60
         ship_detection_add = 27
         ship_blockade_strength_add = 550
-        ship_max_distance_to_port_add = 9
         ship_battle_against_ship_type_xebec_accuracy_mult = -0.66
         ship_battle_against_ship_type_archipelago_frigate_accuracy_mult = -0.5
     }
@@ -361,13 +320,6 @@ ship_type_three_decker = {
         goods_input_cannons_add = 0.12
         goods_input_firearms_add = 0.06
         goods_input_saltpeter_add = 0.05
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { three_decker }
@@ -404,7 +356,6 @@ ship_type_first_rate_ship_of_the_line = {
         ship_visibility_add = 70
         ship_detection_add = 30
         ship_blockade_strength_add = 750
-        ship_max_distance_to_port_add = 10
         ship_battle_against_ship_type_xebec_accuracy_mult = -0.66
         ship_battle_against_ship_type_archipelago_frigate_accuracy_mult = -0.5
     }
@@ -426,13 +377,6 @@ ship_type_first_rate_ship_of_the_line = {
         goods_input_cannons_add = 0.15
         goods_input_firearms_add = 0.08
         goods_input_saltpeter_add = 0.06
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_add = -999
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { three_decker }

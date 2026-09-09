@@ -28,7 +28,6 @@ ship_type_canoe = {
         ship_visibility_add = 6
         ship_detection_add = 2
         ship_blockade_strength_add = 1
-        ship_max_distance_to_port_add = 1
     }
 
     construction_goods = {
@@ -39,13 +38,6 @@ ship_type_canoe = {
     materiel_goods = {
         goods_input_grain_add = 1
         goods_input_navalsupplies_add = 0.02
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { cog }
@@ -85,7 +77,6 @@ ship_type_cog = {
         ship_visibility_add = 8
         ship_detection_add = 5
         ship_blockade_strength_add = 2
-        ship_max_distance_to_port_add = 2
     }
 
     construction_goods = {
@@ -97,13 +88,6 @@ ship_type_cog = {
     materiel_goods = {
         goods_input_grain_add = 1
         goods_input_navalsupplies_add = 0.04
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { cog }
@@ -143,7 +127,6 @@ ship_type_hulk = {
         ship_visibility_add = 8
         ship_detection_add = 6
         ship_blockade_strength_add = 3
-        ship_max_distance_to_port_add = 3
     }
 
     construction_goods = {
@@ -156,13 +139,6 @@ ship_type_hulk = {
     materiel_goods = {
         goods_input_grain_add = 1
         goods_input_navalsupplies_add = 0.05
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { hulk }
@@ -202,7 +178,6 @@ ship_type_flute = {
         ship_visibility_add = 9
         ship_detection_add = 8
         ship_blockade_strength_add = 4
-        ship_max_distance_to_port_add = 4
     }
 
     construction_goods = {
@@ -216,13 +191,6 @@ ship_type_flute = {
     materiel_goods = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.06
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { flute }
@@ -262,7 +230,6 @@ ship_type_brig = {
         ship_visibility_add = 10
         ship_detection_add = 10
         ship_blockade_strength_add = 6
-        ship_max_distance_to_port_add = 5
     }
 
     construction_goods = {
@@ -276,13 +243,6 @@ ship_type_brig = {
     materiel_goods = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.08
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { brig }
@@ -321,7 +281,6 @@ ship_type_merchantman = {
         ship_visibility_add = 11
         ship_detection_add = 12
         ship_blockade_strength_add = 8
-        ship_max_distance_to_port_add = 7
     }
 
     construction_goods = {
@@ -337,13 +296,6 @@ ship_type_merchantman = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.1
         goods_input_cannons_add = 0.01
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { merchantman }
@@ -380,7 +332,6 @@ ship_type_east_indiaman = {
         ship_visibility_add = 12
         ship_detection_add = 15
         ship_blockade_strength_add = 10
-        ship_max_distance_to_port_add = 9
     }
 
     construction_goods = {
@@ -396,13 +347,6 @@ ship_type_east_indiaman = {
         goods_input_bread_add = 1
         goods_input_navalsupplies_add = 0.12
         goods_input_cannons_add = 0.02
-    }
-
-    distance_to_port_modifier = {
-        ship_hull_damage_mult = -1.0
-        ship_crew_damage_mult = -1.0
-        ship_interest_gain_mult = -1.0
-        ship_movement_speed_mult = -0.95
     }
 
     unlocking_technologies = { east_indiaman }
