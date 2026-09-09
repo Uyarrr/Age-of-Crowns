@@ -2035,7 +2035,7 @@ NWar = {
 	OCCUPATION_STATE_DEFENSIVE_BATTLE_VICTORY_SCORE = 50 # How many occupation "points" each country receives after winning a defensive battle
 	OCCUPATION_STATE_CLEAR_OCCUPATION_FRACTION = 0.5 # Fraction of occupation score dedicated to clear occupation from your own States (if any).
 
-	LAND_INVASION_TRAVEL_TIME_LIMIT_DAYS = 30							# How many days formation can travel at most for a land invasion
+	LAND_INVASION_TRAVEL_TIME_LIMIT_DAYS = 120							# How many days formation can travel at most for a land invasion
 	LAND_INVASION_PREPARATION_DURATION_DAYS = 14 						# How many days should pass since the first army arrived to the invasion front to start advancing it
 	NAVAL_INVASION_PREPARATION_DURATION_DAYS = 14 						# How many days should pass since the first army arrived to the naval invasion front to start advancing it without the sea node being blocked by enemy fleet
 	LAND_INVASION_MAX_LAND_BATTLE_DEFEATS_AT_ZERO_OCCUPATION = 3 		# At this number of land defeats with zero occupation you fail the invasion
