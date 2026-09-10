@@ -2,6 +2,20 @@
 # LIGHT INFANTRY
 # =========================
 
+unit_combat_unit_type_levy_offense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
+unit_combat_unit_type_levy_defense_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={ ai_value=0 }
+}
+
 unit_combat_unit_type_light_infantry_1_offense_mult={
 	decimals=0
 	color=good

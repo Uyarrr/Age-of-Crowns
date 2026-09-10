@@ -1,0 +1,21 @@
+﻿pm_devsirme_system = {
+	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	is_default = yes
+
+	profession_ratio = {
+		slaves = 85
+		officers = 15
+	}
+	disallowing_laws = {
+		law_warrior_caste
+	}
+	building_modifiers = {
+		unscaled = {
+			building_training_rate_add = 50
+		}
+
+		level_scaled = {
+			building_training_rate_add = 8
+		}
+	}
+}

@@ -6,12 +6,16 @@
 	progressiveness = 0
 
 	modifier = {
-		country_liberty_desire_of_subjects_add = -0.05
 		country_disallow_military_work_violent_hostility_bool = no
 		country_disallow_military_work_second_rate_citizen_bool = no
 		state_conscription_rate_add = 0.02
 		state_building_conscription_center_max_level_add = 25
-		state_bureaucracy_population_base_cost_factor_mult = 0.1
+
+		##+0.10 Decentralization:##
+		country_liberty_desire_of_subjects_add = -0.05
+		state_bureaucracy_population_base_cost_factor_mult = 0.10
+		state_tax_capacity_mult = -0.10
+		state_contiguous_incorporation_speed_mult = -0.10
 	}
 }
 
@@ -27,11 +31,14 @@ law_noble_levy = {
 		country_disallow_military_work_violent_hostility_bool = yes
 		country_disallow_military_work_cultural_erasure_bool = yes
 		state_building_conscription_center_max_level_add = 35
-		unit_army_offense_mult = 0.05
-		unit_army_defense_mult = 0.05
-		country_military_goods_cost_mult = 0.1
+		unit_combat_unit_type_levy_offense_mult = 0.10
+		unit_combat_unit_type_levy_defense_mult = 0.10
 		interest_group_ig_landowners_pol_str_mult = 0.25
-		country_authority_mult = -0.05
+
+		##+0.10 Quality:##
+		country_military_goods_cost_mult = 0.10
+		unit_experience_gain_mult = 0.10
+		building_training_rate_mult = -0.10
 	}
 }
 
@@ -43,13 +50,17 @@ law_peasant_levy = {
 	progressiveness = 0
 
 	modifier = {
+		unit_combat_unit_type_levy_offense_mult = -0.10
+		unit_combat_unit_type_levy_defense_mult = -0.10
 		country_can_only_conscript_peasants_bool = yes
 		country_disallow_military_work_violent_hostility_bool = yes
 		country_disallow_military_work_cultural_erasure_bool = yes
-		unit_morale_loss_mult = 0.1
-		unit_experience_gain_mult = -0.25
 		state_conscription_rate_add = 0.04
-		country_military_goods_cost_mult = -0.1
 		state_building_conscription_center_max_level_add = 50
+
+		##+0.10 Quantity:##
+		country_military_goods_cost_mult = -0.10
+		unit_experience_gain_mult = -0.10
+		building_training_rate_mult = 0.10
 	}
 }

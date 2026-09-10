@@ -1,5 +1,5 @@
 ﻿combat_unit_type_levy = {
-    group = combat_unit_group_light_infantry
+    group = combat_unit_group_levy
 	max_manpower = 1000
 
     conscript_peasant_levies = yes
@@ -7,8 +7,8 @@
 	unlocking_technologies = { peasant_levy }
 
     battle_modifier = {
-        unit_offense_add = 7
-        unit_defense_add = 10
+        unit_offense_add = 6
+        unit_defense_add = 8
         unit_morale_loss_add = 15
     }
 
@@ -37,6 +37,8 @@ combat_unit_type_light_infantry_1 = {
     }
 
     upkeep_modifier = {
+        goods_input_wood_add = 1
+        goods_input_stone_add = 1
     }
 
     combat_unit_image = {
