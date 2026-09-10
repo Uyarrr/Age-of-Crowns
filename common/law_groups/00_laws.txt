@@ -61,11 +61,6 @@ lawgroup_bureaucracy = {
 	affected_by_regime_change = yes
 }
 
-lawgroup_army_model = {
-	law_group_category = power_structure
-	ideological_opinion_impact = 0.25
-}
-
 lawgroup_internal_security = {
 	law_group_category = power_structure
 	ideological_opinion_impact = 0.5
@@ -102,12 +97,7 @@ lawgroup_navy_doctrine = {
 }
 
 lawgroup_recruitment_law = {
-	law_group_category = human_rights
-	ideological_opinion_impact = 0.25
-}
-
-lawgroup_recruitment_law = {
-	law_group_category = human_rights
+	law_group_category = power_structure
 	ideological_opinion_impact = 0.25
 }
 
@@ -215,5 +205,10 @@ lawgroup_rights_of_the_burghers = {
 
 lawgroup_mining = {
 	law_group_category = economy
+	ideological_opinion_impact = 1
+}
+
+lawgroup_bureaucratic_offices = {
+	law_group_category = power_structure
 	ideological_opinion_impact = 1
 }

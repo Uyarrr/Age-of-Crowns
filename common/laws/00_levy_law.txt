@@ -6,6 +6,7 @@
 	progressiveness = 0
 
 	modifier = {
+		country_can_only_conscript_peasants_bool = yes
 		country_disallow_military_work_violent_hostility_bool = no
 		country_disallow_military_work_second_rate_citizen_bool = no
 		state_conscription_rate_add = 0.02
@@ -27,6 +28,7 @@ law_noble_levy = {
 	progressiveness = 0
 
 	modifier = {
+		country_can_only_conscript_peasants_bool = yes
 		state_conscription_rate_add = 0.03
 		country_disallow_military_work_violent_hostility_bool = yes
 		country_disallow_military_work_cultural_erasure_bool = yes
@@ -50,6 +52,7 @@ law_peasant_levy = {
 	progressiveness = 0
 
 	modifier = {
+		country_can_only_conscript_peasants_bool = yes
 		unit_combat_unit_type_levy_offense_mult = -0.10
 		unit_combat_unit_type_levy_defense_mult = -0.10
 		country_can_only_conscript_peasants_bool = yes

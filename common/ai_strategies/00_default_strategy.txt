@@ -3935,16 +3935,6 @@ ai_strategy_default = {
 			divide = 5
 			max = 5
 		}
-
-		if = {
-			limit = { has_technology_researched = ironclad_tech }
-			add = 5
-		}
-
-		if = {
-			limit = { has_technology_researched = landing_craft }
-			add = 5
-		}
 	}
 
 	# How many levels of naval administration should the AI have
@@ -4071,9 +4061,6 @@ ai_strategy_default = {
 	# root = country
 	# scope:military_formation = military formation
 	combat_unit_group_weights = {
-		combat_unit_group_levy = {
-			value = 80
-		}
 		combat_unit_group_light_infantry = {
 			value = 80
 		}
@@ -4096,7 +4083,7 @@ ai_strategy_default = {
 	# scope:military_formation = military formation
 	# Using this value in other strategies will function additively
 	conscript_battalion_ratio = {
-		value = 3
+		value = 2
 	}
 
 	# What's the base AI desire to nationalize/privatize buildings
