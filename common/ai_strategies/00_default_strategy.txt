@@ -4071,6 +4071,9 @@ ai_strategy_default = {
 	# root = country
 	# scope:military_formation = military formation
 	combat_unit_group_weights = {
+		combat_unit_group_levy = {
+			value = 80
+		}
 		combat_unit_group_light_infantry = {
 			value = 80
 		}
@@ -4093,7 +4096,7 @@ ai_strategy_default = {
 	# scope:military_formation = military formation
 	# Using this value in other strategies will function additively
 	conscript_battalion_ratio = {
-		value = 2
+		value = 3
 	}
 
 	# What's the base AI desire to nationalize/privatize buildings
