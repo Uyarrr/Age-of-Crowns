@@ -111,6 +111,14 @@ ideology_decentralization = {
 		law_absolute_leadership = strongly_disapprove
 		law_unitary_administration = disapprove
 	}
+
+	lawgroup_bureaucratic_offices = {
+		law_decentralized_offices = strongly_approve
+		law_centralized_offices = strongly_disapprove
+		law_namestnik_office = strongly_disapprove
+		law_rentekammeret = strongly_disapprove
+		law_defterhanei_amire = approve
+	}
 }
 
 ideology_centralization = {
@@ -125,6 +133,14 @@ ideology_centralization = {
 		law_federal_state = disapprove
 		law_absolute_leadership = strongly_approve
 		law_unitary_administration = approve
+	}
+
+	lawgroup_bureaucratic_offices = {
+		law_decentralized_offices = strongly_disapprove
+		law_centralized_offices = strongly_approve
+		law_namestnik_office = strongly_approve
+		law_rentekammeret = strongly_approve,
+		law_defterhanei_amire = disapprove
 	}
 }
 
