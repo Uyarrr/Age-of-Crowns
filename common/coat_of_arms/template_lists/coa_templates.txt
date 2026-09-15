@@ -208,6 +208,74 @@ coat_of_arms_template_lists = {
 			50 = template_charge_in_ring_metal
 
 		}
+		# random commies
+		special_selection = {
+			trigger = {
+				exists = scope:target
+				scope:target ?= {
+					is_revolutionary = yes
+					OR = {
+						ig:ig_trade_unions ?= {
+							is_in_government = yes
+						}
+						any_interest_group = {
+							is_in_government = yes
+							has_ideology = ideology:ideology_proletarian
+						}
+					}
+				}
+			}
+
+			500 = template_communist_1
+			250 = template_communist_2
+			500 = template_communist_3
+			250 = template_communist_4
+			250 = template_communist_5
+			250 = template_communist_6
+			100 = template_communist_bicolor_1
+			250 = template_communist_bicolor_2
+			500 = template_communist_centered_stripe
+			500 = template_communist_bottom_stripe
+			250 = template_communist_left_stripe
+			100 = template_communist_right_stripe
+			100 = template_communist_vert_center_stripe
+			100 = template_communist_per_saltire_star
+			100 = template_communist_tribar
+			100 = template_communist_triangle
+			500 = template_communist_horizontal_tricolor_fimbriated
+			500 = template_communist_horizontal_tricolor
+			250 = template_communist_charge_star
+			100 = template_communist_canton
+			250 = template_communist_red_star_tricolor
+			100 = template_communist_red_star_center
+			100 = template_communist_red_star_canton
+		}
+
+		# russian commies!
+		special_selection = {
+			trigger = {
+				exists = scope:target
+				scope:target ?= {
+					is_revolutionary = yes
+					OR = {
+						ig:ig_trade_unions ?= {
+							is_in_government = yes
+						}
+						any_interest_group = {
+							is_in_government = yes
+							#has_ideology = ideology:ideology_proletarian
+						}
+					}
+					OR = {
+						country_has_primary_culture = cu:russian
+						country_has_primary_culture = cu:byelorussian
+						country_has_primary_culture = cu:ukrainian
+					}
+				}
+			}
+
+			100000 = template_communist_russia
+		}
 
 		special_selection = {
 			trigger = {
