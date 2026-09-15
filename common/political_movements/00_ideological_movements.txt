@@ -48,7 +48,6 @@
 			has_ideology = ideology:ideology_humanitarian_royalist
 			OR = {
 				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_trade_unions
 			}
 		}
 	}
@@ -1936,7 +1935,6 @@ movement_labor = { # Explicitly non-socialist labour movement
 			has_ideology = ideology:ideology_radical
 			has_ideology = ideology:ideology_social_democrat
 			has_ideology = ideology:ideology_utopian
-			is_interest_group_type = ig_trade_unions
 		}
 	}
 	character_support_weight = {
@@ -1962,7 +1960,6 @@ movement_labor = { # Explicitly non-socialist labour movement
 		}
 		if = { # Labour movement is the natural habitat of non-socialist trade unions characters
 			limit = {
-				is_interest_group_type = ig_trade_unions
 				has_socialist_ideology = no
 			}
 			multiply = {
@@ -2802,9 +2799,6 @@ movement_liberal = {
 		else_if = {
 			limit = {
 				has_ideology = ideology:ideology_humanitarian
-				NOT = {
-					is_interest_group_type = ig_trade_unions
-				}
 			}
 			multiply = {
 				value = 5
@@ -4699,7 +4693,6 @@ movement_reactionary = {
 					scope:interest_group ?= {
 						OR = {
 							is_interest_group_type = ig_intelligentsia
-							is_interest_group_type = ig_trade_unions
 						}
 					}
 				}

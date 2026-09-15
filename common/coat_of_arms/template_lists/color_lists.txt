@@ -49,24 +49,6 @@ color_lists = {
 	}
 
 	country_color_list = {
-		special_selection = {
-			trigger = {
-				exists = scope:target
-				scope:target ?= {
-					OR = {
-						ig:ig_trade_unions ?= {
-							is_in_government = yes
-						}
-						any_interest_group = {
-							is_in_government = yes
-							has_ideology = ideology:ideology_proletarian
-						}
-					}
-				}
-			}
-
-			1000 = "red"
-		}
 
 		special_selection = {
 			trigger = {
