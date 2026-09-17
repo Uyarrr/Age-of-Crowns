@@ -1,0 +1,36 @@
+MILITARY_FORMATIONS = {
+	c:TUR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_near_east
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_infantry_1
+				state_region = s:STATE_HUDAVENDIGAR
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_2
+				state_region = s:STATE_KONYA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_cavalry_1
+				state_region = s:STATE_AYDIN
+				count = 5
+			}
+		}
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_near_east
+			ship = {
+				type = ship_type:ship_type_traditional_galley
+				count = 3
+			}
+			ship = {
+				type = ship_type:ship_type_cog
+				count = 7
+			}
+		}
+	}
+}
