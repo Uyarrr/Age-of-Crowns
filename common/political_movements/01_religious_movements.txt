@@ -16,22 +16,6 @@
 	}
 	creation_weight = {
 		value = 100
-		if = {
-			limit = {
-				owner ?= {
-					any_political_movement = {
-						OR = {
-							is_political_movement_type = movement_legitimist
-							is_political_movement_type = movement_carlist
-							is_political_movement_type = movement_miguelist
-						}
-					}
-				}
-			}
-			multiply = {
-				value = 0.05
-			}
-		}
 	}
 	on_created = {}
 
@@ -55,8 +39,6 @@
 		OR = {
 			is_interest_group_type = ig_devout
 			has_ideology = ideology:ideology_traditionalist
-			has_ideology = ideology:ideology_theocrat
-			has_ideology = ideology:ideology_integralist
 		}
 	}
 	character_support_weight = {
@@ -75,19 +57,10 @@
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_traditionalist
-					has_ideology = ideology:ideology_theocrat
 				}
 			}
 			multiply = {
 				value = 5
-			}
-		}
-		else_if = {
-			limit = {
-				has_ideology = ideology:ideology_integralist
-			}
-			multiply = {
-				value = 2
 			}
 		}
 	}
@@ -207,35 +180,6 @@
 				value = pop_acceptance
 				divide = 100
 				add = 0.25
-			}
-		}
-
-		if = {
-			limit = {
-				owner ?= {
-					has_technology_researched = corporatism
-				}
-			}
-			multiply = {
-				value = 1.5
-				desc = "CORPORATISM_TECH"
-			}
-		}
-
-		if = {
-			limit = {
-				owner ?= {
-					any_political_movement = {
-						OR = {
-							is_political_movement_type = movement_legitimist
-							is_political_movement_type = movement_carlist
-							is_political_movement_type = movement_miguelist
-						}
-					}
-				}
-			}
-			multiply = {
-				value = 0.05
 			}
 		}
 	}
@@ -421,14 +365,12 @@ movement_religious_minority = {
 	can_cause_obstinance = yes
 
 	creation_trigger = {
-		NAND = {
-			c:BIC ?= this
-			has_technology_researched = pan-nationalism
-		}
 	}
+
 	creation_weight = {
 		value = 200
 	}
+
 	on_created = {}
 
 	disband_trigger = {
@@ -444,46 +386,10 @@ movement_religious_minority = {
 					}
 				}
 			}
-			AND = {
-				c:BIC ?= this
-				has_technology_researched = pan-nationalism
-			}
 		}
 	}
 
 	on_disbanded = {
-		if = {
-			limit = {
-				owner ?= {
-					c:BIC ?= this
-					has_technology_researched = pan-nationalism
-					NOT = {
-						any_political_movement = {
-						    is_political_movement_type = movement_hindu_nationalist
-						}
-					}
-				}
-			}
-			owner ?= {
-				create_political_movement = { type = movement_hindu_nationalist }
-			}
-		}
-		if = {
-			limit = {
-				owner ?= {
-					c:BIC ?= this
-					has_technology_researched = pan-nationalism
-					NOT = {
-						any_political_movement = {
-						    is_political_movement_type = movement_muslim_nationalist
-						}
-					}
-				}
-			}
-			owner ?= {
-				create_political_movement = { type = movement_muslim_nationalist }
-			}
-		}
 	}
 
 	religion_selection_trigger = {

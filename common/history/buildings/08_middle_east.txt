@@ -496,6 +496,17 @@
 				reserves=1
 				activate_production_methods={ "pm_building_orchard_main_1" }
 			}
+			create_building={
+				building="building_barrack"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=10
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
 		}
 	}
 	s:STATE_AYDIN={
@@ -609,6 +620,17 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_building_orchard_main_1" }
+			}
+			create_building={
+				building="building_barrack"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
 			}
 		}
 	}
@@ -740,7 +762,7 @@
 				add_ownership={
 					country={
 						country="c:TUR"
-						levels=5
+						levels=10
 					}
 				}
 				reserves=1

@@ -1,0 +1,36 @@
+MILITARY_FORMATIONS = {
+	c:ENG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_western_europe
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_infantry_1
+				state_region = s:STATE_HOME_COUNTIES
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_artillery_1
+				state_region = s:STATE_MIDLANDS
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_cavalry_1
+				state_region = s:STATE_YORKSHIRE
+				count = 5
+			}
+		}
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_western_europe
+			ship = {
+				type = ship_type:ship_type_traditional_galley
+				count = 10
+			}
+			ship = {
+				type = ship_type:ship_type_cog
+				count = 15
+			}
+		}
+	}
+}

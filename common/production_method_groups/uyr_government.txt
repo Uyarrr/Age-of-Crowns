@@ -23,12 +23,12 @@ pmg_building_university_main = {
 	}
 }
 ################## COLONIAL OUTPOST #######################
-pmg_building_colonial_outpost_main = {
+pmg_building_colonial_office_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_building_colonial_outpost_main_1
+		pm_building_colonial_office_main_1
 	}
 }
 

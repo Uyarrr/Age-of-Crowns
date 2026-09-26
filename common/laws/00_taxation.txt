@@ -125,7 +125,7 @@ law_per_capita_based_taxation = {
 	}
 
 	unlocking_technologies = {
-		behaviorism
+		per_capita_taxation
 	}
 
 	tax_modifier_very_low = {
@@ -187,7 +187,7 @@ law_proportional_taxation = {
 	}
 
 	unlocking_technologies = {
-		behaviorism
+		proportional_taxation
 	}
 
 	tax_modifier_very_low = {
@@ -231,14 +231,6 @@ law_proportional_taxation = {
 
 		if = {
 			limit = {
-				OR = {
-					has_journal_entry = je_sick_man_bureaucracy
-					has_modifier = shogun_ig_forced_to_open_market
-					has_journal_entry = je_meiji_main
-					has_journal_entry = je_great_reforms_bureaucratic
-					has_journal_entry = je_hawaii
-					has_journal_entry = je_portugal_regeneration
-				}
 				has_law_or_variant = law_type:law_land_based_taxation
 			}
 			add = 5000
@@ -258,7 +250,7 @@ law_graduated_taxation = {
 	}
 
 	unlocking_technologies = {
-		behaviorism
+		graduated_taxation
 	}
 
 	tax_modifier_very_low = {

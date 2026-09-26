@@ -718,6 +718,24 @@ double_entry_bookkeeping = {
 	}
 }
 
+per_capita_taxation = {
+	# Unlocks Per Capita Taxation Law
+	era = era_2
+	texture = "gfx/interface/icons/law_icons/per_capita_taxation.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		double_entry_bookkeeping
+	}
+
+	ai_weight = {
+		value = 3 # Important in general
+	}
+}
+
 formalized_administration = {
 	# Unlocks Government Administration PM
 	era = era_2
@@ -934,10 +952,10 @@ printing_press = {
 	}
 }
 
-colonial_outpost = {
+colonial_office = {
 	#Unlocks Colonial Outpost Building
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/colonial_outpost.dds"
+	texture = "gfx/interface/icons/invention_icons/colonial_range.dds"
 	category = society
 
 	modifier = {
@@ -1315,6 +1333,24 @@ state_constabulary = {
 	}
 }
 
+proportional_taxation = {
+	#Unlocks Tax Law
+	era = era_4
+	texture = "gfx/interface/icons/law_icons/proportional_taxation.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		state_constabulary
+	}
+
+	ai_weight = {
+		value = 2 # very important tech
+	}
+}
+
 ######## ERA 5 ##########
 absolutism = {
 	era = era_5
@@ -1469,6 +1505,24 @@ scientific_revolution = {
 
 	ai_weight = {
 		value = 1
+	}
+}
+
+graduated_taxation = {
+	# Unlocks Tax Law
+	era = era_5
+	texture = "gfx/interface/icons/law_icons/graduated_taxation.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		scientific_revolution
+	}
+
+	ai_weight = {
+		value = 3
 	}
 }
 

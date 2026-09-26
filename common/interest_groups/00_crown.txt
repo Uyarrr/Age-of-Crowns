@@ -20,13 +20,6 @@
 		always = yes
 	}
 
-	# Deprecated; use on_enable effect to assign traits instead
-	traits = {
-		ig_trait_noblesse_oblige
-		ig_trait_family_ties
-		ig_trait_noble_privileges
-	}
-
 	on_enable = {}
 	on_disable = {}
 

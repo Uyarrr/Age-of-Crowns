@@ -93,7 +93,7 @@ je_colonial_administration_button_senegal = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -221,7 +221,7 @@ je_colonial_administration_button_zanj = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -349,7 +349,7 @@ je_colonial_administration_button_southern_africa = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -477,7 +477,7 @@ je_colonial_administration_button_congo = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -605,7 +605,7 @@ je_colonial_administration_button_canada = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -733,7 +733,7 @@ je_colonial_administration_button_atlantic_coast = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -861,7 +861,7 @@ je_colonial_administration_button_pacific_coast = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -989,7 +989,7 @@ je_colonial_administration_button_great_plains = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -1117,7 +1117,7 @@ je_colonial_administration_button_central_america = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -1245,7 +1245,7 @@ je_colonial_administration_button_gran_colombia = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -1373,7 +1373,7 @@ je_colonial_administration_button_andes = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -1501,7 +1501,7 @@ je_colonial_administration_button_la_plata = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -1629,7 +1629,7 @@ je_colonial_administration_button_brazil = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -1734,7 +1734,7 @@ je_colonial_administration_button_cape_verde = {
 					months = 3
 				}
 				every_scope_state = {
-					effect_destroy_colonial_outpost = yes
+					effect_destroy_colonial_office = yes
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
@@ -1830,7 +1830,7 @@ je_colonial_administration_button_expand_senegal = {
 					region = sr:region_west_africa
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -1922,7 +1922,7 @@ je_colonial_administration_button_expand_zanj = {
 					region = sr:region_east_africa
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2014,7 +2014,7 @@ je_colonial_administration_button_expand_southern_africa = {
 					region = sr:region_southern_africa
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2106,7 +2106,7 @@ je_colonial_administration_button_expand_congo = {
 					region = sr:region_equatorial_africa
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2198,7 +2198,7 @@ je_colonial_administration_button_expand_canada = {
 					region = sr:region_canada
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2290,7 +2290,7 @@ je_colonial_administration_button_expand_atlantic_coast = {
 					region = sr:region_atlantic_coast
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2382,7 +2382,7 @@ je_colonial_administration_button_expand_pacific_coast = {
 					region = sr:region_pacific_coast
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2474,7 +2474,7 @@ je_colonial_administration_button_expand_great_plains = {
 					region = sr:region_great_plains
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2566,7 +2566,7 @@ je_colonial_administration_button_expand_central_america = {
 					region = sr:region_central_america
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2658,7 +2658,7 @@ je_colonial_administration_button_expand_gran_colombia = {
 					region = sr:region_gran_colombia
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2750,7 +2750,7 @@ je_colonial_administration_button_expand_andes = {
 					region = sr:region_andes
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2842,7 +2842,7 @@ je_colonial_administration_button_expand_la_plata = {
 					region = sr:region_la_plata
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}
@@ -2934,7 +2934,7 @@ je_colonial_administration_button_expand_brazil = {
 					region = sr:region_brazil
 					is_under_colonization = no
 				}
-				effect_destroy_colonial_outpost = yes
+				effect_destroy_colonial_office = yes
 				set_state_owner = scope:colonial_transfer_subject_scope
 			}
 		}

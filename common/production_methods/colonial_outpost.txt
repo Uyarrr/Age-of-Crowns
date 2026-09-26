@@ -1,4 +1,4 @@
-﻿pm_building_colonial_outpost_main_1 = {
+﻿pm_building_colonial_office_main_1 = {
 	texture = "gfx/interface/icons/production_method_icons/base1_yellow.dds"
 
 	unlocking_technologies = {
@@ -15,13 +15,19 @@
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 500
+			building_employment_laborers_add = 3000
 		}
 	}
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_colony_growth_speed_mult = 1.00
+			state_colony_growth_speed_mult = 0.10
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 2
 		}
 	}
 }

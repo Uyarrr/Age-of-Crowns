@@ -31,83 +31,9 @@
 
 	on_enable = {
 		ig:ig_landowners ?= {
-			if = {
-				limit = {
-					owner = { c:RUS ?= this}
-				}
-				set_ig_trait = ig_trait:ig_trait_profitable_estates
-				set_ig_trait = ig_trait:ig_trait_the_velvet_book
-				set_ig_trait = ig_trait:ig_trait_bad_boyars
-			}
-			else_if = {
-				limit = {
-					has_dlc_feature = rp1_content
-					owner = { c:BRZ ?= this}
-				}
-				set_ig_trait = ig_trait:ig_trait_noble_privileges
-				set_ig_trait = ig_trait:ig_trait_fazenda_ibicaba
-				set_ig_trait = ig_trait:ig_trait_latifundios
-			}
-			else_if = {
-				limit = {
-					OR = {
-						owner = { c:PRU ?= this}
-						AND = {
-							owner = { c:NGF ?= this}
-							c:NGF ?= { was_formed_from = PRU }
-						}
-						AND = {
-							owner = { c:GER ?= this }
-							c:GER ?= { was_formed_from = PRU }
-						}
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_noble_privileges
-				set_ig_trait = ig_trait:ig_trait_family_ties
-				set_ig_trait = ig_trait:ig_trait_junkerdom
-			}
-			else_if = {
-				limit = {
-					OR = {
-						owner = { c:AUS ?= this}
-						AND = {
-							owner = { c:GER ?= this }
-							c:GER ?= { was_formed_from = AUS }
-						}
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_noble_privileges
-				set_ig_trait = ig_trait:ig_trait_family_ties
-				set_ig_trait = ig_trait:ig_trait_wiener_walzer
-			}
-			else_if = {
-				limit = {
-					owner = {
-						OR = {
-							country_has_primary_culture = cu:yankee
-							country_has_primary_culture = cu:dixie
-						}
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_noble_privileges
-				set_ig_trait = ig_trait:ig_trait_family_ties
-				set_ig_trait = ig_trait:ig_trait_patrician_philanthropy
-			}
-			else_if = {
-				limit = {
-					owner = {
-						country_has_primary_culture = cu:romanian
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_bad_boyars
-				set_ig_trait = ig_trait:ig_trait_family_ties
-				set_ig_trait = ig_trait:ig_trait_noblesse_oblige
-			}
-			else = {
-				set_ig_trait = ig_trait:ig_trait_noble_privileges
-				set_ig_trait = ig_trait:ig_trait_family_ties
-				set_ig_trait = ig_trait:ig_trait_noblesse_oblige
-			}
+			set_ig_trait = ig_trait:ig_trait_noble_privileges
+			set_ig_trait = ig_trait:ig_trait_family_ties
+			set_ig_trait = ig_trait:ig_trait_noblesse_oblige
 		}
 
 		# Squattocracy
@@ -647,62 +573,10 @@
 
 	female_politician_chance = {
 		value = 0.0
-
-
-		if = {
-			limit = {
-				owner = {
-					has_law_or_variant = law_type:law_womens_suffrage
-				}
-				law_stance = {
-					law = law_type:law_womens_suffrage
-					value >= approve
-				}
-			}
-			add = {
-				value = 0.02
-			}
-		}
 	}
 
 	female_agitator_chance = {
 		value = 0.01
-
-		if = {
-			limit = {
-				owner = {
-					has_law_or_variant = law_type:law_women_own_property
-				}
-
-			}
-			add = {
-				value = 0.01
-			}
-		}
-
-		if = {
-			limit = {
-				owner = {
-					has_law_or_variant = law_type:law_women_in_the_workplace
-				}
-
-			}
-			add = {
-				value = 0.01
-			}
-		}
-
-		if = {
-			limit = {
-				owner = {
-					has_law_or_variant = law_type:law_womens_suffrage
-				}
-
-			}
-			add = {
-				value = 0.01
-			}
-		}
 	}
 
 	# The chance that a commander belonging to this IG takes over leadership when it changes
