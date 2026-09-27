@@ -35,18 +35,20 @@
 		law_commoner_controlled_mining = strongly_disapprove
 		law_royal_fifth_mining = disapprove
 	}
+
 	lawgroup_recruitment_law = {
 		law_expanded_levies	= strongly_approve
 		law_noble_army = strongly_disapprove
 	}
+
 	lawgroup_economic_system = {
-		law_traditionalism = strongly_approve
-		law_interventionism = disapprove
-		law_agrarianism = approve
-		law_command_economy = strongly_disapprove
-		law_industry_banned = neutral
-		law_laissez_fair = strongly_disapprove
-		law_cooperative_ownership = strongly_disapprove
+		law_manorial_economy = strongly_approve
+		law_agrarian_economy = approve
+		law_merchant_economy = neutral
+		law_chartered_economy = neutral
+		law_colonial_economy = neutral
+		law_state_directed_economy = disapprove
+		law_economic_liberalism = strongly_disapprove
 	}
 }
 
@@ -95,6 +97,16 @@ ideology_plutocratic = {
 		law_burghers_controlled_mining = strongly_approve
 		law_commoner_controlled_mining = strongly_disapprove
 		law_royal_fifth_mining = disapprove
+	}
+
+	lawgroup_economic_system = {
+		law_manorial_economy = strongly_disapprove
+		law_agrarian_economy = disapprove
+		law_merchant_economy = strongly_approve
+		law_chartered_economy = strongly_approve
+		law_colonial_economy = approve
+		law_state_directed_economy = disapprove
+		law_economic_liberalism = approve
 	}
 }
 
@@ -179,15 +191,6 @@ ideology_traditionalist = {
 		law_strengthen_clergy = strongly_approve
 		law_curtail_clergy = strongly_disapprove
 	}
-	lawgroup_economic_system = {
-		law_traditionalism = strongly_approve
-		law_interventionism = strongly_disapprove
-		law_agrarianism = approve
-		law_command_economy = strongly_disapprove
-		law_industry_banned = approve
-		law_laissez_fair = strongly_disapprove
-		law_cooperative_ownership = neutral
-	}
 }
 
 ideology_innovative = {
@@ -243,16 +246,16 @@ ideology_absolutism = {
 		law_expanded_levies	= strongly_disapprove
 		law_noble_army = strongly_approve
 	}
-	lawgroup_economic_system = {
-		law_traditionalism = neutral
-		law_interventionism = disapprove
-		law_agrarianism = neutral
-		law_command_economy = strongly_approve
-		law_industry_banned = disapprove
-		law_laissez_fair = strongly_disapprove
-		law_cooperative_ownership = disapprove
-	}
 
+	lawgroup_economic_system = {
+		law_manorial_economy = neutral
+		law_agrarian_economy = neutral
+		law_merchant_economy = disapprove
+		law_chartered_economy = approve
+		law_colonial_economy = neutral
+		law_state_directed_economy = strongly_approve
+		law_economic_liberalism = strongly_disapprove
+	}
 }
 
 ideology_outward = {
@@ -320,14 +323,15 @@ ideology_capital_economy = {
 		law_strengthen_the_burghers = approve
 		law_curtail_the_burghers = disapprove
 	}
+
 	lawgroup_economic_system = {
-		law_traditionalism = disapprove
-		law_interventionism = approve
-		law_agrarianism = neutral
-		law_command_economy = strongly_disapprove
-		law_industry_banned = strongly_disapprove
-		law_laissez_fair = strongly_approve
-		law_cooperative_ownership = disapprove
+		law_manorial_economy = strongly_disapprove
+		law_agrarian_economy = disapprove
+		law_merchant_economy = strongly_approve
+		law_chartered_economy = approve
+		law_colonial_economy = approve
+		law_state_directed_economy = strongly_disapprove
+		law_economic_liberalism = strongly_approve
 	}
 }
 
@@ -353,6 +357,16 @@ ideology_traditional_economy = {
 	lawgroup_rights_of_the_burghers = {
 		law_strengthen_the_burghers = disapprove
 		law_curtail_the_burghers = approve
+	}
+
+	lawgroup_economic_system = {
+		law_manorial_economy = strongly_approve
+		law_agrarian_economy = approve
+		law_merchant_economy = neutral
+		law_chartered_economy = neutral
+		law_colonial_economy = neutral
+		law_state_directed_economy = disapprove
+		law_economic_liberalism = strongly_disapprove
 	}
 }
 
@@ -455,16 +469,6 @@ ideology_communalism = {
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = approve
 		law_homesteading = strongly_approve
-	}
-	
-	lawgroup_economic_system = {
-		law_traditionalism = neutral
-		law_agrarianism = approve
-		law_industry_banned = strongly_approve
-		law_interventionism = disapprove
-		law_laissez_fair = strongly_disapprove
-		law_cooperative_ownership = approve
-		law_command_economy = strongly_disapprove
 	}
 }
 
