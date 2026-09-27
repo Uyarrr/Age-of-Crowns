@@ -81,6 +81,12 @@ law_chartered_economy = {
 		country_government_dividends_efficiency_add = 0.5
 		country_free_charters_add = 1
 		building_group_bg_mining_throughput_add = 0.1
+
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.25
+		building_group_bg_extraction_allowed_collectivization_add = -0.25
+		building_group_bg_power_allowed_collectivization_add = -0.25
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.25
+		building_group_bg_arts_allowed_collectivization_add = -0.25
 	}
 
 	ai_enact_weight_modifier = { #Petitions
@@ -173,6 +179,12 @@ law_agrarian_economy = {
 		country_disable_nationalization_without_compensation_bool = yes
 		building_group_bg_agriculture_throughput_add = 0.25
 		building_group_bg_ranching_throughput_add = 0.25
+
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.25
+		building_group_bg_extraction_allowed_collectivization_add = -0.25
+		building_group_bg_power_allowed_collectivization_add = -0.25
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.25
+		building_group_bg_arts_allowed_collectivization_add = -0.25
 	}
 
 	ai_will_do = {
@@ -378,11 +390,11 @@ law_economic_liberalism = {
 		country_government_dividends_reinvestment_add = 1.0
 		country_free_charters_add = 2
 
-		building_group_bg_manufacturing_allowed_collectivization_add = -0.2
-		building_group_bg_extraction_allowed_collectivization_add = -0.2
-		building_group_bg_power_allowed_collectivization_add = -0.2
-		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.2
-		building_group_bg_arts_allowed_collectivization_add = -0.2
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.5
+		building_group_bg_extraction_allowed_collectivization_add = -0.5
+		building_group_bg_power_allowed_collectivization_add = -0.5
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.5
+		building_group_bg_arts_allowed_collectivization_add = -0.5
 
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
@@ -462,7 +474,11 @@ law_merchant_economy = {
 		building_company_worker_dividends_add = 0.75
 		country_free_charters_add = 1
 
-		country_foreign_collectivization_bool = yes
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.25
+		building_group_bg_extraction_allowed_collectivization_add = -0.25
+		building_group_bg_power_allowed_collectivization_add = -0.25
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.25
+		building_group_bg_arts_allowed_collectivization_add = -0.25
 	}
 
 	ai_enact_weight_modifier = { #Petitions
@@ -543,8 +559,6 @@ law_state_directed_economy = {
 	}
 
 	modifier = {
-		country_disable_investment_pool_bool = yes
-
 		state_bureaucrats_investment_pool_efficiency_mult = 0.25
 		country_authority_mult = 0.25
 		country_bureaucrats_pol_str_mult = 0.25
@@ -560,7 +574,11 @@ law_state_directed_economy = {
 
 		country_leverage_resistance_mult = 0.25
 
-		country_disable_non_company_privatization_bool = yes
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.25
+		building_group_bg_extraction_allowed_collectivization_add = -0.25
+		building_group_bg_power_allowed_collectivization_add = -0.25
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.25
+		building_group_bg_arts_allowed_collectivization_add = -0.25
 	}
 
 	ai_will_do = {
