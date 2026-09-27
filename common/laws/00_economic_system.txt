@@ -30,8 +30,8 @@ law_manorial_economy = {
 		building_nationalization_cost_mult = 1.0
 		building_nationalization_investment_return_add = 0.25
 		country_leverage_resistance_mult = 0.25
-		building_self_investment_chance_add = 0.1
 		country_disable_nationalization_without_compensation_bool = yes
+
 		building_group_bg_agriculture_throughput_add = 0.05
 		building_group_bg_mining_throughput_add = 0.05
 		building_group_bg_ranching_throughput_add = 0.05
@@ -374,9 +374,16 @@ law_economic_liberalism = {
 		state_farms_investment_pool_efficiency_mult = -0.5
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25
 		state_capitalists_investment_pool_efficiency_mult = 0.25
-		country_private_construction_allocation_mult = 0.90
+		country_private_construction_allocation_mult = 0.9
 		country_government_dividends_reinvestment_add = 1.0
 		country_free_charters_add = 2
+
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.2
+		building_group_bg_extraction_allowed_collectivization_add = -0.2
+		building_group_bg_power_allowed_collectivization_add = -0.2
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.2
+		building_group_bg_arts_allowed_collectivization_add = -0.2
+
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
 		country_forbid_monopoly_bool = yes
@@ -450,16 +457,10 @@ law_merchant_economy = {
 	modifier = {
 		state_shopkeepers_investment_pool_efficiency_mult = 0.5
 		state_farmers_investment_pool_efficiency_mult = 0.5
-		country_private_construction_allocation_mult = 0.1
+		country_private_construction_allocation_mult = 0.75
 		country_government_dividends_reinvestment_add = 1.0
 		building_company_worker_dividends_add = 0.75
 		country_free_charters_add = 1
-
-		building_group_bg_manufacturing_allowed_collectivization_add = 1.0
-		building_group_bg_extraction_allowed_collectivization_add = 1.0
-		building_group_bg_power_allowed_collectivization_add = 1.0
-		building_group_bg_private_infrastructure_allowed_collectivization_add = 1.0
-		building_group_bg_arts_allowed_collectivization_add = 1.0
 
 		country_foreign_collectivization_bool = yes
 	}
