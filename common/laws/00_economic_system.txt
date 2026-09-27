@@ -35,6 +35,12 @@ law_manorial_economy = {
 		building_group_bg_agriculture_throughput_add = 0.05
 		building_group_bg_mining_throughput_add = 0.05
 		building_group_bg_ranching_throughput_add = 0.05
+
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.1
+		building_group_bg_extraction_allowed_collectivization_add = -0.1
+		building_group_bg_power_allowed_collectivization_add = -0.1
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.1
+		building_group_bg_arts_allowed_collectivization_add = -0.1
 	}
 
 	# AI should never switch back to traditionalism
@@ -82,11 +88,11 @@ law_chartered_economy = {
 		country_free_charters_add = 1
 		building_group_bg_mining_throughput_add = 0.1
 
-		building_group_bg_manufacturing_allowed_collectivization_add = -0.25
-		building_group_bg_extraction_allowed_collectivization_add = -0.25
-		building_group_bg_power_allowed_collectivization_add = -0.25
-		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.25
-		building_group_bg_arts_allowed_collectivization_add = -0.25
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.15
+		building_group_bg_extraction_allowed_collectivization_add = -0.15
+		building_group_bg_power_allowed_collectivization_add = -0.15
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.15
+		building_group_bg_arts_allowed_collectivization_add = -0.15
 	}
 
 	ai_enact_weight_modifier = { #Petitions
@@ -180,11 +186,11 @@ law_agrarian_economy = {
 		building_group_bg_agriculture_throughput_add = 0.25
 		building_group_bg_ranching_throughput_add = 0.25
 
-		building_group_bg_manufacturing_allowed_collectivization_add = -0.25
-		building_group_bg_extraction_allowed_collectivization_add = -0.25
-		building_group_bg_power_allowed_collectivization_add = -0.25
-		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.25
-		building_group_bg_arts_allowed_collectivization_add = -0.25
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.15
+		building_group_bg_extraction_allowed_collectivization_add = -0.15
+		building_group_bg_power_allowed_collectivization_add = -0.15
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.15
+		building_group_bg_arts_allowed_collectivization_add = -0.15
 	}
 
 	ai_will_do = {
@@ -574,11 +580,11 @@ law_state_directed_economy = {
 
 		country_leverage_resistance_mult = 0.25
 
-		building_group_bg_manufacturing_allowed_collectivization_add = -0.25
-		building_group_bg_extraction_allowed_collectivization_add = -0.25
-		building_group_bg_power_allowed_collectivization_add = -0.25
-		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.25
-		building_group_bg_arts_allowed_collectivization_add = -0.25
+		building_group_bg_manufacturing_allowed_collectivization_add = -0.15
+		building_group_bg_extraction_allowed_collectivization_add = -0.15
+		building_group_bg_power_allowed_collectivization_add = -0.15
+		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.15
+		building_group_bg_arts_allowed_collectivization_add = -0.15
 	}
 
 	ai_will_do = {
