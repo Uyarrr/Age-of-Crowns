@@ -3,94 +3,175 @@ ai_strategy_hre_imperial_hegemony = {
 
 	type = diplomatic
 
-	# Austria begins as leader of the historical HRE bloc. This strategy maintains
-	# and expands that bloc rather than creating a replacement.
+	# Austria already leads the Holy Roman Empire bloc.
+	# This strategy maintains and expands it rather than creating another bloc.
 	will_form_power_bloc = {
 		always = no
 	}
 
 	undesirable_infamy_level = { value = 25 }
 	unacceptable_infamy_level = { value = 50 }
+
 	ideological_opinion_effect_mult = { value = 0.75 }
+
 	wargoal_maneuvers_fraction = { value = 0.10 }
-	diplomatic_play_neutrality = { value = -20 }
+
+	# Austria should generally be willing to participate in relevant European plays.
+	diplomatic_play_neutrality = { value = 0 }
+
 	diplomatic_play_boldness = { value = 40 }
+
 	recklessness = { value = 0.50 }
 
-	# Defend cordial imperial members against countries outside the Empire.
-	# Internal wars and members with poor relations do not receive automatic aid.
+
+	# ---------------------------------------------------------------------
+	# DEFEND THE HOLY ROMAN EMPIRE
+	# ---------------------------------------------------------------------
+	#
+	# root                = Austria
+	# scope:country       = country whose side Austria is evaluating
+	# scope:enemy_country = leader of the opposing side
+	# scope:is_initiator  = true when evaluating the initiator side
+	#
+	# HRE members attacked by outside powers receive overwhelming support.
+	# Relations do NOT matter: imperial membership itself is the guarantee.
+	#
+
 	diplomatic_play_support = {
 		value = 0
 
+
+		# -------------------------------------------------------------
+		# DEFEND HRE MEMBER AGAINST OUTSIDER
+		# -------------------------------------------------------------
+
 		if = {
 			limit = {
+				# We are evaluating the target/defending side.
 				NOT = { exists = scope:is_initiator }
+
 				scope:country = {
 					is_in_same_power_bloc = root
-					relations:root >= relations_threshold:cordial
 				}
+
 				scope:enemy_country = {
-					NOT = { is_in_same_power_bloc = root }
+					NOT = {
+						is_in_same_power_bloc = root
+					}
 				}
 			}
-			add = 350
+
+			add = 1000
 		}
 
-		# Never help an outsider launch a play against a friendly HRE member.
+
+		# -------------------------------------------------------------
+		# NEVER SUPPORT AN OUTSIDER ATTACKING AN HRE MEMBER
+		# -------------------------------------------------------------
+
 		if = {
 			limit = {
+				# We are evaluating the initiating/attacking side.
 				exists = scope:is_initiator
+
 				scope:country = {
-					NOT = { is_in_same_power_bloc = root }
+					NOT = {
+						is_in_same_power_bloc = root
+					}
 				}
+
 				scope:enemy_country = {
 					is_in_same_power_bloc = root
-					relations:root >= relations_threshold:cordial
 				}
 			}
+
 			add = -1000
 		}
 
-		# Do not take sides with an outsider in an internal imperial conflict.
+
+		# -------------------------------------------------------------
+		# INTERNAL HRE WARS
+		# -------------------------------------------------------------
+		#
+		# Austria should normally remain neutral when both sides
+		# are members of the Empire.
+		#
+
 		if = {
 			limit = {
-				scope:country = { NOT = { is_in_same_power_bloc = root } }
-				scope:enemy_country = { is_in_same_power_bloc = root }
+				scope:country = {
+					is_in_same_power_bloc = root
+				}
+
+				scope:enemy_country = {
+					is_in_same_power_bloc = root
+				}
 			}
-			add = -250
+
+			add = -500
 		}
 	}
 
-	# Austria is diplomatic inside the HRE and only mildly aggressive outside it.
+
+	# ---------------------------------------------------------------------
+	# AGGRESSION
+	# ---------------------------------------------------------------------
+	#
+	# Austria should preserve the imperial system rather than conquer
+	# members of the Empire.
+	#
+
 	aggression = {
 		value = 0.25
 
+
+		# No aggression against fellow HRE members.
 		if = {
-			limit = { is_in_same_power_bloc = scope:target_country }
+			limit = {
+				is_in_same_power_bloc = scope:target_country
+			}
+
 			multiply = 0
 		}
 
+
+		# Subjects should be managed diplomatically rather than invaded.
 		if = {
-			limit = { scope:target_country = { is_subject_of = root } }
+			limit = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+
 			multiply = 0.05
 		}
 
+
+		# Modest expansion pressure against nearby weak,
+		# independent and unaligned countries.
 		if = {
 			limit = {
 				has_strategic_adjacency = scope:target_country
+
 				scope:target_country.country_rank <= rank_value:minor_power
+
 				scope:target_country = {
 					is_subject = no
 					is_in_power_bloc = no
 				}
 			}
+
 			add = 0.35
 		}
 
+
+		# Ideological hostility has some influence,
+		# but Austria remains relatively restrained.
 		multiply = {
 			value = "ai_ideological_opinion(scope:target_country)"
 			multiply = -0.05
 			add = 1
+
 			min = 0.75
 			max = 1.25
 		}
@@ -98,58 +179,116 @@ ai_strategy_hre_imperial_hegemony = {
 		max = 1.0
 	}
 
-	building_group_weights = {
-		bg_army = 1.40
-		bg_technology = 1.20
-		bg_navy = 0.50
-	}
+
+	# ---------------------------------------------------------------------
+	# SECRET GOALS
+	# ---------------------------------------------------------------------
 
 	secret_goal_weights = {
-		protect = 3.0
+		protect = 4.0
 		befriend = 3.0
 		reconcile = 2.0
+
 		dominate = 1.25
+
 		conquer = 0.10
 	}
 
-	# Encourage defensive agreements and every diplomatic route that can add
-	# countries to the imperial power bloc.
+
+	# ---------------------------------------------------------------------
+	# DIPLOMATIC / TREATY PRIORITIES
+	# ---------------------------------------------------------------------
+	#
+	# Austria should build a cohesive diplomatic Empire rather than
+	# directly annexing everything.
+	#
+
 	treaty_category_scores = {
 		economy = { value = 4 }
 		trade = { value = 5 }
-		military = { value = 3 }
-		military_defense = { value = 8 }
+
+		military = { value = 4 }
+		military_defense = { value = 10 }
+
 		ideology = { value = 1 }
+
 		expansion = { value = 3 }
+
 		power_bloc = { value = 10 }
+
 		other = { value = 1 }
 		none = { value = 0 }
 	}
 
+
+	# ---------------------------------------------------------------------
+	# WARGOAL PRIORITIES
+	# ---------------------------------------------------------------------
+
 	wargoal_weights = {
 		join_power_bloc = 5.0
+
 		make_protectorate = 1.0
 		make_dominion = 0.25
+
 		reduce_autonomy = 1.5
 		annex_country = 0.50
+
 		liberate_subject = 1.5
 		liberate_country = 1.25
+
 		return_state = 0.75
+
 		conquer_state = 0.10
+
 		force_nationalization = 0.0
 	}
 
+
+	# ---------------------------------------------------------------------
+	# SECRET GOAL SCORING
+	# ---------------------------------------------------------------------
+
 	secret_goal_scores = {
+
+
+		# -------------------------------------------------------------
+		# PROTECT HRE MEMBERS
+		# -------------------------------------------------------------
+
 		protect = {
 			trigger = {
 				is_in_same_power_bloc = scope:target_country
-				scope:target_country = {
-					relations:root >= relations_threshold:cordial
-				}
 			}
 
 			score = {
-				value = 500
+				value = 600
+
+
+				# Existing Austrian subjects are especially important.
+				if = {
+					limit = {
+						scope:target_country = {
+							is_subject_of = root
+						}
+					}
+
+					add = 100
+				}
+
+
+				# Friendly members receive an additional preference,
+				# but friendship is no longer required for protection.
+				if = {
+					limit = {
+						scope:target_country = {
+							relations:root >= relations_threshold:cordial
+						}
+					}
+
+					add = 100
+				}
+
 
 				if = {
 					limit = {
@@ -157,28 +296,35 @@ ai_strategy_hre_imperial_hegemony = {
 							relations:root >= relations_threshold:amicable
 						}
 					}
-					add = 150
-				}
 
-				if = {
-					limit = { scope:target_country = { is_subject_of = root } }
 					add = 100
 				}
 			}
 		}
 
-		# Keep improving relations with every member until the imperial interior
-		# is friendly and cohesive.
+
+		# -------------------------------------------------------------
+		# BEFRIEND MEMBERS AND POTENTIAL MEMBERS
+		# -------------------------------------------------------------
+
 		befriend = {
 			trigger = {
 				OR = {
+
+					# Existing HRE members.
 					is_in_same_power_bloc = scope:target_country
+
+
+					# Nearby potential imperial members.
 					AND = {
 						has_strategic_adjacency = scope:target_country
+
 						scope:target_country.country_rank <= rank_value:minor_power
+
 						scope:target_country = {
 							is_subject = no
 							is_in_power_bloc = no
+
 							any_scope_state = {
 								OR = {
 									is_in_geographic_region = geographic_region_western_europe
@@ -194,9 +340,15 @@ ai_strategy_hre_imperial_hegemony = {
 			score = {
 				value = 100
 
+
+				# Existing members are high diplomatic priorities.
 				if = {
-					limit = { is_in_same_power_bloc = scope:target_country }
+					limit = {
+						is_in_same_power_bloc = scope:target_country
+					}
+
 					add = 350
+
 
 					if = {
 						limit = {
@@ -204,8 +356,10 @@ ai_strategy_hre_imperial_hegemony = {
 								relations:root < relations_threshold:cordial
 							}
 						}
+
 						add = 300
 					}
+
 
 					if = {
 						limit = {
@@ -213,13 +367,22 @@ ai_strategy_hre_imperial_hegemony = {
 								relations:root < relations_threshold:friendly
 							}
 						}
+
 						add = 100
 					}
 				}
 
+
+				# Potential members should be diplomatically cultivated.
 				if = {
-					limit = { NOT = { is_in_same_power_bloc = scope:target_country } }
+					limit = {
+						NOT = {
+							is_in_same_power_bloc = scope:target_country
+						}
+					}
+
 					add = 250
+
 
 					if = {
 						limit = {
@@ -227,32 +390,53 @@ ai_strategy_hre_imperial_hegemony = {
 								relations:root < relations_threshold:amicable
 							}
 						}
+
 						add = 200
 					}
 				}
 			}
 		}
 
+
+		# -------------------------------------------------------------
+		# RECONCILE WITH UNFRIENDLY MEMBERS
+		# -------------------------------------------------------------
+
 		reconcile = {
 			trigger = {
 				is_in_same_power_bloc = scope:target_country
+
 				scope:target_country = {
 					relations:root < relations_threshold:cordial
 				}
 			}
-			score = { value = 400 }
+
+			score = {
+				value = 500
+			}
 		}
 
-		# Coercion is a fallback for nearby, unaligned imperial candidates that
-		# cannot be brought into the bloc through friendly diplomacy.
+
+		# -------------------------------------------------------------
+		# DOMINATE POTENTIAL MEMBERS
+		# -------------------------------------------------------------
+		#
+		# Coercion is a fallback when nearby candidates remain
+		# outside the Empire and cannot be integrated peacefully.
+		#
+
 		dominate = {
 			trigger = {
 				has_strategic_adjacency = scope:target_country
+
 				scope:target_country.country_rank <= rank_value:minor_power
+
 				scope:target_country = {
 					is_subject = no
 					is_in_power_bloc = no
+
 					relations:root < relations_threshold:cordial
+
 					any_scope_state = {
 						OR = {
 							is_in_geographic_region = geographic_region_western_europe
@@ -266,30 +450,59 @@ ai_strategy_hre_imperial_hegemony = {
 			score = {
 				value = 150
 
+
 				if = {
-					limit = { scope:target_country = { num_allies < 1 } }
+					limit = {
+						scope:target_country = {
+							num_allies < 1
+						}
+					}
+
 					add = 75
 				}
 
+
 				if = {
-					limit = { scope:target_country = { is_in_war = yes } }
+					limit = {
+						scope:target_country = {
+							is_in_war = yes
+						}
+					}
+
 					add = 50
 				}
 			}
 		}
 
+
+		# Avoid having no diplomatic intention toward unhappy HRE members.
 		none = {
 			trigger = {
 				is_in_same_power_bloc = scope:target_country
+
 				scope:target_country = {
 					relations:root < relations_threshold:cordial
 				}
 			}
-			score = { value = 50 }
+
+			score = {
+				value = 25
+			}
 		}
 	}
 
+
+	# ---------------------------------------------------------------------
+	# WARGOAL SCORING
+	# ---------------------------------------------------------------------
+
 	wargoal_scores = {
+
+
+		# -------------------------------------------------------------
+		# FORCE ENTRY INTO THE EMPIRE
+		# -------------------------------------------------------------
+
 		join_power_bloc = {
 			if = {
 				limit = {
@@ -297,14 +510,21 @@ ai_strategy_hre_imperial_hegemony = {
 						who = scope:target_country
 						secret_goal = dominate
 					}
+
 					scope:target_country = {
 						is_subject = no
 						is_in_power_bloc = no
 					}
 				}
+
 				add = 500
 			}
 		}
+
+
+		# -------------------------------------------------------------
+		# PROTECTORATE FALLBACK
+		# -------------------------------------------------------------
 
 		make_protectorate = {
 			if = {
@@ -314,36 +534,65 @@ ai_strategy_hre_imperial_hegemony = {
 						secret_goal = dominate
 					}
 				}
+
 				add = 100
 			}
 		}
 
+
+		# -------------------------------------------------------------
+		# SUBJECT MANAGEMENT
+		# -------------------------------------------------------------
+
 		reduce_autonomy = {
 			if = {
-				limit = { scope:target_country = { is_subject_of = root } }
+				limit = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
 				add = 100
 			}
 		}
+
 
 		annex_country = {
 			if = {
 				limit = {
-					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						is_subject_of = root
+					}
+
 					scope:target_country.country_rank <= rank_value:minor_power
 				}
+
 				add = 50
 			}
 		}
 	}
 
+
+	# ---------------------------------------------------------------------
+	# POSSIBLE
+	# ---------------------------------------------------------------------
+
 	possible = {
 		is_subject = no
+
 		c:AUS ?= this
+
 		is_power_bloc_leader = yes
+
 		power_bloc ?= {
 			has_identity = identity:identity_holy_roman_empire
 		}
 	}
+
+
+	# ---------------------------------------------------------------------
+	# STRATEGY SELECTION
+	# ---------------------------------------------------------------------
 
 	weight = {
 		value = 1000

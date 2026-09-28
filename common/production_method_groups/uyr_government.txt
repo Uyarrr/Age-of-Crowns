@@ -11,6 +11,17 @@ pmg_building_chancery_main = {
 	}
 }
 
+pmg_building_chancery_silver = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_building_chancery_silver_0
+		pm_building_chancery_silver_1
+		pm_building_chancery_silver_2
+	}
+}
+
 ################## University #######################
 pmg_building_university_main = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"

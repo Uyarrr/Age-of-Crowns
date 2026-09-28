@@ -126,6 +126,160 @@
 				reserves=1
 				activate_production_methods={ "pm_building_caravan_hub_main_1" }
 			}
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_logging_camp_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_textile_mill"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_cloth_workshop_main_1" "pm_building_cloth_workshop_leather_0" }
+			}
+			create_building={
+				building="building_tannery"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_tannery_main_1" }
+			}
+			create_building={
+				building="building_slaughterhouse"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_slaughterhouse_main_1" "pm_building_slaughterhouse_salting_0" }
+			}
+			create_building={
+				building="building_furniture_manufactory"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_furniture_workshop_main_1" }
+			}
+			create_building={
+				building="building_brewery"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_brewery_main_1" }
+			}
+			create_building={
+				building="building_distillery"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_distillery_main_1" }
+			}
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
+			create_building={
+				building="building_paper_mill"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_paper_mill_main_1" }
+			}
+			create_building={
+				building="building_stud_farm"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_stud_farm_main_1" "pm_building_stud_farm_warhorse_0" "pm_building_stud_farm_equipment_0" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_livestock_main_1" "pm_building_livestock_sheep_1" }
+			}
+			create_building={
+				building="building_hospital"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_hospital_main_1" }
+			}
+			create_building={
+				building="building_temple"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_temple_main" }
+			}
 		}
 	}
 	s:STATE_BREST={
@@ -152,6 +306,17 @@
 		region_state:RYZ={
 		}
 		region_state:MUS={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
 		}
 	}
 	s:STATE_SMOLENSK={
@@ -261,6 +426,84 @@
 		region_state:N00={
 		}
 		region_state:MUS={
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_iron_mine_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_stone_mine"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_stone_mine_main_1" "pm_building_stone_mine_salt_0" "pm_road_carts" }
+			}
+			create_building={
+				building="building_coal_mine"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_coal_mine_main_1" "pm_road_carts" }
+			}
+			create_building={
+				building="building_weapon_workshop"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_weapon_workshop_main_1" }
+			}
+			create_building={
+				building="building_tooling_workshop"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_tooling_workshop_main_1" }
+			}
+			create_building={
+				building="building_ironworks"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_ironworks_main_1" }
+			}
+			create_building={
+				building="building_road"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				subsidized=no
+				reserves=1
+				activate_production_methods={ "pm_building_road_main_1" "pm_building_road_transport_0" }
+			}
 		}
 	}
 	s:STATE_MINSK={
@@ -383,6 +626,17 @@
 		region_state:RYZ={
 		}
 		region_state:MUS={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
 		}
 		region_state:GRH={
 		}
@@ -402,6 +656,17 @@
 			}
 		}
 		region_state:MUS={
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
+			}
 		}
 	}
 	s:STATE_VITEBSK={
@@ -426,12 +691,89 @@
 		region_state:U67={
 		}
 		region_state:MUS={
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
+			}
+			create_building={
+				building="building_apothecary"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_apothecary_main_1" }
+			}
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
+			create_building={
+				building="building_hunting_lodge"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_hunting_lodge_main_1" }
+			}
+			create_building={
+				building="building_stud_farm"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_stud_farm_main_1" "pm_building_stud_farm_warhorse_0" "pm_building_stud_farm_equipment_0" }
+			}
 		}
 	}
 	s:STATE_NIZHNY_NOVGOROD={
 		region_state:TAR={
 		}
 		region_state:MUS={
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
+			}
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:MUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
 		}
 	}
 	s:STATE_VYATKA={

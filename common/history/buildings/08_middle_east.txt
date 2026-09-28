@@ -65,6 +65,17 @@
 	}
 	s:STATE_HEDJAZ={
 		region_state:MAM={
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:MAM"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
+			}
 		}
 		region_state:HDJ={
 		}
@@ -90,6 +101,17 @@
 		region_state:BHN={
 		}
 		region_state:MAM={
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:MAM"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
+			}
 		}
 		region_state:JAB={
 		}
@@ -106,10 +128,65 @@
 	}
 	s:STATE_TRANSJORDAN={
 		region_state:MAM={
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:MAM"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_livestock_main_1" "pm_building_livestock_sheep_1" }
+			}
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:MAM"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
+			}
 		}
 	}
 	s:STATE_PALESTINE={
 		region_state:MAM={
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:MAM"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_livestock_main_1" "pm_building_livestock_sheep_1" }
+			}
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					country={
+						country="c:MAM"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
+			}
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:MAM"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
+			}
 		}
 	}
 	s:STATE_LEBANON={
@@ -380,7 +457,7 @@
 				add_ownership={
 					country={
 						country="c:TUR"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
@@ -428,7 +505,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_building_chancery_main_1" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
 			}
 			create_building={
 				building="building_distillery"
@@ -507,6 +584,17 @@
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
+			}
 		}
 	}
 	s:STATE_AYDIN={
@@ -553,14 +641,14 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_building_chancery_main_1" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
 			}
 			create_building={
 				building="building_road"
 				add_ownership={
 					country={
 						country="c:TUR"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
@@ -626,11 +714,22 @@
 				add_ownership={
 					country={
 						country="c:TUR"
-						levels=5
+						levels=10
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
+			}
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
 			}
 		}
 	}
@@ -667,7 +766,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_building_chancery_main_1" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
 			}
 			create_building={
 				building="building_shipyard"
@@ -707,7 +806,7 @@
 				add_ownership={
 					country={
 						country="c:TUR"
-						levels=3
+						levels=4
 					}
 				}
 				reserves=1
@@ -790,6 +889,17 @@
 				reserves=1
 				activate_production_methods={ "pm_building_orchard_main_1" }
 			}
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
+			}
 		}
 		region_state:KAR={
 			create_building={
@@ -827,7 +937,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_building_chancery_main_1" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
 			}
 			create_building={
 				building="building_road"
@@ -850,6 +960,17 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_building_orchard_main_1" }
+			}
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
 			}
 		}
 		region_state:CND={
@@ -940,7 +1061,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_building_chancery_main_1" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
 			}
 			create_building={
 				building="building_pottery_workshop"
@@ -958,7 +1079,7 @@
 				add_ownership={
 					country={
 						country="c:TUR"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
@@ -1040,6 +1161,17 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_building_orchard_main_1" }
+			}
+			create_building={
+				building="building_naval_administration"
+				add_ownership={
+					country={
+						country="c:TUR"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_sailor_recruitment" }
 			}
 		}
 		region_state:KAR={

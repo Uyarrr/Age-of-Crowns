@@ -50,6 +50,14 @@
 		law_state_directed_economy = disapprove
 		law_economic_liberalism = strongly_disapprove
 	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = strongly_approve
+		law_land_based_taxation = strongly_disapprove
+		law_per_capita_based_taxation = approve
+		law_proportional_taxation = disapprove
+		law_graduated_taxation = strongly_disapprove
+	}
 }
 
 ideology_plutocratic = {
@@ -77,11 +85,11 @@ ideology_plutocratic = {
 	}
 
 	lawgroup_taxation = {
-		law_per_capita_based_taxation = approve
-		law_consumption_based_taxation = neutral
-		law_d_based_taxation = neutral
+		law_consumption_based_taxation = approve
+		law_land_based_taxation = neutral
+		law_per_capita_based_taxation = strongly_approve
 		law_proportional_taxation = neutral
-		law_graduated_taxation = disapprove
+		law_graduated_taxation = strongly_disapprove
 	}
 
 	lawgroup_colonization = {
@@ -131,6 +139,14 @@ ideology_decentralization = {
 		law_rentekammeret = strongly_disapprove
 		law_defterhanei_amire = approve
 	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = approve
+		law_land_based_taxation = approve
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = strongly_disapprove
+		law_graduated_taxation = disapprove
+	}
 }
 
 ideology_centralization = {
@@ -153,6 +169,14 @@ ideology_centralization = {
 		law_namestnik_office = strongly_approve
 		law_rentekammeret = strongly_approve
 		law_defterhanei_amire = disapprove
+	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = disapprove
+		law_land_based_taxation = neutral
+		law_per_capita_based_taxation = approve
+		law_proportional_taxation = strongly_approve
+		law_graduated_taxation = approve
 	}
 }
 
@@ -191,6 +215,14 @@ ideology_traditionalist = {
 		law_strengthen_clergy = strongly_approve
 		law_curtail_clergy = strongly_disapprove
 	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = strongly_approve
+		law_land_based_taxation = approve
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = disapprove
+		law_graduated_taxation = strongly_disapprove
+	}
 }
 
 ideology_innovative = {
@@ -206,6 +238,14 @@ ideology_innovative = {
 
 ideology_liberalism = {
 	icon = "gfx/interface/icons/ideology_icons/liberal.dds"
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = disapprove
+		law_land_based_taxation = neutral
+		law_per_capita_based_taxation = disapprove
+		law_proportional_taxation = strongly_approve
+		law_graduated_taxation = approve
+	}
 }
 
 ideology_absolutism = {

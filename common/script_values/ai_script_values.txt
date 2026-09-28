@@ -1,0 +1,487 @@
+﻿base_impose_law_weight = {
+	value = 0.01
+
+	# Impose law is a fairly hostile act, AIs should use it mostly when angry at a subject
+	if = {
+		limit = {
+			has_attitude = {
+				who = scope:target_country
+				attitude = domineering
+			}
+		}
+		multiply = 0.5
+	}
+
+	# Non ideological unions make less use of this
+	if = {
+		limit = {
+			NOT = {
+				power_bloc ?= {
+					has_identity = identity:identity_ideological_union
+				}
+			}
+		}
+		multiply = 0.5
+	}
+
+	# Less likely to do this to subjects unless LD is low
+	if = {
+		limit = {
+			scope:target_country = {
+				is_subject = yes
+				liberty_desire > 25
+			}
+		}
+		multiply = 0.5
+	}
+
+	# Shouldn't care much about meddling in really tiny countries
+	if = {
+		limit = {
+			scope:target_country = {
+				gdp < 100000
+			}
+		}
+		multiply = 0.25
+	}
+	else_if = {
+		limit = {
+			scope:target_country = {
+				gdp < 250000
+			}
+		}
+		multiply = 0.5
+	}
+	else_if = {
+		limit = {
+			scope:target_country = {
+				gdp < 500000
+			}
+		}
+		multiply = 0.75
+	}
+
+	# Impact of AI strategies
+	if = {
+		limit = {
+			has_strategy = ai_strategy_world_revolution
+		}
+		multiply = 5
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_strategy = ai_strategy_anti_imperialism
+				has_strategy = ai_strategy_maintain_power_balance
+			}
+		}
+		multiply = 2
+	}
+}
+
+
+wanted_army_size_script_value = {
+	# Desired number of barracks levels.
+	#
+	# MOD DESIGN:
+	# - Population is roughly 30% of vanilla.
+	# - Barracks use 3,000 workers instead of 5,000.
+	# - Military strength primarily follows population and economic capacity.
+	# - Country identity, historical Journal Entries and technologies do not determine army size.
+
+	value = 0
+
+	# ---------------------------------------------------------------------
+	# POPULATION
+	# ---------------------------------------------------------------------
+	#
+	# 3,000 / 150,000 = 2%
+	# This preserves roughly the same manpower burden as vanilla:
+	# 5,000 / 250,000 = 2%
+
+	# Helps small countries maintain a meaningful minimum army.
+	add = {
+		value = cached_ai_incorporated_population
+		divide = 150000
+		max = 4
+	}
+
+	# Main incorporated population contribution.
+	add = {
+		value = cached_ai_incorporated_population
+		divide = 150000
+	}
+
+	# Unincorporated population contributes less efficiently.
+	add = {
+		value = cached_ai_unincorporated_population
+		divide = 600000
+	}
+
+
+	# ---------------------------------------------------------------------
+	# RANK
+	# ---------------------------------------------------------------------
+	#
+	# Rank only provides a modest baseline.
+	# It does NOT determine whether a country can become militarily powerful.
+
+	if = {
+		limit = {
+			country_rank = rank_value:great_power
+		}
+		add = 10
+	}
+	else_if = {
+		limit = {
+			country_rank = rank_value:major_power
+		}
+		add = 4
+	}
+
+
+	# ---------------------------------------------------------------------
+	# OVERSEAS COMMITMENTS
+	# ---------------------------------------------------------------------
+
+	save_temporary_value_as = pre_overseas_empire_value
+
+	# Countries with large overseas populations reserve more military capacity
+	# for naval forces rather than putting everything into the army.
+	subtract = {
+		value = cached_ai_overseas_subject_population
+		divide = 30000000
+
+		max = {
+			value = scope:pre_overseas_empire_value
+			divide = 2
+		}
+	}
+
+	# Population and rank alone should not create absurd army targets.
+	# Economic strength can still increase the final value beyond this.
+	max = 120
+
+
+	# ---------------------------------------------------------------------
+	# ECONOMIC CAPACITY
+	# ---------------------------------------------------------------------
+	#
+	# Rich countries should be capable of maintaining strong armies
+	# regardless of country identity or rank.
+	#
+	# Landlocked countries receive this normally.
+	# Coastal countries reserve up to 25% of the income component for navy.
+
+	if = {
+		limit = {
+			cached_ai_incorporated_population > 0
+		}
+
+		add = {
+			value = fixed_income
+
+			if = {
+				limit = {
+					cached_ai_incorporated_coastal_population > 0
+				}
+
+				multiply = {
+					value = 1
+
+					subtract = {
+						value = cached_ai_incorporated_coastal_population
+						divide = cached_ai_incorporated_population
+						divide = 4
+					}
+				}
+			}
+
+			# Rescaled from vanilla for 3k military workforce.
+			divide = 1500
+		}
+	}
+
+
+	# ---------------------------------------------------------------------
+	# GENERAL BALANCE
+	# ---------------------------------------------------------------------
+
+	multiply = 1.0
+
+
+	# Expansionist countries maintain somewhat larger armies.
+	if = {
+		limit = {
+			has_strategy = ai_strategy_territorial_expansion
+		}
+		multiply = 1.20
+	}
+
+
+	# Militia systems rely less heavily on permanent standing barracks.
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_national_militia
+		}
+		multiply = 0.33
+	}
+
+
+	# Diplomatic expenses reduce available military spending.
+	multiply = {
+		value = 1
+		subtract = diplomatic_pact_expense_ratio
+	}
+
+
+	# Every functioning country should maintain at least a minimal army.
+	min = 1
+}
+
+
+# -------------------------------------------------------------------------
+# MARINES
+# -------------------------------------------------------------------------
+#
+# Marines do not exist in this mod.
+
+wanted_marines_size_script_value = {
+	value = 0
+}
+
+
+wanted_navy_size_script_value = {
+	# Desired navy size.
+	#
+	# CORE RULE:
+	# Any country with coastline, population and economic strength can become
+	# a naval power regardless of tag, recognition status or rank.
+	#
+	# Historical naval powers receive only a modest preference.
+
+	value = 0
+
+
+	# ---------------------------------------------------------------------
+	# COASTAL REQUIREMENT
+	# ---------------------------------------------------------------------
+	#
+	# Landlocked countries should not create naval demand.
+
+	if = {
+		limit = {
+			OR = {
+				cached_ai_incorporated_coastal_population > 0
+				cached_ai_unincorporated_coastal_population > 0
+			}
+		}
+
+
+		# -----------------------------------------------------------------
+		# POPULATION
+		# -----------------------------------------------------------------
+
+		# Main incorporated coastal population contribution.
+		add = {
+			value = cached_ai_incorporated_coastal_population
+			divide = 300000
+		}
+
+		# Unincorporated coastal population contributes less.
+		add = {
+			value = cached_ai_unincorporated_coastal_population
+			divide = 1200000
+		}
+
+		# Overseas subjects increase demand for naval projection.
+		add = {
+			value = cached_ai_overseas_subject_population
+			divide = 6000000
+		}
+
+
+		# Population alone should not generate infinitely large navies.
+		# Economic strength can increase the final value beyond this point.
+		max = 100
+
+
+		# -----------------------------------------------------------------
+		# ECONOMIC CAPACITY
+		# -----------------------------------------------------------------
+		#
+		# Rich coastal countries should be able to become major naval powers
+		# even if they are minor powers or historically unimportant.
+
+		if = {
+			limit = {
+				cached_ai_incorporated_population > 0
+				cached_ai_incorporated_coastal_population > 0
+			}
+
+			add = {
+				value = fixed_income
+				divide = cached_ai_incorporated_population
+				multiply = cached_ai_incorporated_coastal_population
+				divide = 3000
+			}
+		}
+
+
+		# -----------------------------------------------------------------
+		# RANK
+		# -----------------------------------------------------------------
+		#
+		# Rank provides a small baseline bonus but never determines
+		# whether a country is allowed to maintain a major fleet.
+
+		if = {
+			limit = {
+				country_rank = rank_value:great_power
+			}
+			add = 8
+		}
+		else_if = {
+			limit = {
+				country_rank = rank_value:major_power
+			}
+			add = 3
+		}
+
+
+		# General balance multiplier.
+		multiply = 0.75
+
+
+		# -----------------------------------------------------------------
+		# STRATEGIC BEHAVIOUR
+		# -----------------------------------------------------------------
+
+		# Colonial / overseas-oriented countries invest somewhat more heavily.
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_colonial_expansion
+					has_strategy = ai_strategy_economic_imperialism
+				}
+			}
+			multiply = 1.15
+		}
+
+
+		# Isolationist countries maintain somewhat smaller fleets.
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			multiply = 0.75
+		}
+
+
+		# -----------------------------------------------------------------
+		# HISTORICAL NAVAL TRADITION
+		# -----------------------------------------------------------------
+		#
+		# These states receive only a small naval preference.
+		#
+		# This is intentionally only +15%.
+		# A wealthy non-historical naval country can still massively surpass
+		# a poor England, Portugal, Castile or Venice.
+		#
+		# CAS = Castile
+		# SPA = Spain
+		# POR = Portugal
+		# IBR = Iberian successor
+		# VEN = Venice
+		# ITA = Italian successor
+		# ENG = England
+		# GBR = Great Britain
+
+		if = {
+			limit = {
+				OR = {
+					this = c:CAS
+					this = c:SPA
+					this = c:POR
+					this = c:IBR
+					this = c:VEN
+					this = c:ITA
+					this = c:ENG
+					this = c:GBR
+				}
+			}
+
+			multiply = 1.15
+		}
+
+
+		# -----------------------------------------------------------------
+		# FINANCIAL PRESSURE
+		# -----------------------------------------------------------------
+
+		multiply = {
+			value = 1
+			subtract = diplomatic_pact_expense_ratio
+		}
+	}
+}
+
+
+# -------------------------------------------------------------------------
+# FLAGSHIP SCORING
+# -------------------------------------------------------------------------
+
+flagship_score_for_fleet = {
+	# More powerful fleets should have higher scoring flagships.
+	add = {
+		value = power_projection
+		divide = 100
+	}
+
+	# Larger fleets should have higher scoring flagships.
+	add = {
+		value = num_ships
+		divide = 5
+	}
+
+	# Fleets containing capital ships are better flagship fleets.
+	add = {
+		value = "num_ships_of_group(ship_group:ship_group_capital_ships)"
+		multiply = 0.5
+	}
+
+	# Stickiness factor to prevent constant flagship switching.
+	if = {
+		limit = {
+			any_scope_ship = {
+				is_flagship = yes
+			}
+		}
+		multiply = 1.5
+	}
+}
+
+
+flagship_score_for_ship = {
+	# More powerful ships are better flagship candidates.
+	add = {
+		value = power_projection
+		divide = 10
+	}
+
+	# Prefer capital ships as flagships.
+	if = {
+		limit = {
+			ship_group = ship_group:ship_group_capital_ships
+		}
+		add = 20
+	}
+
+	# Stickiness factor to keep an existing flagship for a while.
+	if = {
+		limit = {
+			is_flagship = yes
+		}
+		multiply = 1.5
+	}
+}

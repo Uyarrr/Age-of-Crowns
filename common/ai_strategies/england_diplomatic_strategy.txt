@@ -9,19 +9,40 @@ ai_strategy_england_unite_britain = {
 
 	undesirable_infamy_level = { value = 65 }
 	unacceptable_infamy_level = { value = 95 }
+
 	ideological_opinion_effect_mult = { value = 0.60 }
+
 	wargoal_maneuvers_fraction = { value = 0.45 }
+
 	diplomatic_play_neutrality = { value = 0 }
 	diplomatic_play_boldness = { value = 70 }
+
 	recklessness = { value = 1.15 }
+
+
+	# ---------------------------------------------------------------------
+	# AGGRESSION
+	# ---------------------------------------------------------------------
+	#
+	# England strongly prioritizes completing control over the British Isles.
+	# Military SIZE itself is handled by the global military AI script.
+	#
 
 	aggression = {
 		value = 0.25
 
+		# Strong aggression toward countries holding territory
+		# considered part of the British Isles.
 		if = {
 			limit = {
-				NOT = { scope:target_country = { is_subject_of = root } }
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
 				can_reach_target_country = yes
+
 				scope:target_country = {
 					OR = {
 						has_state_in_state_region = STATE_HOME_COUNTIES
@@ -40,9 +61,13 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 			}
+
 			add = 5.0
 		}
 
+
+		# While Britain is incomplete, England should be less distracted
+		# by unrelated foreign expansion.
 		if = {
 			limit = {
 				OR = {
@@ -60,7 +85,13 @@ ai_strategy_england_unite_britain = {
 					NOT = { owns_entire_state_region = STATE_CONNAUGHT }
 					NOT = { owns_entire_state_region = STATE_MUNSTER }
 				}
-				NOT = { scope:target_country = { is_subject_of = root } }
+
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
 				scope:target_country = {
 					NOR = {
 						has_state_in_state_region = STATE_HOME_COUNTIES
@@ -79,59 +110,28 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 			}
+
 			add = -1.5
 		}
 
+
+		# Subjects are handled mainly through autonomy reduction / annexation,
+		# rather than ordinary aggression.
 		if = {
-			limit = { scope:target_country = { is_subject_of = root } }
+			limit = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+
 			multiply = 0.10
 		}
 	}
 
-	building_group_weights = {
-		bg_navy = 3.0
-		bg_army = 1.5
-		bg_technology = 1.25
-	}
 
-	# England should maintain a fleet far above the normal requirement.
-	wanted_navy_size = {
-		value = 75
-
-		if = {
-			limit = { country_rank >= rank_value:major_power }
-			add = 25
-		}
-
-		if = {
-			limit = { country_rank >= rank_value:great_power }
-			add = 50
-		}
-	}
-
-	wanted_num_supply_ships = {
-		value = 25
-	}
-
-	ship_construction_output_multiplier = {
-		value = 15
-	}
-
-	# Added to the default 30/30/20/20 distribution.
-	ship_group_weights = {
-		ship_group_heavy = { value = 120 }
-		ship_group_galley = { value = 20 }
-		ship_group_transport = { value = 90 }
-		ship_group_light = { value = 10 }
-	}
-
-	max_ship_design_complexity = {
-		value = 5
-	}
-
-	target_marine_formation_size = {
-		value = 15
-	}
+	# ---------------------------------------------------------------------
+	# SECRET GOALS
+	# ---------------------------------------------------------------------
 
 	secret_goal_weights = {
 		conquer = 4.0
@@ -141,21 +141,43 @@ ai_strategy_england_unite_britain = {
 		reconcile = 0.0
 	}
 
+
+	# ---------------------------------------------------------------------
+	# WARGOAL PREFERENCES
+	# ---------------------------------------------------------------------
+
 	wargoal_weights = {
 		conquer_state = 5.0
 		return_state = 2.5
+
 		make_protectorate = 2.5
 		make_dominion = 0.5
+
 		reduce_autonomy = 4.0
 		annex_country = 5.0
+
 		force_nationalization = 0.0
 	}
 
+
+	# ---------------------------------------------------------------------
+	# SECRET GOAL SCORING
+	# ---------------------------------------------------------------------
+
 	secret_goal_scores = {
+
+		# Direct conquest is strongly preferred against countries
+		# controlling territory in the British Isles.
 		conquer = {
 			trigger = {
-				NOT = { scope:target_country = { is_subject_of = root } }
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
 				can_reach_target_country = yes
+
 				scope:target_country = {
 					OR = {
 						has_state_in_state_region = STATE_HOME_COUNTIES
@@ -174,14 +196,22 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 			}
+
 			score = {
 				value = 750
 
+				# Scotland is an especially important unification target.
 				if = {
-					limit = { scope:target_country = { c:SCO ?= this } }
+					limit = {
+						scope:target_country = {
+							c:SCO ?= this
+						}
+					}
+
 					add = 250
 				}
 
+				# Irish territories receive an additional priority.
 				if = {
 					limit = {
 						scope:target_country = {
@@ -193,16 +223,27 @@ ai_strategy_england_unite_britain = {
 							}
 						}
 					}
+
 					add = 200
 				}
 			}
 		}
 
+
+		# Smaller independent states in Scotland or Ireland can also
+		# be brought under control through subject relationships.
 		dominate = {
 			trigger = {
-				NOT = { scope:target_country = { is_subject_of = root } }
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
 				can_reach_target_country = yes
+
 				scope:target_country.country_rank <= rank_value:minor_power
+
 				scope:target_country = {
 					OR = {
 						has_state_in_state_region = STATE_LOWLANDS
@@ -214,12 +255,21 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 			}
-			score = { value = 250 }
+
+			score = {
+				value = 250
+			}
 		}
 
+
+		# Existing British-Isles subjects are strategically important
+		# and should be protected until they can be integrated.
 		protect = {
 			trigger = {
-				scope:target_country = { is_subject_of = root }
+				scope:target_country = {
+					is_subject_of = root
+				}
+
 				scope:target_country = {
 					OR = {
 						has_state_in_state_region = STATE_LOWLANDS
@@ -231,12 +281,24 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 			}
-			score = { value = 150 }
+
+			score = {
+				value = 150
+			}
 		}
 	}
 
+
+	# ---------------------------------------------------------------------
+	# WARGOAL SCORING
+	# ---------------------------------------------------------------------
+
 	wargoal_scores = {
+
 		conquer_state = {
+
+			# Increase conquest preference against countries already
+			# selected for conquest.
 			if = {
 				limit = {
 					has_secret_goal = {
@@ -244,9 +306,12 @@ ai_strategy_england_unite_britain = {
 						secret_goal = conquer
 					}
 				}
+
 				add = 300
 			}
 
+
+			# British Isles states are extremely valuable conquest targets.
 			if = {
 				limit = {
 					scope:target_state = {
@@ -267,9 +332,11 @@ ai_strategy_england_unite_britain = {
 						}
 					}
 				}
+
 				add = 600
 			}
 		}
+
 
 		return_state = {
 			if = {
@@ -292,9 +359,11 @@ ai_strategy_england_unite_britain = {
 						}
 					}
 				}
+
 				add = 400
 			}
 		}
+
 
 		make_protectorate = {
 			if = {
@@ -304,14 +373,19 @@ ai_strategy_england_unite_britain = {
 						secret_goal = dominate
 					}
 				}
+
 				add = 200
 			}
 		}
 
+
 		reduce_autonomy = {
 			if = {
 				limit = {
-					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						is_subject_of = root
+					}
+
 					scope:target_country = {
 						OR = {
 							has_state_in_state_region = STATE_LOWLANDS
@@ -323,14 +397,19 @@ ai_strategy_england_unite_britain = {
 						}
 					}
 				}
+
 				add = 450
 			}
 		}
 
+
 		annex_country = {
 			if = {
 				limit = {
-					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						is_subject_of = root
+					}
+
 					scope:target_country = {
 						OR = {
 							has_state_in_state_region = STATE_LOWLANDS
@@ -342,10 +421,19 @@ ai_strategy_england_unite_britain = {
 						}
 					}
 				}
+
 				add = 700
 			}
 		}
 	}
+
+
+	# ---------------------------------------------------------------------
+	# STATE VALUE
+	# ---------------------------------------------------------------------
+	#
+	# British Isles states receive an additional strategic value.
+	#
 
 	state_value = {
 		value = 0
@@ -370,6 +458,7 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 			}
+
 			add = 175
 		}
 
@@ -377,17 +466,30 @@ ai_strategy_england_unite_britain = {
 		max = 200
 	}
 
+
+	# ---------------------------------------------------------------------
+	# AVAILABILITY
+	# ---------------------------------------------------------------------
+
 	possible = {
 		is_subject = no
+
 		OR = {
 			c:ENG ?= this
 			c:GBR ?= this
 		}
 	}
 
+
+	# ---------------------------------------------------------------------
+	# STRATEGY SELECTION WEIGHT
+	# ---------------------------------------------------------------------
+
 	weight = {
 		value = 500
 
+		# Become much more likely to choose this strategy when
+		# important parts of Britain or Ireland remain outside our control.
 		if = {
 			limit = {
 				OR = {
@@ -400,11 +502,17 @@ ai_strategy_england_unite_britain = {
 					NOT = { owns_entire_state_region = STATE_MUNSTER }
 				}
 			}
+
 			add = 500
 		}
 
+		# Britain may still use the strategy to recover lost parts
+		# of the British Isles after formation.
 		if = {
-			limit = { c:GBR ?= this }
+			limit = {
+				c:GBR ?= this
+			}
+
 			add = 100
 		}
 	}
