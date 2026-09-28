@@ -3536,7 +3536,7 @@
 		}
 	}
 	s:STATE_FRANCONIA={
-		region_state:T91={
+		region_state:WBG={
 		}
 		region_state:NUR={
 		}
@@ -3618,12 +3618,12 @@
 				activate_production_methods={ "pm_building_wheat_farm_main_1" "pm_building_grain_farm_plow_0" }
 			}
 		}
-		region_state:T91={
+		region_state:WBG={
 			create_building={
 				building="building_village"
 				add_ownership={
 					country={
-						country="c:T91"
+						country="c:WBG"
 						levels=1
 					}
 				}

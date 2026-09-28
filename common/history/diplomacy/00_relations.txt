@@ -411,7 +411,7 @@
 	c:HES ?= {
 		set_relations = { country = c:FRM value = -200 }
 		set_relations = { country = c:TRI value = -100 }
-		set_relations = { country = c:T91 value = -100 }
+		set_relations = { country = c:WBG value = -100 }
 		set_relations = { country = c:V26 value = -200 }
 	}
 	c:HOL ?= {
@@ -1093,7 +1093,7 @@
 	}
 	c:T79 ?= {
 		set_relations = { country = c:SWI value = -100 }
-		set_relations = { country = c:T91 value = -100 }
+		set_relations = { country = c:WBG value = -100 }
 		set_relations = { country = c:U33 value = -200 }
 		set_relations = { country = c:U51 value = 10 }
 		set_relations = { country = c:V36 value = -200 }
@@ -1139,7 +1139,7 @@
 	c:T90 ?= {
 		set_relations = { country = c:NTO value = -200 }
 	}
-	c:T91 ?= {
+	c:WBG ?= {
 		set_relations = { country = c:HES value = -100 }
 		set_relations = { country = c:T79 value = -100 }
 		set_relations = { country = c:NUR value = -100 }
@@ -1259,7 +1259,7 @@
 		set_relations = { country = c:U59 value = -200 }
 	}
 	c:NUR ?= {
-		set_relations = { country = c:T91 value = -100 }
+		set_relations = { country = c:WBG value = -100 }
 		set_relations = { country = c:U33 value = -100 }
 		set_relations = { country = c:U62 value = -100 }
 	}
@@ -2291,7 +2291,7 @@
 		set_relations = { country = c:V82 value = -100 }
 	}
 	c:BAM ?= {
-		set_relations = { country = c:T91 value = 10 }
+		set_relations = { country = c:WBG value = 10 }
 	}
 	c:X42 ?= {
 		set_relations = { country = c:T30 value = -100 }

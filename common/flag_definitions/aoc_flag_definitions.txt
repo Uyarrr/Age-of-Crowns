@@ -838,3 +838,26 @@ SWE = { # Sweden
 		}
 	}
 }
+
+NUR = { # Teutonic Order
+	flag_definition = {
+		coa = NUR
+		subject_canton = NUR
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+WBG = { # Würzburg
+	flag_definition = {
+		coa = WBG
+		priority = 999
+	}
+	flag_definition = {
+		coa = WBG_grand_duchy
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}

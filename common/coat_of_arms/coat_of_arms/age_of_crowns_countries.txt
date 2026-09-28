@@ -2913,6 +2913,7 @@ SWE_REVOLT = { # Swedish Revolt
 		instance = { position = { 0.5 0.70 } scale = { 0.55 0.55 }  }		
 	}
 }
+
 NUR = { # Nuremberg
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
@@ -2938,5 +2939,30 @@ NUR = { # Nuremberg
 		texture = "ce_border_thin_compony.dds"
 		color1 = color4
 		color2 = color5
+	}	
+}
+
+WBG = { # Würzburg - Bishopric
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chief_indented.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+WBG_grand_duchy = { # Würzburg - Gd Duchy
+	pattern = "pattern_solid.dds"
+	color1 = "red_mid"
+	color2 = hsv360 	{	216	70	50	}
+	color3 = "yellow_light"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3			
 	}	
 }
