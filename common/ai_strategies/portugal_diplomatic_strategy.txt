@@ -37,7 +37,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 		if = {
 			limit = {
-				game_date >= 1500.1.1
+				has_variable = aoc_portuguese_brazil_phase
 				can_reach_target_country = yes
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
@@ -51,6 +51,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 		if = {
 			limit = {
+				has_variable = aoc_portuguese_brazil_phase
 				exists = c:BRZ
 				scope:target_country = { c:BRZ ?= this }
 				NOT = { scope:target_country = { is_subject_of = root } }
@@ -61,7 +62,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 		if = {
 			limit = {
-				game_date >= 1500.1.1
+				has_variable = aoc_portuguese_indian_ocean_phase
 				can_reach_target_country = yes
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
@@ -131,7 +132,7 @@ ai_strategy_portuguese_maritime_empire = {
 			add = 450
 
 			if = {
-				limit = { game_date < 1500.1.1 }
+				limit = { NOT = { has_variable = aoc_portuguese_brazil_phase } }
 				add = 250
 			}
 		}
@@ -142,13 +143,11 @@ ai_strategy_portuguese_maritime_empire = {
 		}
 
 		if = {
-			limit = { scope:region = sr:region_brazil }
-			add = 250
-
-			if = {
-				limit = { game_date >= 1500.1.1 }
-				add = 700
+			limit = {
+				has_variable = aoc_portuguese_brazil_phase
+				scope:region = sr:region_brazil
 			}
+			add = 950
 
 			if = {
 				limit = {
@@ -166,27 +165,42 @@ ai_strategy_portuguese_maritime_empire = {
 		}
 
 		if = {
-			limit = { scope:region = sr:region_southern_africa }
+			limit = {
+				has_variable = aoc_portuguese_indian_ocean_phase
+				scope:region = sr:region_southern_africa
+			}
 			add = 350
 		}
 
 		if = {
-			limit = { scope:region = sr:region_east_africa }
+			limit = {
+				has_variable = aoc_portuguese_indian_ocean_phase
+				scope:region = sr:region_east_africa
+			}
 			add = 300
 		}
 
 		if = {
-			limit = { scope:region = sr:region_arabia }
+			limit = {
+				has_variable = aoc_portuguese_indian_ocean_phase
+				scope:region = sr:region_arabia
+			}
 			add = 175
 		}
 
 		if = {
-			limit = { scope:region = sr:region_south_india }
+			limit = {
+				has_variable = aoc_portuguese_indian_ocean_phase
+				scope:region = sr:region_south_india
+			}
 			add = 300
 		}
 
 		if = {
-			limit = { scope:region = sr:region_indonesia }
+			limit = {
+				has_variable = aoc_portuguese_indian_ocean_phase
+				scope:region = sr:region_indonesia
+			}
 			add = 250
 		}
 
@@ -229,15 +243,23 @@ ai_strategy_portuguese_maritime_empire = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
-				scope:target_country = {
-					any_scope_state = {
-						OR = {
-							region = sr:region_west_africa
-							region = sr:region_brazil
-							region = sr:region_southern_africa
-							region = sr:region_east_africa
-							region = sr:region_south_india
-							region = sr:region_indonesia
+				OR = {
+					scope:target_country = { any_scope_state = { region = sr:region_west_africa } }
+					AND = {
+						has_variable = aoc_portuguese_brazil_phase
+						scope:target_country = { any_scope_state = { region = sr:region_brazil } }
+					}
+					AND = {
+						has_variable = aoc_portuguese_indian_ocean_phase
+						scope:target_country = {
+							any_scope_state = {
+								OR = {
+									region = sr:region_southern_africa
+									region = sr:region_east_africa
+									region = sr:region_south_india
+									region = sr:region_indonesia
+								}
+							}
 						}
 					}
 				}
@@ -247,7 +269,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 				if = {
 					limit = {
-						game_date >= 1500.1.1
+						has_variable = aoc_portuguese_brazil_phase
 						scope:target_country = {
 							any_scope_state = { region = sr:region_brazil }
 						}
@@ -257,6 +279,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 				if = {
 					limit = {
+						has_variable = aoc_portuguese_brazil_phase
 						exists = c:BRZ
 						scope:target_country = { c:BRZ ?= this }
 					}
@@ -274,12 +297,11 @@ ai_strategy_portuguese_maritime_empire = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
-				scope:target_country = {
-					any_scope_state = {
-						OR = {
-							region = sr:region_brazil
-							region = sr:region_west_africa
-						}
+				OR = {
+					scope:target_country = { any_scope_state = { region = sr:region_west_africa } }
+					AND = {
+						has_variable = aoc_portuguese_brazil_phase
+						scope:target_country = { any_scope_state = { region = sr:region_brazil } }
 					}
 				}
 			}
@@ -319,6 +341,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 			if = {
 				limit = {
+					has_variable = aoc_portuguese_brazil_phase
 					scope:target_country = {
 						any_scope_state = { region = sr:region_brazil }
 					}
@@ -342,13 +365,18 @@ ai_strategy_portuguese_maritime_empire = {
 		take_treaty_port = {
 			if = {
 				limit = {
-					scope:target_country = {
-						any_scope_state = {
-							OR = {
-								region = sr:region_west_africa
-								region = sr:region_east_africa
-								region = sr:region_south_india
-								region = sr:region_indonesia
+					OR = {
+						scope:target_country = { any_scope_state = { region = sr:region_west_africa } }
+						AND = {
+							has_variable = aoc_portuguese_indian_ocean_phase
+							scope:target_country = {
+								any_scope_state = {
+									OR = {
+										region = sr:region_east_africa
+										region = sr:region_south_india
+										region = sr:region_indonesia
+									}
+								}
 							}
 						}
 					}
@@ -360,7 +388,7 @@ ai_strategy_portuguese_maritime_empire = {
 		conquer_state = {
 			if = {
 				limit = {
-					game_date >= 1500.1.1
+					has_variable = aoc_portuguese_brazil_phase
 					scope:target_state = { region = sr:region_brazil }
 				}
 				add = 225
@@ -388,7 +416,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 			if = {
 				limit = {
-					game_date >= 1500.1.1
+					has_variable = aoc_portuguese_brazil_phase
 					scope:target_state = { region = sr:region_brazil }
 				}
 				add = 100
@@ -396,9 +424,16 @@ ai_strategy_portuguese_maritime_empire = {
 
 			if = {
 				limit = {
+					scope:target_state = { region = sr:region_west_africa }
+				}
+				add = 50
+			}
+
+			if = {
+				limit = {
+					has_variable = aoc_portuguese_indian_ocean_phase
 					scope:target_state = {
 						OR = {
-							region = sr:region_west_africa
 							region = sr:region_southern_africa
 							region = sr:region_east_africa
 						}
@@ -409,6 +444,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 			if = {
 				limit = {
+					has_variable = aoc_portuguese_indian_ocean_phase
 					scope:target_state = {
 						OR = {
 							region = sr:region_south_india
@@ -433,7 +469,7 @@ ai_strategy_portuguese_maritime_empire = {
 		value = 400
 
 		if = {
-			limit = { game_date < 1500.1.1 }
+			limit = { NOT = { has_variable = aoc_portuguese_brazil_phase } }
 			add = 100
 		}
 

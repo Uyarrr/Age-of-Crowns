@@ -5,6 +5,19 @@ colonization_rush = {
 
 	trigger = {
 		has_technology_researched = colonization
+		# Countries with a historical national route receive their own event instead.
+		NOR = {
+			c:ENG ?= this
+			c:GBR ?= this
+			was_formed_from = ENG
+			c:CAS ?= this
+			c:SPA ?= this
+			was_formed_from = CAS
+			c:POR ?= this
+			was_formed_from = POR
+			c:FRA ?= this
+			was_formed_from = FRA
+		}
 	}
 
 	event_image = {

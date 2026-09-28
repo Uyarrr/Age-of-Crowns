@@ -16,39 +16,53 @@ ai_strategy_spanish_new_world_empire = {
 	recklessness = { value = 0.75 }
 
 	aggression = {
-		value = 0.35
+		value = 0.20
 
+		# Phase I: establish island bases before attempting the conquest of Mexico.
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
 				scope:target_country = {
 					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_latin_america
-							is_in_geographic_region = geographic_region_colonial_new_spain
-						}
+						is_in_geographic_region = geographic_region_aoc_spanish_caribbean
 					}
 				}
 			}
-			add = 2.25
+			add = 3.50
 		}
 
+		# Phase II: the mainland opens after Spain establishes its Caribbean bases.
 		if = {
 			limit = {
+				has_variable = aoc_spanish_mainland_phase
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				scope:target_country = {
+					any_scope_state = {
+						is_in_geographic_region = geographic_region_aoc_spanish_mainland
+					}
+				}
+			}
+			add = 2.75
+		}
+
+		# Phase III: after a mainland foothold, attention broadens southward.
+		if = {
+			limit = {
+				has_variable = aoc_spanish_south_america_phase
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = yes
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
-							region = sr:region_central_america
 							region = sr:region_gran_colombia
 							region = sr:region_andes
 						}
 					}
 				}
 			}
-			add = 1.0
+			add = 1.75
 		}
 
 		if = {
@@ -127,17 +141,26 @@ ai_strategy_spanish_new_world_empire = {
 		}
 
 		if = {
-			limit = { scope:region = sr:region_gran_colombia }
+			limit = {
+				has_variable = aoc_spanish_south_america_phase
+				scope:region = sr:region_gran_colombia
+			}
 			add = 600
 		}
 
 		if = {
-			limit = { scope:region = sr:region_andes }
+			limit = {
+				has_variable = aoc_spanish_south_america_phase
+				scope:region = sr:region_andes
+			}
 			add = 500
 		}
 
 		if = {
-			limit = { scope:region = sr:region_la_plata }
+			limit = {
+				has_variable = aoc_spanish_southern_cone_phase
+				scope:region = sr:region_la_plata
+			}
 			add = 350
 		}
 
@@ -200,15 +223,31 @@ ai_strategy_spanish_new_world_empire = {
 				can_reach_target_country = yes
 				scope:target_country = {
 					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_latin_america
-							is_in_geographic_region = geographic_region_colonial_new_spain
-						}
+						is_in_geographic_region = geographic_region_americas
 					}
 				}
 			}
 			score = {
-				value = 250
+				value = 50
+
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean }
+						}
+					}
+					add = 450
+				}
+
+				if = {
+					limit = {
+						has_variable = aoc_spanish_mainland_phase
+						scope:target_country = {
+							any_scope_state = { is_in_geographic_region = geographic_region_aoc_spanish_mainland }
+						}
+					}
+					add = 350
+				}
 
 				if = {
 					limit = {
@@ -240,17 +279,25 @@ ai_strategy_spanish_new_world_empire = {
 				}
 			}
 			score = {
-				value = 125
+				value = 25
 
 				if = {
 					limit = {
 						scope:target_country = {
-							any_scope_state = {
-								region = sr:region_central_america
-							}
+							any_scope_state = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean }
 						}
 					}
-					add = 150
+					add = 475
+				}
+
+				if = {
+					limit = {
+						has_variable = aoc_spanish_mainland_phase
+						scope:target_country = {
+							any_scope_state = { is_in_geographic_region = geographic_region_aoc_spanish_mainland }
+						}
+					}
+					add = 375
 				}
 			}
 		}
@@ -324,20 +371,31 @@ ai_strategy_spanish_new_world_empire = {
 			if = {
 				limit = {
 					scope:target_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_latin_america
-							is_in_geographic_region = geographic_region_colonial_new_spain
-						}
+						is_in_geographic_region = geographic_region_aoc_spanish_caribbean
 					}
 				}
-				add = 225
+				add = 500
 			}
 
 			if = {
 				limit = {
-					scope:target_state = { region = sr:region_central_america }
+					has_variable = aoc_spanish_mainland_phase
+					scope:target_state = { is_in_geographic_region = geographic_region_aoc_spanish_mainland }
 				}
-				add = 125
+				add = 400
+			}
+
+			if = {
+				limit = {
+					has_variable = aoc_spanish_south_america_phase
+					scope:target_state = {
+						OR = {
+							region = sr:region_gran_colombia
+							region = sr:region_andes
+						}
+					}
+				}
+				add = 300
 			}
 		}
 
@@ -376,24 +434,26 @@ ai_strategy_spanish_new_world_empire = {
 		if = {
 			limit = {
 				can_reach_target_state = yes
-				scope:target_state = {
-					OR = {
-						is_in_geographic_region = geographic_region_latin_america
-						is_in_geographic_region = geographic_region_colonial_new_spain
-					}
-				}
-			}
-			add = 75
-
-			if = {
-				limit = {
-					scope:target_state = { region = sr:region_central_america }
-				}
-				add = 50
 			}
 
 			if = {
 				limit = {
+					scope:target_state = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean }
+				}
+				add = 250
+			}
+
+			if = {
+				limit = {
+					has_variable = aoc_spanish_mainland_phase
+					scope:target_state = { is_in_geographic_region = geographic_region_aoc_spanish_mainland }
+				}
+				add = 200
+			}
+
+			if = {
+				limit = {
+					has_variable = aoc_spanish_south_america_phase
 					scope:target_state = {
 						OR = {
 							region = sr:region_gran_colombia
@@ -401,12 +461,12 @@ ai_strategy_spanish_new_world_empire = {
 						}
 					}
 				}
-				add = 35
+				add = 125
 			}
 		}
 
 		min = 0
-		max = 200
+		max = 300
 	}
 
 	possible = {
@@ -414,6 +474,7 @@ ai_strategy_spanish_new_world_empire = {
 		OR = {
 			c:CAS ?= this
 			c:SPA ?= this
+			was_formed_from = CAS
 		}
 	}
 

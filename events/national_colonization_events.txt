@@ -1,0 +1,403 @@
+namespace = national_colonization
+
+# Castile and Spain enter the New World through the Caribbean basin. The AI
+# strategy separately delays its strong preference for mainland Mexico.
+national_colonization.1 = {
+	type = country_event
+
+	title = national_colonization.1.t
+	desc = national_colonization.1.d
+	flavor = national_colonization.1.f
+
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		is_subject = no
+		OR = {
+			c:CAS ?= this
+			c:SPA ?= this
+			was_formed_from = CAS
+		}
+	}
+
+	option = {
+		name = national_colonization.1.a
+		default_option = yes
+		ai_chance = { base = 100 }
+		set_variable = aoc_spanish_caribbean_phase
+		add_involvement = {
+			strategic_region = sr:region_central_america
+			value = 2000
+		}
+		add_modifier = { name = colonial_rush years = 10 }
+		activate_law = law_type:law_colonial_resettlement
+	}
+
+	option = {
+		name = national_colonization.1.b
+		ai_chance = { base = 0 }
+	}
+}
+
+# Portugal's first oceanic priority is the West African route. A foothold there
+# dynamically opens the Brazilian phase through a dedicated follow-up event.
+national_colonization.2 = {
+	type = country_event
+
+	title = national_colonization.2.t
+	desc = national_colonization.2.d
+	flavor = national_colonization.2.f
+
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		is_subject = no
+		OR = {
+			c:POR ?= this
+			was_formed_from = POR
+		}
+	}
+
+	option = {
+		name = national_colonization.2.a
+		default_option = yes
+		ai_chance = { base = 100 }
+		set_variable = aoc_portuguese_african_phase
+		add_involvement = {
+			strategic_region = sr:region_west_africa
+			value = 2000
+		}
+		add_modifier = { name = colonial_rush years = 10 }
+		activate_law = law_type:law_colonial_resettlement
+	}
+
+	option = {
+		name = national_colonization.2.b
+		ai_chance = { base = 0 }
+	}
+}
+
+# France enters the Atlantic contest after completing three connected Era III
+# colonial technologies: New World, Colonization, and Colonial Trade Networks.
+national_colonization.3 = {
+	type = country_event
+
+	title = national_colonization.3.t
+	desc = national_colonization.3.d
+	flavor = national_colonization.3.f
+
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		has_technology_researched = colonial_trade_networks
+		is_subject = no
+		OR = {
+			c:FRA ?= this
+			was_formed_from = FRA
+		}
+	}
+
+	option = {
+		name = national_colonization.3.a
+		default_option = yes
+		ai_chance = { base = 100 }
+		set_variable = aoc_french_canada_phase
+		add_involvement = {
+			strategic_region = sr:region_canada
+			value = 2000
+		}
+		add_modifier = { name = colonial_rush years = 10 }
+		activate_law = law_type:law_colonial_resettlement
+	}
+
+	option = {
+		name = national_colonization.3.b
+		ai_chance = { base = 0 }
+	}
+}
+
+# Spain: Caribbean foothold -> mainland -> northern South America -> southern cone.
+national_colonization.4 = {
+	type = country_event
+	title = national_colonization.4.t
+	desc = national_colonization.4.d
+	flavor = national_colonization.4.f
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		OR = {
+			has_variable = aoc_spanish_caribbean_phase
+			c:CAS ?= this
+			c:SPA ?= this
+			was_formed_from = CAS
+		}
+		NOT = { has_variable = aoc_spanish_mainland_phase }
+		any_state = {
+			count >= 2
+			is_in_geographic_region = geographic_region_aoc_spanish_caribbean
+			owner = { OR = { this = root is_subject_of = root } }
+		}
+	}
+
+	option = {
+		name = national_colonization.4.a
+		default_option = yes
+		set_variable = aoc_spanish_caribbean_phase
+		set_variable = aoc_spanish_mainland_phase
+	}
+}
+
+national_colonization.5 = {
+	type = country_event
+	title = national_colonization.5.t
+	desc = national_colonization.5.d
+	flavor = national_colonization.5.f
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		OR = {
+			has_variable = aoc_spanish_mainland_phase
+			c:CAS ?= this
+			c:SPA ?= this
+			was_formed_from = CAS
+		}
+		NOT = { has_variable = aoc_spanish_south_america_phase }
+		any_state = {
+			count >= 3
+			is_in_geographic_region = geographic_region_aoc_spanish_mainland
+			owner = { OR = { this = root is_subject_of = root } }
+		}
+	}
+
+	option = {
+		name = national_colonization.5.a
+		default_option = yes
+		set_variable = aoc_spanish_caribbean_phase
+		set_variable = aoc_spanish_mainland_phase
+		set_variable = aoc_spanish_south_america_phase
+		add_involvement = { strategic_region = sr:region_gran_colombia value = 2000 }
+		add_involvement = { strategic_region = sr:region_andes value = 1500 }
+	}
+}
+
+national_colonization.6 = {
+	type = country_event
+	title = national_colonization.6.t
+	desc = national_colonization.6.d
+	flavor = national_colonization.6.f
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		OR = {
+			has_variable = aoc_spanish_south_america_phase
+			c:CAS ?= this
+			c:SPA ?= this
+			was_formed_from = CAS
+		}
+		NOT = { has_variable = aoc_spanish_southern_cone_phase }
+		any_state = {
+			count >= 3
+			OR = { region = sr:region_gran_colombia region = sr:region_andes }
+			owner = { OR = { this = root is_subject_of = root } }
+		}
+	}
+
+	option = {
+		name = national_colonization.6.a
+		default_option = yes
+		set_variable = aoc_spanish_caribbean_phase
+		set_variable = aoc_spanish_mainland_phase
+		set_variable = aoc_spanish_south_america_phase
+		set_variable = aoc_spanish_southern_cone_phase
+		add_involvement = { strategic_region = sr:region_la_plata value = 2000 }
+	}
+}
+
+# Portugal: an African foothold opens Brazil; a Brazilian foothold opens the
+# route around Africa toward India and the East Indies.
+national_colonization.7 = {
+	type = country_event
+	title = national_colonization.7.t
+	desc = national_colonization.7.d
+	flavor = national_colonization.7.f
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		OR = {
+			has_variable = aoc_portuguese_african_phase
+			c:POR ?= this
+			was_formed_from = POR
+		}
+		NOT = { has_variable = aoc_portuguese_brazil_phase }
+		any_state = {
+			count >= 2
+			region = sr:region_west_africa
+			owner = { OR = { this = root is_subject_of = root } }
+		}
+	}
+
+	option = {
+		name = national_colonization.7.a
+		default_option = yes
+		set_variable = aoc_portuguese_african_phase
+		set_variable = aoc_portuguese_brazil_phase
+		add_involvement = { strategic_region = sr:region_brazil value = 2000 }
+	}
+}
+
+national_colonization.8 = {
+	type = country_event
+	title = national_colonization.8.t
+	desc = national_colonization.8.d
+	flavor = national_colonization.8.f
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		OR = {
+			has_variable = aoc_portuguese_brazil_phase
+			c:POR ?= this
+			was_formed_from = POR
+		}
+		NOT = { has_variable = aoc_portuguese_indian_ocean_phase }
+		any_state = {
+			count >= 2
+			region = sr:region_brazil
+			owner = { OR = { this = root is_subject_of = root } }
+		}
+	}
+
+	option = {
+		name = national_colonization.8.a
+		default_option = yes
+		set_variable = aoc_portuguese_african_phase
+		set_variable = aoc_portuguese_brazil_phase
+		set_variable = aoc_portuguese_indian_ocean_phase
+		add_involvement = { strategic_region = sr:region_southern_africa value = 1500 }
+		add_involvement = { strategic_region = sr:region_south_india value = 1500 }
+	}
+}
+
+# France: Canadian settlement unlocks the Atlantic coast, then a broader
+# Atlantic presence unlocks the Caribbean.
+national_colonization.9 = {
+	type = country_event
+	title = national_colonization.9.t
+	desc = national_colonization.9.d
+	flavor = national_colonization.9.f
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		has_technology_researched = colonial_trade_networks
+		OR = {
+			has_variable = aoc_french_canada_phase
+			c:FRA ?= this
+			was_formed_from = FRA
+		}
+		NOT = { has_variable = aoc_french_atlantic_phase }
+		any_state = {
+			count >= 2
+			region = sr:region_canada
+			owner = { OR = { this = root is_subject_of = root } }
+		}
+	}
+
+	option = {
+		name = national_colonization.9.a
+		default_option = yes
+		set_variable = aoc_french_canada_phase
+		set_variable = aoc_french_atlantic_phase
+		add_involvement = { strategic_region = sr:region_atlantic_coast value = 2000 }
+	}
+}
+
+national_colonization.10 = {
+	type = country_event
+	title = national_colonization.10.t
+	desc = national_colonization.10.d
+	flavor = national_colonization.10.f
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
+
+	trigger = {
+		has_technology_researched = colonization
+		has_technology_researched = colonial_trade_networks
+		OR = {
+			has_variable = aoc_french_atlantic_phase
+			c:FRA ?= this
+			was_formed_from = FRA
+		}
+		NOT = { has_variable = aoc_french_caribbean_phase }
+		any_state = {
+			count >= 2
+			region = sr:region_atlantic_coast
+			owner = { OR = { this = root is_subject_of = root } }
+		}
+	}
+
+	option = {
+		name = national_colonization.10.a
+		default_option = yes
+		set_variable = aoc_french_canada_phase
+		set_variable = aoc_french_atlantic_phase
+		set_variable = aoc_french_caribbean_phase
+		add_involvement = { strategic_region = sr:region_central_america value = 1500 }
+	}
+}

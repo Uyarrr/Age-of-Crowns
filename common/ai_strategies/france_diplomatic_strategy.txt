@@ -40,6 +40,19 @@
 
 		if = {
 			limit = {
+				has_technology_researched = colonization
+				has_technology_researched = colonial_trade_networks
+				can_reach_target_country = yes
+				NOT = { scope:target_country = { is_subject_of = root } }
+				scope:target_country = {
+					any_scope_state = { region = sr:region_canada }
+				}
+			}
+			add = 1.25
+		}
+
+		if = {
+			limit = {
 				scope:target_country = { c:ENG ?= this }
 			}
 			add = 2.5
@@ -109,6 +122,72 @@
 	building_group_weights = {
 		bg_army = 1.75
 		bg_navy = 1.15
+	}
+
+	# France joins after developing a mature Era III colonial program. Later
+	# priorities unlock from real colonial footholds rather than calendar dates.
+	colonial_interest_ratio = {
+		value = 0.10
+		if = {
+			limit = {
+				has_technology_researched = colonization
+				has_technology_researched = colonial_trade_networks
+			}
+			add = 0.55
+		}
+	}
+
+	strategic_region_scores = {
+		if = {
+			limit = {
+				has_technology_researched = colonization
+				has_technology_researched = colonial_trade_networks
+				scope:region = sr:region_canada
+			}
+			add = 850
+		}
+
+		if = {
+			limit = {
+				has_variable = aoc_french_atlantic_phase
+				has_technology_researched = colonization
+				scope:region = sr:region_atlantic_coast
+			}
+			add = 300
+		}
+
+		if = {
+			limit = {
+				has_variable = aoc_french_caribbean_phase
+				has_technology_researched = colonization
+				scope:region = sr:region_central_america
+			}
+			add = 200
+		}
+	}
+
+	state_value = {
+		value = 0
+		if = {
+			limit = {
+				has_technology_researched = colonization
+				has_technology_researched = colonial_trade_networks
+				can_reach_target_state = yes
+				scope:target_state = { region = sr:region_canada }
+			}
+			add = 175
+		}
+		if = {
+			limit = {
+				has_variable = aoc_french_atlantic_phase
+				has_technology_researched = colonization
+				can_reach_target_state = yes
+				scope:target_state = { region = sr:region_atlantic_coast }
+			}
+			add = 75
+		}
+		min = 0
+		max = 250
 	}
 
 	secret_goal_weights = {
@@ -341,7 +420,10 @@
 
 	possible = {
 		is_subject = no
-		c:FRA ?= this
+		OR = {
+			c:FRA ?= this
+			was_formed_from = FRA
+		}
 	}
 
 	weight = {

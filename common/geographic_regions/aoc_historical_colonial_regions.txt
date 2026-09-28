@@ -1,0 +1,43 @@
+# State-level regions used to keep Spanish AI priorities historical inside the
+# combined Central America strategic region.
+geographic_region_aoc_spanish_caribbean = {
+	short_key = "aoc_spanish_caribbean"
+	state_regions = {
+		STATE_WESTERN_CUBA
+		STATE_CENTRAL_CUBA
+		STATE_EASTERN_CUBA
+		STATE_PUERTO_RICO
+		STATE_SANTO_DOMINGO
+		STATE_HAITI
+		STATE_JAMAICA
+		STATE_WEST_INDIES
+		STATE_BAHAMAS
+	}
+}
+
+geographic_region_aoc_spanish_mainland = {
+	short_key = "aoc_spanish_mainland"
+	state_regions = {
+		STATE_BAJA_CALIFORNIA
+		STATE_YUCATAN
+		STATE_CHIAPAS
+		STATE_JALISCO
+		STATE_ZACATECAS
+		STATE_GUERRERO
+		STATE_MEXICO
+		STATE_CHIHUAHUA
+		STATE_DURANGO
+		STATE_RIO_GRANDE
+		STATE_SONORA
+		STATE_VERACRUZ
+		STATE_SINALOA
+		STATE_BAJIO
+		STATE_OAXACA
+		STATE_GUATEMALA
+		STATE_HONDURAS
+		STATE_NICARAGUA
+		STATE_COSTA_RICA
+		STATE_SAN_SALVADOR
+		STATE_PANAMA
+	}
+}

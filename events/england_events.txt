@@ -1218,6 +1218,7 @@ england.200 = {
 		has_technology_researched = colonization
 		OR = {
 			c:ENG ?= this
+			c:GBR ?= this
 			was_formed_from = ENG
 		}
 	}
@@ -1225,6 +1226,7 @@ england.200 = {
 	option = {
 		name = england_new_world_canada.a
 		default_option = yes
+		ai_chance = { base = 100 }
 
 		add_involvement = {
 			strategic_region = sr:region_canada
@@ -1232,13 +1234,15 @@ england.200 = {
 		}
 
 		add_modifier = {
-			name = canada_expedition
+			name = colonial_rush
 			years = 10
 		}
+		activate_law = law_type:law_colonial_resettlement
 	}
 
 	option = {
 		name = england_new_world_canada.b
+		ai_chance = { base = 0 }
 	}
 }
 
@@ -1265,6 +1269,7 @@ england.201 = {
 		has_technology_researched = colonization
 		OR = {
 			c:ENG ?= this
+			c:GBR ?= this
 			was_formed_from = ENG
 		}
 		any_state = {
