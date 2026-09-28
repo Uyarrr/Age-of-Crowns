@@ -29,16 +29,34 @@ je_war_of_the_roses_balance_bar = {
 			}
 			if = {
 				limit = { legitimacy >= 60 }
-				add = {
-					desc = "war_of_the_roses_high_legitimacy_tt"
-					value = 0.25
+				if = {
+					limit = { has_variable = wotr_dynasty_york }
+					subtract = {
+						desc = "war_of_the_roses_high_legitimacy_tt"
+						value = 0.25
+					}
+				}
+				else = {
+					add = {
+						desc = "war_of_the_roses_high_legitimacy_tt"
+						value = 0.25
+					}
 				}
 			}
 			if = {
 				limit = { legitimacy < 40 }
-				subtract = {
-					desc = "war_of_the_roses_low_legitimacy_tt"
-					value = 0.35
+				if = {
+					limit = { has_variable = wotr_dynasty_york }
+					add = {
+						desc = "war_of_the_roses_low_legitimacy_tt"
+						value = 0.35
+					}
+				}
+				else = {
+					subtract = {
+						desc = "war_of_the_roses_low_legitimacy_tt"
+						value = 0.35
+					}
 				}
 			}
 			if = {

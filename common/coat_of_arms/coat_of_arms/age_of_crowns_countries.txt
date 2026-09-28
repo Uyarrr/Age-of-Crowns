@@ -2634,3 +2634,309 @@ BAM = { # Bamberg
 		color2 = color4
 	}	
 }
+
+BOH = { # Bohemia
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_queue_forchee_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}
+}
+BOH_hussite = { # Bohemia with Hussite chalice
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_queue_forchee_crowned_wide_holding_chalice.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+BOH_emperor = { # Bohemia - Imperial eagle & escutcheon variant
+	pattern = "pattern_special_eagle_escutcheon_heart_40.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+	color4 = hsv360 	{	0	20	20	}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = hsv360 	{	42	65	60	}
+		color2 = hsv360 	{	42	65	60	}
+		instance = { position = { 0.390 0.147 } scale = { 0.35 0.35 }  }
+		instance = { position = { 0.610 0.147 } scale = { 0.35 0.35 }  }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "yellow_pale"
+		color2 = "yellow_pale"
+		instance = { position = { 0.390 0.147 } scale = { 0.30 0.30 }  }
+		instance = { position = { 0.610 0.147 } scale = { 0.30 0.30 }  }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_doubleheaded_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "white_secondary"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red_mid"
+		color2 = "red_mid"
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_queue_forchee_crowned_shield.dds"
+		color1 = "white"
+		color2 = "yellow_light"
+		color3 = "yellow_light"
+		instance = { position = { 0.5 0.505 } scale = { 0.36 0.36 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color4
+		color2 = color4
+		mask = { 3 }
+	}
+}
+SWE = { # Sweden
+	pattern = "pattern_solid.dds"
+	color1 = "azure"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crown_stylized.dds"
+		color1 = "yellow"
+		color2 = "red"
+		color3 = "white"
+		instance = { position = { 0.29 0.34 } scale = { 0.55 0.55 }  }
+		instance = { position = { 0.71 0.34 } scale = { 0.55 0.55 }  }
+		instance = { position = { 0.5 0.70 } scale = { 0.55 0.55 }  }			
+	}
+}
+SWE_cross = { # Sweden 16th c.
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_cross_scandinavian.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+SWE_bjalbo = { # Sweden Bjalbo (late variant, bends undy and no semy)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_bends_03_thin_bjalbo.dds"
+		color1 = color3
+		color2 = color1
+		color3 = "red_light"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+SWE_bjalbo_simple = { # Sweden Bjalbo (late variant, bends undy and no semy)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_bends_03_thin_sinister.dds"
+		color1 = color3
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+SWE_bjalbo_late = { # Sweden Bjalbo (late variant, bends undy and no semy)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_bends_03_thin_undy_sinister.dds"
+		color1 = color3
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+SWE_quarterly = { # Sweden - Quarterly variant (no semy on the quarterly designs)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+    sub = {
+        parent = "sub_SWE_crowns_q1" # Q1 Sweden
+		instance = { scale = { 0.49 0.49 } offset = { 0.0 0.0 } }
+    }
+    sub = {
+        parent = "sub_SWE_crowns_q4" # Q4 Sweden
+		instance = { scale = { 0.49 0.49 } offset = { 0.51 0.51 } }
+    }	
+    sub = {
+        parent = "SWE_bjalbo_simple" # Q2 Bjalbo
+		instance = { scale = { 0.49 0.49 } offset = { 0.51 0.0 } }
+		instance = { scale = { 0.49 0.49 } offset = { 0.0 0.51 } }
+    }
+    sub = {
+        parent = "sub_quarterly_overall_cross_patty"
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+    }
+}
+SWE_quarterly_late = { # Sweden - Quarterly variant - As used by successor dynasties (bends undy)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+    sub = {
+        parent = "sub_SWE_crowns_q1" # Q1 Sweden
+		instance = { scale = { 0.49 0.49 } offset = { 0.0 0.0 } }
+    }
+    sub = {
+        parent = "sub_SWE_crowns_q4" # Q4 Sweden
+		instance = { scale = { 0.49 0.49 } offset = { 0.51 0.51 } }
+    }	
+    sub = {
+        parent = "SWE_bjalbo_late" # Q2 Bjalbo
+		instance = { scale = { 0.49 0.49 } offset = { 0.51 0.0 } }
+		instance = { scale = { 0.49 0.49 } offset = { 0.0 0.51 } }
+    }
+    sub = {
+        parent = "sub_quarterly_overall_cross_patty"
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+    }
+}
+SWE_quarterly_mecklenburg = { # Sweden - Quarterly - Mecklenburg escutcheon
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+    sub = {
+        parent = "sub_SWE_crowns_q1" # Q1 Sweden
+		instance = { scale = { 0.49 0.49 } offset = { 0.0 0.0 } }
+    }
+    sub = {
+        parent = "sub_SWE_crowns_q4" # Q4 Sweden
+		instance = { scale = { 0.49 0.49 } offset = { 0.51 0.51 } }
+    }	
+    sub = {
+        parent = "SWE_bjalbo_late" # Q2 Bjalbo
+		instance = { scale = { 0.49 0.49 } offset = { 0.51 0.0 } }
+		instance = { scale = { 0.49 0.49 } offset = { 0.0 0.51 } }
+    }
+    sub = {
+        parent = "sub_quarterly_overall_cross_patty"
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+    }
+    sub = {
+        parent = "sub_frame_shield"
+		instance = { scale = { 0.5 0.5 } offset = { 0.25 0.25 } }
+		color1 = hsv360 	{	42	80	78	}
+		color2 = hsv360 	{	42	65	50	}
+    }
+    sub = {
+        parent = "sub_mecklenburg_shield"
+		instance = { scale = { 0.42 0.42 } offset = { 0.29 0.29 } }
+    }
+}
+SWE_revolutionary = { # Simple plausible triband design
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color1
+	}
+}
+
+SWE_REVOLT = { # Swedish Revolt
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crown_stylized.dds"
+		color1 = "yellow"
+		color2 = "red"
+		color3 = "white"
+		instance = { position = { 0.29 0.34 } scale = { 0.55 0.55 }  }
+		instance = { position = { 0.71 0.34 } scale = { 0.55 0.55 }  }
+		instance = { position = { 0.5 0.70 } scale = { 0.55 0.55 }  }		
+	}
+}
+NUR = { # Nuremberg
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_mid"
+	color4 = "white"
+	color5 = "red"
+	
+	colored_emblem = {
+		texture = "ce_frame_circle.dds" # Eye bg for lion & border
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.478 0.218 } scale = { 0.02 0.02 } }		
+	}		
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.51 } scale = { 0.88 0.88 } }		
+	}
+	colored_emblem = {
+		texture = "ce_border_thin_compony.dds"
+		color1 = color4
+		color2 = color5
+	}	
+}

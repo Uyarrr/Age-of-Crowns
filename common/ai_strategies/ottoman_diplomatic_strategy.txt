@@ -9,48 +9,118 @@
 
 	undesirable_infamy_level = { value = 65 }
 	unacceptable_infamy_level = { value = 95 }
+
 	ideological_opinion_effect_mult = { value = 0.75 }
+
 	wargoal_maneuvers_fraction = { value = 0.35 }
+
 	diplomatic_play_neutrality = { value = 5 }
 	diplomatic_play_boldness = { value = 65 }
+
 	recklessness = { value = 1.35 }
 
-	aggression = {
-		value = 1.5
 
-		if = {
-			limit = {
-				scope:target_country = { c:BYZ ?= this }
-			}
-			add = 4.0
-		}
+	# ---------------------------------------------------------------------
+	# AGGRESSION
+	# ---------------------------------------------------------------------
+	#
+	# Ottoman expansion follows the frontier.
+	#
+	# PRIORITY:
+	# 1. Byzantium
+	# 2. Claimed frontier territory
+	# 3. Frontier countries in Ottoman expansion regions
+	# 4. Weaker frontier powers
+	#
+	# Distant countries should generally be ignored even when technically
+	# reachable through naval or diplomatic-play mechanics.
+	#
+
+	aggression = {
+		value = 0.15
+
+
+		# -------------------------------------------------------------
+		# BYZANTIUM
+		# -------------------------------------------------------------
+		#
+		# Byzantium is the major historical / strategic exception.
+		#
 
 		if = {
 			limit = {
 				scope:target_country = {
-					any_scope_state = {
-						has_claim_by = root
+					c:BYZ ?= this
+				}
+
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
 					}
 				}
 			}
-			add = 2.5
+
+			add = 6.0
 		}
+
+
+		# -------------------------------------------------------------
+		# CLAIMED FRONTIER TERRITORY
+		# -------------------------------------------------------------
+		#
+		# Claims matter strongly ONLY when they are actually on the
+		# Ottoman frontier.
+		#
 
 		if = {
 			limit = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
-			}
-			add = 1.5
-		}
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
 
-		if = {
-			limit = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
 				scope:target_country = {
 					any_scope_state = {
+						has_claim_by = root
+
+						any_neighbouring_state = {
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
+					}
+				}
+			}
+
+			add = 3.0
+		}
+
+
+		# -------------------------------------------------------------
+		# REGIONAL FRONTIER EXPANSION
+		# -------------------------------------------------------------
+		#
+		# Being in one of these regions is NOT enough.
+		# The target must actually border Ottoman territory or an
+		# Ottoman subject.
+		#
+
+		if = {
+			limit = {
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
+				scope:target_country = {
+					any_scope_state = {
+
 						OR = {
 							is_in_geographic_region = geographic_region_balkans
 							is_in_geographic_region = geographic_region_near_east
@@ -59,102 +129,342 @@
 							is_in_geographic_region = geographic_region_north_africa
 							is_in_geographic_region = geographic_region_greater_persia
 						}
-					}
-				}
-			}
-			add = 1.0
-		}
 
-		if = {
-			limit = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
-				NOT = { has_strategic_adjacency = scope:target_country }
-				scope:target_country = {
-					NOT = {
-						any_scope_state = {
-							has_claim_by = root
+						any_neighbouring_state = {
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
 						}
 					}
 				}
 			}
-			add = -1.5
+
+			add = 1.75
 		}
+
+
+		# -------------------------------------------------------------
+		# WEAKER FRONTIER POWERS
+		# -------------------------------------------------------------
 
 		if = {
 			limit = {
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
 				scope:target_country.country_rank < root.country_rank
+
+				scope:target_country = {
+					any_scope_state = {
+						any_neighbouring_state = {
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
+					}
+				}
 			}
-			add = 0.5
+
+			add = 0.50
 		}
+
+
+		# -------------------------------------------------------------
+		# OPPORTUNISM
+		# -------------------------------------------------------------
+		#
+		# Only relevant against countries already on the frontier.
+		#
 
 		if = {
 			limit = {
-				scope:target_country = { is_subject_of = root }
+				scope:target_country = {
+					is_in_war = yes
+
+					any_scope_state = {
+						any_neighbouring_state = {
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
+					}
+				}
 			}
-			multiply = 0.1
+
+			add = 0.25
 		}
+
+
+		if = {
+			limit = {
+				scope:target_country = {
+					num_allies < 1
+
+					any_scope_state = {
+						any_neighbouring_state = {
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
+					}
+				}
+			}
+
+			add = 0.20
+		}
+
+
+		# -------------------------------------------------------------
+		# SUBJECTS
+		# -------------------------------------------------------------
+
+		if = {
+			limit = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+
+			multiply = 0.05
+		}
+
+
+		# -------------------------------------------------------------
+		# IRRELEVANT / DISTANT TARGETS
+		# -------------------------------------------------------------
+		#
+		# If the target is:
+		# - not Byzantium
+		# - not holding a claimed frontier state
+		# - not holding a desired regional frontier state
+		#
+		# then Ottoman aggression toward it should be negligible.
+		#
+
+		if = {
+			limit = {
+				NOT = {
+					scope:target_country = {
+						c:BYZ ?= this
+					}
+				}
+
+				NOT = {
+					scope:target_country = {
+						any_scope_state = {
+							has_claim_by = root
+
+							any_neighbouring_state = {
+								OR = {
+									owner = root
+
+									owner = {
+										is_subject_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+
+				NOT = {
+					scope:target_country = {
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_balkans
+								is_in_geographic_region = geographic_region_near_east
+								is_in_geographic_region = geographic_region_arabia
+								is_in_geographic_region = geographic_region_nile_basin
+								is_in_geographic_region = geographic_region_north_africa
+								is_in_geographic_region = geographic_region_greater_persia
+							}
+
+							any_neighbouring_state = {
+								OR = {
+									owner = root
+
+									owner = {
+										is_subject_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			multiply = 0.05
+		}
+
+
+		max = 7.0
 	}
 
-	building_group_weights = {
-		bg_army = 1.85
-		bg_navy = 1.20
-	}
+
+	# ---------------------------------------------------------------------
+	# SECRET GOAL WEIGHTS
+	# ---------------------------------------------------------------------
 
 	secret_goal_weights = {
 		conquer = 3.5
 		dominate = 0.65
+
 		protect = 0.25
+
 		befriend = 0.0
 		reconcile = 0.0
 	}
 
+
+	# ---------------------------------------------------------------------
+	# WARGOAL WEIGHTS
+	# ---------------------------------------------------------------------
+
 	wargoal_weights = {
 		conquer_state = 4.0
 		return_state = 3.0
+
 		make_protectorate = 0.65
 		make_dominion = 0.25
+
 		reduce_autonomy = 1.25
 		annex_country = 1.75
+
 		force_nationalization = 0.0
 	}
 
+
+	# ---------------------------------------------------------------------
+	# SECRET GOAL SCORING
+	# ---------------------------------------------------------------------
+
 	secret_goal_scores = {
+
+
+		# -------------------------------------------------------------
+		# CONQUER
+		# -------------------------------------------------------------
+
 		conquer = {
 			trigger = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
-				scope:target_country.country_rank <= root.country_rank
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
+				OR = {
+
+					# Byzantium is always strategically important.
+					scope:target_country = {
+						c:BYZ ?= this
+					}
+
+
+					# Claimed frontier territory.
+					scope:target_country = {
+						any_scope_state = {
+							has_claim_by = root
+
+							any_neighbouring_state = {
+								OR = {
+									owner = root
+
+									owner = {
+										is_subject_of = root
+									}
+								}
+							}
+						}
+					}
+
+
+					# Regional frontier expansion.
+					scope:target_country = {
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_balkans
+								is_in_geographic_region = geographic_region_near_east
+								is_in_geographic_region = geographic_region_arabia
+								is_in_geographic_region = geographic_region_nile_basin
+								is_in_geographic_region = geographic_region_north_africa
+								is_in_geographic_region = geographic_region_greater_persia
+							}
+
+							any_neighbouring_state = {
+								OR = {
+									owner = root
+
+									owner = {
+										is_subject_of = root
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 
 			score = {
-				value = 150
+				value = 100
 
+
+				# Byzantium overwhelmingly takes priority.
 				if = {
 					limit = {
-						scope:target_country = { c:BYZ ?= this }
+						scope:target_country = {
+							c:BYZ ?= this
+						}
 					}
+
 					add = 1500
 				}
 
+
+				# Claimed frontier states.
 				if = {
 					limit = {
 						scope:target_country = {
 							any_scope_state = {
 								has_claim_by = root
+
+								any_neighbouring_state = {
+									OR = {
+										owner = root
+
+										owner = {
+											is_subject_of = root
+										}
+									}
+								}
 							}
 						}
 					}
-					add = 400
+
+					add = 600
 				}
 
-				if = {
-					limit = {
-						has_strategic_adjacency = scope:target_country
-					}
-					add = 175
-				}
 
+				# Desired-region frontier targets.
 				if = {
 					limit = {
 						scope:target_country = {
@@ -167,86 +477,85 @@
 									is_in_geographic_region = geographic_region_north_africa
 									is_in_geographic_region = geographic_region_greater_persia
 								}
+
+								any_neighbouring_state = {
+									OR = {
+										owner = root
+
+										owner = {
+											is_subject_of = root
+										}
+									}
+								}
 							}
 						}
 					}
-					add = 150
+
+					add = 300
 				}
 
+
+				# Prefer weaker targets.
 				if = {
 					limit = {
-						scope:target_country.country_rank <= rank_value:minor_power
+						scope:target_country.country_rank < root.country_rank
 					}
+
 					add = 100
 				}
 
+
+				# Opportunistic wars.
 				if = {
 					limit = {
-						NOT = { has_strategic_adjacency = scope:target_country }
 						scope:target_country = {
-							NOT = {
-								any_scope_state = {
-									has_claim_by = root
-								}
-							}
+							is_in_war = yes
 						}
 					}
-					add = -200
+
+					add = 75
+				}
+
+
+				if = {
+					limit = {
+						scope:target_country = {
+							num_allies < 1
+						}
+					}
+
+					add = 50
 				}
 			}
 		}
+
+
+		# -------------------------------------------------------------
+		# DOMINATE
+		# -------------------------------------------------------------
+		#
+		# Small regional frontier countries can be made subjects instead
+		# of conquered directly.
+		#
+		# Claimed land and Byzantium should be conquered instead.
+		#
 
 		dominate = {
 			trigger = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
-				has_strategic_adjacency = scope:target_country
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
 				scope:target_country.country_rank <= rank_value:minor_power
-			}
 
-			score = {
-				value = 40
-
-				if = {
-					limit = {
-						scope:target_country = {
-							NOT = {
-								any_scope_state = {
-									has_claim_by = root
-								}
-							}
-						}
+				NOT = {
+					scope:target_country = {
+						c:BYZ ?= this
 					}
-					add = 80
 				}
 
-				if = {
-					limit = {
-						scope:target_country = { c:BYZ ?= this }
-					}
-					multiply = 0
-				}
-			}
-		}
-
-		protect = {
-			trigger = {
-				scope:target_country = { is_subject_of = root }
-			}
-			score = { value = 125 }
-		}
-
-		befriend = {
-			trigger = {
-				scope:target_country = { is_subject_of = root }
-			}
-			score = {
-				value = 30
-			}
-		}
-
-		none = {
-			trigger = {
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
@@ -257,17 +566,153 @@
 							is_in_geographic_region = geographic_region_north_africa
 							is_in_geographic_region = geographic_region_greater_persia
 						}
+
+						any_neighbouring_state = {
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
+					}
+
+					NOT = {
+						any_scope_state = {
+							has_claim_by = root
+						}
 					}
 				}
 			}
+
 			score = {
-				value = -150
+				value = 100
+
+
+				if = {
+					limit = {
+						scope:target_country = {
+							num_allies < 1
+						}
+					}
+
+					add = 75
+				}
+
+
+				if = {
+					limit = {
+						scope:target_country = {
+							is_in_war = yes
+						}
+					}
+
+					add = 50
+				}
+			}
+		}
+
+
+		# -------------------------------------------------------------
+		# PROTECT SUBJECTS
+		# -------------------------------------------------------------
+
+		protect = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+
+			score = {
+				value = 125
+			}
+		}
+
+
+		# -------------------------------------------------------------
+		# IGNORE DISTANT / IRRELEVANT COUNTRIES
+		# -------------------------------------------------------------
+
+		none = {
+			trigger = {
+				NOT = {
+					scope:target_country = {
+						is_subject_of = root
+					}
+				}
+
+				NOT = {
+					scope:target_country = {
+						c:BYZ ?= this
+					}
+				}
+
+				NOT = {
+					scope:target_country = {
+						any_scope_state = {
+							has_claim_by = root
+
+							any_neighbouring_state = {
+								OR = {
+									owner = root
+
+									owner = {
+										is_subject_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+
+				NOT = {
+					scope:target_country = {
+						any_scope_state = {
+							OR = {
+								is_in_geographic_region = geographic_region_balkans
+								is_in_geographic_region = geographic_region_near_east
+								is_in_geographic_region = geographic_region_arabia
+								is_in_geographic_region = geographic_region_nile_basin
+								is_in_geographic_region = geographic_region_north_africa
+								is_in_geographic_region = geographic_region_greater_persia
+							}
+
+							any_neighbouring_state = {
+								OR = {
+									owner = root
+
+									owner = {
+										is_subject_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			score = {
+				value = 1000
 			}
 		}
 	}
 
+
+	# ---------------------------------------------------------------------
+	# WARGOAL SCORING
+	# ---------------------------------------------------------------------
+
 	wargoal_scores = {
+
+
+		# -------------------------------------------------------------
+		# CONQUER STATE
+		# -------------------------------------------------------------
+
 		conquer_state = {
+
 			if = {
 				limit = {
 					has_secret_goal = {
@@ -275,36 +720,57 @@
 						secret_goal = conquer
 					}
 				}
+
 				add = 250
 			}
 
+
+			# Byzantium remains the highest priority.
 			if = {
 				limit = {
-					scope:target_country = { c:BYZ ?= this }
+					scope:target_country = {
+						c:BYZ ?= this
+					}
 				}
+
 				add = 750
 			}
 
+
+			# Claims matter strongly.
 			if = {
 				limit = {
 					scope:target_state = {
 						has_claim_by = root
 					}
 				}
-				add = 400
+
+				add = 500
 			}
 
+
+			# Contiguous states are strongly preferred.
 			if = {
 				limit = {
 					scope:target_state = {
 						any_neighbouring_state = {
-							owner = root
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
 						}
 					}
 				}
-				add = 250
+
+				add = 300
 			}
 
+
+			# Desired expansion regions only receive a bonus when
+			# the target state is actually on the frontier.
 			if = {
 				limit = {
 					scope:target_state = {
@@ -316,51 +782,113 @@
 							is_in_geographic_region = geographic_region_north_africa
 							is_in_geographic_region = geographic_region_greater_persia
 						}
-					}
-				}
-				add = 100
-			}
 
-			if = {
-				limit = {
-					NOT = {
-						scope:target_state = {
-							any_neighbouring_state = {
+						any_neighbouring_state = {
+							OR = {
 								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
 							}
 						}
 					}
+				}
+
+				add = 150
+			}
+
+
+			# Strongly punish disconnected conquest.
+			if = {
+				limit = {
+					NOT = {
+						scope:target_country = {
+							c:BYZ ?= this
+						}
+					}
+
 					NOT = {
 						scope:target_state = {
-							has_claim_by = root
+							any_neighbouring_state = {
+								OR = {
+									owner = root
+
+									owner = {
+										is_subject_of = root
+									}
+								}
+							}
 						}
 					}
 				}
-				add = -175
+
+				add = -600
 			}
 		}
 
+
+		# -------------------------------------------------------------
+		# RETURN STATE
+		# -------------------------------------------------------------
+
 		return_state = {
+
 			if = {
 				limit = {
 					scope:target_state = {
 						has_claim_by = root
 					}
 				}
-				add = 350
+
+				add = 400
 			}
+
 
 			if = {
 				limit = {
 					scope:target_state = {
 						any_neighbouring_state = {
-							owner = root
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
 						}
 					}
 				}
-				add = 150
+
+				add = 200
+			}
+
+
+			if = {
+				limit = {
+					NOT = {
+						scope:target_state = {
+							any_neighbouring_state = {
+								OR = {
+									owner = root
+
+									owner = {
+										is_subject_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+
+				add = -300
 			}
 		}
+
+
+		# -------------------------------------------------------------
+		# PROTECTORATE
+		# -------------------------------------------------------------
 
 		make_protectorate = {
 			if = {
@@ -369,11 +897,18 @@
 						who = scope:target_country
 						secret_goal = dominate
 					}
+
 					scope:target_country.country_rank <= rank_value:minor_power
 				}
-				add = 75
+
+				add = 100
 			}
 		}
+
+
+		# -------------------------------------------------------------
+		# DOMINION
+		# -------------------------------------------------------------
 
 		make_dominion = {
 			if = {
@@ -382,145 +917,239 @@
 						who = scope:target_country
 						secret_goal = dominate
 					}
+
 					scope:target_country.country_rank <= rank_value:minor_power
 				}
+
 				add = 25
 			}
 		}
 
+
+		# -------------------------------------------------------------
+		# SUBJECT MANAGEMENT
+		# -------------------------------------------------------------
+
 		reduce_autonomy = {
 			if = {
 				limit = {
-					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						is_subject_of = root
+					}
 				}
+
 				add = 125
 			}
 		}
 
+
 		annex_country = {
 			if = {
 				limit = {
-					scope:target_country = { is_subject_of = root }
+					scope:target_country = {
+						is_subject_of = root
+					}
+
 					scope:target_country.country_rank <= rank_value:minor_power
 				}
+
 				add = 175
 			}
 		}
 	}
 
+
+	# ---------------------------------------------------------------------
+	# STATE VALUE
+	# ---------------------------------------------------------------------
+	#
+	# State value also follows the Ottoman frontier.
+	#
+
 	state_value = {
 		value = 0
 
+
+		# Ottoman-owned states retain normal strategic relevance.
 		if = {
 			limit = {
-				OR = {
-					scope:target_state = { owner = root }
-					can_reach_target_state = yes
+				scope:target_state = {
+					owner = root
 				}
 			}
 
-			if = {
-				limit = {
-					scope:target_state = {
-						has_claim_by = root
-					}
-				}
-				add = 75
-			}
-
-			if = {
-				limit = {
-					scope:target_country = { c:BYZ ?= this }
-				}
-				add = 150
-			}
-
-			if = {
-				limit = {
-					scope:target_state = {
-						any_neighbouring_state = {
-							owner = root
-						}
-					}
-				}
-				add = 50
-			}
-
-			if = {
-				limit = {
-					scope:target_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_balkans
-							is_in_geographic_region = geographic_region_near_east
-							is_in_geographic_region = geographic_region_arabia
-							is_in_geographic_region = geographic_region_nile_basin
-							is_in_geographic_region = geographic_region_north_africa
-							is_in_geographic_region = geographic_region_greater_persia
-						}
-					}
-				}
-				add = 40
-			}
+			add = 25
 		}
 
+
+		# Claims.
+		if = {
+			limit = {
+				scope:target_state = {
+					has_claim_by = root
+				}
+			}
+
+			add = 100
+		}
+
+
+		# Byzantium.
+		if = {
+			limit = {
+				scope:target_country = {
+					c:BYZ ?= this
+				}
+			}
+
+			add = 150
+		}
+
+
+		# Border states.
+		if = {
+			limit = {
+				scope:target_state = {
+					any_neighbouring_state = {
+						OR = {
+							owner = root
+
+							owner = {
+								is_subject_of = root
+							}
+						}
+					}
+				}
+			}
+
+			add = 75
+		}
+
+
+		# Desired regions receive additional value ONLY when contiguous.
+		if = {
+			limit = {
+				scope:target_state = {
+					OR = {
+						is_in_geographic_region = geographic_region_balkans
+						is_in_geographic_region = geographic_region_near_east
+						is_in_geographic_region = geographic_region_arabia
+						is_in_geographic_region = geographic_region_nile_basin
+						is_in_geographic_region = geographic_region_north_africa
+						is_in_geographic_region = geographic_region_greater_persia
+					}
+
+					any_neighbouring_state = {
+						OR = {
+							owner = root
+
+							owner = {
+								is_subject_of = root
+							}
+						}
+					}
+				}
+			}
+
+			add = 50
+		}
+
+
 		min = 0
-		max = 200
+		max = 250
 	}
+
+
+	# ---------------------------------------------------------------------
+	# AVAILABILITY
+	# ---------------------------------------------------------------------
 
 	possible = {
 		is_subject = no
+
 		c:TUR ?= this
 	}
+
+
+	# ---------------------------------------------------------------------
+	# STRATEGY WEIGHT
+	# ---------------------------------------------------------------------
 
 	weight = {
 		value = 100
 
+
+		# Early Ottoman expansion period.
 		if = {
 			limit = {
 				game_date < 1475.1.1
 			}
+
 			add = 200
 		}
 
+
+		# Byzantium existing independently makes this strategy
+		# overwhelmingly important.
 		if = {
 			limit = {
 				exists = c:BYZ
-				c:BYZ = {
-					NOT = { is_subject_of = root }
-				}
-			}
-			add = 300
-		}
 
-		if = {
-			limit = {
-				any_country = {
-					NOT = { this = root }
-					any_scope_state = {
-						has_claim_by = root
+				c:BYZ = {
+					NOT = {
+						is_subject_of = root
 					}
 				}
 			}
+
+			add = 400
+		}
+
+
+		# Claimed frontier territory.
+		if = {
+			limit = {
+				any_country = {
+					NOT = {
+						this = root
+					}
+
+					NOT = {
+						is_subject_of = root
+					}
+
+					any_scope_state = {
+						has_claim_by = root
+
+						any_neighbouring_state = {
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
+					}
+				}
+			}
+
 			add = 150
 		}
 
-		if = {
-			limit = {
-				any_country = {
-					NOT = { this = root }
-					NOT = { is_subject_of = root }
-					has_strategic_adjacency = root
-				}
-			}
-			add = 75
-		}
 
+		# There are still valid regional frontier expansion targets.
 		if = {
 			limit = {
 				any_country = {
-					NOT = { this = root }
-					NOT = { is_subject_of = root }
-					has_strategic_adjacency = root
+					NOT = {
+						this = root
+					}
+
+					NOT = {
+						is_subject_of = root
+					}
+
 					any_scope_state = {
 						OR = {
 							is_in_geographic_region = geographic_region_balkans
@@ -530,10 +1159,21 @@
 							is_in_geographic_region = geographic_region_north_africa
 							is_in_geographic_region = geographic_region_greater_persia
 						}
+
+						any_neighbouring_state = {
+							OR = {
+								owner = root
+
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
 					}
 				}
 			}
-			add = 75
+
+			add = 150
 		}
 	}
 }

@@ -1371,15 +1371,6 @@ BOB ?= {
 	capital = STATE_EQUATEUR
 }
 
-BOH ?= {
-	color = { 161 139 40 }
-	country_type = recognized
-	tier = principality
-	cultures = { czech }
-	religion = catholic
-	capital = STATE_BOHEMIA
-}
-
 BOL ?= {
 	color = { 219 182 182 }
 	country_type = recognized
@@ -8901,24 +8892,6 @@ SUR ?= {
 	capital = STATE_BUNDELKHAND
 }
 
-SWE ?= {
-	color = { 87 130 199 }
-	country_type = recognized
-	tier = principality
-	cultures = { swedish }
-	religion = catholic
-	capital = STATE_SVEALAND
-}
-
-SWI ?= {
-	color = { 165 45 38 }
-	country_type = recognized
-	tier = kingdom
-	cultures = { alemannic }
-	religion = catholic
-	capital = STATE_WEST_SWITZERLAND
-}
-
 SWT ?= {
 	color = { 244 196 22 }
 	country_type = unrecognized
@@ -9558,15 +9531,6 @@ T70 ?= {
 	capital = STATE_TRABZON
 }
 
-TRI ?= {
-	color = { 208 104 44 }
-	country_type = recognized
-	tier = grand_principality
-	cultures = { north_german }
-	religion = catholic
-	capital = STATE_NORTH_RHINE
-}
-
 T72 ?= {
 	color = { 50 166 72 }
 	country_type = unrecognized
@@ -10043,15 +10007,6 @@ TRH ?= {
 	capital = STATE_UZBEKIA
 }
 
-TRI ?= {
-	color = { 180 137 148 }
-	country_type = unrecognized
-	tier = principality
-	cultures = { maghrebi }
-	religion = sunni
-	capital = STATE_TRIPOLI
-}
-
 TRK ?= {
 	color = { 103 84 190 }
 	country_type = decentralized
@@ -10342,15 +10297,6 @@ U18 ?= {
 	cultures = { muskogean }
 	religion = animist
 	capital = STATE_MISSISSIPPI
-}
-
-U19 ?= {
-	color = { 243 112 15 }
-	country_type = recognized
-	tier = city_state
-	cultures = { south_german }
-	religion = catholic
-	capital = STATE_FRANCONIA
 }
 
 U20 ?= {

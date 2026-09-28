@@ -695,18 +695,6 @@ VEN = {
 	is_named_from_capital = yes
 }
 
-BOH = {
-	color = { 161 139 40 }
-
-	country_type = recognized
-
-	tier = principality
-
-	cultures = { czech }
-	capital = STATE_BOHEMIA
-	is_named_from_capital = yes
-}
-
 KRA = {
 	color = { 138  193  231 }
 
@@ -783,18 +771,6 @@ SLV = {
 
 	cultures = { slovak }
 	capital = STATE_SLOVAKIA
-}
-
-SWI = {
-	color = { 165 45 38 }
-
-	country_type = recognized
-
-	tier = kingdom
-
-	capital = STATE_WEST_SWITZERLAND
-	cultures = { alemannic francoprovencal }
-	religion = protestant
 }
 
 TRS = {

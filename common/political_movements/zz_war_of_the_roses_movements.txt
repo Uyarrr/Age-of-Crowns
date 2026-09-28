@@ -1,6 +1,12 @@
 movement_war_of_roses_yorkist = {
 	category = movement_category_ideological
 
+	# A dynastic claimant is not appeased by the laws of the reigning dynasty.
+	# Keeping these at zero prevents unrelated law approval from blocking the
+	# 100% activism that the engine requires to launch a brewing revolution.
+	law_enactment_radicalism_multiplier = 0
+	active_law_radicalism_multiplier = 0
+
 	ideology = ideology_legitimist_movement
 	character_ideologies = {
 		ideology_royalist
@@ -224,7 +230,9 @@ movement_war_of_roses_yorkist = {
 				}
 			}
 			add = {
-				value = 0.25
+				# At the final crisis stage the brewing revolution must be able to
+				# pass the engine's 100% activism requirement and actually launch.
+				value = 1.00
 				desc = "WAR_OF_THE_ROSES_WAR_WARNING"
 			}
 		}
@@ -265,6 +273,12 @@ movement_war_of_roses_yorkist = {
 
 movement_war_of_roses_lancastrian = {
 	category = movement_category_ideological
+
+	# A dynastic claimant is not appeased by the laws of the reigning dynasty.
+	# Keeping these at zero prevents unrelated law approval from blocking the
+	# 100% activism that the engine requires to launch a brewing revolution.
+	law_enactment_radicalism_multiplier = 0
+	active_law_radicalism_multiplier = 0
 
 	ideology = ideology_legitimist_movement
 	character_ideologies = {
@@ -491,7 +505,9 @@ movement_war_of_roses_lancastrian = {
 				}
 			}
 			add = {
-				value = 0.25
+				# At the final crisis stage the brewing revolution must be able to
+				# pass the engine's 100% activism requirement and actually launch.
+				value = 1.00
 				desc = "WAR_OF_THE_ROSES_WAR_WARNING"
 			}
 		}
@@ -532,6 +548,12 @@ movement_war_of_roses_lancastrian = {
 
 movement_war_of_roses_tudor = {
 	category = movement_category_ideological
+
+	# A dynastic claimant is not appeased by the laws of the reigning dynasty.
+	# Keeping these at zero prevents unrelated law approval from blocking the
+	# 100% activism that the engine requires to launch a brewing revolution.
+	law_enactment_radicalism_multiplier = 0
+	active_law_radicalism_multiplier = 0
 
 	ideology = ideology_legitimist_movement
 	character_ideologies = {
@@ -715,7 +737,9 @@ movement_war_of_roses_tudor = {
 				}
 			}
 			add = {
-				value = 0.25
+				# At the final crisis stage the brewing revolution must be able to
+				# pass the engine's 100% activism requirement and actually launch.
+				value = 1.00
 				desc = "WAR_OF_THE_ROSES_WAR_WARNING"
 			}
 		}

@@ -914,3 +914,53 @@ NRM ?= {
 	religion = catholic
 	capital = STATE_NORMANDY
 }
+
+# Switzerland
+SWI ?= {
+	color = { 165 45 38 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { alemannic }
+	religion = catholic
+	capital = STATE_WEST_SWITZERLAND
+}
+
+# Trier
+TRI ?= {
+	color = { 208 104 44 }
+	country_type = recognized
+	tier = grand_principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_NORTH_RHINE
+}
+
+# Bohemia
+BOH ?= {
+	color = { 161 139 40 }
+	country_type = recognized
+	tier = principality
+	cultures = { czech }
+	religion = catholic
+	capital = STATE_BOHEMIA
+}
+
+# Sweden
+SWE ?= {
+	color = { 87 130 199 }
+	country_type = recognized
+	tier = principality
+	cultures = { swedish }
+	religion = catholic
+	capital = STATE_SVEALAND
+}
+
+# Nurenberg
+NUR ?= {
+	color = { 243 112 15 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_german }
+	religion = catholic
+	capital = STATE_FRANCONIA
+}

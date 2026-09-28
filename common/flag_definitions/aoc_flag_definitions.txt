@@ -772,3 +772,69 @@ SER = { # Serbia
 		}
 	}
 }
+
+BOH = { # Bohemia
+	flag_definition = {
+		coa = BOH
+		priority = 999
+	}
+	flag_definition = {
+		coa = BOH_emperor
+		priority = 0 # Commented out for now (update to DH if restored)
+		trigger = {
+			coa_def_hre_emperor_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BOH_hussite
+		priority = 150
+		trigger = {
+			coa_def_hussite_trigger = yes
+		}
+	}
+}
+
+SWE = { # Sweden
+	flag_definition = {
+		coa = SWE
+		priority = 999
+	}
+	flag_definition = {
+		coa = SWE_quarterly
+		subject_canton = SWE
+		priority = 10
+		trigger = {
+			coa_def_bjalbo_dynasty_trigger = yes
+			coa_def_discovery_age_3_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SWE_quarterly_late
+		subject_canton = SWE
+		priority = 11
+		trigger = {
+			coa_def_bjalbo_dynasty_trigger = no
+			coa_def_discovery_age_3_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SWE_quarterly_mecklenburg
+		subject_canton = SWE
+		priority = 12
+		trigger = {
+			coa_def_mecklenburg_dynasty_trigger = yes
+			coa_def_discovery_age_3_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = SWE_cross
+		priority = 50
+		trigger = {
+			OR = {
+				coa_def_reformation_age_4_trigger = yes
+				coa_def_republic_trigger = yes
+			}
+			coa_def_absolute_monarchy_trigger = no # keeping quarterly designs for absolute
+		}
+	}
+}
