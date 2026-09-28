@@ -611,3 +611,42 @@ je_england_3 = {
 	
 	weight = 300
 }
+
+# Colonization of Canada
+# England and Great Britain establish the historical Canadian colonies one at a time,
+# instead of consolidating the entire strategic region into a generic colonial state.
+je_england_colonization_of_canada = {
+	icon = "gfx/interface/icons/invention_icons/colonial_canada.dds"
+
+	should_be_pinned_by_default = yes
+	group = je_group_historical_content
+
+	is_shown_in_lobby = {
+		c:ENG ?= this
+	}
+
+	is_shown_when_inactive = {
+		OR = {
+			c:ENG ?= this
+			c:GBR ?= this
+			was_formed_from = ENG
+		}
+	}
+
+	possible = {
+		OR = {
+			c:ENG ?= this
+			c:GBR ?= this
+			was_formed_from = ENG
+		}
+		is_subject = no
+	}
+
+	scripted_button = je_england_canada_new_brunswick
+	scripted_button = je_england_canada_nova_scotia
+	scripted_button = je_england_canada_quebec
+	scripted_button = je_england_canada_ontario
+	scripted_button = je_england_canada_hudsons_bay
+
+	weight = 350
+}

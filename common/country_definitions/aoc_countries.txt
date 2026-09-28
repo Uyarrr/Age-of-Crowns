@@ -974,3 +974,13 @@ WBG ?= {
 	religion = catholic
 	capital = STATE_FRANCONIA
 }
+
+# Salzburg
+SLZ ?= {
+	color = { 129 109 9 }
+	country_type = recognized
+	tier = city_state
+	cultures = { south_german }
+	religion = catholic
+	capital = STATE_TYROL
+}

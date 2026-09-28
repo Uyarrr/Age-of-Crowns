@@ -1,0 +1,273 @@
+# England's Canada-only alternative to the generic colonial administration.
+# These are the five British subjects present in Canada at the vanilla start.
+
+je_england_canada_new_brunswick = {
+	name = "je_england_canada_new_brunswick"
+	desc = "je_england_canada_new_brunswick_desc"
+	visible = { NOT = { exists = c:NBS } }
+	possible = {
+		NOT = { exists = c:NBS }
+		has_technology_researched = colonization
+		owns_entire_state_region = STATE_NEW_BRUNSWICK
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+	ai_chance = { value = 100 }
+	effect = {
+		create_country = {
+			tag = NBS
+			origin = root
+			province = p:xC91FD7
+			province = p:xEE2FFF
+			province = p:x5A0CA8
+			province = p:x71A015
+			province = p:x326F36
+			province = p:xF01C37
+			province = p:x70A0CE
+			province = p:x484A09
+			province = p:x082153
+			province = p:x62FC6A
+			province = p:xDE0FD5
+			province = p:xBB0F05
+			province = p:x7040C0
+			province = p:x4D9EEE
+			province = p:x8ED253
+			province = p:xD090A6
+			province = p:x20CF66
+			province = p:x66DFE7
+			province = p:x493CD4
+			province = p:x740012
+			province = p:x8E553E
+			province = p:x70C040
+			on_created = {
+				set_variable = england_canada_new_brunswick_established
+				activate_law = law_type:law_colonial_administration
+				add_modifier = { name = colonial_administration }
+				every_scope_state = { effect_destroy_colonial_office = yes }
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = { country = c:NBS type = colony }
+		}
+	}
+}
+
+je_england_canada_nova_scotia = {
+	name = "je_england_canada_nova_scotia"
+	desc = "je_england_canada_nova_scotia_desc"
+	visible = { NOT = { exists = c:NVS } }
+	possible = {
+		NOT = { exists = c:NVS }
+		has_technology_researched = colonization
+		exists = c:NBS
+		c:NBS ?= { is_subject_of = root }
+		p:x085C83.state.owner = root
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+	ai_chance = { value = 100 }
+	effect = {
+		create_country = {
+			tag = NVS
+			origin = root
+			province = p:x085C83
+			province = p:xEC5B4B
+			province = p:x406FBA
+			province = p:xC060C0
+			province = p:xE4892F
+			province = p:x99CA75
+			province = p:x380F20
+			province = p:xB95DB3
+			province = p:x905458
+			province = p:x8060C0
+			province = p:x80AA26
+			province = p:x6B5822
+			province = p:xCA0399
+			province = p:x63E1C4
+			province = p:xF95D47
+			province = p:x8CFA32
+			province = p:xEAFA99
+			province = p:xF04040
+			on_created = {
+				set_variable = england_canada_nova_scotia_established
+				activate_law = law_type:law_colonial_administration
+				add_modifier = { name = colonial_administration }
+				every_scope_state = { effect_destroy_colonial_office = yes }
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = { country = c:NVS type = colony }
+		}
+	}
+}
+
+je_england_canada_quebec = {
+	name = "je_england_canada_quebec"
+	desc = "je_england_canada_quebec_desc"
+	visible = { NOT = { exists = c:QUE } }
+	possible = {
+		NOT = { exists = c:QUE }
+		has_technology_researched = colonization
+		owns_entire_state_region = STATE_QUEBEC
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+	ai_chance = { value = 100 }
+	effect = {
+		create_country = {
+			tag = QUE
+			origin = root
+			state = s:STATE_QUEBEC.region_state:ROOT
+			on_created = {
+				set_variable = england_canada_quebec_established
+				activate_law = law_type:law_colonial_administration
+				add_modifier = { name = colonial_administration }
+				every_scope_state = { effect_destroy_colonial_office = yes }
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = { country = c:QUE type = colony }
+		}
+	}
+}
+
+je_england_canada_ontario = {
+	name = "je_england_canada_ontario"
+	desc = "je_england_canada_ontario_desc"
+	visible = { NOT = { exists = c:ONT } }
+	possible = {
+		NOT = { exists = c:ONT }
+		has_technology_researched = colonization
+		owns_entire_state_region = STATE_ONTARIO
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+	ai_chance = { value = 100 }
+	effect = {
+		create_country = {
+			tag = ONT
+			origin = root
+			state = s:STATE_ONTARIO.region_state:ROOT
+			on_created = {
+				set_variable = england_canada_ontario_established
+				activate_law = law_type:law_colonial_administration
+				add_modifier = { name = colonial_administration }
+				every_scope_state = { effect_destroy_colonial_office = yes }
+			}
+		}
+		hidden_effect = {
+			create_diplomatic_pact = { country = c:ONT type = colony }
+		}
+	}
+}
+
+je_england_canada_hudsons_bay = {
+	name = "je_england_canada_hudsons_bay"
+	desc = "je_england_canada_hudsons_bay_desc"
+	visible = {
+		OR = {
+			NOT = { exists = c:HBC }
+			c:HBC ?= { is_subject_of = root }
+		}
+	}
+	possible = {
+		has_technology_researched = colonization
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+		OR = {
+			# Found the company from any controlled interior state.
+			AND = {
+				NOT = { exists = c:HBC }
+				any_scope_state = {
+					OR = {
+						state_region = s:STATE_MANITOBA
+						state_region = s:STATE_SASKATCHEWAN
+						state_region = s:STATE_ALBERTA
+						state_region = s:STATE_NORTHWEST_TERRITORIES
+						state_region = s:STATE_YUKON_TERRITORY
+						state_region = s:STATE_NUNAVUT
+					}
+				}
+			}
+			# Once founded, every later use transfers all newly controlled interior states.
+			AND = {
+				exists = c:HBC
+				c:HBC ?= { is_subject_of = root }
+				any_scope_state = {
+					OR = {
+						state_region = s:STATE_MANITOBA
+						state_region = s:STATE_SASKATCHEWAN
+						state_region = s:STATE_ALBERTA
+						state_region = s:STATE_NORTHWEST_TERRITORIES
+						state_region = s:STATE_YUKON_TERRITORY
+						state_region = s:STATE_NUNAVUT
+					}
+				}
+			}
+		}
+	}
+	ai_chance = { value = 100 }
+	effect = {
+		if = {
+			limit = { exists = c:HBC }
+			every_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_MANITOBA
+						state_region = s:STATE_SASKATCHEWAN
+						state_region = s:STATE_ALBERTA
+						state_region = s:STATE_NORTHWEST_TERRITORIES
+						state_region = s:STATE_YUKON_TERRITORY
+						state_region = s:STATE_NUNAVUT
+					}
+				}
+				effect_destroy_colonial_office = yes
+				set_state_owner = c:HBC
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_MANITOBA
+						state_region = s:STATE_SASKATCHEWAN
+						state_region = s:STATE_ALBERTA
+						state_region = s:STATE_NORTHWEST_TERRITORIES
+						state_region = s:STATE_YUKON_TERRITORY
+						state_region = s:STATE_NUNAVUT
+					}
+				}
+				save_scope_as = england_canada_hudsons_bay_founding_state
+			}
+			create_country = {
+				tag = HBC
+				origin = root
+				state = scope:england_canada_hudsons_bay_founding_state
+				on_created = {
+					set_variable = england_canada_hudsons_bay_established
+					activate_law = law_type:law_colonial_administration
+					activate_law = law_type:law_frontier_colonization
+					add_modifier = { name = colonial_administration }
+					every_scope_state = { effect_destroy_colonial_office = yes }
+				}
+			}
+			hidden_effect = {
+				create_diplomatic_pact = { country = c:HBC type = chartered_company }
+			}
+			every_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_MANITOBA
+						state_region = s:STATE_SASKATCHEWAN
+						state_region = s:STATE_ALBERTA
+						state_region = s:STATE_NORTHWEST_TERRITORIES
+						state_region = s:STATE_YUKON_TERRITORY
+						state_region = s:STATE_NUNAVUT
+					}
+				}
+				effect_destroy_colonial_office = yes
+				set_state_owner = c:HBC
+			}
+		}
+	}
+}

@@ -9702,15 +9702,6 @@ T90 ?= {
 	capital = STATE_SOUTH_ISLAND
 }
 
-WBG ?= {
-	color = { 147 146 106 }
-	country_type = recognized
-	tier = principality
-	cultures = { south_german }
-	religion = catholic
-	capital = STATE_FRANCONIA
-}
-
 T92 ?= {
 	color = { 220 130 127 }
 	country_type = decentralized
@@ -10873,15 +10864,6 @@ U83 ?= {
 	cultures = { malagasy }
 	religion = animist
 	capital = STATE_SOUTH_MADAGASCAR
-}
-
-U85 ?= {
-	color = { 129 109 9 }
-	country_type = recognized
-	tier = city_state
-	cultures = { south_german }
-	religion = catholic
-	capital = STATE_TYROL
 }
 
 U86 ?= {

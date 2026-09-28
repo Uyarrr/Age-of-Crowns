@@ -518,6 +518,14 @@ je_colonial_administration_button_canada = {
 
 	visible = {
 		is_not_in_geographic_region = geographic_region_north_america
+		# England and Great Britain organize Canada through their dedicated journal entry.
+		NOT = {
+			OR = {
+				c:ENG ?= this
+				c:GBR ?= this
+				was_formed_from = ENG
+			}
+		}
 		any_scope_state = {
 			region = sr:region_canada
 		}
@@ -648,6 +656,10 @@ je_colonial_administration_button_atlantic_coast = {
 		is_not_in_geographic_region = geographic_region_north_america
 		any_scope_state = {
 			region = sr:region_atlantic_coast
+			OR = {
+				NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+				NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+			}
 		}
 		NOT = {
 			any_subject_or_below = {
@@ -661,6 +673,10 @@ je_colonial_administration_button_atlantic_coast = {
 	possible = {
 		any_scope_state = {
 			region = sr:region_atlantic_coast
+			OR = {
+				NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+				NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+			}
 			count >= 1
 		}
 
@@ -692,12 +708,20 @@ je_colonial_administration_button_atlantic_coast = {
 			limit = {
 				any_scope_state = {
 					region = sr:region_atlantic_coast
+					OR = {
+						NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 					has_decree = decree_greener_grass_campaign
 				}
 			}
 			random_scope_state = {
 				limit = {
 					region = sr:region_atlantic_coast
+					OR = {
+						NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 					has_decree = decree_greener_grass_campaign
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
@@ -707,6 +731,10 @@ je_colonial_administration_button_atlantic_coast = {
 			random_scope_state = {
 				limit = {
 					region = sr:region_atlantic_coast
+					OR = {
+						NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
 			}
@@ -714,6 +742,10 @@ je_colonial_administration_button_atlantic_coast = {
 		every_scope_state = {
 			limit = {
 				region = sr:region_atlantic_coast
+				OR = {
+					NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+					NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+				}
 			}
 			set_variable = state_to_cede
 		}
@@ -776,6 +808,10 @@ je_colonial_administration_button_pacific_coast = {
 		is_not_in_geographic_region = geographic_region_north_america
 		any_scope_state = {
 			region = sr:region_pacific_coast
+			OR = {
+				NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+				NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+			}
 		}
 		NOT = {
 			any_subject_or_below = {
@@ -789,6 +825,10 @@ je_colonial_administration_button_pacific_coast = {
 	possible = {
 		any_scope_state = {
 			region = sr:region_pacific_coast
+			OR = {
+				NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+				NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+			}
 			count >= 1
 		}
 
@@ -820,12 +860,20 @@ je_colonial_administration_button_pacific_coast = {
 			limit = {
 				any_scope_state = {
 					region = sr:region_pacific_coast
+					OR = {
+						NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 					has_decree = decree_greener_grass_campaign
 				}
 			}
 			random_scope_state = {
 				limit = {
 					region = sr:region_pacific_coast
+					OR = {
+						NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 					has_decree = decree_greener_grass_campaign
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
@@ -835,6 +883,10 @@ je_colonial_administration_button_pacific_coast = {
 			random_scope_state = {
 				limit = {
 					region = sr:region_pacific_coast
+					OR = {
+						NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
 			}
@@ -842,6 +894,10 @@ je_colonial_administration_button_pacific_coast = {
 		every_scope_state = {
 			limit = {
 				region = sr:region_pacific_coast
+				OR = {
+					NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+					NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+				}
 			}
 			set_variable = state_to_cede
 		}
@@ -2251,6 +2307,10 @@ je_colonial_administration_button_expand_atlantic_coast = {
 		OR = {
 			any_scope_state = {
 				region = sr:region_atlantic_coast
+				OR = {
+					NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+					NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+				}
 				is_under_colonization = no
 			}
 
@@ -2282,12 +2342,20 @@ je_colonial_administration_button_expand_atlantic_coast = {
 			limit = {
 				any_scope_state = {
 					region = sr:region_atlantic_coast
+					OR = {
+						NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 					is_under_colonization = no
 				}
 			}
 			every_scope_state = {
 				limit = {
 					region = sr:region_atlantic_coast
+					OR = {
+						NOT = { state_region = s:STATE_NEW_BRUNSWICK }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 					is_under_colonization = no
 				}
 				effect_destroy_colonial_office = yes
@@ -2343,6 +2411,10 @@ je_colonial_administration_button_expand_pacific_coast = {
 		OR = {
 			any_scope_state = {
 				region = sr:region_pacific_coast
+				OR = {
+					NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+					NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+				}
 				is_under_colonization = no
 			}
 
@@ -2374,12 +2446,20 @@ je_colonial_administration_button_expand_pacific_coast = {
 			limit = {
 				any_scope_state = {
 					region = sr:region_pacific_coast
+					OR = {
+						NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 					is_under_colonization = no
 				}
 			}
 			every_scope_state = {
 				limit = {
 					region = sr:region_pacific_coast
+					OR = {
+						NOR = { state_region = s:STATE_BRITISH_COLUMBIA state_region = s:STATE_YUKON_TERRITORY }
+						NOT = { root = { OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG } } }
+					}
 					is_under_colonization = no
 				}
 				effect_destroy_colonial_office = yes
