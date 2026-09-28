@@ -1,7 +1,8 @@
 ﻿je_england_1 = {
 	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	group = je_group_historical_content
 
@@ -73,7 +74,8 @@
 je_england_2 = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	group = je_group_historical_content
 
@@ -528,7 +530,10 @@ je_england_2 = {
 	custom_completion_header = je_war_of_the_roses_settlement_header
 
 	complete = {
-		has_variable = wotr_final_settlement
+		custom_tooltip = {
+			text = wotr_final_settlement_tt
+			has_variable = wotr_final_settlement
+		}
 	}
 
 	on_complete = { }
@@ -563,7 +568,8 @@ je_england_2 = {
 je_england_3 = {
 	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	group = je_group_historical_content
 
@@ -618,7 +624,8 @@ je_england_3 = {
 je_england_colonization_of_canada = {
 	icon = "gfx/interface/icons/invention_icons/colonial_canada.dds"
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	group = je_group_historical_content
 
 	is_shown_in_lobby = {
@@ -647,6 +654,7 @@ je_england_colonization_of_canada = {
 	scripted_button = je_england_canada_quebec
 	scripted_button = je_england_canada_ontario
 	scripted_button = je_england_canada_hudsons_bay
+	scripted_button = je_england_canada_columbia
 
 	weight = 350
 }

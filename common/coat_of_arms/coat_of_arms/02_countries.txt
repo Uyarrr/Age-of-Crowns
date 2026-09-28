@@ -7018,35 +7018,6 @@ ELS = { # El Salvador
 	}
 }
 
-ENG = {
-	pattern = "pattern_solid.tga"
-	color1 = "white"
-	color2 = "red"
-
-	colored_emblem = {
-		texture = "ce_cross_england.dds"
-		color1 = color2
-		color2 = color2
-	}
-}
-ENG_coa = {
-    sub = {
-        parent = "sub_ENG_coa"
-    }
-}
-ENG_coa_france = {
-	sub = {
-        parent = "sub_FRA_coa"
-        instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } } # top left
-        instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } } # bottom right
-    }
-	sub = {
-        parent = "sub_ENG_coa"
-        instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } } # top right
-        instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } } # bottom left
-    }
-}
-
 EOT = { # Emirate of Transjordan
 	pattern = "pattern_solid.tga"
 	color1 = "black"

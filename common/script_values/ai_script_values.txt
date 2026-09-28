@@ -400,14 +400,14 @@ wanted_navy_size_script_value = {
 		if = {
 			limit = {
 				OR = {
-					this = c:CAS
-					this = c:SPA
-					this = c:POR
-					this = c:IBR
-					this = c:VEN
-					this = c:ITA
-					this = c:ENG
-					this = c:GBR
+					c:CAS ?= this
+					c:SPA ?= this
+					c:POR ?= this
+					c:IBR ?= this
+					c:VEN ?= this
+					c:ITA ?= this
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 

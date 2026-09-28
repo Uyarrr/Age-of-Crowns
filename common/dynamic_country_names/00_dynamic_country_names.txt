@@ -2365,12 +2365,20 @@ ORG = { # Oregon
 		priority = 0
 
 		trigger = {
-			exists = c:GBR
-			c:GBR ?= {
+			exists = scope:actor
+			scope:actor ?= {
+				is_subject = yes
+				overlord = {
+					OR = {
+						c:ENG ?= this
+						c:GBR ?= this
+						was_formed_from = ENG
+					}
 				has_diplomatic_pact = {
-					who = c:ORG
+					who = scope:actor
 					type = colony
 					is_initiator = yes
+				}
 				}
 			}
 		}
