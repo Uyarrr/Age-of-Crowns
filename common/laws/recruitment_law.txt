@@ -38,6 +38,7 @@ law_early_standing_army = {
 	progressiveness = 0
 
 	unlocking_technologies = {
+		early_standing_army
 	}
 
 	modifier = {
@@ -58,6 +59,7 @@ law_elite_training = {
 	progressiveness = 0
 
 	unlocking_technologies = {
+		elite_training
 	}
 
 	modifier = {
@@ -82,6 +84,10 @@ law_devsirme_system = {
 	unlocking_technologies = {
 	}
 
+	is_visible = {
+		country_has_primary_culture = cu:turkish
+	}
+
 	modifier = {
 		state_building_barrack_max_level_add = 100
 		unit_morale_damage_mult = 0.10
@@ -102,6 +108,25 @@ law_mercenary_army = {
 	progressiveness = 0
 
 	unlocking_technologies = {
+	}
+
+	is_visible = {
+		OR = {
+			country_has_primary_culture = cu:north_italian
+			country_has_primary_culture = cu:south_italian
+			country_has_primary_culture = cu:corsican
+			country_has_primary_culture = cu:dalmatian
+			country_has_primary_culture = cu:ligurian
+			country_has_primary_culture = cu:lombard
+			country_has_primary_culture = cu:neapolitan
+			country_has_primary_culture = cu:piedmontese
+			country_has_primary_culture = cu:romagnan
+			country_has_primary_culture = cu:sardinian
+			country_has_primary_culture = cu:sicilian
+			country_has_primary_culture = cu:tuscan
+			country_has_primary_culture = cu:umbrian
+			country_has_primary_culture = cu:venetian
+		}
 	}
 
 	modifier = {

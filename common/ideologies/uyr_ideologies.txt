@@ -51,6 +51,24 @@
 		law_economic_liberalism = strongly_disapprove
 	}
 
+	lawgroup_land_reform = {
+		law_serfdom = strongly_approve
+		law_tenant_farmers = approve
+		law_homesteading = strongly_disapprove
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = approve
+		law_religious_teachings = neutral
+		law_devout_education = neutral
+		law_individual_apprenticeships = disapprove
+		law_oral_tradition = neutral
+		law_personal_religious_education = neutral
+		law_epic_tradition = neutral
+		law_secular_education = disapprove
+		law_vedic_education = neutral
+	}
+
 	lawgroup_taxation = {
 		law_consumption_based_taxation = strongly_approve
 		law_land_based_taxation = strongly_disapprove
@@ -116,6 +134,13 @@ ideology_plutocratic = {
 		law_state_directed_economy = disapprove
 		law_economic_liberalism = approve
 	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = approve
+		law_homesteading = neutral
+	}
+
 }
 
 ideology_decentralization = {
@@ -147,6 +172,13 @@ ideology_decentralization = {
 		law_proportional_taxation = strongly_disapprove
 		law_graduated_taxation = disapprove
 	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = neutral
+		law_homesteading = strongly_approve
+	}
+
 }
 
 ideology_centralization = {
@@ -178,6 +210,13 @@ ideology_centralization = {
 		law_proportional_taxation = strongly_approve
 		law_graduated_taxation = approve
 	}
+
+	lawgroup_land_reform = {
+		law_serfdom = disapprove
+		law_tenant_farmers = strongly_approve
+		law_homesteading = disapprove
+	}
+
 }
 
 ideology_serfdom = {
@@ -188,6 +227,15 @@ ideology_serfdom = {
 		law_tenant_farmers = neutral
 		law_homesteading = strongly_disapprove
 	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = strongly_approve
+		law_land_based_taxation = strongly_disapprove
+		law_per_capita_based_taxation = approve
+		law_proportional_taxation = disapprove
+		law_graduated_taxation = strongly_disapprove
+	}
+
 }
 
 ideology_free_subjects = {
@@ -206,6 +254,15 @@ ideology_free_subjects = {
 		law_commoner_controlled_mining = strongly_approve
 		law_royal_fifth_mining = neutral
 	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = disapprove
+		law_land_based_taxation = approve
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = approve
+		law_graduated_taxation = neutral
+	}
+
 }
 
 ideology_traditionalist = {
@@ -223,16 +280,53 @@ ideology_traditionalist = {
 		law_proportional_taxation = disapprove
 		law_graduated_taxation = strongly_disapprove
 	}
+
+	lawgroup_land_reform = {
+		law_serfdom = approve
+		law_tenant_farmers = strongly_approve
+		law_homesteading = disapprove
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = approve
+		law_religious_teachings = approve
+		law_devout_education = approve
+		law_individual_apprenticeships = neutral
+		law_oral_tradition = neutral
+		law_personal_religious_education = neutral
+		law_epic_tradition = neutral
+		law_secular_education = strongly_disapprove
+		law_vedic_education = neutral
+	}
 }
 
 ideology_innovative = {
 	icon = "gfx/interface/icons/ideology_icons/positivist.dds"
 
-	lawgroup_education_system = {
-		law_no_schools = strongly_disapprove
-		law_religious_schools = approve
-		law_private_schools = approve
-		law_public_schools = strongly_approve
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = approve
+		law_homesteading = strongly_approve
+	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = disapprove
+		law_land_based_taxation = neutral
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = approve
+		law_graduated_taxation = approve
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = strongly_disapprove
+		law_religious_teachings = neutral
+		law_devout_education = disapprove
+		law_individual_apprenticeships = approve
+		law_oral_tradition = disapprove
+		law_personal_religious_education = neutral
+		law_epic_tradition = disapprove
+		law_secular_education = strongly_approve
+		law_vedic_education = disapprove
 	}
 }
 
@@ -245,6 +339,24 @@ ideology_liberalism = {
 		law_per_capita_based_taxation = disapprove
 		law_proportional_taxation = strongly_approve
 		law_graduated_taxation = approve
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = approve
+		law_homesteading = strongly_approve
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = strongly_disapprove
+		law_religious_teachings = neutral
+		law_devout_education = disapprove
+		law_individual_apprenticeships = strongly_approve
+		law_oral_tradition = neutral
+		law_personal_religious_education = approve
+		law_epic_tradition = neutral
+		law_secular_education = strongly_approve
+		law_vedic_education = neutral
 	}
 }
 
@@ -295,6 +407,32 @@ ideology_absolutism = {
 		law_colonial_economy = neutral
 		law_state_directed_economy = strongly_approve
 		law_economic_liberalism = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = neutral
+		law_tenant_farmers = strongly_approve
+		law_homesteading = disapprove
+	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = neutral
+		law_land_based_taxation = approve
+		law_per_capita_based_taxation = strongly_approve
+		law_proportional_taxation = approve
+		law_graduated_taxation = neutral
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = disapprove
+		law_religious_teachings = neutral
+		law_devout_education = neutral
+		law_individual_apprenticeships = neutral
+		law_oral_tradition = disapprove
+		law_personal_religious_education = neutral
+		law_epic_tradition = disapprove
+		law_secular_education = approve
+		law_vedic_education = neutral
 	}
 }
 
@@ -373,6 +511,15 @@ ideology_capital_economy = {
 		law_state_directed_economy = strongly_disapprove
 		law_economic_liberalism = strongly_approve
 	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = approve
+		law_land_based_taxation = disapprove
+		law_per_capita_based_taxation = strongly_approve
+		law_proportional_taxation = neutral
+		law_graduated_taxation = strongly_disapprove
+	}
+
 }
 
 ideology_traditional_economy = {
@@ -408,6 +555,15 @@ ideology_traditional_economy = {
 		law_state_directed_economy = disapprove
 		law_economic_liberalism = strongly_disapprove
 	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = approve
+		law_land_based_taxation = approve
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = disapprove
+		law_graduated_taxation = strongly_disapprove
+	}
+
 }
 
 ideology_spiritualist = {
@@ -430,11 +586,30 @@ ideology_spiritualist = {
 		law_integrate_foreign_traditions = strongly_approve
 	}
 
-	lawgroup_education_system = {
-		law_no_schools = neutral
-		law_religious_schools = strongly_approve
-		law_private_schools = disapprove
-		law_public_schools = strongly_disapprove
+	lawgroup_land_reform = {
+		law_serfdom = neutral
+		law_tenant_farmers = approve
+		law_homesteading = neutral
+	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = approve
+		law_land_based_taxation = neutral
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = disapprove
+		law_graduated_taxation = disapprove
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = neutral
+		law_religious_teachings = strongly_approve
+		law_devout_education = strongly_approve
+		law_individual_apprenticeships = disapprove
+		law_oral_tradition = neutral
+		law_personal_religious_education = neutral
+		law_epic_tradition = neutral
+		law_secular_education = strongly_disapprove
+		law_vedic_education = neutral
 	}
 }
 
@@ -456,6 +631,32 @@ ideology_humanist = {
 	lawgroup_foreign_cultural_law = {
 		law_allow_foreign_rituals = strongly_approve
 		law_integrate_foreign_traditions = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = approve
+		law_homesteading = strongly_approve
+	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = strongly_disapprove
+		law_land_based_taxation = neutral
+		law_per_capita_based_taxation = disapprove
+		law_proportional_taxation = strongly_approve
+		law_graduated_taxation = approve
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = strongly_disapprove
+		law_religious_teachings = disapprove
+		law_devout_education = strongly_disapprove
+		law_individual_apprenticeships = approve
+		law_oral_tradition = neutral
+		law_personal_religious_education = disapprove
+		law_epic_tradition = neutral
+		law_secular_education = strongly_approve
+		law_vedic_education = disapprove
 	}
 
 }
@@ -490,6 +691,32 @@ ideology_quantity = {
 
 ideology_individualism = {
 	icon = "gfx/interface/icons/ideology_icons/individualist.dds"
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = neutral
+		law_homesteading = strongly_approve
+	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = approve
+		law_land_based_taxation = neutral
+		law_per_capita_based_taxation = strongly_approve
+		law_proportional_taxation = neutral
+		law_graduated_taxation = strongly_disapprove
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = disapprove
+		law_religious_teachings = neutral
+		law_devout_education = disapprove
+		law_individual_apprenticeships = strongly_approve
+		law_oral_tradition = neutral
+		law_personal_religious_education = strongly_approve
+		law_epic_tradition = neutral
+		law_secular_education = approve
+		law_vedic_education = neutral
+	}
 }
 
 ideology_communalism = {
@@ -509,6 +736,26 @@ ideology_communalism = {
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = approve
 		law_homesteading = strongly_approve
+	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = disapprove
+		law_land_based_taxation = approve
+		law_per_capita_based_taxation = disapprove
+		law_proportional_taxation = approve
+		law_graduated_taxation = strongly_approve
+	}
+
+	lawgroup_education_of_masses = {
+		law_uneducated_masses = neutral
+		law_religious_teachings = neutral
+		law_devout_education = neutral
+		law_individual_apprenticeships = neutral
+		law_oral_tradition = strongly_approve
+		law_personal_religious_education = neutral
+		law_epic_tradition = strongly_approve
+		law_secular_education = neutral
+		law_vedic_education = approve
 	}
 }
 

@@ -1908,7 +1908,7 @@
 	c:W31 ?= {
 		set_relations = { country = c:MAM value = 10 }
 	}
-	c:W32 ?= {
+	c:FEO ?= {
 		set_relations = { country = c:CND value = -200 }
 	}
 	c:FRR ?= {
@@ -2421,7 +2421,7 @@
 		set_relations = { country = c:X43 value = -100 }
 	}
 	c:CND ?= {
-		set_relations = { country = c:W32 value = -200 }
+		set_relations = { country = c:FEO value = -200 }
 		set_relations = { country = c:KAR value = -200 }
 	}
 	c:X83 ?= {

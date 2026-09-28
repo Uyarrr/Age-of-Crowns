@@ -1500,17 +1500,17 @@ state_armories = {
 	}
 }
 
-dedicated_police_force = {
-	# Unlocks Dedicated Police Force Law
+early_standing_army = {
+	# Unlocks Early Standing Army Law
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
+	texture = "gfx/interface/icons/law_icons/early_standing_army.dds"
 	category = military
 
 	unlocking_technologies = {
 	}
 
 	ai_weight = {
-		value = 2
+		value = 3
 	}
 }
 
@@ -1995,6 +1995,20 @@ light_dragoon = {
 
 	unlocking_technologies = {
 		esprit_de_corps
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+elite_training = {
+	# Unlocks Elite Training Army Law
+	era = era_5
+	texture = "gfx/interface/icons/law_icons/elite_training.dds"
+	category = military
+
+	unlocking_technologies = {
 	}
 
 	ai_weight = {
