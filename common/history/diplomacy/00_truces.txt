@@ -163,7 +163,7 @@
 			months = 53
 		}
 	}
-	c:SIC ?= {
+	c:NAP ?= {
 		create_bidirectional_truce = {
 			country = c:PRO
 			months = 53
@@ -261,7 +261,7 @@
 	}
 	c:PRO ?= {
 		create_bidirectional_truce = {
-			country = c:SIC
+			country = c:NAP
 			months = 53
 		}
 		create_bidirectional_truce = {
@@ -379,7 +379,7 @@
 	}
 	c:ARA ?= {
 		create_bidirectional_truce = {
-			country = c:SIC
+			country = c:NAP
 			months = 26
 		}
 		create_bidirectional_truce = {

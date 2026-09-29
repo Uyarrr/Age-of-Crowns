@@ -190,11 +190,11 @@
 	}
 	c:ARA ?= {
 		create_diplomatic_pact = {
-			country = c:SIC
+			country = c:NAP
 			type = personal_union
 		}
 	}
-	c:SIC ?= {
+	c:NAP ?= {
 		add_liberty_desire = -23.625
 	}
 	c:PAP ?= {
@@ -719,7 +719,7 @@
 	c:MPH ?= {
 		add_liberty_desire = -50
 	}
-	c:ALI ?= {
+	c:OIR ?= {
 		create_diplomatic_pact = {
 			country = c:MGL
 			type = vassal

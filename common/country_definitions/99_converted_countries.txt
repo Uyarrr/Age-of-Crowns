@@ -448,15 +448,6 @@ ALD ?= {
 	capital = STATE_ALGIERS
 }
 
-ALI ?= {
-	color = { 74 121 198 }
-	country_type = unrecognized
-	tier = principality
-	cultures = { mongol }
-	religion = tengri_pagan_reformed
-	capital = STATE_ULIASTAI
-}
-
 ALK ?= {
 	color = { 249 251 255 }
 	country_type = colonial
@@ -2730,15 +2721,6 @@ ELS ?= {
 	cultures = { central_american }
 	capital = STATE_SAN_SALVADOR
 	is_named_from_capital = yes
-}
-
-ENG ?= {
-	color = { 180 99 58 }
-	country_type = recognized
-	tier = kingdom
-	cultures = { british }
-	religion = catholic
-	capital = STATE_HOME_COUNTIES
 }
 
 EOT ?= {
@@ -5240,15 +5222,6 @@ LIP ?= {
 	capital = STATE_WESTPHALIA
 }
 
-LIT ?= {
-	color = { 154 69 116 }
-	country_type = recognized
-	tier = principality
-	cultures = { lithuanian }
-	religion = catholic
-	capital = STATE_VILNIUS
-}
-
 LKT ?= {
 	color = { 198 114 168 }
 	country_type = decentralized
@@ -5941,15 +5914,6 @@ MGH ?= {
 	capital = STATE_ASSAM
 }
 
-MGL ?= {
-	color = { 255 224 124 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { mongol }
-	religion = tengri_pagan_reformed
-	capital = STATE_URGA
-}
-
 MHR ?= {
 	color = { 49 13 22 }
 	country_type = unrecognized
@@ -6076,15 +6040,6 @@ MON ?= {
 	cultures = { serb }
 	religion = orthodox
 	capital = STATE_MONTENEGRO
-}
-
-MOR ?= {
-	color = { 224 146 113 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { maghrebi }
-	religion = sunni
-	capital = STATE_FEZ
 }
 
 MOS ?= {
@@ -7319,15 +7274,6 @@ PAN ?= {
 	cultures = { panjabi }
 	religion = hindu
 	capital = STATE_HILL_PUNJAB
-}
-
-PAP ?= {
-	color = { 211 220 178 }
-	country_type = recognized
-	tier = kingdom
-	cultures = { north_italian }
-	religion = catholic
-	capital = STATE_LAZIO
 }
 
 PAR ?= {
@@ -9432,15 +9378,6 @@ T60 ?= {
 	capital = STATE_TYROL
 }
 
-T61 ?= {
-	color = { 57 160 101 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { berber }
-	religion = sunni
-	capital = STATE_ORAN
-}
-
 T62 ?= {
 	color = { 158 164 225 }
 	country_type = unrecognized
@@ -10062,24 +9999,6 @@ TUG ?= {
 	cultures = { maghrebi }
 	religion = sunni
 	capital = STATE_EAST_SAHARA
-}
-
-TUN ?= {
-	color = { 131 101 85 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { maghrebi }
-	religion = sunni
-	capital = STATE_TUNISIA
-}
-
-TUR ?= {
-	color = { 170 206 162 }
-	country_type = recognized
-	tier = empire
-	cultures = { turkish }
-	religion = sunni
-	capital = STATE_EASTERN_THRACE
 }
 
 TUS ?= {
@@ -11977,15 +11896,6 @@ V92 ?= {
 	capital = STATE_PUNJAB
 }
 
-V93 ?= {
-	color = { 205 103 80 }
-	country_type = recognized
-	tier = principality
-	cultures = { north_german }
-	religion = catholic
-	capital = STATE_WESTPHALIA
-}
-
 V94 ?= {
 	color = { 232 149 18 }
 	country_type = recognized
@@ -13108,15 +13018,6 @@ WTU ?= {
 	tier = principality
 	cultures = { swahili }
 	capital = STATE_KENYA
-}
-
-WUR ?= {
-	color = { 111 162 128 }
-	country_type = recognized
-	tier = kingdom
-	cultures = { south_german }
-	religion = catholic
-	capital = STATE_WURTTEMBERG
 }
 
 WYU ?= {

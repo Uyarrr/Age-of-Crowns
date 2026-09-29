@@ -1,42 +1,4 @@
-﻿GLOBAL = {
-    every_state = {
-        limit = {
-            owner = {
-                NOT = { is_country_type = decentralized }
-            }
-        }
-
-        # Fixes Missing Port Connections
-        if = {
-            limit = {
-                is_sea_adjacent = yes
-                OR = {
-                    is_isolated_from_market = yes
-                    is_capital = yes
-                }
-            }
-            create_building = { building = building_port level = 1 }
-        }
-
-        if = {
-            limit = {
-                is_capital = yes
-            }
-            if = {
-                limit = {
-                    is_sea_adjacent = yes
-                }
-                create_building = { building = building_shipyard level = 1 }
-            }
-            if = {
-                limit = {
-                    is_sea_adjacent = no
-                }
-                create_building = { building = building_caravan_hub level = 1 }
-            }
-        }
-    }
- 	
+﻿GLOBAL = { 	
     every_country = {
  		add_modifier = {
 			name = organic_development

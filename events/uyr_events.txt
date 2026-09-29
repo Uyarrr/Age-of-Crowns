@@ -5,6 +5,8 @@ colonization_rush = {
 
 	trigger = {
 		has_technology_researched = colonization
+		is_subject = no
+		has_law_or_variant = law_type:law_no_colonial_affairs
 		# Countries with a historical national route receive their own event instead.
 		NOR = {
 			c:ENG ?= this

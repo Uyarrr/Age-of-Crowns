@@ -199,6 +199,13 @@ wotr_on_civil_war_won = {
 	}
 
 	effect = {
+		# A victorious revolutionary country is still England for national
+		# colonial content, even though its dynamic civil-war identity is kept.
+		if = {
+			limit = { NOT = { has_journal_entry = je_england_colonization_of_canada } }
+			add_journal_entry = { type = je_england_colonization_of_canada }
+		}
+
 		if = {
 			limit = { has_variable = wotr_rebel_side_york }
 			trigger_event = { id = england.322 popup = yes }

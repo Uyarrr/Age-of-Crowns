@@ -4112,8 +4112,8 @@ ai_strategy_default = {
 	# Using a different value in a strategy will override this value
 	subsidies = {
 		building_railway = should_have
-		building_road = should_have
-		building_port = should_have
+		building_road = must_have
+		building_port = must_have
 		building_colonial_office = must_have
 	}
 

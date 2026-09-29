@@ -839,10 +839,20 @@ SWE = { # Sweden
 	}
 }
 
-NUR = { # Teutonic Order
+NUR = { # Nurenberg
 	flag_definition = {
 		coa = NUR
 		subject_canton = NUR
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+TUN = { # Tunisia
+	flag_definition = {
+		coa = TUN
+		subject_canton = TUN
+		coa_with_overlord_canton = TUN_subject
 		allow_overlord_canton = yes
 		priority = 1
 	}
@@ -964,4 +974,184 @@ ENG = { # England
 			coa_def_revolutionary_republic_trigger = yes
 		}
 	}
+}
+
+FEO = { # Theodoro
+	flag_definition = {
+		coa = FEO
+		subject_canton = FEO
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+LIT = { # Lithuania
+	flag_definition = {
+		coa = LIT
+		priority = 999
+	}
+	flag_definition = {
+		coa = LIT_jagiellon
+		priority = 10
+		trigger = {
+			coa_def_gediminid_dynasty_trigger = no
+			OR = {
+				coa_def_christian_trigger = yes
+				coa_def_jagiellon_dynasty_trigger = yes
+			}
+		}
+	}
+}
+
+TLE = { # Tlemcen
+	flag_definition = {
+		coa = TLE
+		priority = 1
+	}
+	flag_definition = {
+		coa = TLE_red
+		priority = 10
+		trigger = {
+			coa_def_MOR_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = TLE_marinid
+		priority = 20
+		trigger = {
+			coa_def_marinid_dynasty_trigger = yes
+		}
+	}
+}
+
+OIR = { # Oirat
+	flag_definition = {
+		coa = OIR
+		subject_canton = OIR
+		allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+PAP = { # Rome/Papal States
+	flag_definition = {
+		coa = PAP
+		priority = 999
+	}
+	flag_definition = {
+		coa = PAP_white
+		priority = 2
+		trigger = {
+			coa_def_absolutism_age_5_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = PAP_bicolor
+		priority = 100
+		trigger = {
+			coa_def_republic_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = PAP_revolutionary_republic
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}
+
+TUR = { # Ottomans
+	flag_definition = {
+		coa = TUR
+		subject_canton = TUR
+		allow_overlord_canton = yes
+		priority = 999
+	}
+	flag_definition = {
+		coa = TUR_crescents
+		priority = 2
+		trigger = {
+			coa_def_discovery_age_3_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = TUR_crescents_roundel
+		priority = 3
+		trigger = {
+			coa_def_reformation_age_4_trigger = yes
+		}
+	}
+}
+
+MUN = { # Munster
+	flag_definition = {
+		coa = MUN_red
+		priority = 1
+	}
+	flag_definition = {
+		coa = MUN
+		priority = 2
+		trigger = {
+			coa_def_theocracy_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MUN_blue
+		priority = 99910
+		trigger = {
+			coa_def_theocracy_trigger = yes
+			coa_def_FRA_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MUN_keys
+		priority = 100
+		trigger = {
+			coa_def_republic_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MUN_tricolor
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}
+
+WUR = { # Wurttemberg
+	flag_definition = {
+		coa = WUR
+		priority = 999
+	}
+	flag_definition = {
+		coa = WUR_late
+		priority = 10
+		trigger = {
+			coa_def_absolutism_age_5_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = WUR_late_kingdom
+		priority = 11
+		trigger = {
+			coa_def_absolutism_age_5_trigger = yes
+			coa_def_kingdom_or_higher_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = WUR_lozengy
+		priority = 100
+		trigger = {
+			coa_def_republic_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = WUR_tricolor
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}		
 }

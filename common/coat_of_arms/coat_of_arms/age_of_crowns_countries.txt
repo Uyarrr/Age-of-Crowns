@@ -261,17 +261,16 @@ BGG = { # Berg - Default
 	}
 }
 
-MAM = { # Mamluk - Default
-	pattern = "pattern_solid.tga"
-	color1 = "yellow"
+MAM = { # Mamlukes
+	pattern = "pattern_solid.dds"
+	color1 = "yellow_mid"
+	color2 = "white"
 
 	colored_emblem = {
-		texture = "ce_crescent.dds"
-		color1 = white
-		instance = {
-			position = { 0.25 0.5 }
-			scale = { -0.5 1.0 }
-		}
+		texture = "ce_crescent_increscent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.33 0.50 } scale = { 0.95 0.95 } }
 	}
 }
 
@@ -1004,7 +1003,7 @@ MAG = { # Magdeburg - Default
 	color2 = "white"
 }
 
-MCM = { # Munster
+MCM = { # Munster / Irish
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -3363,4 +3362,801 @@ ENG_capetian = { # Per pale France & England
 		texture = "ce_divider_per_pale.dds"
 		color1 = "black"
 	}		
+}
+
+FEO = { # Theodoro
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_eagle_doubleheaded_crowned_wide_theodoro.dds"
+		color1 = color2
+		color2 = "yellow"
+		color3 = "red"
+		instance = { position = { 0.5 0.505 } scale = { 0.95 0.95 } }
+	}
+}
+
+LIT = { # Lithuania
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	color4 = "yellow"
+
+	textured_emblem = {
+		texture = "te_knight_lithuania.dds"
+		instance = { position = { 0.51 0.5 } scale = { 1.05 1.05 } }
+	}
+	textured_emblem = {
+		texture = "te_knight_shield_overlay_gediminas.dds"
+		instance = { position = { 0.51 0.5 } scale = { 1.05 1.05 } }
+	}
+}
+LIT_jagiellon = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	color4 = "yellow"
+
+	textured_emblem = {
+		texture = "te_knight_lithuania.dds"
+		instance = { position = { 0.51 0.5 } scale = { 1.05 1.05 } }
+	}
+	textured_emblem = {
+		texture = "te_knight_shield_overlay_jogaila.dds"
+		instance = { position = { 0.51 0.5 } scale = { 1.05 1.05 } }
+	}
+}
+
+TLE = { # Tlemcen
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_crescent.dds"
+		color1 = color2
+		color2 = color2
+	}	
+}
+TLE_red = { # Tlemcen - Alternate colour scheme
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crescent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.375 0.5 }  scale = { 0.8 0.8 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_of_3_thin_morocco.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+TLE_marinid = { # Tlemcen - Marinid variant
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_star_08_rub_el_hizb.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.5 }  scale = { 0.85 0.85 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_of_3_fringe.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_crescent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.525 }  scale = { 0.4 0.4 } }
+	}
+}
+
+OIR = { # Oirat
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_crescent_moon_flametip.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_border_ornament_mongol.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+MOR = { # Morocco
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_border_orle_thin.dds"
+		color1 = color2
+		color2 = color2
+	}	
+	colored_emblem = {
+		texture = "ce_star_08_rub_el_hizb.dds"
+		color1 = color2
+		color2 = color2
+		instance = { scale = { 0.85 0.85 } }
+	}	
+}
+
+PAP = { # Papal States
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+	color4 = "blue_light"
+	
+	colored_emblem = {
+		texture = "ce_papal_keys_tiara.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 }  }		
+	}	
+}
+PAP_white = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "yellow_mid"
+	color3 = hsv360 	{	160	2	72	}
+	color4 = "red_secondary"
+	
+	colored_emblem = { # Contrast
+		texture = "ce_papal_keys_tiara.dds"
+		color1 = color2
+		color2 = hsv360 	{	160	2	50	}
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 }  }		
+	}		
+	colored_emblem = {
+		texture = "ce_papal_keys_tiara.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 }  }		
+	}	
+}
+PAP_revolutionary_republic = { # Roman Revolutionnary Republic
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3			
+	}	
+}
+PAP_bicolor = { # Papal States - Traditional bicolor
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+TUR = { # Ottomans
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crescent_decrescent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }	
+	}
+}
+TUR_crescents = { # Ottomans - Three crescents variant
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_crescent_decrescent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.400 0.280 } scale = { 0.46 0.46 } }		
+		instance = { position = { 0.400 0.720 } scale = { 0.46 0.46 } }				
+		instance = { position = { 0.645 0.500 } scale = { 0.46 0.46 } }					
+	}
+}
+TUR_crescents_roundel = { # Ottomans (Later variant)
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	358 	85	55	}
+	color2 = "yellow_light"
+	color3 = hsv360 	{	90	80	35	} 
+	
+	colored_emblem = {
+		texture = "ce_crescent_triple_roundel.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 } }				
+	}
+}
+TUR_crescents_roundel_fess = { # Ottomans (Later variant) - Variant with the crescents arranged in fess
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	358 	85	55	}
+	color2 = "yellow_light"
+	color3 = hsv360 	{	90	80	35	} 
+	
+	colored_emblem = {
+		texture = "ce_crescent_triple_roundel_02.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 } }				
+	}
+}
+
+TUN = { # Tunis
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	
+	colored_emblem = {
+		texture = "ce_crescent_decrescent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.5 } scale = { 0.85 0.85 } }				
+	}	
+}
+TUN_marinid = { # Tunis - Marinid variant
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_star_08_rub_el_hizb.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.5 }  scale = { 0.85 0.85 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_of_3_fringe.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_crescent_decrescent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.333 0.5 }  scale = { 0.4 0.4 } }
+	}
+}
+TUN_morocco = { # Tunis - Morocco variant
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crescent_decrescent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.65 0.50 } scale = { 0.85 0.85 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.15 0.5 } scale = { 0.3 1.0 } }
+	}
+}
+
+TUN_subject = { # Tunis - Subject
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	
+	colored_emblem = {
+		texture = "ce_crescent_decrescent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.75 0.5 } scale = { 0.70 0.70 } }				
+	}	
+}
+
+MUN = { # Münster
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_fess.dds"
+		color1 = color2
+		color2 = color2
+	}	
+}
+MUN_keys = { # Münster - Civic arms
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_keys_saltire.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+MUN_red = { # Münster - Bishopric, inverted 15th-16th c.
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_fess.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+MUN_blue = { # Münster - Bishopric, Azure-Or 17th c.
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_fess.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+MUN_tricolor = { # Münster - Civic arms 15th c.
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "yellow_mid"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}
+}
+
+WUR = { # Württemberg - Duchy
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_antler_fess.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.22 } scale = { 1.250 1.0 } }		
+		instance = { position = { 0.5 0.50 } scale = { 1.175 1.0 } }	
+		instance = { position = { 0.5 0.78 } scale = { 1.100 1.0 } }			
+	}
+}
+WUR_kingdom_early = { # Württemberg - Kingdom (early)
+	pattern = "pattern_solid.dds"
+	color1 = "red_mid"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_bars_03.dds"
+		color1 = color2
+		color2 = color2	
+	}
+}
+WUR_tricolor = { # Württemberg - Early 19th c. tricolor
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2	
+		color3 = color3	
+	}
+}
+WUR_kingdom = { # Württemberg - Kingdom 19th c.
+	pattern = "pattern_solid.dds"
+	color1 = "red_mid"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color2
+		color2 = color1	
+	}
+}
+WUR_late = { # Württemberg - Per fess design with arms in heart
+	pattern = "pattern_solid.dds"
+	color1 = "red_secondary"
+	color2 = "black"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color2
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_shield_frame_thin.dds"
+		color1 = color3
+		color2 = color2
+		instance = { position = { 0.5 0.52 } scale = { 0.6 0.6 } }
+	}
+	sub = {
+		parent = "sub_wurttemberg_shield"
+		instance = { scale = { 0.5 0.5 } offset = { 0.25 0.27 } }
+	}
+}
+WUR_late_kingdom = { # Württemberg - Per fess design with arms in heart & royal crown
+	pattern = "pattern_solid.dds"
+	color1 = "red_secondary"
+	color2 = "black"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color2
+		color2 = color1
+	}
+	textured_emblem = {
+		texture = "te_crown_royal_cut.dds"
+		instance = { position = { 0.5 0.245 } scale = { 0.4 0.4 } }
+	}
+	colored_emblem = {
+		texture = "ce_shield_frame_thin.dds"
+		color1 = color3
+		color2 = color2
+		instance = { position = { 0.5 0.59 } scale = { 0.6 0.6 } }
+	}
+	sub = {
+		parent = "sub_wurttemberg_shield"
+		instance = { scale = { 0.5 0.5 } offset = { 0.25 0.34 } }
+	}
+}
+WUR_lozengy = { # Actually the arms of Hz Teck
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+    colored_emblem = {
+        texture = "ce_lozengy_bend.dds"
+		color1 = color1
+		color2 = color2
+    }
+}
+
+NAP = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_mid"
+	color4 = "white"
+	color5 = "yellow_mid"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.20 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.60 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.00 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.20 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.40 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.60 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.80 1.00 } scale = { @semy @semy } }
+		instance = { position = { 1.00 1.00 } scale = { @semy @semy } }
+	}
+	colored_emblem = {
+		texture = "ce_label_05.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.25 0.61 }  scale = { 0.85 1.0 } }
+	}		
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.75 0.5 }  scale = { 0.5 1.0 } }
+	}			
+	colored_emblem = {
+		texture = "ce_cross_jerusalem.dds"
+		color1 = color5
+		color2 = color5
+		instance = { position = { 0.75 0.5 }  scale = { 0.75 1.0 } }
+	}		
+}
+NAP_revolutionary_republic = { # Neapolitan republic
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3			
+	}	
+}
+NAP_civic = { # Naples - Civic arms (14th c.)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2	
+	}	
+}
+NAP_horse = { # Naples - Napoleonic arms (1806)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_horse_salient_variant.dds"
+		color1 = color2
+		color2 = color2	
+		color3 = "white"
+	}	
+}
+NAP_civic_orle = { # Naples - Napoleonic merchant flag
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_border_orle_checky.dds"
+		color1 = color3
+		color2 = color2	
+	}	
+}
+NAP_aragonese = { # Aragonese Naples
+	pattern = "pattern_tricolor_vertical_01.dds"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "yellow"
+	color4 = "yellow_mid"
+	color5 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_pales_04.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.167 0.5 }  scale = { 0.35 1.0 } }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+		mask = { 3 }
+	}
+	colored_emblem = {
+		texture = "ce_semis_fleur_lis_shield.dds"
+		color1 = color3
+		color2 = color3
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_label_05_long.dds"
+		color1 = color5
+		color2 = color5
+		instance = { position = { 0.5 0.45 }  scale = { 0.67 0.85 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_cross_jerusalem_long.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.833 0.5 } scale = { 0.9 0.9 } }
+	}
+}
+NAP_aragonese_quarterly = { # Aragonese Naples - Complete historical quarterly design (Aragon & Anjou-Durazzo) 
+	pattern = "pattern_quarterly_flag.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "yellow"
+	color4 = "white"
+	color5 = "purple_mid"
+
+    sub = {
+        parent = "sub_ARA" # Q1 & Q4 Aragon
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }			
+    }	
+    sub = {
+        parent = "sub_NAP_durazzo" # Q2 Q3 Anjou-Durazzo
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }		
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }			
+    }			
+    sub = {
+        parent = "sub_quartered" 
+		color1 = "white"
+		color2 = "black_secondary"	
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+    }	
+}
+NAP_simple = { # Angevine arms without impaling
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_semy_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_label_04_long.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+NAP_hauteville = { # Naples - First kings of Sicily
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+			
+	colored_emblem = {
+		texture = "ce_bend_checky.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}			
+}
+NAP_hauteville_variant = { # Naples - Hauteville arms tinctures variant (per bend Or-Gu)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+	color4 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_per_bend.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}		
+	colored_emblem = {
+		texture = "ce_bend_checky.dds"
+		color1 = color3
+		color2 = color4
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}			
+}
+NAP_anjou_hungary = { # Anjou Durazzo as king of Naples
+	pattern = "pattern_tricolor_vertical_01.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	color4 = "red_secondary"
+	color5 = "red"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_semis_fleur_lis_shield.dds"
+		color1 = color2
+		color2 = color2
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_label_05_long.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.45 }  scale = { 0.67 0.85 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_barry_08.dds"
+		color1 = color5
+		color2 = color3
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_cross_jerusalem_long.dds"
+		color1 = "yellow_mid"
+		color2 = "yellow_mid"
+		instance = { position = { 0.833 0.5 }  scale = { 0.9 0.9 } }
+	}
+}
+NAP_habsburg = { # Habsburg Naples (per pale)
+	pattern = "pattern_tricolor_vertical_01.dds"
+	color1 = "red"
+	color2 = "blue"
+	color3 = "white"
+	color4 = "yellow"
+	color5 = "yellow_mid"
+
+	colored_emblem = {
+		texture = "ce_fess.dds"
+		color1 = color3
+		color2 = color3
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_semis_fleur_lis_shield.dds"
+		color1 = color4
+		color2 = color4
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_label_05_long.dds"
+		color1 = "red_secondary"
+		color2 = "red_secondary"
+		instance = { position = { 0.5 0.45 }  scale = { 0.67 0.85 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_cross_jerusalem_long.dds"
+		color1 = color5
+		color2 = color5
+		instance = { position = { 0.833 0.5 } scale = { 0.9 0.9 } }
+	}
 }

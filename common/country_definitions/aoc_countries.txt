@@ -984,3 +984,123 @@ SLZ ?= {
 	religion = catholic
 	capital = STATE_TYROL
 }
+
+# England
+ENG ?= {
+	color = { 180 99 58 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { british }
+	religion = catholic
+	capital = STATE_HOME_COUNTIES
+}
+
+# Lithuania
+LIT ?= {
+	color = { 154 69 116 }
+	country_type = recognized
+	tier = principality
+	cultures = { lithuanian }
+	religion = catholic
+	capital = STATE_VILNIUS
+}
+
+# Tlemcen
+TLE ?= {
+	color = { 57 160 101 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { berber }
+	religion = sunni
+	capital = STATE_ORAN
+}
+
+# Oirat
+OIR ?= {
+	color = { 255 224 124 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { mongol }
+	religion = tengri_pagan_reformed
+	capital = STATE_URGA
+}
+
+# Morocco
+MOR ?= {
+	color = { 224 146 113 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { maghrebi }
+	religion = sunni
+	capital = STATE_FEZ
+}
+
+# Mongolia
+MGL ?= {
+	color = { 255 224 124 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { mongol }
+	religion = tengri_pagan_reformed
+	capital = STATE_URGA
+}
+
+# Papal States
+PAP ?= {
+	color = { 211 220 178 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { north_italian }
+	religion = catholic
+	capital = STATE_LAZIO
+}
+
+# Tunisia
+TUN ?= {
+	color = { 131 101 85 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { maghrebi }
+	religion = sunni
+	capital = STATE_TUNISIA
+}
+
+# Turkiye / Ottoman Empire
+TUR ?= {
+	color = { 170 206 162 }
+	country_type = recognized
+	tier = empire
+	cultures = { turkish }
+	religion = sunni
+	capital = STATE_EASTERN_THRACE
+}
+
+# Munster - German
+MUN ?= {
+	color = { 205 103 80 }
+	country_type = recognized
+	tier = principality
+	cultures = { north_german }
+	religion = catholic
+	capital = STATE_WESTPHALIA
+}
+
+# Wurttemberg
+WUR ?= {
+	color = { 111 162 128 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { south_german }
+	religion = catholic
+	capital = STATE_WURTTEMBERG
+}
+
+# Naples
+NAP ?= {
+	color = { 73 152 76 }
+	country_type = recognized
+	tier = principality
+	cultures = { south_italian }
+	religion = catholic
+	capital = STATE_CAMPANIA
+}

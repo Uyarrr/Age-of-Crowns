@@ -1207,19 +1207,26 @@ england.200 = {
 	}
 
 	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
-
-	cooldown = {
-		years = 999
-	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
 
 	trigger = {
 		has_technology_researched = colonization
+		is_subject = no
 		OR = {
 			c:ENG ?= this
 			c:GBR ?= this
 			was_formed_from = ENG
+			# A victorious War of the Roses revolutionary country keeps a
+			# dynamic civil-war identity rather than becoming/forming ENG.
+			has_journal_entry = je_england_2
+			has_variable = wotr_final_settlement
+			has_variable = war_of_the_roses_lancaster_victory
+			has_variable = war_of_the_roses_york_victory
+			has_variable = war_of_the_roses_tudor_victory
 		}
 	}
 
@@ -1258,19 +1265,26 @@ england.201 = {
 	}
 
 	icon = "gfx/interface/icons/event_icons/britain_coa.dds"
-
-	cooldown = {
-		years = 999
-	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	duration = 3
+	cooldown = { days = never_fire_again_modifier_time }
+	placement = ROOT
 
 	trigger = {
 		has_technology_researched = colonization
+		is_subject = no
 		OR = {
 			c:ENG ?= this
 			c:GBR ?= this
 			was_formed_from = ENG
+			# Preserve English colonial content after a War of the Roses
+			# revolutionary victory changes the country's identity.
+			has_journal_entry = je_england_2
+			has_variable = wotr_final_settlement
+			has_variable = war_of_the_roses_lancaster_victory
+			has_variable = war_of_the_roses_york_victory
+			has_variable = war_of_the_roses_tudor_victory
 		}
 		any_state = {
 			count >= 4
