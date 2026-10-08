@@ -1,0 +1,3127 @@
+STATES = {
+
+    # ---------------------------------------------------------
+    # EUROPA OCIDENTAL
+    # ---------------------------------------------------------
+
+    s:STATE_SVEALAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_GOTALAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_SCANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORRLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_GOTLAND = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_JUTLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ZEALAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WESTERN_NORWAY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NORTHERN_NORWAY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_EASTERN_NORWAY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_ICELAND = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_GREENLAND = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_HOME_COUNTIES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LANCASHIRE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WALES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_YORKSHIRE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HIGHLANDS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MIDLANDS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_EAST_ANGLIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WEST_COUNTRY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LOWLANDS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ULSTER = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MUNSTER = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LEINSTER = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CONNAUGHT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ILE_DE_FRANCE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PROVENCE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORMANDY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LANGUEDOC = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RHONE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FRENCH_LOW_COUNTRIES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PICARDY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ALSACE_LORRAINE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_POITOU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_GUYENNE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AUVERGNE_LIMOUSIN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BRITTANY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BURGUNDY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CHAMPAGNE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FRANCHE_COMTE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LORRAINE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AQUITAINE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ORLEANS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HOLLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FRIESLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_GELRE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WALLONIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FLANDERS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AUSTRIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BOHEMIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MORAVIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_STYRIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TYROL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SOUTH_TYROL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_POMERANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ELBE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_EAST_SWITZERLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WEST_SWITZERLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WESTPHALIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ANHALT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RHINELAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORTH_RHINE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BRANDENBURG = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SCHLESWIG_HOLSTEIN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WURTTEMBERG = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BADEN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HANNOVER = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BRUNSWICK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BAVARIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FRANCONIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SAXONY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HESSE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MECKLENBURG = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RUHR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MAINE_ANJOU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+
+    # ---------------------------------------------------------
+    # EUROPA DO SUL
+    # ---------------------------------------------------------
+
+    s:STATE_LOMBARDY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PIEDMONT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SARDINIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_MALTA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_UMBRIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CORSICA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CAMPANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CALABRIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_APULIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ABRUZZO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SAVOY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_EMILIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TUSCANY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ROMAGNA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LAZIO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_VENETIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SICILY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_NEW_CASTILE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_GALICIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ASTURIAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_OLD_CASTILE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BASQUE_COUNTRY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ARAGON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_CATALONIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BALEARIC_ISLANDS = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_LOWER_ANDALUSIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_UPPER_ANDALUSIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_EXTREMADURA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_VALENCIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_BEIRA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ESTREMADURA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ALENTEJO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AZORES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_MADEIRA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_EASTERN_THRACE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_DOBRUDJA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ALBANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BOSNIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORTHERN_THRACE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BULGARIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SLOVENIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_DALMATIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CROATIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SLAVONIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ISTRIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MONTENEGRO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WESTERN_SERBIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_EASTERN_SERBIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KOSOVO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CRETE = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_WEST_AEGEAN_ISLANDS = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_EAST_AEGEAN_ISLANDS = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_ATTICA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_THESSALIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SKOPIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MACEDONIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WESTERN_THRACE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_IONIAN_ISLANDS = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_PELOPONNESE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MURCIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LEON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ENTRE_DOURO_E_MINHO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+
+    # ---------------------------------------------------------
+    # EUROPA DO LESTE
+    # ---------------------------------------------------------
+
+    s:STATE_MAZOVIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LOWER_SILESIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_UPPER_SILESIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_GREATER_POLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LESSER_POLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WEST_PRUSSIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_EAST_PRUSSIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_POSEN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WEST_GALICIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_EAST_GALICIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CENTRAL_HUNGARY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BEKES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TRANSDANUBIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_DELVIDEK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BANAT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SLOVAKIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RUTHENIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SOUTHERN_TRANSYLVANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORTHERN_TRANSYLVANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MOLDAVIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BUKOVINA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WALLACHIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BESSARABIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+
+    # ---------------------------------------------------------
+    # ÁFRICA DO NORTE
+    # ---------------------------------------------------------
+
+    s:STATE_LOWER_EGYPT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_UPPER_EGYPT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MIDDLE_EGYPT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_EGYPTIAN_DESERT = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_MATRUH = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SINAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ERITREA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_DONGOLA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KORDOFAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_DARFUR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BLUE_NILE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MARRAKECH = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FEZ = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AL_RIF = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_INNER_MOROCCO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ALGIERS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CONSTANTINE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ORAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TUNISIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TRIPOLI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LIBYA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LIBYAN_DESERT = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_SAHARA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_EAST_SAHARA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_WEST_SAHARA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_MAURITANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_INNER_MAURITANIA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_EASTERN_MALI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WESTERN_MALI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TIMBUKTU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NIGER = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CHAD = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+
+    # ---------------------------------------------------------
+    # ÁFRICA SUBSAARIANA
+    # ---------------------------------------------------------
+
+    s:STATE_IVORY_COAST = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_WINDWARD_COAST = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_SENEGAL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SIERRA_LEONE = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_VOLTA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LIBERIA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_HAUSALAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BENIN = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_YORUBA_STATES = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_NIGER_DELTA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_OUTER_HAUSALAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BORNU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NIGERIA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_EAST_HAUSALAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_GUINEA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_GOLD_COAST = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_TOGO = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_DAHOMEY = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_LINDI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ZANZIBAR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TANGANYIKA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KENYA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_RIFT_VALLEY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_OROMIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_AMHARA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_GONDER = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KAZEMBE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SOMALILAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SOUTH_MADAGASCAR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NORTH_MADAGASCAR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_UGANDA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EQUATORIA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_MOCAMBIQUE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_WADDAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORTH_CAMEROON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SOUTH_CAMEROON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_UBANGI_SHARI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CONGO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CONGO_ORIENTALE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KASAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_BAS_CONGO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EQUATEUR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NORTH_ANGOLA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_SOUTH_ANGOLA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_EAST_ANGOLA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_KATANGA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_GABON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ZAMBIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ZAMBEZIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ZAMBEZI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NAMAQUALAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HEREROLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ZULULAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_VRYSTAAT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TRANSVAAL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EASTERN_CAPE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CAPE_COLONY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NORTHERN_CAPE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_BOTSWANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LOURENCO_MARQUES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+
+    # ---------------------------------------------------------
+    # AMÉRICA DO NORTE
+    # ---------------------------------------------------------
+
+    s:STATE_DISTRICT_OF_COLUMBIA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_LOUISIANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NEW_YORK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_VIRGINIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ALASKA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_WASHINGTON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_OREGON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_IDAHO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_COLORADO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WYOMING = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_MONTANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NORTH_DAKOTA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_SOUTH_DAKOTA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NEBRASKA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KANSAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_OKLAHOMA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ARKANSAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MISSOURI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_IOWA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MINNESOTA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_WISCONSIN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_INDIANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MICHIGAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_OHIO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KENTUCKY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TENNESSEE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MISSISSIPPI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ALABAMA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FLORIDA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_GEORGIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WEST_VIRGINIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MARYLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_DELAWARE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PENNSYLVANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NEW_JERSEY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ILLINOIS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RHODE_ISLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CONNECTICUT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MASSACHUSETTS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NEW_HAMPSHIRE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_VERMONT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_MAINE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NORTH_CAROLINA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_UTAH = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SOUTH_CAROLINA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HAWAIIAN_ISLANDS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ONTARIO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NEW_BRUNSWICK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_QUEBEC = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NEWFOUNDLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_ALBERTA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_BRITISH_COLUMBIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_SASKATCHEWAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_MANITOBA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_YUKON_TERRITORY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NORTHWEST_TERRITORIES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NUNAVUT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_BERMUDA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_TEXAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_NEVADA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ARIZONA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_NEW_MEXICO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CALIFORNIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SONORA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CHIHUAHUA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_RIO_GRANDE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_DURANGO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_SINALOA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_BAJIO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_YUCATAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_MEXICO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_VERACRUZ = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_GUERRERO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_OAXACA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_JALISCO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_ZACATECAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CHIAPAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_BAJA_CALIFORNIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+
+    # ---------------------------------------------------------
+    # AMÉRICA CENTRAL
+    # ---------------------------------------------------------
+
+    s:STATE_SAN_SALVADOR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_GUATEMALA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_HONDURAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_NICARAGUA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_COSTA_RICA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_PANAMA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_HAITI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_SANTO_DOMINGO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_PUERTO_RICO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_BAHAMAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_WEST_INDIES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_JAMAICA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_WESTERN_CUBA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_EASTERN_CUBA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CENTRAL_CUBA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+
+    # ---------------------------------------------------------
+    # AMÉRICA DO SUL
+    # ---------------------------------------------------------
+
+    s:STATE_ECUADOR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_GUAYANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_ZULIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_MIRANDA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_BOLIVAR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_ANTIOQUIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_GUAVIARE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CUNDINAMARCA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CAUCA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_PASTAZA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_TARAPACA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ANTOFAGASTA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SANTA_CRUZ = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_LA_PAZ = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_POTOSI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CAJAMARCA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_LIMA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_ICA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_AREQUIPA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_URUGUAY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_JUJUY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_ALTO_PARAGUAY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_BAJO_PARAGUAY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_BUENOS_AIRES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PATAGONIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RIO_NEGRO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LA_PAMPA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SANTA_FE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CORRIENTES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_TUCUMAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CHACO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_SANTIAGO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_LOS_RIOS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_ARAUCANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SOUTH_ATLANTIC_ISLANDS = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_PARA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_MARANHAO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_AMAZONAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_ACRE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_GOIAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_MATO_GROSSO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_RIO_GRANDE_DO_SUL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_PARANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_SANTA_CATARINA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_SAO_PAULO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_MINAS_GERAIS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_RIO_DE_JANEIRO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_BAHIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_RIO_GRANDE_DO_NORTE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_CEARA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_PIAUI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_PARAIBA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_PERNAMBUCO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+
+    # ---------------------------------------------------------
+    # ORIENTE MÉDIO
+    # ---------------------------------------------------------
+
+    s:STATE_NEJD = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_OMAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ABU_DHABI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_YEMEN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HEDJAZ = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HAIL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CYPRUS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+    }
+    s:STATE_TRANSJORDAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PALESTINE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LEBANON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SYRIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ALEPPO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BAGHDAD = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MOSUL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_DEIR_EZ_ZOR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BASRA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FARS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_LARISTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KERMAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_SISTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KHORASAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_KHUZESTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ISFAHAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_MAZANDARAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_IRAKAJEMI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SEMNAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TABRIZ = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_URMIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_LURISTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PERSIAN_KURDISTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HUDAVENDIGAR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_AYDIN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KONYA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KASTAMONU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_DIYARBAKIR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ADANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TRABZON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ERZURUM = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ANKARA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KARS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+
+    # ---------------------------------------------------------
+    # ÁSIA CENTRAL
+    # ---------------------------------------------------------
+
+    s:STATE_DAGESTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KUBAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ARMENIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AZERBAIJAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_GREATER_CAUCASUS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SAMARA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TARTARIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ASTRAKHAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_UZBEKIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TAJIKISTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KIRGHIZIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TURKMENIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PASHTUNISTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CENTRAL_HIGHLANDS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NORTHERN_BALUCHISTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HERAT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_BALKH = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_QUETTA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KANDAHAR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KABUL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_BALUCHISTAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_LHASA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NGARI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HIMALAYAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EASTERN_HIMALAYAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+
+    # ---------------------------------------------------------
+    # ÍNDIA
+    # ---------------------------------------------------------
+
+    s:STATE_BIHAR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WEST_BENGAL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EAST_BENGAL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ASSAM = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_DELHI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AWADH = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AGRA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_GUJARAT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BUNDELKHAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MALWA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KASHMIR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+        add_resource_potential = building_saffron_field
+    }
+    s:STATE_PUNJAB = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_HILL_PUNJAB = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CENTRAL_PROVINCES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SINDH = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RAJPUTANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CEYLON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_INDIAN_OCEAN_TERRITORY = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_ORISSA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CIRCARS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_MYSORE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TRAVANCORE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_MADRAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KURNOOL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HYDERABAD = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BOMBAY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TENASSERIM = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KACHIN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SHAN_STATES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_MANDALAY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_PEGU = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_ARAKAN = {
+        add_resource_potential = building_orchard
+    }
+
+    # ---------------------------------------------------------
+    # ÁSIA ORIENTAL
+    # ---------------------------------------------------------
+
+    s:STATE_DZUNGARIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TIANSHAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SICHUAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_YUNNAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_GUIZHOU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SHAOZHOU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ALXA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_HINGGAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_GUANGXI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_BEIJING = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SHENGJING = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_OUTER_MANCHURIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SOUTHERN_MANCHURIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORTHERN_MANCHURIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SHANXI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NINGXIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_GANSU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_XIAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_QINGHAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CHONGQING = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_GUANGDONG = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_FUJIAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ZHEJIANG = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_JIANGSU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NANJING = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_HENAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ZHILI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_JIANGXI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SOUTHERN_ANHUI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NORTHERN_ANHUI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_WESTERN_HUBEI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EASTERN_HUBEI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_HUNAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_FORMOSA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SHANDONG = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SUZHOU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ULIASTAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_URGA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CAMBODIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_BANGKOK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TONKIN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ANNAM = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_MEKONG = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_LAOS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CHIANG_MAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NAKHON_RATCHASIMA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_HOKKAIDO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TOHOKU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KANTO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TOKAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_HOKUSHINETSU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KANSAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KYOTO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KYUSHU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_RYUKYU_ISLANDS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CHUGOKU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SHIKOKU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SEOUL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BUSAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_YANGHO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SARIWON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PYONGYANG = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+
+    # ---------------------------------------------------------
+    # INDONÉSIA
+    # ---------------------------------------------------------
+
+    s:STATE_MALAYA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NORTH_BORNEO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_WEST_BORNEO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EAST_BORNEO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_WEST_JAVA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EAST_JAVA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CENTRAL_JAVA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_NORTH_SUMATRA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SOUTH_SUMATRA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_ACEH = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_pepper_plantation
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_WESTERN_NEW_GUINEA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_MOLUCCAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CELEBES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_EASTERN_NEW_GUINEA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_SUNDA_ISLANDS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_MINDANAO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_LUZON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_VISAYAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_WEST_MICRONESIA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_EAST_MICRONESIA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_SOLOMON_ISLANDS = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_NAURU = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_FIJI = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_VANUATU = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_KANAK = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_BOUGAINVILLE = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_TAHITI = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_TONGA = {
+        add_resource_potential = building_orchard
+    }
+
+    # ---------------------------------------------------------
+    # AUSTRALÁSIA
+    # ---------------------------------------------------------
+
+    s:STATE_NEW_SOUTH_WALES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_VICTORIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_TASMANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_QUEENSLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SOUTH_AUSTRALIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WESTERN_AUSTRALIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORTHERN_TERRITORY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORTH_ISLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SOUTH_ISLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+
+    # ---------------------------------------------------------
+    # SIBÉRIA
+    # ---------------------------------------------------------
+
+    s:STATE_URAL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_TOMSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_TUVA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_TOBOLSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_UPPER_YENISEYSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_OB = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_CHUKOTKA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_KAMCHATKA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_OKHOTSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_YAKUTSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_TRANS_BAIKAL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_IRKUTSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+
+    # ---------------------------------------------------------
+    # RÚSSIA
+    # ---------------------------------------------------------
+
+    s:STATE_TALINN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TARTU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RIGA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_COURLAND = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KAUNAS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_VILNIUS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KUOPIO = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_UUSIMAA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_WEST_KARELIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_ALAND = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_OSTROBOTHNIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_OULU = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_EAST_KARELIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_KOLA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_INGRIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_MOSCOW = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_BREST = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_VOLHYNIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KIEV = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ORYOL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SMOLENSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_MOGILEV = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ARKHANGELSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NOVGOROD = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_CRIMEA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KHARKOV = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KURSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TVER = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_CHERSON = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_GALICH = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_MINSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ROSTOV = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PERM = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_KAZAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_URALSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KHIVA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_SEMIRECHE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_JETISY = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AKMOLINSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_FERGANA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_MERZ = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SYRDARYA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_AKTOBE = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_KALMYKIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NORTH_CAUCASUS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TAURIDA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TAMBOV = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RYAZAN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_VITEBSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_PSKOV = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_YAROSLAVL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NIZHNY_NOVGOROD = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_VYATKA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_UFA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_SURGUT = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_KRASNOYARSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_ALTAI = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_BURYATIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_KOLYMA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_AMUR = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_CHELYABINSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_ELIZAVETPOL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_STAVROPOL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_CHUVASHIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CHERNIHIV = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NENETSIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+}
