@@ -76,7 +76,7 @@ building_colonial_office = {
 
 	ai_value = 10000 # Always push for colonial outposts if there's a colony.
 
-	icon = "gfx/interface/icons/building_icons/colonial_office_uyr.dds"
+	icon = "gfx/interface/icons/building_icons/colonial_outpost_uyr.dds"
 
 	required_construction = construction_cost_medium
 
@@ -115,6 +115,7 @@ building_bailiff = {
 	building_group = bg_bureaucracy
 	city_type = city
 
+	buildable = no
 	levels_per_mesh = 50
 
 	unlocking_technologies = {
@@ -145,6 +146,7 @@ building_royal_court = {
 	city_type = city
 
 	expandable = no
+	buildable = no
 
 	levels_per_mesh = 50
 

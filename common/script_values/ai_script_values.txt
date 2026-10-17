@@ -400,14 +400,14 @@ wanted_navy_size_script_value = {
 		if = {
 			limit = {
 				OR = {
-					this = c:CAS
-					this = c:SPA
-					this = c:POR
-					this = c:IBR
-					this = c:VEN
-					this = c:ITA
-					this = c:ENG
-					this = c:GBR
+					c:CAS ?= this
+					c:SPA ?= this
+					c:POR ?= this
+					c:IBR ?= this
+					c:VEN ?= this
+					c:ITA ?= this
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 
@@ -483,5 +483,211 @@ flagship_score_for_ship = {
 			is_flagship = yes
 		}
 		multiply = 1.5
+	}
+}
+
+# -----------------------------------------------------------------
+# VANILLA 1.14 VALUES
+# Copied from vanilla because this file overrides vanilla ai_script_values.txt.
+# Several are read directly by the game code or by vanilla 00_default_strategy.txt.
+# -----------------------------------------------------------------
+
+ai_strongly_desires_state_value_threshold = 50 # TODO: Turn this into a proper define
+
+# How much the AI weighs the countries it would hurt with a strait setting (fallout_for links, summed dependence 0-100 per country) against the setting's own benefits in strait_scores
+ai_strait_fallout_weight = 0.25
+
+# How much the AI values strait toll income in strait_scores, per percent of its GDP earned a year
+ai_strait_toll_income_weight = 3
+
+# Ambition weights for state_value in game/common/ai_strategies/00_default_strategy.txt
+ai_state_ambition_floor = 0
+
+ai_state_ambition_max = 1.5
+
+ai_state_ambition_claim_weight = 1.0
+
+ai_state_ambition_regional_objective_weight = 1.0
+
+ai_state_ambition_homeland_weight = 0.8
+
+ai_state_ambition_capital_region_weight = 0.6
+
+ai_state_ambition_split_state_weight = 0.5
+
+ai_state_ambition_overlord_gift_weight = 0.4
+
+ai_state_ambition_colonial_weight = 0.4
+
+ai_state_ambition_border_weight = 0.25
+
+ai_state_ambition_sphere_weight = 0.15
+
+# Base scores for hostile attitudes
+ai_systemic_conquest_score = 200
+
+ai_systemic_subjugation_score = 150
+
+ai_systemic_befriend_score = 100
+
+ai_systemic_protect_score = 100
+
+ai_regional_objective_conquest_score = 400
+
+ai_regional_objective_subjugation_score = 300
+
+ai_regional_objective_reconcile_score = 200
+
+ai_regional_objective_protect_score = 200
+
+ai_regional_objective_subject_value = 50
+
+# Multiplier to default aggression of recognized nations set in the default strategy only
+ai_unjustified_war_restraint = 0.15
+
+# The country's ship count, era-adjusted since navies get more expensive with better tech
+navy_size_adjusted_by_tech = {
+	value = navy_size
+
+	if = {
+		limit = { has_technology_researched = ironclad_tech }
+		divide = 1.15
+	}
+	if = {
+		limit = { has_technology_researched = pre_dreadnought_tech }
+		divide = 1.25
+	}
+	if = {
+		limit = { has_technology_researched = dreadnought_tech }
+		divide = 1.25
+	}
+	if = {
+		limit = { has_technology_researched = battleship_tech }
+		divide = 1.15
+	}
+}
+
+ship_mod_ai_price_ratio_reject     = { value = 1.75 }  # Weighted buy/sell ratio at/above which a mod is rejected (multiplier = 0)
+
+ship_mod_ai_price_ratio_bonus      = { value = 0.75 }  # At/below which the full bonus multiplier applies
+
+ship_mod_ai_price_bonus_multiplier = { value = 1.5 }   # Multiplier at the bonus ratio (linear interpolation in between)
+
+ship_mod_market_multiplier = {
+	# Evaluate the trigger once and save the ratio as a temporary; we refer to
+	# it three times below (two limit branches + the else arithmetic).
+	value = "ship_modification_market_demand_ratio(scope:ship_modification_type)"
+	save_temporary_value_as = temp_ship_mod_demand_ratio
+
+	# Base multiplier = 1; each branch overrides via multiply.
+	value = 1
+	if = {
+		limit = { scope:temp_ship_mod_demand_ratio >= ship_mod_ai_price_ratio_reject }
+		multiply = 0.1 # We still want to score better modules a bit higher instead of all being 0
+	}
+	else_if = {
+		limit = { scope:temp_ship_mod_demand_ratio <= ship_mod_ai_price_ratio_bonus }
+		multiply = ship_mod_ai_price_bonus_multiplier
+	}
+	else = {
+		multiply = {
+			value = ship_mod_ai_price_bonus_multiplier
+			multiply = {
+				value = ship_mod_ai_price_ratio_reject
+				subtract = scope:temp_ship_mod_demand_ratio
+			}
+			divide = {
+				value = ship_mod_ai_price_ratio_reject
+				subtract = ship_mod_ai_price_ratio_bonus
+			}
+		}
+	}
+}
+
+ship_mod_doctrine_boost = { value = 1.5 }  # Multiplier applied when a bundle's doctrinal condition fires
+
+# Professional-navy / great-power balance: invest in the heaviest mods on
+# capital hulls. Also picks up Fire Control and Range Finder utility mods —
+# tools of disciplined capital-ship gunnery.
+ship_mod_capital_doctrine = {
+	value = 1
+	if = {
+		limit = {
+			OR = {
+				has_law = law_type:law_professional_navy
+				has_strategy = ai_strategy_maintain_power_balance
+			}
+		}
+		multiply = ship_mod_doctrine_boost
+	}
+}
+
+# Jeune-école: torpedo-craft doctrine. Buffs every mod on torpedo_boat,
+# torpedo_boat_destroyer, submarine, destroyer — the AI leans hard into small
+# deadly hulls. Camouflage too (jeune-école-coded).
+ship_mod_jeune_ecole_doctrine = {
+	value = 1
+	if = {
+		limit = { has_law = law_type:law_jeune_ecole }
+		multiply = ship_mod_doctrine_boost
+	}
+}
+
+# Coastal defence: armed isolationism wants floating forts and harbour denial.
+# Applies across monitor, coastal_defense_ship, and the small-ship hulls that
+# double as coastal-denial platforms (submarine, torpedo_boat).
+ship_mod_coastal_defence_doctrine = {
+	value = 1
+	if = {
+		limit = { has_strategy = ai_strategy_armed_isolationism }
+		multiply = ship_mod_doctrine_boost
+	}
+}
+
+# Blue-water power projection: diplomatic-navy law and overseas-expansion
+# strategies favour range on cruisers and support hulls.
+ship_mod_power_projection_doctrine = {
+	value = 1
+	if = {
+		limit = {
+			OR = {
+				has_law = law_type:law_diplomatic_navy
+				has_strategy = ai_strategy_colonial_expansion
+				has_strategy = ai_strategy_economic_imperialism
+			}
+		}
+		multiply = ship_mod_doctrine_boost
+	}
+}
+
+# Merchant navy: civilian-grade fleet, prioritise auxiliaries.
+ship_mod_merchant_navy_doctrine = {
+	value = 1
+	if = {
+		limit = { has_law = law_type:law_merchant_navy }
+		multiply = ship_mod_doctrine_boost
+	}
+}
+
+#root = country deciding whether to accept the demand
+#scope:initiator = country making the demand
+#scope:target_country = country deciding whether to accept the demand
+#scope:diplomatic_play_type = type of diplomatic play the demand is for
+diplomatic_play_acceptance = {
+	value = 0
+}
+
+#root = state; agricultural building levels for AI decree targeting, with subsistence counted at half weight
+ai_decree_agricultural_levels_script_value = {
+	value = "state_has_building_group_levels(bg_agriculture)"
+	add = "state_has_building_group_levels(bg_ranching)"
+	add = "state_has_building_group_levels(bg_plantations)"
+	subtract = {
+		value = "state_has_building_group_levels(bg_subsistence_agriculture)"
+		multiply = 0.5
+	}
+	subtract = {
+		value = "state_has_building_group_levels(bg_subsistence_ranching)"
+		multiply = 0.5
 	}
 }

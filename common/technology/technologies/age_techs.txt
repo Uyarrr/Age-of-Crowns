@@ -9,8 +9,8 @@
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_society_1
@@ -33,8 +33,8 @@ society_age_2 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_society_2
@@ -57,8 +57,8 @@ society_age_3 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_society_3
@@ -81,8 +81,8 @@ society_age_4 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_society_4
@@ -105,8 +105,8 @@ society_age_5 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_society_5
@@ -129,8 +129,8 @@ society_age_6 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_society_6
@@ -151,8 +151,8 @@ production_age_1 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_production_1
@@ -175,8 +175,8 @@ production_age_2 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_production_2
@@ -199,8 +199,8 @@ production_age_3 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_production_3
@@ -223,8 +223,8 @@ production_age_4 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_production_4
@@ -247,8 +247,8 @@ production_age_5 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_production_5
@@ -271,8 +271,8 @@ production_age_6 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_production_6
@@ -293,8 +293,8 @@ military_age_1 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_military_1
@@ -317,8 +317,8 @@ military_age_2 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_military_2
@@ -341,8 +341,8 @@ military_age_3 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_military_3
@@ -365,8 +365,8 @@ military_age_4 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_military_4
@@ -389,8 +389,8 @@ military_age_5 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_military_5
@@ -413,8 +413,8 @@ military_age_6 = {
 		if = {
 			limit = {
 				OR = {
-					this = c:ENG
-					this = c:GBR
+					c:ENG ?= this
+					c:GBR ?= this
 				}
 			}
 			add_technology_researched = england_military_6

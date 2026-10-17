@@ -13,7 +13,7 @@
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 3
+			state_infrastructure_add = 4
 			state_market_access_price_impact = 0.01
 		}
 	}
@@ -29,8 +29,8 @@ pm_building_road_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_tools_add = 2
-			goods_input_stone_add = 3
-			goods_output_transportation_add = 5
+			goods_input_stone_add = 4
+			goods_output_transportation_add = 6
 		}
 		level_scaled = {
 			building_employment_laborers_add = 500
@@ -39,7 +39,7 @@ pm_building_road_main_2 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 5
+			state_infrastructure_add = 8
 			state_market_access_price_impact = 0.02
 		}
 	}
@@ -56,7 +56,7 @@ pm_building_road_main_3 = {
 		workforce_scaled = {
 			goods_input_tools_add = 3
 			goods_input_cutstone_add = 4
-			goods_output_transportation_add = 15
+			goods_output_transportation_add = 9
 		}
 		level_scaled = {
 			building_employment_laborers_add = 400
@@ -66,7 +66,7 @@ pm_building_road_main_3 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 8
+			state_infrastructure_add = 12
 			state_market_access_price_impact = 0.03
 		}
 	}
@@ -82,8 +82,8 @@ pm_building_road_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_tools_add = 4
-			goods_input_cutstone_add = 6
-			goods_output_transportation_add = 15
+			goods_input_cutstone_add = 8
+			goods_output_transportation_add = 12
 		}
 		level_scaled = {
 			building_employment_laborers_add = 300
@@ -94,7 +94,7 @@ pm_building_road_main_4 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 10
+			state_infrastructure_add = 16
 			state_market_access_price_impact = 0.04
 		}
 	}

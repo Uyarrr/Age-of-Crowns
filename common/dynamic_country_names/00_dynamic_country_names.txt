@@ -667,6 +667,364 @@ DEFAULT = {
 	# Colonial administrations must live in this same DEFAULT database block.
 	# A second DEFAULT block in another file replaces/conflicts with this one
 	# instead of extending it, causing the generated tag/capital name to win.
+	# Castilian and Spanish colonial administrations. Historical names are used
+	# where attested; period-style administrative names cover alternate expansion.
+	dynamic_country_name = {
+		name = colonial_castilian_cape_verde
+		adjective = colonial_castilian_cape_verde_adj
+		use_overlord_prefix = yes
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_senegal
+		adjective = colonial_castilian_senegal_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = senegal_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_zanj
+		adjective = colonial_castilian_zanj_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = zanj_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_southern_africa
+		adjective = colonial_castilian_southern_africa_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_congo
+		adjective = colonial_castilian_congo_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = congo_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_canada
+		adjective = colonial_castilian_canada_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = canada_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_atlantic_coast
+		adjective = colonial_castilian_atlantic_coast_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_pacific_coast
+		adjective = colonial_castilian_pacific_coast_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_great_plains
+		adjective = colonial_castilian_great_plains_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = great_plains_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_central_america
+		adjective = colonial_castilian_central_america_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = central_america_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_gran_colombia
+		adjective = colonial_castilian_gran_colombia_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_andes
+		adjective = colonial_castilian_andes_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = andes_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_la_plata
+		adjective = colonial_castilian_la_plata_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = la_plata_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_brazil
+		adjective = colonial_castilian_brazil_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = brazil_subject_var aoc_is_castilian_or_spanish_subject = yes } }
+	}
+
+	# Portuguese colonial administrations.
+	dynamic_country_name = {
+		name = colonial_portuguese_cape_verde
+		adjective = colonial_portuguese_cape_verde_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_senegal
+		adjective = colonial_portuguese_senegal_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = senegal_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_zanj
+		adjective = colonial_portuguese_zanj_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = zanj_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_southern_africa
+		adjective = colonial_portuguese_southern_africa_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_congo
+		adjective = colonial_portuguese_congo_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = congo_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_canada
+		adjective = colonial_portuguese_canada_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = canada_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_atlantic_coast
+		adjective = colonial_portuguese_atlantic_coast_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_pacific_coast
+		adjective = colonial_portuguese_pacific_coast_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_great_plains
+		adjective = colonial_portuguese_great_plains_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = great_plains_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_central_america
+		adjective = colonial_portuguese_central_america_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = central_america_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_gran_colombia
+		adjective = colonial_portuguese_gran_colombia_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_andes
+		adjective = colonial_portuguese_andes_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = andes_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_la_plata
+		adjective = colonial_portuguese_la_plata_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = la_plata_subject_var aoc_is_portuguese_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_brazil
+		adjective = colonial_portuguese_brazil_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = brazil_subject_var aoc_is_portuguese_subject = yes } }
+	}
+
+	# French colonial administrations.
+	dynamic_country_name = {
+		name = colonial_french_cape_verde
+		adjective = colonial_french_cape_verde_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_senegal
+		adjective = colonial_french_senegal_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = senegal_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_zanj
+		adjective = colonial_french_zanj_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = zanj_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_southern_africa
+		adjective = colonial_french_southern_africa_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_congo
+		adjective = colonial_french_congo_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = congo_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_canada
+		adjective = colonial_french_canada_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = canada_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_atlantic_coast
+		adjective = colonial_french_atlantic_coast_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_pacific_coast
+		adjective = colonial_french_pacific_coast_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_great_plains
+		adjective = colonial_french_great_plains_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = great_plains_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_central_america
+		adjective = colonial_french_central_america_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = central_america_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_gran_colombia
+		adjective = colonial_french_gran_colombia_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_andes
+		adjective = colonial_french_andes_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = andes_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_la_plata
+		adjective = colonial_french_la_plata_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = la_plata_subject_var aoc_is_french_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_french_brazil
+		adjective = colonial_french_brazil_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = brazil_subject_var aoc_is_french_subject = yes } }
+	}
+
+	# English colonial administrations.
+	dynamic_country_name = {
+		name = colonial_english_cape_verde
+		adjective = colonial_english_cape_verde_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_senegal
+		adjective = colonial_english_senegal_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = senegal_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_zanj
+		adjective = colonial_english_zanj_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = zanj_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_southern_africa
+		adjective = colonial_english_southern_africa_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_congo
+		adjective = colonial_english_congo_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = congo_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_canada
+		adjective = colonial_english_canada_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = canada_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_atlantic_coast
+		adjective = colonial_english_atlantic_coast_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_pacific_coast
+		adjective = colonial_english_pacific_coast_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_great_plains
+		adjective = colonial_english_great_plains_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = great_plains_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_central_america
+		adjective = colonial_english_central_america_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = central_america_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_gran_colombia
+		adjective = colonial_english_gran_colombia_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_andes
+		adjective = colonial_english_andes_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = andes_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_la_plata
+		adjective = colonial_english_la_plata_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = la_plata_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+	dynamic_country_name = {
+		name = colonial_english_brazil
+		adjective = colonial_english_brazil_adj
+		priority = 200
+		trigger = { exists = scope:actor scope:actor ?= { has_variable = brazil_subject_var aoc_is_english_or_british_subject = yes } }
+	}
+
+
+	dynamic_country_name = {
+		name = colonial_admin_cape_verde
+		adjective = colonial_admin_cape_verde_adj
+		use_overlord_prefix = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var }
+		}
+	}
 	dynamic_country_name = {
 		name = colonial_admin_congo
 		adjective = colonial_admin_congo_adj

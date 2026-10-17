@@ -171,18 +171,6 @@ colonial_great_plains = {
 	}
 }
 
-colonial_central_america = {
-	pattern = "pattern_solid.tga"
-	color1 = "blue"
-	color2 = "blue"
-
-	colored_emblem = {
-		texture = "ce_trident.dds"
-		color1 = "yellow"
-		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
-	}
-}
-
 colonial_gran_colombia = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -247,5 +235,16 @@ colonial_brazil = {
 		instance = { scale = { 0.08 0.08 } position = { 0.50 0.85 } }
 		instance = { scale = { 0.08 0.08 } position = { 0.67 0.85 } }
 		instance = { scale = { 0.08 0.08 } position = { 0.85 0.85 } }
+	}
+}
+
+colonial_central_america = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	color2 = "yellow"
+
+	textured_emblem = {
+		texture = "te_glyph_texaxacalo_chimalli.dds"
+		instance = { scale = { 0.65 0.65 } position = { 0.75 0.5 } }
 	}
 }

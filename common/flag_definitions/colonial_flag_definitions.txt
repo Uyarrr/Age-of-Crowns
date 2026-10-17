@@ -1,0 +1,91 @@
+COLONIAL_FLAG_DEFINITIONS = {
+	flag_definition = {
+		coa = colonial_southern_africa
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.501 0.501 }
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = southern_africa_subject_var
+			}
+			NOT = {
+				scope:actor ?= {
+					c:SAF ?= this
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = colonial_congo
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.501 0.501 }
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = congo_subject_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = colonial_niger
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.501 0.501 }
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = niger_subject_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = colonial_senegal
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.501 0.501 }
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = senegal_subject_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = colonial_zanj
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.501 0.501 }
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = zanj_subject_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = colonial_ethiopia
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.501 0.501 }
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = ethiopia_subject_var
+			}
+		}
+	}
+	flag_definition = {
+		coa = colonial_central_america
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.501 0.501 }
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = central_america_subject_var
+			}
+		} 
+	}
+}

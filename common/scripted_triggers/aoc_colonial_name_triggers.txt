@@ -1,0 +1,35 @@
+aoc_is_castilian_or_spanish_subject = {
+	OR = {
+		AND = {
+			exists = c:SPA
+			is_direct_subject_of = c:SPA
+		}
+		AND = {
+			exists = c:CAS
+			is_direct_subject_of = c:CAS
+		}
+	}
+}
+aoc_is_portuguese_subject = {
+	exists = c:POR
+	is_direct_subject_of = c:POR
+}
+
+aoc_is_french_subject = {
+	exists = c:FRA
+	is_direct_subject_of = c:FRA
+}
+
+aoc_is_english_or_british_subject = {
+	OR = {
+		AND = {
+			exists = c:ENG
+			is_direct_subject_of = c:ENG
+		}
+		AND = {
+			exists = c:GBR
+			is_direct_subject_of = c:GBR
+		}
+	}
+}
+
