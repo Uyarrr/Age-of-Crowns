@@ -11,7 +11,7 @@
 movement_pro_slavery = {
 	category = movement_category_ideological
 
-	ideology = ideology_slaver
+	ideology = ideology_aoc_slaver
 	character_ideologies = {
 		ideology_authoritarian
 		ideology_moderate
@@ -40,7 +40,7 @@ movement_pro_slavery = {
 			scope:interest_group ?= {
 				OR = {
 					is_interest_group_type = ig_landowners
-					has_ideology = ideology:ideology_slaver
+					has_ideology = ideology:ideology_aoc_slaver
 				}
 			}
 		}
@@ -49,7 +49,7 @@ movement_pro_slavery = {
 		value = 100
 		if = {
 			limit = {
-				scope:interest_group ?= { has_ideology = ideology:ideology_slaver }
+				scope:interest_group ?= { has_ideology = ideology:ideology_aoc_slaver }
 			}
 			multiply = 5
 		}
@@ -213,7 +213,7 @@ movement_anti_slavery = {
 	category = movement_category_ideological
 	can_have_slave_supporters = yes
 
-	ideology = ideology_abolitionist
+	ideology = ideology_aoc_abolitionist
 	character_ideologies = {
 		ideology_humanitarian
 		ideology_reformer
@@ -259,7 +259,7 @@ movement_anti_slavery = {
 		OR = {
 			has_ideology = ideology:ideology_humanitarian
 			has_ideology = ideology:ideology_humanitarian_royalist
-			scope:interest_group ?= { has_ideology = ideology:ideology_abolitionist }
+			scope:interest_group ?= { has_ideology = ideology:ideology_aoc_abolitionist }
 		}
 	}
 	character_support_weight = {
@@ -420,7 +420,7 @@ movement_slave_revolt = {
 
 	active_law_radicalism_multiplier = 1
 
-	ideology = ideology_abolitionist
+	ideology = ideology_aoc_abolitionist
 	character_ideologies = {
 		ideology_humanitarian
 		ideology_radical
@@ -512,7 +512,7 @@ movement_slave_revolt = {
 			has_ideology = ideology:ideology_radical
 			has_ideology = ideology:ideology_humanitarian
 			has_ideology = ideology:ideology_humanitarian_royalist
-			scope:interest_group ?= { has_ideology = ideology:ideology_abolitionist }
+			scope:interest_group ?= { has_ideology = ideology:ideology_aoc_abolitionist }
 		}
 	}
 	character_support_weight = {
@@ -691,7 +691,7 @@ movement_slave_revolt = {
 		if = {
 			limit = {
 				owner.ruler ?= {
-					interest_group ?= { has_ideology = ideology:ideology_slaver }
+					interest_group ?= { has_ideology = ideology:ideology_aoc_slaver }
 				}
 			}
 			add = {

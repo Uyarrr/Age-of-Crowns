@@ -214,7 +214,7 @@ movement_clerical = {
 movement_old_custom = {
 	category = movement_category_ideological
 
-	ideology = ideology_traditionalist
+	ideology = ideology_aoc_traditionalist
 	character_ideologies = {
 		ideology_moderate
 		ideology_theocrat
@@ -247,7 +247,7 @@ movement_old_custom = {
 				OR = {
 					is_interest_group_type = ig_devout
 					is_interest_group_type = ig_rural_folk
-					has_ideology = ideology:ideology_traditionalist
+					has_ideology = ideology:ideology_aoc_traditionalist
 				}
 			}
 		}
@@ -256,7 +256,7 @@ movement_old_custom = {
 		value = 100
 		if = {
 			limit = {
-				scope:interest_group ?= { has_ideology = ideology:ideology_traditionalist }
+				scope:interest_group ?= { has_ideology = ideology:ideology_aoc_traditionalist }
 			}
 			multiply = 3
 		}

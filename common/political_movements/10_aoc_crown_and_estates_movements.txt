@@ -792,7 +792,7 @@ movement_particularist = {
 movement_royalist = {
 	category = movement_category_ideological
 
-	ideology = ideology_royalist
+	ideology = ideology_aoc_royalist
 	character_ideologies = {
 		ideology_authoritarian
 		ideology_humanitarian_royalist
@@ -825,7 +825,7 @@ movement_royalist = {
 				OR = {
 					is_interest_group_type = ig_crown
 					is_interest_group_type = ig_landowners
-					has_ideology = ideology:ideology_royalist
+					has_ideology = ideology:ideology_aoc_royalist
 				}
 			}
 		}
@@ -834,7 +834,7 @@ movement_royalist = {
 		value = 100
 		if = {
 			limit = {
-				scope:interest_group ?= { has_ideology = ideology:ideology_royalist }
+				scope:interest_group ?= { has_ideology = ideology:ideology_aoc_royalist }
 			}
 			multiply = 4
 		}

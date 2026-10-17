@@ -59,13 +59,6 @@ law_chartered_economy = {
 
 	progressiveness = 25
 
-	disallowing_laws = {
-		law_serfdom
-		law_anarchy
-		law_factory_councils
-		law_women_in_the_fields
-	}
-
 	on_activate = {
 	}
 
@@ -105,7 +98,7 @@ law_chartered_economy = {
 					has_technology_researched = human_rights
 					has_technology_researched = pan-nationalism
 				}
-				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_manorial_economy
 			}
 
 			add = 1000
@@ -120,7 +113,7 @@ law_chartered_economy = {
 					has_journal_entry = je_great_reforms_serfdom
 					has_journal_entry = je_hawaii
 				}
-				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_manorial_economy
 			}
 			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
 		}
@@ -128,7 +121,7 @@ law_chartered_economy = {
 		# AI should really try to get out of Traditionalism under the right circumstances
 		if = {
 			limit = {
-				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_manorial_economy
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
@@ -152,12 +145,6 @@ law_agrarian_economy = {
 	icon = "gfx/interface/icons/law_icons/agrarianism.dds"
 
 	progressiveness = 0
-
-	disallowing_laws = {
-		law_anarchy
-		law_factory_councils
-		law_women_in_the_fields
-	}
 
 	unlocking_technologies = {
 		agrarianism
@@ -189,7 +176,7 @@ law_agrarian_economy = {
 
 	ai_will_do = {
 		OR = {
-			has_law_or_variant = law_type:law_traditionalism
+			has_law_or_variant = law_type:law_manorial_economy
 			literacy_rate < 0.4
 		}
 	}
@@ -210,7 +197,7 @@ law_agrarian_economy = {
 					has_technology_researched = human_rights
 					has_technology_researched = pan-nationalism
 				}
-				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_manorial_economy
 			}
 
 			add = 1000
@@ -219,7 +206,7 @@ law_agrarian_economy = {
 		if = {
 			limit = {
 				has_journal_entry = je_sick_man_bureaucracy
-				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_manorial_economy
 			}
 			add = 10000 # Top priority for Tanzimat AI is to get out of Traditionalism
 		}
@@ -234,7 +221,7 @@ law_agrarian_economy = {
 		# AI should really try to get out of Traditionalism under the right circumstances
 		if = {
 			limit = {
-				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_manorial_economy
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
@@ -258,18 +245,8 @@ law_colonial_economy = {
 	icon = "gfx/interface/icons/law_icons/extraction_economy.dds"
 	progressiveness = -50
 
-	disallowing_laws = {
-		law_anarchy
-		law_factory_councils
-	}
-
 	unlocking_technologies = {
 		colonization
-	}
-
-	disallowing_laws = {
-		law_anarchy
-		law_women_in_the_fields
 	}
 
 	can_enact = {
@@ -365,12 +342,7 @@ law_economic_liberalism = {
 	progressiveness = 25
 
 	disallowing_laws = {
-		law_serfdom
 		law_isolationism
-		law_anarchy
-		law_guild_system
-		law_factory_councils
-		law_women_in_the_fields
 	}
 
 	unlocking_technologies = {
@@ -417,7 +389,7 @@ law_economic_liberalism = {
 					has_journal_entry = je_great_reforms_serfdom
 					has_journal_entry = je_hawaii
 				}
-				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_manorial_economy
 			}
 			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
 		}
@@ -425,7 +397,7 @@ law_economic_liberalism = {
 		# AI should really try to get out of Traditionalism under the right circumstances
 		if = {
 			limit = {
-				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_manorial_economy
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
@@ -449,16 +421,6 @@ law_merchant_economy = {
 	icon = "gfx/interface/icons/law_icons/cooperative_ownership.dds"
 
 	progressiveness = 100
-
-	disallowing_laws = {
-		law_serfdom
-		law_women_in_the_fields
-	}
-
-	unlocking_laws = {
-		law_council_republic
-		law_corporate_state
-	}
 
 	on_activate = {
 		custom_tooltip = {
@@ -491,7 +453,10 @@ law_merchant_economy = {
 
 		if = {
 			limit = {
-				has_law_or_variant = law_type:law_council_republic
+				OR = {
+					has_law_or_variant = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_parliamentary_republic
+				}
 			}
 			add = 400
 		}
@@ -502,7 +467,7 @@ law_merchant_economy = {
 
 		if = {
 			limit = {
-				has_law = law_type:law_cooperative_ownership
+				has_law = law_type:law_merchant_economy
 			}
 
 			add = base_impose_law_weight
@@ -532,12 +497,6 @@ law_state_directed_economy = {
 
 	progressiveness = 50
 
-	disallowing_laws = {
-		law_serfdom
-		law_anarchy
-		law_women_in_the_fields
-	}
-
 	unlocking_technologies = {
 		central_planning
 	}
@@ -547,7 +506,6 @@ law_state_directed_economy = {
 		law_neo_absolutism
 		law_oligarchy
 		law_organic_regulation
-		law_single_party_state
 		law_technocracy
 	}
 
@@ -582,16 +540,7 @@ law_state_directed_economy = {
 	}
 
 	ai_will_do = {
-		OR = {
-			has_law_or_variant = law_type:law_technocracy
-			AND = {
-				has_law_or_variant = law_type:law_council_republic
-				ruler ?= {
-					has_ideology = ideology:ideology_vanguardist
-					has_ideology = ideology:ideology_communist
-				}
-			}
-		}
+		has_law_or_variant = law_type:law_technocracy
 	}
 
 	ai_enact_weight_modifier = { #Petitions
@@ -600,13 +549,6 @@ law_state_directed_economy = {
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}
-
-		if = {
-			limit = {
-				has_law_or_variant = law_type:law_council_republic
-			}
-			add = 250
 		}
 
 		if = {
@@ -622,7 +564,7 @@ law_state_directed_economy = {
 
 		if = {
 			limit = {
-				has_law = law_type:law_command_economy
+				has_law = law_type:law_state_directed_economy
 			}
 
 			add = base_impose_law_weight
