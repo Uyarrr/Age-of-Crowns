@@ -22,7 +22,7 @@ ai_strategy_spanish_new_world_empire = {
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
 					any_scope_state = {
 						is_in_geographic_region = geographic_region_aoc_spanish_caribbean
@@ -37,7 +37,7 @@ ai_strategy_spanish_new_world_empire = {
 			limit = {
 				has_variable = aoc_spanish_mainland_phase
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
 					any_scope_state = {
 						is_in_geographic_region = geographic_region_aoc_spanish_mainland
@@ -52,7 +52,7 @@ ai_strategy_spanish_new_world_empire = {
 			limit = {
 				has_variable = aoc_spanish_south_america_phase
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
@@ -69,7 +69,7 @@ ai_strategy_spanish_new_world_empire = {
 			limit = {
 				NOT = { is_country_type = unrecognized }
 				scope:target_country = { is_country_type = unrecognized }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
 					any_scope_state = {
 						is_in_geographic_region = geographic_region_americas
@@ -82,7 +82,7 @@ ai_strategy_spanish_new_world_empire = {
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
 					NOT = {
 						any_scope_state = {
@@ -220,7 +220,7 @@ ai_strategy_spanish_new_world_empire = {
 		dominate = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
 					any_scope_state = {
 						is_in_geographic_region = geographic_region_americas
@@ -268,7 +268,7 @@ ai_strategy_spanish_new_world_empire = {
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
@@ -433,7 +433,7 @@ ai_strategy_spanish_new_world_empire = {
 
 		if = {
 			limit = {
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 
 			if = {

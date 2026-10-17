@@ -42,7 +42,7 @@
 			limit = {
 				has_technology_researched = colonization
 				has_technology_researched = colonial_trade_networks
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
 					any_scope_state = { region = sr:region_canada }
@@ -61,7 +61,7 @@
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				has_strategic_adjacency = scope:target_country
 				scope:target_country = {
 					any_scope_state = {
@@ -77,7 +77,7 @@
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				has_strategic_adjacency = scope:target_country
 			}
 			add = 0.6
@@ -93,7 +93,7 @@
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { has_strategic_adjacency = scope:target_country }
 				scope:target_country = {
 					NOT = {
@@ -172,7 +172,7 @@
 			limit = {
 				has_technology_researched = colonization
 				has_technology_researched = colonial_trade_networks
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 				scope:target_state = { region = sr:region_canada }
 			}
 			add = 175
@@ -181,7 +181,7 @@
 			limit = {
 				has_variable = aoc_french_atlantic_phase
 				has_technology_researched = colonization
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 				scope:target_state = { region = sr:region_atlantic_coast }
 			}
 			add = 75
@@ -212,7 +212,7 @@
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				OR = {
 					scope:target_country = { c:ENG ?= this }
 					has_strategic_adjacency = scope:target_country
@@ -267,7 +267,7 @@
 		dominate = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				has_strategic_adjacency = scope:target_country
 				scope:target_country.country_rank <= rank_value:minor_power
 				scope:target_country = {

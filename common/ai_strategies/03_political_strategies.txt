@@ -85,7 +85,7 @@
 			value = 150
 			if = {
 				limit = {
-					has_journal_entry = je_colonize_korea
+					always = no # 1.14 cleanup, was: has_journal_entry = je_colonize_korea (not in mod)
 				}
 				multiply = 2
 			}
@@ -134,7 +134,7 @@
 		if = { # Metternich System
 			limit = {
 				c:AUS ?= this
-				has_journal_entry = je_metternich
+				always = no # 1.14 cleanup, was: has_journal_entry = je_metternich (not in mod)
 			}
 			add = 20
 		}
@@ -257,7 +257,7 @@ ai_strategy_reactionary_agenda = {
 			value = 200
 			if = {
 				limit = {
-					has_journal_entry = je_colonize_korea
+					always = no # 1.14 cleanup, was: has_journal_entry = je_colonize_korea (not in mod)
 				}
 				multiply = 2
 			}
@@ -447,7 +447,7 @@ ai_strategy_progressive_agenda = {
 			value = 75
 			if = {
 				limit = {
-					has_journal_entry = je_colonize_korea
+					always = no # 1.14 cleanup, was: has_journal_entry = je_colonize_korea (not in mod)
 				}
 				multiply = 2
 			}
@@ -649,7 +649,7 @@ ai_strategy_egalitarian_agenda = {
 			value = 50
 			if = {
 				limit = {
-					has_journal_entry = je_colonize_korea
+					always = no # 1.14 cleanup, was: has_journal_entry = je_colonize_korea (not in mod)
 				}
 				multiply = 2
 			}
@@ -675,7 +675,7 @@ ai_strategy_egalitarian_agenda = {
 	}
 
 	possible = {
-		has_technology_researched = egalitarianism
+		always = no # 1.14 cleanup, was: has_technology_researched = egalitarianism (not in mod)
 		exists = ig:ig_trade_unions
 		ig:ig_trade_unions ?= { ig_counts_as_marginal = no }
 	}
@@ -826,7 +826,7 @@ ai_strategy_nationalist_agenda = {
 			value = 150
 			if = {
 				limit = {
-					has_journal_entry = je_colonize_korea
+					always = no # 1.14 cleanup, was: has_journal_entry = je_colonize_korea (not in mod)
 				}
 				multiply = 2
 			}
@@ -852,7 +852,7 @@ ai_strategy_nationalist_agenda = {
 	}
 
 	possible = {
-		has_technology_researched = nationalism
+		always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 		OR = {
 			AND = {
 				exists = ig:ig_armed_forces
@@ -1167,7 +1167,7 @@ ai_strategy_tanzimat_reforms = {
 	}
 
 	possible = {
-		has_journal_entry = je_sick_man_main
+		always = no # 1.14 cleanup, was: has_journal_entry = je_sick_man_main (not in mod)
 	}
 
 	weight = {
@@ -1251,7 +1251,7 @@ ai_strategy_meiji_restoration = {
 			value = 75
 			if = {
 				limit = {
-					has_journal_entry = je_colonize_korea
+					always = no # 1.14 cleanup, was: has_journal_entry = je_colonize_korea (not in mod)
 				}
 				multiply = 2
 			}
@@ -1277,7 +1277,7 @@ ai_strategy_meiji_restoration = {
 	}
 
 	possible = {
-		has_journal_entry = je_meiji_main
+		always = no # 1.14 cleanup, was: has_journal_entry = je_meiji_main (not in mod)
 	}
 
 	weight = {
@@ -1377,7 +1377,7 @@ ai_strategy_great_reforms = {
 	}
 
 	possible = {
-		has_journal_entry = je_great_reformer
+		always = no # 1.14 cleanup, was: has_journal_entry = je_great_reformer (not in mod)
 	}
 
 	weight = {

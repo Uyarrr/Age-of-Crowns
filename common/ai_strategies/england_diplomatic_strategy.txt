@@ -41,7 +41,7 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 
 				scope:target_country = {
 					OR = {
@@ -176,7 +176,7 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 
 				scope:target_country = {
 					OR = {
@@ -240,7 +240,7 @@ ai_strategy_england_unite_britain = {
 					}
 				}
 
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 
 				scope:target_country.country_rank <= rank_value:minor_power
 

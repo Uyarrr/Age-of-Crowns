@@ -59,7 +59,7 @@ ai_strategy_maintain_power_balance = {
 			}
 
 			if = {
-				limit = { has_technology_researched = civilizing_mission }
+				limit = { always = no } # 1.14 cleanup, was: has_technology_researched = civilizing_mission (not in mod)
 				add = 0.5
 
 				if = {
@@ -216,7 +216,7 @@ ai_strategy_territorial_expansion = {
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				has_strategic_adjacency = scope:target_country
 				scope:target_country.country_rank <= root.country_rank
 			}
@@ -283,7 +283,7 @@ ai_strategy_colonial_expansion = {
 			global_country_ranking <= 3
 			AND = {
 				country_rank >= rank_value:great_power
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 		}
 	}
@@ -293,13 +293,13 @@ ai_strategy_colonial_expansion = {
 
 		if = {
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			multiply = 1.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 			multiply = 1.25
 		}
@@ -310,13 +310,13 @@ ai_strategy_colonial_expansion = {
 
 		if = {
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			multiply = 1.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 			multiply = 1.25
 		}
@@ -372,7 +372,7 @@ ai_strategy_colonial_expansion = {
 			}
 
 			if = {
-				limit = { has_technology_researched = civilizing_mission }
+				limit = { always = no } # 1.14 cleanup, was: has_technology_researched = civilizing_mission (not in mod)
 				add = 1.5
 
 				if = {
@@ -381,13 +381,13 @@ ai_strategy_colonial_expansion = {
 				}
 
 				if = {
-					limit = { has_technology_researched = malaria_prevention }
+					limit = { always = no } # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 					add = 1
 				}
 
 				if = {
 					limit = {
-						has_journal_entry = je_scramble_for_africa
+						always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 						scope:target_country = {
 							is_in_geographic_region = geographic_region_africa
 						}
@@ -412,7 +412,7 @@ ai_strategy_colonial_expansion = {
 		if = {
 			limit = {
 				country_has_primary_culture = cu:british
-				has_technology_researched = malaria_prevention
+				always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 				any_subject_or_below = {
 					capital.region = sr:region_southern_africa
 				}
@@ -522,7 +522,7 @@ ai_strategy_colonial_expansion = {
 
 					if = {
 						limit = {
-							has_journal_entry = je_scramble_for_africa
+							always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 							scope:target_country = {
 								is_in_geographic_region = geographic_region_africa
 							}
@@ -533,7 +533,7 @@ ai_strategy_colonial_expansion = {
 				if = {
 					limit = {
 						country_has_primary_culture = cu:british
-						has_technology_researched = malaria_prevention
+						always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						any_subject_or_below = {
 							capital.region = sr:region_southern_africa
 						}
@@ -563,7 +563,7 @@ ai_strategy_colonial_expansion = {
 
 					if = {
 						limit = {
-							has_journal_entry = je_scramble_for_africa
+							always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 							scope:target_country = {
 								is_in_geographic_region = geographic_region_africa
 							}
@@ -574,7 +574,7 @@ ai_strategy_colonial_expansion = {
 				if = {
 					limit = {
 						country_has_primary_culture = cu:british
-						has_technology_researched = malaria_prevention
+						always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						any_subject_or_below = {
 							capital.region = sr:region_southern_africa
 						}
@@ -720,7 +720,7 @@ ai_strategy_armed_isolationism = {
 		}
 
 		if = {
-			limit = { has_law_or_variant = law_type:law_national_militia }
+			limit = { always = no } # 1.14 cleanup, was: has_law_or_variant = law_type:law_national_militia (not in mod)
 			add = 50
 		}
 
@@ -732,8 +732,8 @@ ai_strategy_armed_isolationism = {
 		if = {
 			limit = {
 				OR = {
-					has_journal_entry = je_meiji_restoration
-					has_journal_entry = je_meiji_main
+					always = no # 1.14 cleanup, was: has_journal_entry = je_meiji_restoration (not in mod)
+					always = no # 1.14 cleanup, was: has_journal_entry = je_meiji_main (not in mod)
 				}
 			}
 			multiply = 0.1
@@ -761,7 +761,7 @@ ai_strategy_economic_imperialism = {
 			global_country_ranking <= 3
 			AND = {
 				country_rank >= rank_value:great_power
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 		}
 	}
@@ -836,7 +836,7 @@ ai_strategy_economic_imperialism = {
 			}
 
 			if = {
-				limit = { has_technology_researched = civilizing_mission }
+				limit = { always = no } # 1.14 cleanup, was: has_technology_researched = civilizing_mission (not in mod)
 				add = 0.5
 
 				if = {
@@ -862,7 +862,7 @@ ai_strategy_economic_imperialism = {
 		# Very aggressive about opening up Japan
 		if = {
 			limit = {
-				has_technology_researched = nationalism # Just to make sure it doesn't happen immediately in 1836
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 				country_rank = rank_value:great_power
 				navy_size >= 25
 				scope:target_country = {
@@ -949,7 +949,7 @@ ai_strategy_economic_imperialism = {
 				if = {
 					limit = {
 						NOT = { scope:target_country = { is_subject_of = root } }
-						has_technology_researched = nationalism  # Just to make sure it doesn't happen immediately in 1836
+						always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 						country_rank = rank_value:great_power
 						navy_size >= 25
 						scope:target_country = {
@@ -1042,7 +1042,7 @@ ai_strategy_economic_imperialism = {
 	treaty_port_value = {
 		if = {
 			limit = {
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 				scope:target_country = {
 					has_law_or_variant = law_type:law_isolationism
 					gdp >= 2000000 # Not worth doing against very small markets
@@ -1069,7 +1069,7 @@ ai_strategy_economic_imperialism = {
 			if = {
 				limit = {
 					country_rank = rank_value:great_power
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 					scope:target_country = {
 						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000 # Not worth doing against small markets
@@ -1102,7 +1102,7 @@ ai_strategy_economic_imperialism = {
 			if = {
 				limit = {
 					country_rank = rank_value:great_power
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 					scope:target_country = {
 						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000 # Not worth doing against small markets
@@ -1256,7 +1256,7 @@ ai_strategy_unify_germany = {
 
 		if = {
 			limit = {
-				has_technology_researched = enlistment_offices
+				always = no # 1.14 cleanup, was: has_technology_researched = enlistment_offices (not in mod)
 			}
 			add = 0.25
 		}
@@ -1270,13 +1270,13 @@ ai_strategy_unify_germany = {
 				scope:target_country = {
 					is_unification_candidate = GER
 				}
-				NOT = { has_journal_entry = je_schleswig_holstein_question }
+				NOT = { always = no } # 1.14 cleanup, was: has_journal_entry = je_schleswig_holstein_question (not in mod)
 			}
 			add = 0.25
 
 			if = {
 				limit = {
-					has_technology_researched = enlistment_offices
+					always = no # 1.14 cleanup, was: has_technology_researched = enlistment_offices (not in mod)
 				}
 				add = 10
 			}
@@ -1295,7 +1295,7 @@ ai_strategy_unify_germany = {
 
 			if = {
 				limit = {
-					has_technology_researched = enlistment_offices
+					always = no # 1.14 cleanup, was: has_technology_researched = enlistment_offices (not in mod)
 				}
 				add = 2
 			}
@@ -1349,7 +1349,7 @@ ai_strategy_unify_germany = {
 						}
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = 100
 		}
@@ -1360,7 +1360,7 @@ ai_strategy_unify_germany = {
 			value = 5
 			if = { # Fervour
 				limit = {
-					has_technology_researched = pan-nationalism
+					always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 				}
 				add = {
 					value = country_fervor_primary_culture
@@ -1376,7 +1376,7 @@ ai_strategy_unify_germany = {
 			if = { # At this point - up to 55 if Pan-National, 15 if not
 				limit = {
 					any_political_movement ?= {
-						is_political_movement_type = movement_german_national
+						always = no # 1.14 cleanup, was: is_political_movement_type = movement_german_national (not in mod)
 						save_temporary_scope_as = german_national_movement
 					}
 				}
@@ -1479,7 +1479,7 @@ ai_strategy_unify_germany = {
 		value = 5
 		if = { # Fervour
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			add = {
 				value = country_fervor_primary_culture
@@ -1495,7 +1495,7 @@ ai_strategy_unify_germany = {
 		if = { # At this point - up to 55 if Pan-National, 15 if not
 			limit = {
 				any_political_movement ?= {
-					is_political_movement_type = movement_german_national
+					always = no # 1.14 cleanup, was: is_political_movement_type = movement_german_national (not in mod)
 					save_temporary_scope_as = german_national_movement
 				}
 			}
@@ -1641,7 +1641,7 @@ ai_strategy_unify_italy = {
 						}
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = 100
 		}
@@ -1652,7 +1652,7 @@ ai_strategy_unify_italy = {
 			value = 5
 			if = { # Fervour
 				limit = {
-					has_technology_researched = pan-nationalism
+					always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 				}
 				add = {
 					value = country_fervor_primary_culture
@@ -1668,7 +1668,7 @@ ai_strategy_unify_italy = {
 			if = { # At this point - up to 55 if Pan-National, 15 if not
 				limit = {
 					any_political_movement ?= {
-						is_political_movement_type = movement_italian_national
+						always = no # 1.14 cleanup, was: is_political_movement_type = movement_italian_national (not in mod)
 						save_temporary_scope_as = italian_national_movement
 					}
 				}
@@ -1771,7 +1771,7 @@ ai_strategy_unify_italy = {
 		value = 5
 		if = { # Fervour
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			add = {
 				value = country_fervor_primary_culture
@@ -1787,7 +1787,7 @@ ai_strategy_unify_italy = {
 		if = { # At this point - up to 55 if Pan-National, 15 if not
 			limit = {
 				any_political_movement ?= {
-					is_political_movement_type = movement_italian_national
+					always = no # 1.14 cleanup, was: is_political_movement_type = movement_italian_national (not in mod)
 					save_temporary_scope_as = italian_national_movement
 				}
 			}
@@ -1865,7 +1865,7 @@ ai_strategy_unify_ethiopia = {
 
 		if = {
 			limit = {
-				scope:target_country = { has_journal_entry = je_age_of_princes }
+				scope:target_country = { always = no } # 1.14 cleanup, was: has_journal_entry = je_age_of_princes (not in mod)
 			}
 			add = 25
 		}
@@ -1920,7 +1920,7 @@ ai_strategy_unify_ethiopia = {
 						}
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = 100
 		}
@@ -1931,9 +1931,9 @@ ai_strategy_unify_ethiopia = {
 			if = {
 				limit = {
 					scope:target_country = {
-						has_journal_entry = je_age_of_princes
+						always = no # 1.14 cleanup, was: has_journal_entry = je_age_of_princes (not in mod)
 					}
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 300
 			}
@@ -1958,7 +1958,7 @@ ai_strategy_unify_ethiopia = {
 
 				if = {
 					limit = {
-						can_reach_target_country = no
+						NOT = { can_reach_target_country = { TARGET_COUNTRY = scope:target_country } }
 					}
 					add = 150
 				}
@@ -1975,7 +1975,7 @@ ai_strategy_unify_ethiopia = {
 						}
 					}
 				}
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			score = {
 				value = 500
@@ -1985,7 +1985,7 @@ ai_strategy_unify_ethiopia = {
 
 	possible = {
 		is_subject = no
-		has_journal_entry = je_age_of_princes
+		always = no # 1.14 cleanup, was: has_journal_entry = je_age_of_princes (not in mod)
 	}
 
 	weight = {
@@ -2011,7 +2011,7 @@ ai_strategy_unify_ethiopia = {
 
 		# Delay the Ethiopian Thunderdome a bit
 		if = {
-			limit = { NOT = { has_technology_researched = centralization } }
+			limit = { NOT = { always = no } } # 1.14 cleanup, was: has_technology_researched = centralization (not in mod)
 			multiply = 0.1
 		}
 	}
@@ -2055,7 +2055,7 @@ ai_strategy_unify_china = {
 
 		if = {
 			limit = {
-				scope:target_country = { has_journal_entry = je_reunify_china }
+				scope:target_country = { always = no } # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 			}
 			add = 25
 		}
@@ -2070,7 +2070,7 @@ ai_strategy_unify_china = {
 
 		if = {
 			limit = {
-				scope:target_country = { has_journal_entry = je_reunify_china }
+				scope:target_country = { always = no } # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 			}
 			add = 5.0
 		}
@@ -2102,7 +2102,7 @@ ai_strategy_unify_china = {
 						}
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = 100
 		}
@@ -2113,9 +2113,9 @@ ai_strategy_unify_china = {
 			if = {
 				limit = {
 					scope:target_country = {
-						has_journal_entry = je_reunify_china
+						always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 					}
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 300
 			}
@@ -2127,7 +2127,7 @@ ai_strategy_unify_china = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
-					has_journal_entry = je_reunify_china
+					always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 				}
 			}
 			score = {
@@ -2135,7 +2135,7 @@ ai_strategy_unify_china = {
 
 				if = {
 					limit = {
-						can_reach_target_country = no
+						NOT = { can_reach_target_country = { TARGET_COUNTRY = scope:target_country } }
 					}
 					add = 150
 				}
@@ -2145,9 +2145,9 @@ ai_strategy_unify_china = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
-					has_journal_entry = je_reunify_china
+					always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 				}
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			score = {
 				value = 500
@@ -2157,7 +2157,7 @@ ai_strategy_unify_china = {
 
 	possible = {
 		is_subject = no
-		has_journal_entry = je_reunify_china
+		always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 	}
 
 	weight = {
@@ -2165,7 +2165,7 @@ ai_strategy_unify_china = {
 
 		if = {
 			limit = {
-				has_journal_entry = je_reunify_china
+				always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 			}
 			add = 50
 		}
@@ -2206,13 +2206,13 @@ ai_strategy_restore_natural_borders = {
 
 		if = {
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			multiply = 1.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 			multiply = 1.25
 		}
@@ -2265,7 +2265,7 @@ ai_strategy_restore_natural_borders = {
 			}
 
 			if = {
-				limit = { has_technology_researched = civilizing_mission }
+				limit = { always = no } # 1.14 cleanup, was: has_technology_researched = civilizing_mission (not in mod)
 				add = 1.0
 
 				if = {
@@ -2341,7 +2341,7 @@ ai_strategy_restore_natural_borders = {
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			score = {
 				if = {
@@ -2392,7 +2392,7 @@ ai_strategy_restore_natural_borders = {
 		if = {
 			limit = {
 				c:FRA ?= THIS
-				has_journal_entry = je_french_natural_borders
+				always = no # 1.14 cleanup, was: has_journal_entry = je_french_natural_borders (not in mod)
 			}
 			add = 25
 		}
@@ -2492,7 +2492,7 @@ ai_strategy_prussia_of_the_balkans = {
 
 		if = {
 			limit = {
-				has_technology_researched = enlistment_offices
+				always = no # 1.14 cleanup, was: has_technology_researched = enlistment_offices (not in mod)
 			}
 			add = 0.25
 		}
@@ -2524,7 +2524,7 @@ ai_strategy_prussia_of_the_balkans = {
 
 				if = {
 					limit = {
-						has_technology_researched = enlistment_offices
+						always = no # 1.14 cleanup, was: has_technology_researched = enlistment_offices (not in mod)
 					}
 					add = 10
 				}
@@ -2542,7 +2542,7 @@ ai_strategy_prussia_of_the_balkans = {
 
 				if = {
 					limit = {
-						has_technology_researched = enlistment_offices
+						always = no # 1.14 cleanup, was: has_technology_researched = enlistment_offices (not in mod)
 					}
 					add = 2
 				}
@@ -2599,7 +2599,7 @@ ai_strategy_prussia_of_the_balkans = {
 						is_homeland = cu:bulgarian
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = 100
 		}
@@ -2725,7 +2725,7 @@ ai_strategy_prussia_of_the_balkans = {
 			limit = {
 				OR = {
 					has_variable = bul_pursued_bulgarian_empire
-					has_technology_researched = pan-nationalism
+					always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 				}
 			}
 			add = 1000
@@ -2745,13 +2745,13 @@ ai_strategy_socialism_in_one_country = {
 
 		if = {
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			multiply = 1.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 			multiply = 1.25
 		}
@@ -2762,13 +2762,13 @@ ai_strategy_socialism_in_one_country = {
 
 		if = {
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			multiply = 1.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 			multiply = 1.25
 		}
@@ -2889,7 +2889,7 @@ ai_strategy_socialism_in_one_country = {
 		}
 
 		if = {
-			limit = { has_law_or_variant = law_type:law_national_militia }
+			limit = { always = no } # 1.14 cleanup, was: has_law_or_variant = law_type:law_national_militia (not in mod)
 			add = 50
 		}
 
@@ -3135,8 +3135,8 @@ ai_strategy_world_revolution = {
 		if = {
 			limit = {
 				OR = {
-					has_law_or_variant = law_type:law_professional_army
-					has_law_or_variant = law_type:law_mass_conscription
+					always = no # 1.14 cleanup, was: has_law_or_variant = law_type:law_professional_army (not in mod)
+					always = no # 1.14 cleanup, was: has_law_or_variant = law_type:law_mass_conscription (not in mod)
 				}
 			}
 			add = 25
@@ -3199,13 +3199,13 @@ ai_strategy_anti_imperialism = {
 
 		if = {
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			multiply = 1.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 			multiply = 1.25
 		}
@@ -3216,13 +3216,13 @@ ai_strategy_anti_imperialism = {
 
 		if = {
 			limit = {
-				has_technology_researched = pan-nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = pan-nationalism (not in mod)
 			}
 			multiply = 1.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = nationalism
+				always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 			}
 			multiply = 1.25
 		}

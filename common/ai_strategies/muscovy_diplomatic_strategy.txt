@@ -54,7 +54,7 @@ ai_strategy_muscovy_form_russia = {
 					}
 				}
 
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 
 				scope:target_country = {
 					OR = {
@@ -156,7 +156,7 @@ ai_strategy_muscovy_form_russia = {
 					}
 				}
 
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 
 				scope:target_country = {
 					any_scope_state = {
@@ -313,7 +313,7 @@ ai_strategy_muscovy_form_russia = {
 					}
 				}
 
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 
 				scope:target_country = {
 					any_scope_state = {

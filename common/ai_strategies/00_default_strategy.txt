@@ -116,7 +116,7 @@ ai_strategy_default = {
 					c:GBR ?= this
 					c:RUS ?= this
 				}
-				has_journal_entry = je_great_game_control
+				always = no # 1.14 cleanup, was: has_journal_entry = je_great_game_control (not in mod)
 				has_diplomatic_relevance = scope:enemy_country
 				scope:enemy_country = { # enemy_country is the rival Great Power
 					OR = {
@@ -126,7 +126,7 @@ ai_strategy_default = {
 					NOT = {
 						this = root
 					}
-					has_journal_entry = je_great_game_control
+					always = no # 1.14 cleanup, was: has_journal_entry = je_great_game_control (not in mod)
 				}
 				scope:country = { # country is the country they're at war with
 					OR = {
@@ -233,7 +233,7 @@ ai_strategy_default = {
 		if = { # Donghak Rebellion - Japanese Behaviours - Anti-Government
 			limit = {
 				c:JAP ?= this
-				has_journal_entry = je_korean_rebellion
+				always = no # 1.14 cleanup, was: has_journal_entry = je_korean_rebellion (not in mod)
 				has_variable = sided_with_korean_rebels
 				scope:country = {
 					country_has_primary_culture = cu:korean
@@ -285,12 +285,12 @@ ai_strategy_default = {
 		### Chinese unification warlord coalitions
 		if = {
 			limit = {
-				has_journal_entry = je_reunify_china
+				always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 				scope:country = {
-					has_journal_entry = je_reunify_china
+					always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 				}
 				scope:enemy_country = {
-					has_journal_entry = je_reunify_china
+					always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 					this.country_rank >= scope:country.country_rank
 			 	}
 			}
@@ -307,7 +307,7 @@ ai_strategy_default = {
 				scope:diplomatic_play_type = play_type:dp_secession
 				root = {
 					c:RUS ?= this
-					has_journal_entry = je_eastern_question_russia
+					always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_question_russia (not in mod)
 				}
 				OR = {
 					scope:country = {
@@ -319,10 +319,10 @@ ai_strategy_default = {
 				}
 				OR = {
 					scope:enemy_country = {
-						has_journal_entry = je_great_eastern_crisis
+						always = no # 1.14 cleanup, was: has_journal_entry = je_great_eastern_crisis (not in mod)
 					}
 					scope:country = {
-						has_journal_entry = je_great_eastern_crisis
+						always = no # 1.14 cleanup, was: has_journal_entry = je_great_eastern_crisis (not in mod)
 					}
 				}
 			}
@@ -339,14 +339,14 @@ ai_strategy_default = {
 				scope:diplomatic_play_type = play_type:dp_secession
 				root = {
 					c:AUS ?= this
-					has_journal_entry = je_eastern_question_austria
+					always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_question_austria (not in mod)
 				}
 				OR = {
 					scope:enemy_country = {
-						has_journal_entry = je_great_eastern_crisis
+						always = no # 1.14 cleanup, was: has_journal_entry = je_great_eastern_crisis (not in mod)
 					}
 					scope:country = {
-						has_journal_entry = je_great_eastern_crisis
+						always = no # 1.14 cleanup, was: has_journal_entry = je_great_eastern_crisis (not in mod)
 					}
 				}
 			}
@@ -364,7 +364,7 @@ ai_strategy_default = {
 					has_variable = attack_bolivia
 				}
 				scope:country = {
-					is_involved_in_journal_entry = je_peru_bolivia
+					always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 					NOR = {
 						play_participant_has_war_goal_of_type_against = {
 							type = conquer_state
@@ -385,7 +385,7 @@ ai_strategy_default = {
 					}
 				}
 				scope:enemy_country = {
-					is_involved_in_journal_entry = je_peru_bolivia
+					always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 					has_variable = pbc_member
 				}
 			}
@@ -406,7 +406,7 @@ ai_strategy_default = {
 					}
 				}
 				scope:enemy_country = {
-					has_journal_entry = je_reconquista
+					always = no # 1.14 cleanup, was: has_journal_entry = je_reconquista (not in mod)
 					exists = scope:is_initiator
 				}
 				scope:country = {
@@ -428,7 +428,7 @@ ai_strategy_default = {
 		# Ottomans should avoid unnecessary entanglements while trying to pursue the Tanzimat reforms
 		if = {
 			limit = {
-				has_journal_entry = je_sick_man_main
+				always = no # 1.14 cleanup, was: has_journal_entry = je_sick_man_main (not in mod)
 			}
 			add = 50
 		}
@@ -442,7 +442,7 @@ ai_strategy_default = {
 		# Balkan minors are quite bold during the Eastern Question
 		if = {
 			limit = {
-				is_involved_in_journal_entry = je_great_eastern_crisis
+				always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_great_eastern_crisis (not in mod)
 				any_enemy_in_diplo_play = {
 					c:TUR ?= this
 				}
@@ -453,11 +453,11 @@ ai_strategy_default = {
 		# Ottomans will tend to back down against Austria when they have the Great Eastern Crisis
 		if = {
 			limit = {
-				is_involved_in_journal_entry = je_great_eastern_crisis
+				always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_great_eastern_crisis (not in mod)
 				c:TUR ?= this
 				owns_entire_state_region = STATE_BOSNIA
 				any_enemy_in_diplo_play = {
-					has_journal_entry = je_eastern_question_austria
+					always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_question_austria (not in mod)
 				}
 			}
 			add = -25
@@ -480,7 +480,7 @@ ai_strategy_default = {
 				c:DEN ?=this
 				scope:diplomatic_play.target = { c:DEN ?= this }
 				scope:diplomatic_play.initiator = {
-					has_journal_entry = je_schleswig_holstein_question
+					always = no # 1.14 cleanup, was: has_journal_entry = je_schleswig_holstein_question (not in mod)
 				}
 			}
 			add = 50
@@ -488,7 +488,7 @@ ai_strategy_default = {
 
 		if = { # War of the Confederation participants
 			limit = {
-				is_involved_in_journal_entry = je_peru_bolivia
+				always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 				is_diplomatic_play_enemy_of = c:BOL
 			}
 			add = 50
@@ -511,7 +511,7 @@ ai_strategy_default = {
 		# Ottomans should want Syria back
 		if = {
 			limit = {
-				has_journal_entry = je_sick_man_syria
+				always = no # 1.14 cleanup, was: has_journal_entry = je_sick_man_syria (not in mod)
 				scope:enemy_country = {
 					OR = {
 						owns_entire_state_region = STATE_ALEPPO
@@ -529,7 +529,7 @@ ai_strategy_default = {
 		# USA should Manifest a lot of Destiny
 		if = {
 			limit = {
-				has_journal_entry = je_manifest_destiny_mexico
+				always = no # 1.14 cleanup, was: has_journal_entry = je_manifest_destiny_mexico (not in mod)
 				scope:enemy_country = {
 					OR = {
 						has_state_in_state_region = STATE_CALIFORNIA
@@ -550,7 +550,7 @@ ai_strategy_default = {
 		# French Natural Borders
 		if = {
 			limit = {
-				has_journal_entry = je_french_natural_borders
+				always = no # 1.14 cleanup, was: has_journal_entry = je_french_natural_borders (not in mod)
 				OR = {
 					has_strategy = ai_strategy_territorial_expansion
 					has_strategy = ai_strategy_restore_natural_borders
@@ -577,7 +577,7 @@ ai_strategy_default = {
 			limit = {
 				has_variable = attack_bolivia
 				scope:enemy_country = {
-					is_involved_in_journal_entry = je_peru_bolivia
+					always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 					has_variable = pbc_member
 				}
 			}
@@ -793,7 +793,7 @@ ai_strategy_default = {
 			limit = {
 				OR = {
 					scope:target_state = { owner = root }
-					can_reach_target_state = yes
+					can_reach_target_state = { TARGET_STATE = scope:target_state }
 				}
 			}
 
@@ -1010,7 +1010,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_boxer_rebellion
+					always = no # 1.14 cleanup, was: has_journal_entry = je_boxer_rebellion (not in mod)
 					scope:target_state.state_region = { is_homeland = cu:han }
 				}
 				add = 50
@@ -1018,7 +1018,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_greek_nationalism
+					always = no # 1.14 cleanup, was: has_journal_entry = je_greek_nationalism (not in mod)
 					scope:target_state.state_region = { is_homeland = cu:greek }
 				}
 				add = 50
@@ -1026,7 +1026,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_eastern_question_austria
+					always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_question_austria (not in mod)
 					scope:target_state = { state_region = s:STATE_BOSNIA }
 				}
 				add = 50
@@ -1034,7 +1034,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_consolidate_colonial_rule
+					always = no # 1.14 cleanup, was: has_journal_entry = je_consolidate_colonial_rule (not in mod)
 					scope:target_country = {
 						is_country_type = unrecognized
 						target_is_our_or_fellow_subject = no
@@ -1051,7 +1051,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_expanding_paraguay
+					always = no # 1.14 cleanup, was: has_journal_entry = je_expanding_paraguay (not in mod)
 					scope:target_country = {
 						has_state_in_state_region = STATE_CORRIENTES
 					}
@@ -1061,7 +1061,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_expanding_paraguay
+					always = no # 1.14 cleanup, was: has_journal_entry = je_expanding_paraguay (not in mod)
 					scope:target_country = {
 						OR = {
 							has_state_in_state_region = STATE_SANTA_FE
@@ -1075,7 +1075,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_age_of_princes
+					always = no # 1.14 cleanup, was: has_journal_entry = je_age_of_princes (not in mod)
 					scope:target_state = {
 						OR = {
 							state_region = s:STATE_AMHARA
@@ -1088,7 +1088,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_unify_afghanistan
+					always = no # 1.14 cleanup, was: has_journal_entry = je_unify_afghanistan (not in mod)
 					scope:target_state = {
 						is_homeland_of_country_cultures = root
 					}
@@ -1098,7 +1098,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_eastern_frontier
+					always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_frontier (not in mod)
 					scope:target_state = {
 						OR = {
 							is_in_geographic_region = geographic_region_persia_old
@@ -1113,7 +1113,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_manifest_destiny_mexico
+					always = no # 1.14 cleanup, was: has_journal_entry = je_manifest_destiny_mexico (not in mod)
 				}
 
 				if = {
@@ -1143,7 +1143,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_conquer_oregon
+					always = no # 1.14 cleanup, was: has_journal_entry = je_conquer_oregon (not in mod)
 					scope:target_state = {
 						OR = {
 							state_region = s:STATE_WASHINGTON
@@ -1157,7 +1157,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_alaska
+					always = no # 1.14 cleanup, was: has_journal_entry = je_alaska (not in mod)
 					scope:target_state = {
 						state_region = s:STATE_ALASKA
 					}
@@ -1167,7 +1167,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_the_eastern_border
+					always = no # 1.14 cleanup, was: has_journal_entry = je_the_eastern_border (not in mod)
 					scope:target_state = {
 						OR = {
 							state_region = s:STATE_OUTER_MANCHURIA
@@ -1183,7 +1183,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_conquest_of_algeria
+					always = no # 1.14 cleanup, was: has_journal_entry = je_conquest_of_algeria (not in mod)
 					scope:target_state = {
 						OR = {
 							state_region = s:STATE_ALGIERS
@@ -1199,7 +1199,7 @@ ai_strategy_default = {
 
 			if = { #Russian Central Asia
 				limit = {
-					has_journal_entry = je_conquest_of_central_asia
+					always = no # 1.14 cleanup, was: has_journal_entry = je_conquest_of_central_asia (not in mod)
 					scope:target_state = {
 						region = sr:region_central_asia
 					}
@@ -1221,8 +1221,8 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					country_has_primary_culture = cu:russian
-					has_law = law_type:law_national_supremacy # TODO - Official Nationality
-					has_technology_researched = nationalism
+					always = no # 1.14 cleanup, was: has_law = law_type:law_national_supremacy (not in mod)
+					always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 					scope:target_state = {
 						owner = {
 							OR = {
@@ -1250,7 +1250,7 @@ ai_strategy_default = {
 			# French Natural Borders
 			if = {
 				limit = {
-					has_journal_entry = je_french_natural_borders
+					always = no # 1.14 cleanup, was: has_journal_entry = je_french_natural_borders (not in mod)
 					OR = {
 						has_strategy = ai_strategy_territorial_expansion
 						has_strategy = ai_strategy_restore_natural_borders
@@ -1292,7 +1292,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_the_krakow_uprising
+					always = no # 1.14 cleanup, was: has_journal_entry = je_the_krakow_uprising (not in mod)
 					country_rank >= rank_value:major_power
 					exists = c:KRA
 					scope:target_state = {
@@ -1307,7 +1307,7 @@ ai_strategy_default = {
 					any_subject_or_below = {
 						c:SAF ?= this
 					}
-					has_technology_researched = malaria_prevention
+					always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 					scope:target_state = {
 						region = sr:region_southern_africa
 					}
@@ -1325,7 +1325,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_opium_wars
+					always = no # 1.14 cleanup, was: has_journal_entry = je_opium_wars (not in mod)
 					scope:target_country = {
 						has_variable = opium_wars_target
 					}
@@ -1515,7 +1515,7 @@ ai_strategy_default = {
 
 		if = {
 			limit = {
-				has_journal_entry = je_opium_wars
+				always = no # 1.14 cleanup, was: has_journal_entry = je_opium_wars (not in mod)
 				scope:target_country = {
 					has_variable = opium_wars_target
 				}
@@ -1599,7 +1599,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					can_reach_target_state = no
+					NOT = { can_reach_target_state = { TARGET_STATE = scope:target_state } }
 				}
 				multiply = 0
 			}
@@ -1620,7 +1620,7 @@ ai_strategy_default = {
 			limit = {
 				OR = {
 					scope:target_country = { is_subject_of = root }
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 			}
 
@@ -1714,7 +1714,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_scramble_for_africa
+					always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 
 					# Scramble for Africa powers should only care about the Boers once diamonds are found
 					scope:target_country = {
@@ -1733,8 +1733,8 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					OR = {
-						has_journal_entry = je_sick_man_egypt
-						has_journal_entry = je_veiled_protectorate
+						always = no # 1.14 cleanup, was: has_journal_entry = je_sick_man_egypt (not in mod)
+						always = no # 1.14 cleanup, was: has_journal_entry = je_veiled_protectorate (not in mod)
 					}
 					exists = c:EGY
 					scope:target_country = c:EGY
@@ -1746,8 +1746,8 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					country_has_primary_culture = cu:russian
-					has_law = law_type:law_national_supremacy # TODO - Official Nationality
-					has_technology_researched = nationalism
+					always = no # 1.14 cleanup, was: has_law = law_type:law_national_supremacy (not in mod)
+					always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 					OR = {
 						AND = {
 							exists = c:KZH
@@ -2142,7 +2142,7 @@ ai_strategy_default = {
 		# Opium wars participants should both be confident
 		if = {
 			limit = {
-				has_journal_entry = je_opium_wars
+				always = no # 1.14 cleanup, was: has_journal_entry = je_opium_wars (not in mod)
 				scope:target_country = {
 					has_variable = opium_wars_target
 					is_banning_goods = g:opium
@@ -2156,7 +2156,7 @@ ai_strategy_default = {
 				has_variable = opium_wars_target
 				is_banning_goods = g:opium
 				scope:target_country = {
-					has_journal_entry = je_opium_wars
+					always = no # 1.14 cleanup, was: has_journal_entry = je_opium_wars (not in mod)
 				}
 			}
 			add = 1
@@ -2167,7 +2167,7 @@ ai_strategy_default = {
 			limit = {
 				OR = {
 					AND = {
-						has_journal_entry = je_sick_man_syria
+						always = no # 1.14 cleanup, was: has_journal_entry = je_sick_man_syria (not in mod)
 						scope:target_country = {
 							OR = {
 								owns_entire_state_region = STATE_ALEPPO
@@ -2180,7 +2180,7 @@ ai_strategy_default = {
 						}
 					}
 					AND = {
-						has_journal_entry = je_sick_man_egypt
+						always = no # 1.14 cleanup, was: has_journal_entry = je_sick_man_egypt (not in mod)
 						scope:target_country = {
 							OR = {
 								owns_entire_state_region = STATE_SINAI
@@ -2197,9 +2197,9 @@ ai_strategy_default = {
 
 		if = { #Ottomons will get angry and attack Mon even if Mon has allies, if raiding is high enough
 			limit = {
-				has_journal_entry = je_tur_raided
+				always = no # 1.14 cleanup, was: has_journal_entry = je_tur_raided (not in mod)
 				scope:target_country = {
-					has_journal_entry = je_montenegrin_raiding
+					always = no # 1.14 cleanup, was: has_journal_entry = je_montenegrin_raiding (not in mod)
 				}
 			}
 			add = {
@@ -2212,7 +2212,7 @@ ai_strategy_default = {
 		# USA should be confident against owners of their Manifest Destiny states
 		if = {
 			limit = {
-				has_journal_entry = je_manifest_destiny_mexico
+				always = no # 1.14 cleanup, was: has_journal_entry = je_manifest_destiny_mexico (not in mod)
 				scope:target_country = {
 					OR = {
 						has_state_in_state_region = STATE_CALIFORNIA
@@ -2233,7 +2233,7 @@ ai_strategy_default = {
 		# 2nd Balkan War aka the "Spoils of War" JE
 		if = {
 			limit = {
-				has_journal_entry = je_spoils_of_war
+				always = no # 1.14 cleanup, was: has_journal_entry = je_spoils_of_war (not in mod)
 				scope:target_country = {
 					sr:region_balkans = {
 					any_scope_state = {
@@ -2249,7 +2249,7 @@ ai_strategy_default = {
 		# 2nd Balkan War aka the "Spoils of War" JE (Wallachia)
 		if = {
 			limit = {
-				has_journal_entry = je_spoils_of_war
+				always = no # 1.14 cleanup, was: has_journal_entry = je_spoils_of_war (not in mod)
 				country_has_primary_culture = cu:romanian
 				scope:target_country = {
 					country_rank <= rank_value:minor_power
@@ -2265,7 +2265,7 @@ ai_strategy_default = {
 		# Balkan minors aggression during the Eastern Question
 		if = {
 			limit = {
-				is_involved_in_journal_entry = je_great_eastern_crisis
+				always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_great_eastern_crisis (not in mod)
 				scope:target_country = {
 					c:TUR ?= this
 				}
@@ -2276,7 +2276,7 @@ ai_strategy_default = {
 		# Greek Nationalism
 		if = {
 			limit = {
-				has_journal_entry = je_greek_nationalism
+				always = no # 1.14 cleanup, was: has_journal_entry = je_greek_nationalism (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						state_region = { is_homeland = cu:greek }
@@ -2301,9 +2301,9 @@ ai_strategy_default = {
 		#Italian Nightmare
 		if = {
 			limit = {
-				has_journal_entry = je_risorgimento
+				always = no # 1.14 cleanup, was: has_journal_entry = je_risorgimento (not in mod)
 				scope:target_country = {
-					has_journal_entry = je_risorgimento
+					always = no # 1.14 cleanup, was: has_journal_entry = je_risorgimento (not in mod)
 				}
 			}
 			add = 0.5
@@ -2312,7 +2312,7 @@ ai_strategy_default = {
 		# French Natural Borders
 		if = {
 			limit = {
-				has_journal_entry = je_french_natural_borders
+				always = no # 1.14 cleanup, was: has_journal_entry = je_french_natural_borders (not in mod)
 				OR = {
 					has_strategy = ai_strategy_territorial_expansion
 					has_strategy = ai_strategy_restore_natural_borders
@@ -2337,10 +2337,10 @@ ai_strategy_default = {
 		# Afghanistan
 		if = {
 			limit = {
-				has_journal_entry = je_unify_afghanistan
+				always = no # 1.14 cleanup, was: has_journal_entry = je_unify_afghanistan (not in mod)
 				scope:target_country = {
 					OR = {
-						has_journal_entry = je_unify_afghanistan
+						always = no # 1.14 cleanup, was: has_journal_entry = je_unify_afghanistan (not in mod)
 						any_scope_state = {
 							OR = {
 								state_region = s:STATE_KABUL
@@ -2358,7 +2358,7 @@ ai_strategy_default = {
 		# Persia
 		if = {
 			limit = {
-				has_journal_entry = je_eastern_frontier
+				always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_frontier (not in mod)
 				scope:target_country = {
 					capital = {
 						region = sr:region_greater_persia
@@ -2374,7 +2374,7 @@ ai_strategy_default = {
 				exists = c:TPG
 				c:TPG ?= THIS
 				scope:target_country = {
-					has_journal_entry = je_taiping
+					always = no # 1.14 cleanup, was: has_journal_entry = je_taiping (not in mod)
 				}
 			}
 			add = 3
@@ -2405,7 +2405,7 @@ ai_strategy_default = {
 		# Acre claimant wants Acre
 		if = {
 			limit = {
-				has_journal_entry = je_acre_dispute
+				always = no # 1.14 cleanup, was: has_journal_entry = je_acre_dispute (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						state_region = s:STATE_ACRE
@@ -2420,7 +2420,7 @@ ai_strategy_default = {
 			limit = {
 				exists = c:RSM
 				THIS = {
-					has_journal_entry = je_risorgimento
+					always = no # 1.14 cleanup, was: has_journal_entry = je_risorgimento (not in mod)
 				}
 				scope:target_country = {
 					is_diplomatic_play_enemy_of = c:RSM
@@ -2432,7 +2432,7 @@ ai_strategy_default = {
         # Paraguay should be very bold while they have the war JE.
         if = {
             limit = {
-                has_journal_entry = je_expanding_paraguay
+                always = no # 1.14 cleanup, was: has_journal_entry = je_expanding_paraguay (not in mod)
                 scope:target_country = {
                     any_scope_state = {
                         OR = {
@@ -2449,7 +2449,7 @@ ai_strategy_default = {
 		# Austria really, really wants to seize Bosnia
 		if = {
 			limit = {
-				has_journal_entry = je_eastern_question_austria
+				always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_question_austria (not in mod)
 				scope:target_country = {
 					owns_entire_state_region = STATE_BOSNIA
 				}
@@ -2460,9 +2460,9 @@ ai_strategy_default = {
 		# Russia really, really wants to free Bulgaria
 		if = {
 			limit = {
-				has_journal_entry = je_eastern_question_russia
+				always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_question_russia (not in mod)
 				scope:target_country = {
-					has_journal_entry = je_great_eastern_crisis
+					always = no # 1.14 cleanup, was: has_journal_entry = je_great_eastern_crisis (not in mod)
 				}
 			}
 		add = 5
@@ -2473,7 +2473,7 @@ ai_strategy_default = {
 			limit = {
 				has_variable = attack_bolivia
 				scope:target_country = {
-					is_involved_in_journal_entry = je_peru_bolivia
+					always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 					has_variable = pbc_member
 				}
 			}
@@ -2482,9 +2482,9 @@ ai_strategy_default = {
 
 		if = { # Hungary should be reckless about independence
 			limit = {
-				has_journal_entry = je_hungarian_revolution
+				always = no # 1.14 cleanup, was: has_journal_entry = je_hungarian_revolution (not in mod)
 				scope:target_country = {
-					has_journal_entry = je_matter_of_hungary
+					always = no # 1.14 cleanup, was: has_journal_entry = je_matter_of_hungary (not in mod)
 				}
 			}
 			add = 5
@@ -2492,7 +2492,7 @@ ai_strategy_default = {
 
 		if = { # Spain wants to take Al Rif
 			limit = {
-				has_journal_entry = je_conquest_of_tetouan
+				always = no # 1.14 cleanup, was: has_journal_entry = je_conquest_of_tetouan (not in mod)
 				scope:target_country ?= {
 					is_country_type = unrecognized
                     any_scope_state = {
@@ -2596,7 +2596,7 @@ ai_strategy_default = {
 		# Opium wars aggressor should be very, very aggressive against target if they're banning opium
 		if = {
 			limit = {
-				has_journal_entry = je_opium_wars
+				always = no # 1.14 cleanup, was: has_journal_entry = je_opium_wars (not in mod)
 				scope:target_country = {
 					has_variable = opium_wars_target
 					is_banning_goods = g:opium
@@ -2607,9 +2607,9 @@ ai_strategy_default = {
 
 		if = { #TUR should want to invade MON
 			limit = {
-				has_journal_entry = je_tur_raided
+				always = no # 1.14 cleanup, was: has_journal_entry = je_tur_raided (not in mod)
 				scope:target_country = {
-					has_journal_entry = je_montenegrin_raiding
+					always = no # 1.14 cleanup, was: has_journal_entry = je_montenegrin_raiding (not in mod)
 				}
 			}
 			add = {
@@ -2620,9 +2620,9 @@ ai_strategy_default = {
 
 		if = { #TUR should especially want to invade MON if it has no one protecting it.
 			limit = {
-				has_journal_entry = je_tur_raided
+				always = no # 1.14 cleanup, was: has_journal_entry = je_tur_raided (not in mod)
 				scope:target_country = {
-					has_journal_entry = je_montenegrin_raiding
+					always = no # 1.14 cleanup, was: has_journal_entry = je_montenegrin_raiding (not in mod)
 					NOT = {
 						any_scope_treaty = {
 							binds = scope:target_country
@@ -2642,7 +2642,7 @@ ai_strategy_default = {
 		# Second Balkan War, pitting the balkan nations against each other
 		if = {
 			limit = {
-				has_journal_entry = je_spoils_of_war
+				always = no # 1.14 cleanup, was: has_journal_entry = je_spoils_of_war (not in mod)
 				scope:target_country = {
 					sr:region_balkans = {
 					any_scope_state = {
@@ -2658,7 +2658,7 @@ ai_strategy_default = {
 		# Second Balkan War, pitting the balkan nations against each other (Wallachia)
 		if = {
 			limit = {
-				has_journal_entry = je_spoils_of_war
+				always = no # 1.14 cleanup, was: has_journal_entry = je_spoils_of_war (not in mod)
 				country_has_primary_culture = cu:romanian
 				scope:target_country = {
 					country_rank <= rank_value:minor_power
@@ -2674,7 +2674,7 @@ ai_strategy_default = {
 		# Greek Nationalism
 		if = {
 			limit = {
-				has_journal_entry = je_greek_nationalism
+				always = no # 1.14 cleanup, was: has_journal_entry = je_greek_nationalism (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						state_region = { is_homeland = cu:greek }
@@ -2717,9 +2717,9 @@ ai_strategy_default = {
 		if = {
 			limit = {
 				OR = {
-					has_journal_entry = je_sick_man_syria
-					has_journal_entry = je_sick_man_egypt
-					has_journal_entry = je_veiled_protectorate
+					always = no # 1.14 cleanup, was: has_journal_entry = je_sick_man_syria (not in mod)
+					always = no # 1.14 cleanup, was: has_journal_entry = je_sick_man_egypt (not in mod)
+					always = no # 1.14 cleanup, was: has_journal_entry = je_veiled_protectorate (not in mod)
 				}
 				exists = c:EGY
 				scope:target_country = {
@@ -2732,7 +2732,7 @@ ai_strategy_default = {
 		# USA should be extremely aggressive against owners of their Manifest Destiny states
 		if = {
 			limit = {
-				has_journal_entry = je_manifest_destiny_mexico
+				always = no # 1.14 cleanup, was: has_journal_entry = je_manifest_destiny_mexico (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
@@ -2791,7 +2791,7 @@ ai_strategy_default = {
 		if = {
 			limit = {
 				scope:target_country = {
-					is_involved_in_journal_entry = je_peru_bolivia
+					always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 					has_variable = pbc_member
 				}
 				OR = {
@@ -2812,7 +2812,7 @@ ai_strategy_default = {
 			limit = {
 				has_variable = attack_bolivia
 				scope:target_country = {
-					is_involved_in_journal_entry = je_peru_bolivia
+					always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 					has_variable = pbc_member
 				}
 			}
@@ -2822,7 +2822,7 @@ ai_strategy_default = {
 		# East India Company vs its neighbors
 		if = {
 			limit = {
-				has_journal_entry = je_consolidate_colonial_rule
+				always = no # 1.14 cleanup, was: has_journal_entry = je_consolidate_colonial_rule (not in mod)
 				scope:target_country = {
 					is_country_type = unrecognized
 					target_is_our_or_fellow_subject = no
@@ -2862,7 +2862,7 @@ ai_strategy_default = {
 				c:GBR ?= this
 				exists = c:POR
 				scope:target_country = {
-					has_journal_entry = je_the_pink_map
+					always = no # 1.14 cleanup, was: has_journal_entry = je_the_pink_map (not in mod)
 					has_variable = por_ignored_gbr_var
 				}
 			}
@@ -2872,7 +2872,7 @@ ai_strategy_default = {
 
 		if = { #Russian Caucasus
 			limit = {
-	            has_journal_entry = je_caucasian_war
+	            always = no # 1.14 cleanup, was: has_journal_entry = je_caucasian_war (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
@@ -2881,14 +2881,14 @@ ai_strategy_default = {
 						}
 					}
 				}
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			add = 10
 		}
 
 		if = { #Russian Far East
 			limit = {
-				has_journal_entry = je_the_eastern_border
+				always = no # 1.14 cleanup, was: has_journal_entry = je_the_eastern_border (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
@@ -2900,14 +2900,14 @@ ai_strategy_default = {
 						}
 					}
 				}
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			add = 10
 		}
 
 		if = { #Russian Central Asia
 			limit = {
-				has_journal_entry = je_conquest_of_central_asia
+				always = no # 1.14 cleanup, was: has_journal_entry = je_conquest_of_central_asia (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
@@ -2919,7 +2919,7 @@ ai_strategy_default = {
 						}
 					}
 				}
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			add = 15
 		}
@@ -2927,7 +2927,7 @@ ai_strategy_default = {
 		if = { #Russian Central Asia
 			limit = {
 				country_has_primary_culture = cu:russian
-				has_law = law_type:law_national_supremacy # TODO - Official Nationality
+				always = no # 1.14 cleanup, was: has_law = law_type:law_national_supremacy (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
@@ -2974,7 +2974,7 @@ ai_strategy_default = {
 		if = { # Britain consolidating South Africa
 			limit = {
 				country_has_primary_culture = cu:british
-				has_technology_researched = malaria_prevention
+				always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 				any_subject_or_below = {
 					capital.region = sr:region_southern_africa
 				}
@@ -2986,7 +2986,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_scramble_for_africa
+					always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 				}
 				add = 25
 			}
@@ -3006,7 +3006,7 @@ ai_strategy_default = {
 		if = { # Portugal wishes to eat Gaza
 			limit = {
 				country_has_primary_culture = cu:portuguese
-				has_technology_researched = civilizing_mission
+				always = no # 1.14 cleanup, was: has_technology_researched = civilizing_mission (not in mod)
 				OR = {
 					any_scope_state = {
 						OR = {
@@ -3038,7 +3038,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_scramble_for_africa
+					always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 				}
 				add = 25
 			}
@@ -3046,7 +3046,7 @@ ai_strategy_default = {
 
 		if = { # Spain wants to take Al Rif
 			limit = {
-				has_journal_entry = je_conquest_of_tetouan
+				always = no # 1.14 cleanup, was: has_journal_entry = je_conquest_of_tetouan (not in mod)
 				scope:target_country ?= {
 					is_country_type = unrecognized
                     any_scope_state = {
@@ -3098,7 +3098,7 @@ ai_strategy_default = {
 			limit = {
 				AND = {
 					c:RUS ?= {
-						has_journal_entry = je_conquest_of_central_asia
+						always = no # 1.14 cleanup, was: has_journal_entry = je_conquest_of_central_asia (not in mod)
 					}
 					ROOT = {
 						is_in_geographic_region = geographic_region_europe
@@ -3130,7 +3130,7 @@ ai_strategy_default = {
         # France should very aggressively go for Algeria.
 		if = {
 			limit = {
-				has_journal_entry = je_conquest_of_algeria
+				always = no # 1.14 cleanup, was: has_journal_entry = je_conquest_of_algeria (not in mod)
 				scope:target_country = {
 					OR = {
 						has_state_in_state_region = STATE_ALGIERS
@@ -3173,7 +3173,7 @@ ai_strategy_default = {
 
 		if = {
 			limit = {
-				has_journal_entry = je_the_krakow_uprising
+				always = no # 1.14 cleanup, was: has_journal_entry = je_the_krakow_uprising (not in mod)
 				country_rank >= rank_value:major_power
 				exists = c:KRA
 				scope:target_country = {
@@ -3188,7 +3188,7 @@ ai_strategy_default = {
 
 		if = {
 			limit = {
-				has_journal_entry = je_maintain_afghan_protectorate
+				always = no # 1.14 cleanup, was: has_journal_entry = je_maintain_afghan_protectorate (not in mod)
 				scope:target_country = {
 					capital = {
 						region = sr:region_greater_persia
@@ -3205,7 +3205,7 @@ ai_strategy_default = {
         # Paraguay should be highly aggressive while they have the war JE.
         if = {
             limit = {
-                has_journal_entry = je_expanding_paraguay
+                always = no # 1.14 cleanup, was: has_journal_entry = je_expanding_paraguay (not in mod)
                 scope:target_country = {
 					OR = {
 						has_state_in_state_region = STATE_SANTA_FE
@@ -3220,7 +3220,7 @@ ai_strategy_default = {
 		# Acre claimant wants Acre
 		if = {
 			limit = {
-				has_journal_entry = je_acre_dispute
+				always = no # 1.14 cleanup, was: has_journal_entry = je_acre_dispute (not in mod)
 				scope:target_country = {
 					has_state_in_state_region = STATE_ACRE
 				}
@@ -3244,7 +3244,7 @@ ai_strategy_default = {
 		# Persia is very aggressive if not cowed
 		if = {
 			limit = {
-				has_journal_entry = je_eastern_frontier
+				always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_frontier (not in mod)
 				scope:target_country = {
 					any_scope_state = {
 						is_in_geographic_region = geographic_region_india
@@ -3349,10 +3349,10 @@ ai_strategy_default = {
 		# Afghan Consolidation
 		if = {
 			limit = {
-				has_journal_entry = je_unify_afghanistan
+				always = no # 1.14 cleanup, was: has_journal_entry = je_unify_afghanistan (not in mod)
 				scope:target_country = {
 					OR = {
-						has_journal_entry = je_unify_afghanistan
+						always = no # 1.14 cleanup, was: has_journal_entry = je_unify_afghanistan (not in mod)
 						OR = {
 							has_state_in_state_region = STATE_KABUL
 							has_state_in_state_region = STATE_HERAT
@@ -3395,7 +3395,7 @@ ai_strategy_default = {
 		# Austria really, really wants to seize Bosnia
 		if = {
 			limit = {
-				has_journal_entry = je_eastern_question_austria
+				always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_question_austria (not in mod)
 				scope:target_country = {
 					owns_entire_state_region = STATE_BOSNIA
 				}
@@ -3406,9 +3406,9 @@ ai_strategy_default = {
 		# Russian aggression during the Eastern Question
 		if = {
 			limit = {
-				has_journal_entry = je_eastern_question_russia
+				always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_question_russia (not in mod)
 				scope:target_country = {
-					has_journal_entry = je_great_eastern_crisis
+					always = no # 1.14 cleanup, was: has_journal_entry = je_great_eastern_crisis (not in mod)
 				}
 			}
 			add = 50
@@ -3417,7 +3417,7 @@ ai_strategy_default = {
 		# Balkan minors aggression during the Eastern Question
 		if = {
 			limit = {
-				is_involved_in_journal_entry = je_great_eastern_crisis
+				always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_great_eastern_crisis (not in mod)
 				scope:target_country = {
 					c:TUR ?= this
 				}
@@ -3427,7 +3427,7 @@ ai_strategy_default = {
 
 		if = { # Spanish American reconquest of former colonies
 			limit = {
-				has_journal_entry = je_reconquista
+				always = no # 1.14 cleanup, was: has_journal_entry = je_reconquista (not in mod)
 				scope:target_country = {
 					is_historical_spanish_american_colony = yes
 					NOT = { is_subject_of = root }
@@ -3456,7 +3456,7 @@ ai_strategy_default = {
 		if = {
 			limit = {
 				c:AUS ?= this
-				has_journal_entry = je_metternich
+				always = no # 1.14 cleanup, was: has_journal_entry = je_metternich (not in mod)
 			}
             multiply = 0.5
 		}
@@ -3464,14 +3464,14 @@ ai_strategy_default = {
         # Isolationist Paraguay under Francia should not go awol.
         if = {
             limit = {
-            	has_journal_entry = je_francocracia
+            	always = no # 1.14 cleanup, was: has_journal_entry = je_francocracia (not in mod)
             }
             multiply = 0.1
         }
         # Paraguay is less likely to be aggressive when modernizing.
         if = {
             limit = {
-            	has_journal_entry = je_modernizing_paraguay
+            	always = no # 1.14 cleanup, was: has_journal_entry = je_modernizing_paraguay (not in mod)
             }
 			multiply = 0.25
         }
@@ -3709,7 +3709,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_aberdeen_act
+					always = no # 1.14 cleanup, was: has_journal_entry = je_aberdeen_act (not in mod)
 					scope:target_region = {
 						is_in_geographic_region = geographic_region_americas
 					}
@@ -3956,21 +3956,218 @@ ai_strategy_default = {
 		value = 10
 	}
 
-	# Set the weights for ship groups, this determines the ratio that the AI aims to have of each, and thus what ship classes it adds to fleets
+	# 1.14: replaces ship_group_weights. Ratio of AI ship categories the AI aims for, which decides what ships it builds
+	# Mod ship groups map to categories: heavy = battle_line, galley = coastal_defense, transport = transports, light = screens
 	# Using this value in other strategies will function additively
 	# root = country
-	ship_group_weights = {
-		ship_group_heavy = {
-			value = 30	
+	ai_ship_category_weights = {
+		ai_ship_category_battle_line = {
+			value = 30
 		}
-		ship_group_galley = {
-			value = 30		
+		ai_ship_category_coastal_defense = {
+			value = 30
 		}
-		ship_group_transport = {
-			value = 20	
+		ai_ship_category_transports = {
+			value = 20
 		}
-		ship_group_light = {
-			value = 20		
+		ai_ship_category_screens = {
+			value = 20
+		}
+	}
+
+	# A fleet composition describes a role a fleet can take (e.g. main_battle_fleet, raid_fleet):
+	# what kind of ships it should be made of and what missions it should pursue. The AI will try
+	# to match each of the country's existing fleets to the role they best fit.
+	# All numeric fields accept script values, so weights can be tuned from country scope.
+	#
+	# ai_ship_category_weights:
+	#   Per AI ship category desire for this role, see common/ai_ship_categories. Across all
+	#   available roles, weights are summed per category, and each role's share becomes its target
+	#   ratio of the country's total ships in that category. Existing fleets are scored against
+	#   every role's target ratios and assigned to the role they fit best, so these weights drive
+	#   both "how should the country's ships be split across roles" and "which fleet plays which
+	#   role".
+	#   A category left at 0 here is never allocated to this role, so a category that only one role
+	#   wants is kept out of every other fleet.
+	#
+	# mission_type_weights:
+	#   Multiplier applied when a fleet in this role picks which mission to pursue. 1.0 is
+	#   neutral, higher biases the fleet toward that mission, 0.0 disables it for this role.
+	#   IMPORTANT: if the block is present, any mission type not listed is treated as 0, so the
+	#   list gates which missions this role will take. Omit the whole block to leave every
+	#   mission neutral.
+	#
+	# min_ships_wanted:
+	#   Soft floor on fleet size used during role-fit scoring. Fleets smaller than this take a
+	#   penalty when matched to this role; it does not disqualify them and is not a hard cap.
+	#
+	# num_fleets_wanted:
+	#   How many fleets should take this role. Omitted means one. Evaluated in country scope, so
+	#   it can scale with navy size, and a value of 0 drops the role for that country.
+	#
+	# potential:
+	#   Country-scoped trigger. If it fails the role is dropped entirely, so no fleet will be
+	#   assigned to it.
+	#
+	# replace_key:
+	#   Optional key of another composition that this one should replace when both are collected
+	#   from the country's active strategies. Use it in a country-specific strategy to override a
+	#   default role (e.g. a custom raid_fleet with replace_key = raid_fleet swaps out the one
+	#   defined here). Without a replace_key the composition is added alongside the existing set.
+	fleet_compositions = {
+		main_battle_fleet = { # A single main battle fleet that can concentrate the AI's fleet power in one place
+			ai_ship_category_weights = {
+				ai_ship_category_battle_line = 100.0
+				ai_ship_category_screens = 100.0
+				ai_ship_category_torpedo_craft = 100.0
+				ai_ship_category_carriers = 100.0
+				ai_ship_category_transports = 100.0
+			}
+			mission_type_weights = {
+				intercept = 1.0
+				project_power = 0.0
+				blockade = 1.0
+				raid_supply = 0.0
+				protect_supply = 0.0
+				port_bombardment = 1.0
+				piracy = 0.0
+				privateer = 0.0
+				hunt_pirates = 0.0
+			}
+
+			min_ships_wanted = 30 # This is a soft limit
+			num_fleets_wanted = {
+				value = 1
+			}
+
+			potential = { # No main battle fleet if you don't even have capital ships!
+				any_scope_ship = {
+					is_ai_ship_category = ai_ship_category_battle_line
+				}
+			}
+		}
+		secondary_fleet = { # A secondary battle fleet for large AI navies so they can cover more of the world
+			ai_ship_category_weights = { # Intended to be around half the size of the main fleet
+				ai_ship_category_battle_line = 50.0
+				ai_ship_category_screens = 50.0
+				ai_ship_category_torpedo_craft = 50.0
+				ai_ship_category_carriers = 50.0
+				ai_ship_category_transports = 50.0
+			}
+			mission_type_weights = {
+				intercept = 0.5
+				project_power = 0.0
+				blockade = 0.25
+				raid_supply = 0.5
+				protect_supply = 1.0
+				port_bombardment = 0.25
+				piracy = 0.0
+				privateer = 0.0
+				hunt_pirates = 1.0
+			}
+
+			min_ships_wanted = 10 # This is a soft limit
+			num_fleets_wanted = { # Only if we have a large navy
+				value = navy_size_adjusted_by_tech
+				divide = 100
+				max = 1
+			}
+		}
+		light_ship_fleet = { # Small fleets for raiding and projecting power, cruisers & torpedo only
+			ai_ship_category_weights = {
+				ai_ship_category_screens = 30.0
+				ai_ship_category_torpedo_craft = 20.0
+			}
+			mission_type_weights = {
+				intercept = 0.0
+				project_power = 1.0
+				blockade = 0.0
+				raid_supply = 1.0
+				protect_supply = 0.25
+				port_bombardment = 0.0
+				piracy = 1.0
+				privateer = 1.0
+				hunt_pirates = 1.0
+			}
+
+			min_ships_wanted = 5 # This is a soft limit
+			num_fleets_wanted = {
+				value = navy_size_adjusted_by_tech
+				divide = 30
+				max = 5
+			}
+		}
+		coastal_defense_fleet = { # A single fleet for the AI's coastal defense ships that only does intercept orders
+			ai_ship_category_weights = {
+				ai_ship_category_coastal_defense = 100.0
+			}
+			mission_type_weights = {
+				intercept = 1.0
+				project_power = 0.0
+				blockade = 0.0
+				raid_supply = 0.0
+				protect_supply = 0.0
+				port_bombardment = 0.0
+				piracy = 0.0
+				privateer = 0.0
+				hunt_pirates = 0.0
+			}
+
+			num_fleets_wanted = {
+				value = 0
+
+				if = {
+					limit = {
+						any_scope_ship = {
+							is_ai_ship_category = ai_ship_category_coastal_defense
+						}
+					}
+
+					add = 1
+				}
+			}
+		}
+	}
+
+	# Maximum number of strategic regions where the AI can have an active (non-none) stance
+	# Using this value in other strategies will function additively
+	max_active_stances = {
+		value = 1
+
+		add = {
+			value = country_rank
+			divide = 2
+		}
+
+		add = {
+			value = navy_size
+			divide = 25
+		}
+
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			multiply = 0.5
+		}
+
+		min = 1
+		max = 10
+	}
+
+	# 1.14: if this trigger is true for any active strategy, the AI incorporates scope:target_state when it can afford it
+	# Empty or missing trigger counts as false, so without this block the AI never incorporates states
+	# Capitals bypass this and start incorporating immediately if possible
+	# root = country, scope:target_state = the state being considered
+	will_incorporate_state = {
+		trigger_if = { # Colonies have a different behaviour
+			limit = {
+				country_is_colonial_or_company = yes
+			}
+			scope:target_state = { ai_colony_will_incorporate_state = yes }
+		}
+		trigger_else = {
+			scope:target_state = { ai_will_incorporate_state = yes }
 		}
 	}
 
@@ -3985,15 +4182,15 @@ ai_strategy_default = {
 		}
 
 		if = {
-			limit = { has_law_or_variant = law_type:law_merchant_navy }
+			limit = { always = no } # 1.14 cleanup, was: has_law_or_variant = law_type:law_merchant_navy (not in mod)
 			subtract = 2
 		}
 		else_if = {
-			limit = { has_law_or_variant = law_type:law_jeune_ecole }
+			limit = { always = no } # 1.14 cleanup, was: has_law_or_variant = law_type:law_jeune_ecole (not in mod)
 			subtract = 1
 		}
 		else_if = {
-			limit = { has_law_or_variant = law_type:law_professional_navy }
+			limit = { always = no } # 1.14 cleanup, was: has_law_or_variant = law_type:law_professional_navy (not in mod)
 			add = 1
 		}
 	}
@@ -4095,7 +4292,7 @@ ai_strategy_default = {
 
 		if = {
 			limit = {
-				has_law_or_variant = law_type:law_command_economy
+				always = no # 1.14 cleanup, was: has_law_or_variant = law_type:law_command_economy (not in mod)
 			}
 
 			add = 100
@@ -4157,7 +4354,7 @@ ai_strategy_default = {
 		firearms = {
 			stance = wants_high_supply
 			trigger = {
-				has_technology_researched = military_aviation
+				always = no # 1.14 cleanup, was: has_technology_researched = military_aviation (not in mod)
 				country_rank >= rank_value:major_power
 			}
 		}
@@ -4350,7 +4547,7 @@ ai_strategy_default = {
 			# Unless they do!
 			if = {
 				limit = {
-					has_journal_entry = je_aberdeen_act
+					always = no # 1.14 cleanup, was: has_journal_entry = je_aberdeen_act (not in mod)
 				}
 				add = 200
 
@@ -4453,9 +4650,9 @@ ai_strategy_default = {
 					OR = {
 						AND = {
 							country_rank = rank_value:great_power
-							has_technology_researched = malaria_prevention
+							always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						}
-						has_journal_entry = je_scramble_for_africa
+						always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 					}
 				}
 				add = 200
@@ -4470,9 +4667,9 @@ ai_strategy_default = {
 					OR = {
 						AND = {
 							country_rank = rank_value:great_power
-							has_technology_researched = malaria_prevention
+							always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						}
-						has_journal_entry = je_scramble_for_africa
+						always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 					}
 				}
 				add = 200
@@ -4487,9 +4684,9 @@ ai_strategy_default = {
 					OR = {
 						AND = {
 							country_rank = rank_value:great_power
-							has_technology_researched = malaria_prevention
+							always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						}
-						has_journal_entry = je_scramble_for_africa
+						always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 					}
 				}
 				add = 200
@@ -4504,9 +4701,9 @@ ai_strategy_default = {
 					OR = {
 						AND = {
 							country_rank = rank_value:great_power
-							has_technology_researched = malaria_prevention
+							always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						}
-						has_journal_entry = je_scramble_for_africa
+						always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 					}
 				}
 				add = 200
@@ -4521,9 +4718,9 @@ ai_strategy_default = {
 					OR = {
 						AND = {
 							country_rank = rank_value:great_power
-							has_technology_researched = malaria_prevention
+							always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						}
-						has_journal_entry = je_scramble_for_africa
+						always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 					}
 				}
 				add = 200
@@ -4538,9 +4735,9 @@ ai_strategy_default = {
 					OR = {
 						AND = {
 							country_rank = rank_value:great_power
-							has_technology_researched = malaria_prevention
+							always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						}
-						has_journal_entry = je_scramble_for_africa
+						always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 					}
 				}
 				add = 200
@@ -4559,7 +4756,7 @@ ai_strategy_default = {
 			}
 			if = {
 				limit = {
-					has_journal_entry = je_german_unification
+					always = no # 1.14 cleanup, was: has_journal_entry = je_german_unification (not in mod)
 				}
 				add = 1000
 			}
@@ -4620,7 +4817,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_opium_wars
+					always = no # 1.14 cleanup, was: has_journal_entry = je_opium_wars (not in mod)
 					scope:region = sr:region_south_china
 				}
 				add = 5000
@@ -4648,7 +4845,7 @@ ai_strategy_default = {
 		# Conquest of Algeria
 		if = {
 			limit = {
-				has_journal_entry = je_conquest_of_algeria
+				always = no # 1.14 cleanup, was: has_journal_entry = je_conquest_of_algeria (not in mod)
 				scope:region = sr:region_north_africa
 			}
 			add = 1000
@@ -4763,7 +4960,7 @@ ai_strategy_default = {
 				value = 200
 				if = {
 					limit = {
-						has_journal_entry = je_the_grand_collapse
+						always = no # 1.14 cleanup, was: has_journal_entry = je_the_grand_collapse (not in mod)
 						any_subject_or_below = {
 							count >= 1
 						}
@@ -4824,7 +5021,7 @@ ai_strategy_default = {
 
 				if = { # Try to be on good terms with GBR/USA to avoid intervention
 					limit = {
-						has_journal_entry = je_reconquista
+						always = no # 1.14 cleanup, was: has_journal_entry = je_reconquista (not in mod)
 						scope:target_country = {
 							country_rank = rank_value:great_power
 							OR = {
@@ -4840,7 +5037,7 @@ ai_strategy_default = {
 				}
 				else_if = { # Reconcile with former Spanish Colonies
 					limit = {
-						has_journal_entry = je_hispanoamerica
+						always = no # 1.14 cleanup, was: has_journal_entry = je_hispanoamerica (not in mod)
 						scope:target_country = {
 							has_modifier = modifier_not_recognized_by_spain
 						}
@@ -5087,7 +5284,7 @@ ai_strategy_default = {
 				if = {
 					limit = {
 						scope:target_country = {
-							is_involved_in_journal_entry = je_peru_bolivia
+							always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 							has_variable = pbc_member
 						}
 						OR = {
@@ -5475,7 +5672,7 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
-						can_reach_target_country = yes
+						can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 						NOT = { is_subject_of = scope:target_country }
 					}
 					add = 50
@@ -5515,7 +5712,7 @@ ai_strategy_default = {
 				if = {
 					limit = {
 						THIS = {
-							has_journal_entry = je_risorgimento
+							always = no # 1.14 cleanup, was: has_journal_entry = je_risorgimento (not in mod)
 						}
 						scope:target_country = {
 							any_scope_state = {
@@ -5647,7 +5844,7 @@ ai_strategy_default = {
 		}
 		conquer = {
 			trigger = {
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { is_subject_of = scope:target_country }
 
 				# Be nice to tutorial players
@@ -5673,7 +5870,7 @@ ai_strategy_default = {
 				if = {
 					limit = {
 						scope:target_country = {
-							is_involved_in_journal_entry = je_peru_bolivia
+							always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 							has_variable = pbc_member
 						}
 						OR = {
@@ -5701,7 +5898,7 @@ ai_strategy_default = {
 				if = {
 					limit = {
 						OR = {
-							has_journal_entry = je_age_of_princes
+							always = no # 1.14 cleanup, was: has_journal_entry = je_age_of_princes (not in mod)
 							c:ETH ?= this
 						}
 						scope:target_country = {
@@ -5748,12 +5945,12 @@ ai_strategy_default = {
 					add = 50
 
 					if = {
-						limit = { has_technology_researched = quinine }
+						limit = { always = no } # 1.14 cleanup, was: has_technology_researched = quinine (not in mod)
 						add = 50
 					}
 
 					if = {
-						limit = { has_technology_researched = civilizing_mission }
+						limit = { always = no } # 1.14 cleanup, was: has_technology_researched = civilizing_mission (not in mod)
 						add = 200
 
 						if = {
@@ -5774,7 +5971,7 @@ ai_strategy_default = {
 
 					if = {
 						limit = {
-							has_journal_entry = je_scramble_for_africa
+							always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 							scope:target_country = {
 								is_in_geographic_region = geographic_region_africa
 							}
@@ -5785,7 +5982,7 @@ ai_strategy_default = {
 					if = { # Portugal wishes to eat Gaza
 						limit = {
 							country_has_primary_culture = cu:portuguese
-							has_technology_researched = civilizing_mission
+							always = no # 1.14 cleanup, was: has_technology_researched = civilizing_mission (not in mod)
 							OR = {
 								any_scope_state = {
 									OR = {
@@ -5817,7 +6014,7 @@ ai_strategy_default = {
 
 						if = {
 							limit = {
-								has_technology_researched = malaria_prevention
+								always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 							}
 							add = 500
 						}
@@ -5851,7 +6048,7 @@ ai_strategy_default = {
 				# Second Balkan War, pitting the balkan nations against each other
 				if = {
 					limit = {
-						has_journal_entry = je_spoils_of_war
+						always = no # 1.14 cleanup, was: has_journal_entry = je_spoils_of_war (not in mod)
 						scope:target_country = {
 							sr:region_balkans = {
 							any_scope_state = {
@@ -5868,7 +6065,7 @@ ai_strategy_default = {
 				# Second Balkan War, pitting the balkan nations against each other (Wallachia)
 				if = {
 					limit = {
-						has_journal_entry = je_spoils_of_war
+						always = no # 1.14 cleanup, was: has_journal_entry = je_spoils_of_war (not in mod)
 						country_has_primary_culture = cu:romanian
 						scope:target_country = {
 							country_rank <= rank_value:minor_power
@@ -5885,7 +6082,7 @@ ai_strategy_default = {
 				if = { # Britain consolidating South Africa
 					limit = {
 						country_has_primary_culture = cu:british
-						has_technology_researched = malaria_prevention
+						always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						any_subject_or_below = {
 							capital.region = sr:region_southern_africa
 						}
@@ -5910,7 +6107,7 @@ ai_strategy_default = {
 				if = { # Britain consolidating South Africa
 					limit = {
 						country_has_primary_culture = cu:british
-						has_technology_researched = malaria_prevention
+						always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						any_subject_or_below = {
 							capital.region = sr:region_southern_africa
 						}
@@ -5924,8 +6121,8 @@ ai_strategy_default = {
 				if = {
 					limit = {
 						country_has_primary_culture = cu:russian
-						has_law_or_variant = law_type:law_national_supremacy
-						has_technology_researched = nationalism
+						always = no # 1.14 cleanup, was: has_law_or_variant = law_type:law_national_supremacy (not in mod)
+						always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 						scope:target_country = {
 							OR = {
 								c:OZH ?= this
@@ -5940,7 +6137,7 @@ ai_strategy_default = {
 
 				if = { # Spanish American reconquest of former colonies
 					limit = {
-						has_journal_entry = je_reconquista
+						always = no # 1.14 cleanup, was: has_journal_entry = je_reconquista (not in mod)
 						scope:target_country = {
 							is_historical_spanish_american_colony = yes
 							NOT = { is_subject_of = root }
@@ -6079,7 +6276,7 @@ ai_strategy_default = {
 						scope:target_country = { is_country_type = unrecognized }
 					}
 				}
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { is_subject_of = scope:target_country }
 
 				# AI shouldn't be aggressive against subjects of their subjects
@@ -6126,7 +6323,7 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
-						can_reach_target_country = yes
+						can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 						country_rank > scope:target_country.country_rank
 						NOT = { is_country_type = unrecognized }
 						scope:target_country = {
@@ -6148,12 +6345,12 @@ ai_strategy_default = {
 					add = 25
 
 					if = {
-						limit = { has_technology_researched = quinine }
+						limit = { always = no } # 1.14 cleanup, was: has_technology_researched = quinine (not in mod)
 						add = 25
 					}
 
 					if = {
-						limit = { has_technology_researched = civilizing_mission }
+						limit = { always = no } # 1.14 cleanup, was: has_technology_researched = civilizing_mission (not in mod)
 						add = 100
 
 						if = {
@@ -6174,7 +6371,7 @@ ai_strategy_default = {
 
 					if = {
 						limit = {
-							has_journal_entry = je_scramble_for_africa
+							always = no # 1.14 cleanup, was: has_journal_entry = je_scramble_for_africa (not in mod)
 							scope:target_country = {
 								is_in_geographic_region = geographic_region_africa
 							}
@@ -6209,7 +6406,7 @@ ai_strategy_default = {
 				if = { # Britain consolidating South Africa
 					limit = {
 						country_has_primary_culture = cu:british
-						has_technology_researched = malaria_prevention
+						always = no # 1.14 cleanup, was: has_technology_researched = malaria_prevention (not in mod)
 						any_subject_or_below = {
 							capital.region = sr:region_southern_africa
 						}
@@ -6222,7 +6419,7 @@ ai_strategy_default = {
 
 				if = { # Spanish American reconquest of former colonies
 					limit = {
-						has_journal_entry = je_reconquista
+						always = no # 1.14 cleanup, was: has_journal_entry = je_reconquista (not in mod)
 						scope:target_country = {
 							is_historical_spanish_american_colony = yes
 							NOT = { is_subject_of = root }
@@ -6233,7 +6430,7 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
-						can_reach_target_country = yes
+						can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 						country_rank > scope:target_country.country_rank
 						scope:target_country.country_rank < rank_value:major_power
 						scope:target_country = { NOT = { is_subject_of = root }	}
@@ -6325,8 +6522,8 @@ ai_strategy_default = {
 				if = {
 					limit = {
 						country_has_primary_culture = cu:russian
-						has_law_or_variant = law_type:law_national_supremacy
-						has_technology_researched = nationalism
+						always = no # 1.14 cleanup, was: has_law_or_variant = law_type:law_national_supremacy (not in mod)
+						always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 						scope:target_country = {
 							OR = {
 								c:OZH ?= this
@@ -6532,7 +6729,7 @@ ai_strategy_default = {
 				limit = {
 					has_variable = attack_bolivia
 					scope:target_country = {
-						is_involved_in_journal_entry = je_peru_bolivia
+						always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 						has_variable = pbc_member
 					}
 				}
@@ -6578,7 +6775,7 @@ ai_strategy_default = {
 				limit = {
 					has_variable = attack_bolivia
 					scope:target_country = {
-						is_involved_in_journal_entry = je_peru_bolivia
+						always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 						has_variable = pbc_member
 					}
 				}
@@ -6656,7 +6853,7 @@ ai_strategy_default = {
 					wants_to_solve_schleswig_holstein = yes
 					exists = c:HOL
 					scope:target_country = { c:HOL ?= THIS }
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 100
 			}
@@ -6673,14 +6870,14 @@ ai_strategy_default = {
 						c:KOR ?= THIS
 						is_country_type = unrecognized
 					}
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 25
 			}
 
 			if = {
 				limit = {
-					has_journal_entry = je_opium_wars
+					always = no # 1.14 cleanup, was: has_journal_entry = je_opium_wars (not in mod)
 					scope:target_country = {
 						has_variable = opium_wars_target
 					}
@@ -6696,9 +6893,9 @@ ai_strategy_default = {
 
 			if = { #TUR should want to invade MON
 				limit = {
-					has_journal_entry = je_tur_raided
+					always = no # 1.14 cleanup, was: has_journal_entry = je_tur_raided (not in mod)
 					scope:target_country = {
-						has_journal_entry = je_montenegrin_raiding
+						always = no # 1.14 cleanup, was: has_journal_entry = je_montenegrin_raiding (not in mod)
 					}
 				}
 				add = {
@@ -6709,7 +6906,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_maintain_afghan_protectorate
+					always = no # 1.14 cleanup, was: has_journal_entry = je_maintain_afghan_protectorate (not in mod)
 					scope:target_country = {
 						capital = {
 							region = sr:region_greater_persia
@@ -6725,7 +6922,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_consolidate_colonial_rule
+					always = no # 1.14 cleanup, was: has_journal_entry = je_consolidate_colonial_rule (not in mod)
 					scope:target_country = {
 						is_country_type = unrecognized
 						target_is_our_or_fellow_subject = no
@@ -6752,7 +6949,7 @@ ai_strategy_default = {
 						c:KOR ?= THIS
 						is_country_type = unrecognized
 					}
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 25
 			}
@@ -6809,7 +7006,7 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					c:BIC ?= this
-					has_journal_entry = je_uneasy_raj
+					always = no # 1.14 cleanup, was: has_journal_entry = je_uneasy_raj (not in mod)
 				}
 				multiply = 0.05
 			}
@@ -6828,8 +7025,8 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					country_has_primary_culture = cu:russian
-					has_law_or_variant = law_type:law_national_supremacy
-					has_technology_researched = nationalism
+					always = no # 1.14 cleanup, was: has_law_or_variant = law_type:law_national_supremacy (not in mod)
+					always = no # 1.14 cleanup, was: has_technology_researched = nationalism (not in mod)
 					scope:target_country = {
 						OR = {
 							c:OZH ?= this
@@ -6991,14 +7188,14 @@ ai_strategy_default = {
 							type = embargo
 						}
 					}
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 50
 			}
 
 			if = {
 				limit = {
-					has_journal_entry = je_opium_wars
+					always = no # 1.14 cleanup, was: has_journal_entry = je_opium_wars (not in mod)
 					scope:target_country = {
 						has_variable = opium_wars_target
 					}
@@ -7136,9 +7333,9 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_reunify_china
+					always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 					scope:target_country = {
-						has_journal_entry = je_reunify_china
+						always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 						has_strategic_adjacency = scope:target_country
 					}
 				}
@@ -7147,7 +7344,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_unify_afghanistan
+					always = no # 1.14 cleanup, was: has_journal_entry = je_unify_afghanistan (not in mod)
 					scope:target_country = {
 						OR = {
 							country_has_primary_culture = cu:pashtun
@@ -7160,7 +7357,7 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					has_journal_entry = je_eastern_frontier
+					always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_frontier (not in mod)
 					capital = {
 						has_claim_by = ROOT
 					}
@@ -7189,7 +7386,7 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					c:BIC ?= this
-					has_journal_entry = je_uneasy_raj
+					always = no # 1.14 cleanup, was: has_journal_entry = je_uneasy_raj (not in mod)
 					scope:target_country = {
 						is_princely_state = yes
 					}
@@ -7207,9 +7404,9 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					OR = {
-						has_journal_entry = je_eastern_frontier
-						has_journal_entry = je_unify_afghanistan
-						has_journal_entry = je_reunify_china
+						always = no # 1.14 cleanup, was: has_journal_entry = je_eastern_frontier (not in mod)
+						always = no # 1.14 cleanup, was: has_journal_entry = je_unify_afghanistan (not in mod)
+						always = no # 1.14 cleanup, was: has_journal_entry = je_reunify_china (not in mod)
 					}
 				}
 				min = 0
@@ -7344,7 +7541,7 @@ ai_strategy_default = {
 					wants_to_solve_schleswig_holstein = yes
 					exists = c:HOL
 					scope:target_country = { c:HOL ?= THIS }
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 150
 			}
@@ -7352,7 +7549,7 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					scope:target_country = {
-						is_involved_in_journal_entry = je_peru_bolivia
+						always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 						has_variable = pbc_member
 					}
 					OR = {
@@ -7455,9 +7652,9 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					is_involved_in_journal_entry = je_peru_bolivia
+					always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 					scope:target_country = {
-						is_involved_in_journal_entry = je_peru_bolivia
+						always = no # 1.14 cleanup, was: is_involved_in_journal_entry = je_peru_bolivia (not in mod)
 					}
 					OR = {
 						country_has_primary_culture = cu:south_andean
@@ -7474,9 +7671,9 @@ ai_strategy_default = {
 
 			if = { # Hungary should be willing to do this.
 				limit = {
-					has_journal_entry = je_hungarian_revolution
+					always = no # 1.14 cleanup, was: has_journal_entry = je_hungarian_revolution (not in mod)
 					scope:target_country = {
-						has_journal_entry = je_matter_of_hungary
+						always = no # 1.14 cleanup, was: has_journal_entry = je_matter_of_hungary (not in mod)
 					}
 				}
 				add = 100

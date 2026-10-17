@@ -21,7 +21,7 @@ ai_strategy_portuguese_maritime_empire = {
 		# Portugal initially follows the African coast rather than rushing Brazil.
 		if = {
 			limit = {
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
 					any_scope_state = {
@@ -38,7 +38,7 @@ ai_strategy_portuguese_maritime_empire = {
 		if = {
 			limit = {
 				has_variable = aoc_portuguese_brazil_phase
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
 					any_scope_state = {
@@ -55,7 +55,7 @@ ai_strategy_portuguese_maritime_empire = {
 				exists = c:BRZ
 				scope:target_country = { c:BRZ ?= this }
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			add = 2.0
 		}
@@ -63,7 +63,7 @@ ai_strategy_portuguese_maritime_empire = {
 		if = {
 			limit = {
 				has_variable = aoc_portuguese_indian_ocean_phase
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
 					any_scope_state = {
@@ -81,7 +81,7 @@ ai_strategy_portuguese_maritime_empire = {
 
 		if = {
 			limit = {
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
 					NOT = {
@@ -242,7 +242,7 @@ ai_strategy_portuguese_maritime_empire = {
 		dominate = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				OR = {
 					scope:target_country = { any_scope_state = { region = sr:region_west_africa } }
 					AND = {
@@ -296,7 +296,7 @@ ai_strategy_portuguese_maritime_empire = {
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				OR = {
 					scope:target_country = { any_scope_state = { region = sr:region_west_africa } }
 					AND = {
@@ -412,7 +412,7 @@ ai_strategy_portuguese_maritime_empire = {
 		value = 0
 
 		if = {
-			limit = { can_reach_target_state = yes }
+			limit = { can_reach_target_state = { TARGET_STATE = scope:target_state } }
 
 			if = {
 				limit = {

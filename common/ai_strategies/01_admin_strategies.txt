@@ -143,7 +143,7 @@ ai_strategy_resource_expansion = {
 					OR = {
 						AND = {
 							is_ai = no
-							NOT = { has_law_or_variant = law_type:law_traditionalism }
+							NOT = { always = no } # 1.14 cleanup, was: has_law_or_variant = law_type:law_traditionalism (not in mod)
 						}
 						has_strategy = ai_strategy_resource_expansion
 						has_strategy = ai_strategy_industrial_expansion
@@ -217,7 +217,7 @@ ai_strategy_industrial_expansion = {
 
 		if = {
 			limit = {
-				has_law_or_variant = law_type:law_command_economy
+				always = no # 1.14 cleanup, was: has_law_or_variant = law_type:law_command_economy (not in mod)
 			}
 			multiply = 2
 		}
@@ -284,7 +284,7 @@ ai_strategy_placate_population = {
 	}
 
 	possible = {
-		has_law_or_variant = law_type:law_traditionalism
+		always = no # 1.14 cleanup, was: has_law_or_variant = law_type:law_traditionalism (not in mod)
 	}
 
 	weight = {
@@ -325,7 +325,7 @@ ai_strategy_placate_population = {
 					OR = {
 						AND = {
 							is_ai = no
-							NOT = { has_law_or_variant = law_type:law_traditionalism }
+							NOT = { always = no } # 1.14 cleanup, was: has_law_or_variant = law_type:law_traditionalism (not in mod)
 						}
 						has_strategy = ai_strategy_resource_expansion
 						has_strategy = ai_strategy_industrial_expansion
@@ -355,7 +355,7 @@ ai_strategy_colonial_extraction = {
         explosives = {
             stance = wants_high_supply
             trigger = {
-                has_technology_researched = nitroglycerin
+                always = no # 1.14 cleanup, was: has_technology_researched = nitroglycerin (not in mod)
             }
         }
         tools = { stance = wants_high_supply }
@@ -459,7 +459,7 @@ ai_strategy_plantation_economy = {
 
 		if = {
 			limit = {
-				has_journal_entry = je_agricultural_development
+				always = no # 1.14 cleanup, was: has_journal_entry = je_agricultural_development (not in mod)
 			}
 			add = 45
 		}
