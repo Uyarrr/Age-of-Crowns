@@ -446,7 +446,7 @@ flagship_score_for_fleet = {
 
 	# Fleets containing capital ships are better flagship fleets.
 	add = {
-		value = "num_ships_of_group(ship_group:ship_group_capital_ships)"
+		value = "num_ships_of_group(ship_group:ship_group_heavy)"
 		multiply = 0.5
 	}
 
@@ -472,7 +472,7 @@ flagship_score_for_ship = {
 	# Prefer capital ships as flagships.
 	if = {
 		limit = {
-			ship_group = ship_group:ship_group_capital_ships
+			ship_group = ship_group:ship_group_heavy
 		}
 		add = 20
 	}

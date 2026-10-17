@@ -384,3 +384,129 @@ ai_strategy_colonial_extraction = {
         value = 100
     }
 }
+
+# Vanilla 1.14 strategies (referenced by vanilla diplomatic actions, catalysts, power blocs, etc.)
+ai_strategy_plantation_economy = {
+	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
+
+	type = administrative
+
+	goods_stances = {
+		fruit = { stance = wants_export }
+		fabric = { stance = wants_export }
+		sugar = { stance = wants_export }
+		coffee = { stance = wants_export }
+		tea = { stance = wants_export }
+		opium = { stance = wants_export }
+		tobacco = { stance = wants_export }
+		dye = { stance = wants_export }
+		silk = { stance = wants_export }
+	}
+
+	building_group_weights = {
+		bg_plantations = 2.0
+		bg_manufacturing = 0.5
+	}
+
+	possible = {
+		OR = {
+			is_in_geographic_region = geographic_region_dixie_old
+			is_in_geographic_region = geographic_region_south_america
+			is_in_geographic_region = geographic_region_central_america_old
+			is_in_geographic_region = geographic_region_india
+			is_in_geographic_region = geographic_region_south_east_asia
+			is_in_geographic_region = geographic_region_africa
+			is_in_geographic_region = geographic_region_east_asia
+			is_in_geographic_region = geographic_region_middle_east
+		}
+	}
+
+	weight = {
+		value = 10
+
+		if = {
+			limit = {
+				OR = {
+					is_in_geographic_region = geographic_region_south_america
+					is_in_geographic_region = geographic_region_central_america_old
+					is_in_geographic_region = geographic_region_india
+					is_in_geographic_region = geographic_region_south_east_asia
+					is_in_geographic_region = geographic_region_dixie_old
+				}
+			}
+			add = 20
+		}
+
+		if = {
+			limit = { is_country_type = unrecognized }
+			multiply = 0.5
+		}
+
+		if = {
+			limit = {
+				exists = ig:ig_landowners
+				ig:ig_landowners ?= { is_powerful = yes }
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				is_princely_state = yes
+			}
+			add = 20
+		}
+
+		if = {
+			limit = {
+				has_journal_entry = je_agricultural_development
+			}
+			add = 45
+		}
+	}
+}
+
+ai_strategy_montenegro_admin = {
+    icon = "gfx/interface/icons/ai_strategy_icons/placate_population.dds"
+
+    type = administrative
+    building_group_weights = {
+		bg_private_infrastructure = 2.0
+		bg_agriculture = 2.0
+		bg_ranching = 2.0
+		bg_logging = 1.5
+		bg_manufacturing = 0.5
+    }
+
+    subsidies = {
+        building_trade_center = must_have
+    }
+
+    goods_stances = {
+		grain = { stance = wants_high_supply }
+		meat = { stance = wants_high_supply }
+		fish = { stance = wants_high_supply }
+		fruit = { stance = wants_high_supply }
+		fabric = { stance = wants_high_supply }
+		wood = { stance = wants_high_supply }
+		liquor = { stance = wants_high_supply }
+		small_arms = { stance = wants_high_supply }
+	}
+    possible = {
+    	c:MON ?= this
+		NOR = {
+			any_scope_state = { # Has a port
+				has_building = building_port
+			}
+			ROOT.market_capital = { # Is in another market
+				NOT = {
+					owner = ROOT
+				}
+			}
+		}
+    }
+
+    weight = {
+        value = 100
+    }
+}

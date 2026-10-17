@@ -1,0 +1,5 @@
+﻿# Required by vanilla 1.14 define NGraphics.SHIP_PROPULSION_MODIFICATION_SLOT (ship sound parameter).
+# Ships in this mod use use_modifications = no, so this slot is never filled.
+ship_mod_slot_propulsion = {
+    icon = "gfx/interface/icons/military_icons/navy_icons/speed_navy.dds"
+}

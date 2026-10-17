@@ -1,6 +1,7 @@
 ﻿# Capital Ships / Heavy Ship Line
 ship_type_early_carrack = {
     ship_group = ship_group_heavy
+    ai_ship_category = ai_ship_category_battle_line
     base_construction_cost = 45
     can_be_flagship = yes
 
@@ -54,6 +55,7 @@ ship_type_early_carrack = {
 
 ship_type_carrack = {
     ship_group = ship_group_heavy
+    ai_ship_category = ai_ship_category_battle_line
     base_construction_cost = 60
     can_be_flagship = yes
 
@@ -108,6 +110,7 @@ ship_type_carrack = {
 
 ship_type_galleon = {
     ship_group = ship_group_heavy
+    ai_ship_category = ai_ship_category_battle_line
     base_construction_cost = 75
     can_be_flagship = yes
 
@@ -163,6 +166,7 @@ ship_type_galleon = {
 
 ship_type_war_galleon = {
     ship_group = ship_group_heavy
+    ai_ship_category = ai_ship_category_battle_line
     base_construction_cost = 95
     can_be_flagship = yes
 
@@ -220,6 +224,7 @@ ship_type_war_galleon = {
 
 ship_type_two_decker = {
     ship_group = ship_group_heavy
+    ai_ship_category = ai_ship_category_battle_line
     base_construction_cost = 115
     can_be_flagship = yes
 
@@ -276,6 +281,7 @@ ship_type_two_decker = {
 
 ship_type_three_decker = {
     ship_group = ship_group_heavy
+    ai_ship_category = ai_ship_category_battle_line
     base_construction_cost = 140
     can_be_flagship = yes
 
@@ -333,6 +339,7 @@ ship_type_three_decker = {
 
 ship_type_first_rate_ship_of_the_line = {
     ship_group = ship_group_heavy
+    ai_ship_category = ai_ship_category_battle_line
     base_construction_cost = 170
     can_be_flagship = yes
 
