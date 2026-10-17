@@ -1,0 +1,65 @@
+﻿# Shared triggers for Age of Crowns political movements. Root = country.
+
+aoc_country_is_monarchy = {
+	OR = {
+		has_law_or_variant = law_type:law_monarchy
+		has_law_or_variant = law_type:law_steppe_horde
+		has_law_or_variant = law_type:law_chiefdom
+	}
+}
+
+aoc_country_is_republic = {
+	OR = {
+		has_law_or_variant = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_parliamentary_republic
+	}
+}
+
+# Nobility stripped of its privileges or brought under royal courts
+aoc_country_has_curtailed_nobility = {
+	OR = {
+		has_law_or_variant = law_type:law_curtail_the_nobility
+		has_law_or_variant = law_type:law_court_of_the_star_chamber
+	}
+}
+
+# Crown claims unchecked authority over the realm
+aoc_country_has_absolute_crown = {
+	OR = {
+		has_law_or_variant = law_type:law_absolute_rule
+		has_law_or_variant = law_type:law_absolute_leadership
+	}
+}
+
+# Administration run from the court rather than by local lords, towns or estates
+aoc_country_is_centralized = {
+	OR = {
+		has_law_or_variant = law_type:law_absolute_leadership
+		has_law_or_variant = law_type:law_unitary_administration
+		has_law_or_variant = law_type:law_central_council
+	}
+}
+
+aoc_country_is_decentralized = {
+	OR = {
+		has_law_or_variant = law_type:law_autonomous_councils
+		has_law_or_variant = law_type:law_feudal_administration
+		has_law_or_variant = law_type:law_confederal_union
+		has_law_or_variant = law_type:law_local_courts
+	}
+}
+
+# The established church has lost its privileges or its monopoly on worship
+aoc_country_has_weakened_church = {
+	OR = {
+		has_law_or_variant = law_type:law_curtail_the_clergy
+		has_law_or_variant = law_type:law_freedom_of_conscience
+		has_law_or_variant = law_type:law_total_separation
+		has_law_or_variant = law_type:law_state_atheism
+		has_law_or_variant = law_type:law_secular_education
+	}
+}
+
+aoc_country_allows_slavery = {
+	NOT = { has_law_or_variant = law_type:law_slavery_banned }
+}

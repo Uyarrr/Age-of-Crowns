@@ -162,23 +162,6 @@ law_colonial_slavery = {
 			remove_variable = slavery_recently_abolished
 		}
 
-		hidden_effect = {
-			if = {
-				limit = {
-					any_political_movement = {
-						is_political_movement_type = movement_pro_slavery
-						has_core_ideology = ideology:ideology_pro_slavery_movement
-					}
-				}
-				random_political_movement = {
-					limit = {
-						is_political_movement_type = movement_pro_slavery
-						has_core_ideology = ideology:ideology_pro_slavery_movement
-					}
-					set_core_ideology = ideology_pro_slavery_colonial_movement
-				}
-			}
-		}
 	}
 
 	ai_enact_weight_modifier = {
@@ -256,23 +239,6 @@ law_debt_slavery = {
 			switch_from_colonial_slavery_to_pro_slavery = yes
 		}
 
-		hidden_effect = {
-			if = {
-				limit = {
-					any_political_movement = {
-						is_political_movement_type = movement_pro_slavery
-						has_core_ideology = ideology:ideology_pro_slavery_colonial_movement
-					}
-				}
-				random_political_movement = {
-					limit = {
-						is_political_movement_type = movement_pro_slavery
-						has_core_ideology = ideology:ideology_pro_slavery_colonial_movement
-					}
-					set_core_ideology = ideology_pro_slavery_movement
-				}
-			}
-		}
 	}
 
 	modifier = {
@@ -346,23 +312,6 @@ law_slave_trade = {
 			switch_from_colonial_slavery_to_pro_slavery = yes
 		}
 
-		hidden_effect = {
-			if = {
-				limit = {
-					any_political_movement = {
-						is_political_movement_type = movement_pro_slavery
-						has_core_ideology = ideology:ideology_pro_slavery_colonial_movement
-					}
-				}
-				random_political_movement = {
-					limit = {
-						is_political_movement_type = movement_pro_slavery
-						has_core_ideology = ideology:ideology_pro_slavery_colonial_movement
-					}
-					set_core_ideology = ideology_pro_slavery_movement
-				}
-			}
-		}
 	}
 
 	modifier = {
@@ -418,23 +367,6 @@ law_legacy_slavery = {
 
 		ig:ig_landowners ?= {
 			switch_from_colonial_slavery_to_pro_slavery = yes
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					any_political_movement = {
-						is_political_movement_type = movement_pro_slavery
-						has_core_ideology = ideology:ideology_pro_slavery_colonial_movement
-					}
-				}
-				random_political_movement = {
-					limit = {
-						is_political_movement_type = movement_pro_slavery
-						has_core_ideology = ideology:ideology_pro_slavery_colonial_movement
-					}
-					set_core_ideology = ideology_pro_slavery_movement
-				}
-			}
 		}
 	}
 

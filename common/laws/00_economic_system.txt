@@ -134,7 +134,7 @@ law_chartered_economy = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
 					any_political_movement = {
 						law_enactment_stance = {
-							law = law_type:law_interventionism
+							law = law_type:law_chartered_economy
 							value > neutral
 						}
 						political_movement_support >= 0.10
@@ -240,7 +240,7 @@ law_agrarian_economy = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
 					any_political_movement = {
 						law_enactment_stance = {
-							law = law_type:law_agrarianism
+							law = law_type:law_agrarian_economy
 							value > neutral
 						}
 						political_movement_support >= 0.10
@@ -431,7 +431,7 @@ law_economic_liberalism = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
 					any_political_movement = {
 						law_enactment_stance = {
-							law = law_type:law_laissez_faire
+							law = law_type:law_economic_liberalism
 							value > neutral
 						}
 						political_movement_support >= 0.10

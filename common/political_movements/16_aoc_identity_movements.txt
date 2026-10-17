@@ -1,0 +1,759 @@
+﻿############################################################
+# AGE OF CROWNS - RELIGIOUS AND CULTURAL IDENTITY
+# Dissenting faiths and subject peoples demanding toleration,
+# privileges and self-rule. Defence of the established faith
+# is handled by movement_clerical.
+############################################################
+
+# A faith other than the established church demanding toleration.
+# The Hussite Utraquists and the Compacts of Basel (1436), the Huguenots
+# and the Edict of Nantes (1598), the Moriscos (Alpujarras, 1568) and the
+# Protestant estates of Habsburg Austria and Hungary.
+movement_religious_minority = {
+	category = movement_category_religious
+
+	ideology = ideology_humanist
+	character_ideologies = {
+		ideology_reformer
+		ideology_theocrat
+	}
+
+	can_cause_obstinance = yes
+
+	creation_trigger = {}
+	creation_weight = {
+		value = 200
+		if = {
+			limit = { has_technology_researched = confessionalism }
+			multiply = 1.5
+		}
+	}
+	on_created = {}
+
+	disband_trigger = {
+		scope:political_movement ?= {
+			OR = {
+				religion = {
+					is_state_religion = root
+				}
+				root = {
+					religion_percent_country = {
+						target = scope:political_movement.religion
+						value <= 0.08
+					}
+				}
+			}
+		}
+	}
+
+	religion_selection_trigger = {
+		NOT = { is_state_religion = scope:country }
+		NOT = { rel:atheist = this }
+		scope:country = {
+			religion_percent_country = {
+				target = root
+				value >= 0.1
+			}
+		}
+	}
+	religion_selection_weight = {
+		value = 100
+	}
+
+	character_support_trigger = {
+		religion = scope:religion
+		OR = {
+			has_ideology = ideology:ideology_theocrat
+			has_ideology = ideology:ideology_reformer
+			scope:interest_group ?= { is_interest_group_type = ig_devout }
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				scope:interest_group ?= { is_interest_group_type = ig_devout }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		religion = scope:religion
+	}
+
+	pop_support_factors = {
+		movement_support_religious_discrimination
+		movement_support_poverty
+		movement_support_clergymen
+		movement_support_aristocrats
+		movement_support_peasants
+		movement_support_confessionalism
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 10
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 40
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 15
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = peasants }
+			add = {
+				value = 10
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 10
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+
+		if = {
+			limit = { standard_of_living < 6 }
+			add = {
+				value = 5
+				desc = "POP_POVERTY"
+			}
+		}
+
+		if = {
+			limit = {
+				pop_acceptance < acceptance_status_3
+			}
+			multiply = {
+				value = 1.5
+				desc = "POP_RELIGIOUS_DISCRIMINATION"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		interest_group_can_join = {
+			leader = { religion = scope:political_movement.religion }
+		}
+
+		state_weight = {
+			value = 1
+			if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.5
+					}
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.25
+					}
+				}
+				add = 25
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.1
+					}
+				}
+				add = 10
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			owner ?= {
+				any_scope_state = {
+					religion_percent_state = {
+						target = root.religion
+						value >= 0.10
+					}
+				}
+			}
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		interest_group_can_join = {
+			leader = { religion = scope:political_movement.religion }
+		}
+
+		state_weight = {
+			value = 0
+			if = {
+				limit = {
+					is_capital = no
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.05
+					}
+				}
+				add = { # Share of the faith + half of turmoil + 5x obstinance must exceed 1
+					value = -1
+					add = "this.religion_percent_state(scope:political_movement.religion)"
+					add = {
+						value = this.turmoil
+						multiply = 0.5
+					}
+					add = {
+						value = this.obstinance
+						multiply = 5
+					}
+					multiply = 100
+				}
+			}
+		}
+
+		target_fraction_of_states = {
+			value = political_movement_identity_support
+			add = scope:clout
+			multiply = 3
+			min = 0.15
+			max = 0.75
+		}
+	}
+
+	additional_radicalism_factors = {
+		add = {
+			value = "owner.average_sol"
+			subtract = "owner.average_sol_for_religion(scope:religion)"
+			multiply = 0.05
+			max = 0.5
+			min = 0
+			desc = "STANDARD_OF_LIVING_FOR_RELIGION"
+		}
+
+		subtract = {
+			value = 0.5
+			subtract = political_movement_identity_support
+			min = 0
+			desc = "LOW_MOVEMENT_IDENTITY_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_state_religion }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_NO_TOLERATION"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								religion ?= ROOT.religion
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_RELIGIOUS_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+# A subject people defending its privileges, language and self-rule.
+# The Bohemian and Hungarian estates under foreign kings, the Catalan and
+# Aragonese fueros, the Irish lordships under the Tudors, the Swedes under the
+# Kalmar Union (1471, 1521) and the Portuguese Restoration (1640).
+movement_cultural_minority = {
+	category = movement_category_cultural
+
+	ideology = ideology_decentralization
+	character_ideologies = {
+		ideology_sovereignist_leader
+		ideology_reformer
+	}
+
+	can_cause_obstinance = yes
+
+	creation_trigger = {}
+	creation_weight = {
+		value = 100
+	}
+	on_created = {}
+
+	disband_trigger = {
+		scope:political_movement ?= {
+			OR = {
+				culture = {
+					is_primary_culture_of = root
+				}
+				root = {
+					AND = {
+						NOT = {
+							any_scope_state = {
+								state_region = {
+									is_homeland = scope:political_movement.culture
+								}
+								culture_percent_state = {
+									target = scope:political_movement.culture
+									value >= 0.18
+								}
+							}
+						}
+						OR = {
+							culture_percent_country = {
+								target = scope:political_movement.culture
+								value <= 0.08
+							}
+							cultural_acceptance_base = { target = scope:political_movement.culture value > acceptance_status_2 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	culture_selection_trigger = {
+		NOT = { is_primary_culture_of = scope:country }
+		OR = {
+			culture_current_fervor >= 10
+			scope:country = {
+				any_scope_diplomatic_pact = {
+					is_diplomatic_action_type = support_separatism
+					second_country = prev
+					"diplomatic_pact_other_country(scope:country)" = {
+						country_has_primary_culture = root
+					}
+				}
+			}
+		}
+		scope:country = {
+			OR = {
+				any_scope_state = {
+					state_region = {
+						is_homeland = root
+					}
+					culture_percent_state = {
+						target = root
+						value >= 0.2
+					}
+				}
+				AND = {
+					culture_percent_country = {
+						target = root
+						value >= 0.1
+					}
+					cultural_acceptance_base = { target = root value <= acceptance_status_2 }
+				}
+			}
+		}
+	}
+	culture_selection_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:country = {
+					any_scope_diplomatic_pact = {
+						is_diplomatic_action_type = support_separatism
+						second_country = prev
+						"diplomatic_pact_other_country(scope:country)" = {
+							country_has_primary_culture = root
+						}
+					}
+				}
+			}
+			multiply = 3
+		}
+	}
+
+	character_support_trigger = {
+		OR = {
+			culture = scope:culture
+			has_ideology = ideology:ideology_sovereignist_leader
+		}
+	}
+	character_support_weight = {
+		value = 50
+		if = {
+			limit = { has_ideology = ideology:ideology_sovereignist_leader }
+			multiply = 10
+		}
+		else_if = {
+			limit = { culture = scope:culture }
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		culture = scope:culture
+	}
+
+	pop_support_factors = {
+		movement_support_cultural_fervor
+		movement_support_cultural_discrimination
+		movement_support_aristocrats
+		movement_support_clergymen
+		movement_support_academics
+		movement_support_shopkeepers
+		movement_support_support_separatism_action
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 5
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 25
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 15
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = academics }
+			add = {
+				value = 15
+				desc = "POP_ACADEMICS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 8
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 8
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = peasants }
+			add = {
+				value = 5
+				desc = "POP_PEASANTS"
+			}
+		}
+
+		if = {
+			limit = {
+				pop_acceptance < acceptance_status_3
+			}
+			multiply = {
+				value = 1.5
+				desc = "POP_DISCRIMINATED"
+			}
+		}
+
+		multiply = {
+			desc = "POP_CULTURE_FERVOR"
+			value = culture.culture_current_fervor
+			subtract = 15
+			multiply = 0.015
+			add = 1
+			min = 0.5
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 50
+		}
+
+		interest_group_can_join = {
+			leader = { culture = scope:political_movement.culture }
+		}
+
+		state_weight = {
+			value = 1
+			if = {
+				limit = {
+					culture_percent_state = {
+						target = scope:political_movement.culture
+						value >= 0.5
+					}
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					culture_percent_state = {
+						target = scope:political_movement.culture
+						value >= 0.2
+					}
+				}
+				add = 20
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			owner ?= {
+				any_scope_state = {
+					state_region = { is_homeland = root.culture }
+					culture_percent_state = {
+						target = root.culture
+						value >= 0.05
+					}
+				}
+			}
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		interest_group_can_join = {
+			leader = { culture = scope:political_movement.culture }
+		}
+
+		state_weight = {
+			value = 0
+			if = {
+				limit = {
+					is_capital = no
+					state_region = { is_homeland = scope:political_movement.culture }
+					culture_percent_state = {
+						target = scope:political_movement.culture
+						value >= 0.05
+					}
+				}
+				add = { # Share of the culture + half of turmoil + 5x obstinance must exceed 1
+					value = -1
+					add = "this.culture_percent_state(scope:political_movement.culture)"
+					add = {
+						value = this.turmoil
+						multiply = 0.5
+					}
+					add = {
+						value = this.obstinance
+						multiply = 5
+					}
+					multiply = 100
+				}
+			}
+		}
+
+		target_fraction_of_states = {
+			value = political_movement_identity_support
+			add = scope:clout
+			multiply = 3
+			min = 0.15
+			max = 0.75
+		}
+	}
+
+	additional_radicalism_factors = {
+		add = {
+			value = "owner.average_sol"
+			subtract = "owner.average_sol_for_culture(scope:culture)"
+			multiply = 0.05
+			max = 0.5
+			min = 0
+			desc = "STANDARD_OF_LIVING_FOR_CULTURE"
+		}
+
+		if = {
+			limit = {
+				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_1 } }
+			}
+			add = {
+				value = 0.3
+				desc = "DISCRIMINATION_LEVEL_violent_hostility"
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 } }
+			}
+			add = {
+				value = 0.2
+				desc = "DISCRIMINATION_LEVEL_cultural_erasure"
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_3 } }
+			}
+			add = {
+				value = 0.1
+				desc = "DISCRIMINATION_LEVEL_open_prejudice"
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= { aoc_country_is_centralized = yes }
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_CENTRALIZED_ADMINISTRATION"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_scope_diplomatic_pact = {
+						is_diplomatic_action_type = support_separatism
+						second_country = prev
+						"diplomatic_pact_other_country(root.owner)" = {
+							country_has_primary_culture = root.culture
+						}
+					}
+				}
+			}
+			add = {
+				desc = "SUPPORT_SEPARATISM_ACTION"
+				value = support_separatism_radicalism
+			}
+		}
+
+		subtract = {
+			value = 0.25
+			subtract = political_movement_identity_support
+			min = 0
+			desc = "LOW_MOVEMENT_IDENTITY_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_4 } }
+			}
+			add = {
+				desc = "FERVOR_OF_CULTURE_ACTIVISM"
+				value = scope:culture.culture_current_fervor
+				divide = 400
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								culture ?= ROOT.culture
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_CULTURE_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}

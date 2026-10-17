@@ -49,16 +49,16 @@ ai_strategy_conservative_agenda = {
 	}
 
 	pro_movements = {
-		movement_royalist_absolutist
-		movement_royalist_constitutional
-		movement_religious_majority
-		movement_reactionary
+		movement_absolutist
+		movement_royalist
+		movement_clerical
+		movement_old_custom
 	}
 
 	anti_movements = {
-		movement_radical
-		movement_nihilist
-		movement_labor
+		movement_peasant_league
+		movement_republican
+		movement_enlightenment
 	}
 
 	institution_scores = {

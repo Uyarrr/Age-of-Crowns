@@ -1,4 +1,6 @@
 ﻿# root = political_movement
+# These entries only drive the "supported by" list in the movement panel.
+# Actual support is computed in each movement's pop_support_weight.
 
 ## STATE FACTORS ##
 
@@ -30,14 +32,18 @@ movement_support_colonial_settlers = {
 	}
 }
 
+movement_support_coastal_trade = {
+	name = AOC_MOVEMENT_PORT_STATE
+}
+
+movement_support_provincial = {
+	name = AOC_MOVEMENT_PROVINCIAL_STATE
+}
+
 ## POP FACTORS ##
 
 movement_support_cultural_fervor = {
 	name = POP_CULTURAL_FERVOR
-}
-
-movement_support_national_awakening = {
-	name = POP_ACTIVE_NATIONAL_AWAKENING
 }
 
 movement_support_high_literacy = {
@@ -64,28 +70,8 @@ movement_support_poverty = {
 	name = POP_POVERTY
 }
 
-movement_support_colonial_rule = {
-	name = colonial_rule
-}
-
 movement_support_high_acceptance = {
 	name = POP_HIGH_ACCEPTANCE
-}
-
-movement_support_south_asian_heritage = {
-	name = heritage_group_south_asian
-}
-
-movement_support_germanic_heritage = {
-	name = heritage_germanic
-}
-
-movement_support_italic_heritage = {
-	name = heritage_italic
-}
-
-movement_support_south_slavic_heritage = {
-	name = heritage_south_slavic
 }
 
 movement_support_religious_discrimination = {
@@ -108,34 +94,10 @@ movement_support_rural = {
 	name = RURAL_POP
 }
 
-movement_support_hindu_religion = {
-	name = POP_HINDU
-}
-
-movement_support_muslim_religion = {
-	name = POP_MUSLIM
-}
-
 ## POP TYPES ##
 
 movement_support_aristocrats = {
 	name = POP_ARISTOCRATS
-}
-
-movement_support_aristocrats_polish = {
-	name = POP_POLISH_ARISTOCRATS
-
-	visible = {
-		culture ?= cu:polish
-		owner ?= {
-			any_scope_state = {
-				OR = {
-					has_variable = lingering_plc_resistance
-					has_variable = christ_of_nations_target
-				}
-			}
-		}
-	}
 }
 
 movement_support_academics = {
@@ -194,54 +156,68 @@ movement_support_soldiers = {
 	name = POP_SOLDIERS
 }
 
-movement_support_soldiers_conscripts = {
-	name = CONSCRIPTS
-}
+## LAW FACTORS ##
 
-## TECHNOLOGY ##
-
-movement_support_corporatism_tech = {
-	name = CORPORATISM_TECH
+movement_support_serfdom_law = {
+	name = AOC_MOVEMENT_SERFDOM
 
 	visible = {
-		owner ?= { has_technology_researched = corporatism }
+		owner ?= { has_law_or_variant = law_type:law_serfdom }
 	}
 }
 
-movement_support_nationalism_tech = {
-	name = NATIONALISM_TECH
+movement_support_tenant_farmers_law = {
+	name = POP_PEASANTS_TENANT_FARMERS
 
 	visible = {
-		owner ?= { has_technology_researched = nationalism }
+		owner ?= { has_law_or_variant = law_type:law_tenant_farmers }
 	}
 }
 
-movement_support_pan_nationalism_tech = {
-	name = PAN_NATIONALISM_TECH
+movement_support_enclosure_law = {
+	name = AOC_MOVEMENT_ENCLOSURE
 
 	visible = {
-		owner ?= { has_technology_researched = pan-nationalism }
+		owner ?= { has_law_or_variant = law_type:law_enclosed_estates }
 	}
 }
 
-## JOURNAL ENTRIES ##
-
-movement_support_je_acw_countdown = {
-	name = je_acw_countdown
-
-	visible = {
-		owner ?= { has_journal_entry = je_acw_countdown }
-	}
-}
-
-movement_support_je_positivist_movement = {
-	name = POSITIVISM_BONUS
+movement_support_curtailed_nobility = {
+	name = AOC_MOVEMENT_CURTAILED_NOBILITY
 
 	visible = {
 		owner ?= {
 			OR = {
-				has_variable = positivist_leaders_increase_var
-				has_variable = positivist_leaders_large_increase_var
+				has_law_or_variant = law_type:law_curtail_the_nobility
+				has_law_or_variant = law_type:law_court_of_the_star_chamber
+			}
+		}
+	}
+}
+
+movement_support_curtailed_clergy = {
+	name = AOC_MOVEMENT_CURTAILED_CLERGY
+
+	visible = {
+		owner ?= {
+			OR = {
+				has_law_or_variant = law_type:law_curtail_the_clergy
+				has_law_or_variant = law_type:law_freedom_of_conscience
+				has_law_or_variant = law_type:law_total_separation
+			}
+		}
+	}
+}
+
+movement_support_absolute_crown = {
+	name = AOC_MOVEMENT_ABSOLUTE_CROWN
+
+	visible = {
+		owner ?= {
+			OR = {
+				has_law_or_variant = law_type:law_absolute_rule
+				has_law_or_variant = law_type:law_absolute_leadership
+				has_law_or_variant = law_type:law_autocracy
 			}
 		}
 	}
@@ -267,23 +243,11 @@ movement_support_ruler_popularity = {
 	}
 }
 
-movement_support_country_is_autocratic = {
-	name = COUNTRY_IS_AUTOCRATIC
+movement_support_at_war = {
+	name = AOC_MOVEMENT_AT_WAR
 
 	visible = {
-		owner ?= {
-			country_has_voting_franchise = no
-		}
-	}
-}
-
-movement_support_tenant_farmers_law = {
-	name = POP_PEASANTS_TENANT_FARMERS
-
-	visible = {
-		owner ?= {
-			has_law_or_variant = law_type:law_tenant_farmers
-		}
+		owner ?= { is_at_war = yes }
 	}
 }
 
@@ -294,64 +258,6 @@ movement_support_lost_wars = {
 		always = yes
 	}
 }
-
-movement_support_backwardsness = {
-	name = MOVEMENT_SUPPORT_BACKWARDSNESS
-
-	visible = {
-		always = yes
-	}
-}
-
-movement_support_daimyo_loyalty_high = {
-	name = MOVEMENT_SUPPORT_DAIMYO_LOYALTY_HIGH
-
-	visible = {
-		owner ?= {
-			c:JAP ?= this
-		}
-		OR = {
-			AND = {
-				is_political_movement_type = movement_tokugawa_loyalist
-				owner ?= {
-					country_has_tokugawa_in_power = yes
-				}
-			}
-			AND = {
-				is_political_movement_type = movement_meiji_restorationist
-				owner ?= {
-					country_has_emperor_in_power = yes
-				}
-			}
-		}
-	}
-}
-
-movement_support_daimyo_loyalty_low = {
-	name = MOVEMENT_SUPPORT_DAIMYO_LOYALTY_LOW
-
-	visible = {
-		owner ?= {
-			c:JAP ?= this
-		}
-		OR = {
-			AND = {
-				is_political_movement_type = movement_meiji_restorationist
-				owner ?= {
-					country_has_tokugawa_in_power = yes
-				}
-			}
-			AND = {
-				is_political_movement_type = movement_tokugawa_loyalist
-				owner ?= {
-					country_has_emperor_in_power = yes
-				}
-			}
-		}
-	}
-}
-
-## DIPLOMACY FACTORS ##
 
 movement_support_support_separatism_action = {
 	name = SUPPORT_SEPARATISM_ACTION
@@ -365,5 +271,31 @@ movement_support_support_separatism_action = {
 				is_initiator = yes
 			}
 		}
+	}
+}
+
+## TECHNOLOGY FACTORS ##
+
+movement_support_renaissance = {
+	name = AOC_MOVEMENT_RENAISSANCE
+
+	visible = {
+		owner ?= { has_technology_researched = renaissance }
+	}
+}
+
+movement_support_printing_press = {
+	name = AOC_MOVEMENT_PRINTING_PRESS
+
+	visible = {
+		owner ?= { has_technology_researched = printing_press }
+	}
+}
+
+movement_support_confessionalism = {
+	name = AOC_MOVEMENT_CONFESSIONALISM
+
+	visible = {
+		owner ?= { has_technology_researched = confessionalism }
 	}
 }

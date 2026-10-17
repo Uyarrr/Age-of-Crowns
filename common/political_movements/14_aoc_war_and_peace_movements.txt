@@ -1,0 +1,677 @@
+﻿############################################################
+# AGE OF CROWNS - WAR AND PEACE
+# Hawks and doves, professional soldiers and the armed
+# commons.
+############################################################
+
+# Courtiers and captains eager for conquest, crusade and overseas empire.
+# The Crusade of Varna (1444), Charles the Bold, the completion of the
+# Reconquista (1492), the Italian Wars (1494) and the conquistadors.
+movement_war_party = {
+	category = movement_category_ideological
+
+	ideology = ideology_outward
+	character_ideologies = {
+		ideology_jingoist_leader
+		ideology_authoritarian
+	}
+
+	creation_trigger = {}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { number_of_claims > 0 }
+			multiply = 2
+		}
+		if = {
+			limit = { has_technology_researched = colonization }
+			multiply = 1.5
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_civil_society }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_jingoist_leader
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					has_ideology = ideology:ideology_outward
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = { has_ideology = ideology:ideology_jingoist_leader }
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_officers
+		movement_support_aristocrats
+		movement_support_soldiers
+		movement_support_number_of_claims
+		movement_support_colonial_settlers
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 2
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 40
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 20
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = soldiers }
+			add = {
+				value = 15
+				desc = "POP_SOLDIERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 5
+				desc = "POP_CAPITALISTS"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = { number_of_claims > 0 }
+			}
+			multiply = {
+				value = 1.25
+				desc = "AOC_MOVEMENT_UNREDEEMED_CLAIMS"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 50
+		}
+
+		state_weight = {
+			value = 1
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { number_of_claims > 0 }
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_UNREDEEMED_CLAIMS"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Taxpayers and traders weary of war and its subsidies.
+# Parliaments refusing war taxation, the Dutch party that made the Twelve
+# Years' Truce (1609) and the neutralists of the Venetian Senate.
+movement_peace_party = {
+	category = movement_category_ideological
+
+	ideology = ideology_inward
+	character_ideologies = {
+		ideology_pacifist
+		ideology_moderate
+	}
+
+	creation_trigger = {}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { is_at_war = yes }
+			multiply = 3
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_martial_society }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_pacifist
+			scope:interest_group ?= { has_ideology = ideology:ideology_inward }
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = { has_ideology = ideology:ideology_pacifist }
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_shopkeepers
+		movement_support_farmers
+		movement_support_capitalists
+		movement_support_clergymen
+		movement_support_at_war
+		movement_support_lost_wars
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 3
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 15
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = farmers }
+			add = {
+				value = 12
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 10
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 8
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = peasants }
+			add = {
+				value = 8
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = laborers }
+			add = {
+				value = 5
+				desc = "POP_LABORERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = -2
+				desc = "POP_OFFICERS"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = { is_at_war = yes }
+			}
+			multiply = {
+				value = 2
+				desc = "AOC_MOVEMENT_AT_WAR"
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { is_at_war = yes }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_AT_WAR"
+			}
+		}
+	}
+}
+
+# Captains who want a paid, drilled and permanent army.
+# The compagnies d'ordonnance (1445), the Black Army of Hungary, the Spanish
+# tercios (1534), the drill of Maurice of Nassau and Gustavus Adolphus.
+movement_military_reform = {
+	category = movement_category_ideological
+
+	ideology = ideology_quality
+	character_ideologies = {
+		ideology_jingoist_leader
+		ideology_reformer
+	}
+
+	creation_trigger = {
+		has_technology_researched = professional_army
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_law_or_variant = law_type:law_no_army_doctrine }
+			multiply = 2
+		}
+		if = {
+			limit = { has_technology_researched = military_revolution }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_jingoist_leader
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					has_ideology = ideology:ideology_quality
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { is_interest_group_type = ig_armed_forces }
+			}
+			multiply = 4
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_officers
+		movement_support_soldiers
+		movement_support_engineers
+		movement_support_lost_wars
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 50
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = soldiers }
+			add = {
+				value = 20
+				desc = "POP_SOLDIERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = engineers }
+			add = {
+				value = 10
+				desc = "POP_ENGINEERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 5
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 50
+		}
+
+		state_weight = {
+			value = 1
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+			if = {
+				limit = { is_capital = yes }
+				multiply = 2
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_no_army_doctrine }
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_NO_DOCTRINE"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Advocates of the armed commons and broad levies.
+# The Hussite field armies, the Swiss Confederates at Grandson and Murten
+# (1476), the Castilian Santa Hermandad (1476) and the English trained bands.
+movement_militia = {
+	category = movement_category_ideological
+
+	ideology = ideology_quantity
+	character_ideologies = {
+		ideology_jingoist_leader
+		ideology_moderate
+	}
+
+	creation_trigger = {
+		has_technology_researched = peasant_levy
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_noble_army
+					has_law_or_variant = law_type:law_noble_levy
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = { is_at_war = yes }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_jingoist_leader
+			scope:interest_group ?= { has_ideology = ideology:ideology_quantity }
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { has_ideology = ideology:ideology_quantity }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_soldiers
+		movement_support_farmers
+		movement_support_peasants
+		movement_support_at_war
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 2
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = soldiers }
+			add = {
+				value = 20
+				desc = "POP_SOLDIERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = farmers }
+			add = {
+				value = 15
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = peasants }
+			add = {
+				value = 12
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = laborers }
+			add = {
+				value = 6
+				desc = "POP_LABORERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 5
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = { is_at_war = yes }
+			}
+			multiply = {
+				value = 1.25
+				desc = "AOC_MOVEMENT_AT_WAR"
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_noble_army }
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_NOBLE_ARMY"
+			}
+		}
+	}
+}

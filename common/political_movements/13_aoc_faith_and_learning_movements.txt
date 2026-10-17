@@ -1,0 +1,959 @@
+﻿############################################################
+# AGE OF CROWNS - FAITH AND LEARNING
+# The established church and old custom against the
+# Renaissance, the new philosophy and the Enlightenment.
+############################################################
+
+# Churchmen defending the privileges and doctrine of the established faith.
+# The Council of Trent (1545-1563), the Catholic League (1576), the partisans
+# of the Inquisition, the Josephite "possessors" of Muscovy and the Ottoman ulema.
+movement_clerical = {
+	category = movement_category_ideological
+
+	ideology = ideology_spiritualist
+	character_ideologies = {
+		ideology_theocrat
+		ideology_moderate
+	}
+
+	creation_trigger = {
+		NOT = { has_law_or_variant = law_type:law_state_atheism }
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { aoc_country_has_weakened_church = yes }
+			multiply = 3
+		}
+		if = {
+			limit = { has_technology_researched = confessionalism }
+			multiply = 1.5
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_theocracy }
+			multiply = 0.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_theocrat
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_devout
+					has_ideology = ideology:ideology_spiritualist
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = { has_ideology = ideology:ideology_theocrat }
+			multiply = 5
+		}
+		if = {
+			limit = {
+				scope:interest_group ?= { is_interest_group_type = ig_devout }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+		religion = { is_state_religion = root.owner }
+	}
+
+	pop_support_factors = {
+		movement_support_clergymen
+		movement_support_peasants
+		movement_support_aristocrats
+		movement_support_low_literacy
+		movement_support_curtailed_clergy
+		movement_support_confessionalism
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 3
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 50
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = peasants }
+			add = {
+				value = 8
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 6
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = farmers }
+			add = {
+				value = 5
+				desc = "POP_FARMERS"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = { aoc_country_has_weakened_church = yes }
+			}
+			multiply = {
+				value = 1.5
+				desc = "AOC_MOVEMENT_CHURCH_UNDER_ATTACK"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		interest_group_can_join = {
+			leader = { religion = scope:political_movement.owner.religion }
+		}
+
+		state_weight = {
+			value = 1
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { aoc_country_has_weakened_church = yes }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_CHURCH_UNDER_ATTACK"
+			}
+		}
+		if = {
+			limit = {
+				owner.ruler ?= {
+					NOT = { religion = root.owner.religion }
+				}
+			}
+			add = {
+				value = 0.1
+				desc = "RULER_WRONG_RELIGION"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Defenders of the "good old law" against innovations of court and church.
+# The peasant appeals to the gute alte Recht, the Pilgrimage of Grace (1536),
+# the Prayer Book Rebellion (1549) and the Russian Old Believers (1666).
+movement_old_custom = {
+	category = movement_category_ideological
+
+	ideology = ideology_traditionalist
+	character_ideologies = {
+		ideology_moderate
+		ideology_theocrat
+	}
+
+	creation_trigger = {}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { aoc_country_has_weakened_church = yes }
+			multiply = 2
+		}
+		if = {
+			limit = { has_technology_researched = renaissance }
+			multiply = 1.5
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_secular_education }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_theocrat
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_devout
+					is_interest_group_type = ig_rural_folk
+					has_ideology = ideology:ideology_traditionalist
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { has_ideology = ideology:ideology_traditionalist }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_clergymen
+		movement_support_peasants
+		movement_support_farmers
+		movement_support_aristocrats
+		movement_support_low_literacy
+		movement_support_rural
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 3
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 25
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = peasants }
+			add = {
+				value = 15
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 10
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = farmers }
+			add = {
+				value = 10
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 3
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+
+		multiply = {
+			desc = "POP_LITERACY"
+			value = 1.2
+			subtract = literacy_rate
+			min = 0.3
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			subtract = state_urbanization_rate
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { aoc_country_has_weakened_church = yes }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_CHURCH_UNDER_ATTACK"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Scholars of the studia humanitatis.
+# Lorenzo Valla's exposure of the Donation of Constantine (1440), the court of
+# Matthias Corvinus, Erasmus, Thomas More and the humanist chanceries.
+movement_humanist = {
+	category = movement_category_ideological
+
+	ideology = ideology_humanist
+	character_ideologies = {
+		ideology_reformer
+		ideology_humanitarian
+	}
+
+	creation_trigger = {
+		has_technology_researched = renaissance
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_technology_researched = printing_press }
+			multiply = 2
+		}
+		if = {
+			limit = { has_technology_researched = patron_of_arts }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_reformer
+			has_ideology = ideology:ideology_humanitarian
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_intelligentsia
+					has_ideology = ideology:ideology_humanist
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { is_interest_group_type = ig_intelligentsia }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_academics
+		movement_support_bureaucrats
+		movement_support_clergymen
+		movement_support_high_literacy
+		movement_support_renaissance
+		movement_support_printing_press
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = academics }
+			add = {
+				value = 50
+				desc = "POP_ACADEMICS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = bureaucrats }
+			add = {
+				value = 12
+				desc = "POP_BUREAUCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 10
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 8
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_pop_type = aristocrats
+					is_pop_type = shopkeepers
+				}
+			}
+			add = {
+				value = 5
+				desc = "MIDDLE_NO_ICON"
+			}
+		}
+
+		multiply = {
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.05
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= {
+					OR = {
+						has_law_or_variant = law_type:law_outlawed_dissent
+						has_law_or_variant = law_type:law_censorship
+					}
+				}
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_CENSORSHIP"
+			}
+		}
+	}
+}
+
+# The new natural philosophy and the experimental method.
+# Copernicus and Vesalius (1543), Tycho Brahe, Galileo, Bacon's Novum Organum
+# (1620), the Accademia dei Lincei (1603) and the Royal Society (1660).
+movement_natural_philosophy = {
+	category = movement_category_ideological
+
+	ideology = ideology_innovative
+	character_ideologies = {
+		ideology_positivist
+		ideology_reformer
+	}
+
+	creation_trigger = {
+		has_technology_researched = printing_press
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_technology_researched = scientific_revolution }
+			multiply = 2
+		}
+		if = {
+			limit = { has_technology_researched = university }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_positivist
+			has_ideology = ideology:ideology_reformer
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_intelligentsia
+					has_ideology = ideology:ideology_innovative
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = { has_ideology = ideology:ideology_positivist }
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_academics
+		movement_support_engineers
+		movement_support_capitalists
+		movement_support_bureaucrats
+		movement_support_high_literacy
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = academics }
+			add = {
+				value = 45
+				desc = "POP_ACADEMICS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = engineers }
+			add = {
+				value = 30
+				desc = "POP_ENGINEERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 8
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = bureaucrats }
+			add = {
+				value = 8
+				desc = "POP_BUREAUCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = machinists }
+			add = {
+				value = 6
+				desc = "POP_MACHINISTS"
+			}
+		}
+
+		multiply = {
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.05
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= {
+					OR = {
+						has_law_or_variant = law_type:law_devout_education
+						has_law_or_variant = law_type:law_uneducated_masses
+					}
+				}
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_CLOSED_LEARNING"
+			}
+		}
+	}
+}
+
+# The philosophes and the party of reason.
+# Locke's Two Treatises (1689), Montesquieu's Spirit of the Laws (1748),
+# Voltaire, the Encyclopedie (1751) and Beccaria's On Crimes and Punishments.
+movement_enlightenment = {
+	category = movement_category_ideological
+
+	ideology = ideology_liberalism
+	character_ideologies = {
+		ideology_liberal_leader
+		ideology_radical
+		ideology_humanitarian
+		ideology_republican_leader
+	}
+
+	creation_trigger = {
+		has_technology_researched = enlightenment
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { aoc_country_has_absolute_crown = yes }
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_outlawed_dissent
+					has_law_or_variant = law_type:law_censorship
+				}
+			}
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_liberal_leader
+			has_ideology = ideology:ideology_radical
+			has_ideology = ideology:ideology_humanitarian
+			has_ideology = ideology:ideology_republican_leader
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_intelligentsia
+					has_ideology = ideology:ideology_liberalism
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_liberal_leader
+					has_ideology = ideology:ideology_republican_leader
+				}
+			}
+			multiply = 5
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_radical }
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_academics
+		movement_support_capitalists
+		movement_support_shopkeepers
+		movement_support_bureaucrats
+		movement_support_clerks
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 2
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = { is_pop_type = academics }
+			add = {
+				value = 40
+				desc = "POP_ACADEMICS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 25
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 20
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = bureaucrats }
+			add = {
+				value = 15
+				desc = "POP_BUREAUCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clerks }
+			add = {
+				value = 10
+				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 5
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+
+		multiply = {
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.1
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= {
+					OR = {
+						has_law_or_variant = law_type:law_outlawed_dissent
+						has_law_or_variant = law_type:law_censorship
+					}
+				}
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_CENSORSHIP"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_enlightenment
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}

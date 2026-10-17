@@ -7,7 +7,7 @@ movement_war_of_roses_yorkist = {
 	law_enactment_radicalism_multiplier = 0
 	active_law_radicalism_multiplier = 0
 
-	ideology = ideology_legitimist_movement
+	ideology = ideology_royalist
 	character_ideologies = {
 		ideology_royalist
 		ideology_reformer
@@ -280,9 +280,9 @@ movement_war_of_roses_lancastrian = {
 	law_enactment_radicalism_multiplier = 0
 	active_law_radicalism_multiplier = 0
 
-	ideology = ideology_legitimist_movement
+	ideology = ideology_royalist
 	character_ideologies = {
-		ideology_legitimist
+		ideology_authoritarian
 		ideology_royalist
 	}
 
@@ -324,7 +324,7 @@ movement_war_of_roses_lancastrian = {
 
 	character_support_trigger = {
 		OR = {
-			has_ideology = ideology:ideology_legitimist
+			has_ideology = ideology:ideology_authoritarian
 			has_ideology = ideology:ideology_royalist
 			has_ideology = ideology:ideology_traditionalist
 			has_ideology = ideology:ideology_jingoist_leader
@@ -343,7 +343,7 @@ movement_war_of_roses_lancastrian = {
 	character_support_weight = {
 		value = 200
 		if = {
-			limit = { has_ideology = ideology:ideology_legitimist }
+			limit = { has_ideology = ideology:ideology_authoritarian }
 			multiply = { value = 5 }
 		}
 	}
@@ -555,7 +555,7 @@ movement_war_of_roses_tudor = {
 	law_enactment_radicalism_multiplier = 0
 	active_law_radicalism_multiplier = 0
 
-	ideology = ideology_legitimist_movement
+	ideology = ideology_royalist
 	character_ideologies = {
 		ideology_royalist
 		ideology_reformer

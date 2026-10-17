@@ -1,0 +1,1208 @@
+﻿############################################################
+# AGE OF CROWNS - CROWN AND ESTATES
+# The struggle between the monarch, the court bureaucracy,
+# the great magnates and the provincial estates.
+############################################################
+
+# Partisans of undivided royal sovereignty.
+# Louis XI after the League of the Public Weal, the Catholic Monarchs,
+# Ivan III, and later Bourbon and Danish absolutism (Lex Regia, 1665).
+movement_absolutist = {
+	category = movement_category_ideological
+
+	ideology = ideology_absolutism
+	character_ideologies = {
+		ideology_authoritarian
+		ideology_moderate
+	}
+
+	creation_trigger = {
+		aoc_country_is_monarchy = yes
+		has_technology_researched = sovereignty
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_strengthen_the_nobility
+					aoc_country_is_decentralized = yes
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = { has_technology_researched = absolutism }
+			multiply = 2
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		NOT = { aoc_country_is_monarchy = yes }
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_authoritarian
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_crown
+					has_ideology = ideology:ideology_absolutism
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = { has_ideology = ideology:ideology_authoritarian }
+			multiply = 5
+		}
+		if = {
+			limit = {
+				scope:interest_group ?= { is_interest_group_type = ig_crown }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_bureaucrats
+		movement_support_officers
+		movement_support_clerks
+		movement_support_soldiers
+		movement_support_ruler_popularity
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 3
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = bureaucrats }
+			add = {
+				value = 35
+				desc = "POP_BUREAUCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 20
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clerks }
+			add = {
+				value = 10
+				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = soldiers }
+			add = {
+				value = 8
+				desc = "POP_SOLDIERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = -2
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+
+		if = {
+			limit = {
+				state = { is_capital = yes }
+			}
+			multiply = {
+				value = 1.5
+				desc = "AOC_MOVEMENT_ROYAL_CAPITAL"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+			if = {
+				limit = { is_capital = yes }
+				multiply = 3
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_strengthen_the_nobility }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_OVERMIGHTY_SUBJECTS"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Court reformers who want royal officials, not local lords, to run the realm.
+# Maximilian I's Imperial Reform (1495), Ivan III's prikazy, the Castilian
+# corregidores and the Tudor Council.
+movement_centralist = {
+	category = movement_category_ideological
+
+	ideology = ideology_centralization
+	character_ideologies = {
+		ideology_reformer
+		ideology_authoritarian
+	}
+
+	creation_trigger = {
+		has_technology_researched = formalized_administration
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { aoc_country_is_decentralized = yes }
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = { count >= 10 }
+			}
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_reformer
+			has_ideology = ideology:ideology_authoritarian
+			scope:interest_group ?= { has_ideology = ideology:ideology_centralization }
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { has_ideology = ideology:ideology_centralization }
+			}
+			multiply = 4
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_bureaucrats
+		movement_support_clerks
+		movement_support_officers
+		movement_support_academics
+		movement_support_high_literacy
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 2
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = bureaucrats }
+			add = {
+				value = 40
+				desc = "POP_BUREAUCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clerks }
+			add = {
+				value = 20
+				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 10
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = academics }
+			add = {
+				value = 8
+				desc = "POP_ACADEMICS"
+			}
+		}
+
+		multiply = {
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.3
+			max = 1
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { aoc_country_is_decentralized = yes }
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_FRAGMENTED_ADMINISTRATION"
+			}
+		}
+	}
+}
+
+# The great lords defending their liberties against the crown.
+# The League of the Public Weal (1465), the Hungarian magnates who chose
+# a weak king in 1490, the Polish szlachta confederations and the Fronde (1648).
+movement_magnate = {
+	category = movement_category_ideological
+
+	ideology = ideology_aristocracy
+	character_ideologies = {
+		ideology_moderate
+		ideology_jingoist_leader
+	}
+
+	creation_trigger = {
+		NOT = { has_law_or_variant = law_type:law_chiefdom }
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { aoc_country_has_curtailed_nobility = yes }
+			multiply = 3
+		}
+		if = {
+			limit = { aoc_country_has_absolute_crown = yes }
+			multiply = 2
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_strengthen_the_nobility }
+			multiply = 0.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_landowners
+					has_ideology = ideology:ideology_aristocracy
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				scope:interest_group ?= { is_interest_group_type = ig_landowners }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_aristocrats
+		movement_support_officers
+		movement_support_clergymen
+		movement_support_low_urbanization
+		movement_support_curtailed_nobility
+		movement_support_absolute_crown
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 50
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 15
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 5
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = soldiers }
+			add = {
+				value = 3
+				desc = "POP_SOLDIERS"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = { aoc_country_has_curtailed_nobility = yes }
+			}
+			multiply = {
+				value = 1.5
+				desc = "AOC_MOVEMENT_CURTAILED_NOBILITY"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+			if = {
+				limit = { is_capital = no }
+				multiply = 1.5
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { aoc_country_has_absolute_crown = yes }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_ABSOLUTE_CROWN"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_magnate
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.1
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Provinces, towns and estates defending their charters and fueros.
+# The Catalan Corts in the Civil War of 1462-1472, the Great Privilege of
+# the Burgundian estates (1477), the Dutch Revolt (1568) and the Bohemian
+# Estates of 1618.
+movement_particularist = {
+	category = movement_category_ideological
+
+	ideology = ideology_decentralization
+	character_ideologies = {
+		ideology_moderate
+		ideology_sovereignist_leader
+	}
+
+	creation_trigger = {
+		any_scope_state = { count >= 4 }
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { aoc_country_is_centralized = yes }
+			multiply = 2
+		}
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_centralized_offices
+					has_law_or_variant = law_type:law_namestnik_office
+					has_law_or_variant = law_type:law_rentekammeret
+				}
+			}
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_sovereignist_leader
+			scope:interest_group ?= { has_ideology = ideology:ideology_decentralization }
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { has_ideology = ideology:ideology_decentralization }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_provincial
+		movement_support_aristocrats
+		movement_support_shopkeepers
+		movement_support_capitalists
+		movement_support_clergymen
+		movement_support_farmers
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 3
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 20
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 15
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 10
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 8
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = farmers }
+			add = {
+				value = 8
+				desc = "POP_FARMERS"
+			}
+		}
+
+		if = {
+			limit = {
+				state = { is_capital = yes }
+			}
+			multiply = {
+				value = 0.4
+				desc = "AOC_MOVEMENT_ROYAL_CAPITAL"
+			}
+		}
+		else = {
+			multiply = {
+				value = 1.5
+				desc = "AOC_MOVEMENT_PROVINCIAL_STATE"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+			if = {
+				limit = { is_capital = yes }
+				multiply = 0
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 1
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+			if = {
+				limit = { is_capital = yes }
+				multiply = 0
+			}
+		}
+
+		target_fraction_of_states = {
+			value = 0.2
+			add = this.political_movement_support
+			max = 0.5
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { aoc_country_is_centralized = yes }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_CENTRALIZED_ADMINISTRATION"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Partisans of a restored crown in a realm without a monarch.
+# The Medici party in republican Florence (1494-1512, 1527-1530),
+# Genoese factions courting France or Milan, and the English Cavaliers.
+movement_royalist = {
+	category = movement_category_ideological
+
+	ideology = ideology_royalist
+	character_ideologies = {
+		ideology_authoritarian
+		ideology_humanitarian_royalist
+		ideology_moderate
+	}
+
+	creation_trigger = {
+		NOT = { aoc_country_is_monarchy = yes }
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_law_or_variant = law_type:law_theocracy }
+			multiply = 0.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		aoc_country_is_monarchy = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_authoritarian
+			has_ideology = ideology:ideology_humanitarian_royalist
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_crown
+					is_interest_group_type = ig_landowners
+					has_ideology = ideology:ideology_royalist
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { has_ideology = ideology:ideology_royalist }
+			}
+			multiply = 4
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_aristocrats
+		movement_support_officers
+		movement_support_clergymen
+		movement_support_soldiers
+		movement_support_low_literacy
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 3
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 40
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 20
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 15
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = soldiers }
+			add = {
+				value = 8
+				desc = "POP_SOLDIERS"
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_pop_type = peasants
+					is_pop_type = farmers
+				}
+			}
+			add = {
+				value = 4
+				desc = "LOWER_NO_ICON"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_royalist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Civic republicanism of the Renaissance.
+# The Florentine Republic restored in 1494 and 1527, Genoa under Andrea Doria
+# (1528), the Santa Junta of the Comuneros (1520), the States party of the
+# Dutch Republic and the English Commonwealth (1649).
+movement_republican = {
+	category = movement_category_ideological
+
+	ideology = ideology_republican
+	character_ideologies = {
+		ideology_republican_leader
+		ideology_radical
+		ideology_reformer
+	}
+
+	creation_trigger = {
+		aoc_country_is_monarchy = yes
+		has_technology_researched = renaissance
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_technology_researched = representative_assemblies }
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_neighbouring_state = {
+					owner = { aoc_country_is_republic = yes }
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_steppe_horde }
+			multiply = 0.1
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		aoc_country_is_republic = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_republican_leader
+			has_ideology = ideology:ideology_radical
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_intelligentsia
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_industrialists
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 50
+		if = {
+			limit = { has_ideology = ideology:ideology_republican_leader }
+			multiply = 10
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_radical }
+			multiply = 4
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_capitalists
+		movement_support_shopkeepers
+		movement_support_academics
+		movement_support_clerks
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 2
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 30
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = academics }
+			add = {
+				value = 30
+				desc = "POP_ACADEMICS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 25
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clerks }
+			add = {
+				value = 10
+				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = laborers }
+			add = {
+				value = 4
+				desc = "POP_LABORERS"
+			}
+		}
+
+		multiply = {
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.1
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_autocracy }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_TYRANNY"
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_republican
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}

@@ -1,0 +1,668 @@
+﻿############################################################
+# AGE OF CROWNS - COMMERCE
+# Towns, bankers and trading companies, and the great
+# argument over monopoly and open trade.
+############################################################
+
+# Chartered towns asserting their liberties against prince and lord.
+# The Prussian Confederation (1440) and the Thirteen Years' War, the revolt of
+# Ghent (1449-1453), the Hanseatic towns and the Revolt of the Comuneros (1520).
+movement_burgher = {
+	category = movement_category_ideological
+
+	ideology = ideology_plutocratic
+	character_ideologies = {
+		ideology_market_liberal
+		ideology_reformer
+		ideology_moderate
+	}
+
+	creation_trigger = {
+		has_technology_researched = merchant_guilds
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_law_or_variant = law_type:law_curtail_the_burghers }
+			multiply = 2
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_autocracy }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_market_liberal
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_industrialists
+					has_ideology = ideology:ideology_plutocratic
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { has_ideology = ideology:ideology_plutocratic }
+			}
+			multiply = 3
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_capitalists
+		movement_support_shopkeepers
+		movement_support_clerks
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 2
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 15
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 40
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 30
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clerks }
+			add = {
+				value = 12
+				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = academics }
+			add = {
+				value = 5
+				desc = "POP_ACADEMICS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = -2
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_curtail_the_burghers }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_CURTAILED_BURGHERS"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Bankers and trading houses who want capital freed from feudal restraint.
+# The Fugger and Welser houses, the Genoese bankers of Philip II,
+# the Company of Merchant Adventurers and the Dutch East India Company (1602).
+movement_merchant = {
+	category = movement_category_ideological
+
+	ideology = ideology_capital_economy
+	character_ideologies = {
+		ideology_market_liberal
+		ideology_reformer
+	}
+
+	creation_trigger = {
+		has_technology_researched = banking
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_technology_researched = double_entry_bookkeeping }
+			multiply = 1.5
+		}
+		if = {
+			limit = { has_technology_researched = limited_companies }
+			multiply = 2
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_manorial_economy }
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_market_liberal
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_industrialists
+					has_ideology = ideology:ideology_capital_economy
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = { has_ideology = ideology:ideology_market_liberal }
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_capitalists
+		movement_support_shopkeepers
+		movement_support_clerks
+		movement_support_high_urbanization
+		movement_support_coastal_trade
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 50
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 15
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clerks }
+			add = {
+				value = 10
+				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 3
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+
+		if = {
+			limit = {
+				state = { has_port = yes }
+			}
+			multiply = {
+				value = 1.25
+				desc = "AOC_MOVEMENT_PORT_STATE"
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_manorial_economy }
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_MANORIAL_ECONOMY"
+			}
+		}
+	}
+}
+
+# Bullionists and projectors of state-guarded trade.
+# The Casa de Contratacion (1503), the Portuguese Casa da India, Thomas Mun,
+# the English Navigation Acts (1651) and Colbert's France.
+movement_mercantilist = {
+	category = movement_category_ideological
+
+	ideology = ideology_mercantilism
+	character_ideologies = {
+		ideology_protectionist
+		ideology_authoritarian
+		ideology_jingoist_leader
+	}
+
+	creation_trigger = {
+		has_technology_researched = colonial_trade_networks
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_law_or_variant = law_type:law_free_trade }
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = { is_incorporated = no }
+			}
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_protectionist
+			has_ideology = ideology:ideology_authoritarian
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_crown
+					has_ideology = ideology:ideology_mercantilism
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = { has_ideology = ideology:ideology_protectionist }
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_bureaucrats
+		movement_support_capitalists
+		movement_support_clerks
+		movement_support_shopkeepers
+		movement_support_colonial_settlers
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = bureaucrats }
+			add = {
+				value = 25
+				desc = "POP_BUREAUCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 25
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 10
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clerks }
+			add = {
+				value = 8
+				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 5
+				desc = "POP_OFFICERS"
+			}
+		}
+
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+			}
+			multiply = {
+				value = 1.5
+				desc = "COLONIAL_SETTLERS"
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_free_trade }
+			}
+			add = {
+				value = 0.05
+				desc = "AOC_MOVEMENT_OPEN_PORTS"
+			}
+		}
+	}
+}
+
+# Carriers and interlopers who want the seas and markets open to all.
+# The Hanseatic and Dutch carrying trade, the open market of Antwerp,
+# Grotius' Mare Liberum (1609) and the interlopers against chartered monopolies.
+movement_free_trade = {
+	category = movement_category_ideological
+
+	ideology = ideology_free_Trade
+	character_ideologies = {
+		ideology_market_liberal
+		ideology_reformer
+	}
+
+	creation_trigger = {
+		has_technology_researched = free_trade
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_mercantilism
+					has_law_or_variant = law_type:law_protectionism
+					has_law_or_variant = law_type:law_isolationism
+					has_law_or_variant = law_type:law_canton_system
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = { has_port = yes }
+			}
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_market_liberal
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_industrialists
+					has_ideology = ideology:ideology_free_Trade
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = { has_ideology = ideology:ideology_market_liberal }
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_capitalists
+		movement_support_shopkeepers
+		movement_support_clerks
+		movement_support_coastal_trade
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 35
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 25
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clerks }
+			add = {
+				value = 8
+				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = laborers }
+			add = {
+				value = 3
+				desc = "POP_LABORERS"
+			}
+		}
+
+		if = {
+			limit = {
+				state = { has_port = yes }
+			}
+			multiply = {
+				value = 1.5
+				desc = "AOC_MOVEMENT_PORT_STATE"
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= {
+					OR = {
+						has_law_or_variant = law_type:law_isolationism
+						has_law_or_variant = law_type:law_canton_system
+					}
+				}
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_CLOSED_PORTS"
+			}
+		}
+	}
+}

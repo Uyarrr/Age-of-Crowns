@@ -1,0 +1,745 @@
+﻿############################################################
+# AGE OF CROWNS - SLAVERY
+# Planters and encomenderos, the critics of bondage, and the
+# enslaved themselves.
+############################################################
+
+# Planters, slave traders and encomenderos defending forced labour.
+# The sugar planters of Madeira and Sao Tome, the encomenderos who rose
+# against the New Laws (1544), the Black Sea and Crimean slave trade and the
+# Barbados Slave Code (1661).
+movement_pro_slavery = {
+	category = movement_category_ideological
+
+	ideology = ideology_slaver
+	character_ideologies = {
+		ideology_authoritarian
+		ideology_moderate
+	}
+
+	creation_trigger = {
+		aoc_country_allows_slavery = yes
+		any_scope_state = { is_slave_state = yes }
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				any_political_movement = { is_political_movement_type = movement_anti_slavery }
+			}
+			multiply = 2
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_authoritarian
+			scope:interest_group ?= {
+				OR = {
+					is_interest_group_type = ig_landowners
+					has_ideology = ideology:ideology_slaver
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= { has_ideology = ideology:ideology_slaver }
+			}
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+		state = { is_slave_state = yes }
+	}
+
+	pop_support_factors = {
+		movement_support_slave_state
+		movement_support_aristocrats
+		movement_support_capitalists
+		movement_support_farmers
+		movement_support_officers
+		movement_support_colonial_settlers
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 2
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = aristocrats }
+			add = {
+				value = 40
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 25
+				desc = "POP_CAPITALISTS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = farmers }
+			add = {
+				value = 10
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = officers }
+			add = {
+				value = 8
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_pop_type = clergymen
+					is_pop_type = shopkeepers
+				}
+			}
+			add = {
+				value = 5
+				desc = "MIDDLE_NO_ICON"
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 0
+			if = {
+				limit = { is_slave_state = yes }
+				add = 1
+				add = scope:clout
+				add = { value = this.turmoil divide = 2 }
+				subtract = this.loyalists
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 0
+			if = {
+				limit = {
+					is_slave_state = yes
+					is_capital = no
+				}
+				add = 1
+				add = this.turmoil
+				subtract = this.loyalists
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# Critics of bondage, first among churchmen and later among philosophers.
+# Bartolome de las Casas, the New Laws (1542) and the Valladolid debate (1550),
+# the Germantown Quaker petition (1688) and the Societe des Amis des Noirs (1788).
+movement_anti_slavery = {
+	category = movement_category_ideological
+	can_have_slave_supporters = yes
+
+	ideology = ideology_abolitionist
+	character_ideologies = {
+		ideology_humanitarian
+		ideology_reformer
+	}
+
+	creation_trigger = {
+		aoc_country_allows_slavery = yes
+		OR = {
+			has_technology_researched = enlightenment
+			AND = {
+				has_technology_researched = colonization
+				any_scope_state = { is_incorporated = no }
+			}
+		}
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = { has_technology_researched = enlightenment }
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_neighbouring_state = {
+					owner = {
+						NOT = { THIS = ROOT }
+						has_law_or_variant = law_type:law_slavery_banned
+					}
+				}
+			}
+			multiply = 1.5
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		has_law_or_variant = law_type:law_slavery_banned
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_humanitarian
+			has_ideology = ideology:ideology_humanitarian_royalist
+			scope:interest_group ?= { has_ideology = ideology:ideology_abolitionist }
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_humanitarian
+					has_ideology = ideology:ideology_humanitarian_royalist
+				}
+			}
+			multiply = 5
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_clergymen
+		movement_support_academics
+		movement_support_slaves
+		movement_support_shopkeepers
+		movement_support_high_literacy
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = {
+			value = 2
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = { is_pop_type = slaves }
+			add = {
+				value = 20
+				desc = "POP_SLAVES"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = clergymen }
+			add = {
+				value = 30
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = academics }
+			add = {
+				value = 30
+				desc = "POP_ACADEMICS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = shopkeepers }
+			add = {
+				value = 10
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = capitalists }
+			add = {
+				value = 5
+				desc = "POP_CAPITALISTS"
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { is_pop_type = slaves }
+			}
+			multiply = {
+				desc = "POP_LITERACY"
+				value = literacy_rate
+				add = 0.2
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			add = scope:clout
+			add = { value = this.turmoil divide = 2 }
+			subtract = this.loyalists
+			if = {
+				limit = { is_slave_state = yes }
+				multiply = 0.5
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_slave_trade }
+			}
+			add = {
+				value = 0.1
+				desc = "AOC_MOVEMENT_SLAVE_TRADE"
+			}
+		}
+		if = {
+			limit = {
+				this.days_since_movement_defeated <= very_long_modifier_time
+			}
+			add = {
+				desc = "movement_suppressed_after_civil_war"
+				value = this.days_since_movement_defeated
+				subtract = very_long_modifier_time
+				divide = { value = very_long_modifier_time }
+			}
+		}
+	}
+}
+
+# The enslaved rising against their masters.
+# The maroon communities of Hispaniola and Panama, the Zanj of the Indian
+# Ocean trade, Palmares in Brazil (c. 1605-1694) and the Jamaican maroons.
+movement_slave_revolt = {
+	category = movement_category_cultural
+	can_have_slave_supporters = yes
+
+	active_law_radicalism_multiplier = 1
+
+	ideology = ideology_abolitionist
+	character_ideologies = {
+		ideology_humanitarian
+		ideology_radical
+	}
+
+	creation_trigger = {
+		aoc_country_allows_slavery = yes
+		OR = {
+			pop_type_percent_country = {
+				pop_type = slaves
+				percent >= 0.15
+			}
+			any_scope_state = {
+				pop_type_percent_state = {
+					target = pop_type:slaves
+					value >= 0.55
+				}
+			}
+		}
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				any_neighbouring_state = {
+					owner = {
+						NOT = { THIS = ROOT }
+						any_political_movement = {
+							is_political_movement_type = movement_slave_revolt
+						}
+					}
+				}
+			}
+			multiply = 2
+		}
+	}
+	on_created = {}
+
+	disband_trigger = {
+		has_law_or_variant = law_type:law_slavery_banned
+	}
+
+	culture_selection_trigger = {
+		scope:country = {
+			any_scope_pop = {
+				culture = root
+				is_pop_type = slaves
+				total_size >= 10000
+			}
+		}
+	}
+	culture_selection_weight = {
+		value = 1
+		if = {
+			limit = {
+				scope:country = {
+					any_scope_state = {
+						culture_percent_state = {
+							target = root
+							value >= 0.2
+						}
+						pop_type_percent_state = {
+							target = pop_type:slaves
+							value >= 0.2
+						}
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					any_scope_diplomatic_pact = {
+						is_diplomatic_action_type = support_separatism
+						second_country = prev
+						"diplomatic_pact_other_country(scope:country)" = {
+							country_has_primary_culture = root
+						}
+					}
+				}
+			}
+			add = 50
+		}
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_radical
+			has_ideology = ideology:ideology_humanitarian
+			has_ideology = ideology:ideology_humanitarian_royalist
+			scope:interest_group ?= { has_ideology = ideology:ideology_abolitionist }
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_humanitarian
+				}
+			}
+			multiply = 5
+		}
+	}
+
+	pop_support_trigger = {
+		OR = {
+			culture = scope:culture
+			is_pop_type = slaves
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_slaves
+		movement_support_radicalization
+		movement_support_cultural_discrimination
+		movement_support_cultural_fervor
+		movement_support_peasants
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_suppressed = yes }
+			}
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= { is_being_bolstered = yes }
+			}
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		if = {
+			limit = { is_pop_type = slaves }
+			add = {
+				value = 100
+				desc = "POP_SLAVES"
+			}
+		}
+		else_if = {
+			limit = { is_pop_type = peasants }
+			add = {
+				value = 20
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = { strata = lower }
+			add = {
+				value = 10
+				desc = "LOWER_NO_ICON"
+			}
+		}
+		else = {
+			add = {
+				value = 5
+				desc = "MIDDLE_NO_ICON"
+			}
+		}
+
+		multiply = {
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			multiply = 2
+			add = 1
+		}
+
+		multiply = {
+			desc = "POP_CULTURE_FERVOR"
+			value = culture.culture_current_fervor
+			subtract = 15
+			multiply = 0.015
+			add = 1
+			min = 0.5
+		}
+	}
+
+	revolution = {
+		possible = {
+			OR = {
+				political_movement_support >= 0.05
+				political_movement_identity_support >= 0.10
+			}
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 0
+			if = {
+				limit = {
+					pop_type_percent_state = {
+						target = pop_type:slaves
+						value >= 0.01
+					}
+				}
+				add = {
+					value = -1
+					add = {
+						value = "this.pop_type_percent_state(pop_type:slaves)"
+						multiply = 4
+					}
+					add = this.turmoil
+					multiply = 100
+				}
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			OR = {
+				political_movement_support >= 0.05
+				political_movement_identity_support >= 0.10
+			}
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 50
+		}
+
+		state_weight = {
+			value = 0
+			if = {
+				limit = {
+					pop_type_percent_state = {
+						target = pop_type:slaves
+						value >= 0.01
+					}
+				}
+				add = {
+					value = -1
+					add = {
+						value = "this.pop_type_percent_state(pop_type:slaves)"
+						multiply = 4
+					}
+					add = this.turmoil
+					multiply = 100
+				}
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner.ruler ?= {
+					interest_group ?= { has_ideology = ideology:ideology_slaver }
+				}
+			}
+			add = {
+				value = 0.1
+				desc = "RULER_IS_PRO_SLAVERY"
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					pop_type_percent_country = {
+						pop_type = slaves
+						percent > 0
+					}
+				}
+			}
+			add = {
+				value = 10
+				subtract = "owner.average_sol_for_slaves"
+				multiply = 0.075
+				max = 0.3
+				min = -0.25
+				desc = "STANDARD_OF_LIVING_FOR_SLAVES"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								OR = {
+									is_political_movement_type = movement_anti_slavery
+									is_political_movement_type = movement_slave_revolt
+								}
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
