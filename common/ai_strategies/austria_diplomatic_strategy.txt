@@ -1,13 +1,11 @@
-ai_strategy_hre_imperial_hegemony = {
+﻿ai_strategy_hre_imperial_hegemony = {
 	icon = "gfx/interface/icons/ai_strategy_icons/maintain_power_balance.dds"
 
 	type = diplomatic
 
 	# Austria already leads the Holy Roman Empire bloc.
 	# This strategy maintains and expands it rather than creating another bloc.
-	will_form_power_bloc = {
-		always = no
-	}
+	will_form_power_bloc = { always = no }
 
 	undesirable_infamy_level = { value = 25 }
 	unacceptable_infamy_level = { value = 50 }
@@ -22,7 +20,6 @@ ai_strategy_hre_imperial_hegemony = {
 	diplomatic_play_boldness = { value = 40 }
 
 	recklessness = { value = 0.50 }
-
 
 	# ---------------------------------------------------------------------
 	# DEFEND THE HOLY ROMAN EMPIRE
@@ -39,7 +36,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 	diplomatic_play_support = {
 		value = 0
-
 
 		# -------------------------------------------------------------
 		# DEFEND HRE MEMBER AGAINST OUTSIDER
@@ -64,7 +60,6 @@ ai_strategy_hre_imperial_hegemony = {
 			add = 1000
 		}
 
-
 		# -------------------------------------------------------------
 		# NEVER SUPPORT AN OUTSIDER ATTACKING AN HRE MEMBER
 		# -------------------------------------------------------------
@@ -87,7 +82,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 			add = -1000
 		}
-
 
 		# -------------------------------------------------------------
 		# INTERNAL HRE WARS
@@ -112,7 +106,6 @@ ai_strategy_hre_imperial_hegemony = {
 		}
 	}
 
-
 	# ---------------------------------------------------------------------
 	# AGGRESSION
 	# ---------------------------------------------------------------------
@@ -124,7 +117,6 @@ ai_strategy_hre_imperial_hegemony = {
 	aggression = {
 		value = 0.25
 
-
 		# No aggression against fellow HRE members.
 		if = {
 			limit = {
@@ -133,7 +125,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 			multiply = 0
 		}
-
 
 		# Subjects should be managed diplomatically rather than invaded.
 		if = {
@@ -145,7 +136,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 			multiply = 0.05
 		}
-
 
 		# Modest expansion pressure against nearby weak,
 		# independent and unaligned countries.
@@ -164,7 +154,6 @@ ai_strategy_hre_imperial_hegemony = {
 			add = 0.35
 		}
 
-
 		# Ideological hostility has some influence,
 		# but Austria remains relatively restrained.
 		multiply = {
@@ -179,7 +168,6 @@ ai_strategy_hre_imperial_hegemony = {
 		max = 1.0
 	}
 
-
 	# ---------------------------------------------------------------------
 	# SECRET GOALS
 	# ---------------------------------------------------------------------
@@ -193,7 +181,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 		conquer = 0.10
 	}
-
 
 	# ---------------------------------------------------------------------
 	# DIPLOMATIC / TREATY PRIORITIES
@@ -220,7 +207,6 @@ ai_strategy_hre_imperial_hegemony = {
 		none = { value = 0 }
 	}
 
-
 	# ---------------------------------------------------------------------
 	# WARGOAL PRIORITIES
 	# ---------------------------------------------------------------------
@@ -244,13 +230,11 @@ ai_strategy_hre_imperial_hegemony = {
 		force_nationalization = 0.0
 	}
 
-
 	# ---------------------------------------------------------------------
 	# SECRET GOAL SCORING
 	# ---------------------------------------------------------------------
 
 	secret_goal_scores = {
-
 
 		# -------------------------------------------------------------
 		# PROTECT HRE MEMBERS
@@ -264,7 +248,6 @@ ai_strategy_hre_imperial_hegemony = {
 			score = {
 				value = 600
 
-
 				# Existing Austrian subjects are especially important.
 				if = {
 					limit = {
@@ -275,7 +258,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 					add = 100
 				}
-
 
 				# Friendly members receive an additional preference,
 				# but friendship is no longer required for protection.
@@ -289,7 +271,6 @@ ai_strategy_hre_imperial_hegemony = {
 					add = 100
 				}
 
-
 				if = {
 					limit = {
 						scope:target_country = {
@@ -302,7 +283,6 @@ ai_strategy_hre_imperial_hegemony = {
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# BEFRIEND MEMBERS AND POTENTIAL MEMBERS
 		# -------------------------------------------------------------
@@ -313,7 +293,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 					# Existing HRE members.
 					is_in_same_power_bloc = scope:target_country
-
 
 					# Nearby potential imperial members.
 					AND = {
@@ -340,7 +319,6 @@ ai_strategy_hre_imperial_hegemony = {
 			score = {
 				value = 100
 
-
 				# Existing members are high diplomatic priorities.
 				if = {
 					limit = {
@@ -348,7 +326,6 @@ ai_strategy_hre_imperial_hegemony = {
 					}
 
 					add = 350
-
 
 					if = {
 						limit = {
@@ -359,7 +336,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 						add = 300
 					}
-
 
 					if = {
 						limit = {
@@ -372,7 +348,6 @@ ai_strategy_hre_imperial_hegemony = {
 					}
 				}
 
-
 				# Potential members should be diplomatically cultivated.
 				if = {
 					limit = {
@@ -382,7 +357,6 @@ ai_strategy_hre_imperial_hegemony = {
 					}
 
 					add = 250
-
 
 					if = {
 						limit = {
@@ -396,7 +370,6 @@ ai_strategy_hre_imperial_hegemony = {
 				}
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# RECONCILE WITH UNFRIENDLY MEMBERS
@@ -415,7 +388,6 @@ ai_strategy_hre_imperial_hegemony = {
 				value = 500
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# DOMINATE POTENTIAL MEMBERS
@@ -450,7 +422,6 @@ ai_strategy_hre_imperial_hegemony = {
 			score = {
 				value = 150
 
-
 				if = {
 					limit = {
 						scope:target_country = {
@@ -460,7 +431,6 @@ ai_strategy_hre_imperial_hegemony = {
 
 					add = 75
 				}
-
 
 				if = {
 					limit = {
@@ -473,7 +443,6 @@ ai_strategy_hre_imperial_hegemony = {
 				}
 			}
 		}
-
 
 		# Avoid having no diplomatic intention toward unhappy HRE members.
 		none = {
@@ -491,13 +460,11 @@ ai_strategy_hre_imperial_hegemony = {
 		}
 	}
 
-
 	# ---------------------------------------------------------------------
 	# WARGOAL SCORING
 	# ---------------------------------------------------------------------
 
 	wargoal_scores = {
-
 
 		# -------------------------------------------------------------
 		# FORCE ENTRY INTO THE EMPIRE
@@ -521,7 +488,6 @@ ai_strategy_hre_imperial_hegemony = {
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# PROTECTORATE FALLBACK
 		# -------------------------------------------------------------
@@ -539,7 +505,6 @@ ai_strategy_hre_imperial_hegemony = {
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# SUBJECT MANAGEMENT
 		# -------------------------------------------------------------
@@ -556,7 +521,6 @@ ai_strategy_hre_imperial_hegemony = {
 			}
 		}
 
-
 		annex_country = {
 			if = {
 				limit = {
@@ -571,7 +535,6 @@ ai_strategy_hre_imperial_hegemony = {
 			}
 		}
 	}
-
 
 	# ---------------------------------------------------------------------
 	# POSSIBLE
@@ -588,7 +551,6 @@ ai_strategy_hre_imperial_hegemony = {
 			has_identity = identity:identity_holy_roman_empire
 		}
 	}
-
 
 	# ---------------------------------------------------------------------
 	# STRATEGY SELECTION

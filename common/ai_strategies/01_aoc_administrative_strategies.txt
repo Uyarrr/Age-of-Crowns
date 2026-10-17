@@ -1,0 +1,37 @@
+﻿# Age of Crowns - generic administrative strategy
+# The only administrative strategy, so every AI uses it. Values here are added to (weights) or
+# override (goods_stances) what ai_strategy_default sets.
+# Named like the vanilla strategy so vanilla content that checks has_strategy keeps working.
+
+ai_strategy_agricultural_expansion = {
+	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
+
+	type = administrative
+
+	# Pre-industrial economies grow by working the land and the sea
+	building_group_weights = {
+		bg_agriculture = 2.0
+		bg_ranching = 2.0
+		bg_fishing = 1.5
+		bg_plantations = 1.5
+		bg_manufacturing = 0.5
+	}
+
+	goods_stances = {
+		grain = { stance = wants_export }
+		meat = { stance = wants_export }
+		fish = { stance = wants_export }
+		fruit = { stance = wants_export }
+		liquor = { stance = wants_export }
+		wine = { stance = wants_export }
+		fabric = { stance = wants_export }
+	}
+
+	possible = {
+		always = yes
+	}
+
+	weight = {
+		value = 10
+	}
+}

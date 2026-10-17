@@ -65,9 +65,7 @@
 				has_strategic_adjacency = scope:target_country
 				scope:target_country = {
 					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_france
-						}
+						is_in_geographic_region = geographic_region_france
 					}
 				}
 			}
@@ -100,9 +98,7 @@
 						OR = {
 							c:ENG ?= this
 							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_france
-								}
+								is_in_geographic_region = geographic_region_france
 							}
 						}
 					}
@@ -218,9 +214,7 @@
 					has_strategic_adjacency = scope:target_country
 					scope:target_country = {
 						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_france
-							}
+							is_in_geographic_region = geographic_region_france
 						}
 					}
 				}
@@ -239,9 +233,7 @@
 					limit = {
 						scope:target_country = {
 							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_france
-								}
+								is_in_geographic_region = geographic_region_france
 							}
 						}
 					}
@@ -272,9 +264,7 @@
 				scope:target_country.country_rank <= rank_value:minor_power
 				scope:target_country = {
 					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_france
-						}
+						is_in_geographic_region = geographic_region_france
 					}
 				}
 			}
@@ -331,9 +321,7 @@
 			if = {
 				limit = {
 					scope:target_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_france
-						}
+						is_in_geographic_region = geographic_region_france
 					}
 				}
 				add = 125
@@ -362,9 +350,7 @@
 			if = {
 				limit = {
 					scope:target_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_france
-						}
+						is_in_geographic_region = geographic_region_france
 					}
 				}
 				add = 150
@@ -440,9 +426,7 @@
 			limit = {
 				c:ENG = {
 					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_france
-						}
+						is_in_geographic_region = geographic_region_france
 					}
 				}
 			}

@@ -1,0 +1,95 @@
+﻿# Age of Crowns - generic political strategy
+# The only political strategy, so every AI uses it: a crown-and-altar monarchy that reforms slowly.
+# Named like the vanilla strategy so vanilla content that checks has_strategy keeps working.
+
+ai_strategy_conservative_agenda = {
+	icon = "gfx/interface/icons/ai_strategy_icons/conservative_agenda.dds"
+
+	type = political
+
+	revolution_aversion = {
+		value = 75
+	}
+
+	min_law_chance_to_pass = {
+		value = 20
+		if = {
+			limit = { ai_has_reasons_to_not_oppose_law = yes }
+			multiply = 0.5
+		}
+	}
+
+	max_progressiveness = {
+		value = 50
+	}
+
+	max_regressiveness = {
+		value = 25
+	}
+
+	change_law_chance = {
+		value = 2.5
+
+		if = {
+			limit = { any_interest_group = { is_insurrectionary = yes } }
+			add = 7.5
+		}
+	}
+
+	pro_interest_groups = {
+		ig_crown
+		ig_landowners
+		ig_devout
+		ig_armed_forces
+		ig_rural_folk
+	}
+
+	anti_interest_groups = {
+		ig_trade_unions
+	}
+
+	pro_movements = {
+		movement_royalist_absolutist
+		movement_royalist_constitutional
+		movement_religious_majority
+		movement_reactionary
+	}
+
+	anti_movements = {
+		movement_radical
+		movement_nihilist
+		movement_labor
+	}
+
+	institution_scores = {
+		institution_colonial_affairs = {
+			value = 150
+		}
+		institution_social_security = {
+			value = 50
+		}
+		institution_workplace_safety = {
+			value = 50
+		}
+		institution_schools = {
+			value = 100
+		}
+		institution_police = {
+			value = 150
+		}
+		institution_health_system = {
+			value = 100
+		}
+		institution_home_affairs = {
+			value = 150
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	weight = {
+		value = 10
+	}
+}

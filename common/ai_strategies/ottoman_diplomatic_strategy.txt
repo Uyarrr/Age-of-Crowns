@@ -19,7 +19,6 @@
 
 	recklessness = { value = 1.35 }
 
-
 	# ---------------------------------------------------------------------
 	# AGGRESSION
 	# ---------------------------------------------------------------------
@@ -38,7 +37,6 @@
 
 	aggression = {
 		value = 0.15
-
 
 		# -------------------------------------------------------------
 		# BYZANTIUM
@@ -62,7 +60,6 @@
 
 			add = 6.0
 		}
-
 
 		# -------------------------------------------------------------
 		# CLAIMED FRONTIER TERRITORY
@@ -99,7 +96,6 @@
 
 			add = 3.0
 		}
-
 
 		# -------------------------------------------------------------
 		# REGIONAL FRONTIER EXPANSION
@@ -146,7 +142,6 @@
 			add = 1.75
 		}
 
-
 		# -------------------------------------------------------------
 		# WEAKER FRONTIER POWERS
 		# -------------------------------------------------------------
@@ -179,7 +174,6 @@
 			add = 0.50
 		}
 
-
 		# -------------------------------------------------------------
 		# OPPORTUNISM
 		# -------------------------------------------------------------
@@ -209,7 +203,6 @@
 			add = 0.25
 		}
 
-
 		if = {
 			limit = {
 				scope:target_country = {
@@ -232,7 +225,6 @@
 			add = 0.20
 		}
 
-
 		# -------------------------------------------------------------
 		# SUBJECTS
 		# -------------------------------------------------------------
@@ -246,7 +238,6 @@
 
 			multiply = 0.05
 		}
-
 
 		# -------------------------------------------------------------
 		# IRRELEVANT / DISTANT TARGETS
@@ -315,10 +306,8 @@
 			multiply = 0.05
 		}
 
-
 		max = 7.0
 	}
-
 
 	# ---------------------------------------------------------------------
 	# SECRET GOAL WEIGHTS
@@ -333,7 +322,6 @@
 		befriend = 0.0
 		reconcile = 0.0
 	}
-
 
 	# ---------------------------------------------------------------------
 	# WARGOAL WEIGHTS
@@ -352,13 +340,11 @@
 		force_nationalization = 0.0
 	}
 
-
 	# ---------------------------------------------------------------------
 	# SECRET GOAL SCORING
 	# ---------------------------------------------------------------------
 
 	secret_goal_scores = {
-
 
 		# -------------------------------------------------------------
 		# CONQUER
@@ -379,7 +365,6 @@
 						c:BYZ ?= this
 					}
 
-
 					# Claimed frontier territory.
 					scope:target_country = {
 						any_scope_state = {
@@ -396,7 +381,6 @@
 							}
 						}
 					}
-
 
 					# Regional frontier expansion.
 					scope:target_country = {
@@ -427,7 +411,6 @@
 			score = {
 				value = 100
 
-
 				# Byzantium overwhelmingly takes priority.
 				if = {
 					limit = {
@@ -438,7 +421,6 @@
 
 					add = 1500
 				}
-
 
 				# Claimed frontier states.
 				if = {
@@ -462,7 +444,6 @@
 
 					add = 600
 				}
-
 
 				# Desired-region frontier targets.
 				if = {
@@ -494,7 +475,6 @@
 					add = 300
 				}
 
-
 				# Prefer weaker targets.
 				if = {
 					limit = {
@@ -503,7 +483,6 @@
 
 					add = 100
 				}
-
 
 				# Opportunistic wars.
 				if = {
@@ -516,7 +495,6 @@
 					add = 75
 				}
 
-
 				if = {
 					limit = {
 						scope:target_country = {
@@ -528,7 +506,6 @@
 				}
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# DOMINATE
@@ -589,7 +566,6 @@
 			score = {
 				value = 100
 
-
 				if = {
 					limit = {
 						scope:target_country = {
@@ -599,7 +575,6 @@
 
 					add = 75
 				}
-
 
 				if = {
 					limit = {
@@ -612,7 +587,6 @@
 				}
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# PROTECT SUBJECTS
@@ -629,7 +603,6 @@
 				value = 125
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# IGNORE DISTANT / IRRELEVANT COUNTRIES
@@ -699,13 +672,11 @@
 		}
 	}
 
-
 	# ---------------------------------------------------------------------
 	# WARGOAL SCORING
 	# ---------------------------------------------------------------------
 
 	wargoal_scores = {
-
 
 		# -------------------------------------------------------------
 		# CONQUER STATE
@@ -724,7 +695,6 @@
 				add = 250
 			}
 
-
 			# Byzantium remains the highest priority.
 			if = {
 				limit = {
@@ -736,7 +706,6 @@
 				add = 750
 			}
 
-
 			# Claims matter strongly.
 			if = {
 				limit = {
@@ -747,7 +716,6 @@
 
 				add = 500
 			}
-
 
 			# Contiguous states are strongly preferred.
 			if = {
@@ -767,7 +735,6 @@
 
 				add = 300
 			}
-
 
 			# Desired expansion regions only receive a bonus when
 			# the target state is actually on the frontier.
@@ -798,7 +765,6 @@
 				add = 150
 			}
 
-
 			# Strongly punish disconnected conquest.
 			if = {
 				limit = {
@@ -827,7 +793,6 @@
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# RETURN STATE
 		# -------------------------------------------------------------
@@ -843,7 +808,6 @@
 
 				add = 400
 			}
-
 
 			if = {
 				limit = {
@@ -862,7 +826,6 @@
 
 				add = 200
 			}
-
 
 			if = {
 				limit = {
@@ -885,7 +848,6 @@
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# PROTECTORATE
 		# -------------------------------------------------------------
@@ -904,7 +866,6 @@
 				add = 100
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# DOMINION
@@ -925,7 +886,6 @@
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# SUBJECT MANAGEMENT
 		# -------------------------------------------------------------
@@ -942,7 +902,6 @@
 			}
 		}
 
-
 		annex_country = {
 			if = {
 				limit = {
@@ -958,7 +917,6 @@
 		}
 	}
 
-
 	# ---------------------------------------------------------------------
 	# STATE VALUE
 	# ---------------------------------------------------------------------
@@ -968,7 +926,6 @@
 
 	state_value = {
 		value = 0
-
 
 		# Ottoman-owned states retain normal strategic relevance.
 		if = {
@@ -981,7 +938,6 @@
 			add = 25
 		}
 
-
 		# Claims.
 		if = {
 			limit = {
@@ -993,7 +949,6 @@
 			add = 100
 		}
 
-
 		# Byzantium.
 		if = {
 			limit = {
@@ -1004,7 +959,6 @@
 
 			add = 150
 		}
-
 
 		# Border states.
 		if = {
@@ -1024,7 +978,6 @@
 
 			add = 75
 		}
-
 
 		# Desired regions receive additional value ONLY when contiguous.
 		if = {
@@ -1054,11 +1007,9 @@
 			add = 50
 		}
 
-
 		min = 0
 		max = 250
 	}
-
 
 	# ---------------------------------------------------------------------
 	# AVAILABILITY
@@ -1070,14 +1021,12 @@
 		c:TUR ?= this
 	}
 
-
 	# ---------------------------------------------------------------------
 	# STRATEGY WEIGHT
 	# ---------------------------------------------------------------------
 
 	weight = {
 		value = 100
-
 
 		# Early Ottoman expansion period.
 		if = {
@@ -1087,7 +1036,6 @@
 
 			add = 200
 		}
-
 
 		# Byzantium existing independently makes this strategy
 		# overwhelmingly important.
@@ -1104,7 +1052,6 @@
 
 			add = 400
 		}
-
 
 		# Claimed frontier territory.
 		if = {
@@ -1136,7 +1083,6 @@
 
 			add = 150
 		}
-
 
 		# There are still valid regional frontier expansion targets.
 		if = {

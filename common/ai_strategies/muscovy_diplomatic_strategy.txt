@@ -1,11 +1,9 @@
-ai_strategy_muscovy_form_russia = {
+﻿ai_strategy_muscovy_form_russia = {
 	icon = "gfx/interface/icons/ai_strategy_icons/territorial_expansion.dds"
 
 	type = diplomatic
 
-	will_form_power_bloc = {
-		always = no
-	}
+	will_form_power_bloc = { always = no }
 
 	undesirable_infamy_level = { value = 60 }
 	unacceptable_infamy_level = { value = 100 }
@@ -24,7 +22,6 @@ ai_strategy_muscovy_form_russia = {
 
 	recklessness = { value = 1.0 }
 
-
 	# ---------------------------------------------------------------------
 	# AGGRESSION
 	# ---------------------------------------------------------------------
@@ -37,7 +34,6 @@ ai_strategy_muscovy_form_russia = {
 
 	aggression = {
 		value = 0.20
-
 
 		# -------------------------------------------------------------
 		# CORE RUSSIAN CONSOLIDATION TARGETS
@@ -76,7 +72,6 @@ ai_strategy_muscovy_form_russia = {
 
 			add = 4.0
 
-
 			# Major historical Rus consolidation targets.
 			if = {
 				limit = {
@@ -94,7 +89,6 @@ ai_strategy_muscovy_form_russia = {
 				add = 1.5
 			}
 
-
 			# Adjacent targets are easier and more strategically sensible.
 			if = {
 				limit = {
@@ -104,7 +98,6 @@ ai_strategy_muscovy_form_russia = {
 				add = 0.75
 			}
 
-
 			# Prefer weaker targets.
 			if = {
 				limit = {
@@ -113,7 +106,6 @@ ai_strategy_muscovy_form_russia = {
 
 				add = 0.50
 			}
-
 
 			# Exploit enemies already occupied by another war.
 			if = {
@@ -126,7 +118,6 @@ ai_strategy_muscovy_form_russia = {
 				add = 0.50
 			}
 
-
 			# Isolated countries are easier consolidation targets.
 			if = {
 				limit = {
@@ -138,7 +129,6 @@ ai_strategy_muscovy_form_russia = {
 				add = 0.25
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# OTHER RUSSIAN HOMELANDS
@@ -183,7 +173,6 @@ ai_strategy_muscovy_form_russia = {
 			add = 2.0
 		}
 
-
 		# -------------------------------------------------------------
 		# NEIGHBORING SMALL POWERS
 		# -------------------------------------------------------------
@@ -208,7 +197,6 @@ ai_strategy_muscovy_form_russia = {
 			add = 0.75
 		}
 
-
 		# -------------------------------------------------------------
 		# SUBJECTS
 		# -------------------------------------------------------------
@@ -226,7 +214,6 @@ ai_strategy_muscovy_form_russia = {
 
 			multiply = 0.02
 		}
-
 
 		# -------------------------------------------------------------
 		# DISTANT / IRRELEVANT COUNTRIES
@@ -254,10 +241,8 @@ ai_strategy_muscovy_form_russia = {
 			multiply = 0.05
 		}
 
-
 		max = 7.0
 	}
-
 
 	# ---------------------------------------------------------------------
 	# SECRET GOAL WEIGHTS
@@ -272,7 +257,6 @@ ai_strategy_muscovy_form_russia = {
 		befriend = 0.10
 		reconcile = 0.0
 	}
-
 
 	# ---------------------------------------------------------------------
 	# WARGOAL WEIGHTS
@@ -293,13 +277,11 @@ ai_strategy_muscovy_form_russia = {
 		force_nationalization = 0.0
 	}
 
-
 	# ---------------------------------------------------------------------
 	# SECRET GOAL SCORING
 	# ---------------------------------------------------------------------
 
 	secret_goal_scores = {
-
 
 		# -------------------------------------------------------------
 		# CONQUER RUSSIAN HOMELANDS
@@ -324,7 +306,6 @@ ai_strategy_muscovy_form_russia = {
 
 			score = {
 				value = 500
-
 
 				# Immediate Russian consolidation states receive
 				# a very large additional priority.
@@ -351,7 +332,6 @@ ai_strategy_muscovy_form_russia = {
 					add = 300
 				}
 
-
 				# Major Rus rivals receive another substantial bonus.
 				if = {
 					limit = {
@@ -369,7 +349,6 @@ ai_strategy_muscovy_form_russia = {
 					add = 250
 				}
 
-
 				if = {
 					limit = {
 						has_strategic_adjacency = scope:target_country
@@ -377,7 +356,6 @@ ai_strategy_muscovy_form_russia = {
 
 					add = 150
 				}
-
 
 				if = {
 					limit = {
@@ -388,7 +366,6 @@ ai_strategy_muscovy_form_russia = {
 
 					add = 100
 				}
-
 
 				if = {
 					limit = {
@@ -401,7 +378,6 @@ ai_strategy_muscovy_form_russia = {
 				}
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# DOMINATE NEIGHBORING SMALL POWERS
@@ -433,7 +409,6 @@ ai_strategy_muscovy_form_russia = {
 			score = {
 				value = 175
 
-
 				if = {
 					limit = {
 						scope:target_country = {
@@ -443,7 +418,6 @@ ai_strategy_muscovy_form_russia = {
 
 					add = 75
 				}
-
 
 				if = {
 					limit = {
@@ -456,7 +430,6 @@ ai_strategy_muscovy_form_russia = {
 				}
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# PROTECT SUBJECTS
@@ -473,7 +446,6 @@ ai_strategy_muscovy_form_russia = {
 				value = 100
 			}
 		}
-
 
 		# -------------------------------------------------------------
 		# IGNORE IRRELEVANT DISTANT COUNTRIES
@@ -506,13 +478,11 @@ ai_strategy_muscovy_form_russia = {
 		}
 	}
 
-
 	# ---------------------------------------------------------------------
 	# WARGOAL SCORING
 	# ---------------------------------------------------------------------
 
 	wargoal_scores = {
-
 
 		# -------------------------------------------------------------
 		# CONQUER STATE
@@ -530,7 +500,6 @@ ai_strategy_muscovy_form_russia = {
 
 				add = 500
 			}
-
 
 			# Core western / Russian consolidation states receive
 			# a much stronger priority.
@@ -557,7 +526,6 @@ ai_strategy_muscovy_form_russia = {
 				add = 600
 			}
 
-
 			# Prefer contiguous expansion.
 			if = {
 				limit = {
@@ -570,7 +538,6 @@ ai_strategy_muscovy_form_russia = {
 
 				add = 150
 			}
-
 
 			# ---------------------------------------------------------
 			# SIBERIAN DEPRIORITIZATION
@@ -596,7 +563,6 @@ ai_strategy_muscovy_form_russia = {
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# RETURN STATE
 		# -------------------------------------------------------------
@@ -611,7 +577,6 @@ ai_strategy_muscovy_form_russia = {
 
 				add = 700
 			}
-
 
 			if = {
 				limit = {
@@ -637,7 +602,6 @@ ai_strategy_muscovy_form_russia = {
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# PROTECTORATE
 		# -------------------------------------------------------------
@@ -655,7 +619,6 @@ ai_strategy_muscovy_form_russia = {
 			}
 		}
 
-
 		# -------------------------------------------------------------
 		# SUBJECT INTEGRATION
 		# -------------------------------------------------------------
@@ -672,7 +635,6 @@ ai_strategy_muscovy_form_russia = {
 			}
 		}
 
-
 		annex_country = {
 			if = {
 				limit = {
@@ -686,14 +648,12 @@ ai_strategy_muscovy_form_russia = {
 		}
 	}
 
-
 	# ---------------------------------------------------------------------
 	# STATE VALUE
 	# ---------------------------------------------------------------------
 
 	state_value = {
 		value = 0
-
 
 		# Russian cultural homeland.
 		if = {
@@ -705,7 +665,6 @@ ai_strategy_muscovy_form_russia = {
 
 			add = 150
 		}
-
 
 		# Main Russian consolidation territory.
 		if = {
@@ -731,7 +690,6 @@ ai_strategy_muscovy_form_russia = {
 			add = 250
 		}
 
-
 		# Contiguous states are more strategically useful.
 		if = {
 			limit = {
@@ -744,7 +702,6 @@ ai_strategy_muscovy_form_russia = {
 
 			add = 75
 		}
-
 
 		# Siberian territory is deliberately lower priority while
 		# Muscovy is still consolidating Russia.
@@ -763,11 +720,9 @@ ai_strategy_muscovy_form_russia = {
 			add = -125
 		}
 
-
 		min = 0
 		max = 500
 	}
-
 
 	# ---------------------------------------------------------------------
 	# AVAILABILITY
@@ -778,7 +733,6 @@ ai_strategy_muscovy_form_russia = {
 
 		c:MUS ?= this
 	}
-
 
 	# ---------------------------------------------------------------------
 	# STRATEGY SELECTION

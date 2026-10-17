@@ -1,4 +1,4 @@
-ai_strategy_england_unite_britain = {
+﻿ai_strategy_england_unite_britain = {
 	icon = "gfx/interface/icons/ai_strategy_icons/unification.dds"
 
 	type = diplomatic
@@ -18,7 +18,6 @@ ai_strategy_england_unite_britain = {
 	diplomatic_play_boldness = { value = 70 }
 
 	recklessness = { value = 1.15 }
-
 
 	# ---------------------------------------------------------------------
 	# AGGRESSION
@@ -64,7 +63,6 @@ ai_strategy_england_unite_britain = {
 
 			add = 5.0
 		}
-
 
 		# While Britain is incomplete, England should be less distracted
 		# by unrelated foreign expansion.
@@ -114,7 +112,6 @@ ai_strategy_england_unite_britain = {
 			add = -1.5
 		}
 
-
 		# Subjects are handled mainly through autonomy reduction / annexation,
 		# rather than ordinary aggression.
 		if = {
@@ -128,7 +125,6 @@ ai_strategy_england_unite_britain = {
 		}
 	}
 
-
 	# ---------------------------------------------------------------------
 	# SECRET GOALS
 	# ---------------------------------------------------------------------
@@ -140,7 +136,6 @@ ai_strategy_england_unite_britain = {
 		befriend = 0.0
 		reconcile = 0.0
 	}
-
 
 	# ---------------------------------------------------------------------
 	# WARGOAL PREFERENCES
@@ -158,7 +153,6 @@ ai_strategy_england_unite_britain = {
 
 		force_nationalization = 0.0
 	}
-
 
 	# ---------------------------------------------------------------------
 	# SECRET GOAL SCORING
@@ -229,7 +223,6 @@ ai_strategy_england_unite_britain = {
 			}
 		}
 
-
 		# Smaller independent states in Scotland or Ireland can also
 		# be brought under control through subject relationships.
 		dominate = {
@@ -261,7 +254,6 @@ ai_strategy_england_unite_britain = {
 			}
 		}
 
-
 		# Existing British-Isles subjects are strategically important
 		# and should be protected until they can be integrated.
 		protect = {
@@ -288,7 +280,6 @@ ai_strategy_england_unite_britain = {
 		}
 	}
 
-
 	# ---------------------------------------------------------------------
 	# WARGOAL SCORING
 	# ---------------------------------------------------------------------
@@ -309,7 +300,6 @@ ai_strategy_england_unite_britain = {
 
 				add = 300
 			}
-
 
 			# British Isles states are extremely valuable conquest targets.
 			if = {
@@ -337,7 +327,6 @@ ai_strategy_england_unite_britain = {
 			}
 		}
 
-
 		return_state = {
 			if = {
 				limit = {
@@ -364,7 +353,6 @@ ai_strategy_england_unite_britain = {
 			}
 		}
 
-
 		make_protectorate = {
 			if = {
 				limit = {
@@ -377,7 +365,6 @@ ai_strategy_england_unite_britain = {
 				add = 200
 			}
 		}
-
 
 		reduce_autonomy = {
 			if = {
@@ -402,7 +389,6 @@ ai_strategy_england_unite_britain = {
 			}
 		}
 
-
 		annex_country = {
 			if = {
 				limit = {
@@ -426,7 +412,6 @@ ai_strategy_england_unite_britain = {
 			}
 		}
 	}
-
 
 	# ---------------------------------------------------------------------
 	# STATE VALUE
@@ -466,7 +451,6 @@ ai_strategy_england_unite_britain = {
 		max = 200
 	}
 
-
 	# ---------------------------------------------------------------------
 	# AVAILABILITY
 	# ---------------------------------------------------------------------
@@ -479,7 +463,6 @@ ai_strategy_england_unite_britain = {
 			c:GBR ?= this
 		}
 	}
-
 
 	# ---------------------------------------------------------------------
 	# STRATEGY SELECTION WEIGHT

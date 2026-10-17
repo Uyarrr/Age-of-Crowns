@@ -1,0 +1,117 @@
+﻿# Age of Crowns - generic subject strategy
+# The only diplomatic strategy subjects can pick; country strategies all require is_subject = no.
+
+ai_strategy_subject_maintain_autonomy = {
+	icon = "gfx/interface/icons/ai_strategy_icons/subject_maintain_autonomy.dds"
+
+	type = diplomatic
+
+	undesirable_infamy_level = {
+		value = 25
+	}
+
+	unacceptable_infamy_level = {
+		value = 50
+	}
+
+	diplomatic_play_boldness = {
+		value = -10
+	}
+
+	recklessness = {
+		value = -0.25
+	}
+
+	wargoal_weights = {
+		independence = 0.0
+		increase_autonomy = 0.5
+	}
+
+	secret_goal_scores = {
+		none = {
+			trigger = {
+				is_subject_of = scope:target_country
+			}
+			score = {
+				value = 10000
+			}
+		}
+		antagonize = {
+			trigger = {
+				is_subject_of = scope:target_country
+			}
+			score = {
+				value = -10000
+			}
+		}
+		defy = {
+			trigger = {
+				is_subject_of = scope:target_country
+			}
+			score = {
+				value = -10000
+			}
+		}
+		comply = {
+			trigger = {
+				is_subject_of = scope:target_country
+			}
+			score = {
+				value = -10000
+			}
+		}
+		befriend = {
+			trigger = {
+				is_subject_of = scope:target_country
+			}
+			score = {
+				value = -10000
+			}
+		}
+		conquer = {
+			trigger = {
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= root.country_rank
+			}
+			score = {
+				if = {
+					limit = {
+						NOT = { is_country_type = unrecognized }
+						scope:target_country = { NOT = { is_country_type = unrecognized } }
+					}
+					add = 15
+				}
+				else_if = {
+					limit = {
+						scope:target_country = { is_country_type = unrecognized }
+					}
+					add = 25
+				}
+			}
+		}
+	}
+
+	become_subject_value = {
+		value = -25
+	}
+
+	treaty_category_scores = {
+		military_defense = {
+			value = 3
+		}
+
+		expansion = {
+			value = -3
+		}
+	}
+
+	possible = {
+		is_subject = yes
+	}
+
+	weight = {
+		value = 100
+		subtract = liberty_desire
+	}
+}
