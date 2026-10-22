@@ -3,12 +3,12 @@
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 3
-			goods_input_stone_add = 3
-			goods_input_tools_add = 2
-			goods_input_tin_add = 2
+			goods_input_wood_add = 2
+			goods_input_stone_add = 2
+			goods_input_tools_add = 1
+			goods_input_tin_add = 1
 
-			goods_output_pottery_add = 20
+			goods_output_pottery_add = 55
 		}
 
 		level_scaled = {
@@ -22,17 +22,17 @@ pm_building_pottery_workshop_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_2
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 6
-			goods_input_stone_add = 6
-			goods_input_tools_add = 4
-			goods_input_tin_add = 4
+			goods_input_wood_add = 5
+			goods_input_stone_add = 5
+			goods_input_tools_add = 3
+			goods_input_tin_add = 3
 
-			goods_output_pottery_add = 40
+			goods_output_pottery_add = 75
 		}
 
 		level_scaled = {
@@ -47,17 +47,17 @@ pm_building_pottery_workshop_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_coal_add = 9
-			goods_input_stone_add = 9
-			goods_input_tools_add = 6
-			goods_input_tin_add = 6
+			goods_input_coal_add = 6
+			goods_input_stone_add = 7
+			goods_input_tools_add = 5
+			goods_input_tin_add = 5
 
-			goods_output_pottery_add = 60
+			goods_output_pottery_add = 105
 		}
 
 		level_scaled = {
@@ -78,12 +78,12 @@ pm_building_pottery_workshop_main_4 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_coal_add = 12
-			goods_input_stone_add = 12
+			goods_input_coal_add = 10
+			goods_input_stone_add = 11
 			goods_input_tools_add = 8
 			goods_input_tin_add = 8
 
-			goods_output_pottery_add = 80
+			goods_output_pottery_add = 145
 		}
 
 		level_scaled = {

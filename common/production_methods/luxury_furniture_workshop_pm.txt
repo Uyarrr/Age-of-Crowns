@@ -4,11 +4,11 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 10
-			goods_input_silk_add = 5
+			goods_input_wood_add = 9
+			goods_input_silk_add = 4
 
 			# output goods
-			goods_output_luxury_furniture_add = 20
+			goods_output_luxury_furniture_add = 30
 		}
 
 		level_scaled = {
@@ -28,9 +28,9 @@ pm_building_luxury_furniture_workshop_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 15
-			goods_input_tools_add = 5
-			goods_input_silk_add = 10
+			goods_input_wood_add = 8
+			goods_input_tools_add = 3
+			goods_input_silk_add = 6
 			# output goods
 			goods_output_luxury_furniture_add = 40
 		}
@@ -53,13 +53,13 @@ pm_building_luxury_furniture_workshop_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 20
-			goods_input_tools_add = 10
-			goods_input_silk_add = 15
-			goods_input_gold_add = 5
+			goods_input_wood_add = 9
+			goods_input_tools_add = 4
+			goods_input_silk_add = 6
+			goods_input_gold_add = 2
 
 			# output goods
-			goods_output_luxury_furniture_add = 80
+			goods_output_luxury_furniture_add = 55
 		}
 
 		level_scaled = {
@@ -81,14 +81,14 @@ pm_building_luxury_furniture_workshop_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 25
-			goods_input_tools_add = 15
-			goods_input_silk_add = 20
-			goods_input_gold_add = 5
-			goods_input_silver_add = 5
+			goods_input_wood_add = 12
+			goods_input_tools_add = 7
+			goods_input_silk_add = 10
+			goods_input_gold_add = 2
+			goods_input_silver_add = 2
 
 			# output goods
-			goods_output_luxury_furniture_add = 120
+			goods_output_luxury_furniture_add = 70
 		}
 
 		level_scaled = {
@@ -107,23 +107,23 @@ pm_building_luxury_furniture_workshop_fur_0 = {
 pm_building_luxury_furniture_workshop_fur_1 = {
 	texture = "gfx/interface/icons/production_method_icons/luxury_furniture.dds"
 	unlocking_technologies = {
-		luxury_furnitures
+		intarsia
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fur_add = 10
-			goods_input_dye_add = 5
+			goods_input_fur_add = 2
+			goods_input_dye_add = 1
 
 			# output goods
-			goods_output_luxury_furniture_add = 25
+			goods_output_luxury_furniture_add = 5
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 300
 			building_employment_machinists_add = 100
 			building_employment_engineers_add = 100
-			
+
 		}
 	}
 }
@@ -131,23 +131,23 @@ pm_building_luxury_furniture_workshop_fur_1 = {
 pm_building_luxury_furniture_workshop_fur_2 = {
 	texture = "gfx/interface/icons/production_method_icons/luxury_furniture.dds"
 	unlocking_technologies = {
-		luxury_furnitures
+		boulle_marquetry
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fur_add = 20
-			goods_input_dye_add = 10
+			goods_input_fur_add = 1
+			goods_input_dye_add = 1
 
 			# output goods
-			goods_output_luxury_furniture_add = 50
+			goods_output_luxury_furniture_add = 5
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 300
 			building_employment_machinists_add = 100
 			building_employment_engineers_add = 100
-			
+
 		}
 	}
 }

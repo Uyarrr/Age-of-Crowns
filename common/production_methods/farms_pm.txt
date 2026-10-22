@@ -3,7 +3,9 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_grain_add = 20
+			goods_output_grain_add = 45
+
+			goods_input_tools_add = 2
 		}
 
 		level_scaled = {
@@ -23,10 +25,10 @@ pm_building_wheat_farm_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_livestock_add = 2
+			goods_input_livestock_add = 8
 
 			# output goods
-			goods_output_grain_add = 40
+			goods_output_grain_add = 75
 		}
 
 		level_scaled = {
@@ -47,10 +49,10 @@ pm_building_wheat_farm_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_livestock_add = 4
+			goods_input_livestock_add = 15
 
 			# output goods
-			goods_output_grain_add = 60
+			goods_output_grain_add = 110
 		}
 
 		level_scaled = {
@@ -72,10 +74,10 @@ pm_building_wheat_farm_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_livestock_add = 6
+			goods_input_livestock_add = 25
 
 			# output goods
-			goods_output_grain_add = 80
+			goods_output_grain_add = 155
 		}
 
 		level_scaled = {
@@ -92,7 +94,9 @@ pm_building_rice_farm_main_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_grain_add = 40
+			goods_output_grain_add = 90
+
+			goods_input_tools_add = 4
 		}
 
 		level_scaled = {
@@ -115,10 +119,10 @@ pm_building_rice_farm_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_livestock_add = 4
+			goods_input_livestock_add = 17
 
 			# output goods
-			goods_output_grain_add = 80
+			goods_output_grain_add = 150
 		}
 
 		level_scaled = {
@@ -142,10 +146,10 @@ pm_building_rice_farm_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_livestock_add = 8
+			goods_input_livestock_add = 31
 
 			# output goods
-			goods_output_grain_add = 120
+			goods_output_grain_add = 220
 		}
 
 		level_scaled = {
@@ -167,10 +171,10 @@ pm_building_rice_farm_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_livestock_add = 12
+			goods_input_livestock_add = 50
 
 			# output goods
-			goods_output_grain_add = 160
+			goods_output_grain_add = 310
 		}
 
 		level_scaled = {
@@ -197,17 +201,17 @@ pm_building_grain_farm_plow_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 2
-			
+			goods_input_tools_add = 3
+
 			#output goods
-			goods_output_grain_add = 10
+			goods_output_grain_add = 15
 		}
 		level_scaled = {
 		building_employment_laborers_add = -1000
 		}
 	}
-	
-	
+
+
 }
 
 pm_building_grain_farm_plow_2 = {
@@ -216,15 +220,15 @@ pm_building_grain_farm_plow_2 = {
 	unlocking_technologies = {
 		horse_harnessing
 	}
-	
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_tools_add = 5
 			goods_input_horse_add = 2
-			
+
 			#output goods
-			goods_output_grain_add = 25
+			goods_output_grain_add = 30
 		}
 		level_scaled = {
 		building_employment_laborers_add = -2000

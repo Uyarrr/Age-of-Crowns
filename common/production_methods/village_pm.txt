@@ -4,8 +4,8 @@
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_bread_add = 10
-			
-			goods_input_grain_add = 6
+
+			goods_input_grain_add = 2
 			goods_input_wood_add = 1
 		}
 
@@ -19,13 +19,13 @@
 pm_building_village_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/lathes.dds"
 
-	
+
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_clothes_add = 10
 
-			goods_input_fabric_add = 4
-			goods_input_fiber_add = 5
+			goods_input_fabric_add = 1
+			goods_input_fiber_add = 2
 		}
 
 		level_scaled = {
@@ -43,8 +43,8 @@ pm_building_village_main_3 = {
 		workforce_scaled = {
 			goods_output_furniture_add = 10
 
-			goods_input_fabric_add = 2
-			goods_input_wood_add = 5
+			goods_input_fabric_add = 1
+			goods_input_wood_add = 2
 		}
 
 		level_scaled = {
@@ -58,11 +58,11 @@ pm_building_village_main_3 = {
 
 pm_building_village_side1_0 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/no_org.dds"
-	
+
 	building_modifiers = {
-		
+
 	}
-	
+
 	level_scaled = {
 
 	}
@@ -70,17 +70,17 @@ pm_building_village_side1_0 = {
 
 pm_building_village_side1_1 = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_pan.dds"
-	
+
 	building_modifiers = {
-	
+
 		workforce_scaled = {
-			goods_input_grain_add = 2
-			goods_input_wood_add = 1
-		
-			goods_output_beer_add = 5
+			goods_input_grain_add = 5
+			goods_input_wood_add = 2
+
+			goods_output_beer_add = 10
 		}
-	
-	
+
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50
@@ -90,15 +90,15 @@ pm_building_village_side1_1 = {
 
 pm_building_village_side1_2 = {
 	texture = "gfx/interface/icons/production_method_icons/vineyards.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fruit_add = 2
-			
-		
+			goods_input_fruit_add = 3
+
+
 			goods_output_wine_add = 5
 		}
-	
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50
@@ -108,15 +108,15 @@ pm_building_village_side1_2 = {
 
 pm_building_village_side1_3 = {
 	texture = "gfx/interface/icons/production_method_icons/bone_china.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_stone_add = 2
+			goods_input_stone_add = 4
 			goods_input_wood_add = 1
-		
-			goods_output_pottery_add = 5
+
+			goods_output_pottery_add = 10
 		}
-	
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50
@@ -128,11 +128,11 @@ pm_building_village_side1_3 = {
 
 pm_building_village_side2_0 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/no_org.dds"
-	
+
 	building_modifiers = {
-	
+
 	}
-	
+
 	level_scaled = {
 
 	}
@@ -140,15 +140,15 @@ pm_building_village_side2_0 = {
 
 pm_building_village_side2_1 = {
 	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 2
+			goods_input_wood_add = 1
 			goods_input_stone_add = 1
-		
+
 			goods_output_tools_add = 5
 		}
-	
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50
@@ -158,15 +158,15 @@ pm_building_village_side2_1 = {
 
 pm_building_village_side2_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/pre_guns.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 2
-			goods_input_stone_add = 1
-		
+			goods_input_wood_add = 4
+			goods_input_stone_add = 2
+
 			goods_output_weapons_add = 5
 		}
-	
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50
@@ -176,15 +176,15 @@ pm_building_village_side2_2 = {
 
 pm_building_village_side2_3 = {
 	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_livestock_add = 1
-			goods_input_wood_add = 1
-		
-			goods_output_leather_add = 5
+			goods_input_livestock_add = 2
+			goods_input_wood_add = 2
+
+			goods_output_leather_add = 10
 		}
-	
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50
@@ -196,11 +196,11 @@ pm_building_village_side2_3 = {
 
 pm_building_village_side3_0 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/no_org.dds"
-	
+
 	building_modifiers = {
-	
+
 	}
-	
+
 	level_scaled = {
 
 	}
@@ -208,15 +208,15 @@ pm_building_village_side3_0 = {
 
 pm_building_village_side3_1 = {
 	texture = "gfx/interface/icons/production_method_icons/rayon.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_silk_add = 2
 			goods_input_fiber_add = 2
-		
-			goods_output_luxury_clothes_add = 4
+
+			goods_output_luxury_clothes_add = 5
 		}
-	
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50
@@ -226,15 +226,15 @@ pm_building_village_side3_1 = {
 
 pm_building_village_side3_2 = {
 	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 2
-			goods_input_fiber_add = 2
-		
+			goods_input_wood_add = 1
+			goods_input_fiber_add = 1
+
 			goods_output_incense_add = 5
 		}
-	
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50
@@ -244,14 +244,14 @@ pm_building_village_side3_2 = {
 
 pm_building_village_side3_3 = {
 	texture = "gfx/interface/icons/production_method_icons/ox_driven_rollers.dds"
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_livestock_add = 2
-		
-			goods_output_meat_add = 5
+			goods_input_livestock_add = 3
+
+			goods_output_meat_add = 10
 		}
-	
+
 		level_scaled = {
 			building_employment_laborers_add = 700
 			building_employment_shopkeepers_add = 50

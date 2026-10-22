@@ -21,6 +21,13 @@ popneed_simple_clothing = {
 		max_supply_share = 1.0
 		min_supply_share = 0.0
 	}
+
+	entry = {
+		goods = fur
+		weight = 0.5
+		max_supply_share = 0.25
+		min_supply_share = 0
+	}
 }
 
 popneed_crude_items = {
@@ -113,6 +120,13 @@ popneed_heating = {
 		max_supply_share = 0.8
 		min_supply_share = 0.0
 	}
+
+	entry = {
+		goods = beeswax
+		weight = 1
+		max_supply_share = 0.35
+		min_supply_share = 0
+	}
 }
 
 popneed_household_items = {
@@ -149,6 +163,13 @@ popneed_household_items = {
 		max_supply_share = 0.6
 		min_supply_share = 0.05
 	}
+
+	entry = {
+		goods = medicaments
+		weight = 0.5
+		max_supply_share = 0.2
+		min_supply_share = 0
+	}
 }
 
 popneed_standard_clothing = {
@@ -156,6 +177,13 @@ popneed_standard_clothing = {
 
 	entry = {
 		goods = clothes
+	}
+
+	entry = {
+		goods = fur
+		weight = 0.5
+		max_supply_share = 0.25
+		min_supply_share = 0
 	}
 }
 
@@ -290,17 +318,18 @@ popneed_luxury_food = {
 		min_supply_share = 0.0
 	}
 
-	entry = {
-		goods = beeswax
 
-		weight = 0.5
-		max_supply_share = 0.25
-		min_supply_share = 0.0
+
+	entry = {
+		goods = chocolate
+		weight = 1
+		max_supply_share = 0.35
+		min_supply_share = 0
 	}
 }
 
 popneed_luxury_items = {
-	default = silk
+	default = luxury_clothes
 
 	obsession_demand_min = 0.75
 	obsession_demand_mult = 1.75
@@ -311,7 +340,7 @@ popneed_luxury_items = {
 
 		weight = 0.5
 		max_supply_share = 0.25
-		min_supply_share = 0.1
+		min_supply_share = 0.0
 	}
 
 	entry = {
@@ -319,7 +348,7 @@ popneed_luxury_items = {
 
 		weight = 1
 		max_supply_share = 0.5
-		min_supply_share = 0.1
+		min_supply_share = 0.0
 	}
 
 	entry = {
@@ -327,7 +356,7 @@ popneed_luxury_items = {
 
 		weight = 1
 		max_supply_share = 0.5
-		min_supply_share = 0.1
+		min_supply_share = 0.0
 	}
 
 	entry = {
@@ -335,17 +364,17 @@ popneed_luxury_items = {
 
 		weight = 1
 		max_supply_share = 0.5
-		min_supply_share = 0.1
+		min_supply_share = 0.0
 	}
-	
+
 	entry = {
 		goods = jewelry
 
 		weight = 1
 		max_supply_share = 0.25
-		min_supply_share = 0.1
+		min_supply_share = 0.0
 	}
-	
+
 	entry = {
 		goods = incense
 		weight = 1
@@ -377,28 +406,17 @@ popneed_leisure = {
 		min_supply_share = 0.0
 	}
 
-	entry = {
-		goods = weapons
 
-		weight = 0.25
-		max_supply_share = 0.5
-		min_supply_share = 0.0
-	}
-	
-	entry = {
-		goods = firearms
 
-		weight = 0.25
-		max_supply_share = 0.5
-		min_supply_share = 0.0
-	}
+
+
+
 
 	entry = {
-		goods = navalsupplies
-
-		weight = 0.25
-		max_supply_share = 0.5
-		min_supply_share = 0.0
+		goods = book
+		weight = 1.5
+		max_supply_share = 0.6
+		min_supply_share = 0
 	}
 }
 
@@ -412,14 +430,8 @@ popneed_stimulants = {
 		max_supply_share = 0.75
 		min_supply_share = 0.0
 	}
-	
-	entry = {
-		goods = beeswax
 
-		weight = 0.25
-		max_supply_share = 0.75
-		min_supply_share = 0.0
-	}
+
 
 	entry = {
 		goods = tea

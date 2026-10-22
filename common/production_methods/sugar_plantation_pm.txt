@@ -6,7 +6,9 @@
 			# input goods
 
 			# output goods
-			goods_output_sugar_add = 20
+			goods_output_sugar_add = 100
+
+			goods_input_tools_add = 10
 		}
 
 		level_scaled = {
@@ -20,16 +22,16 @@ pm_building_sugar_plantation_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_2
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
+			goods_input_tools_add = 32
 
 			# output goods
-			goods_output_sugar_add = 40
+			goods_output_sugar_add = 165
 		}
 
 		level_scaled = {
@@ -43,16 +45,16 @@ pm_building_sugar_plantation_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 10
+			goods_input_tools_add = 57
 
 			# output goods
-			goods_output_sugar_add = 60
+			goods_output_sugar_add = 245
 		}
 
 		level_scaled = {
@@ -67,16 +69,16 @@ pm_building_sugar_plantation_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_5
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 15
+			goods_input_tools_add = 88
 
 			# output goods
-			goods_output_sugar_add = 80
+			goods_output_sugar_add = 345
 		}
 
 		level_scaled = {

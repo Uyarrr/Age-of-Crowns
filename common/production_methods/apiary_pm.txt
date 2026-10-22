@@ -3,7 +3,9 @@
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_beeswax_add = 20
+			goods_output_beeswax_add = 25
+
+			goods_input_tools_add = 4
 		}
 
 		level_scaled = {
@@ -19,11 +21,11 @@ pm_building_apiary_main_2 = {
 	unlocking_technologies = {
 		expanded_beekeeping
 	}
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 5
-			goods_input_tools_add = 5
+			goods_input_wood_add = 8
+			goods_input_tools_add = 8
 			goods_output_beeswax_add = 40
 		}
 
@@ -38,14 +40,14 @@ pm_building_apiary_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/slaughterhouses.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 10
-			goods_input_tools_add = 10
-			goods_output_beeswax_add = 60
+			goods_input_wood_add = 11
+			goods_input_tools_add = 11
+			goods_output_beeswax_add = 55
 		}
 
 		level_scaled = {
@@ -60,12 +62,12 @@ pm_building_apiary_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/mechanized_slaughtering.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_5
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 15
-			goods_input_tools_add = 15
+			goods_input_wood_add = 18
+			goods_input_tools_add = 20
 			goods_output_beeswax_add = 80
 		}
 

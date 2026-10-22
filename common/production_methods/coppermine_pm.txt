@@ -4,10 +4,10 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
+			goods_input_tools_add = 3
 
 			# output goods
-			goods_output_copper_add = 20
+			goods_output_copper_add = 25
 		}
 
 		level_scaled = {
@@ -27,10 +27,10 @@ pm_building_copper_mine_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 10
+			goods_input_tools_add = 14
 
 			# output goods
-			goods_output_copper_add = 40
+			goods_output_copper_add = 45
 		}
 
 		level_scaled = {
@@ -51,10 +51,10 @@ pm_building_copper_mine_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 15
+			goods_input_tools_add = 22
 
 			# output goods
-			goods_output_copper_add = 60
+			goods_output_copper_add = 65
 		}
 
 		level_scaled = {
@@ -76,10 +76,10 @@ pm_building_copper_mine_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 20
+			goods_input_tools_add = 33
 
 			# output goods
-			goods_output_copper_add = 80
+			goods_output_copper_add = 90
 		}
 
 		level_scaled = {
@@ -126,29 +126,6 @@ pm_building_copper_mine_extraction_3 = {
 			goods_input_tools_add = 6
 			goods_input_horse_add  = 3
 			goods_output_copper_add = 45
-		}
-	}
-}
-pm_transport_mine = {
-	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
-
-	unlocking_technologies = {
-		railways
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_transportation_add = 5
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -1000
 		}
 	}
 }

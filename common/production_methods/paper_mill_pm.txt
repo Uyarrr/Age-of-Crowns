@@ -4,11 +4,11 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fabric_add = 10
-			goods_input_wood_add = 10
+			goods_input_fabric_add = 5
+			goods_input_wood_add = 5
 
 			# output goods
-			goods_output_paper_add = 30
+			goods_output_paper_add = 55
 		}
 
 		level_scaled = {
@@ -28,11 +28,11 @@ pm_building_paper_mill_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fiber_add = 30
-			goods_input_wood_add = 10
+			goods_input_fiber_add = 19
+			goods_input_wood_add = 7
 
 			# output goods
-			goods_output_paper_add = 60
+			goods_output_paper_add = 85
 		}
 
 		level_scaled = {
@@ -53,12 +53,12 @@ pm_building_paper_mill_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fiber_add = 40
-			goods_input_wood_add = 15
-			goods_input_tools_add = 5
+			goods_input_fiber_add = 25
+			goods_input_wood_add = 9
+			goods_input_tools_add = 3
 
 			# output goods
-			goods_output_paper_add = 90
+			goods_output_paper_add = 105
 		}
 
 		level_scaled = {
@@ -72,20 +72,20 @@ pm_building_paper_mill_main_3 = {
 
 pm_building_paper_mill_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
-	
+
 	unlocking_technologies = {
 		paper_standardization
 	}
-	
+
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fiber_add = 50
-			goods_input_wood_add = 20
-			goods_input_tools_add = 10
+			goods_input_fiber_add = 36
+			goods_input_wood_add = 14
+			goods_input_tools_add = 7
 
 			# output goods
-			goods_output_paper_add = 120
+			goods_output_paper_add = 145
 		}
 
 		level_scaled = {

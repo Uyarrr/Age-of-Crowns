@@ -498,6 +498,7 @@ building_jewelry_workshop = {
 	production_method_groups = {
 		pmg_building_jewelry_workshop_main
 		pmg_building_jewelry_workshop_gold
+		pmg_building_jewelry_workshop_ivory
 	}
 
 	required_construction = construction_cost_high
@@ -636,6 +637,7 @@ building_luxury_furniture_workshop = {
 	production_method_groups = {
 		pmg_building_luxury_furniture_workshop_main
 		pmg_building_luxury_furniture_workshop_fur
+		pmg_building_luxury_furniture_workshop_ivory
 	}
 
 	required_construction = construction_cost_high
@@ -673,7 +675,7 @@ building_village = {
 
 	city_type = city
 	levels_per_mesh = 50
-	
+
 	has_max_level = yes
 
 	production_method_groups = {

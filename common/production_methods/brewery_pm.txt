@@ -4,11 +4,11 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_grain_add = 5
-			goods_input_wood_add = 10
+			goods_input_grain_add = 3
+			goods_input_wood_add = 7
 
 			# output goods
-			goods_output_beer_add = 20
+			goods_output_beer_add = 55
 		}
 
 		level_scaled = {
@@ -28,12 +28,12 @@ pm_building_brewery_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_grain_add = 10
-			goods_input_wood_add = 20
-			goods_input_tools_add = 5
+			goods_input_grain_add = 7
+			goods_input_wood_add = 13
+			goods_input_tools_add = 3
 
 			# output goods
-			goods_output_beer_add = 45
+			goods_output_beer_add = 75
 		}
 
 		level_scaled = {
@@ -48,18 +48,18 @@ pm_building_brewery_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_grain_add = 15
-			goods_input_wood_add = 25
-			goods_input_tools_add = 5
+			goods_input_grain_add = 12
+			goods_input_wood_add = 20
+			goods_input_tools_add = 4
 
 			# output goods
-			goods_output_beer_add = 60
+			goods_output_beer_add = 105
 		}
 
 		level_scaled = {
@@ -81,12 +81,12 @@ pm_building_brewery_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_grain_add = 20
-			goods_input_wood_add = 30
-			goods_input_tools_add = 10
+			goods_input_grain_add = 18
+			goods_input_wood_add = 28
+			goods_input_tools_add = 9
 
 			# output goods
-			goods_output_beer_add = 80
+			goods_output_beer_add = 145
 		}
 
 		level_scaled = {

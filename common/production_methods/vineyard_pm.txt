@@ -4,11 +4,11 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fruit_add = 10
-			goods_input_wood_add = 2
+			goods_input_fruit_add = 1
+			goods_input_wood_add = 1
 			goods_input_pottery_add = 1
 			# output goods
-			goods_output_wine_add = 15
+			goods_output_wine_add = 20
 		}
 
 		level_scaled = {
@@ -28,11 +28,11 @@ pm_building_vineyard_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fruit_add = 15
-			goods_input_wood_add = 4
-			goods_input_pottery_add = 2
+			goods_input_fruit_add = 8
+			goods_input_wood_add = 2
+			goods_input_pottery_add = 1
 			# output goods
-			goods_output_wine_add = 25
+			goods_output_wine_add = 30
 		}
 
 		level_scaled = {
@@ -46,17 +46,17 @@ pm_building_vineyard_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fruit_add = 25
-			goods_input_wood_add = 8
-			goods_input_glass_add = 6
+			goods_input_fruit_add = 15
+			goods_input_wood_add = 4
+			goods_input_glass_add = 3
 			# output goods
-			goods_output_wine_add = 40
+			goods_output_wine_add = 45
 		}
 
 		level_scaled = {
@@ -70,17 +70,17 @@ pm_building_vineyard_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_5
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fruit_add = 35
-			goods_input_wood_add = 12
-			goods_input_glass_add = 8
+			goods_input_fruit_add = 20
+			goods_input_wood_add = 5
+			goods_input_glass_add = 5
 			# output goods
-			goods_output_wine_add = 75
+			goods_output_wine_add = 60
 		}
 
 		level_scaled = {

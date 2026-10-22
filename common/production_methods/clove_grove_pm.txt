@@ -7,6 +7,8 @@
 
 			# output goods
 			goods_output_cloves_add = 15
+
+			goods_input_tools_add = 2
 		}
 
 		level_scaled = {
@@ -20,16 +22,16 @@ pm_building_clove_grove_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_2
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
+			goods_input_tools_add = 8
 
 			# output goods
-			goods_output_cloves_add = 40
+			goods_output_cloves_add = 25
 		}
 
 		level_scaled = {
@@ -43,16 +45,16 @@ pm_building_clove_grove_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 10
+			goods_input_tools_add = 13
 
 			# output goods
-			goods_output_cloves_add = 60
+			goods_output_cloves_add = 35
 		}
 
 		level_scaled = {
@@ -67,16 +69,16 @@ pm_building_clove_grove_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_5
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 15
+			goods_input_tools_add = 22
 
 			# output goods
-			goods_output_cloves_add = 80
+			goods_output_cloves_add = 50
 		}
 
 		level_scaled = {

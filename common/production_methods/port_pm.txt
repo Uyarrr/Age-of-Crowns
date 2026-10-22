@@ -5,9 +5,9 @@
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_laborers_add = 175
-			building_employment_clerks_add = 50
-			building_employment_bureaucrats_add = 25
+			building_employment_laborers_add = 40
+			building_employment_clerks_add = 8
+			building_employment_bureaucrats_add = 2
 		}
 	}
 }
@@ -17,13 +17,13 @@ pm_building_port_main_1 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 4
-			goods_output_merchant_marine_add = 12
+			goods_input_navalsupplies_add = 1
+			goods_output_merchant_marine_add = 10
 		}
 		level_scaled = {
-			building_employment_laborers_add = 700
-			building_employment_clerks_add = 200
-			building_employment_bureaucrats_add = 100
+			building_employment_laborers_add = 300
+			building_employment_clerks_add = 70
+			building_employment_bureaucrats_add = 30
 		}
 	}
 
@@ -44,18 +44,18 @@ pm_building_port_main_2 = {
 
 	unlocking_technologies = {
 		oceanic_navigation
-	}	
+	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 8
-			goods_output_merchant_marine_add = 24
+			goods_input_navalsupplies_add = 2
+			goods_output_merchant_marine_add = 15
 		}
 		level_scaled = {
-			building_employment_laborers_add = 500
-			building_employment_machinists_add = 200
-			building_employment_clerks_add = 200
-			building_employment_bureaucrats_add = 100
+			building_employment_laborers_add = 300
+			building_employment_machinists_add = 80
+			building_employment_clerks_add = 80
+			building_employment_bureaucrats_add = 40
 		}
 	}
 
@@ -79,15 +79,15 @@ pm_building_port_main_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_navalsupplies_add = 12
-			goods_output_merchant_marine_add = 36
+			goods_input_navalsupplies_add = 3
+			goods_output_merchant_marine_add = 20
 		}
 		level_scaled = {
-			building_employment_laborers_add = 400
-			building_employment_machinists_add = 250
-			building_employment_engineers_add = 50
-			building_employment_clerks_add = 200
-			building_employment_bureaucrats_add = 100
+			building_employment_laborers_add = 300
+			building_employment_machinists_add = 120
+			building_employment_engineers_add = 30
+			building_employment_clerks_add = 100
+			building_employment_bureaucrats_add = 50
 		}
 	}
 
@@ -109,7 +109,7 @@ pm_building_port_extra_0 = {
 
 pm_building_port_extra_england = {
 	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
-	
+
 	unlocking_technologies = {
 		england_society_1
 	}

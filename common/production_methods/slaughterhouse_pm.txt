@@ -7,7 +7,7 @@
 			goods_input_livestock_add = 5
 
 			# output goods
-			goods_output_meat_add = 20
+			goods_output_meat_add = 55
 		}
 
 		level_scaled = {
@@ -27,11 +27,11 @@ pm_building_slaughterhouse_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 5
-			goods_input_livestock_add = 10
+			goods_input_tools_add = 4
+			goods_input_livestock_add = 9
 
 			# output goods
-			goods_output_meat_add = 40 
+			goods_output_meat_add = 75
 		}
 
 		level_scaled = {
@@ -46,17 +46,17 @@ pm_building_slaughterhouse_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 10
-			goods_input_livestock_add = 15
+			goods_input_tools_add = 8
+			goods_input_livestock_add = 12
 
 			# output goods
-			goods_output_meat_add = 60
+			goods_output_meat_add = 105
 		}
 
 		level_scaled = {
@@ -78,11 +78,11 @@ pm_building_slaughterhouse_main_4 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 15
-			goods_input_livestock_add = 20
+			goods_input_tools_add = 13
+			goods_input_livestock_add = 19
 
 			# output goods
-			goods_output_meat_add = 80
+			goods_output_meat_add = 145
 		}
 
 		level_scaled = {
@@ -102,15 +102,15 @@ pm_building_slaughterhouse_salting_1 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation1.dds"
 
 	unlocking_technologies = {
-		salted_meat_preservation
+		production_age_2
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_salt_add = 10
+			goods_input_salt_add = 5
 			#output goods
-			goods_output_meat_add = 15
+			goods_output_meat_add = 10
 		}
 	}
 }
@@ -119,15 +119,15 @@ pm_building_slaughterhouse_salting_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/automation2.dds"
 
 	unlocking_technologies = {
-		improved_salted_meat_preservation
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_salt_add = 15
+			goods_input_salt_add = 10
 			#output goods
-			goods_output_meat_add = 25
+			goods_output_meat_add = 20
 		}
 	}
 }

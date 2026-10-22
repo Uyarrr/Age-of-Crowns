@@ -106,3 +106,12 @@ pmg_building_bailiff_taxation_rights_gold = {
 		pm_building_bailiff_taxation_rights_gold_1
 	}
 }
+pmg_building_royal_court_main = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = { pm_building_royal_court_main_1 }
+}
+
+pmg_building_chancery_gold = {
+ texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+ production_methods = { pm_building_chancery_gold_0 pm_building_chancery_gold_1 pm_building_chancery_gold_2 }
+}

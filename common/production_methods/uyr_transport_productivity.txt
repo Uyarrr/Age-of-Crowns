@@ -1,0 +1,293 @@
+# Transport productivity bonuses use the host building output good.
+pm_uyr_transport_coal_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 5
+
+			goods_output_coal_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_copper_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 8
+
+			goods_output_copper_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_gems_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 8
+
+			goods_output_gems_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_gold_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 11
+
+			goods_output_gold_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_iron_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 8
+
+			goods_output_iron_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_lead_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 8
+
+			goods_output_lead_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_silver_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 5
+
+			goods_output_silver_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_stone_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 5
+
+			goods_output_stone_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_tin_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 8
+
+			goods_output_tin_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_wood_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+
+	unlocking_technologies = {
+		production_age_5
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_transportation_add = 5
+
+			goods_output_wood_add = 15
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_wood_2 = {
+	texture = "gfx/interface/icons/production_method_icons/log_carts.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+
+	unlocking_technologies = {
+		production_age_6
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_transportation_add = 8
+
+			goods_output_wood_add = 25
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1500
+		}
+	}
+}
+
+pm_uyr_transport_fabric_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 5
+
+			goods_output_fabric_add = 15
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_uyr_transport_tobacco_1 = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	unlocking_technologies = {
+		production_age_5
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 5
+
+			goods_output_tobacco_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}

@@ -6,7 +6,9 @@
 			# input goods
 
 			# output goods
-			goods_output_fiber_add = 25
+			goods_output_fiber_add = 45
+
+			goods_input_tools_add = 3
 		}
 
 		level_scaled = {
@@ -26,10 +28,10 @@ pm_building_fiber_farm_main_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_livestock_add = 5
+			goods_input_livestock_add = 8
 
 			# output goods
-			goods_output_fiber_add = 40
+			goods_output_fiber_add = 75
 		}
 
 		level_scaled = {
@@ -43,7 +45,7 @@ pm_building_fiber_farm_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	state_modifiers = {
@@ -55,11 +57,11 @@ pm_building_fiber_farm_main_3 = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 10
-			goods_input_livestock_add = 10
+			goods_input_tools_add = 7
+			goods_input_livestock_add = 8
 
 			# output goods
-			goods_output_fiber_add = 60
+			goods_output_fiber_add = 110
 		}
 
 		level_scaled = {
@@ -73,17 +75,17 @@ pm_building_fiber_farm_main_4 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base4.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_5
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_tools_add = 15
-			goods_input_livestock_add = 15
+			goods_input_tools_add = 12
+			goods_input_livestock_add = 12
 
 			# output goods
-			goods_output_fiber_add = 80
+			goods_output_fiber_add = 155
 		}
 
 		level_scaled = {

@@ -4,12 +4,12 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_leather_add = 5
-			goods_input_paper_add = 10
-			goods_input_dye_add = 5
+			goods_input_leather_add = 1
+			goods_input_paper_add = 3
+			goods_input_dye_add = 2
 
 			# output goods
-			goods_output_book_add = 25
+			goods_output_book_add = 45
 		}
 
 		level_scaled = {
@@ -23,19 +23,19 @@ pm_building_printing_mill_main_2 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_2
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_leather_add = 5
-			goods_input_paper_add = 15
-			goods_input_dye_add = 5
-			goods_input_lead_add = 5
+			goods_input_leather_add = 1
+			goods_input_paper_add = 8
+			goods_input_dye_add = 3
+			goods_input_lead_add = 3
 
 			# output goods
-			goods_output_book_add = 40
+			goods_output_book_add = 70
 		}
 
 		level_scaled = {
@@ -50,19 +50,19 @@ pm_building_printing_mill_main_3 = {
 	texture = "gfx/interface/icons/production_method_icons/unused/base3.dds"
 
 	unlocking_technologies = {
-		behaviorism
+		production_age_3
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_leather_add = 10
-			goods_input_paper_add = 20
-			goods_input_dye_add = 10
-			goods_input_lead_add = 5
+			goods_input_leather_add = 5
+			goods_input_paper_add = 11
+			goods_input_dye_add = 5
+			goods_input_lead_add = 3
 
 			# output goods
-			goods_output_book_add = 60
+			goods_output_book_add = 125
 		}
 
 		level_scaled = {

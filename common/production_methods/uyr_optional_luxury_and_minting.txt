@@ -1,0 +1,130 @@
+# Optional luxury conversion and gold coinage.
+
+pm_building_luxury_furniture_workshop_ivory_0 = {
+	texture = "gfx/interface/icons/production_method_icons/no_gold_minting.dds"
+	building_modifiers = {
+		workforce_scaled = { }
+	}
+}
+
+pm_building_luxury_furniture_workshop_ivory_1 = {
+	texture = "gfx/interface/icons/production_method_icons/base1_yellow.dds"
+	unlocking_technologies = {
+		production_age_2
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ivory_add = 2
+			goods_output_luxury_furniture_add = 5
+		}
+	}
+}
+
+pm_building_luxury_furniture_workshop_ivory_2 = {
+	texture = "gfx/interface/icons/production_method_icons/base2_yellow.dds"
+	unlocking_technologies = {
+		production_age_4
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ivory_add = 4
+			goods_output_luxury_furniture_add = 10
+		}
+	}
+}
+
+pm_building_jewelry_workshop_ivory_0 = {
+	texture = "gfx/interface/icons/production_method_icons/no_gold_minting.dds"
+	building_modifiers = {
+		workforce_scaled = { }
+	}
+}
+
+pm_building_jewelry_workshop_ivory_1 = {
+	texture = "gfx/interface/icons/production_method_icons/base1_yellow.dds"
+	unlocking_technologies = {
+		production_age_2
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ivory_add = 4
+			goods_output_jewelry_add = 5
+		}
+	}
+}
+
+pm_building_jewelry_workshop_ivory_2 = {
+	texture = "gfx/interface/icons/production_method_icons/base2_yellow.dds"
+	unlocking_technologies = {
+		production_age_4
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ivory_add = 9
+			goods_output_jewelry_add = 10
+		}
+	}
+}
+
+pm_building_chancery_gold_0 = {
+	texture = "gfx/interface/icons/production_method_icons/no_gold_minting.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gold_add = 0
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 0
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 0
+		}
+	}
+}
+
+pm_building_chancery_gold_1 = {
+	texture = "gfx/interface/icons/production_method_icons/base1_yellow.dds"
+	unlocking_technologies = {
+		production_age_2
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gold_add = 2
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 30
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 15
+		}
+	}
+}
+
+pm_building_chancery_gold_2 = {
+	texture = "gfx/interface/icons/production_method_icons/base2_yellow.dds"
+	unlocking_technologies = {
+		production_age_4
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gold_add = 4
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 70
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 35
+		}
+	}
+}

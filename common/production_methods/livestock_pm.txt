@@ -2,7 +2,9 @@
 	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_livestock_add = 10
+			goods_output_livestock_add = 25
+
+			goods_input_tools_add = 4
 		}
 
 		level_scaled = {
@@ -18,10 +20,12 @@ pm_building_livestock_main_2 = {
 	unlocking_technologies = {
 		pasture_management
 	}
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_livestock_add = 20
+			goods_output_livestock_add = 40
+
+			goods_input_tools_add = 11
 		}
 
 		level_scaled = {
@@ -40,7 +44,9 @@ pm_building_livestock_main_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_livestock_add = 30
+			goods_output_livestock_add = 55
+
+			goods_input_tools_add = 15
 		}
 
 		level_scaled = {
@@ -56,10 +62,12 @@ pm_building_livestock_main_4 = {
 	unlocking_technologies = {
 		scientific_stockbreeding
 	}
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_livestock_add = 40
+			goods_output_livestock_add = 80
+
+			goods_input_tools_add = 27
 		}
 
 		level_scaled = {
@@ -82,7 +90,9 @@ pm_building_livestock_sheep_1 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_fabric_add = 10
+			goods_output_fabric_add = 15
+
+			goods_input_grain_add = 7
 		}
 	}
 }
@@ -96,8 +106,8 @@ pm_building_livestock_sheep_2 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_add = 10
-			goods_output_fabric_add = 20
+			goods_input_grain_add = 15
+			goods_output_fabric_add = 30
 		}
 	}
 }
@@ -111,8 +121,8 @@ pm_building_livestock_sheep_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_add = 20
-			goods_output_fabric_add = 40
+			goods_input_grain_add = 22
+			goods_output_fabric_add = 45
 		}
 	}
 }
