@@ -1,5 +1,5 @@
-﻿POWER_BLOCS = { 
-    	c:AUS ?= {
+POWER_BLOCS = {
+	c:AUS ?= {
 		create_power_bloc = {
 			name = HOLY_ROMAN_EMPIRE
 
@@ -81,15 +81,15 @@
 	}
 		c:ASK ?= {
 		create_power_bloc = {
-			name = Japanese_Empire
+			name = JAPANESE_SHOGUNATE
 
 			map_color = { 0.99  0.7  0.9 }
 
             founding_date = 1444.11.11
-			identity = identity_japanese_empire
+			identity = identity_japanese_shogunate
 			principle = principle_internal_trade_1
-			
-			member = c:AAO 
+
+			member = c:AAO
 			member = c:CBA
 			member = c:DTE
 			member = c:HSK
@@ -119,4 +119,31 @@
 			member = c:YMN
 		}
 	}
+    c:CHI ?= {
+        create_power_bloc = {
+            name = MANDATE_OF_HEAVEN
+            map_color = { 220 180 50 }
+            founding_date = 1444.11.11
+            identity = identity_chinese_empire
+            principle = principle_police_coordination_1
+        }
+    }
+    c:TYR ?= {
+        create_power_bloc = {
+            name = IRISH_CLANS
+            map_color = { 35 140 70 }
+            founding_date = 1444.11.11
+            identity = identity_irish_clans
+            principle = principle_police_coordination_1
+        }
+    }
+    c:MAM ?= {
+        create_power_bloc = {
+            name = SUNNI_CALIPHATE
+            map_color = { 40 115 65 }
+            founding_date = 1444.11.11
+            identity = identity_sunni_caliphate
+            principle = principle_police_coordination_1
+        }
+    }
 }

@@ -1,6 +1,9 @@
-﻿### See power_bloc_principles for the individual effects
+### See power_bloc_principles for the individual effects
 
 principle_group_shared_canon = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_cultural
 	unlocking_identity = identity_cultural
 
@@ -12,6 +15,9 @@ principle_group_shared_canon = {
 }
 
 principle_group_construction = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	levels = {
 		principle_construction_1
 		principle_construction_2
@@ -20,6 +26,9 @@ principle_group_construction = {
 }
 
 principle_group_internal_trade = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_trade_league
 	unlocking_identity = identity_trade_league
 
@@ -31,6 +40,9 @@ principle_group_internal_trade = {
 }
 
 principle_group_market_unification = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	blocking_identity = identity_trade_league
 
 	levels = {
@@ -41,6 +53,9 @@ principle_group_market_unification = {
 }
 
 principle_group_vassalization = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_sovereign_empire
 
 	levels = {
@@ -51,6 +66,9 @@ principle_group_vassalization = {
 }
 
 principle_group_advanced_research = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	levels = {
 		principle_advanced_research_1
 		principle_advanced_research_2
@@ -59,6 +77,9 @@ principle_group_advanced_research = {
 }
 
 principle_group_defensive_cooperation = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_military_treaty_organization
 
 	levels = {
@@ -69,6 +90,9 @@ principle_group_defensive_cooperation = {
 }
 
 principle_group_aggressive_coordination = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	unlocking_identity = identity_military_treaty_organization
 	primary_for_identity = identity_military_treaty_organization
 
@@ -80,6 +104,9 @@ principle_group_aggressive_coordination = {
 }
 
 principle_group_external_trade = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_trade_league
 
 	levels = {
@@ -90,6 +117,9 @@ principle_group_external_trade = {
 }
 
 principle_group_food_standardization = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	levels = {
 		principle_food_standardization_1
 		principle_food_standardization_2
@@ -98,6 +128,9 @@ principle_group_food_standardization = {
 }
 
 principle_group_police_coordination = {
+	primary_for_identity = identity_chinese_empire
+	primary_for_identity = identity_irish_clans
+	primary_for_identity = identity_sunni_caliphate
 	levels = {
 		principle_police_coordination_1
 		principle_police_coordination_2
@@ -106,6 +139,9 @@ principle_group_police_coordination = {
 }
 
 principle_group_transport = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	levels = {
 		principle_transport_1
 		principle_transport_2
@@ -114,6 +150,9 @@ principle_group_transport = {
 }
 
 principle_group_military_industry = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	levels = {
 		principle_military_industry_1
 		principle_military_industry_2
@@ -122,6 +161,9 @@ principle_group_military_industry = {
 }
 
 principle_group_colonial_offices = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	levels = {
 		principle_colonial_offices_1
 		principle_colonial_offices_2
@@ -130,6 +172,9 @@ principle_group_colonial_offices = {
 }
 
 principle_group_foreign_investment = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	levels = {
 		principle_foreign_investment_1
 		principle_foreign_investment_2
@@ -138,6 +183,9 @@ principle_group_foreign_investment = {
 }
 
 principle_group_creative_legislature = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_ideological_union
 
 	levels = {
@@ -148,6 +196,9 @@ principle_group_creative_legislature = {
 }
 
 principle_group_freedom_of_movement = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_cultural
 
 	levels = {
@@ -158,6 +209,9 @@ principle_group_freedom_of_movement = {
 }
 
 principle_group_divine_economics = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	unlocking_identity = identity_religious
 	primary_for_identity = identity_religious
 
@@ -169,6 +223,9 @@ principle_group_divine_economics = {
 }
 
 principle_group_exploit_members = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_sovereign_empire
 	unlocking_identity = identity_sovereign_empire
 
@@ -180,6 +237,9 @@ principle_group_exploit_members = {
 }
 
 principle_group_sacred_civics = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_religious
 
 	levels = {
@@ -190,6 +250,9 @@ principle_group_sacred_civics = {
 }
 
 principle_group_ideological_truth = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 	primary_for_identity = identity_ideological_union
 	unlocking_identity = identity_ideological_union
 
@@ -201,6 +264,9 @@ principle_group_ideological_truth = {
 }
 
 principle_group_companies = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 
 	levels = {
 		principle_companies_1
@@ -210,6 +276,9 @@ principle_group_companies = {
 }
 
 principle_group_navy = {
+	blocking_identity = identity_chinese_empire
+	blocking_identity = identity_irish_clans
+	blocking_identity = identity_sunni_caliphate
 
 	levels = {
 		principle_navy_1

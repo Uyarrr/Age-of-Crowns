@@ -1,0 +1,33 @@
+on_game_started = {
+    on_actions = { aoc_initialize_historical_power_bloc_members }
+}
+
+aoc_initialize_historical_power_bloc_members = {
+    effect = {
+        c:CHI ?= { aoc_enroll_chinese_subjects = yes }
+        c:TYR ?= {
+            if = {
+                limit = { power_bloc ?= { has_identity = identity:identity_irish_clans } }
+                every_country = {
+                    limit = {
+                        country_has_primary_culture = cu:irish
+                        is_in_power_bloc = no
+                    }
+                    join_power_bloc = c:TYR
+                }
+            }
+        }
+        c:MAM ?= {
+            if = {
+                limit = { power_bloc ?= { has_identity = identity:identity_sunni_caliphate } }
+                every_country = {
+                    limit = {
+                        country_has_state_religion = rel:sunni
+                        is_in_power_bloc = no
+                    }
+                    join_power_bloc = c:MAM
+                }
+            }
+        }
+    }
+}

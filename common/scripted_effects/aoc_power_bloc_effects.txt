@@ -1,0 +1,32 @@
+# Country scope: CHI, or a future event-selected Chinese emperor.
+# Explicitly called by events; never exposed through normal bloc formation.
+aoc_create_mandate_of_heaven = {
+    if = {
+        limit = {
+            is_in_power_bloc = no
+            NOT = { any_power_bloc = { has_identity = identity:identity_chinese_empire } }
+        }
+        create_power_bloc = {
+            name = MANDATE_OF_HEAVEN
+            map_color = { 220 180 50 }
+            identity = identity_chinese_empire
+            principle = principle_police_coordination_1
+        }
+        aoc_enroll_chinese_subjects = yes
+    }
+}
+
+# Country scope: the emperor. Include direct and indirect subjects of any culture.
+aoc_enroll_chinese_subjects = {
+    if = {
+        limit = { power_bloc ?= { has_identity = identity:identity_chinese_empire } }
+        save_scope_as = aoc_chinese_emperor
+        every_country = {
+            limit = {
+                is_subject_of = scope:aoc_chinese_emperor
+                is_in_power_bloc = no
+            }
+            join_power_bloc = scope:aoc_chinese_emperor
+        }
+    }
+}

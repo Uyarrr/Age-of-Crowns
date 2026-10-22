@@ -1,0 +1,54 @@
+identity_sunni_caliphate = {
+    possible = { always = no }
+    visible = { always = no }
+    can_leave = { always = yes }
+    icon = "gfx/interface/icons/central_identity_pillars_icons/religious.dds"
+    background = "gfx/interface/power_blocs/backgrounds/pb_background_generic.dds"
+    power_bloc_modifier = {
+        power_bloc_mandate_progress_per_great_power_member_add = 10
+        power_bloc_mandate_progress_per_major_power_member_add = 5
+        power_bloc_mandate_progress_per_minor_power_member_add = 2
+        power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+        power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
+    }
+    # Member independence does not reduce mandate progress.
+    mandate_progress = power_bloc_mandate_progress_by_rank
+    cohesion = {
+        value = {
+            value = 50
+            desc = POWER_BLOC_COHESION_BASE
+        }
+        add = {
+            scope:power_bloc = {
+                every_power_bloc_member = {
+                    if = {
+                        limit = { NOT = { country_has_state_religion = rel:sunni } }
+                        add = -5
+                    }
+                }
+            }
+            # Include prospective membership changes in the cohesion preview.
+            if = {
+                limit = {
+                    exists = scope:with_country
+                    scope:with_country = {
+                        NOT = { country_has_state_religion = rel:sunni }
+                    }
+                }
+                add = -5
+            }
+            else_if = {
+                limit = {
+                    exists = scope:without_country
+                    scope:without_country = {
+                        NOT = { country_has_state_religion = rel:sunni }
+                    }
+                }
+                add = 5
+            }
+            desc = AOC_POWER_BLOC_COHESION_NON_SUNNI_MEMBERS
+        }
+        min = 0
+    }
+    ai_weight = { value = 0 }
+}

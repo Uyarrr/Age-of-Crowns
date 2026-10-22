@@ -1,0 +1,19 @@
+identity_irish_clans = {
+    possible = { always = no }
+    visible = { always = no }
+    can_leave = { always = yes }
+    icon = "gfx/interface/icons/central_identity_pillars_icons/sovereign_empire.dds"
+    background = "gfx/interface/power_blocs/backgrounds/pb_background_generic.dds"
+    power_bloc_modifier = {
+        power_bloc_mandate_progress_per_great_power_member_add = 10
+        power_bloc_mandate_progress_per_major_power_member_add = 5
+        power_bloc_mandate_progress_per_minor_power_member_add = 2
+        power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+        power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
+    }
+    mandate_progress = power_bloc_mandate_progress_by_rank
+    cohesion = {
+        value = 50
+    }
+    ai_weight = { value = 0 }
+}

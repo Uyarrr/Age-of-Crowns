@@ -1,0 +1,8 @@
+# Power bloc scope.
+aoc_is_new_historical_power_bloc = {
+    OR = {
+        has_identity = identity:identity_chinese_empire
+        has_identity = identity:identity_irish_clans
+        has_identity = identity:identity_sunni_caliphate
+    }
+}
