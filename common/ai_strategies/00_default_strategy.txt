@@ -2082,7 +2082,7 @@ ai_strategy_default = {
 	# Add a multiplier to the score AI assigns to particular building groups (default 1)
 	# Using this value in other strategies will result in several multiplications
 	building_group_weights = {
-		bg_agriculture = 1.25
+		# Keep sectors neutral so economic conditions drive investment.
 	}
 
 	# Which buildings should the AI subsidize

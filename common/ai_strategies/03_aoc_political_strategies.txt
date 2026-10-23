@@ -1,14 +1,13 @@
-﻿# Age of Crowns - generic political strategy
-# The only political strategy, so every AI uses it: a crown-and-altar monarchy that reforms slowly.
-# Named like the vanilla strategy so vanilla content that checks has_strategy keeps working.
+﻿# Age of Crowns - state modernization for every AI country
+# Pursue available reforms without preserving old elites or opposing reform movements.
 
-ai_strategy_conservative_agenda = {
-	icon = "gfx/interface/icons/ai_strategy_icons/conservative_agenda.dds"
+ai_strategy_modernization = {
+	icon = "gfx/interface/icons/ai_strategy_icons/progressive_agenda.dds"
 
 	type = political
 
 	revolution_aversion = {
-		value = 75
+		value = 25
 	}
 
 	min_law_chance_to_pass = {
@@ -20,68 +19,38 @@ ai_strategy_conservative_agenda = {
 	}
 
 	max_progressiveness = {
-		value = 50
+		value = 100
 	}
 
 	max_regressiveness = {
-		value = 25
+		value = 0
 	}
 
-	change_law_chance = {
-		value = 2.5
+	# Reform actively while retaining the civil-war safeguard above.
+	change_law_chance = { value = 10 }
 
-		if = {
-			limit = { any_interest_group = { is_insurrectionary = yes } }
-			add = 7.5
-		}
-	}
-
-	pro_interest_groups = {
-		ig_crown
-		ig_landowners
-		ig_devout
-		ig_armed_forces
-		ig_rural_folk
-	}
-
-	anti_interest_groups = {
-		ig_trade_unions
-	}
-
-	pro_movements = {
-		movement_absolutist
-		movement_royalist
-		movement_clerical
-		movement_old_custom
-	}
-
-	anti_movements = {
-		movement_peasant_league
-		movement_republican
-		movement_enlightenment
-	}
-
+	# Prioritize education and health alongside useful state institutions.
 	institution_scores = {
 		institution_colonial_affairs = {
-			value = 150
+			value = 100
 		}
 		institution_social_security = {
-			value = 50
+			value = 100
 		}
 		institution_workplace_safety = {
-			value = 50
+			value = 100
 		}
 		institution_schools = {
-			value = 100
+			value = 250
 		}
 		institution_police = {
-			value = 150
-		}
-		institution_health_system = {
 			value = 100
 		}
+		institution_health_system = {
+			value = 200
+		}
 		institution_home_affairs = {
-			value = 150
+			value = 100
 		}
 	}
 

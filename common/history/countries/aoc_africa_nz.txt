@@ -1,0 +1,318 @@
+COUNTRIES = {
+	c:MAL = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:BOR = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:JLF = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:BEN = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:OYO = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:GAO = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:S37 = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:T93 = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:KON = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:LBA = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:LND = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:KBA = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:BUG = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:BNY = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:RWD = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:BRD = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:S41 = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:S44 = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:U73 = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:U79 = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:U52 = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:V57 = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:V80 = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:ASH = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:DAH = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:ZUL = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:XHO = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:TSW = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:MSI = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:MRV = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:U83 = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:ZND = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:WAD = {
+		set_state_religion = rel:sunni
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+	c:NPH = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_manorial_economy
+		activate_law = law_type:law_isolationism
+	}
+}

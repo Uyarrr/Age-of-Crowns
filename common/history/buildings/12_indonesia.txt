@@ -1,4 +1,4 @@
-﻿BUILDINGS={
+BUILDINGS={
 	s:STATE_MALAYA={
 		region_state:U32={
 		}
@@ -150,9 +150,7 @@
 		region_state:X98={
 		}
 	}
-	s:STATE_WESTERN_NEW_GUINEA={
-		region_state:PPU={
-		}
+	s:STATE_WESTERN_NEW_GUINEA = {
 	}
 	s:STATE_MOLUCCAS={
 		region_state:T52={
@@ -219,9 +217,7 @@
 		region_state:X63={
 		}
 	}
-	s:STATE_EASTERN_NEW_GUINEA={
-		region_state:PPU={
-		}
+	s:STATE_EASTERN_NEW_GUINEA = {
 	}
 	s:STATE_SUNDA_ISLANDS={
 		region_state:B12={
@@ -304,50 +300,26 @@
 		region_state:W09={
 		}
 	}
-	s:STATE_WEST_MICRONESIA={
-		region_state:MCR={
-		}
+	s:STATE_WEST_MICRONESIA = {
 	}
-	s:STATE_EAST_MICRONESIA={
-		region_state:MCR={
-		}
+	s:STATE_EAST_MICRONESIA = {
 	}
-	s:STATE_SOLOMON_ISLANDS={
-		region_state:BLA={
-		}
+	s:STATE_SOLOMON_ISLANDS = {
 	}
-	s:STATE_NAURU={
-		region_state:NRU={
-		}
+	s:STATE_NAURU = {
 	}
-	s:STATE_FIJI={
-		region_state:T87={
-		}
-		region_state:T88={
-		}
-		region_state:V33={
-		}
+	s:STATE_FIJI = {
 	}
-	s:STATE_VANUATU={
-		region_state:VNT={
-		}
+	s:STATE_VANUATU = {
 	}
-	s:STATE_KANAK={
-		region_state:KNK={
-		}
+	s:STATE_KANAK = {
 	}
-	s:STATE_BOUGAINVILLE={
-		region_state:HLA={
-		}
+	s:STATE_BOUGAINVILLE = {
 	}
 	s:STATE_TAHITI={
 		region_state:PLY={
 		}
 	}
-	s:STATE_TONGA={
-		region_state:TNG={
-		}
-		region_state:U75={
-		}
+	s:STATE_TONGA = {
 	}
 }

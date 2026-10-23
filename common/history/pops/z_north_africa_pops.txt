@@ -2,7 +2,33 @@
 
 POPS = {
 	s:STATE_SAHARA = {
-		region_state:SAH = {
+		region_state:AFD = {
+			create_pop = {
+				culture = berber
+				religion = sunni
+				size = 418
+			}
+			create_pop = {
+				culture = tuareg
+				religion = sunni
+				size = 4187
+			}
+			create_pop = {
+				culture = berber
+				religion = sunni
+				pop_type = slaves
+				size = 418
+			}
+			create_pop = {
+				culture = berber
+				religion = jewish
+				size = 105
+			}
+			create_pop = {
+				culture = berber
+				religion = ibadi
+				size = 9
+			}
 			create_pop = {
 				culture = berber
 				religion = sunni
@@ -70,37 +96,16 @@ POPS = {
 				size = 14
 			}
 		}
-		region_state:WSH = {
-			create_pop = {
-				culture = berber
-				religion = sunni
-				size = 418
-			}
-			create_pop = {
-				culture = tuareg
-				religion = sunni
-				size = 4187
-			}
-			create_pop = {
-				culture = berber
-				religion = sunni
-				pop_type = slaves
-				size = 418
-			}
-			create_pop = {
-				culture = berber
-				religion = jewish
-				size = 105
-			}
-			create_pop = {
-				culture = berber
-				religion = ibadi
-				size = 9
-			}
-		}
 	}
 
 	s:STATE_INNER_MOROCCO = {
+		region_state:AFD = {
+			create_pop = {
+				culture = berber
+				religion = sunni
+				size = 23086
+			}
+		}
 		region_state:MOR = {
 			create_pop = {
 				culture = maghrebi
@@ -128,13 +133,6 @@ POPS = {
 				size = 31233
 			}
 		}
-		region_state:SAH = {
-			create_pop = {
-				culture = berber
-				religion = sunni
-				size = 23086
-			}
-		}
 		region_state:U90 = {
 			create_pop = {
 				culture = berber
@@ -145,20 +143,7 @@ POPS = {
 	}
 
 	s:STATE_INNER_MAURITANIA = {
-		region_state:MAL = {
-			create_pop = {
-				culture = mande
-				religion = sunni
-				size = 547
-			}
-			create_pop = {
-				culture = mande
-				religion = sunni
-				pop_type = slaves
-				size = 81
-			}
-		}
-		region_state:SAH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = bidan
 				religion = sunni
@@ -179,6 +164,40 @@ POPS = {
 				religion = sunni
 				pop_type = slaves
 				size = 565
+			}
+			create_pop = {
+				culture = bidan
+				religion = sunni
+				size = 4624
+			}
+			create_pop = {
+				culture = mande
+				religion = sunni
+				size = 1541
+			}
+			create_pop = {
+				culture = bedouin
+				religion = sunni
+				size = 514
+			}
+			create_pop = {
+				culture = mande
+				religion = sunni
+				pop_type = slaves
+				size = 565
+			}
+		}
+		region_state:MAL = {
+			create_pop = {
+				culture = mande
+				religion = sunni
+				size = 547
+			}
+			create_pop = {
+				culture = mande
+				religion = sunni
+				pop_type = slaves
+				size = 81
 			}
 		}
 		region_state:T63 = {
@@ -205,32 +224,43 @@ POPS = {
 				size = 135
 			}
 		}
-		region_state:WSH = {
-			create_pop = {
-				culture = bidan
-				religion = sunni
-				size = 4624
-			}
-			create_pop = {
-				culture = mande
-				religion = sunni
-				size = 1541
-			}
-			create_pop = {
-				culture = bedouin
-				religion = sunni
-				size = 514
-			}
-			create_pop = {
-				culture = mande
-				religion = sunni
-				pop_type = slaves
-				size = 565
-			}
-		}
 	}
 
 	s:STATE_MAURITANIA = {
+		region_state:AFD = {
+			create_pop = {
+				culture = haratin
+				religion = sunni
+				size = 6967
+			}
+			create_pop = {
+				culture = haratin
+				religion = sunni
+				pop_type = slaves
+				size = 1868
+			}
+			create_pop = {
+				culture = bidan
+				religion = sunni
+				size = 13800
+			}
+			create_pop = {
+				culture = haratin
+				religion = sunni
+				size = 6967
+			}
+			create_pop = {
+				culture = haratin
+				religion = sunni
+				pop_type = slaves
+				size = 1868
+			}
+			create_pop = {
+				culture = bidan
+				religion = sunni
+				size = 13800
+			}
+		}
 		region_state:FTR = {
 			create_pop = {
 				culture = fulbe
@@ -266,45 +296,27 @@ POPS = {
 				size = 1200
 			}
 		}
-		region_state:SAH = {
-			create_pop = {
-				culture = haratin
-				religion = sunni
-				size = 6967
-			}
-			create_pop = {
-				culture = haratin
-				religion = sunni
-				pop_type = slaves
-				size = 1868
-			}
-			create_pop = {
-				culture = bidan
-				religion = sunni
-				size = 13800
-			}
-		}
-		region_state:WSH = {
-			create_pop = {
-				culture = haratin
-				religion = sunni
-				size = 6967
-			}
-			create_pop = {
-				culture = haratin
-				religion = sunni
-				pop_type = slaves
-				size = 1868
-			}
-			create_pop = {
-				culture = bidan
-				religion = sunni
-				size = 13800
-			}
-		}
 	}
 
 	s:STATE_EAST_SAHARA = {
+		region_state:AFD = {
+			create_pop = {
+				culture = tuareg
+				religion = sunni
+				size = 10490
+			}
+			create_pop = {
+				culture = tuareg
+				religion = sunni
+				pop_type = slaves
+				size = 552
+			}
+			create_pop = {
+				culture = berber
+				religion = sunni
+				size = 1841
+			}
+		}
 		region_state:TUG = {
 			create_pop = {
 				culture = maghrebi
@@ -351,27 +363,55 @@ POPS = {
 				size = 2632
 			}
 		}
-		region_state:WSH = {
+	}
+
+	s:STATE_TIMBUKTU = {
+		region_state:AFD = {
+			create_pop = {
+				culture = bambara
+				religion = animist
+				size = 8644
+			}
+			create_pop = {
+				culture = bambara
+				religion = animist
+				pop_type = slaves
+				size = 598
+			}
+			create_pop = {
+				culture = songhai
+				religion = sunni
+				size = 31521
+			}
+			create_pop = {
+				culture = songhai
+				religion = sunni
+				pop_type = slaves
+				size = 2229
+			}
+			create_pop = {
+				culture = fulbe
+				religion = sunni
+				size = 697
+			}
+			create_pop = {
+				culture = fulbe
+				religion = sunni
+				pop_type = slaves
+				size = 232
+			}
 			create_pop = {
 				culture = tuareg
 				religion = sunni
-				size = 10490
+				size = 9658
 			}
 			create_pop = {
 				culture = tuareg
 				religion = sunni
 				pop_type = slaves
-				size = 552
-			}
-			create_pop = {
-				culture = berber
-				religion = sunni
-				size = 1841
+				size = 512
 			}
 		}
-	}
-
-	s:STATE_TIMBUKTU = {
 		region_state:S37 = {
 			create_pop = {
 				culture = songhai
@@ -409,58 +449,10 @@ POPS = {
 				size = 427
 			}
 		}
-		region_state:W81 = {
-			create_pop = {
-				culture = bambara
-				religion = animist
-				size = 8644
-			}
-			create_pop = {
-				culture = bambara
-				religion = animist
-				pop_type = slaves
-				size = 598
-			}
-		}
-		region_state:WSH = {
-			create_pop = {
-				culture = songhai
-				religion = sunni
-				size = 31521
-			}
-			create_pop = {
-				culture = songhai
-				religion = sunni
-				pop_type = slaves
-				size = 2229
-			}
-			create_pop = {
-				culture = fulbe
-				religion = sunni
-				size = 697
-			}
-			create_pop = {
-				culture = fulbe
-				religion = sunni
-				pop_type = slaves
-				size = 232
-			}
-			create_pop = {
-				culture = tuareg
-				religion = sunni
-				size = 9658
-			}
-			create_pop = {
-				culture = tuareg
-				religion = sunni
-				pop_type = slaves
-				size = 512
-			}
-		}
 	}
 
 	s:STATE_NIGER = {
-		region_state:WSH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = tuareg
 				religion = sunni
@@ -497,7 +489,7 @@ POPS = {
 	}
 
 	s:STATE_LIBYAN_DESERT = {
-		region_state:ESH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = bedouin
 				religion = sunni
@@ -535,7 +527,7 @@ POPS = {
 	}
 
 	s:STATE_CHAD = {
-		region_state:ESH = {
+		region_state:AFC = {
 			create_pop = {
 				culture = teda
 				religion = sunni
@@ -573,7 +565,7 @@ POPS = {
 	}
 
 	s:STATE_LIBYA = {
-		region_state:ESH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = misri
 				religion = sunni
@@ -618,7 +610,7 @@ POPS = {
 	}
 
 	s:STATE_EGYPTIAN_DESERT = {
-		region_state:ESH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = misri
 				religion = sunni
@@ -657,7 +649,7 @@ POPS = {
 	}
 
 	s:STATE_DONGOLA = {
-		region_state:ESH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = beja
 				religion = sunni
@@ -752,7 +744,7 @@ POPS = {
 	}
 
 	s:STATE_BLUE_NILE = {
-		region_state:ESH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = beja
 				religion = sunni
@@ -805,8 +797,6 @@ POPS = {
 				pop_type = slaves
 				size = 3604
 			}
-		}
-		region_state:NUE = {
 			create_pop = {
 				culture = beja
 				religion = sunni
@@ -859,8 +849,6 @@ POPS = {
 				pop_type = slaves
 				size = 3604
 			}
-		}
-		region_state:X15 = {
 			create_pop = {
 				culture = nilotic
 				religion = oriental_orthodox
@@ -887,7 +875,7 @@ POPS = {
 	}
 
 	s:STATE_KORDOFAN = {
-		region_state:ESH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = sudanese
 				religion = sunni
@@ -907,7 +895,7 @@ POPS = {
 	}
 
 	s:STATE_DARFUR = {
-		region_state:ESH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = fur
 				religion = sunni
@@ -945,6 +933,7 @@ POPS = {
 
 	s:STATE_LOWER_EGYPT = {
 		region_state:MAM = {
+
 			create_pop = {
 				culture = misri
 				religion = sunni
@@ -955,21 +944,25 @@ POPS = {
 				religion = jewish
 				size = 7923
 			}
+
 		}
 	}
 
 	s:STATE_MATRUH = {
 		region_state:MAM = {
+
 			create_pop = {
 				culture = misri
 				religion = sunni
 				size = 6616
 			}
+
 		}
 	}
 
 	s:STATE_MIDDLE_EGYPT = {
 		region_state:MAM = {
+
 			create_pop = {
 				culture = misri
 				religion = sunni
@@ -980,21 +973,25 @@ POPS = {
 				religion = jewish
 				size = 781
 			}
+
 		}
 	}
 
 	s:STATE_UPPER_EGYPT = {
 		region_state:MAM = {
+
 			create_pop = {
 				culture = misri
 				religion = sunni
 				size = 117523
 			}
+
 		}
 	}
 
 	s:STATE_SINAI = {
 		region_state:MAM = {
+
 			create_pop = {
 				culture = bedouin
 				religion = sunni
@@ -1005,11 +1002,12 @@ POPS = {
 				religion = sunni
 				size = 3866
 			}
+
 		}
 	}
 
 	s:STATE_WEST_SAHARA = {
-		region_state:SAH = {
+		region_state:AFD = {
 			create_pop = {
 				culture = berber
 				religion = sunni

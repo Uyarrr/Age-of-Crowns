@@ -27,31 +27,37 @@ BUILDINGS={
 		region_state:T19 = { }
 		region_state:Y06 = { }
 	}
-	s:STATE_NORTH_ISLAND={
-		region_state:NTO={
-		}
-		region_state:T50={
-		}
-		region_state:T75={
-		}
-		region_state:UNT={
+	s:STATE_NORTH_ISLAND = {
+		region_state:MZD = {
+
+
+
+
+
 			create_building={
 				building="building_trade_center"
 				add_ownership={
 					country={
-						country="c:UNT"
+						country="c:MZD"
 						levels=1
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
 			}
+
+
+
 		}
-		region_state:N07={
+		region_state:NPH = {
+
+
 		}
 	}
-	s:STATE_SOUTH_ISLAND={
-		region_state:NTU={
+	s:STATE_SOUTH_ISLAND = {
+		region_state:MZD = {
+
+
 		}
 	}
 }

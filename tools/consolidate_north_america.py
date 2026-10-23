@@ -32,7 +32,7 @@ FACTIONS = {
     'SHH': ('Shoshone', 'Shoshone', 'IDAHO', 'paiute', (170, 148, 75)),
     'UTE': ('Ute', 'Ute', 'UTAH', 'paiute', (220, 122, 165)),
     'CMS': ('Chumash', 'Chumash', 'CALIFORNIA', 'salish', (92, 156, 183)),
-    'PUE': ('Rio Grande Pueblos', 'Pueblo', 'NEW_MEXICO', 'pueblo', (162, 128, 8)),
+    'PUE': ('Pueblo', 'Pueblo', 'NEW_MEXICO', 'pueblo', (162, 128, 8)),
     'HOP': ('Hopi', 'Hopi', 'ARIZONA', 'pueblo', (191, 122, 66)),
     'ZUN': ('Zuni', 'Zuni', 'NEW_MEXICO', 'pueblo', (121, 164, 190)),
     'DKT': ('Dakota', 'Dakota', 'MINNESOTA', 'dakota', (130, 65, 149)),

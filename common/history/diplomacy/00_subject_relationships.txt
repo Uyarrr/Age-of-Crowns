@@ -1,4 +1,4 @@
-﻿DIPLOMACY = {
+DIPLOMACY = {
 	c:DEN ?= {
 		create_diplomatic_pact = {
 			country = c:SWE
@@ -459,23 +459,13 @@
 		add_liberty_desire = -26.2
 	}
 	c:KON ?= {
-		create_diplomatic_pact = {
-			country = c:V99
-			type = puppet
-		}
+
 	}
-	c:V99 ?= {
-		add_liberty_desire = -20.55
-	}
+
 	c:KON ?= {
-		create_diplomatic_pact = {
-			country = c:LNG
-			type = puppet
-		}
+
 	}
-	c:LNG ?= {
-		add_liberty_desire = -20.3
-	}
+
 	c:S41 ?= {
 		create_diplomatic_pact = {
 			country = c:U79
@@ -504,14 +494,9 @@
 		add_liberty_desire = -35.525
 	}
 	c:MRV ?= {
-		create_diplomatic_pact = {
-			country = c:V37
-			type = puppet
-		}
+
 	}
-	c:V37 ?= {
-		add_liberty_desire = -29.775
-	}
+
 	c:SIA ?= {
 		create_diplomatic_pact = {
 			country = c:V40

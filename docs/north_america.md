@@ -9,7 +9,7 @@ animist religion, and explicit startup laws using the mod's law definitions.
 | --- | --- |
 | Pacific Northwest | Tlingit (TLG), Haida (X01), Chinook (X83) |
 | West | Shoshone (SHH), Ute (UTE), Chumash (CMS) |
-| Southwest | Rio Grande Pueblos (PUE), Hopi (HOP), Zuni (ZUN) |
+| Southwest | Pueblo (PUE), Hopi (HOP), Zuni (ZUN) |
 | Great Plains | Dakota (DKT), Pawnee (PWN), Osage (O01) |
 | Great Lakes / Canada | Cree (CRY), Ojibwe (OJB), Wendat (WDT) |
 | Northeast | Iroquoian Nations (IRO), Lenape (L03), Mi'kmaq (MKQ) |
@@ -24,7 +24,7 @@ across its states. Redundant split states are combined by their new owner.
 Cree now uses its own `CRY` tag and banner, with a compact 37-province James Bay
 core. Its former western boreal territory is decentralized, including autonomous
 Cree bands. Hopi (9 provinces) and Zuni (8 provinces) are separate playable
-countries; the Rio Grande Pueblos retain a connected 15-province core.
+countries; the Pueblo retain a connected 15-province core.
 
 Cree and the Iron Confederacy remain separate identities. `IRC` is reserved for the later
 **Iron Confederacy**, which has no provinces or country history at the start.

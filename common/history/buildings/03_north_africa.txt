@@ -1,6 +1,7 @@
-﻿BUILDINGS={
-	s:STATE_LOWER_EGYPT={
-		region_state:MAM={
+BUILDINGS={
+	s:STATE_LOWER_EGYPT = {
+		region_state:MAM = {
+
 			create_building={
 				building="building_port"
 				add_ownership={
@@ -199,10 +200,12 @@
 				reserves=1
 				activate_production_methods={ "pm_building_distillery_main_1" }
 			}
+
 		}
 	}
-	s:STATE_UPPER_EGYPT={
-		region_state:MAM={
+	s:STATE_UPPER_EGYPT = {
+		region_state:MAM = {
+
 			create_building={
 				building="building_barrack"
 				add_ownership={
@@ -236,10 +239,12 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_sailor_recruitment" }
 			}
+
 		}
 	}
-	s:STATE_MIDDLE_EGYPT={
-		region_state:MAM={
+	s:STATE_MIDDLE_EGYPT = {
+		region_state:MAM = {
+
 			create_building={
 				building="building_government_administration"
 				add_ownership={
@@ -295,12 +300,11 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_sailor_recruitment" }
 			}
+
 		}
 	}
-	s:STATE_EGYPTIAN_DESERT={
-		region_state:ESH={
-		}
-		region_state:MAM={
+	s:STATE_EGYPTIAN_DESERT = {
+		region_state:MAM = {
 			create_building={
 				building="building_naval_administration"
 				add_ownership={
@@ -314,8 +318,9 @@
 			}
 		}
 	}
-	s:STATE_MATRUH={
-		region_state:MAM={
+	s:STATE_MATRUH = {
+		region_state:MAM = {
+
 			create_building={
 				building="building_trade_center"
 				add_ownership={
@@ -338,10 +343,12 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_sailor_recruitment" }
 			}
+
 		}
 	}
-	s:STATE_SINAI={
-		region_state:MAM={
+	s:STATE_SINAI = {
+		region_state:MAM = {
+
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
@@ -398,18 +405,21 @@
 				reserves=1
 				activate_production_methods={ "pm_building_shipyard_main_1" }
 			}
+
 		}
 	}
-	s:STATE_ERITREA={
-		region_state:V63={
+	s:STATE_ERITREA = {
+		region_state:V63 = {
+
+
 		}
-		region_state:X09={
+		region_state:X09 = {
+
+
 		}
 	}
-	s:STATE_DONGOLA={
-		region_state:ESH={
-		}
-		region_state:MAM={
+	s:STATE_DONGOLA = {
+		region_state:MAM = {
 			create_building={
 				building="building_naval_administration"
 				add_ownership={
@@ -423,32 +433,29 @@
 			}
 		}
 	}
-	s:STATE_KORDOFAN={
-		region_state:ESH={
+	s:STATE_KORDOFAN = {
+	}
+	s:STATE_DARFUR = {
+	}
+	s:STATE_BLUE_NILE = {
+	}
+	s:STATE_MARRAKECH = {
+		region_state:MOR = {
+
+
+		}
+		region_state:U90 = {
+
+
+		}
+		region_state:V91 = {
+
+
 		}
 	}
-	s:STATE_DARFUR={
-		region_state:ESH={
-		}
-	}
-	s:STATE_BLUE_NILE={
-		region_state:ESH={
-		}
-		region_state:NUE={
-		}
-		region_state:X15={
-		}
-	}
-	s:STATE_MARRAKECH={
-		region_state:MOR={
-		}
-		region_state:U90={
-		}
-		region_state:V91={
-		}
-	}
-	s:STATE_FEZ={
-		region_state:MOR={
+	s:STATE_FEZ = {
+		region_state:MOR = {
+
 			create_building={
 				building="building_port"
 				add_ownership={
@@ -483,12 +490,16 @@
 				reserves=1
 				activate_production_methods={ "pm_building_caravan_hub_main_1" }
 			}
+
 		}
 	}
-	s:STATE_AL_RIF={
-		region_state:MOR={
+	s:STATE_AL_RIF = {
+		region_state:MOR = {
+
+
 		}
-		region_state:POR={
+		region_state:POR = {
+
 			create_building={
 				building="building_port"
 				add_ownership={
@@ -500,16 +511,11 @@
 				reserves=1
 				activate_production_methods={ "pm_building_port_main_0" "pm_building_port_extra_0" }
 			}
+
 		}
 	}
-	s:STATE_INNER_MOROCCO={
-		region_state:MOR={
-		}
-		region_state:T55={
-		}
-		region_state:TLE={
-		}
-		region_state:U90={
+	s:STATE_INNER_MOROCCO = {
+		region_state:U90 = {
 			create_building={
 				building="building_village"
 				add_ownership={
@@ -522,19 +528,24 @@
 				activate_production_methods={ "pm_building_village_main_1" "pm_building_village_side1_0" "pm_building_village_side2_0" "pm_building_village_side3_0" }
 			}
 		}
-		region_state:SAH={
+	}
+	s:STATE_ALGIERS = {
+		region_state:TLE = {
+
+
+		}
+		region_state:TUN = {
+
+
+		}
+		region_state:V97 = {
+
+
 		}
 	}
-	s:STATE_ALGIERS={
-		region_state:TLE={
-		}
-		region_state:TUN={
-		}
-		region_state:V97={
-		}
-	}
-	s:STATE_CONSTANTINE={
-		region_state:TUG={
+	s:STATE_CONSTANTINE = {
+		region_state:TUG = {
+
 			create_building={
 				building="building_village"
 				add_ownership={
@@ -546,18 +557,26 @@
 				reserves=1
 				activate_production_methods={ "pm_building_village_main_1" "pm_building_village_side1_0" "pm_building_village_side2_0" "pm_building_village_side3_0" }
 			}
+
 		}
-		region_state:TUN={
+		region_state:TUN = {
+
+
 		}
-		region_state:V97={
+		region_state:V97 = {
+
+
 		}
 	}
-	s:STATE_ORAN={
-		region_state:TLE={
+	s:STATE_ORAN = {
+		region_state:TLE = {
+
+
 		}
 	}
-	s:STATE_TUNISIA={
-		region_state:TUN={
+	s:STATE_TUNISIA = {
+		region_state:TUN = {
+
 			create_building={
 				building="building_port"
 				add_ownership={
@@ -580,12 +599,16 @@
 				reserves=1
 				activate_production_methods={ "pm_building_shipyard_main_1" }
 			}
+
 		}
-		region_state:W44={
+		region_state:W44 = {
+
+
 		}
 	}
-	s:STATE_TRIPOLI={
-		region_state:TUN={
+	s:STATE_TRIPOLI = {
+		region_state:TUN = {
+
 			create_building={
 				building="building_barrack"
 				add_ownership={
@@ -597,14 +620,19 @@
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
+
 		}
-		region_state:W39={
+		region_state:W39 = {
+
+
 		}
-		region_state:W44={
+		region_state:W44 = {
+
+
 		}
 	}
-	s:STATE_LIBYA={
-		region_state:MAM={
+	s:STATE_LIBYA = {
+		region_state:MAM = {
 			create_building={
 				building="building_naval_administration"
 				add_ownership={
@@ -617,85 +645,31 @@
 				activate_production_methods={ "pm_simple_sailor_recruitment" }
 			}
 		}
-		region_state:ESH={
-		}
-		region_state:W39={
+	}
+	s:STATE_LIBYAN_DESERT = {
+	}
+	s:STATE_SAHARA = {
+	}
+	s:STATE_EAST_SAHARA = {
+	}
+	s:STATE_WEST_SAHARA = {
+	}
+	s:STATE_MAURITANIA = {
+	}
+	s:STATE_INNER_MAURITANIA = {
+	}
+	s:STATE_EASTERN_MALI = {
+	}
+	s:STATE_WESTERN_MALI = {
+		region_state:MAL = {
+
+
 		}
 	}
-	s:STATE_LIBYAN_DESERT={
-		region_state:ESH={
-		}
-		region_state:W39={
-		}
+	s:STATE_TIMBUKTU = {
 	}
-	s:STATE_SAHARA={
-		region_state:T55={
-		}
-		region_state:WSH={
-		}
-		region_state:V97={
-		}
-		region_state:SAH={
-		}
+	s:STATE_NIGER = {
 	}
-	s:STATE_EAST_SAHARA={
-		region_state:WSH={
-		}
-		region_state:TUG={
-		}
-		region_state:V97={
-		}
-	}
-	s:STATE_WEST_SAHARA={
-		region_state:SAH={
-		}
-	}
-	s:STATE_MAURITANIA={
-		region_state:FTR={
-		}
-		region_state:WSH={
-		}
-		region_state:SAH={
-		}
-	}
-	s:STATE_INNER_MAURITANIA={
-		region_state:MAL={
-		}
-		region_state:WSH={
-		}
-		region_state:T63={
-		}
-		region_state:SAH={
-		}
-	}
-	s:STATE_EASTERN_MALI={
-		region_state:MAL={
-		}
-		region_state:S37={
-		}
-		region_state:W81={
-		}
-	}
-	s:STATE_WESTERN_MALI={
-		region_state:MAL={
-		}
-	}
-	s:STATE_TIMBUKTU={
-		region_state:WSH={
-		}
-		region_state:S37={
-		}
-		region_state:T63={
-		}
-		region_state:W81={
-		}
-	}
-	s:STATE_NIGER={
-		region_state:WSH={
-		}
-	}
-	s:STATE_CHAD={
-		region_state:ESH={
-		}
+	s:STATE_CHAD = {
 	}
 }

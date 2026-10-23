@@ -45,7 +45,7 @@ The map below shows the implemented ownership, including province boundaries
 within playable cores. Grey denotes eight separate regional decentralized tags,
 not one country. Regional groups also represent autonomous bands of peoples
 whose selected centralized core does not occupy their whole cultural homeland.
-Hopi, Zuni and the Rio Grande Pueblos are separately playable, each with one
+Hopi, Zuni and the Pueblo are separately playable, each with one
 connected territory. Cree has a compact James Bay political core; outlying
 Cree-inhabited lands are represented by autonomous bands in regional tags.
 
@@ -113,7 +113,7 @@ Confidence: moderate to strong homeland.
 
 Sources: [source 1](https://sanctuaries.noaa.gov/media/chumash/2024-chnms-feis-vol-1.pdf), [source 2](https://santabarbaraca.gov/sites/default/files/2025-04/MEA%20Guidelines%20for%20Tribal%20Cultural%20Resources%20%26%20Appendices.pdf).
 
-### Rio Grande Pueblos (PUE)
+### Pueblo (PUE)
 
 **15 provinces** in New Mexico. Capital state: New Mexico.
 
@@ -311,7 +311,7 @@ The audit verifies all 22 playable and eight decentralized tags, no playable
 whole-state ownership, exact agreement with the final province manifest,
 allowed homeland regions, revised capital states, valid cultures and laws,
 and population/building scope ownership. A province-adjacency check confirms
-that Hopi, Zuni, the Rio Grande Pueblos and the smaller Cree core each have
+that Hopi, Zuni, the Pueblo and the smaller Cree core each have
 a single connected land component. All **8,059 provinces** and
 **3,120,593 population** are retained. Population composition by state, culture,
 religion and pop type is unchanged; this is a border revision, not a researched

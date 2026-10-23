@@ -1,4 +1,4 @@
-﻿BUILDINGS={
+BUILDINGS={
 	s:STATE_DISTRICT_OF_COLUMBIA = {
 		region_state:NNE = {
 		}
@@ -237,8 +237,8 @@
 		region_state:NSE = {
 		}
 	}
-	s:STATE_HAWAIIAN_ISLANDS={
-		region_state:HAW={
+	s:STATE_HAWAIIAN_ISLANDS = {
+		region_state:HAW = {
 			create_building={
 				building="building_trade_center"
 				add_ownership={
@@ -250,10 +250,6 @@
 				reserves=1
 				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
 			}
-		}
-		region_state:U23={
-		}
-		region_state:W83={
 		}
 	}
 	s:STATE_ONTARIO = {
