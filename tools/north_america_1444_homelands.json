@@ -1,0 +1,1039 @@
+{
+  "method": "Research-informed settlement cores, manually traced against the vanilla province bitmap and named locality anchors. Polygon coordinates are bitmap pixels divided by four. These are authored game boundaries, not historical GIS boundaries. Contemporary national territory maps are used only as homeland context, with later expansions excluded where supported.",
+  "factions": {
+    "TLG": {
+      "states": "ALASKA BRITISH_COLUMBIA YUKON_TERRITORY",
+      "polygons": [
+        [
+          [
+            220,
+            130
+          ],
+          [
+            238,
+            128
+          ],
+          [
+            260,
+            140
+          ],
+          [
+            271,
+            151
+          ],
+          [
+            281,
+            164
+          ],
+          [
+            289,
+            178
+          ],
+          [
+            279,
+            183
+          ],
+          [
+            266,
+            175
+          ],
+          [
+            253,
+            169
+          ],
+          [
+            243,
+            157
+          ],
+          [
+            231,
+            149
+          ],
+          [
+            220,
+            144
+          ]
+        ]
+      ],
+      "capital": "ALASKA",
+      "confidence": "moderate homeland; low exact 1444 boundary",
+      "rationale": "Southeast Alaska coast and archipelago from the Yakutat vicinity through Juneau/Sitka to the southern panhandle; a narrow adjacent inland fringe. Excludes interior Alaska. Later traditional maps do not establish an exact fifteenth-century frontier.",
+      "sources": [
+        "https://learninglab.si.edu/collections/tlingit-people-and-their-culture/1pEvk720ueisQzlO",
+        "https://guides.library.ubc.ca/indigtraditionalgovt/tlingit"
+      ]
+    },
+    "X01": {
+      "states": "BRITISH_COLUMBIA",
+      "island_core": "Haida Gwaii",
+      "polygons": [
+        [
+          [
+            263,
+            177
+          ],
+          [
+            275,
+            177
+          ],
+          [
+            282,
+            192
+          ],
+          [
+            279,
+            203
+          ],
+          [
+            269,
+            201
+          ],
+          [
+            263,
+            189
+          ]
+        ]
+      ],
+      "capital": "BRITISH_COLUMBIA",
+      "confidence": "strong island homeland; moderate province boundary",
+      "rationale": "Haida Gwaii only. Excludes the later expansion to Prince of Wales and Dall islands and excludes mainland British Columbia.",
+      "sources": [
+        "https://www.bctreaty.ca/council-haida-nation",
+        "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/95/21/2020719521/2020719521.pdf"
+      ]
+    },
+    "X83": {
+      "states": "WASHINGTON OREGON",
+      "polygons": [
+        [
+          [
+            313,
+            239
+          ],
+          [
+            323,
+            238
+          ],
+          [
+            336,
+            243
+          ],
+          [
+            335,
+            248
+          ],
+          [
+            327,
+            250
+          ],
+          [
+            318,
+            249
+          ],
+          [
+            312,
+            246
+          ]
+        ]
+      ],
+      "capital": "WASHINGTON",
+      "confidence": "moderate",
+      "rationale": "Lower Columbia on both banks and its estuary, with the upriver Chinookan corridor. This umbrella is broader than the membership territory of the present Chinook Indian Nation; it does not include Puget Sound or eastern Washington.",
+      "sources": [
+        "https://chinooknation.org/our-territory-chinook-indian-nation-vs-chinooka/",
+        "https://ehrafworldcultures.yale.edu/cultures/nr06/description"
+      ]
+    },
+    "SHH": {
+      "states": "NEVADA IDAHO UTAH WYOMING",
+      "polygons": [
+        [
+          [
+            352,
+            276
+          ],
+          [
+            361,
+            270
+          ],
+          [
+            363,
+            259
+          ],
+          [
+            377,
+            257
+          ],
+          [
+            389,
+            259
+          ],
+          [
+            401,
+            255
+          ],
+          [
+            409,
+            264
+          ],
+          [
+            405,
+            274
+          ],
+          [
+            394,
+            279
+          ],
+          [
+            383,
+            282
+          ],
+          [
+            371,
+            282
+          ],
+          [
+            366,
+            292
+          ],
+          [
+            356,
+            296
+          ],
+          [
+            350,
+            288
+          ]
+        ]
+      ],
+      "capital": "IDAHO",
+      "confidence": "moderate to low",
+      "rationale": "Snake River/southern Idaho and central/eastern Great Basin settlement core, with a limited western Wyoming fringe. Excludes a later equestrian empire across the northern Plains and leaves Paiute/Goshute fringes decentralized. Numic migration chronology is uncertain.",
+      "sources": [
+        "https://www.blm.gov/sites/default/files/documents/files/OwyBywayGuide_2016_web.pdf",
+        "https://home.nps.gov/crmo/learn/education/history.htm",
+        "https://files.cfc.umt.edu/cesu/NPS/UWY/2006/Harkin_DETO_Ethnography/NPSreportfinal.pdf"
+      ]
+    },
+    "UTE": {
+      "states": "UTAH COLORADO NEW_MEXICO",
+      "polygons": [
+        [
+          [
+            386,
+            281
+          ],
+          [
+            396,
+            276
+          ],
+          [
+            408,
+            279
+          ],
+          [
+            418,
+            284
+          ],
+          [
+            428,
+            289
+          ],
+          [
+            431,
+            301
+          ],
+          [
+            422,
+            309
+          ],
+          [
+            413,
+            310
+          ],
+          [
+            407,
+            304
+          ],
+          [
+            396,
+            302
+          ],
+          [
+            390,
+            293
+          ]
+        ]
+      ],
+      "capital": "UTAH",
+      "confidence": "moderate homeland; low exact political reach",
+      "rationale": "Eastern/central Utah, western Colorado and the upper San Juan/upper Rio Grande fringe. Focuses on mountain/plateau homelands rather than distant horse-era hunting grounds.",
+      "sources": [
+        "https://www.southernute-nsn.gov/history/"
+      ]
+    },
+    "CMS": {
+      "states": "CALIFORNIA",
+      "polygons": [
+        [
+          [
+            334,
+            312
+          ],
+          [
+            340,
+            312
+          ],
+          [
+            345,
+            317
+          ],
+          [
+            351,
+            322
+          ],
+          [
+            350,
+            327
+          ],
+          [
+            344,
+            327
+          ],
+          [
+            336,
+            322
+          ],
+          [
+            331,
+            320
+          ]
+        ]
+      ],
+      "capital": "CALIFORNIA",
+      "confidence": "moderate to strong homeland",
+      "rationale": "San Luis Obispo/Santa Barbara/Ventura coastal core and represented northern Channel Islands. Excludes San Diego, most of the Los Angeles basin, and the inland Central Valley.",
+      "sources": [
+        "https://sanctuaries.noaa.gov/media/chumash/2024-chnms-feis-vol-1.pdf",
+        "https://santabarbaraca.gov/sites/default/files/2025-04/MEA%20Guidelines%20for%20Tribal%20Cultural%20Resources%20%26%20Appendices.pdf"
+      ]
+    },
+    "PUE": {
+      "states": "NEW_MEXICO",
+      "polygons": [
+        [
+          [
+            415,
+            307
+          ],
+          [
+            423,
+            306
+          ],
+          [
+            428,
+            312
+          ],
+          [
+            427,
+            320
+          ],
+          [
+            419,
+            325
+          ],
+          [
+            413,
+            323
+          ],
+          [
+            412,
+            317
+          ]
+        ]
+      ],
+      "capital": "NEW_MEXICO",
+      "confidence": "strong settlement regions; abstract political union",
+      "rationale": "Rio Grande and Pajarito Plateau settlement cluster only. Hopi and Zuni are separate playable polities; the intervening desert remains decentralized.",
+      "sources": [
+        "https://www.nps.gov/band/learn/historyculture/classic.htm"
+      ]
+    },
+    "DKT": {
+      "states": "MINNESOTA WISCONSIN",
+      "polygons": [
+        [
+          [
+            481,
+            233
+          ],
+          [
+            492,
+            231
+          ],
+          [
+            499,
+            236
+          ],
+          [
+            503,
+            244
+          ],
+          [
+            506,
+            251
+          ],
+          [
+            501,
+            258
+          ],
+          [
+            490,
+            259
+          ],
+          [
+            480,
+            253
+          ],
+          [
+            478,
+            244
+          ]
+        ]
+      ],
+      "capital": "MINNESOTA",
+      "confidence": "moderate",
+      "rationale": "Mille Lacs, upper Mississippi and Minnesota woodland core with a western Wisconsin fringe. Removes later Lakota/Sioux Plains expansion from the Dakotas, Nebraska and Montana.",
+      "sources": [
+        "https://www.mnhs.org/millelacs/learn/mille-lacs-band",
+        "https://mn.gov/admin/archaeologist/the-public/mn-archaeology/contact-period/",
+        "https://www.mnhs.org/fortsnelling/learn/bdote"
+      ]
+    },
+    "PWN": {
+      "states": "NEBRASKA KANSAS",
+      "polygons": [
+        [
+          [
+            450,
+            271
+          ],
+          [
+            458,
+            267
+          ],
+          [
+            468,
+            269
+          ],
+          [
+            475,
+            275
+          ],
+          [
+            474,
+            282
+          ],
+          [
+            466,
+            287
+          ],
+          [
+            456,
+            286
+          ],
+          [
+            449,
+            281
+          ]
+        ]
+      ],
+      "capital": "NEBRASKA",
+      "confidence": "moderate; ancestral affiliation partly inferred",
+      "rationale": "Loup/Platte and Republican River settlement belt in central Nebraska with a small northern Kansas fringe. Uses ancestral Pawnee association with late precontact settlements rather than a large nineteenth-century hunting range.",
+      "sources": [
+        "https://history.nebraska.gov/marker-monday-pawnee/"
+      ]
+    },
+    "O01": {
+      "states": "MISSOURI",
+      "polygons": [
+        [
+          [
+            486,
+            290
+          ],
+          [
+            493,
+            287
+          ],
+          [
+            502,
+            289
+          ],
+          [
+            506,
+            294
+          ],
+          [
+            503,
+            300
+          ],
+          [
+            498,
+            306
+          ],
+          [
+            489,
+            306
+          ],
+          [
+            484,
+            301
+          ]
+        ]
+      ],
+      "capital": "MISSOURI",
+      "confidence": "moderate to strong regional evidence",
+      "rationale": "Central/western Missouri and the Missouri/Osage riverways following the ancestral westward settlement shift around 1300-1350. Removes the broad Kansas/Oklahoma/Arkansas expansion associated with the eighteenth century.",
+      "sources": [
+        "https://www.osagenation-nsn.gov/who-we-are/historic-preservation/osage-cultural-history",
+        "https://www.kansashistory.gov/kansapedia/osage/19289"
+      ]
+    },
+    "CRY": {
+      "states": "ONTARIO QUEBEC",
+      "polygons": [
+        [
+          [
+            548,
+            201
+          ],
+          [
+            559,
+            196
+          ],
+          [
+            571,
+            199
+          ],
+          [
+            578,
+            205
+          ],
+          [
+            578,
+            216
+          ],
+          [
+            568,
+            221
+          ],
+          [
+            554,
+            217
+          ],
+          [
+            547,
+            210
+          ]
+        ]
+      ],
+      "capital": "ONTARIO",
+      "confidence": "moderate homeland context; limited centralized reach is a gameplay choice",
+      "rationale": "A compact southern James Bay/Moose River political core, with a limited adjacent Quebec shore. The wider western boreal territory returns to decentralized regional tags, including autonomous Cree bands. This deliberately does not equate Cree cultural presence with centralized political control across the Hudson Bay watershed.",
+      "sources": [
+        "https://www.securitepublique.gc.ca/cnt/rsrcs/pblctns/cnqst-lw/index-en.aspx",
+        "https://histindigenouspeoples.pressbooks.tru.ca/chapter/5-from-ice-age-to-contact/",
+        "https://aeic-iaac.gc.ca/050/documents_staticpost/64144/83657/SocioEconomic_-_02_Historical_Context_FINAL.pdf"
+      ]
+    },
+    "OJB": {
+      "states": "MICHIGAN ONTARIO",
+      "polygons": [
+        [
+          [
+            536,
+            237
+          ],
+          [
+            549,
+            235
+          ],
+          [
+            561,
+            239
+          ],
+          [
+            564,
+            246
+          ],
+          [
+            555,
+            253
+          ],
+          [
+            548,
+            259
+          ],
+          [
+            537,
+            258
+          ],
+          [
+            534,
+            251
+          ]
+        ]
+      ],
+      "capital": "MICHIGAN",
+      "confidence": "moderate; broad Anishinaabe precursor representation",
+      "rationale": "Eastern Great Lakes/Mackinac-Sault-Manitoulin core. Removes Minnesota and Wisconsin territories associated with the later westward migration. Uses Ojibwe as the requested playable label for a narrower ancestral Anishinaabe grouping.",
+      "sources": [
+        "https://www.1854treatyauthority.org/images/LSOGGuide_FinalCommitteeApproval.pdf",
+        "https://project.geo.msu.edu/geogmich/ojibwe.html"
+      ]
+    },
+    "WDT": {
+      "states": "ONTARIO",
+      "polygons": [
+        [
+          [
+            567,
+            249
+          ],
+          [
+            575,
+            247
+          ],
+          [
+            583,
+            251
+          ],
+          [
+            590,
+            258
+          ],
+          [
+            587,
+            263
+          ],
+          [
+            579,
+            264
+          ],
+          [
+            570,
+            261
+          ],
+          [
+            565,
+            256
+          ]
+        ]
+      ],
+      "capital": "ONTARIO",
+      "confidence": "strong ancestral settlement regions; confederacy an abstraction",
+      "rationale": "Simcoe Uplands plus ancestral village drainages on the north shore of Lake Ontario. Keeps ancestral settlements south of later concentrated seventeenth-century Wendake; excludes the Neutral core west of Lake Ontario.",
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156178",
+        "https://archaeologymuseum.ca/stories/the-history-of-ste-marie-ii/"
+      ]
+    },
+    "IRO": {
+      "states": "NEW_YORK",
+      "polygons": [
+        [
+          [
+            576,
+            258
+          ],
+          [
+            587,
+            255
+          ],
+          [
+            601,
+            258
+          ],
+          [
+            606,
+            264
+          ],
+          [
+            602,
+            272
+          ],
+          [
+            588,
+            273
+          ],
+          [
+            579,
+            269
+          ],
+          [
+            573,
+            265
+          ]
+        ]
+      ],
+      "capital": "NEW_YORK",
+      "confidence": "moderate core; confederacy chronology disputed",
+      "rationale": "Five Nations ancestral central/western New York and Mohawk/Finger Lakes settlement belt. Excludes later Ohio/Great Lakes imperial claims and independent St Lawrence Iroquoian territories. Does not add the later Tuscarora membership.",
+      "sources": [
+        "https://www.onondaganation.org/history/",
+        "https://www.onondaganation.org/land-rights/",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156178"
+      ]
+    },
+    "L03": {
+      "states": "NEW_YORK NEW_JERSEY PENNSYLVANIA DELAWARE",
+      "polygons": [
+        [
+          [
+            590,
+            274
+          ],
+          [
+            601,
+            272
+          ],
+          [
+            610,
+            278
+          ],
+          [
+            607,
+            285
+          ],
+          [
+            601,
+            290
+          ],
+          [
+            595,
+            292
+          ],
+          [
+            590,
+            288
+          ],
+          [
+            587,
+            282
+          ]
+        ]
+      ],
+      "capital": "NEW_JERSEY",
+      "confidence": "strong homeland; political union an abstraction",
+      "rationale": "Delaware Valley, eastern Pennsylvania, New Jersey and lower Hudson. Southern Delaware stays decentralized for Nanticoke representation. One peripheral New Jersey province represents autonomous Lenape bands to honor the requested no-whole-state rule, not a claim of non-Lenape ethnicity.",
+      "sources": [
+        "https://nanticokelenapemuseum.org/museum/the-ancient-ones/",
+        "https://dia.upenn.edu/en/content/LeechM001/"
+      ]
+    },
+    "MKQ": {
+      "states": "NEW_BRUNSWICK QUEBEC",
+      "polygons": [
+        [
+          [
+            646,
+            229
+          ],
+          [
+            657,
+            224
+          ],
+          [
+            671,
+            228
+          ],
+          [
+            671,
+            240
+          ],
+          [
+            684,
+            246
+          ],
+          [
+            685,
+            260
+          ],
+          [
+            667,
+            266
+          ],
+          [
+            651,
+            259
+          ],
+          [
+            648,
+            249
+          ],
+          [
+            641,
+            244
+          ],
+          [
+            642,
+            236
+          ]
+        ]
+      ],
+      "capital": "NEW_BRUNSWICK",
+      "confidence": "moderate homeland; low exact 1444 frontier",
+      "rationale": "Nova Scotia, Cape Breton, PEI and eastern/northern New Brunswick with Gaspe. These are partly combined in the game's New Brunswick state. Leaves western New Brunswick to Wolastoqiyik-related decentralized peoples and Newfoundland to its precontact peoples rather than back-projecting later territorial associations.",
+      "sources": [
+        "https://www.unsm.org/grand-council/pre-contact",
+        "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/autochtone-indigenous/carte-mikmaki-map"
+      ]
+    },
+    "CHE": {
+      "states": "TENNESSEE NORTH_CAROLINA SOUTH_CAROLINA GEORGIA ALABAMA VIRGINIA",
+      "polygons": [
+        [
+          [
+            543,
+            303
+          ],
+          [
+            554,
+            304
+          ],
+          [
+            560,
+            311
+          ],
+          [
+            561,
+            319
+          ],
+          [
+            552,
+            325
+          ],
+          [
+            542,
+            324
+          ],
+          [
+            536,
+            318
+          ],
+          [
+            537,
+            310
+          ]
+        ]
+      ],
+      "capital": "TENNESSEE",
+      "confidence": "moderate ancestral core; ethnogenesis limits exact attribution",
+      "rationale": "Southern Appalachian village core: eastern Tennessee, western North Carolina, northern Georgia and adjoining mountain valleys. Does not treat the full Kentucky/Virginia hunting range as directly administered territory.",
+      "sources": [
+        "https://cherokee.gov/about-the-nation/frequently-asked-questions/history/",
+        "https://motcp.org/learn/cherokee-history/"
+      ]
+    },
+    "C03": {
+      "states": "MISSISSIPPI ALABAMA",
+      "polygons": [
+        [
+          [
+            512,
+            325
+          ],
+          [
+            520,
+            324
+          ],
+          [
+            525,
+            328
+          ],
+          [
+            526,
+            335
+          ],
+          [
+            522,
+            341
+          ],
+          [
+            514,
+            341
+          ],
+          [
+            510,
+            335
+          ]
+        ]
+      ],
+      "capital": "MISSISSIPPI",
+      "confidence": "moderate ancestral core; low exact 1444 political identity",
+      "rationale": "Nanih Waiya/east-central Mississippi and a western Alabama fringe. Choctaw is a requested successor label for ancestral communities; a unified later Choctaw polity and post-removal Oklahoma boundaries are not asserted for 1444.",
+      "sources": [
+        "https://www.choctawnation.com/wp-content/uploads/2016/09/sep2016-biskinik.pdf",
+        "https://www.mdah.ms.gov/sites/default/files/2020-04/AR-27.pdf",
+        "https://indigenousalabama.omeka.net/s/choctaw/page/halito"
+      ]
+    },
+    "C05": {
+      "states": "TEXAS ARKANSAS OKLAHOMA LOUISIANA",
+      "polygons": [
+        [
+          [
+            477,
+            319
+          ],
+          [
+            488,
+            317
+          ],
+          [
+            495,
+            320
+          ],
+          [
+            497,
+            327
+          ],
+          [
+            494,
+            337
+          ],
+          [
+            486,
+            341
+          ],
+          [
+            476,
+            338
+          ],
+          [
+            471,
+            332
+          ]
+        ]
+      ],
+      "capital": "ARKANSAS",
+      "confidence": "strong Late Caddo core; political union an abstraction",
+      "rationale": "Late Caddo clusters on the Red River, northeast Texas/Neches-Sabine drainages, southwest Arkansas, southeast Oklahoma and northwest Louisiana. Excludes the Gulf delta and most of Arkansas and Oklahoma. Distinct Caddo societies are combined for the requested tag limit.",
+      "sources": [
+        "https://www.texasbeyondhistory.net/tejas/ancestors/late.html",
+        "https://texasbeyondhistory.net/tejas/fundamentals/timeline.html"
+      ]
+    },
+    "CLS": {
+      "states": "FLORIDA",
+      "polygons": [
+        [
+          [
+            552,
+            365
+          ],
+          [
+            558,
+            365
+          ],
+          [
+            561,
+            371
+          ],
+          [
+            561,
+            377
+          ],
+          [
+            555,
+            379
+          ],
+          [
+            552,
+            373
+          ]
+        ]
+      ],
+      "capital": "FLORIDA",
+      "confidence": "strong southwest core; wider tributary reach uncertain",
+      "rationale": "Charlotte Harbor-Pine Island-Estero Bay-Mound Key and the southwest coastal fringe toward the Ten Thousand Islands. Excludes Atlantic Florida, the panhandle and a blanket claim over the whole southern peninsula.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7165460/",
+        "https://www.floridamuseum.ufl.edu/sflarch/research/calusa-cultural-heritage-preservation/"
+      ]
+    },
+    "HOP": {
+      "states": "ARIZONA",
+      "polygons": [
+        [
+          [
+            385,
+            309
+          ],
+          [
+            394,
+            307
+          ],
+          [
+            399,
+            313
+          ],
+          [
+            398,
+            319
+          ],
+          [
+            390,
+            319
+          ],
+          [
+            386,
+            315
+          ]
+        ]
+      ],
+      "capital": "ARIZONA",
+      "confidence": "strong settlement homeland; political unity is a gameplay abstraction",
+      "rationale": "Hopi mesa settlement core around Awatovi and the northeastern Arizona villages. Kept separate from the Zuni and Rio Grande communities; the NPS documents Awatovi as already over 300 years old in 1540.",
+      "sources": [
+        "https://www.nps.gov/places/awatovi-ruins-arizona.htm",
+        "https://www.hopi-nsn.gov/wp-content/uploads/2013/06/06052013_Tawaovi-EA-draft.pdf"
+      ]
+    },
+    "ZUN": {
+      "states": "ARIZONA NEW_MEXICO",
+      "polygons": [
+        [
+          [
+            397,
+            315
+          ],
+          [
+            406,
+            314
+          ],
+          [
+            409,
+            319
+          ],
+          [
+            406,
+            323
+          ],
+          [
+            398,
+            323
+          ]
+        ]
+      ],
+      "capital": "NEW_MEXICO",
+      "confidence": "strong settlement homeland; exact provincial frontier approximate",
+      "rationale": "Zuni River valley and its immediate Arizona/New Mexico border hinterland, separately playable from Hopi and the Rio Grande pueblos. Represents the ancestral Zuni settlements rather than a pan-Pueblo union.",
+      "sources": [
+        "https://sah-archipedia.org/buildings/NM-01-031-0161"
+      ]
+    }
+  }
+}

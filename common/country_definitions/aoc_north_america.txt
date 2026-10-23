@@ -1,0 +1,285 @@
+# 1444 North America: 22 playable factions and eight regional groupings.
+# Political consolidation is a gameplay abstraction, not a claim of unified states.
+# Province research and uncertainty: docs/north_america_1444_research.md
+
+TLG = { # Tlingit
+	color = { 92 141 166 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { salish }
+	religion = animist
+	capital = STATE_ALASKA
+}
+
+X01 = { # Haida
+	color = { 0 180 148 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { salish }
+	religion = animist
+	capital = STATE_BRITISH_COLUMBIA
+}
+
+X83 = { # Chinook
+	color = { 172 102 48 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { salish }
+	religion = animist
+	capital = STATE_WASHINGTON
+}
+
+SHH = { # Shoshone
+	color = { 170 148 75 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { paiute }
+	religion = animist
+	capital = STATE_IDAHO
+}
+
+UTE = { # Ute
+	color = { 220 122 165 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { paiute }
+	religion = animist
+	capital = STATE_UTAH
+}
+
+CMS = { # Chumash
+	color = { 92 156 183 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { salish }
+	religion = animist
+	capital = STATE_CALIFORNIA
+}
+
+PUE = { # Rio Grande Pueblos
+	color = { 162 128 8 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { pueblo }
+	religion = animist
+	capital = STATE_NEW_MEXICO
+}
+
+DKT = { # Dakota
+	color = { 130 65 149 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { dakota }
+	religion = animist
+	capital = STATE_MINNESOTA
+}
+
+PWN = { # Pawnee
+	color = { 235 87 114 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { caddoan }
+	religion = animist
+	capital = STATE_NEBRASKA
+}
+
+O01 = { # Osage
+	color = { 166 126 68 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { siouan }
+	religion = animist
+	capital = STATE_MISSOURI
+}
+
+CRY = { # Cree
+	color = { 61 158 124 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { cree }
+	religion = animist
+	capital = STATE_ONTARIO
+}
+
+OJB = { # Ojibwe
+	color = { 214 148 40 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { algonquian }
+	religion = animist
+	capital = STATE_MICHIGAN
+}
+
+WDT = { # Wendat
+	color = { 131 109 178 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { iroquoian }
+	religion = animist
+	capital = STATE_ONTARIO
+}
+
+IRO = { # Iroquoian Nations
+	color = { 87 182 80 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { iroquoian }
+	religion = animist
+	capital = STATE_NEW_YORK
+}
+
+L03 = { # Lenape
+	color = { 184 126 160 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { algonquian }
+	religion = animist
+	capital = STATE_NEW_JERSEY
+}
+
+MKQ = { # Mi'kmaq
+	color = { 182 79 63 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { algonquian }
+	religion = animist
+	capital = STATE_NEW_BRUNSWICK
+}
+
+CHE = { # Cherokee
+	color = { 135 89 52 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { cherokee }
+	religion = animist
+	capital = STATE_TENNESSEE
+}
+
+C03 = { # Choctaw
+	color = { 89 139 68 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { muskogean }
+	religion = animist
+	capital = STATE_MISSISSIPPI
+}
+
+C05 = { # Caddo
+	color = { 165 96 52 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { caddoan }
+	religion = animist
+	capital = STATE_ARKANSAS
+}
+
+CLS = { # Calusa
+	color = { 64 153 166 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { muskogean }
+	religion = animist
+	capital = STATE_FLORIDA
+}
+
+NPA = { # Pacific Northwest Peoples
+	color = { 105 136 106 }
+	country_type = decentralized
+	tier = principality
+	cultures = { salish athabaskan }
+	religion = animist
+	capital = STATE_BRITISH_COLUMBIA
+}
+
+NWE = { # Western Peoples
+	color = { 119 112 115 }
+	country_type = decentralized
+	tier = principality
+	cultures = { paiute salish }
+	religion = animist
+	capital = STATE_CALIFORNIA
+}
+
+NSX = { # Southwestern Peoples
+	color = { 133 124 124 }
+	country_type = decentralized
+	tier = principality
+	cultures = { apache navajo pueblo }
+	religion = animist
+	capital = STATE_ARIZONA
+}
+
+NGP = { # Great Plains Peoples
+	color = { 147 136 133 }
+	country_type = decentralized
+	tier = principality
+	cultures = { siouan dakota comanche caddoan }
+	religion = animist
+	capital = STATE_MONTANA
+}
+
+NGL = { # Great Lakes and Boreal Peoples
+	color = { 105 112 142 }
+	country_type = decentralized
+	tier = principality
+	cultures = { algonquian cree athabaskan iroquoian }
+	religion = animist
+	capital = STATE_ONTARIO
+}
+
+NNE = { # Northeastern Peoples
+	color = { 119 124 106 }
+	country_type = decentralized
+	tier = principality
+	cultures = { algonquian iroquoian inuit }
+	religion = animist
+	capital = STATE_QUEBEC
+}
+
+NSE = { # Southeastern Peoples
+	color = { 133 136 115 }
+	country_type = decentralized
+	tier = principality
+	cultures = { muskogean cherokee siouan caddoan }
+	religion = animist
+	capital = STATE_GEORGIA
+}
+
+NAQ = { # Arctic and Subarctic Peoples
+	color = { 147 112 124 }
+	country_type = decentralized
+	tier = principality
+	cultures = { inuit athabaskan }
+	religion = animist
+	capital = STATE_NUNAVUT
+}
+
+
+HOP = { # Hopi
+	color = { 191 122 66 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { pueblo }
+	religion = animist
+	capital = STATE_ARIZONA
+}
+
+ZUN = { # Zuni
+	color = { 121 164 190 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { pueblo }
+	religion = animist
+	capital = STATE_NEW_MEXICO
+}
+
+# Later regional union. It owns no starting provinces and has no startup history.
+IRC = { # Iron Confederacy
+	color = { 35 112 90 }
+	country_type = unrecognized
+	tier = kingdom
+	# The mod groups Assiniboine within its broad siouan culture.
+	cultures = { cree siouan algonquian }
+	religion = animist
+	capital = STATE_SASKATCHEWAN
+}

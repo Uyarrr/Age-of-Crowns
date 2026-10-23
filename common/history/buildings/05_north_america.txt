@@ -1,362 +1,240 @@
 ﻿BUILDINGS={
-	s:STATE_DISTRICT_OF_COLUMBIA={
-		region_state:P05={
+	s:STATE_DISTRICT_OF_COLUMBIA = {
+		region_state:NNE = {
 		}
 	}
-	s:STATE_LOUISIANA={
-		region_state:C03={
+	s:STATE_LOUISIANA = {
+		region_state:C05 = {
 		}
-		region_state:C05={
-		}
-	}
-	s:STATE_NEW_YORK={
-		region_state:IRO={
-		}
-		region_state:L03={
-		}
-		region_state:M04={
-		}
-		region_state:N05={
-		}
-		region_state:W01={
+		region_state:NSE = {
 		}
 	}
-	s:STATE_VIRGINIA={
-		region_state:CHE={
+	s:STATE_NEW_YORK = {
+		region_state:IRO = {
 		}
-		region_state:M05={
+		region_state:L03 = {
 		}
-		region_state:P05={
-		}
-	}
-	s:STATE_ALASKA={
-		region_state:HH2={
-		}
-		region_state:I02={
-		}
-		region_state:N12={
-		}
-		region_state:X01={
-		}
-		region_state:Y02={
+		region_state:NNE = {
 		}
 	}
-	s:STATE_WASHINGTON={
-		region_state:I01={
+	s:STATE_VIRGINIA = {
+		region_state:CHE = {
 		}
-		region_state:NZP={
-		}
-		region_state:N04={
-		}
-		region_state:X83={
+		region_state:NSE = {
 		}
 	}
-	s:STATE_OREGON={
-		region_state:NZP={
+	s:STATE_ALASKA = {
+		region_state:NAQ = {
 		}
-		region_state:N04={
-		}
-	}
-	s:STATE_IDAHO={
-		region_state:N05={
-		}
-		region_state:N06={
-		}
-		region_state:NZP={
+		region_state:TLG = {
 		}
 	}
-	s:STATE_COLORADO={
-		region_state:APC={
+	s:STATE_WASHINGTON = {
+		region_state:NPA = {
 		}
-		region_state:ARP={
-		}
-		region_state:NVJ={
-		}
-		region_state:PUE={
-		}
-		region_state:UTE={
+		region_state:X83 = {
 		}
 	}
-	s:STATE_WYOMING={
-		region_state:ABS={
+	s:STATE_OREGON = {
+		region_state:NPA = {
 		}
-		region_state:ARP={
-		}
-		region_state:COM={
-		}
-		region_state:LKT={
-		}
-		region_state:N06={
-		}
-		region_state:UTE={
+		region_state:X83 = {
 		}
 	}
-	s:STATE_MONTANA={
-		region_state:ABS={
+	s:STATE_IDAHO = {
+		region_state:NWE = {
 		}
-		region_state:BLF={
-		}
-		region_state:IRC={
-		}
-		region_state:N05={
-		}
-		region_state:LKT={
-		}
-		region_state:N06={
-		}
-		region_state:V00={
+		region_state:SHH = {
 		}
 	}
-	s:STATE_NORTH_DAKOTA={
-		region_state:ARP={
+	s:STATE_COLORADO = {
+		region_state:NSX = {
 		}
-		region_state:IRC={
-		}
-		region_state:LKT={
+		region_state:UTE = {
 		}
 	}
-	s:STATE_SOUTH_DAKOTA={
-		region_state:LKT={
+	s:STATE_WYOMING = {
+		region_state:NGP = {
 		}
-		region_state:PWN={
-		}
-	}
-	s:STATE_NEBRASKA={
-		region_state:ARP={
-		}
-		region_state:LKT={
-		}
-		region_state:PWN={
+		region_state:SHH = {
 		}
 	}
-	s:STATE_KANSAS={
-		region_state:ARP={
-		}
-		region_state:COM={
-		}
-		region_state:O01={
-		}
-		region_state:PWN={
+	s:STATE_MONTANA = {
+		region_state:NGP = {
 		}
 	}
-	s:STATE_OKLAHOMA={
-		region_state:C05={
-		}
-		region_state:COM={
-		}
-		region_state:O01={
+	s:STATE_NORTH_DAKOTA = {
+		region_state:NGP = {
 		}
 	}
-	s:STATE_ARKANSAS={
-		region_state:C05={
-		}
-		region_state:O01={
-		}
-		region_state:U01={
-		}
-		region_state:U36={
-		}
-		region_state:X19={
-		}
-		region_state:X68={
+	s:STATE_SOUTH_DAKOTA = {
+		region_state:NGP = {
 		}
 	}
-	s:STATE_MISSOURI={
-		region_state:N04={
+	s:STATE_NEBRASKA = {
+		region_state:NGP = {
 		}
-		region_state:O01={
-		}
-		region_state:U01={
+		region_state:PWN = {
 		}
 	}
-	s:STATE_IOWA={
-		region_state:N04={
+	s:STATE_KANSAS = {
+		region_state:NGP = {
 		}
 	}
-	s:STATE_MINNESOTA={
-		region_state:IRC={
+	s:STATE_OKLAHOMA = {
+		region_state:C05 = {
 		}
-		region_state:LKT={
-		}
-		region_state:N04={
-		}
-		region_state:X77={
+		region_state:NGP = {
 		}
 	}
-	s:STATE_WISCONSIN={
-		region_state:LKT={
+	s:STATE_ARKANSAS = {
+		region_state:C05 = {
 		}
-		region_state:N04={
-		}
-	}
-	s:STATE_INDIANA={
-		region_state:O01={
-		}
-		region_state:N04={
-		}
-		region_state:V83={
+		region_state:NSE = {
 		}
 	}
-	s:STATE_MICHIGAN={
-		region_state:N04={
+	s:STATE_MISSOURI = {
+		region_state:NGP = {
 		}
-		region_state:W37={
-		}
-	}
-	s:STATE_OHIO={
-		region_state:IRO={
-		}
-		region_state:S10={
-		}
-		region_state:N04={
+		region_state:O01 = {
 		}
 	}
-	s:STATE_KENTUCKY={
-		region_state:C04={
-		}
-		region_state:CHE={
-		}
-		region_state:S10={
-		}
-		region_state:X69={
+	s:STATE_IOWA = {
+		region_state:NGP = {
 		}
 	}
-	s:STATE_TENNESSEE={
-		region_state:C04={
+	s:STATE_MINNESOTA = {
+		region_state:DKT = {
 		}
-		region_state:CHE={
-		}
-		region_state:N04={
-		}
-		region_state:X78={
+		region_state:NGL = {
 		}
 	}
-	s:STATE_MISSISSIPPI={
-		region_state:C03={
+	s:STATE_WISCONSIN = {
+		region_state:DKT = {
 		}
-		region_state:C04={
-		}
-		region_state:U18={
-		}
-		region_state:U59={
+		region_state:NGL = {
 		}
 	}
-	s:STATE_ALABAMA={
-		region_state:CHE={
-		}
-		region_state:N04={
-		}
-		region_state:X29={
+	s:STATE_INDIANA = {
+		region_state:NGL = {
 		}
 	}
-	s:STATE_FLORIDA={
-		region_state:N04={
+	s:STATE_MICHIGAN = {
+		region_state:NGL = {
 		}
-		region_state:SML={
-		}
-	}
-	s:STATE_GEORGIA={
-		region_state:N04={
-		}
-		region_state:W70={
-		}
-		region_state:X17={
+		region_state:OJB = {
 		}
 	}
-	s:STATE_WEST_VIRGINIA={
-		region_state:M05={
-		}
-		region_state:S10={
+	s:STATE_OHIO = {
+		region_state:NGL = {
 		}
 	}
-	s:STATE_MARYLAND={
-		region_state:IRO={
-		}
-		region_state:L03={
-		}
-		region_state:M05={
+	s:STATE_KENTUCKY = {
+		region_state:NSE = {
 		}
 	}
-	s:STATE_DELAWARE={
-		region_state:L03={
+	s:STATE_TENNESSEE = {
+		region_state:CHE = {
+		}
+		region_state:NSE = {
 		}
 	}
-	s:STATE_PENNSYLVANIA={
-		region_state:IRO={
+	s:STATE_MISSISSIPPI = {
+		region_state:C03 = {
 		}
-		region_state:L03={
-		}
-		region_state:N04={
-		}
-		region_state:W30={
+		region_state:NSE = {
 		}
 	}
-	s:STATE_NEW_JERSEY={
-		region_state:L03={
+	s:STATE_ALABAMA = {
+		region_state:C03 = {
+		}
+		region_state:NSE = {
 		}
 	}
-	s:STATE_ILLINOIS={
-		region_state:U38={
+	s:STATE_FLORIDA = {
+		region_state:CLS = {
 		}
-		region_state:N04={
-		}
-		region_state:X67={
+		region_state:NSE = {
 		}
 	}
-	s:STATE_RHODE_ISLAND={
-		region_state:W01={
+	s:STATE_GEORGIA = {
+		region_state:CHE = {
+		}
+		region_state:NSE = {
 		}
 	}
-	s:STATE_CONNECTICUT={
-		region_state:N04={
+	s:STATE_WEST_VIRGINIA = {
+		region_state:NNE = {
 		}
 	}
-	s:STATE_MASSACHUSETTS={
-		region_state:W01={
+	s:STATE_MARYLAND = {
+		region_state:NNE = {
 		}
 	}
-	s:STATE_NEW_HAMPSHIRE={
-		region_state:P04={
+	s:STATE_DELAWARE = {
+		region_state:L03 = {
 		}
-		region_state:W02={
-		}
-	}
-	s:STATE_VERMONT={
-		region_state:M04={
-		}
-		region_state:P04={
+		region_state:NNE = {
 		}
 	}
-	s:STATE_MAINE={
-		region_state:N04={
+	s:STATE_PENNSYLVANIA = {
+		region_state:L03 = {
+		}
+		region_state:NNE = {
 		}
 	}
-	s:STATE_NORTH_CAROLINA={
-		region_state:C02={
+	s:STATE_NEW_JERSEY = {
+		region_state:L03 = {
 		}
-		region_state:CHE={
-		}
-		region_state:M05={
-		}
-		region_state:P06={
-		}
-		region_state:T73={
+		region_state:NNE = {
 		}
 	}
-	s:STATE_UTAH={
-		region_state:N04={
-		}
-		region_state:NVJ={
-		}
-		region_state:UTE={
+	s:STATE_ILLINOIS = {
+		region_state:NGL = {
 		}
 	}
-	s:STATE_SOUTH_CAROLINA={
-		region_state:C02={
+	s:STATE_RHODE_ISLAND = {
+		region_state:NNE = {
 		}
-		region_state:CHE={
+	}
+	s:STATE_CONNECTICUT = {
+		region_state:NNE = {
 		}
-		region_state:X86={
+	}
+	s:STATE_MASSACHUSETTS = {
+		region_state:NNE = {
+		}
+	}
+	s:STATE_NEW_HAMPSHIRE = {
+		region_state:NNE = {
+		}
+	}
+	s:STATE_VERMONT = {
+		region_state:NNE = {
+		}
+	}
+	s:STATE_MAINE = {
+		region_state:NNE = {
+		}
+	}
+	s:STATE_NORTH_CAROLINA = {
+		region_state:CHE = {
+		}
+		region_state:NSE = {
+		}
+	}
+	s:STATE_UTAH = {
+		region_state:NSX = {
+		}
+		region_state:SHH = {
+		}
+		region_state:UTE = {
+		}
+	}
+	s:STATE_SOUTH_CAROLINA = {
+		region_state:CHE = {
+		}
+		region_state:NSE = {
 		}
 	}
 	s:STATE_HAWAIIAN_ISLANDS={
@@ -378,172 +256,106 @@
 		region_state:W83={
 		}
 	}
-	s:STATE_ONTARIO={
-		region_state:N05={
+	s:STATE_ONTARIO = {
+		region_state:CRY = {
 		}
-		region_state:IRC={
+		region_state:NGL = {
 		}
-		region_state:IRO={
+		region_state:OJB = {
 		}
-		region_state:T45={
-		}
-		region_state:T59={
-		}
-		region_state:X31={
+		region_state:WDT = {
 		}
 	}
-	s:STATE_NEW_BRUNSWICK={
-		region_state:W02={
+	s:STATE_NEW_BRUNSWICK = {
+		region_state:MKQ = {
+		}
+		region_state:NNE = {
 		}
 	}
-	s:STATE_QUEBEC={
-		region_state:N05={
+	s:STATE_QUEBEC = {
+		region_state:CRY = {
 		}
-		region_state:IRO={
+		region_state:MKQ = {
 		}
-		region_state:M09={
-		}
-		region_state:S14={
-		}
-		region_state:U96={
-		}
-		region_state:W02={
+		region_state:NNE = {
 		}
 	}
-	s:STATE_NEWFOUNDLAND={
-		region_state:N05={
+	s:STATE_NEWFOUNDLAND = {
+		region_state:NNE = {
 		}
 	}
-	s:STATE_ALBERTA={
-		region_state:BLF={
-		}
-		region_state:N05={
-		}
-		region_state:IRC={
+	s:STATE_ALBERTA = {
+		region_state:NGL = {
 		}
 	}
-	s:STATE_BRITISH_COLUMBIA={
-		region_state:N05={
+	s:STATE_BRITISH_COLUMBIA = {
+		region_state:NPA = {
 		}
-		region_state:N12={
+		region_state:TLG = {
 		}
-		region_state:K03={
-		}
-		region_state:T02={
-		}
-		region_state:T07={
-		}
-		region_state:TY1={
-		}
-		region_state:W06={
-		}
-		region_state:X01={
+		region_state:X01 = {
 		}
 	}
-	s:STATE_SASKATCHEWAN={
-		region_state:BLF={
-		}
-		region_state:N05={
-		}
-		region_state:IRC={
+	s:STATE_SASKATCHEWAN = {
+		region_state:NGL = {
 		}
 	}
-	s:STATE_MANITOBA={
-		region_state:N05={
-		}
-		region_state:IRC={
+	s:STATE_MANITOBA = {
+		region_state:NGL = {
 		}
 	}
-	s:STATE_YUKON_TERRITORY={
-		region_state:N05={
+	s:STATE_YUKON_TERRITORY = {
+		region_state:NAQ = {
 		}
-		region_state:HH2={
-		}
-		region_state:S12={
+		region_state:TLG = {
 		}
 	}
-	s:STATE_NORTHWEST_TERRITORIES={
-		region_state:N05={
-		}
-		region_state:T04={
+	s:STATE_NORTHWEST_TERRITORIES = {
+		region_state:NAQ = {
 		}
 	}
-	s:STATE_NUNAVUT={
-		region_state:N05={
-		}
-		region_state:K05={
+	s:STATE_NUNAVUT = {
+		region_state:NAQ = {
 		}
 	}
 	s:STATE_BERMUDA={
 		region_state:B03={
 		}
 	}
-	s:STATE_TEXAS={
-		region_state:APC={
+	s:STATE_TEXAS = {
+		region_state:C05 = {
 		}
-		region_state:C05={
-		}
-		region_state:C08={
-		}
-		region_state:COM={
-		}
-		region_state:K07={
-		}
-		region_state:T94={
-		}
-		region_state:Y04={
+		region_state:NGP = {
 		}
 	}
-	s:STATE_NEVADA={
-		region_state:N04={
+	s:STATE_NEVADA = {
+		region_state:NWE = {
 		}
-		region_state:N05={
-		}
-		region_state:N06={
+		region_state:SHH = {
 		}
 	}
-	s:STATE_ARIZONA={
-		region_state:APC={
+	s:STATE_ARIZONA = {
+		region_state:HOP = {
 		}
-		region_state:H07={
+		region_state:NSX = {
 		}
-		region_state:N04={
-		}
-		region_state:NVJ={
-		}
-		region_state:O03={
-		}
-		region_state:PUE={
-		}
-		region_state:T13={
-		}
-		region_state:XK1={
+		region_state:ZUN = {
 		}
 	}
-	s:STATE_NEW_MEXICO={
-		region_state:APC={
+	s:STATE_NEW_MEXICO = {
+		region_state:NSX = {
 		}
-		region_state:COM={
+		region_state:PUE = {
 		}
-		region_state:NVJ={
+		region_state:UTE = {
 		}
-		region_state:PUE={
-		}
-		region_state:R03={
+		region_state:ZUN = {
 		}
 	}
-	s:STATE_CALIFORNIA={
-		region_state:M07={
+	s:STATE_CALIFORNIA = {
+		region_state:CMS = {
 		}
-		region_state:N06={
-		}
-		region_state:P08={
-		}
-		region_state:N04={
-		}
-		region_state:W04={
-		}
-		region_state:Y01={
+		region_state:NWE = {
 		}
 	}
 	s:STATE_SONORA={

@@ -1,0 +1,33 @@
+# A later Cree/Ojibwe-led regional union, not a 1444 starting country.
+# Uses the normal nation formation UI and its state-control requirements.
+IRC = {
+	states = {
+		STATE_ALBERTA
+		STATE_SASKATCHEWAN
+		STATE_MANITOBA
+	}
+
+	# Two of the three northern Plains regions.
+	required_states_fraction = 0.66
+
+	potential = {
+		custom_tooltip = {
+			text = aoc_iron_confederacy_founder_tt
+			OR = {
+				c:CRY ?= this
+				c:OJB ?= this
+			}
+		}
+	}
+
+	possible = {
+		NOT = { exists = c:IRC }
+		NOT = { is_country_type = decentralized }
+		is_subject = no
+		is_at_war = no
+		has_technology_researched = nation_formation
+		has_technology_researched = iron_weapons
+	}
+
+	ai_will_do = { always = yes }
+}

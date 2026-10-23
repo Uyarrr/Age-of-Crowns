@@ -1,4 +1,4 @@
-﻿A00 ?= {
+A00 ?= {
 	color = { 146 43 62 }
 	country_type = decentralized
 	tier = principality
@@ -1577,14 +1577,7 @@ C02 ?= {
 	capital = STATE_NORTH_CAROLINA
 }
 
-C03 ?= {
-	color = { 58 70 6 }
-	country_type = decentralized
-	tier = principality
-	cultures = { caddoan }
-	religion = animist
-	capital = STATE_MISSISSIPPI
-}
+# C03 is defined in aoc_north_america.txt
 
 C04 ?= {
 	color = { 82 100 9 }
@@ -1595,14 +1588,7 @@ C04 ?= {
 	capital = STATE_MISSISSIPPI
 }
 
-C05 ?= {
-	color = { 57 25 14 }
-	country_type = decentralized
-	tier = principality
-	cultures = { caddoan }
-	religion = animist
-	capital = STATE_ARKANSAS
-}
+# C05 is defined in aoc_north_america.txt
 
 C06 ?= {
 	color = { 219 255 121 }
@@ -1901,14 +1887,7 @@ CHC ?= {
 	capital = STATE_NORTH_CAUCASUS
 }
 
-CHE ?= {
-	color = { 105 145 40 }
-	country_type = decentralized
-	tier = principality
-	cultures = { cherokee }
-	religion = animist
-	capital = STATE_NORTH_CAROLINA
-}
+# CHE is defined in aoc_north_america.txt
 
 CHI ?= {
 	color = { 252 185 61 }
@@ -2401,13 +2380,7 @@ DIR ?= {
 	capital = STATE_PASHTUNISTAN
 }
 
-DKT ?= {
-	color = { 68 14 98 }
-	country_type = decentralized
-	tier = principality
-	cultures = { dakota }
-	capital = STATE_MINNESOTA
-}
+# DKT is defined in aoc_north_america.txt
 
 DL1 ?= {
 	color = { 41 49 51 }
@@ -3199,14 +3172,7 @@ GLI ?= {
 	capital = STATE_GALICIA
 }
 
-GML ?= {
-	color = { 91 191 83 }
-	country_type = decentralized
-	tier = principality
-	cultures = { aborigine }
-	religion = animist
-	capital = STATE_NEW_SOUTH_WALES
-}
+
 
 GNG ?= {
 	color = { 133 56 8 }
@@ -3875,14 +3841,7 @@ IQU ?= {
 	capital = STATE_ICA
 }
 
-IRC ?= {
-	color = { 61 158 124 }
-	country_type = decentralized
-	tier = principality
-	cultures = { siouan }
-	religion = animist
-	capital = STATE_MINNESOTA
-}
+# IRC is defined in aoc_north_america.txt
 
 IRE ?= {
 	color = { 112 150 105 }
@@ -3892,14 +3851,7 @@ IRE ?= {
 	capital = STATE_LEINSTER
 }
 
-IRO ?= {
-	color = { 87 182 80 }
-	country_type = decentralized
-	tier = kingdom
-	cultures = { iroquoian }
-	religion = animist
-	capital = STATE_NEW_YORK
-}
+# IRO is defined in aoc_north_america.txt
 
 IRQ ?= {
 	color = { 122 132 110 }
@@ -4254,14 +4206,7 @@ K15 ?= {
 	capital = STATE_QUEENSLAND
 }
 
-K16 ?= {
-	color = { 255 160 160 }
-	country_type = decentralized
-	tier = principality
-	cultures = { aborigine }
-	religion = animist
-	capital = STATE_VICTORIA
-}
+
 
 K17 ?= {
 	color = { 82 136 150 }
@@ -4541,14 +4486,7 @@ KAT ?= {
 	capital = STATE_YEMEN
 }
 
-KAU ?= {
-	color = { 245 212 134 }
-	country_type = decentralized
-	tier = principality
-	cultures = { aborigine }
-	religion = animist
-	capital = STATE_SOUTH_AUSTRALIA
-}
+
 
 KAZ ?= {
 	color = { 110 150 190 }
@@ -4967,14 +4905,7 @@ L02 ?= {
 	capital = STATE_NENETSIA
 }
 
-L03 ?= {
-	color = { 48 57 94 }
-	country_type = decentralized
-	tier = principality
-	cultures = { algonquian }
-	religion = animist
-	capital = STATE_PENNSYLVANIA
-}
+# L03 is defined in aoc_north_america.txt
 
 L04 ?= {
 	color = { 255 201 57 }
@@ -6610,14 +6541,7 @@ NM1 ?= {
 	capital = STATE_SOUTH_ATLANTIC_ISLANDS
 }
 
-NNG ?= {
-	color = { 209 160 107 }
-	country_type = decentralized
-	tier = principality
-	cultures = { aborigine }
-	religion = animist
-	capital = STATE_WESTERN_AUSTRALIA
-}
+
 
 NNV ?= {
 	color = { 205 214 216 }
@@ -6758,14 +6682,7 @@ O00 ?= {
 	capital = STATE_KYUSHU
 }
 
-O01 ?= {
-	color = { 57 86 14 }
-	country_type = decentralized
-	tier = principality
-	cultures = { siouan }
-	religion = animist
-	capital = STATE_INDIANA
-}
+# O01 is defined in aoc_north_america.txt
 
 O02 ?= {
 	color = { 200 161 230 }
@@ -7538,23 +7455,9 @@ PUD ?= {
 	capital = STATE_MADRAS
 }
 
-PUE ?= {
-	color = { 162 128 8 }
-	country_type = decentralized
-	tier = principality
-	cultures = { pueblo }
-	religion = animist
-	capital = STATE_COLORADO
-}
+# PUE is defined in aoc_north_america.txt
 
-PWN ?= {
-	color = { 252 84 118 }
-	country_type = decentralized
-	tier = principality
-	cultures = { caddoan }
-	religion = animist
-	capital = STATE_NEBRASKA
-}
+# PWN is defined in aoc_north_america.txt
 
 Q01 ?= {
 	color = { 97 174 255 }
@@ -9013,14 +8916,7 @@ T18 ?= {
 	capital = STATE_LUZON
 }
 
-T19 ?= {
-	color = { 59 227 31 }
-	country_type = decentralized
-	tier = city_state
-	cultures = { aborigine }
-	religion = animist
-	capital = STATE_NORTHERN_TERRITORY
-}
+
 
 T20 ?= {
 	color = { 153 227 31 }
@@ -11036,13 +10932,7 @@ UT1 ?= {
 	capital = STATE_NORTHERN_CAPE
 }
 
-UTE ?= {
-	color = { 235 126 175 }
-	country_type = decentralized
-	tier = principality
-	cultures = { paiute }
-	capital = STATE_UTAH
-}
+# UTE is defined in aoc_north_america.txt
 
 UTR ?= {
 	color = { 1 140 80 }
@@ -13037,14 +12927,7 @@ AAC ?= {
 	capital = STATE_NORTH_RHINE
 }
 
-X01 ?= {
-	color = { 0 201 161 }
-	country_type = decentralized
-	tier = city_state
-	cultures = { athabaskan }
-	religion = animist
-	capital = STATE_BRITISH_COLUMBIA
-}
+# X01 is defined in aoc_north_america.txt
 
 X02 ?= {
 	color = { 255 78 45 }
@@ -13762,14 +13645,7 @@ X82 ?= {
 	capital = STATE_KASTAMONU
 }
 
-X83 ?= {
-	color = { 121 10 15 }
-	country_type = decentralized
-	tier = city_state
-	cultures = { penutian }
-	religion = animist
-	capital = STATE_WASHINGTON
-}
+# X83 is defined in aoc_north_america.txt
 
 X84 ?= {
 	color = { 134 136 21 }
@@ -13998,14 +13874,7 @@ Y05 ?= {
 	capital = STATE_NORTHERN_TERRITORY
 }
 
-Y06 ?= {
-	color = { 152 192 209 }
-	country_type = decentralized
-	tier = city_state
-	cultures = { aborigine }
-	religion = animist
-	capital = STATE_NORTHERN_TERRITORY
-}
+
 
 Y07 ?= {
 	color = { 250 37 246 }

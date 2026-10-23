@@ -1830,16 +1830,7 @@ CAN = {
 	capital = STATE_ONTARIO
 }
 
-CHE = {
-	color = { 105  145  40 }
-
-	country_type = unrecognized
-
-	tier = principality
-
-	cultures = { cherokee }
-	capital = STATE_ARKANSAS
-}
+# CHE is defined in aoc_north_america.txt
 
 COL = {
 	color = { 198  113  133 }
@@ -2470,16 +2461,7 @@ SEQ = {
 	capital = STATE_OKLAHOMA
 }
 
-DKT = {
-	color = { 68 14 98 }
-
-	country_type = decentralized
-
-	tier = principality
-
-	cultures = { dakota }
-	capital = STATE_MINNESOTA
-}
+# DKT is defined in aoc_north_america.txt
 
 LKT = {
 	color = { 198 114 168 }
@@ -2536,16 +2518,7 @@ ABS = {
 	capital = STATE_MONTANA
 }
 
-IRC = {
-	color = { 61 158 124 }
-
-	country_type = decentralized
-
-	tier = principality
-
-	cultures = { cree siouan }
-	capital = STATE_SASKATCHEWAN
-}
+# IRC is defined in aoc_north_america.txt
 
 JAM = {
 	color = hsv360{ 88  87  33 }
@@ -2964,17 +2937,7 @@ TPI = { # Tupinamba
 	capital = STATE_BAHIA
 }
 
-PUE = { # Pueblo
-	color = { 162 128 8 }
-
-	country_type = unrecognized
-
-	tier = principality
-
-	cultures = { pueblo }
-
-	capital = STATE_NEW_MEXICO
-}
+# PUE is defined in aoc_north_america.txt
 
 NNV = { # Nunavut
 	color = { 205 214 216 }
@@ -3024,17 +2987,7 @@ CSC = { # Cascadia
 	capital = STATE_BRITISH_COLUMBIA
 }
 
-IRO = { # Haudenosaunee, archaically known as the Iroquois Confederacy
-	color = { 87 182 80 }
-
-	country_type = recognized
-
-	tier = principality
-
-	cultures = { iroquoian }
-
-	capital = STATE_NEW_YORK
-}
+# IRO is defined in aoc_north_america.txt
 
 CTF = { # the Council of Three Fires, Niswa-mishkodewinan
 	color = { 220 147 37 }
@@ -3096,29 +3049,9 @@ SML = { # Seminole
 	capital = STATE_FLORIDA
 }
 
-UTE = { # Ute
-	color = { 235 126 175 }
+# UTE is defined in aoc_north_america.txt
 
-	cultures = { paiute }
-
-	country_type = decentralized
-
-	tier = principality
-
-	capital = STATE_UTAH
-}
-
-PWN = { # Pawnee
-	color = { 252 84 118 }
-
-	cultures = { caddoan }
-
-	country_type = decentralized
-
-	tier = principality
-
-	capital = STATE_NEBRASKA
-}
+# PWN is defined in aoc_north_america.txt
 
 APC = { # Apacheria
 	color = { 198 158 109 }
