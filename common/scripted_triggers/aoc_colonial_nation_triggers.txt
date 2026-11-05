@@ -1,0 +1,9 @@
+# Country scope. The permanent marker survives independence and type changes.
+aoc_is_or_was_colonial_nation = {
+	OR = {
+		is_country_type = colonial
+		is_subject_type = subject_type_colony
+		has_variable = aoc_was_colonial_nation
+	}
+}
+

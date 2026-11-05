@@ -1,0 +1,11 @@
+# Call in the new country's on_created scope, before the subject pact is made.
+# The initialization marker prevents pulse fallbacks from renewing protection.
+aoc_initialize_colonial_nation_effect = {
+	if = {
+		limit = { NOT = { has_variable = aoc_colonial_nation_initialized } }
+		set_variable = aoc_was_colonial_nation
+		set_variable = aoc_colonial_nation_initialized
+		activate_law = law_type:law_colonial_nation
+		add_modifier = { name = aoc_colonial_settlement_protection years = 15 }
+	}
+}

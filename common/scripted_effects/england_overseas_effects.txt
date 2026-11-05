@@ -1,0 +1,69 @@
+# Called in the new subject's scope after create_country. Inherit the sponsor's
+# cultures/religion without replacing indigenous cultures or generating free pops.
+aoc_england_overseas_identity_effect = {
+ save_scope_as = aoc_england_new_subject
+ set_state_religion = scope:aoc_england_overlord_religion
+ scope:aoc_england_overlord = {
+  every_primary_culture = {
+   limit = { NOT = { is_primary_culture_of = scope:aoc_england_new_subject } }
+   save_temporary_scope_as = aoc_england_overlord_culture
+   scope:aoc_england_new_subject = { add_primary_culture = scope:aoc_england_overlord_culture }
+  }
+ }
+ activate_law = law_type:law_colonial_administration
+ activate_law = law_type:law_frontier_colonization
+ add_modifier = { name = colonial_administration }
+ every_scope_state = { effect_destroy_colonial_office = yes }
+}
+# Record a meaningful growth target once, including when adopting an existing Cape.
+aoc_england_cape_baseline_effect = {
+ c:SAF ?= {
+  if = {
+   limit = { is_subject_of = root NOT = { has_variable = aoc_england_cape_gdp_target } }
+   set_variable = { name = aoc_england_cape_gdp_target value = gdp }
+   change_variable = { name = aoc_england_cape_gdp_target multiply = 1.25 }
+  }
+ }
+}
+# Country scope. Aggregate only the Crown's American possessions and its subjects.
+aoc_england_new_world_census_effect = {
+ set_variable = { name = aoc_england_new_world_population value = 0 }
+ set_variable = { name = aoc_england_new_world_gdp value = 0 }
+ every_state = {
+  limit = { aoc_england_new_world_state = yes }
+  root = {
+   change_variable = { name = aoc_england_new_world_population add = prev.state_population }
+   change_variable = { name = aoc_england_new_world_gdp add = prev.gdp }
+  }
+ }
+}
+
+aoc_england_australia_census_effect = {
+ set_variable = { name = aoc_england_australia_total value = 0 }
+ set_variable = { name = aoc_england_australia_owned value = 0 }
+ every_state_region = {
+  limit = { is_in_geographic_region = geographic_region_aoc_england_australia }
+  root = { change_variable = { name = aoc_england_australia_total add = prev.num_provinces } }
+  every_scope_state = {
+   limit = { owner = { aoc_england_overseas_owner = yes } }
+   root = { change_variable = { name = aoc_england_australia_owned add = prev.num_provinces } }
+  }
+ }
+ set_variable = { name = aoc_england_australia_target value = var:aoc_england_australia_total }
+ change_variable = { name = aoc_england_australia_target multiply = 0.5 }
+}
+
+aoc_england_new_zealand_census_effect = {
+ set_variable = { name = aoc_england_new_zealand_total value = 0 }
+ set_variable = { name = aoc_england_new_zealand_owned value = 0 }
+ every_state_region = {
+  limit = { is_in_geographic_region = geographic_region_aoc_england_new_zealand }
+  root = { change_variable = { name = aoc_england_new_zealand_total add = prev.num_provinces } }
+  every_scope_state = {
+   limit = { owner = { aoc_england_overseas_owner = yes } }
+   root = { change_variable = { name = aoc_england_new_zealand_owned add = prev.num_provinces } }
+  }
+ }
+ set_variable = { name = aoc_england_new_zealand_target value = var:aoc_england_new_zealand_total }
+ change_variable = { name = aoc_england_new_zealand_target multiply = 0.5 }
+}

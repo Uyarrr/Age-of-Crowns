@@ -1,0 +1,10 @@
+aoc_colonial_settlement_protection = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	# Block positive civil-war progression even with other bonuses present.
+	country_revolution_progress_mult = -1
+	country_revolution_progress_add = -100
+	country_secession_progress_mult = -1
+	country_secession_progress_add = -100
+	country_liberty_desire_increase_mult = -1
+	country_liberty_desire_add = -1
+}

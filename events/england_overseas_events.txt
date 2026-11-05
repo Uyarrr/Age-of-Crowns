@@ -1,0 +1,85 @@
+namespace = england_overseas
+
+england_overseas.1 = {
+ type = country_event
+ title = england_overseas.1.t
+ desc = england_overseas.1.d
+ flavor = england_overseas.1.f
+ event_image = { video = "votp_french_algeria" }
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds"
+ on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+ duration = 3
+ option = { name = england_overseas.1.a default_option = yes custom_tooltip = england_overseas.1.tt }
+}
+
+england_overseas.2 = {
+ type = country_event
+ title = england_overseas.2.t
+ desc = england_overseas.2.d
+ flavor = england_overseas.2.f
+ event_image = { video = "votp_french_algeria" }
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds"
+ on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+ duration = 3
+ option = { name = england_overseas.2.a default_option = yes custom_tooltip = england_overseas.2.tt }
+}
+
+england_overseas.3 = {
+ type = country_event
+ title = england_overseas.3.t
+ desc = england_overseas.3.d
+ flavor = england_overseas.3.f
+ event_image = { video = "votp_french_algeria" }
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds"
+ on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+ duration = 3
+ option = { name = england_overseas.3.a default_option = yes custom_tooltip = england_overseas.3.tt }
+}
+
+england_overseas.4 = {
+ type = country_event
+ title = england_overseas.4.t
+ desc = england_overseas.4.d
+ flavor = england_overseas.4.f
+ event_image = { video = "votp_french_algeria" }
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_australasia.dds"
+ on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+ duration = 3
+ option = { name = england_overseas.4.a default_option = yes custom_tooltip = england_overseas.4.tt }
+}
+
+england_overseas.5 = {
+ type = country_event
+ title = england_overseas.5.t
+ desc = england_overseas.5.d
+ flavor = england_overseas.5.f
+ event_image = { video = "votp_french_algeria" }
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_hudson_bay.dds"
+ on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+ duration = 3
+ option = { name = england_overseas.5.a default_option = yes custom_tooltip = england_overseas.5.tt }
+}
+
+england_overseas.6 = {
+ type = country_event
+ title = england_overseas.6.t
+ desc = england_overseas.6.d
+ flavor = england_overseas.6.f
+ event_image = { video = "votp_french_algeria" }
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_royal_navy.dds"
+ on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+ duration = 3
+ option = { name = england_overseas.6.a default_option = yes custom_tooltip = england_overseas.6.tt }
+}
+
+england_overseas.7 = {
+ type = country_event
+ title = england_overseas.7.t
+ desc = england_overseas.7.d
+ flavor = england_overseas.7.f
+ event_image = { video = "votp_french_algeria" }
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_new_world.dds"
+ on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+ duration = 3
+ option = { name = england_overseas.7.a default_option = yes custom_tooltip = england_overseas.7.tt }
+}

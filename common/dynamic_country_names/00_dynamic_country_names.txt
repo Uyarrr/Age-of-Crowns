@@ -1122,6 +1122,18 @@ BEL = { # Belgium
 }
 
 BIC = { # East India Company
+ dynamic_country_name = {
+  name = aoc_england_east_india_name
+  adjective = aoc_england_east_india_adjective
+  is_main_tag_only = yes
+  priority = 100
+  trigger = {
+   scope:actor ?= {
+    is_subject_type = subject_type_chartered_company
+    any_overlord_or_above = { aoc_england_overseas_country = yes }
+   }
+  }
+ }
 	dynamic_country_name = {
 		name = dyn_c_british_raj
 		adjective = dyn_c_british_raj_adj
@@ -2670,6 +2682,18 @@ RUS = { # Russia
 
 # South Africa/Cape Colony
 SAF = {
+ dynamic_country_name = {
+  name = aoc_england_cape_colony_name
+  adjective = aoc_england_cape_colony_adjective
+  is_main_tag_only = yes
+  priority = 100
+  trigger = {
+   scope:actor ?= {
+    is_subject = yes
+    any_overlord_or_above = { aoc_england_overseas_country = yes }
+   }
+  }
+ }
 
 	# Cape of Good Hope
 	dynamic_country_name = {

@@ -1,5 +1,5 @@
 # England's Canada-only alternative to the generic colonial administration.
-# These are the six British colonial subjects with Canadian territory in 1836.
+# The five provincial administrations; Hudson's Bay has its own charter journal.
 # Columbia District uses ORG, matching vanilla's dynamic British subject name.
 
 je_england_canada_new_brunswick = {
@@ -47,6 +47,7 @@ je_england_canada_new_brunswick = {
 				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_new_brunswick_established
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = { name = colonial_administration }
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
@@ -100,6 +101,7 @@ je_england_canada_nova_scotia = {
 				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_nova_scotia_established
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = { name = colonial_administration }
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
@@ -134,6 +136,7 @@ je_england_canada_quebec = {
 				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_quebec_established
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = { name = colonial_administration }
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
@@ -168,6 +171,7 @@ je_england_canada_ontario = {
 				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_ontario_established
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = { name = colonial_administration }
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
@@ -202,127 +206,13 @@ je_england_canada_columbia = {
 				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_columbia_established
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = { name = colonial_administration }
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
 		}
 		hidden_effect = {
 			create_diplomatic_pact = { country = c:ORG type = colony }
-		}
-	}
-}
-
-je_england_canada_hudsons_bay = {
-	name = "je_england_canada_hudsons_bay"
-	desc = "je_england_canada_hudsons_bay_desc"
-	visible = {
-		OR = {
-			NOT = { exists = c:HBC }
-			c:HBC ?= { is_subject_of = root }
-		}
-	}
-	possible = {
-		has_technology_researched = colonization
-		is_at_war = no
-		is_diplomatic_play_committed_participant = no
-		OR = {
-			# Found the company from any controlled interior state.
-			AND = {
-				NOT = { exists = c:HBC }
-				any_scope_state = {
-					OR = {
-						state_region = s:STATE_MANITOBA
-						state_region = s:STATE_SASKATCHEWAN
-						state_region = s:STATE_ALBERTA
-						state_region = s:STATE_NORTHWEST_TERRITORIES
-						state_region = s:STATE_YUKON_TERRITORY
-						state_region = s:STATE_NUNAVUT
-					}
-				}
-			}
-			# Once founded, every later use transfers all newly controlled interior states.
-			AND = {
-				exists = c:HBC
-				c:HBC ?= { is_subject_of = root }
-				any_scope_state = {
-					OR = {
-						state_region = s:STATE_MANITOBA
-						state_region = s:STATE_SASKATCHEWAN
-						state_region = s:STATE_ALBERTA
-						state_region = s:STATE_NORTHWEST_TERRITORIES
-						state_region = s:STATE_YUKON_TERRITORY
-						state_region = s:STATE_NUNAVUT
-					}
-				}
-			}
-		}
-	}
-	ai_chance = { value = 100 }
-	effect = {
-		save_scope_as = england_canada_overlord
-		religion = { save_scope_as = england_canada_overlord_religion }
-		if = {
-			limit = { exists = c:HBC }
-			every_scope_state = {
-				limit = {
-					OR = {
-						state_region = s:STATE_MANITOBA
-						state_region = s:STATE_SASKATCHEWAN
-						state_region = s:STATE_ALBERTA
-						state_region = s:STATE_NORTHWEST_TERRITORIES
-						state_region = s:STATE_YUKON_TERRITORY
-						state_region = s:STATE_NUNAVUT
-					}
-				}
-				effect_destroy_colonial_office = yes
-				set_state_owner = c:HBC
-			}
-		}
-		else = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						state_region = s:STATE_MANITOBA
-						state_region = s:STATE_SASKATCHEWAN
-						state_region = s:STATE_ALBERTA
-						state_region = s:STATE_NORTHWEST_TERRITORIES
-						state_region = s:STATE_YUKON_TERRITORY
-						state_region = s:STATE_NUNAVUT
-					}
-				}
-				save_scope_as = england_canada_hudsons_bay_founding_state
-			}
-			create_country = {
-				tag = HBC
-				origin = root
-				state = scope:england_canada_hudsons_bay_founding_state
-				on_created = {
-					save_scope_as = england_canada_new_subject
-					england_canada_inherit_overlord_identity_effect = yes
-					set_variable = england_canada_hudsons_bay_established
-					activate_law = law_type:law_colonial_administration
-					activate_law = law_type:law_frontier_colonization
-					add_modifier = { name = colonial_administration }
-					every_scope_state = { effect_destroy_colonial_office = yes }
-				}
-			}
-			hidden_effect = {
-				create_diplomatic_pact = { country = c:HBC type = chartered_company }
-			}
-			every_scope_state = {
-				limit = {
-					OR = {
-						state_region = s:STATE_MANITOBA
-						state_region = s:STATE_SASKATCHEWAN
-						state_region = s:STATE_ALBERTA
-						state_region = s:STATE_NORTHWEST_TERRITORIES
-						state_region = s:STATE_YUKON_TERRITORY
-						state_region = s:STATE_NUNAVUT
-					}
-				}
-				effect_destroy_colonial_office = yes
-				set_state_owner = c:HBC
-			}
 		}
 	}
 }

@@ -1,0 +1,59 @@
+# Country scope unless noted. ROOT is always the journal/button owner.
+aoc_england_overseas_country = {
+ OR = { c:ENG ?= this c:GBR ?= this }
+ is_subject = no
+ is_revolutionary = no
+ is_secessionist = no
+}
+# Country scope: direct Crown ownership or any tier of its subject hierarchy.
+aoc_england_overseas_owner = { OR = { this = root is_subject_of = root } }
+# State scope.
+aoc_england_new_world_state = {
+ is_in_geographic_region = geographic_region_americas
+ owner = { aoc_england_overseas_owner = yes }
+}
+aoc_england_cape_station_ready = {
+ exists = c:SAF
+ c:SAF ?= {
+  is_subject_of = root
+  any_scope_state = { state_region = s:STATE_CAPE_COLONY }
+  total_population >= 25000
+  gdp >= 100000
+  any_scope_state = { is_coastal = yes has_building = building_port }
+ }
+}
+aoc_england_cape_developed = {
+ exists = c:SAF
+ c:SAF ?= {
+  is_subject_of = root
+  owns_entire_state_region = STATE_CAPE_COLONY
+  total_population >= 150000
+  gdp >= 750000
+  gdp >= var:aoc_england_cape_gdp_target
+  average_sol >= 10
+ }
+}
+aoc_england_indian_presidencies = {
+ exists = c:BIC
+ has_company = company_type:company_aoc_england_east_india
+ c:BIC ?= {
+  is_subject_of = root
+  is_subject_type = subject_type_chartered_company
+  total_population >= 250000
+  gdp >= 500000
+ }
+ # Count distinct state regions, not multiple owners' fragments of one region.
+ any_state_region = {
+  count >= 3
+  is_in_geographic_region = geographic_region_india
+  any_scope_state = { owner = c:BIC num_provinces >= 1 }
+ }
+}
+aoc_england_naval_leadership = {
+ naval_power_projection > 0
+ NOT = { any_country = { count >= 3 naval_power_projection > root.naval_power_projection } }
+ "goods_production_rank(g:navalsupplies)" <= 3
+ any_scope_state = {
+  any_scope_building = { is_building_type = building_shipyard occupancy >= 0.5 }
+ }
+}

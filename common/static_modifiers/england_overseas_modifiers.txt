@@ -1,0 +1,59 @@
+aoc_england_cape_route = {
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds"
+ country_convoys_capacity_mult = 0.10
+ country_max_declared_interests_add = 2
+}
+
+aoc_england_cape_prosperity = {
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds"
+ country_convoys_capacity_mult = 0.15
+ state_construction_mult = 0.05
+ country_prestige_mult = 0.10
+}
+
+aoc_england_india_trade = {
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds"
+ country_company_throughput_bonus_add = 0.05
+ building_textile_mill_throughput_add = 0.10
+ country_convoys_capacity_mult = 0.15
+}
+
+aoc_england_southern_cross = {
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_australasia.dds"
+ state_migration_pull_mult = 0.15
+ country_convoys_capacity_mult = 0.15
+ building_group_bg_agriculture_throughput_add = 0.10
+}
+
+aoc_england_settlement_support = {
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_australasia.dds"
+ state_migration_pull_mult = 0.25
+ state_construction_mult = 0.15
+ building_group_bg_agriculture_throughput_add = 0.10
+}
+
+aoc_england_bay_dividends = {
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_hudson_bay.dds"
+ building_hunting_lodge_throughput_add = 0.20
+ country_company_throughput_bonus_add = 0.05
+ country_prestige_mult = 0.10
+}
+
+aoc_england_wooden_walls = {
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_royal_navy.dds"
+ unit_navy_offense_mult = 0.15
+ unit_navy_defense_mult = 0.15
+ country_convoy_damage_taken_mult = -0.20
+ building_group_bg_military_industry_throughput_add = 0.15
+ country_prestige_from_navy_power_projection_mult = 0.25
+}
+
+aoc_england_atlantic_dominion = {
+ icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_new_world.dds"
+ country_prestige_mult = 0.25
+ state_construction_mult = 0.15
+ country_bureaucracy_mult = 0.15
+ country_convoys_capacity_mult = 0.25
+ building_group_bg_manufacturing_throughput_add = 0.15
+ building_group_bg_plantations_throughput_add = 0.20
+}

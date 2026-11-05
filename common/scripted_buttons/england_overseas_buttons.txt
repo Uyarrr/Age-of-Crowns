@@ -1,0 +1,324 @@
+aoc_england_charter_cape = {
+ name = aoc_england_charter_cape
+ desc = aoc_england_charter_cape_desc
+ visible = { aoc_england_overseas_country = yes }
+ cooldown = { days = 30 }
+ possible = {
+  has_technology_researched = colonization
+
+  is_at_war = no
+  is_diplomatic_play_committed_participant = no
+  OR = { NOT = { exists = c:SAF } c:SAF ?= { is_subject_of = root  } }
+  OR = {
+   any_scope_state = { state_region = s:STATE_CAPE_COLONY }
+   AND = { exists = c:SAF c:SAF ?= { is_subject_of = root NOT = { has_variable = aoc_england_cape_endowed } } }
+  }
+ }
+ ai_chance = { value = 100 }
+ effect = {
+  save_scope_as = aoc_england_overlord
+  religion = { save_scope_as = aoc_england_overlord_religion }
+  if = {
+   limit = { NOT = { exists = c:SAF } }
+   random_scope_state = { limit = { state_region = s:STATE_CAPE_COLONY } save_scope_as = aoc_england_charter_state }
+   create_country = {
+    tag = SAF
+    origin = root
+    state = scope:aoc_england_charter_state
+    on_created = {
+     aoc_england_overseas_identity_effect = yes
+     aoc_initialize_colonial_nation_effect = yes
+
+    }
+   }
+   create_diplomatic_pact = { country = c:SAF type = colony }
+  }
+  every_scope_state = {
+   limit = { state_region = s:STATE_CAPE_COLONY }
+   effect_destroy_colonial_office = yes
+   set_state_owner = c:SAF
+  }
+
+  c:SAF = {
+   if = {
+    limit = { root = { NOT = { has_variable = aoc_england_cape_endowed } } }
+    root = { set_variable = aoc_england_cape_endowed }
+    set_variable = aoc_england_cape_endowed
+    capital = {
+     create_building = { building = building_livestock_ranch level = 2 reserves = 0.5 }
+
+    }
+    random_scope_state = {
+     limit = { is_coastal = yes }
+     create_building = { building = building_port level = 1 reserves = 0.5 activate_production_methods = { pm_building_port_main_1 } }
+    }
+   }
+  }
+  aoc_england_cape_baseline_effect = yes
+
+  custom_tooltip = aoc_england_charter_cape_tt
+ }
+}
+
+aoc_england_charter_east_india = {
+ name = aoc_england_charter_east_india
+ desc = aoc_england_charter_east_india_desc
+ visible = { aoc_england_overseas_country = yes }
+ cooldown = { days = 30 }
+ possible = {
+  has_technology_researched = colonization
+  has_variable = aoc_england_india_unlocked
+  is_at_war = no
+  is_diplomatic_play_committed_participant = no
+  OR = { NOT = { exists = c:BIC } c:BIC ?= { is_subject_of = root is_subject_type = subject_type_chartered_company } }
+  OR = {
+   any_scope_state = { is_in_geographic_region = geographic_region_india }
+   AND = { exists = c:BIC c:BIC ?= { is_subject_of = root NOT = { has_variable = aoc_england_east_india_endowed } } }
+  }
+ }
+ ai_chance = { value = 100 }
+ effect = {
+  save_scope_as = aoc_england_overlord
+  religion = { save_scope_as = aoc_england_overlord_religion }
+  if = {
+   limit = { NOT = { exists = c:BIC } }
+   random_scope_state = { limit = { is_in_geographic_region = geographic_region_india } save_scope_as = aoc_england_charter_state }
+   create_country = {
+    tag = BIC
+    origin = root
+    state = scope:aoc_england_charter_state
+    on_created = {
+     aoc_england_overseas_identity_effect = yes
+     set_country_type = company
+     activate_law = law_type:law_presidential_republic
+     activate_law = law_type:law_oligarchy
+    }
+   }
+   create_diplomatic_pact = { country = c:BIC type = chartered_company }
+  }
+  every_scope_state = {
+   limit = { is_in_geographic_region = geographic_region_india }
+   effect_destroy_colonial_office = yes
+   set_state_owner = c:BIC
+  }
+
+ set_variable = aoc_england_east_india_chartered
+ if = { limit = { NOT = { has_company = company_type:company_aoc_england_east_india } } add_company = company_type:company_aoc_england_east_india }
+ company:company_aoc_england_east_india = { add_owned_country = c:BIC }
+
+  c:BIC = {
+   if = {
+    limit = { root = { NOT = { has_variable = aoc_england_east_india_endowed } } }
+    root = { set_variable = aoc_england_east_india_endowed }
+    set_variable = aoc_england_east_india_endowed
+    capital = {
+     create_building = { building = building_textile_mill add_ownership = { company = { type = company_aoc_england_east_india country = scope:aoc_england_overlord levels = 2 } } reserves = 0.5 }
+     create_building = { building = building_cotton_plantation level = 2 reserves = 0.5 }
+    }
+    random_scope_state = {
+     limit = { is_coastal = yes }
+     create_building = { building = building_port level = 1 reserves = 0.5 activate_production_methods = { pm_building_port_main_1 } }
+    }
+   }
+  }
+
+  s:STATE_GUJARAT = { add_claim = c:BIC }
+  s:STATE_BOMBAY = { add_claim = c:BIC }
+  s:STATE_MADRAS = { add_claim = c:BIC }
+  s:STATE_WEST_BENGAL = { add_claim = c:BIC }
+  s:STATE_EAST_BENGAL = { add_claim = c:BIC }
+  s:STATE_CIRCARS = { add_claim = c:BIC }
+  custom_tooltip = aoc_england_charter_east_india_tt
+ }
+}
+
+aoc_england_charter_australia = {
+ name = aoc_england_charter_australia
+ desc = aoc_england_charter_australia_desc
+ visible = { aoc_england_overseas_country = yes }
+ cooldown = { days = 30 }
+ possible = {
+  has_technology_researched = colonization
+  has_variable = aoc_england_australasia_unlocked
+  is_at_war = no
+  is_diplomatic_play_committed_participant = no
+  OR = { NOT = { exists = c:AST } c:AST ?= { is_subject_of = root  } }
+  OR = {
+   any_scope_state = { is_in_geographic_region = geographic_region_aoc_england_australia }
+   AND = { exists = c:AST c:AST ?= { is_subject_of = root NOT = { has_variable = aoc_england_australia_endowed } } }
+  }
+ }
+ ai_chance = { value = 100 }
+ effect = {
+  save_scope_as = aoc_england_overlord
+  religion = { save_scope_as = aoc_england_overlord_religion }
+  if = {
+   limit = { NOT = { exists = c:AST } }
+   random_scope_state = { limit = { is_in_geographic_region = geographic_region_aoc_england_australia } save_scope_as = aoc_england_charter_state }
+   create_country = {
+    tag = AST
+    origin = root
+    state = scope:aoc_england_charter_state
+    on_created = {
+     aoc_england_overseas_identity_effect = yes
+     aoc_initialize_colonial_nation_effect = yes
+
+    }
+   }
+   create_diplomatic_pact = { country = c:AST type = colony }
+  }
+  every_scope_state = {
+   limit = { is_in_geographic_region = geographic_region_aoc_england_australia }
+   effect_destroy_colonial_office = yes
+   set_state_owner = c:AST
+  }
+
+  c:AST = {
+   if = {
+    limit = { root = { NOT = { has_variable = aoc_england_australia_endowed } } }
+    root = { set_variable = aoc_england_australia_endowed }
+    set_variable = aoc_england_australia_endowed
+    capital = {
+     create_building = { building = building_livestock_ranch level = 2 reserves = 0.5 }
+
+    }
+    random_scope_state = {
+     limit = { is_coastal = yes }
+     create_building = { building = building_port level = 1 reserves = 0.5 activate_production_methods = { pm_building_port_main_1 } }
+    }
+   }
+  }
+
+
+  custom_tooltip = aoc_england_charter_australia_tt
+ }
+}
+
+aoc_england_charter_new_zealand = {
+ name = aoc_england_charter_new_zealand
+ desc = aoc_england_charter_new_zealand_desc
+ visible = { aoc_england_overseas_country = yes }
+ cooldown = { days = 30 }
+ possible = {
+  has_technology_researched = colonization
+  has_variable = aoc_england_australasia_unlocked
+  is_at_war = no
+  is_diplomatic_play_committed_participant = no
+  OR = { NOT = { exists = c:NZL } c:NZL ?= { is_subject_of = root  } }
+  OR = {
+   any_scope_state = { is_in_geographic_region = geographic_region_aoc_england_new_zealand }
+   AND = { exists = c:NZL c:NZL ?= { is_subject_of = root NOT = { has_variable = aoc_england_new_zealand_endowed } } }
+  }
+ }
+ ai_chance = { value = 100 }
+ effect = {
+  save_scope_as = aoc_england_overlord
+  religion = { save_scope_as = aoc_england_overlord_religion }
+  if = {
+   limit = { NOT = { exists = c:NZL } }
+   random_scope_state = { limit = { is_in_geographic_region = geographic_region_aoc_england_new_zealand } save_scope_as = aoc_england_charter_state }
+   create_country = {
+    tag = NZL
+    origin = root
+    state = scope:aoc_england_charter_state
+    on_created = {
+     aoc_england_overseas_identity_effect = yes
+     aoc_initialize_colonial_nation_effect = yes
+
+    }
+   }
+   create_diplomatic_pact = { country = c:NZL type = colony }
+  }
+  every_scope_state = {
+   limit = { is_in_geographic_region = geographic_region_aoc_england_new_zealand }
+   effect_destroy_colonial_office = yes
+   set_state_owner = c:NZL
+  }
+
+  c:NZL = {
+   if = {
+    limit = { root = { NOT = { has_variable = aoc_england_new_zealand_endowed } } }
+    root = { set_variable = aoc_england_new_zealand_endowed }
+    set_variable = aoc_england_new_zealand_endowed
+    capital = {
+     create_building = { building = building_logging_camp level = 2 reserves = 0.5 }
+
+    }
+    random_scope_state = {
+     limit = { is_coastal = yes }
+     create_building = { building = building_port level = 1 reserves = 0.5 activate_production_methods = { pm_building_port_main_1 } }
+    }
+   }
+  }
+
+
+  custom_tooltip = aoc_england_charter_new_zealand_tt
+ }
+}
+
+aoc_england_charter_hudson_bay = {
+ name = aoc_england_charter_hudson_bay
+ desc = aoc_england_charter_hudson_bay_desc
+ visible = { aoc_england_overseas_country = yes }
+ cooldown = { days = 30 }
+ possible = {
+  has_technology_researched = colonization
+
+  is_at_war = no
+  is_diplomatic_play_committed_participant = no
+  OR = { NOT = { exists = c:HBC } c:HBC ?= { is_subject_of = root is_subject_type = subject_type_chartered_company } }
+  OR = {
+   any_scope_state = { is_in_geographic_region = geographic_region_aoc_england_hudson_bay }
+   AND = { exists = c:HBC c:HBC ?= { is_subject_of = root NOT = { has_variable = aoc_england_hudson_bay_endowed } } }
+  }
+ }
+ ai_chance = { value = 100 }
+ effect = {
+  save_scope_as = aoc_england_overlord
+  religion = { save_scope_as = aoc_england_overlord_religion }
+  if = {
+   limit = { NOT = { exists = c:HBC } }
+   random_scope_state = { limit = { is_in_geographic_region = geographic_region_aoc_england_hudson_bay } save_scope_as = aoc_england_charter_state }
+   create_country = {
+    tag = HBC
+    origin = root
+    state = scope:aoc_england_charter_state
+    on_created = {
+     aoc_england_overseas_identity_effect = yes
+     set_country_type = company
+     activate_law = law_type:law_presidential_republic
+     activate_law = law_type:law_oligarchy
+    }
+   }
+   create_diplomatic_pact = { country = c:HBC type = chartered_company }
+  }
+  every_scope_state = {
+   limit = { is_in_geographic_region = geographic_region_aoc_england_hudson_bay }
+   effect_destroy_colonial_office = yes
+   set_state_owner = c:HBC
+  }
+
+ set_variable = aoc_england_hudson_bay_chartered
+ if = { limit = { NOT = { has_company = company_type:company_aoc_england_hudson_bay } } add_company = company_type:company_aoc_england_hudson_bay }
+ company:company_aoc_england_hudson_bay = { add_owned_country = c:HBC }
+
+  c:HBC = {
+   if = {
+    limit = { root = { NOT = { has_variable = aoc_england_hudson_bay_endowed } } }
+    root = { set_variable = aoc_england_hudson_bay_endowed }
+    set_variable = aoc_england_hudson_bay_endowed
+    capital = {
+     create_building = { building = building_hunting_lodge add_ownership = { company = { type = company_aoc_england_hudson_bay country = scope:aoc_england_overlord levels = 3 } } reserves = 0.5 }
+
+    }
+    random_scope_state = {
+     limit = { is_coastal = yes }
+     create_building = { building = building_port level = 1 reserves = 0.5 activate_production_methods = { pm_building_port_main_1 } }
+    }
+   }
+  }
+
+
+  custom_tooltip = aoc_england_charter_hudson_bay_tt
+ }
+}

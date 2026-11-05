@@ -1,0 +1,51 @@
+# Existing colonies and older saves receive the reform once. Scripted colonies
+# initialize immediately in on_created, rather than waiting for a pulse.
+on_game_started = {
+	on_actions = { aoc_initialize_existing_colonial_nations }
+}
+
+aoc_initialize_existing_colonial_nations = {
+	effect = {
+		every_country = {
+			limit = { aoc_is_or_was_colonial_nation = yes }
+			aoc_initialize_colonial_nation_effect = yes
+		}
+	}
+}
+
+on_monthly_pulse_country = {
+	on_actions = { aoc_colonial_nation_monthly_maintenance }
+}
+
+aoc_colonial_nation_monthly_maintenance = {
+	effect = {
+		if = {
+			limit = { aoc_is_or_was_colonial_nation = yes }
+			aoc_initialize_colonial_nation_effect = yes
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				has_modifier = aoc_colonial_settlement_protection
+			}
+			add_liberty_desire = -100
+		}
+	}
+}
+
+on_become_subject = {
+	on_actions = { aoc_colonial_nation_subject_setup }
+}
+
+aoc_colonial_nation_subject_setup = {
+	effect = {
+		if = {
+			limit = { aoc_is_or_was_colonial_nation = yes }
+			aoc_initialize_colonial_nation_effect = yes
+			if = {
+				limit = { has_modifier = aoc_colonial_settlement_protection }
+				add_liberty_desire = -100
+			}
+		}
+	}
+}

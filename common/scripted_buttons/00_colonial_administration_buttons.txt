@@ -98,6 +98,7 @@ je_colonial_administration_button_senegal = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -226,6 +227,7 @@ je_colonial_administration_button_zanj = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -264,6 +266,7 @@ je_colonial_administration_button_southern_africa = {
 		is_not_in_geographic_region = geographic_region_africa
 		any_scope_state = {
 			region = sr:region_southern_africa
+			NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 		}
 		NOT = {
 			any_subject_or_below = {
@@ -277,6 +280,7 @@ je_colonial_administration_button_southern_africa = {
 	possible = {
 		any_scope_state = {
 			region = sr:region_southern_africa
+			NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 			count >= 1
 		}
 
@@ -308,12 +312,14 @@ je_colonial_administration_button_southern_africa = {
 			limit = {
 				any_scope_state = {
 					region = sr:region_southern_africa
+					NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 					has_decree = decree_greener_grass_campaign
 				}
 			}
 			random_scope_state = {
 				limit = {
 					region = sr:region_southern_africa
+					NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 					has_decree = decree_greener_grass_campaign
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
@@ -323,6 +329,7 @@ je_colonial_administration_button_southern_africa = {
 			random_scope_state = {
 				limit = {
 					region = sr:region_southern_africa
+					NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
 			}
@@ -330,6 +337,7 @@ je_colonial_administration_button_southern_africa = {
 		every_scope_state = {
 			limit = {
 				region = sr:region_southern_africa
+				NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 			}
 			set_variable = state_to_cede
 		}
@@ -354,6 +362,7 @@ je_colonial_administration_button_southern_africa = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -482,6 +491,7 @@ je_colonial_administration_button_congo = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -618,6 +628,7 @@ je_colonial_administration_button_canada = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -770,6 +781,7 @@ je_colonial_administration_button_atlantic_coast = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -922,6 +934,7 @@ je_colonial_administration_button_pacific_coast = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -1050,6 +1063,7 @@ je_colonial_administration_button_great_plains = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -1178,6 +1192,7 @@ je_colonial_administration_button_central_america = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -1306,6 +1321,7 @@ je_colonial_administration_button_gran_colombia = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -1434,6 +1450,7 @@ je_colonial_administration_button_andes = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -1562,6 +1579,7 @@ je_colonial_administration_button_la_plata = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -1690,6 +1708,7 @@ je_colonial_administration_button_brazil = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -1795,6 +1814,7 @@ je_colonial_administration_button_cape_verde = {
 				}
 				activate_law = law_type:law_frontier_colonization
 				activate_law = law_type:law_colonial_administration
+				aoc_initialize_colonial_nation_effect = yes
 				add_modifier = {
 					name = colonial_administration
 				}
@@ -2031,6 +2051,7 @@ je_colonial_administration_button_expand_southern_africa = {
 		OR = {
 			any_scope_state = {
 				region = sr:region_southern_africa
+				NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 				is_under_colonization = no
 			}
 
@@ -2062,12 +2083,14 @@ je_colonial_administration_button_expand_southern_africa = {
 			limit = {
 				any_scope_state = {
 					region = sr:region_southern_africa
+					NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 					is_under_colonization = no
 				}
 			}
 			every_scope_state = {
 				limit = {
 					region = sr:region_southern_africa
+					NOT = { state_region = s:STATE_CAPE_COLONY root = { aoc_england_overseas_country = yes } }
 					is_under_colonization = no
 				}
 				effect_destroy_colonial_office = yes
