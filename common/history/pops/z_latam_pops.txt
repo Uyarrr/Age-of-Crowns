@@ -1075,44 +1075,7 @@ POPS = {
 		}
 	}
 
-	s:STATE_BUENOS_AIRES = {
-		region_state:CUAC = {
-			create_pop = {
-				culture = patagonian
-				religion = animist
-				size = 5986
-			}
-			create_pop = {
-				culture = charruan
-				religion = animist
-				size = 1162
-			}
-			create_pop = {
-				culture = charruan
-				religion = animist
-				pop_type = slaves
-				size = 59
-			}
-		}
-		region_state:MPC = {
-			create_pop = {
-				culture = patagonian
-				religion = animist
-				size = 63273
-			}
-			create_pop = {
-				culture = charruan
-				religion = animist
-				size = 12289
-			}
-			create_pop = {
-				culture = charruan
-				religion = animist
-				pop_type = slaves
-				size = 625
-			}
-		}
-	}
+
 
 	s:STATE_LA_PAMPA = {
 		region_state:MPC = {
@@ -1156,49 +1119,9 @@ POPS = {
 		}
 	}
 
-	s:STATE_LOS_RIOS = {
-		region_state:MPC = {
-			create_pop = {
-				culture = patagonian
-				religion = animist
-				size = 30647
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				size = 7897
-			}
-		}
-		region_state:PHE = {
-			create_pop = {
-				culture = patagonian
-				religion = animist
-				size = 4540
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				size = 1170
-			}
-		}
-	}
 
-	s:STATE_PATAGONIA = {
-		region_state:MPC = {
-			create_pop = {
-				culture = patagonian
-				religion = animist
-				size = 11255
-			}
-		}
-		region_state:THL = {
-			create_pop = {
-				culture = patagonian
-				religion = animist
-				size = 89605
-			}
-		}
-	}
+
+
 
 	s:STATE_ARAUCANIA = {
 		region_state:MPC = {
@@ -1254,92 +1177,7 @@ POPS = {
 		}
 	}
 
-	s:STATE_PARA = {
-		region_state:AMZ = {
-			create_pop = {
-				culture = tupinamba
-				religion = animist
-				size = 78008
-			}
-			create_pop = {
-				culture = cariban
-				religion = animist
-				size = 28817
-			}
-			create_pop = {
-				culture = tupinamba
-				religion = animist
-				pop_type = slaves
-				size = 901
-			}
-			create_pop = {
-				culture = je
-				religion = animist
-				size = 23300
-			}
-			create_pop = {
-				culture = lokono
-				religion = animist
-				size = 5882
-			}
-		}
-		region_state:TBI = {
-			create_pop = {
-				culture = tupinamba
-				religion = animist
-				size = 4353
-			}
-			create_pop = {
-				culture = cariban
-				religion = animist
-				size = 1608
-			}
-			create_pop = {
-				culture = tupinamba
-				religion = animist
-				pop_type = slaves
-				size = 50
-			}
-			create_pop = {
-				culture = je
-				religion = animist
-				size = 1300
-			}
-			create_pop = {
-				culture = lokono
-				religion = animist
-				size = 328
-			}
-		}
-		region_state:TPAC = {
-			create_pop = {
-				culture = tupinamba
-				religion = animist
-				size = 4018
-			}
-			create_pop = {
-				culture = cariban
-				religion = animist
-				size = 1484
-			}
-			create_pop = {
-				culture = tupinamba
-				religion = animist
-				pop_type = slaves
-				size = 46
-			}
-			create_pop = {
-				culture = je
-				religion = animist
-				size = 1200
-			}
-			create_pop = {
-				culture = lokono
-				religion = animist
-				size = 303
-			}
-		}
-	}
+
 
 	s:STATE_MARANHAO = {
 		region_state:KAP = {

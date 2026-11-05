@@ -229,12 +229,7 @@ STATES = {
         add_resource_potential = building_apiary
         add_resource_potential = building_stud_farm
     }
-    s:STATE_MORAVIA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_fiber_farm
-        add_resource_potential = building_apiary
-        add_resource_potential = building_stud_farm
-    }
+
     s:STATE_STYRIA = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -622,10 +617,7 @@ STATES = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
     }
-    s:STATE_UPPER_SILESIA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
+
     s:STATE_GREATER_POLAND = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -646,10 +638,7 @@ STATES = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
     }
-    s:STATE_WEST_GALICIA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
+
     s:STATE_EAST_GALICIA = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -1650,15 +1639,8 @@ STATES = {
         add_resource_potential = building_stud_farm
         add_resource_potential = building_chili_plantation
     }
-    s:STATE_BUENOS_AIRES = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_apiary
-        add_resource_potential = building_stud_farm
-    }
-    s:STATE_PATAGONIA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
+
+
     s:STATE_RIO_NEGRO = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -1697,12 +1679,7 @@ STATES = {
         add_resource_potential = building_stud_farm
         add_resource_potential = building_chili_plantation
     }
-    s:STATE_LOS_RIOS = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_apiary
-        add_resource_potential = building_stud_farm
-        add_resource_potential = building_chili_plantation
-    }
+
     s:STATE_ARAUCANIA = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -1710,10 +1687,7 @@ STATES = {
     s:STATE_SOUTH_ATLANTIC_ISLANDS = {
         add_resource_potential = building_orchard
     }
-    s:STATE_PARA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_chili_plantation
-    }
+
     s:STATE_MARANHAO = {
         add_resource_potential = building_orchard
         add_resource_potential = building_chili_plantation
@@ -2035,14 +2009,8 @@ STATES = {
         add_resource_potential = building_stud_farm
         add_resource_potential = building_tea_garden
     }
-    s:STATE_SAMARA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
-    s:STATE_TARTARIA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
+
+
     s:STATE_ASTRAKHAN = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -2458,10 +2426,7 @@ STATES = {
         add_resource_potential = building_apiary
         add_resource_potential = building_tea_garden
     }
-    s:STATE_FORMOSA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_tea_garden
-    }
+
     s:STATE_SHANDONG = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -2682,9 +2647,7 @@ STATES = {
         add_resource_potential = building_orchard
         add_resource_potential = building_tea_garden
     }
-    s:STATE_WEST_MICRONESIA = {
-        add_resource_potential = building_orchard
-    }
+
     s:STATE_EAST_MICRONESIA = {
         add_resource_potential = building_orchard
     }
@@ -2805,14 +2768,8 @@ STATES = {
         add_resource_potential = building_orchard
         add_resource_potential = building_hunting_lodge
     }
-    s:STATE_CHUKOTKA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_hunting_lodge
-    }
-    s:STATE_KAMCHATKA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_hunting_lodge
-    }
+
+
     s:STATE_OKHOTSK = {
         add_resource_potential = building_orchard
         add_resource_potential = building_hunting_lodge
@@ -2852,10 +2809,7 @@ STATES = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
     }
-    s:STATE_KAUNAS = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
+
     s:STATE_VILNIUS = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -2917,10 +2871,7 @@ STATES = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
     }
-    s:STATE_ORYOL = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
+
     s:STATE_SMOLENSK = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -2933,11 +2884,7 @@ STATES = {
         add_resource_potential = building_orchard
         add_resource_potential = building_hunting_lodge
     }
-    s:STATE_NOVGOROD = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-        add_resource_potential = building_hunting_lodge
-    }
+
     s:STATE_CRIMEA = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -2950,20 +2897,12 @@ STATES = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
     }
-    s:STATE_TVER = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-        add_resource_potential = building_hunting_lodge
-    }
+
     s:STATE_CHERSON = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
     }
-    s:STATE_GALICH = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-        add_resource_potential = building_hunting_lodge
-    }
+
     s:STATE_MINSK = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -3052,25 +2991,10 @@ STATES = {
         add_resource_potential = building_stud_farm
         add_resource_potential = building_hunting_lodge
     }
-    s:STATE_YAROSLAVL = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-        add_resource_potential = building_hunting_lodge
-    }
-    s:STATE_NIZHNY_NOVGOROD = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
-    s:STATE_VYATKA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-        add_resource_potential = building_hunting_lodge
-    }
-    s:STATE_UFA = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-        add_resource_potential = building_hunting_lodge
-    }
+
+
+
+
     s:STATE_SURGUT = {
         add_resource_potential = building_orchard
         add_resource_potential = building_hunting_lodge
@@ -3099,10 +3023,7 @@ STATES = {
         add_resource_potential = building_stud_farm
         add_resource_potential = building_hunting_lodge
     }
-    s:STATE_CHELYABINSK = {
-        add_resource_potential = building_orchard
-        add_resource_potential = building_stud_farm
-    }
+
     s:STATE_ELIZAVETPOL = {
         add_resource_potential = building_orchard
         add_resource_potential = building_stud_farm
@@ -3122,6 +3043,126 @@ STATES = {
     }
     s:STATE_NENETSIA = {
         add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+
+    # Potentials transferred to the 1.15 state boundaries.
+    s:STATE_BUENOS_AIRES = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_CHELYABINSK = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_FORMOSA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_KAMCHATKA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_KOSTROMA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_LITHUANIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_LOS_RIOS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_MORAVIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_fiber_farm
+        add_resource_potential = building_apiary
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_NIZHNY_NOVGOROD = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_NOVGOROD = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_ORYOL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_PARA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_chili_plantation
+    }
+    s:STATE_PATAGONIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_RYUKYU_ISLANDS = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_tea_garden
+    }
+    s:STATE_SAKHALIN = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_SAMARA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_SARATOV = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TULA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_TVER = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_UFA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_UPPER_SILESIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_VOLOGDA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_VYATKA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+        add_resource_potential = building_hunting_lodge
+    }
+    s:STATE_WEST_GALICIA = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
+    }
+    s:STATE_WEST_MICRONESIA = {
+        add_resource_potential = building_orchard
+    }
+    s:STATE_YAROSLAVL = {
+        add_resource_potential = building_orchard
+        add_resource_potential = building_stud_farm
         add_resource_potential = building_hunting_lodge
     }
 }

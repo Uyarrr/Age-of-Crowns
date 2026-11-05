@@ -175,11 +175,7 @@ STATES = {
         change_resource_potential = { type = building_tin_mine  amount = 10 }
         change_resource_potential = { type = building_silver_mine  amount = 24 }
     }
-    s:STATE_MORAVIA = {
-        change_resource_potential = { type = building_stone_mine  amount = 14 }
-        change_resource_potential = { type = building_tin_mine  amount = 5 }
-        change_resource_potential = { type = building_silver_mine  amount = 8 }
-    }
+
     s:STATE_STYRIA = {
         change_resource_potential = { type = building_stone_mine  amount = 15 }
         change_resource_potential = { type = building_copper_mine  amount = 8 }
@@ -516,9 +512,7 @@ STATES = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
         change_resource_potential = { type = building_silver_mine  amount = 12 }
     }
-    s:STATE_UPPER_SILESIA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
     s:STATE_GREATER_POLAND = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
@@ -534,9 +528,7 @@ STATES = {
     s:STATE_POSEN = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
-    s:STATE_WEST_GALICIA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
     s:STATE_EAST_GALICIA = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
@@ -1413,12 +1405,8 @@ STATES = {
     s:STATE_BAJO_PARAGUAY = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
-    s:STATE_BUENOS_AIRES = {
-        change_resource_potential = { type = building_stone_mine  amount = 8 }
-    }
-    s:STATE_PATAGONIA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
+
     s:STATE_RIO_NEGRO = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
@@ -1442,20 +1430,14 @@ STATES = {
         change_resource_potential = { type = building_copper_mine  amount = 24 }
         change_resource_potential = { type = building_silver_mine  amount = 8 }
     }
-    s:STATE_LOS_RIOS = {
-        change_resource_potential = { type = building_stone_mine  amount = 9 }
-        change_resource_potential = { type = building_copper_mine  amount = 12 }
-    }
+
     s:STATE_ARAUCANIA = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
     s:STATE_SOUTH_ATLANTIC_ISLANDS = {
         change_resource_potential = { type = building_stone_mine  amount = 8 }
     }
-    s:STATE_PARA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-        change_resource_potential = { type = building_tin_mine  amount = 4 }
-    }
+
     s:STATE_MARANHAO = {
         change_resource_potential = { type = building_stone_mine  amount = 8 }
     }
@@ -1698,12 +1680,8 @@ STATES = {
         change_resource_potential = { type = building_copper_mine  amount = 8 }
         change_resource_potential = { type = building_silver_mine  amount = 6 }
     }
-    s:STATE_SAMARA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
-    s:STATE_TARTARIA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
+
     s:STATE_ASTRAKHAN = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
@@ -2035,9 +2013,7 @@ STATES = {
         change_resource_potential = { type = building_tin_mine  amount = 6 }
         change_resource_potential = { type = building_silver_mine  amount = 8 }
     }
-    s:STATE_FORMOSA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
     s:STATE_SHANDONG = {
         change_resource_potential = { type = building_stone_mine  amount = 14 }
     }
@@ -2234,9 +2210,7 @@ STATES = {
     s:STATE_VISAYAS = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
-    s:STATE_WEST_MICRONESIA = {
-        change_resource_potential = { type = building_stone_mine  amount = 3 }
-    }
+
     s:STATE_EAST_MICRONESIA = {
         change_resource_potential = { type = building_stone_mine  amount = 3 }
     }
@@ -2345,13 +2319,8 @@ STATES = {
     s:STATE_OB = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
-    s:STATE_CHUKOTKA = {
-        change_resource_potential = { type = building_stone_mine  amount = 5 }
-        change_resource_potential = { type = building_tin_mine  amount = 3 }
-    }
-    s:STATE_KAMCHATKA = {
-        change_resource_potential = { type = building_stone_mine  amount = 5 }
-    }
+
+
     s:STATE_OKHOTSK = {
         change_resource_potential = { type = building_stone_mine  amount = 5 }
         change_resource_potential = { type = building_tin_mine  amount = 3 }
@@ -2385,9 +2354,7 @@ STATES = {
     s:STATE_COURLAND = {
         change_resource_potential = { type = building_stone_mine  amount = 8 }
     }
-    s:STATE_KAUNAS = {
-        change_resource_potential = { type = building_stone_mine  amount = 8 }
-    }
+
     s:STATE_VILNIUS = {
         change_resource_potential = { type = building_stone_mine  amount = 3 }
     }
@@ -2430,9 +2397,7 @@ STATES = {
     s:STATE_KIEV = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
-    s:STATE_ORYOL = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
     s:STATE_SMOLENSK = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
@@ -2442,9 +2407,7 @@ STATES = {
     s:STATE_ARKHANGELSK = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
-    s:STATE_NOVGOROD = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
     s:STATE_CRIMEA = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
@@ -2454,15 +2417,11 @@ STATES = {
     s:STATE_KURSK = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
-    s:STATE_TVER = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
     s:STATE_CHERSON = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
-    s:STATE_GALICH = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
     s:STATE_MINSK = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
     }
@@ -2531,18 +2490,10 @@ STATES = {
     s:STATE_PSKOV = {
         change_resource_potential = { type = building_stone_mine  amount = 8 }
     }
-    s:STATE_YAROSLAVL = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
-    s:STATE_NIZHNY_NOVGOROD = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
-    s:STATE_VYATKA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
-    s:STATE_UFA = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-    }
+
+
+
+
     s:STATE_SURGUT = {
         change_resource_potential = { type = building_stone_mine  amount = 4 }
     }
@@ -2565,11 +2516,7 @@ STATES = {
         change_resource_potential = { type = building_tin_mine  amount = 3 }
         change_resource_potential = { type = building_silver_mine  amount = 6 }
     }
-    s:STATE_CHELYABINSK = {
-        change_resource_potential = { type = building_stone_mine  amount = 10 }
-        change_resource_potential = { type = building_tin_mine  amount = 3 }
-        change_resource_potential = { type = building_silver_mine  amount = 8 }
-    }
+
     s:STATE_ELIZAVETPOL = {
         change_resource_potential = { type = building_stone_mine  amount = 10 }
         change_resource_potential = { type = building_copper_mine  amount = 9 }
@@ -2585,5 +2532,89 @@ STATES = {
     }
     s:STATE_NENETSIA = {
         change_resource_potential = { type = building_stone_mine  amount = 5 }
+    }
+
+    # Potentials transferred to the 1.15 state boundaries.
+    s:STATE_BUENOS_AIRES = {
+        change_resource_potential = { type = building_stone_mine amount = 8 }
+    }
+    s:STATE_CHELYABINSK = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+        change_resource_potential = { type = building_tin_mine amount = 3 }
+        change_resource_potential = { type = building_silver_mine amount = 8 }
+    }
+    s:STATE_FORMOSA = {
+        change_resource_potential = { type = building_stone_mine amount = 9 }
+    }
+    s:STATE_KAMCHATKA = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+        change_resource_potential = { type = building_tin_mine amount = 3 }
+    }
+    s:STATE_KOSTROMA = {
+        change_resource_potential = { type = building_stone_mine amount = 9 }
+    }
+    s:STATE_LITHUANIA = {
+        change_resource_potential = { type = building_stone_mine amount = 8 }
+    }
+    s:STATE_LOS_RIOS = {
+        change_resource_potential = { type = building_stone_mine amount = 9 }
+        change_resource_potential = { type = building_copper_mine amount = 12 }
+    }
+    s:STATE_MORAVIA = {
+        change_resource_potential = { type = building_stone_mine amount = 16 }
+        change_resource_potential = { type = building_tin_mine amount = 5 }
+        change_resource_potential = { type = building_silver_mine amount = 8 }
+    }
+    s:STATE_NIZHNY_NOVGOROD = {
+        change_resource_potential = { type = building_stone_mine amount = 6 }
+    }
+    s:STATE_NOVGOROD = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+    }
+    s:STATE_ORYOL = {
+        change_resource_potential = { type = building_stone_mine amount = 5 }
+    }
+    s:STATE_PARA = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+        change_resource_potential = { type = building_tin_mine amount = 4 }
+    }
+    s:STATE_PATAGONIA = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+    }
+    s:STATE_RYUKYU_ISLANDS = {
+        change_resource_potential = { type = building_stone_mine amount = 1 }
+    }
+    s:STATE_SAMARA = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+    }
+    s:STATE_SARATOV = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+    }
+    s:STATE_TULA = {
+        change_resource_potential = { type = building_stone_mine amount = 5 }
+    }
+    s:STATE_TVER = {
+        change_resource_potential = { type = building_stone_mine amount = 9 }
+    }
+    s:STATE_UFA = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+    }
+    s:STATE_UPPER_SILESIA = {
+        change_resource_potential = { type = building_stone_mine amount = 7 }
+    }
+    s:STATE_VOLOGDA = {
+        change_resource_potential = { type = building_stone_mine amount = 9 }
+    }
+    s:STATE_VYATKA = {
+        change_resource_potential = { type = building_stone_mine amount = 10 }
+    }
+    s:STATE_WEST_GALICIA = {
+        change_resource_potential = { type = building_stone_mine amount = 11 }
+    }
+    s:STATE_WEST_MICRONESIA = {
+        change_resource_potential = { type = building_stone_mine amount = 3 }
+    }
+    s:STATE_YAROSLAVL = {
+        change_resource_potential = { type = building_stone_mine amount = 7 }
     }
 }

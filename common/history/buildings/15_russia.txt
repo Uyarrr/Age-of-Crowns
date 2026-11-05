@@ -39,32 +39,7 @@
 		region_state:LVO={
 		}
 	}
-	s:STATE_KAUNAS={
-		region_state:LIT={
-			create_building={
-				building="building_port"
-				add_ownership={
-					country={
-						country="c:LIT"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_port_main_0" "pm_building_port_extra_0" }
-			}
-			create_building={
-				building="building_shipyard"
-				add_ownership={
-					country={
-						country="c:LIT"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_shipyard_main_1" }
-			}
-		}
-	}
+
 	s:STATE_VILNIUS={
 		region_state:LIT={
 		}
@@ -298,27 +273,7 @@
 		region_state:POL={
 		}
 	}
-	s:STATE_ORYOL={
-		region_state:LIT={
-		}
-		region_state:ODO={
-		}
-		region_state:RYZ={
-		}
-		region_state:MUS={
-			create_building={
-				building="building_government_administration"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
-			}
-		}
-	}
+
 	s:STATE_SMOLENSK={
 		region_state:LIT={
 		}
@@ -337,38 +292,7 @@
 		region_state:BLZ={
 		}
 	}
-	s:STATE_NOVGOROD={
-		region_state:YSL={
-		}
-		region_state:NOV={
-			create_building={
-				building="building_port"
-				add_ownership={
-					country={
-						country="c:NOV"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_port_main_0" "pm_building_port_extra_0" }
-			}
-			create_building={
-				building="building_shipyard"
-				add_ownership={
-					country={
-						country="c:NOV"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_shipyard_main_1" }
-			}
-		}
-		region_state:MUS={
-		}
-		region_state:BLZ={
-		}
-	}
+
 	s:STATE_CRIMEA={
 		region_state:CRI={
 		}
@@ -402,110 +326,12 @@
 		region_state:GRH={
 		}
 	}
-	s:STATE_TVER={
-		region_state:TVR={
-		}
-		region_state:NOV={
-		}
-		region_state:U67={
-		}
-		region_state:MUS={
-		}
-	}
+
 	s:STATE_CHERSON={
 		region_state:LIT={
 		}
 	}
-	s:STATE_GALICH={
-		region_state:PRM={
-		}
-		region_state:TAR={
-		}
-		region_state:NOV={
-		}
-		region_state:N00={
-		}
-		region_state:MUS={
-			create_building={
-				building="building_iron_mine"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_iron_mine_main_1" "pm_road_carts" }
-			}
-			create_building={
-				building="building_stone_mine"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_stone_mine_main_1" "pm_building_stone_mine_salt_0" "pm_road_carts" }
-			}
-			create_building={
-				building="building_coal_mine"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_coal_mine_main_1" "pm_road_carts" }
-			}
-			create_building={
-				building="building_weapon_workshop"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_weapon_workshop_main_1" }
-			}
-			create_building={
-				building="building_tooling_workshop"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_tooling_workshop_main_1" }
-			}
-			create_building={
-				building="building_ironworks"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_ironworks_main_1" }
-			}
-			create_building={
-				building="building_road"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				subsidized=no
-				reserves=1
-				activate_production_methods={ "pm_building_road_main_1" "pm_building_road_transport_0" }
-			}
-		}
-	}
+
 	s:STATE_MINSK={
 		region_state:LIT={
 		}
@@ -685,111 +511,10 @@
 		region_state:MUS={
 		}
 	}
-	s:STATE_YAROSLAVL={
-		region_state:YSL={
-		}
-		region_state:U67={
-		}
-		region_state:MUS={
-			create_building={
-				building="building_trade_center"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
-			}
-			create_building={
-				building="building_apothecary"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=2
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_apothecary_main_1" }
-			}
-			create_building={
-				building="building_government_administration"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=3
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
-			}
-			create_building={
-				building="building_hunting_lodge"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=3
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_hunting_lodge_main_1" }
-			}
-			create_building={
-				building="building_stud_farm"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_stud_farm_main_1" "pm_building_stud_farm_warhorse_0" "pm_building_stud_farm_equipment_0" }
-			}
-		}
-	}
-	s:STATE_NIZHNY_NOVGOROD={
-		region_state:TAR={
-		}
-		region_state:MUS={
-			create_building={
-				building="building_trade_center"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
-			}
-			create_building={
-				building="building_government_administration"
-				add_ownership={
-					country={
-						country="c:MUS"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_building_chancery_main_1" "pm_building_chancery_silver_0" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
-			}
-		}
-	}
-	s:STATE_VYATKA={
-		region_state:PRM={
-		}
-		region_state:TAR={
-		}
-		region_state:MUS={
-		}
-	}
-	s:STATE_UFA={
-		region_state:TAR={
-		}
-		region_state:NOG={
-		}
-	}
+
+
+
+
 	s:STATE_SURGUT={
 		region_state:N00={
 		}
@@ -826,12 +551,7 @@
 		region_state:W27={
 		}
 	}
-	s:STATE_CHELYABINSK={
-		region_state:NOG={
-		}
-		region_state:UZB={
-		}
-	}
+
 	s:STATE_ELIZAVETPOL={
 		region_state:U54={
 		}
