@@ -1352,6 +1352,31 @@ proportional_taxation = {
 }
 
 ######## ERA 5 ##########
+siberian_frontiers = {
+    # Opens the Siberian frontier to colonization.
+    era = era_5
+    texture = "gfx/interface/icons/invention_icons/siberian_frontiers.dds"
+    category = society
+
+    unlocking_technologies = {
+        colonization
+        absolutism
+    }
+
+    ai_weight = {
+        value = 1
+        if = {
+            limit = {
+                OR = {
+                    c:MUS ?= this
+                    c:RUS ?= this
+                }
+            }
+            add = 50
+        }
+    }
+}
+
 absolutism = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/absolutism.dds"
