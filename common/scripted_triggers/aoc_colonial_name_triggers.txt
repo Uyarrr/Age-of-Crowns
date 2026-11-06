@@ -33,3 +33,65 @@ aoc_is_english_or_british_subject = {
 	}
 }
 
+
+# African colonial powers; use the current direct overlord, not colony culture.
+aoc_is_dutch_subject = {
+	OR = {
+		AND = { exists = c:NET is_direct_subject_of = c:NET }
+		AND = { exists = c:HOL is_direct_subject_of = c:HOL }
+	}
+}
+
+aoc_is_danish_subject = {
+	OR = {
+		AND = { exists = c:DEN is_direct_subject_of = c:DEN }
+	}
+}
+
+aoc_is_swedish_subject = {
+	OR = {
+		AND = { exists = c:SWE is_direct_subject_of = c:SWE }
+	}
+}
+
+aoc_is_brandenburg_subject = {
+	OR = {
+		AND = { exists = c:BBR is_direct_subject_of = c:BBR }
+	}
+}
+
+aoc_is_prussian_subject = {
+	OR = {
+		AND = { exists = c:PRU is_direct_subject_of = c:PRU }
+	}
+}
+
+aoc_is_german_subject = {
+	OR = {
+		AND = { exists = c:GER is_direct_subject_of = c:GER }
+	}
+}
+
+aoc_is_belgian_subject = {
+	OR = {
+		AND = { exists = c:BEL is_direct_subject_of = c:BEL }
+	}
+}
+
+aoc_is_omani_subject = {
+	OR = {
+		AND = { exists = c:OMA is_direct_subject_of = c:OMA }
+	}
+}
+
+# Australia and New Zealand use fixed tags as well as generated countries.
+# Require a colonial identity so ordinary local subjects keep their own names.
+aoc_is_australian_colonial_nation = {
+	aoc_is_or_was_colonial_nation = yes
+	capital = { is_in_geographic_region = geographic_region_aoc_england_australia }
+}
+
+aoc_is_new_zealand_colonial_nation = {
+	aoc_is_or_was_colonial_nation = yes
+	capital = { is_in_geographic_region = geographic_region_aoc_england_new_zealand }
+}

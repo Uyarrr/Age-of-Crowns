@@ -134,7 +134,7 @@ wotr_ensure_henry_tudor_effect = {
 wotr_install_lancaster_ruler_effect = {
 	wotr_prepare_crown_accession_effect = yes
 	if = {
-		limit = { game_date < 1471.5.4 }
+		limit = { NOT = { has_variable = wotr_readeption_event } }
 		wotr_ensure_henry_vi_effect = yes
 		random_scope_character = {
 			limit = { has_variable = wotr_henry_vi_character }
@@ -156,7 +156,7 @@ wotr_install_lancaster_ruler_effect = {
 wotr_install_york_ruler_effect = {
 	wotr_prepare_crown_accession_effect = yes
 	if = {
-		limit = { game_date < 1461.1.1 }
+		limit = { NOT = { has_variable = wotr_edward_leads_york } }
 		wotr_ensure_richard_of_york_effect = yes
 		random_scope_character = {
 			limit = { has_variable = wotr_richard_of_york_character }
@@ -197,6 +197,23 @@ wotr_clear_civil_war_variables_effect = {
 }
 
 wotr_record_war_fought_effect = {
+	# Both the incumbent and a victorious claimant receive the same breathing room.
+	# Country variables mirror the bars so the next monthly assessment agrees.
+	remove_modifier = war_of_the_roses_high_tension
+	set_variable = { name = war_of_roses_tension_current_var value = 25 }
+	je:je_england_2 ?= {
+		set_bar_progress = { name = je_war_of_the_roses_tension_bar value = 25 }
+	}
+	if = {
+		limit = { has_variable = wotr_dynasty_lancaster }
+		set_variable = { name = war_of_roses_balance_current_var value = 70 }
+		je:je_england_2 ?= { set_bar_progress = { name = je_war_of_the_roses_balance_bar value = 70 } }
+	}
+	else_if = {
+		limit = { has_variable = wotr_dynasty_york }
+		set_variable = { name = war_of_roses_balance_current_var value = 30 }
+		je:je_england_2 ?= { set_bar_progress = { name = je_war_of_the_roses_balance_bar value = 30 } }
+	}
 	if = {
 		limit = { has_variable = wotr_wars_fought_var }
 		change_variable = { name = wotr_wars_fought_var add = 1 }

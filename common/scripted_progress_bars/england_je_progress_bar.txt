@@ -3,7 +3,12 @@ je_war_of_the_roses_balance_bar = {
 	desc = "je_war_of_the_roses_balance_bar_left_desc"
 	second_desc = "je_war_of_the_roses_balance_bar_right_desc"
 
-	double_sided_two_spains = yes
+	# 1.15 replaces the old two-sided style preset with explicit textures.
+	progress_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+	background_texture = "gfx/interface/progressbar/progressbar_white.dds"
+	glow_texture = "gfx/interface/progressbar/progressbar_bad_glow.dds"
+	glow_line_texture = "gfx/interface/progressbar/progressbar_bad_glow_line.dds"
+	marker = yes
 
 	monthly_progress = {
 		owner = {
@@ -27,9 +32,9 @@ je_war_of_the_roses_balance_bar = {
 				value = ig:ig_intelligentsia.ig_clout
 				multiply = 0.25
 			}
-			if = {
+			progress_condition = {
 				limit = { legitimacy >= 60 }
-				if = {
+				progress_condition = {
 					limit = { has_variable = wotr_dynasty_york }
 					subtract = {
 						desc = "war_of_the_roses_high_legitimacy_tt"
@@ -43,9 +48,9 @@ je_war_of_the_roses_balance_bar = {
 					}
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = { legitimacy < 40 }
-				if = {
+				progress_condition = {
 					limit = { has_variable = wotr_dynasty_york }
 					add = {
 						desc = "war_of_the_roses_low_legitimacy_tt"
@@ -59,21 +64,21 @@ je_war_of_the_roses_balance_bar = {
 					}
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = { has_modifier = hundred_years_war_won }
 				add = {
 					desc = "war_of_the_roses_hyw_victory_tt"
 					value = 0.40
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = { has_modifier = hundred_years_war_lost }
 				subtract = {
 					desc = "war_of_the_roses_hyw_defeat_tt"
 					value = 0.40
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = { has_variable = war_of_roses_balance_current_var }
 				add = {
 					desc = "war_of_the_roses_balance_moderating_factor_tt"
@@ -82,7 +87,7 @@ je_war_of_the_roses_balance_bar = {
 					multiply = 0.02
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = { has_variable = war_of_roses_balance_offset_var }
 				add = {
 					desc = "war_of_the_roses_balance_player_actions_tt"
@@ -106,7 +111,7 @@ je_war_of_the_roses_tension_bar = {
 
 	monthly_progress = {
 		owner = {
-			if = {
+			progress_condition = {
 				limit = {
 					has_variable = wotr_phase_var
 					var:wotr_phase_var = 1
@@ -116,7 +121,7 @@ je_war_of_the_roses_tension_bar = {
 					value = 0.15
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = {
 					has_variable = wotr_phase_var
 					var:wotr_phase_var = 2
@@ -126,7 +131,7 @@ je_war_of_the_roses_tension_bar = {
 					value = 0.20
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = {
 					has_variable = wotr_phase_var
 					var:wotr_phase_var >= 3
@@ -142,21 +147,21 @@ je_war_of_the_roses_tension_bar = {
 				subtract = legitimacy
 				multiply = 0.04
 			}
-			if = {
+			progress_condition = {
 				limit = { has_modifier = hundred_years_war_lost }
 				add = {
 					desc = "war_of_the_roses_hyw_defeat_tension_tt"
 					value = 0.35
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = { has_modifier = hundred_years_war_won }
 				subtract = {
 					desc = "war_of_the_roses_hyw_victory_tension_tt"
 					value = 0.20
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = {
 					has_variable = war_of_roses_balance_current_var
 					var:war_of_roses_balance_current_var > 50
@@ -168,7 +173,7 @@ je_war_of_the_roses_tension_bar = {
 					multiply = 0.02
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = {
 					has_variable = war_of_roses_balance_current_var
 					var:war_of_roses_balance_current_var < 50
@@ -180,7 +185,7 @@ je_war_of_the_roses_tension_bar = {
 					multiply = 0.02
 				}
 			}
-			if = {
+			progress_condition = {
 				limit = { has_variable = war_of_roses_tension_offset_var }
 				add = {
 					desc = "war_of_the_roses_tension_player_actions_tt"

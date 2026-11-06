@@ -1,7 +1,6 @@
 ﻿l_english:
  je_colonial_administration: "Establish Colonial Administration"
- je_colonial_administration_reason: "In order to best leverage our rule over our overseas holdings, a #bold Colonial Administration#! may be established over a given region. #bold Colonial Administrations#! will expand into neighboring [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] on their own, and may be given jurisdiction over our other regional holdings."
-
+ je_colonial_administration_reason: "Place regional possessions under a colonial government. It can receive our other holdings in the region and expand into neighbouring decentralized territory under its colonial laws."
  je_colonial_administration_button_senegal: "Establish Colony in [SCOPE.sStateRegion('senegal_region_scope').GetStrategicRegion.GetName]"
  je_colonial_administration_button_senegal_desc: "The western coast of Africa offers valuable agricultural land, tropical crops, and access to major trade routes crossing the Atlantic."
 
@@ -92,14 +91,12 @@
  colonial_administration_cooldown: "We can only establish a new colonial administration every #variable 3#! months."
 
  colonial_administration_events.1.t: "The Nature of Administration"
- colonial_administration_events.1.d: "With the establishment of [SCOPE.sCountry('newly_formed_colonial_nation_scope').GetName], we must decide the direction of our new colonial administration."
- colonial_administration_events.1.f: ""Right, now take this down. And you remembered your pen this time? Ah, good. So it is in [SCOPE.sCountry('newly_formed_colonial_nation_scope').GetNameNoFormatting], where we may begin the work of administration, extraction, and order. From there, proper management of resources for the glory of- My God, man, strike out me asking about your pen! This is for the annals!""
-
- colonial_administration_events.1.a: "It will be administered by a chartered [SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjectiveNoFormatting] Company."
- colonial_administration_events.1.b: "The [SCOPE.sPop('majority_religion').GetReligion.GetName] missions will uplift the local populace."
- colonial_administration_events.1.c: "A new [SCOPE.GetRootScope.GetCountry.GetNameNoFormatting] shall emerge overseas."
- colonial_administration_events.1.e: "The whip shall crack, and the colony provide."
-
+ colonial_administration_events.1.d: "We must choose how [SCOPE.sCountry('newly_formed_colonial_nation_scope').GetName] will be governed."
+ colonial_administration_events.1.f: "The charter settles who will govern. The laws will decide whose interests that government serves."
+ colonial_administration_events.1.a: "Grant a commercial charter."
+ colonial_administration_events.1.b: "Support the religious missions."
+ colonial_administration_events.1.c: "Build a settler administration."
+ colonial_administration_events.1.e: "Organize the colony for extraction."
  colonial_administration_events.1_tt_1: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjective] [Concept('concept_law', '$concept_laws$')] will be tailored around #bold commerce#! and #bold private enterprise.#!"
  colonial_administration_events.1_tt_2: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjective] [Concept('concept_law', '$concept_laws$')] will be tailored around #bold conversion#! and #bold education.#!"
  colonial_administration_events.1_tt_3: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjective] [Concept('concept_law', '$concept_laws$')] will be tailored around #bold immigration#! and #bold colonial settlement.#!"
@@ -115,8 +112,7 @@
  resource_extraction_charter_modifier: "Colonial Enterprises"
 
  colonial_administration_events.2.t: "The Severed Limb"
- colonial_administration_events.2.d: "With our administrative ties to the metropole cut off, massive protests have erupted throughout [ROOT.GetCountry.GetName]. Protests that our understaffed colonial forces are hard pressed to handle."
- colonial_administration_events.2.f: ""[SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')] has created us free, and did not make us into heritage or estate. So by [SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')], we shall be bequeathed or enslaved no more.""
- colonial_administration_events.2.a: "May [SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')] preserve [ROOT.GetCountry.GetNameNoFormatting], for we may lack the means to."
-
+ colonial_administration_events.2.d: "The break with the metropole has left our government short of funds and personnel. Protests are spreading beyond the reach of the colonial forces."
+ colonial_administration_events.2.f: "The orders still bear the old seal. No ships arrive to enforce them."
+ colonial_administration_events.2.a: "We must govern with what we have."
  colony_alone_modifier: "Masterless Colony"

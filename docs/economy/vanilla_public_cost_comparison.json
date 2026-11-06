@@ -1,0 +1,1471 @@
+{
+  "referenceAnnualBaseWage": 5,
+  "assumptions": "Full employment, base prices, neutral wage setting; no throughput, tax or country/state modifiers; side PMs hereditary/religious; no save simulation. Public wages use every employed profession weight, including aristocrats: paid_private_wage=no only excludes pay in non-government-funded buildings (common/pop_types/pop_types.md). Professions are read with direct scalar matching because color=hsv{} is a typed block.",
+  "vanillaDirectory": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Victoria 3\\game",
+  "vanilla": {
+    "prices": {
+      "ammunition": 50,
+      "small_arms": 60,
+      "artillery": 70,
+      "tanks": 80,
+      "aeroplanes": 80,
+      "manowars": 70,
+      "ironclads": 80,
+      "grain": 20,
+      "fish": 20,
+      "fabric": 20,
+      "wood": 20,
+      "groceries": 30,
+      "clothes": 30,
+      "furniture": 30,
+      "paper": 30,
+      "services": 30,
+      "transportation": 30,
+      "electricity": 30,
+      "merchant_marine": 50,
+      "clippers": 60,
+      "steamers": 70,
+      "silk": 40,
+      "dye": 40,
+      "sulfur": 50,
+      "coal": 30,
+      "iron": 40,
+      "lead": 40,
+      "copper": 40,
+      "hardwood": 40,
+      "rubber": 40,
+      "oil": 40,
+      "engines": 60,
+      "steel": 50,
+      "glass": 40,
+      "fertilizer": 30,
+      "tools": 40,
+      "explosives": 50,
+      "porcelain": 70,
+      "meat": 30,
+      "fruit": 30,
+      "liquor": 30,
+      "wine": 50,
+      "tea": 50,
+      "coffee": 50,
+      "sugar": 30,
+      "tobacco": 40,
+      "opium": 50,
+      "automobiles": 100,
+      "telephones": 70,
+      "radios": 80,
+      "luxury_clothes": 60,
+      "luxury_furniture": 60,
+      "gold": 100,
+      "fine_art": 200
+    },
+    "construction": [
+      {
+        "keys": [
+          "pm_wooden_buildings"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "fabric",
+            "qty": 25,
+            "price": 20,
+            "value": 500
+          },
+          {
+            "kind": "input",
+            "good": "wood",
+            "qty": 75,
+            "price": 20,
+            "value": 1500
+          }
+        ],
+        "staff": {
+          "bureaucrats": 100,
+          "clerks": 100,
+          "laborers": 800
+        },
+        "workers": 1000,
+        "goods": 2000,
+        "wages": 129.80769230769232,
+        "construction": 2,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/13_construction.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_iron_frame_buildings"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "wood",
+            "qty": 40,
+            "price": 20,
+            "value": 800
+          },
+          {
+            "kind": "input",
+            "good": "fabric",
+            "qty": 20,
+            "price": 20,
+            "value": 400
+          },
+          {
+            "kind": "input",
+            "good": "iron",
+            "qty": 50,
+            "price": 40,
+            "value": 2000
+          },
+          {
+            "kind": "input",
+            "good": "tools",
+            "qty": 10,
+            "price": 40,
+            "value": 400
+          }
+        ],
+        "staff": {
+          "bureaucrats": 100,
+          "clerks": 100,
+          "machinists": 50,
+          "laborers": 750
+        },
+        "workers": 1000,
+        "goods": 3600,
+        "wages": 132.21153846153845,
+        "construction": 5,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/13_construction.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_steel_frame_buildings"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "steel",
+            "qty": 50,
+            "price": 50,
+            "value": 2500
+          },
+          {
+            "kind": "input",
+            "good": "glass",
+            "qty": 40,
+            "price": 40,
+            "value": 1600
+          },
+          {
+            "kind": "input",
+            "good": "explosives",
+            "qty": 10,
+            "price": 50,
+            "value": 500
+          },
+          {
+            "kind": "input",
+            "good": "tools",
+            "qty": 20,
+            "price": 40,
+            "value": 800
+          }
+        ],
+        "staff": {
+          "bureaucrats": 100,
+          "clerks": 100,
+          "machinists": 150,
+          "laborers": 650
+        },
+        "workers": 1000,
+        "goods": 5400,
+        "wages": 137.01923076923077,
+        "construction": 10,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/13_construction.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_arc_welded_buildings"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "steel",
+            "qty": 50,
+            "price": 50,
+            "value": 2500
+          },
+          {
+            "kind": "input",
+            "good": "glass",
+            "qty": 40,
+            "price": 40,
+            "value": 1600
+          },
+          {
+            "kind": "input",
+            "good": "explosives",
+            "qty": 20,
+            "price": 50,
+            "value": 1000
+          },
+          {
+            "kind": "input",
+            "good": "tools",
+            "qty": 30,
+            "price": 40,
+            "value": 1200
+          },
+          {
+            "kind": "input",
+            "good": "electricity",
+            "qty": 40,
+            "price": 30,
+            "value": 1200
+          },
+          {
+            "kind": "input",
+            "good": "copper",
+            "qty": 10,
+            "price": 40,
+            "value": 400
+          }
+        ],
+        "staff": {
+          "bureaucrats": 100,
+          "clerks": 100,
+          "engineers": 50,
+          "machinists": 150,
+          "laborers": 600
+        },
+        "workers": 1000,
+        "goods": 7900,
+        "wages": 146.6346153846154,
+        "construction": 15,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/13_construction.txt"
+        ],
+        "missingProfessions": []
+      }
+    ],
+    "administration": [
+      {
+        "keys": [
+          "pm_simple_organization",
+          "pm_hereditary_bureaucrats",
+          "pm_religious_bureaucrats"
+        ],
+        "inputs": [],
+        "staff": {
+          "clerks": 500,
+          "aristocrats": 250,
+          "bureaucrats": 500,
+          "clergymen": 250
+        },
+        "workers": 1500,
+        "goods": 0,
+        "wages": 456.7307692307692,
+        "construction": 0,
+        "bureaucracy": 10,
+        "tax": 2,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_horizontal_drawer_cabinets",
+          "pm_hereditary_bureaucrats",
+          "pm_religious_bureaucrats"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 10,
+            "price": 30,
+            "value": 300
+          }
+        ],
+        "staff": {
+          "clerks": 500,
+          "aristocrats": 250,
+          "bureaucrats": 500,
+          "clergymen": 250
+        },
+        "workers": 1500,
+        "goods": 300,
+        "wages": 456.7307692307692,
+        "construction": 0,
+        "bureaucracy": 50,
+        "tax": 10,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_vertical_filing_cabinets",
+          "pm_hereditary_bureaucrats",
+          "pm_religious_bureaucrats"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 20,
+            "price": 30,
+            "value": 600
+          }
+        ],
+        "staff": {
+          "clerks": 500,
+          "aristocrats": 250,
+          "bureaucrats": 500,
+          "clergymen": 250
+        },
+        "workers": 1500,
+        "goods": 600,
+        "wages": 456.7307692307692,
+        "construction": 0,
+        "bureaucracy": 65,
+        "tax": 15,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_switch_boards",
+          "pm_hereditary_bureaucrats",
+          "pm_religious_bureaucrats"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 20,
+            "price": 30,
+            "value": 600
+          },
+          {
+            "kind": "input",
+            "good": "telephones",
+            "qty": 5,
+            "price": 70,
+            "value": 350
+          }
+        ],
+        "staff": {
+          "clerks": 500,
+          "aristocrats": 250,
+          "bureaucrats": 500,
+          "clergymen": 250
+        },
+        "workers": 1500,
+        "goods": 950,
+        "wages": 456.7307692307692,
+        "construction": 0,
+        "bureaucracy": 100,
+        "tax": 30,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt"
+        ],
+        "missingProfessions": []
+      }
+    ],
+    "university": [
+      {
+        "keys": [
+          "pm_scholastic_education",
+          "pm_religious_academia"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 5,
+            "price": 30,
+            "value": 150
+          }
+        ],
+        "staff": {
+          "clerks": 250,
+          "laborers": 250,
+          "clergymen": 250,
+          "academics": 250
+        },
+        "workers": 1000,
+        "goods": 150,
+        "wages": 228.3653846153846,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 1,
+        "sources": [
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_philosophy_department",
+          "pm_religious_academia"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 10,
+            "price": 30,
+            "value": 300
+          }
+        ],
+        "staff": {
+          "clerks": 250,
+          "laborers": 250,
+          "clergymen": 250,
+          "academics": 250
+        },
+        "workers": 1000,
+        "goods": 300,
+        "wages": 228.3653846153846,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 1.5,
+        "sources": [
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_analytical_philosophy_department",
+          "pm_religious_academia"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 15,
+            "price": 30,
+            "value": 450
+          }
+        ],
+        "staff": {
+          "clerks": 200,
+          "laborers": 200,
+          "academics": 350,
+          "clergymen": 250
+        },
+        "workers": 1000,
+        "goods": 450,
+        "wages": 254.80769230769232,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 2,
+        "sources": [
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt"
+        ],
+        "missingProfessions": []
+      }
+    ],
+    "extras": {},
+    "buildingCosts": {
+      "building_textile_mill": "construction_cost_high",
+      "building_tooling_workshop": "construction_cost_high",
+      "building_paper_mill": "construction_cost_high",
+      "building_wheat_farm": "construction_cost_low",
+      "building_iron_mine": "construction_cost_medium",
+      "building_government_administration": "construction_cost_very_low",
+      "building_university": "construction_cost_medium",
+      "building_construction_sector": "construction_cost_construction_sector"
+    },
+    "gates": {
+      "pm_wooden_buildings": [],
+      "pm_iron_frame_buildings": [
+        [
+          "urban_planning",
+          "era_1"
+        ]
+      ],
+      "pm_steel_frame_buildings": [
+        [
+          "steel_frame_buildings",
+          "era_3"
+        ]
+      ],
+      "pm_arc_welded_buildings": [
+        [
+          "arc_welding",
+          "era_5"
+        ]
+      ],
+      "pm_simple_organization": [],
+      "pm_horizontal_drawer_cabinets": [
+        [
+          "centralization",
+          "era_1"
+        ]
+      ],
+      "pm_vertical_filing_cabinets": [
+        [
+          "central_archives",
+          "era_2"
+        ]
+      ],
+      "pm_switch_boards": [
+        [
+          "central_planning",
+          "era_4"
+        ]
+      ]
+    },
+    "wageWeights": {
+      "academics": 4,
+      "aristocrats": 5,
+      "bureaucrats": 4,
+      "capitalists": 5,
+      "clergymen": 3,
+      "clerks": 1.5,
+      "engineers": 3,
+      "farmers": 2,
+      "laborers": 1,
+      "machinists": 1.5,
+      "officers": 5,
+      "peasants": 0.2,
+      "shopkeepers": 3,
+      "slaves": 0,
+      "soldiers": 1.5
+    }
+  },
+  "mod": {
+    "prices": {
+      "ammunition": 50,
+      "small_arms": 60,
+      "artillery": 70,
+      "tanks": 80,
+      "aeroplanes": 80,
+      "manowars": 70,
+      "ironclads": 80,
+      "groceries": 30,
+      "clothes": 30,
+      "furniture": 30,
+      "paper": 30,
+      "services": 30,
+      "transportation": 30,
+      "electricity": 30,
+      "clippers": 60,
+      "steamers": 70,
+      "silk": 40,
+      "dye": 40,
+      "sulfur": 50,
+      "coal": 30,
+      "iron": 40,
+      "lead": 40,
+      "hardwood": 40,
+      "rubber": 40,
+      "oil": 40,
+      "engines": 60,
+      "steel": 50,
+      "glass": 40,
+      "fertilizer": 30,
+      "tools": 40,
+      "explosives": 50,
+      "opium": 50,
+      "automobiles": 100,
+      "telephones": 70,
+      "radios": 80,
+      "grain": 20,
+      "fish": 20,
+      "fabric": 20,
+      "wood": 20,
+      "merchant_marine": 50,
+      "stone": 30,
+      "salt": 30,
+      "horse": 50,
+      "bronze": 50,
+      "bread": 30,
+      "livestock": 40,
+      "fiber": 20,
+      "navalsupplies": 65,
+      "pottery": 30,
+      "saltpeter": 50,
+      "weapons": 60,
+      "leather": 30,
+      "beer": 30,
+      "copper": 40,
+      "tin": 40,
+      "cannons": 70,
+      "warhorse": 80,
+      "firearms": 80,
+      "beeswax": 40,
+      "book": 30,
+      "gems": 40,
+      "ironingot": 50,
+      "jewelry": 90,
+      "gold": 100,
+      "silver": 60,
+      "cloves": 60,
+      "saffron": 60,
+      "pepper": 40,
+      "chili": 40,
+      "incense": 40,
+      "medicaments": 30,
+      "cocoa": 30,
+      "chocolate": 60,
+      "cutstone": 60,
+      "luxury_clothes": 60,
+      "luxury_furniture": 60,
+      "fine_art": 200,
+      "tobacco": 40,
+      "porcelain": 70,
+      "meat": 30,
+      "fruit": 30,
+      "liquor": 30,
+      "wine": 50,
+      "tea": 50,
+      "coffee": 50,
+      "sugar": 30,
+      "fur": 60,
+      "ivory": 60
+    },
+    "construction": [
+      {
+        "keys": [
+          "pm_construction_main_1"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "fabric",
+            "qty": 25,
+            "price": 20,
+            "value": 500
+          },
+          {
+            "kind": "input",
+            "good": "wood",
+            "qty": 50,
+            "price": 20,
+            "value": 1000
+          }
+        ],
+        "staff": {
+          "clerks": 100,
+          "laborers": 900
+        },
+        "workers": 1000,
+        "goods": 1500,
+        "wages": 100.96153846153847,
+        "construction": 2,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/construction_sector_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_construction_main_2"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "wood",
+            "qty": 30,
+            "price": 20,
+            "value": 600
+          },
+          {
+            "kind": "input",
+            "good": "fabric",
+            "qty": 20,
+            "price": 20,
+            "value": 400
+          },
+          {
+            "kind": "input",
+            "good": "stone",
+            "qty": 50,
+            "price": 30,
+            "value": 1500
+          },
+          {
+            "kind": "input",
+            "good": "tools",
+            "qty": 10,
+            "price": 40,
+            "value": 400
+          }
+        ],
+        "staff": {
+          "bureaucrats": 50,
+          "clerks": 100,
+          "machinists": 50,
+          "laborers": 800
+        },
+        "workers": 1000,
+        "goods": 2900,
+        "wages": 117.78846153846153,
+        "construction": 5,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/construction_sector_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_construction_main_3"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "wood",
+            "qty": 25,
+            "price": 20,
+            "value": 500
+          },
+          {
+            "kind": "input",
+            "good": "fabric",
+            "qty": 15,
+            "price": 20,
+            "value": 300
+          },
+          {
+            "kind": "input",
+            "good": "stone",
+            "qty": 50,
+            "price": 30,
+            "value": 1500
+          },
+          {
+            "kind": "input",
+            "good": "cutstone",
+            "qty": 25,
+            "price": 60,
+            "value": 1500
+          },
+          {
+            "kind": "input",
+            "good": "tools",
+            "qty": 20,
+            "price": 40,
+            "value": 800
+          },
+          {
+            "kind": "input",
+            "good": "glass",
+            "qty": 10,
+            "price": 40,
+            "value": 400
+          }
+        ],
+        "staff": {
+          "bureaucrats": 100,
+          "clerks": 100,
+          "machinists": 150,
+          "laborers": 650
+        },
+        "workers": 1000,
+        "goods": 5000,
+        "wages": 137.01923076923077,
+        "construction": 10,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/construction_sector_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_construction_main_4"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "wood",
+            "qty": 9,
+            "price": 20,
+            "value": 180
+          },
+          {
+            "kind": "input",
+            "good": "steel",
+            "qty": 9,
+            "price": 50,
+            "value": 450
+          },
+          {
+            "kind": "input",
+            "good": "cutstone",
+            "qty": 68,
+            "price": 60,
+            "value": 4080
+          },
+          {
+            "kind": "input",
+            "good": "tools",
+            "qty": 27,
+            "price": 40,
+            "value": 1080
+          },
+          {
+            "kind": "input",
+            "good": "glass",
+            "qty": 23,
+            "price": 40,
+            "value": 920
+          }
+        ],
+        "staff": {
+          "bureaucrats": 100,
+          "clerks": 100,
+          "engineers": 50,
+          "machinists": 150,
+          "laborers": 600
+        },
+        "workers": 1000,
+        "goods": 6710,
+        "wages": 146.6346153846154,
+        "construction": 15,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/construction_sector_pm.txt"
+        ],
+        "missingProfessions": []
+      }
+    ],
+    "administration": [
+      {
+        "keys": [
+          "pm_building_chancery_main_1",
+          "pm_hereditary_bureaucrats",
+          "pm_religious_bureaucrats",
+          "pm_building_chancery_silver_0"
+        ],
+        "inputs": [],
+        "staff": {
+          "clerks": 500,
+          "aristocrats": 250,
+          "bureaucrats": 500,
+          "clergymen": 250
+        },
+        "workers": 1500,
+        "goods": 0,
+        "wages": 456.7307692307692,
+        "construction": 0,
+        "bureaucracy": 20,
+        "tax": 4,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/chancery_pm.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/chancery_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_building_chancery_main_2",
+          "pm_hereditary_bureaucrats",
+          "pm_religious_bureaucrats",
+          "pm_building_chancery_silver_0"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 10,
+            "price": 30,
+            "value": 300
+          }
+        ],
+        "staff": {
+          "clerks": 500,
+          "aristocrats": 250,
+          "bureaucrats": 500,
+          "clergymen": 250
+        },
+        "workers": 1500,
+        "goods": 300,
+        "wages": 456.7307692307692,
+        "construction": 0,
+        "bureaucracy": 50,
+        "tax": 4,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/chancery_pm.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/chancery_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_building_chancery_main_3",
+          "pm_hereditary_bureaucrats",
+          "pm_religious_bureaucrats",
+          "pm_building_chancery_silver_0"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 11,
+            "price": 30,
+            "value": 330
+          }
+        ],
+        "staff": {
+          "clerks": 500,
+          "aristocrats": 250,
+          "bureaucrats": 500,
+          "clergymen": 250
+        },
+        "workers": 1500,
+        "goods": 330,
+        "wages": 456.7307692307692,
+        "construction": 0,
+        "bureaucracy": 65,
+        "tax": 4,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/chancery_pm.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/chancery_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_building_chancery_main_4",
+          "pm_hereditary_bureaucrats",
+          "pm_religious_bureaucrats",
+          "pm_building_chancery_silver_0"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 15,
+            "price": 30,
+            "value": 450
+          }
+        ],
+        "staff": {
+          "clerks": 500,
+          "aristocrats": 250,
+          "bureaucrats": 500,
+          "clergymen": 250
+        },
+        "workers": 1500,
+        "goods": 450,
+        "wages": 456.7307692307692,
+        "construction": 0,
+        "bureaucracy": 100,
+        "tax": 4,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/chancery_pm.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/07_government.txt",
+          "common/production_methods/chancery_pm.txt"
+        ],
+        "missingProfessions": []
+      }
+    ],
+    "university": [
+      {
+        "keys": [
+          "pm_building_university_main_1",
+          "pm_religious_academia"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 5,
+            "price": 30,
+            "value": 150
+          },
+          {
+            "kind": "input",
+            "good": "bronze",
+            "qty": 2,
+            "price": 50,
+            "value": 100
+          }
+        ],
+        "staff": {
+          "clerks": 250,
+          "laborers": 250,
+          "clergymen": 250,
+          "academics": 250
+        },
+        "workers": 1000,
+        "goods": 250,
+        "wages": 228.3653846153846,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 2,
+        "sources": [
+          "common/production_methods/university_pm.txt",
+          "common/production_methods/university_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_building_university_main_2",
+          "pm_religious_academia"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 8,
+            "price": 30,
+            "value": 240
+          },
+          {
+            "kind": "input",
+            "good": "bronze",
+            "qty": 4,
+            "price": 50,
+            "value": 200
+          }
+        ],
+        "staff": {
+          "clerks": 240,
+          "laborers": 250,
+          "academics": 260,
+          "clergymen": 250
+        },
+        "workers": 1000,
+        "goods": 440,
+        "wages": 230.76923076923077,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 4,
+        "sources": [
+          "common/production_methods/university_pm.txt",
+          "common/production_methods/university_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      {
+        "keys": [
+          "pm_building_university_main_3",
+          "pm_religious_academia"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "book",
+            "qty": 9,
+            "price": 30,
+            "value": 270
+          },
+          {
+            "kind": "input",
+            "good": "bronze",
+            "qty": 6,
+            "price": 50,
+            "value": 300
+          }
+        ],
+        "staff": {
+          "clerks": 200,
+          "laborers": 200,
+          "academics": 350,
+          "clergymen": 250
+        },
+        "workers": 1000,
+        "goods": 570,
+        "wages": 254.80769230769232,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 6,
+        "sources": [
+          "common/production_methods/university_pm.txt",
+          "common/production_methods/university_pm.txt"
+        ],
+        "missingProfessions": []
+      }
+    ],
+    "extras": {
+      "pm_building_chancery_silver_1": {
+        "keys": [
+          "pm_building_chancery_silver_1"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "silver",
+            "qty": 3,
+            "price": 60,
+            "value": 180
+          }
+        ],
+        "staff": {},
+        "workers": 0,
+        "goods": 180,
+        "wages": 0,
+        "construction": 0,
+        "bureaucracy": 10,
+        "tax": 20,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/chancery_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      "pm_building_chancery_silver_2": {
+        "keys": [
+          "pm_building_chancery_silver_2"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "silver",
+            "qty": 5,
+            "price": 60,
+            "value": 300
+          }
+        ],
+        "staff": {},
+        "workers": 0,
+        "goods": 300,
+        "wages": 0,
+        "construction": 0,
+        "bureaucracy": 20,
+        "tax": 40,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/chancery_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      "pm_building_chancery_gold_1": {
+        "keys": [
+          "pm_building_chancery_gold_1"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "gold",
+            "qty": 2,
+            "price": 100,
+            "value": 200
+          }
+        ],
+        "staff": {},
+        "workers": 0,
+        "goods": 200,
+        "wages": 0,
+        "construction": 0,
+        "bureaucracy": 15,
+        "tax": 30,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/uyr_optional_luxury_and_minting.txt"
+        ],
+        "missingProfessions": []
+      },
+      "pm_building_chancery_gold_2": {
+        "keys": [
+          "pm_building_chancery_gold_2"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "gold",
+            "qty": 4,
+            "price": 100,
+            "value": 400
+          }
+        ],
+        "staff": {},
+        "workers": 0,
+        "goods": 400,
+        "wages": 0,
+        "construction": 0,
+        "bureaucracy": 35,
+        "tax": 70,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/uyr_optional_luxury_and_minting.txt"
+        ],
+        "missingProfessions": []
+      },
+      "pm_building_royal_court_main_1": {
+        "keys": [
+          "pm_building_royal_court_main_1"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "paper",
+            "qty": 15,
+            "price": 30,
+            "value": 450
+          },
+          {
+            "kind": "input",
+            "good": "book",
+            "qty": 5,
+            "price": 30,
+            "value": 150
+          },
+          {
+            "kind": "input",
+            "good": "luxury_clothes",
+            "qty": 5,
+            "price": 60,
+            "value": 300
+          },
+          {
+            "kind": "input",
+            "good": "luxury_furniture",
+            "qty": 5,
+            "price": 60,
+            "value": 300
+          }
+        ],
+        "staff": {
+          "aristocrats": 500,
+          "bureaucrats": 250,
+          "laborers": 250
+        },
+        "workers": 1000,
+        "goods": 1200,
+        "wages": 360.5769230769231,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/royal_court_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      "pm_building_bailiff_main_1": {
+        "keys": [
+          "pm_building_bailiff_main_1"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "weapons",
+            "qty": 5,
+            "price": 60,
+            "value": 300
+          }
+        ],
+        "staff": {
+          "aristocrats": 200,
+          "officers": 50,
+          "servicemen": 250
+        },
+        "workers": 500,
+        "goods": 300,
+        "wages": null,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 0,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/bailiff_pm.txt"
+        ],
+        "missingProfessions": [
+          "servicemen"
+        ],
+        "wageNote": "Not estimated: servicemen is referenced but not defined in installed vanilla or mod pop_types. Goods and valid-profession side-PM wages remain usable."
+      },
+      "pm_building_bailiff_taxation_rights_silver_1": {
+        "keys": [
+          "pm_building_bailiff_taxation_rights_silver_1"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "silver",
+            "qty": 10,
+            "price": 60,
+            "value": 600
+          }
+        ],
+        "staff": {
+          "bureaucrats": 250,
+          "laborers": 250
+        },
+        "workers": 500,
+        "goods": 600,
+        "wages": 120.1923076923077,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 25,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/bailiff_pm.txt"
+        ],
+        "missingProfessions": []
+      },
+      "pm_building_bailiff_taxation_rights_gold_1": {
+        "keys": [
+          "pm_building_bailiff_taxation_rights_gold_1"
+        ],
+        "inputs": [
+          {
+            "kind": "input",
+            "good": "gold",
+            "qty": 5,
+            "price": 100,
+            "value": 500
+          }
+        ],
+        "staff": {
+          "bureaucrats": 250,
+          "laborers": 250
+        },
+        "workers": 500,
+        "goods": 500,
+        "wages": 120.1923076923077,
+        "construction": 0,
+        "bureaucracy": 0,
+        "tax": 35,
+        "innovation": 0,
+        "sources": [
+          "common/production_methods/bailiff_pm.txt"
+        ],
+        "missingProfessions": []
+      }
+    },
+    "buildingCosts": {
+      "building_textile_mill": "construction_cost_high",
+      "building_tooling_workshop": "construction_cost_high",
+      "building_paper_mill": "construction_cost_high",
+      "building_wheat_farm": "construction_cost_low",
+      "building_iron_mine": "construction_cost_medium",
+      "building_government_administration": "construction_cost_very_low",
+      "building_university": "construction_cost_medium",
+      "building_construction_sector": "construction_cost_construction_sector",
+      "building_bakery": "construction_cost_high"
+    },
+    "gates": {
+      "pm_construction_main_1": [],
+      "pm_construction_main_2": [
+        [
+          "renaissance_construction",
+          "era_2"
+        ]
+      ],
+      "pm_construction_main_3": [
+        [
+          "monumental_construction",
+          "era_4"
+        ]
+      ],
+      "pm_construction_main_4": [
+        [
+          "iron_framed_construction",
+          "era_5"
+        ]
+      ],
+      "pm_building_chancery_main_1": [],
+      "pm_building_chancery_main_2": [
+        [
+          "formalized_administration",
+          "era_2"
+        ]
+      ],
+      "pm_building_chancery_main_3": [
+        [
+          "behaviorism",
+          "era_6"
+        ]
+      ],
+      "pm_building_chancery_main_4": [
+        [
+          "behaviorism",
+          "era_6"
+        ]
+      ]
+    },
+    "wageWeights": {
+      "academics": 4,
+      "aristocrats": 5,
+      "bureaucrats": 4,
+      "capitalists": 5,
+      "clergymen": 3,
+      "clerks": 1.5,
+      "engineers": 3,
+      "farmers": 2,
+      "laborers": 1,
+      "machinists": 1.5,
+      "officers": 5,
+      "peasants": 0.2,
+      "shopkeepers": 3,
+      "slaves": 0,
+      "soldiers": 1.5
+    }
+  }
+}

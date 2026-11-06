@@ -36,7 +36,7 @@ wotr_on_revolution_start = {
 			ROOT = {
 				set_variable = wotr_active_rebellion_york
 				if = {
-					limit = { game_date < 1461.1.1 }
+					limit = { NOT = { has_variable = wotr_edward_leads_york } }
 					wotr_ensure_richard_of_york_effect = yes
 					random_scope_character = {
 						limit = { has_variable = wotr_richard_of_york_character }
@@ -74,6 +74,8 @@ wotr_on_revolution_start = {
 					}
 				}
 				else = {
+					# Keep the claimant installed here when the accession event runs.
+					set_variable = wotr_edward_leads_york
 					random_scope_character = {
 						limit = { has_variable = wotr_edward_iv_character }
 						set_interest_group = PREV.ig:ig_crown
@@ -94,7 +96,7 @@ wotr_on_revolution_start = {
 			ROOT = {
 				set_variable = wotr_active_rebellion_lancaster
 				if = {
-					limit = { game_date < 1471.5.4 }
+					limit = { NOT = { has_variable = wotr_readeption_event } }
 					wotr_ensure_henry_vi_effect = yes
 					random_scope_character = {
 						limit = { has_variable = wotr_henry_vi_character }
@@ -132,6 +134,7 @@ wotr_on_revolution_start = {
 					}
 				}
 				else = {
+					set_variable = wotr_readeption_event
 					random_scope_character = {
 						limit = { has_variable = wotr_edward_westminster_character }
 						set_interest_group = PREV.ig:ig_crown

@@ -54,16 +54,16 @@ pm_building_cannon_foundry_main_4,common/production_methods/cannon_foundry_pm.tx
 pm_building_caravan_hub_main_1,common/production_methods/caravan_hub_pm.txt,50.0,500.0,450.0,367.5,400.0,,input horse 1; output merchant_marine 10
 pm_building_caravan_hub_main_2,common/production_methods/caravan_hub_pm.txt,100.0,750.0,650.0,522.5,500.0,behaviorism,input horse 2; output merchant_marine 15
 pm_building_caravan_hub_main_3,common/production_methods/caravan_hub_pm.txt,150.0,1000.0,850.0,677.5,600.0,behaviorism,input horse 3; output merchant_marine 20
-pm_building_chancery_gold_0,common/production_methods/uyr_optional_luxury_and_minting.txt,0.0,0,0.0,0.0,0,,input gold 0
-pm_building_chancery_gold_1,common/production_methods/uyr_optional_luxury_and_minting.txt,200.0,0,-200.0,-230.0,0,production_age_2,input gold 2
-pm_building_chancery_gold_2,common/production_methods/uyr_optional_luxury_and_minting.txt,400.0,0,-400.0,-460.0,0,production_age_4,input gold 4
+pm_building_chancery_gold_0,common/production_methods/uyr_optional_luxury_and_minting.txt,0,0,0,0.0,0,,
+pm_building_chancery_gold_1,common/production_methods/uyr_optional_luxury_and_minting.txt,200.0,0,-200.0,-230.0,0,minting_house,input gold 2
+pm_building_chancery_gold_2,common/production_methods/uyr_optional_luxury_and_minting.txt,300.0,0,-300.0,-345.0,0,production_age_4,input gold 3
 pm_building_chancery_main_1,common/production_methods/chancery_pm.txt,0,0,0,0.0,500.0,,
-pm_building_chancery_main_2,common/production_methods/chancery_pm.txt,300.0,0,-300.0,-345.0,500.0,formalized_administration,input paper 10
-pm_building_chancery_main_3,common/production_methods/chancery_pm.txt,330.0,0,-330.0,-379.5,500.0,behaviorism,input paper 11
-pm_building_chancery_main_4,common/production_methods/chancery_pm.txt,450.0,0,-450.0,-517.5,500.0,behaviorism,input paper 15
+pm_building_chancery_main_2,common/production_methods/chancery_pm.txt,240.0,0,-240.0,-276.0,500.0,formalized_administration,input paper 8
+pm_building_chancery_main_3,common/production_methods/chancery_pm.txt,300.0,0,-300.0,-345.0,500.0,printing_press,input paper 10
+pm_building_chancery_main_4,common/production_methods/chancery_pm.txt,360.0,0,-360.0,-414.0,500.0,administrative_suzerainty,input paper 12
 pm_building_chancery_silver_0,common/production_methods/chancery_pm.txt,0,0,0,0.0,0,,
 pm_building_chancery_silver_1,common/production_methods/chancery_pm.txt,180.0,0,-180.0,-207.0,0,,input silver 3
-pm_building_chancery_silver_2,common/production_methods/chancery_pm.txt,300.0,0,-300.0,-345.0,0,,input silver 5
+pm_building_chancery_silver_2,common/production_methods/chancery_pm.txt,300.0,0,-300.0,-345.0,0,formalized_administration,input silver 5
 pm_building_chili_plantation_main_1,common/production_methods/chili_plantation.txt,160.0,1000.0,840.0,666.0,3000.0,,output chili 25; input tools 4
 pm_building_chili_plantation_main_2,common/production_methods/chili_plantation.txt,440.0,1600.0,1160.0,854.0,3000.0,production_age_2,input tools 11; output chili 40
 pm_building_chili_plantation_main_3,common/production_methods/chili_plantation.txt,600.0,2200.0,1600.0,1180.0,3000.0,production_age_3,input tools 15; output chili 55
@@ -83,10 +83,10 @@ pm_building_clove_grove_main_1,common/production_methods/clove_grove_pm.txt,80.0
 pm_building_clove_grove_main_2,common/production_methods/clove_grove_pm.txt,320.0,1500.0,1180.0,907.0,3000.0,production_age_2,input tools 8; output cloves 25
 pm_building_clove_grove_main_3,common/production_methods/clove_grove_pm.txt,520.0,2100.0,1580.0,1187.0,3000.0,production_age_3,input tools 13; output cloves 35
 pm_building_clove_grove_main_4,common/production_methods/clove_grove_pm.txt,880.0,3000.0,2120.0,1538.0,3000.0,production_age_5,input tools 22; output cloves 50
-pm_building_coal_mine_main_1,common/production_methods/coalmine_pm.txt,200.0,1050.0,850.0,662.5,3000.0,,input tools 5; output coal 35
-pm_building_coal_mine_main_2,common/production_methods/coalmine_pm.txt,400.0,1650.0,1250.0,942.5,3000.0,expanded_coal_mining,input tools 10; output coal 55
-pm_building_coal_mine_main_3,common/production_methods/coalmine_pm.txt,840.0,2550.0,1710.0,1201.5,3000.0,deep_shaft_coal_mining,input tools 21; output coal 85
-pm_building_coal_mine_main_4,common/production_methods/coalmine_pm.txt,1160.0,3450.0,2290.0,1598.5,3000.0,mechanized_coal_mining,input tools 29; output coal 115
+pm_building_coal_mine_main_1,common/production_methods/coalmine_pm.txt,120.0,750.0,630.0,499.5,3000.0,,input tools 3; output coal 25
+pm_building_coal_mine_main_2,common/production_methods/coalmine_pm.txt,320.0,1350.0,1030.0,779.5,3000.0,expanded_coal_mining,input tools 8; output coal 45
+pm_building_coal_mine_main_3,common/production_methods/coalmine_pm.txt,560.0,1950.0,1390.0,1013.5,3000.0,deep_shaft_coal_mining,input tools 14; output coal 65
+pm_building_coal_mine_main_4,common/production_methods/coalmine_pm.txt,880.0,2700.0,1820.0,1283.0,3000.0,mechanized_coal_mining,input tools 22; output coal 90
 pm_building_cocoa_plantation_main_1,common/production_methods/cocoa_plantation.txt,80.0,900.0,820.0,673.0,3000.0,,output cocoa 30; input tools 2
 pm_building_cocoa_plantation_main_2,common/production_methods/cocoa_plantation.txt,320.0,1500.0,1180.0,907.0,3000.0,production_age_2,input tools 8; output cocoa 50
 pm_building_cocoa_plantation_main_3,common/production_methods/cocoa_plantation.txt,680.0,2250.0,1570.0,1130.5,3000.0,production_age_3,input tools 17; output cocoa 75
@@ -97,9 +97,9 @@ pm_building_coffee_plantation_main_3,common/production_methods/coffee_plantation
 pm_building_coffee_plantation_main_4,common/production_methods/coffee_plantation.txt,880.0,3000.0,2120.0,1538.0,3000.0,production_age_5,input tools 22; output coffee 60
 pm_building_colonial_office_main_1,common/production_methods/colonial_outpost.txt,2850.0,0,-2850.0,-3277.5,3000.0,,input grain 40; input wood 20; input weapons 10; input tools 10; input navalsupplies 10
 pm_building_copper_mine_main_1,common/production_methods/coppermine_pm.txt,120.0,1000.0,880.0,712.0,3000.0,,input tools 3; output copper 25
-pm_building_copper_mine_main_2,common/production_methods/coppermine_pm.txt,560.0,1800.0,1240.0,886.0,3000.0,expanded_copper_mining,input tools 14; output copper 45
-pm_building_copper_mine_main_3,common/production_methods/coppermine_pm.txt,880.0,2600.0,1720.0,1198.0,3000.0,deep_shaft_copper_mining,input tools 22; output copper 65
-pm_building_copper_mine_main_4,common/production_methods/coppermine_pm.txt,1320.0,3600.0,2280.0,1542.0,3000.0,mechanized_copper_mining,input tools 33; output copper 90
+pm_building_copper_mine_main_2,common/production_methods/coppermine_pm.txt,320.0,1800.0,1480.0,1162.0,3000.0,expanded_copper_mining,input tools 8; output copper 45
+pm_building_copper_mine_main_3,common/production_methods/coppermine_pm.txt,560.0,2600.0,2040.0,1566.0,3000.0,deep_shaft_copper_mining,input tools 14; output copper 65
+pm_building_copper_mine_main_4,common/production_methods/coppermine_pm.txt,880.0,3600.0,2720.0,2048.0,3000.0,mechanized_copper_mining,input tools 22; output copper 90
 pm_building_cotton_plantation_main_1,common/production_methods/cotton_plantation_pm.txt,160.0,1800.0,1640.0,1346.0,6000.0,,output fabric 90; input tools 4
 pm_building_cotton_plantation_main_2,common/production_methods/cotton_plantation_pm.txt,800.0,3000.0,2200.0,1630.0,6000.0,production_age_2,input tools 20; output fabric 150
 pm_building_cotton_plantation_main_3,common/production_methods/cotton_plantation_pm.txt,1360.0,4400.0,3040.0,2176.0,6000.0,production_age_3,input tools 34; output fabric 220
@@ -127,18 +127,18 @@ pm_building_furniture_workshop_main_2,common/production_methods/furniture_worksh
 pm_building_furniture_workshop_main_3,common/production_methods/furniture_workshop_pm.txt,800.0,3150.0,2350.0,1757.5,3000.0,cabinetmaking,input wood 15; input tools 7; input fabric 11; output furniture 105
 pm_building_furniture_workshop_main_4,common/production_methods/furniture_workshop_pm.txt,1280.0,4350.0,3070.0,2225.5,3000.0,furniture_manufactories,input wood 21; input tools 13; input fabric 17; output furniture 145
 pm_building_gem_mine_main_1,common/production_methods/gemmine_pm.txt,120.0,1000.0,880.0,712.0,3000.0,,input tools 3; output gems 25
-pm_building_gem_mine_main_2,common/production_methods/gemmine_pm.txt,560.0,1800.0,1240.0,886.0,3000.0,faceting,input tools 14; output gems 45
-pm_building_gem_mine_main_3,common/production_methods/gemmine_pm.txt,880.0,2600.0,1720.0,1198.0,3000.0,deep_shaft_gem_mining,input tools 22; output gems 65
-pm_building_gem_mine_main_4,common/production_methods/gemmine_pm.txt,1320.0,3600.0,2280.0,1542.0,3000.0,mechanized_gem_mining,input tools 33; output gems 90
+pm_building_gem_mine_main_2,common/production_methods/gemmine_pm.txt,320.0,1800.0,1480.0,1162.0,3000.0,faceting,input tools 8; output gems 45
+pm_building_gem_mine_main_3,common/production_methods/gemmine_pm.txt,560.0,2600.0,2040.0,1566.0,3000.0,deep_shaft_gem_mining,input tools 14; output gems 65
+pm_building_gem_mine_main_4,common/production_methods/gemmine_pm.txt,880.0,3600.0,2720.0,2048.0,3000.0,mechanized_gem_mining,input tools 22; output gems 90
 pm_building_glassworks_main_1,common/production_methods/glassworks_pm.txt,250.0,1600.0,1350.0,1072.5,3000.0,,input wood 4; input stone 3; input tools 2; output glass 40
 pm_building_glassworks_main_2,common/production_methods/glassworks_pm.txt,620.0,2800.0,2180.0,1667.0,3000.0,glassblowing,input wood 5; input lead 8; input tools 5; output glass 70
 pm_building_glassworks_main_3,common/production_methods/glassworks_pm.txt,800.0,3200.0,2400.0,1800.0,3000.0,stained_glassmaking,input lead 12; input dye 4; input tools 4; output glass 80
 pm_building_glassworks_main_4,common/production_methods/glassworks_pm.txt,1280.0,4400.0,3120.0,2268.0,3000.0,leaded_crystal_glass,input lead 16; input dye 8; input tools 8; output glass 110
-pm_building_gold_field_main_1,common/production_methods/gold_field_pm.txt,200.0,500.0,300.0,195.0,1000.0,,output gold 5; input tools 5
-pm_building_gold_mine_main_1,common/production_methods/goldmine_pm.txt,120.0,1000.0,880.0,712.0,3000.0,,input tools 3; output gold 10
-pm_building_gold_mine_main_2,common/production_methods/goldmine_pm.txt,280.0,1500.0,1220.0,953.0,3000.0,expanded_gold_mining,input tools 7; output gold 15
-pm_building_gold_mine_main_3,common/production_methods/goldmine_pm.txt,800.0,2500.0,1700.0,1205.0,3000.0,deep_shaft_gold_mining,input tools 20; output gold 25
-pm_building_gold_mine_main_4,common/production_methods/goldmine_pm.txt,1240.0,3500.0,2260.0,1549.0,3000.0,mechanized_gold_mining,input tools 31; output gold 35
+pm_building_gold_field_main_1,common/production_methods/gold_field_pm.txt,200.0,1000.0,800.0,620.0,1000.0,,output gold 10; input tools 5
+pm_building_gold_mine_main_1,common/production_methods/goldmine_pm.txt,120.0,2000.0,1880.0,1562.0,3000.0,,input tools 3; output gold 20
+pm_building_gold_mine_main_2,common/production_methods/goldmine_pm.txt,320.0,3500.0,3180.0,2607.0,3000.0,expanded_gold_mining,input tools 8; output gold 35
+pm_building_gold_mine_main_3,common/production_methods/goldmine_pm.txt,560.0,5000.0,4440.0,3606.0,3000.0,deep_shaft_gold_mining,input tools 14; output gold 50
+pm_building_gold_mine_main_4,common/production_methods/goldmine_pm.txt,880.0,7000.0,6120.0,4938.0,3000.0,mechanized_gold_mining,input tools 22; output gold 70
 pm_building_grain_farm_plow_0,common/production_methods/farms_pm.txt,0,0,0,0.0,0,,
 pm_building_grain_farm_plow_1,common/production_methods/farms_pm.txt,120.0,300.0,180.0,117.0,-1000.0,heavy_plow,input tools 3; output grain 15
 pm_building_grain_farm_plow_2,common/production_methods/farms_pm.txt,300.0,600.0,300.0,165.0,-2000.0,horse_harnessing,input tools 5; input horse 2; output grain 30
@@ -154,9 +154,9 @@ pm_building_hunting_lodge_main_2,common/production_methods/hunting_lodge_pm.txt,
 pm_building_hunting_lodge_main_3,common/production_methods/hunting_lodge_pm.txt,640.0,2250.0,1610.0,1176.5,3000.0,production_age_3,input firearms 8; output fur 30; output meat 15
 pm_building_hunting_lodge_main_4,common/production_methods/hunting_lodge_pm.txt,880.0,3000.0,2120.0,1538.0,3000.0,production_age_5,input firearms 11; output fur 40; output meat 20
 pm_building_iron_mine_main_1,common/production_methods/ironmine_pm.txt,120.0,1000.0,880.0,712.0,3000.0,,input tools 3; output iron 25
-pm_building_iron_mine_main_2,common/production_methods/ironmine_pm.txt,560.0,1800.0,1240.0,886.0,3000.0,expanded_iron_mining,input tools 14; output iron 45
-pm_building_iron_mine_main_3,common/production_methods/ironmine_pm.txt,880.0,2600.0,1720.0,1198.0,3000.0,deep_shaft_iron_mining,input tools 22; output iron 65
-pm_building_iron_mine_main_4,common/production_methods/ironmine_pm.txt,1320.0,3600.0,2280.0,1542.0,3000.0,mechanized_iron_mining,input tools 33; output iron 90
+pm_building_iron_mine_main_2,common/production_methods/ironmine_pm.txt,320.0,1800.0,1480.0,1162.0,3000.0,expanded_iron_mining,input tools 8; output iron 45
+pm_building_iron_mine_main_3,common/production_methods/ironmine_pm.txt,560.0,2600.0,2040.0,1566.0,3000.0,deep_shaft_iron_mining,input tools 14; output iron 65
+pm_building_iron_mine_main_4,common/production_methods/ironmine_pm.txt,880.0,3600.0,2720.0,2048.0,3000.0,mechanized_iron_mining,input tools 22; output iron 90
 pm_building_ironworks_main_1,common/production_methods/ironworks_pm.txt,440.0,2500.0,2060.0,1619.0,3000.0,,input iron 8; input coal 4; output ironingot 50
 pm_building_ironworks_main_2,common/production_methods/ironworks_pm.txt,810.0,4500.0,3690.0,2893.5,3000.0,iron_casting,input iron 15; input coal 7; output ironingot 90
 pm_building_ironworks_main_3,common/production_methods/ironworks_pm.txt,1210.0,5000.0,3790.0,2858.5,3000.0,blast_furnaces,input iron 22; input coal 11; output ironingot 100
@@ -177,9 +177,9 @@ pm_building_jewelry_workshop_main_2,common/production_methods/jewelry_workshop_p
 pm_building_jewelry_workshop_main_3,common/production_methods/jewelry_workshop_pm.txt,940.0,3600.0,2660.0,1979.0,3000.0,production_age_3,input silver 11; input gems 7; output jewelry 40
 pm_building_jewelry_workshop_main_4,common/production_methods/jewelry_workshop_pm.txt,1120.0,4500.0,3380.0,2537.0,3000.0,production_age_5,input silver 12; input gems 10; output jewelry 50
 pm_building_lead_mine_main_1,common/production_methods/leadmine_pm.txt,120.0,1000.0,880.0,712.0,3000.0,,input tools 3; output lead 25
-pm_building_lead_mine_main_2,common/production_methods/leadmine_pm.txt,560.0,1800.0,1240.0,886.0,3000.0,expanded_lead_mining,input tools 14; output lead 45
-pm_building_lead_mine_main_3,common/production_methods/leadmine_pm.txt,880.0,2600.0,1720.0,1198.0,3000.0,deep_shaft_lead_mining,input tools 22; output lead 65
-pm_building_lead_mine_main_4,common/production_methods/leadmine_pm.txt,1320.0,3600.0,2280.0,1542.0,3000.0,mechanized_lead_mining,input tools 33; output lead 90
+pm_building_lead_mine_main_2,common/production_methods/leadmine_pm.txt,320.0,1800.0,1480.0,1162.0,3000.0,expanded_lead_mining,input tools 8; output lead 45
+pm_building_lead_mine_main_3,common/production_methods/leadmine_pm.txt,560.0,2600.0,2040.0,1566.0,3000.0,deep_shaft_lead_mining,input tools 14; output lead 65
+pm_building_lead_mine_main_4,common/production_methods/leadmine_pm.txt,880.0,3600.0,2720.0,2048.0,3000.0,mechanized_lead_mining,input tools 22; output lead 90
 pm_building_livestock_main_1,common/production_methods/livestock_pm.txt,160.0,1000.0,840.0,666.0,3000.0,,output livestock 25; input tools 4
 pm_building_livestock_main_2,common/production_methods/livestock_pm.txt,440.0,1600.0,1160.0,854.0,3000.0,pasture_management,output livestock 40; input tools 11
 pm_building_livestock_main_3,common/production_methods/livestock_pm.txt,600.0,2200.0,1600.0,1180.0,3000.0,large_scale_ranching,output livestock 55; input tools 15
@@ -265,10 +265,10 @@ pm_building_silk_farm_main_1,common/production_methods/silk_farm_pm.txt,160.0,10
 pm_building_silk_farm_main_2,common/production_methods/silk_farm_pm.txt,440.0,1600.0,1160.0,854.0,3000.0,mulberry_cultivation,input tools 11; output silk 40
 pm_building_silk_farm_main_3,common/production_methods/silk_farm_pm.txt,600.0,2200.0,1600.0,1180.0,3000.0,production_age_3,input tools 15; output silk 55
 pm_building_silk_farm_main_4,common/production_methods/silk_farm_pm.txt,1080.0,3200.0,2120.0,1478.0,3000.0,production_age_5,input tools 27; output silk 80
-pm_building_silver_mine_main_1,common/production_methods/silvermine_pm.txt,40.0,900.0,860.0,719.0,3000.0,,input tools 1; output silver 15
-pm_building_silver_mine_main_2,common/production_methods/silvermine_pm.txt,560.0,1800.0,1240.0,886.0,3000.0,expanded_silver_mining,input tools 14; output silver 30
-pm_building_silver_mine_main_3,common/production_methods/silvermine_pm.txt,680.0,2400.0,1720.0,1258.0,3000.0,deep_shaft_silver_mining,input tools 17; output silver 40
-pm_building_silver_mine_main_4,common/production_methods/silvermine_pm.txt,1320.0,3600.0,2280.0,1542.0,3000.0,mechanized_silver_mining,input tools 33; output silver 60
+pm_building_silver_mine_main_1,common/production_methods/silvermine_pm.txt,120.0,1200.0,1080.0,882.0,3000.0,,input tools 3; output silver 20
+pm_building_silver_mine_main_2,common/production_methods/silvermine_pm.txt,320.0,2100.0,1780.0,1417.0,3000.0,expanded_silver_mining,input tools 8; output silver 35
+pm_building_silver_mine_main_3,common/production_methods/silvermine_pm.txt,560.0,3000.0,2440.0,1906.0,3000.0,deep_shaft_silver_mining,input tools 14; output silver 50
+pm_building_silver_mine_main_4,common/production_methods/silvermine_pm.txt,880.0,4200.0,3320.0,2558.0,3000.0,mechanized_silver_mining,input tools 22; output silver 70
 pm_building_slaughterhouse_main_1,common/production_methods/slaughterhouse_pm.txt,200.0,1650.0,1450.0,1172.5,3000.0,,input livestock 5; output meat 55
 pm_building_slaughterhouse_main_2,common/production_methods/slaughterhouse_pm.txt,520.0,2250.0,1730.0,1314.5,3000.0,guild_butchery,input tools 4; input livestock 9; output meat 75
 pm_building_slaughterhouse_main_3,common/production_methods/slaughterhouse_pm.txt,800.0,3150.0,2350.0,1757.5,3000.0,production_age_3,input tools 8; input livestock 12; output meat 105
@@ -276,10 +276,10 @@ pm_building_slaughterhouse_main_4,common/production_methods/slaughterhouse_pm.tx
 pm_building_slaughterhouse_salting_0,common/production_methods/slaughterhouse_pm.txt,0,0,0,0.0,0,,
 pm_building_slaughterhouse_salting_1,common/production_methods/slaughterhouse_pm.txt,150.0,300.0,150.0,82.5,0,production_age_2,input salt 5; output meat 10
 pm_building_slaughterhouse_salting_2,common/production_methods/slaughterhouse_pm.txt,300.0,600.0,300.0,165.0,0,production_age_3,input salt 10; output meat 20
-pm_building_stone_mine_main_1,common/production_methods/stonemine_pm.txt,200.0,1050.0,850.0,662.5,3000.0,,output stone 35; input tools 5
-pm_building_stone_mine_main_2,common/production_methods/stonemine_pm.txt,400.0,1650.0,1250.0,942.5,3000.0,organized_quarrying,input tools 10; output stone 55
-pm_building_stone_mine_main_3,common/production_methods/stonemine_pm.txt,840.0,2550.0,1710.0,1201.5,3000.0,expanded_quarrying,input tools 21; output stone 85
-pm_building_stone_mine_main_4,common/production_methods/stonemine_pm.txt,1160.0,3450.0,2290.0,1598.5,3000.0,mechanized_quarrying,input tools 29; output stone 115
+pm_building_stone_mine_main_1,common/production_methods/stonemine_pm.txt,120.0,750.0,630.0,499.5,3000.0,,output stone 25; input tools 3
+pm_building_stone_mine_main_2,common/production_methods/stonemine_pm.txt,320.0,1350.0,1030.0,779.5,3000.0,organized_quarrying,input tools 8; output stone 45
+pm_building_stone_mine_main_3,common/production_methods/stonemine_pm.txt,560.0,1950.0,1390.0,1013.5,3000.0,expanded_quarrying,input tools 14; output stone 65
+pm_building_stone_mine_main_4,common/production_methods/stonemine_pm.txt,880.0,2700.0,1820.0,1283.0,3000.0,mechanized_quarrying,input tools 22; output stone 90
 pm_building_stone_mine_salt_0,common/production_methods/stonemine_pm.txt,0,0,0,0.0,0,,
 pm_building_stone_mine_salt_1,common/production_methods/stonemine_pm.txt,80.0,300.0,220.0,163.0,1000.0,,input tools 2; output salt 10
 pm_building_stone_mine_salt_2,common/production_methods/stonemine_pm.txt,120.0,450.0,330.0,244.5,1000.0,expanded_quarrying,input tools 3; output salt 15
@@ -311,9 +311,9 @@ pm_building_tea_garden_main_3,common/production_methods/tea_garden_pm.txt,640.0,
 pm_building_tea_garden_main_4,common/production_methods/tea_garden_pm.txt,880.0,3000.0,2120.0,1538.0,3000.0,production_age_5,input tools 22; output tea 60
 pm_building_temple_main,common/production_methods/temple_pm.txt,480.0,0,-480.0,-552.0,1000.0,,input glass 1; input clothes 2; input copper 2; input paper 1; input tools 1; input beeswax 2; input incense 3; input medicaments 1
 pm_building_tin_mine_main_1,common/production_methods/tinmine_pm.txt,120.0,1000.0,880.0,712.0,3000.0,,input tools 3; output tin 25
-pm_building_tin_mine_main_2,common/production_methods/tinmine_pm.txt,560.0,1800.0,1240.0,886.0,3000.0,expanded_tin_mining,input tools 14; output tin 45
-pm_building_tin_mine_main_3,common/production_methods/tinmine_pm.txt,880.0,2600.0,1720.0,1198.0,3000.0,deep_shaft_tin_mining,input tools 22; output tin 65
-pm_building_tin_mine_main_4,common/production_methods/tinmine_pm.txt,1320.0,3600.0,2280.0,1542.0,3000.0,mechanized_tin_mining,input tools 33; output tin 90
+pm_building_tin_mine_main_2,common/production_methods/tinmine_pm.txt,320.0,1800.0,1480.0,1162.0,3000.0,expanded_tin_mining,input tools 8; output tin 45
+pm_building_tin_mine_main_3,common/production_methods/tinmine_pm.txt,560.0,2600.0,2040.0,1566.0,3000.0,deep_shaft_tin_mining,input tools 14; output tin 65
+pm_building_tin_mine_main_4,common/production_methods/tinmine_pm.txt,880.0,3600.0,2720.0,2048.0,3000.0,mechanized_tin_mining,input tools 22; output tin 90
 pm_building_tooling_workshop_main_1,common/production_methods/tooling_worskhop_pm.txt,250.0,1600.0,1350.0,1072.5,3000.0,,input wood 5; input stone 5; output tools 40
 pm_building_tooling_workshop_main_2,common/production_methods/tooling_worskhop_pm.txt,630.0,2400.0,1770.0,1315.5,3000.0,bronze_tools,input wood 9; input ironingot 9; output tools 60
 pm_building_tooling_workshop_main_3,common/production_methods/tooling_worskhop_pm.txt,800.0,3200.0,2400.0,1800.0,3000.0,iron_tools,input wood 10; input ironingot 12; output tools 80

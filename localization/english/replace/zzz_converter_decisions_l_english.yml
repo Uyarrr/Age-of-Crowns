@@ -4,11 +4,11 @@
  zzz_advanced_native_expansion_desc:0 "Begin preparations to conquer a neighboring tribe"
  zzz_advanced_native_expansion.tt:0 "Starts a diplomatic play to conquer a random, bordering, decentralized nation."
  zzz_advanced_native_expansion.tt2:0 "Has been 3 years since the last war with a bordering tribe."
- 
+
  set_status_as_colonial_nation:0 "Set Status as Colonial Nation"
  set_status_as_colonial_nation_desc:0 "May allow nation to form an applicable new world nation after achieving independence."
  set_status_as_colonial_nation.tt:0 "Set nation as a colonial nation"
- 
+
 # Form Minor/Non-Confederate Countries
  form_hudson_bay_dec:0 "Form Hudson Bay"
  form_hudson_bay_dec_desc:0 "Pro Pelle Cutem"
@@ -26,7 +26,7 @@
  form_new_brunswick_dec_desc:0 "Spem Reduxit"
  form_nova_scotia_dec:0 "Form Nova Scotia"
  form_nova_scotia_dec_desc:0 "Munit Haec Et Altera Vincit"
- 
+
  form_new_england_dec:0 "Form New England"
  form_new_england_dec_desc:0 "Nunquam Libertas Gratior Extat"
  form_free_states_dec:0 "Form the Free States of America"
@@ -43,26 +43,25 @@
  form_georgia_usa_dec_desc:0 "Wisdom, Justice, and Moderation"
  form_florida_dec:0 "Form Florida"
  form_florida_dec_desc:0 "In God Is Our Trust"
- 
+
  form_michigan_dec:0 "Form Michigan"
  form_michigan_dec_desc:0 "Si Quaeris Peninsulam Amoenam Circum Spice"
  form_dakota_dec:0 "Form Dakota"
  form_dakota_dec_desc:0 "Liberty And Union, One And Inseparable, Now And Forever"
  form_louisiana_dec:0 "Form Louisiana"
  form_louisiana_dec_desc:0 "Union, Justice, Confidence"
- 
+
  form_california_dec:0 "Form California"
  form_california_dec_desc:0 "Eureka"
  form_oregon_dec:0 "Form Oregon"
  form_oregon_dec_desc:0 "Alis Volat Proppriis"
  form_deseret_dec:0 "Form Deseret"
- form_deseret_dec_desc:0 "The Constitution of our country formed by the Fathers of liberty. Peace and good order in society. Love to God, and good will to man. All good and wholesome laws, virtue and truth above all things, and aristarchy, live forever! But woe to tyrants, mobs, aristocracy, anarchy, and toryism, and all those who invent or seek out unrighteous and vexatious law suits, under the pretext and color of law, or office, either religious or political. Exalt the standard of Democracy! Down with that of priestcraft, and let all the people say Amen! that the blood of our fathers may not cry from the ground against us. Sacred is the memory of that blood which bought for us our liberty."
- 
+ form_deseret_dec_desc: "Unite our communities under a common constitution. A government in Deseret would protect religious life, maintain public order, and give our settlements a lasting political home."
  form_cascadia_dec:0 "Form Cascadia"
  form_cascadia_dec_desc:0 "Perseverance" #North West Company Motto
  form_columbia_dec:0 "Form Columbia"
  form_columbia_dec_desc:0 "Splendor Sine Occasu"
- 
+
  form_texas_dec:0 "Form Texas"
  form_texas_dec_desc:0 "Remember the Alamo"
  form_rio_grande_dec:0 "Form Rio Grande"
@@ -83,7 +82,7 @@
  form_costa_rica_dec_desc:0 "Pura Vida"
  form_usca_dec:0 "Form the United States of Central America"
  form_usca_dec_desc:0 "Dios, Unión, Libertad"
- 
+
  form_panama_dec:0 "Form Panama"
  form_panama_dec_desc:0 "Pro Mundi Beneficio"
  form_colombia_dec:0 "Form Colombia"
@@ -92,12 +91,12 @@
  form_venezuela_dec_desc:0 "Dios Y Federación"
  form_ecuador_dec:0 "Form Ecuador"
  form_ecuador_dec_desc:0 "Pro Deo, Patria Et Libertate"
- 
+
  form_north_peru_dec:0 "Form North Peru"
  form_north_peru_dec_desc:0 "Firme Por La Unión" #Peru-Bolivia Motto
  form_bolivia_dec:0 "Form Bolivia"
  form_bolivia_dec_desc:0 "La Unión Es La Fuerza"
- 
+
  form_chile_dec:0 "Form Chile"
  form_chile_dec_desc:0 "Por La Razón O La Fuerza"
  form_paraguay_dec:0 "Form Paraguay"
@@ -106,7 +105,7 @@
  form_uruguay_dec_desc:0 " Libertad O Muerte"
  form_rio_de_la_plata_dec:0 "Form Rio de la Plata"
  form_rio_de_la_plata_dec_desc:0 "En Unión Y Libertad"
- 
+
  form_amazonia_dec:0 "Form Amazonia"
  form_amazonia_dec_desc:0 "Iustitia Et Aequalitas"
  form_bahia_dec:0 "Form Bahia"
@@ -123,7 +122,7 @@
  form_piratini_dec_desc:0 "Liberdade, Igualdade, Humanidade"
  form_santa_catarina_dec:0 "Form Santa Catarina"
  form_santa_catarina_dec_desc:0 "Liberdade, Igualdade, Humanidade"
- 
+
  form_bahamas_dec:0 "Form Bahamas"
  form_bahamas_dec_desc:0 "Forward Upward Onward Together"
  form_cuba_dec:0 "Form Cuba"
@@ -138,7 +137,7 @@
  form_santo_domingo_dec_desc:0 "Dios, Patria, Libertad"
  form_west_indies_dec:0 "Form the West Indies"
  form_west_indies_dec_desc:0 "To Dwell Together In Unity"
- 
+
  form_new_south_wales_dec:0 "Form New South Wales"
  form_new_south_wales_dec_desc:0 "Orta Recens Quam Pura Nites"
  form_new_zealand_dec:0 "Form New Zealand"
@@ -149,8 +148,8 @@
  form_tasmania_dec_desc:0 "Ubertas Et Fidelitas"
  form_western_australia_dec:0 "Form Western Australia"
  form_western_australia_dec_desc:0 "Cygnis Insignis"
- 
- 
+
+
  # Confederation Journal Entries & Decisions
  je_america_unite_usa_button: "Federate America"
  je_america_unite_usa_button_desc: "[SCOPE.GetRootScope.GetCountry.GetCustom('unite_usa_description')]"
@@ -180,7 +179,7 @@
  gbr_unified_america:0 "American Federation"
  cal_unified_california:0 "Californian Confederation"
  gbr_unified_california:0 "Californian Confederation"
- 
+
  je_mexico_unite_mex_button: "Federate Mexico"
  je_mexico_unite_mex_button_desc: "[SCOPE.GetRootScope.GetCountry.GetCustom('unite_mex_description')]"
  #mexico_unite_mex:0 "Federate Mexico"
@@ -209,7 +208,7 @@
  gbr_unified_mexico:0 "Mexican Federation"
  gco_unified_colombia:0 "Colombian Confederation"
  gbr_unified_colombia:0 "Colombian Confederation"
- 
+
  je_peru_unite_peu_button: "Federate Peru"
  je_peru_unite_peu_button_desc: "[SCOPE.GetRootScope.GetCountry.GetCustom('unite_peu_description')]"
  #peru_unite_peu:0 "Federate Peru"
@@ -238,7 +237,7 @@
  gbr_unified_peru:0 "Peruvian Federation"
  brz_unified_brazil:0 "Brazilian Federation"
  gbr_unified_brazil:0 "Brazilian Federation"
- 
+
  je_argentina_unite_arg_button: "Federate Argentina"
  je_argentina_unite_arg_button_desc: "[SCOPE.GetRootScope.GetCountry.GetCustom('unite_arg_description')]"
  #argentina_unite_arg:0 "Federate Argentina"
@@ -268,35 +267,35 @@
 
  converter_aus_cultures_tooltip:0 "A culture counts as an Australian culture if it does not have the Indigenous Oceanic Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of Australia."
  converter_can_cultures_tooltip:0 "A culture counts as a Canadian culture if it does not have the Indigenous American Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of Canada."
- 
+
  unite_california_je_cal_tt:0 "Have at least Amicable relations and greater GDP than a neighboring #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_cal_cultures_tooltip Californian#!#! country with the same overlord"
  unite_america_je_usa_tt:0 "Have at least Amicable relations and greater GDP than a neighboring #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_usa_cultures_tooltip American#!#! country with the same overlord"
  gbr_cal_relations_tt:0 "Have at least Amicable relations with two #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_cal_cultures_tooltip Californian#!#! subjects"
  gbr_usa_relations_tt:0 "Have at least Amicable relations with two #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_usa_cultures_tooltip American#!#! subjects"
  converter_cal_cultures_tooltip:0 "A culture counts as a Californian culture if it does not have the Indigenous American Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of California."
  converter_usa_cultures_tooltip:0 "A culture counts as an American culture if it does not have the Indigenous American Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of America."
- 
+
  unite_colombia_je_gco_tt:0 "Have at least Amicable relations and greater GDP than a neighboring #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_gco_cultures_tooltip Colombian#!#! country with the same overlord"
  unite_mexico_je_mex_tt:0 "Have at least Amicable relations and greater GDP than a neighboring #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_mex_cultures_tooltip Mexican#!#! country with the same overlord"
  gbr_gco_relations_tt:0 "Have at least Amicable relations with two #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_gco_cultures_tooltip Colombian#!#! subjects"
  gbr_mex_relations_tt:0 "Have at least Amicable relations with two #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_mex_cultures_tooltip Mexican#!#! subjects"
  converter_gco_cultures_tooltip:0 "A culture counts as a Colombian culture if it does not have the Indigenous American Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of Gran Colombia."
  converter_mex_cultures_tooltip:0 "A culture counts as a Mexican culture if it does not have the Indigenous American Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of Mexico."
- 
+
  unite_peru_je_peu_tt:0 "Have at least Amicable relations and greater GDP than a neighboring #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_peu_cultures_tooltip Peruvian#!#! country with the same overlord"
  unite_brazil_je_brz_tt:0 "Have at least Amicable relations and greater GDP than a neighboring #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_brz_cultures_tooltip Brazilian#!#! country with the same overlord"
  gbr_peu_relations_tt:0 "Have at least Amicable relations with two #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_peu_cultures_tooltip Peruvian#!#! subjects"
  gbr_brz_relations_tt:0 "Have at least Amicable relations with two #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_brz_cultures_tooltip Brazilian#!#! subjects"
  converter_peu_cultures_tooltip:0 "A culture counts as a Peruvian culture if it does not have the Indigenous American Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of Peru."
  converter_brz_cultures_tooltip:0 "A culture counts as a Brazilian culture if it does not have the Indigenous American Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of Brazil."
- 
+
  unite_cape_je_saf_tt:0 "Have at least Amicable relations and greater GDP than a neighboring #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_saf_cultures_tooltip Cape#!#! country with the same overlord"
  unite_argentina_je_arg_tt:0 "Have at least Amicable relations and greater GDP than a neighboring #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_arg_cultures_tooltip Argentine#!#! country with the same overlord"
  gbr_saf_relations_tt:0 "Have at least Amicable relations with two #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_saf_cultures_tooltip Cape#!#! subjects"
  gbr_arg_relations_tt:0 "Have at least Amicable relations with two #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_arg_cultures_tooltip Argentine#!#! subjects"
  converter_saf_cultures_tooltip:0 "A culture counts as a Cape culture if it does not have the African Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of South Africa."
  converter_arg_cultures_tooltip:0 "A culture counts as an Argentine culture if it does not have the Indigenous American Heritage trait & it has a homeland in the #tooltippable #tooltip:[GetPlayer.GetTooltipTag],converter_colonial_regions_tooltip colonial region#!#! of Argentina."
- 
+
  converter_form_canada:0 "Form Canada"
  converter_form_canada_desc:0 "If we were able to lock down control of the frigid north of the American continent, we could shake off our colonial past & forge a new destiny- with luck, [SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')] will keep our land glorious and free."
  converter_form_america:0 "Form America"
@@ -317,5 +316,4 @@
  converter_form_australia_desc:0 "If we were able to lock down control of the Land Down Under, we could shake off our colonial past & forge a new destiny- who knows, perhaps one day this Commonwealth of ours will be renowned of all the lands?"
  converter_form_cape:0 "Form South Africa"
  converter_form_cape_desc:0 "If we were able to lock down control of the Cape, Karoo, & Highveld, we could shake off our colonial past & forge a new destiny- the benefit of people and state is the task that rests on our shoulders"
- 
- 
+

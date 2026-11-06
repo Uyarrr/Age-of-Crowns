@@ -5,6 +5,18 @@ const path = require('node:path');
 const { audit, parse, children, scalar, words, canonical, read, files, root } = require('./audit_map_ownership.cjs');
 const { historyTotals } = require('./migrate_map_1_15.cjs');
 const manifest = JSON.parse(read(path.join(root, 'docs/map_1_15_migration.json')));
+// Subsequent researched ownership revisions overlay the historical migration.
+// First verify that their source really was the reviewed 1.15 setup.
+const expectedOwners = structuredClone(manifest.finalOwners);
+const southPath = path.join(root, 'docs/south_america_1444.json');
+if (fs.existsSync(southPath)) {
+  const south = JSON.parse(read(southPath));
+  const normalize = owners => Object.fromEntries(Object.entries(owners).map(([tag, provinces]) => ['c:' + tag, provinces.map(canonical).sort()]));
+  for (const [state, owners] of Object.entries(south.finalOwners)) if (state in expectedOwners) {
+    assert.deepEqual(normalize(south.oldOwners[state]), manifest.finalOwners[state], `Unreviewed migration source: ${state}`);
+    expectedOwners[state] = normalize(owners);
+  }
+}
 const result = audit();
 assert.equal(result.issues.length, 0, JSON.stringify(result.issues));
 assert.deepEqual(result.obsoleteStates, []);
@@ -24,7 +36,7 @@ for (const p of files(path.join(root, 'common/history/states'))) {
     }
   }
 }
-assert.deepEqual(actual, manifest.finalOwners, '1444 ownership drifted from reviewed migration');
+assert.deepEqual(actual, expectedOwners, '1444 ownership drifted from reviewed migrations');
 for (const folder of ['pops', 'buildings']) {
   for (const p of files(path.join(root, 'common/history', folder))) {
     for (const top of parse(read(p))) for (const state of top.value || []) {

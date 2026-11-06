@@ -1,0 +1,339 @@
+{
+  "method": "Compact settlement cores selected by connected province adjacency, distance to locality anchors, and explicit state masks. Pixel anchors refer to the installed 8192 x 3616 map. These are game abstractions inferred from regional evidence, not surveyed political borders in 1444.",
+  "factions": {
+    "ZIP": {
+      "name": "Bacatá",
+      "adjective": "Bacatá",
+      "culture": "muisca",
+      "capital": "CUNDINAMARCA",
+      "states": [
+        "CUNDINAMARCA"
+      ],
+      "anchor": [
+        2418,
+        1996
+      ],
+      "radius": [
+        22,
+        22
+      ],
+      "provinces": 5,
+      "color": [
+        204,
+        186,
+        1
+      ],
+      "confidence": "Regional seat secure; 1444 extent uncertain.",
+      "sources": [
+        "https://enciclopedia.banrepcultural.org/index.php?title=Muisca",
+        "https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-335/la-vivienda-muisca"
+      ],
+      "additionalCultures": [],
+      "minimumPopulation": 12000
+    },
+    "ZAQ": {
+      "name": "Hunza",
+      "adjective": "Hunza",
+      "culture": "muisca",
+      "capital": "CUNDINAMARCA",
+      "states": [
+        "CUNDINAMARCA",
+        "GUAVIARE"
+      ],
+      "anchor": [
+        2430,
+        1971
+      ],
+      "radius": [
+        20,
+        18
+      ],
+      "provinces": 4,
+      "color": [
+        122,
+        171,
+        216
+      ],
+      "confidence": "Tunja highland seat secure; compact northern core inferred.",
+      "sources": [
+        "https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-335/la-vivienda-muisca",
+        "https://enciclopedia.banrepcultural.org/index.php?title=Muisca"
+      ],
+      "additionalCultures": [],
+      "minimumPopulation": 12000
+    },
+    "TAY": {
+      "name": "Tairona",
+      "adjective": "Tairona",
+      "culture": "muisca",
+      "capital": "ANTIOQUIA",
+      "states": [
+        "ANTIOQUIA"
+      ],
+      "anchor": [
+        2425,
+        1855
+      ],
+      "radius": [
+        23,
+        24
+      ],
+      "provinces": 5,
+      "color": [
+        63,
+        151,
+        158
+      ],
+      "confidence": "Sierra Nevada settlement network well attested; single playable government and shared Chibchan culture are abstractions.",
+      "sources": [
+        "https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/lbr_subregiones.pdf"
+      ],
+      "additionalCultures": [
+        "guajiro"
+      ],
+      "minimumPopulation": 12000
+    },
+    "TPAC": {
+      "name": "Tupinambá",
+      "adjective": "Tupinambá",
+      "culture": "tupinamba",
+      "capital": "BAHIA",
+      "states": [
+        "BAHIA"
+      ],
+      "anchor": [
+        3220,
+        2406
+      ],
+      "radius": [
+        23,
+        34
+      ],
+      "provinces": 7,
+      "color": [
+        157,
+        209,
+        192
+      ],
+      "confidence": "Bahian coastal core supported; later colonial ethnonyms projected cautiously into 1444.",
+      "sources": [
+        "https://pib.socioambiental.org/pt/Povo%3ATupinamb%C3%A1"
+      ],
+      "additionalCultures": [],
+      "minimumPopulation": 12000
+    },
+    "POTC": {
+      "name": "Potiguara",
+      "adjective": "Potiguara",
+      "culture": "tupinamba",
+      "capital": "PARAIBA",
+      "states": [
+        "PARAIBA",
+        "RIO_GRANDE_DO_NORTE"
+      ],
+      "anchor": [
+        3284,
+        2252
+      ],
+      "radius": [
+        24,
+        30
+      ],
+      "provinces": 6,
+      "color": [
+        162,
+        83,
+        5
+      ],
+      "confidence": "Paraíba and Rio Grande do Norte coastal presence supported by early contact accounts; not a modern reservation boundary.",
+      "sources": [
+        "https://pib.socioambiental.org/pt/Povo%3APotiguara",
+        "https://trilhasdospotiguaras.pb.gov.br/pt-br/historia/nacao-potiguara/"
+      ],
+      "additionalCultures": [],
+      "minimumPopulation": 12000
+    },
+    "TPQC": {
+      "name": "Tupiniquim",
+      "adjective": "Tupiniquim",
+      "culture": "tupinamba",
+      "capital": "RIO_DE_JANEIRO",
+      "states": [
+        "RIO_DE_JANEIRO"
+      ],
+      "anchor": [
+        3173,
+        2548
+      ],
+      "radius": [
+        24,
+        28
+      ],
+      "provinces": 5,
+      "color": [
+        112,
+        142,
+        208
+      ],
+      "confidence": "Espírito Santo coast represented inside vanilla's larger Rio de Janeiro region.",
+      "sources": [
+        "https://pib.socioambiental.org/pt/Povo%3ATupiniquim"
+      ],
+      "additionalCultures": [
+        "je"
+      ],
+      "minimumPopulation": 12000
+    },
+    "NDVC": {
+      "name": "Guarani",
+      "adjective": "Guarani",
+      "culture": "guarani",
+      "capital": "BAJO_PARAGUAY",
+      "states": [
+        "BAJO_PARAGUAY",
+        "CORRIENTES"
+      ],
+      "anchor": [
+        2813,
+        2698
+      ],
+      "radius": [
+        36,
+        34
+      ],
+      "provinces": 10,
+      "color": [
+        142,
+        174,
+        101
+      ],
+      "confidence": "Upper Paraná/eastern Paraguay settlement core; one playable tag abstracts multiple communities.",
+      "sources": [
+        "https://pib.socioambiental.org/pt/Povo%3AGuarani"
+      ],
+      "additionalCultures": [],
+      "minimumPopulation": 12000
+    },
+    "KHG": {
+      "name": "Kaingang",
+      "adjective": "Kaingang",
+      "culture": "je",
+      "capital": "PARANA",
+      "states": [
+        "PARANA"
+      ],
+      "anchor": [
+        2942,
+        2678
+      ],
+      "radius": [
+        29,
+        25
+      ],
+      "provinces": 7,
+      "color": [
+        211,
+        160,
+        123
+      ],
+      "confidence": "Southern Jê uplands represented by a Tibagi plateau core; later Kaingang political unity is not assumed.",
+      "sources": [
+        "https://pib.socioambiental.org/pt/Povo%3AKaingang",
+        "https://acervo.socioambiental.org/sites/default/files/documents/0UD00070.pdf"
+      ],
+      "additionalCultures": [
+        "guarani"
+      ],
+      "minimumPopulation": 12000
+    },
+    "CUAC": {
+      "name": "Charrúa",
+      "adjective": "Charrúa",
+      "culture": "charruan",
+      "capital": "URUGUAY",
+      "states": [
+        "URUGUAY"
+      ],
+      "anchor": [
+        2792,
+        2873
+      ],
+      "radius": [
+        23,
+        33
+      ],
+      "provinces": 7,
+      "color": [
+        175,
+        126,
+        0
+      ],
+      "confidence": "Lower Uruguay/eastern bank core inferred; avoids a Buenos Aires capital and continent-wide claims.",
+      "sources": [
+        "https://historialuso.an.gov.br/glossario/index.php/verbetes-glossario/14-verbetes-iniciados-em-c/1245-charruas-e-minuanos"
+      ],
+      "additionalCultures": [],
+      "minimumPopulation": 12000
+    },
+    "MPCC": {
+      "name": "Mapuche",
+      "adjective": "Mapuche",
+      "culture": "patagonian",
+      "capital": "LOS_RIOS",
+      "states": [
+        "LOS_RIOS"
+      ],
+      "anchor": [
+        2459,
+        2954
+      ],
+      "radius": [
+        27,
+        32
+      ],
+      "provinces": 10,
+      "color": [
+        204,
+        44,
+        52
+      ],
+      "confidence": "South-central Chilean core; excludes later Mapuche expansion east into the Pampas. The existing patagonian culture is retained as the mod's shared proxy.",
+      "sources": [
+        "https://museo.precolombino.cl/aprende/pueblos-culturas/pueblos-originarios/mapuche/"
+      ],
+      "additionalCultures": [],
+      "minimumPopulation": 12000
+    },
+    "QIM": {
+      "name": "Quilmes",
+      "adjective": "Quilmes",
+      "culture": "aimara",
+      "capital": "TUCUMAN",
+      "states": [
+        "TUCUMAN"
+      ],
+      "anchor": [
+        2583,
+        2724
+      ],
+      "radius": [
+        22,
+        27
+      ],
+      "provinces": 6,
+      "color": [
+        210,
+        85,
+        252
+      ],
+      "confidence": "Calchaquí valley settlement core; aimara is the pre-existing mod proxy, not a claim that the Diaguita were Aymara.",
+      "sources": [
+        "https://www.argentina.gob.ar/viaja-por-argentina/que-hacer/caminar-por-la-ciudad-sagrada-de-quilmes"
+      ],
+      "additionalCultures": [
+        "quechua"
+      ],
+      "minimumPopulation": 12000
+    }
+  }
+}

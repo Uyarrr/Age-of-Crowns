@@ -1,0 +1,97 @@
+# Regional playable cores; see docs/south_america_1444.md.
+
+ZIP = {
+	color = { 204 186 1 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { muisca }
+	capital = STATE_CUNDINAMARCA
+}
+
+ZAQ = {
+	color = { 122 171 216 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { muisca }
+	capital = STATE_CUNDINAMARCA
+}
+
+TAY = {
+	color = { 63 151 158 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { muisca guajiro }
+	capital = STATE_ANTIOQUIA
+}
+
+TPAC = {
+	color = { 157 209 192 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { tupinamba }
+	capital = STATE_BAHIA
+}
+
+POTC = {
+	color = { 162 83 5 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { tupinamba }
+	capital = STATE_PARAIBA
+}
+
+TPQC = {
+	color = { 112 142 208 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { tupinamba je }
+	capital = STATE_RIO_DE_JANEIRO
+}
+
+NDVC = {
+	color = { 142 174 101 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { guarani }
+	capital = STATE_BAJO_PARAGUAY
+}
+
+KHG = {
+	color = { 211 160 123 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { je guarani }
+	capital = STATE_PARANA
+}
+
+CUAC = {
+	color = { 175 126 0 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { charruan }
+	capital = STATE_URUGUAY
+}
+
+MPCC = {
+	color = { 204 44 52 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { patagonian }
+	capital = STATE_LOS_RIOS
+}
+
+QIM = {
+	color = { 210 85 252 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { aimara quechua }
+	capital = STATE_TUCUMAN
+}
+
+AMZ = {
+	color = { 77 102 78 }
+	country_type = decentralized
+	tier = principality
+	cultures = { aimara amazonian cariban charruan embera guaicuruan guajiro guarani je lokono matacoan muisca patagonian quechua tupinamba waroid }
+	capital = STATE_AMAZONAS
+}

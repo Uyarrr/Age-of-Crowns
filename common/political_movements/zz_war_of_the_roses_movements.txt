@@ -577,7 +577,7 @@ movement_war_of_roses_tudor = {
 		value = 0
 		if = {
 			limit = {
-				game_date >= 1483.1.1
+				has_technology_researched = renaissance
 				var:war_of_roses_tension_current_var >= 60
 			}
 			add = 100

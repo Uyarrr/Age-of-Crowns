@@ -256,6 +256,10 @@ def rebalance():
                 edit(paths[key],lambda t:replace_node(t,key,lambda s:rewrite_quantities(s,quantities)))
             previous=inp/amount
     enforce_progression_and_sectors(buildings,groups,prices,weights)
+    # Public administration/bullion use a joint vanilla-calibrated policy,
+    # rather than isolated goods-margin targets.
+    from balance_minting import apply as apply_minting_balance
+    apply_minting_balance()
     print(f'Balanced {len(targets)} custom saleable PMs with integer inputs and outputs; vanilla files excluded.')
 
 def enforce_progression_and_sectors(buildings,groups,prices,weights):

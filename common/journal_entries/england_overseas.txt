@@ -1,178 +1,310 @@
 je_aoc_england_cape = {
- icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds"
- group = je_group_historical_content
- should_be_pinned_by_default_involved = yes
- is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
- is_shown_when_inactive = { aoc_england_overseas_country = yes }
- possible = { hidden_trigger = { NOT = { has_variable = aoc_england_cape_completed } }  }
- scripted_button = aoc_england_charter_cape
- immediate = { aoc_england_cape_baseline_effect = yes }
- on_monthly_pulse = { effect = {
-  aoc_england_cape_baseline_effect = yes
-  if = { limit = { NOT = { has_variable = aoc_england_india_unlocked } aoc_england_cape_station_ready = yes }
-   set_variable = aoc_england_india_unlocked
-   add_modifier = { name = aoc_england_cape_route years = 25 }
-   add_declared_interest = region_south_india
-   add_declared_interest = region_north_india
-   trigger_event = { id = england_overseas.1 popup = yes }
-  }
- } }
- complete = { custom_tooltip = { text = aoc_england_cape_developed_tt
- has_variable = aoc_england_india_unlocked
- aoc_england_cape_developed = yes
- } }
- on_complete = {
-  set_variable = aoc_england_cape_completed
-  add_modifier = { name = aoc_england_cape_prosperity years = 25 } trigger_event = { id = england_overseas.2 popup = yes }
- }
- event_outcome_completed_desc = { first_valid = { triggered_desc = { desc = aoc_england_cape_outcome } } }
- invalid = { NOT = { aoc_england_overseas_country = yes } }
- weight = 400
+	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds"
+	group = je_group_historical_content
+	should_be_pinned_by_default_involved = yes
+	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_when_inactive = { aoc_england_overseas_country = yes }
+	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_cape_completed } }  }
+	scripted_button = aoc_england_charter_cape
+	immediate = { aoc_england_cape_baseline_effect = yes }
+	on_monthly_pulse = { effect = {
+			aoc_england_cape_baseline_effect = yes
+			if = { limit = { NOT = { has_variable = aoc_england_india_unlocked } aoc_england_cape_station_ready = yes }
+				set_variable = aoc_england_india_unlocked
+				add_modifier = { name = aoc_england_cape_route years = 25 }
+				add_declared_interest = region_south_india
+				add_declared_interest = region_north_india
+				trigger_event = { id = england_overseas.1 popup = yes }
+			}
+		} }
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_aoc_england_cape_completed_desc
+		trigger = {
+			custom_tooltip = { text = aoc_england_cape_developed_tt
+				has_variable = aoc_england_india_unlocked
+				aoc_england_cape_developed = yes
+			}
+		}
+		effect = {
+			set_variable = aoc_england_cape_completed
+			add_modifier = { name = aoc_england_cape_prosperity years = 25 } trigger_event = { id = england_overseas.2 popup = yes }
+		}
+		event_outcome_desc = {
+			first_valid = { triggered_desc = { desc = aoc_england_cape_outcome } }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { aoc_england_overseas_country = yes }
+		}
+		effect = {
+
+		}
+	}
+	weight = 400
+
+	activation_description = { always = yes }
 }
 
 je_aoc_england_east_india = {
- icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds"
- group = je_group_historical_content
- should_be_pinned_by_default_involved = yes
- is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
- is_shown_when_inactive = { aoc_england_overseas_country = yes }
- possible = { hidden_trigger = { NOT = { has_variable = aoc_england_east_india_completed } } custom_tooltip = { text = aoc_england_india_unlocked_tt has_variable = aoc_england_india_unlocked } }
- scripted_button = aoc_england_charter_east_india
- complete = { custom_tooltip = { text = aoc_england_indian_presidencies_tt
- aoc_england_indian_presidencies = yes
- } }
- on_complete = {
-  set_variable = aoc_england_east_india_completed
-  add_modifier = { name = aoc_england_india_trade years = 25 } set_variable = aoc_england_australasia_unlocked trigger_event = { id = england_overseas.3 popup = yes }
- }
- event_outcome_completed_desc = { first_valid = { triggered_desc = { desc = aoc_england_east_india_outcome } } }
- invalid = { NOT = { aoc_england_overseas_country = yes } }
- weight = 400
+	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds"
+	group = je_group_historical_content
+	should_be_pinned_by_default_involved = yes
+	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_when_inactive = { aoc_england_overseas_country = yes }
+	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_east_india_completed } } custom_tooltip = { text = aoc_england_india_unlocked_tt has_variable = aoc_england_india_unlocked } }
+	scripted_button = aoc_england_charter_east_india
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_aoc_england_east_india_completed_desc
+		trigger = {
+			custom_tooltip = { text = aoc_england_indian_presidencies_tt
+				aoc_england_indian_presidencies = yes
+			}
+		}
+		effect = {
+			set_variable = aoc_england_east_india_completed
+			add_modifier = { name = aoc_england_india_trade years = 25 } set_variable = aoc_england_australasia_unlocked trigger_event = { id = england_overseas.3 popup = yes }
+		}
+		event_outcome_desc = {
+			first_valid = { triggered_desc = { desc = aoc_england_east_india_outcome } }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { aoc_england_overseas_country = yes }
+		}
+		effect = {
+
+		}
+	}
+	weight = 400
+
+	activation_description = { always = yes }
 }
 
 je_aoc_england_australasia = {
- icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_australasia.dds"
- group = je_group_historical_content
- should_be_pinned_by_default_involved = yes
- is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
- is_shown_when_inactive = { aoc_england_overseas_country = yes }
- possible = { hidden_trigger = { NOT = { has_variable = aoc_england_australasia_completed } } custom_tooltip = { text = aoc_england_australasia_unlocked_tt has_variable = aoc_england_australasia_unlocked } }
- scripted_button = aoc_england_charter_australia
- scripted_button = aoc_england_charter_new_zealand
- immediate = { aoc_england_australia_census_effect = yes aoc_england_new_zealand_census_effect = yes }
- on_monthly_pulse = { effect = { aoc_england_australia_census_effect = yes aoc_england_new_zealand_census_effect = yes } }
- status_desc = { first_valid = {
-  triggered_desc = { trigger = { has_variable = aoc_england_australia_total } desc = je_aoc_england_australasia_progress_status }
-  triggered_desc = { desc = je_aoc_england_australasia_status }
- } }
- complete = { custom_tooltip = { text = aoc_england_australia_developed_tt
- exists = c:AST
- var:aoc_england_australia_total > 0
- var:aoc_england_australia_owned >= var:aoc_england_australia_target
- c:AST ?= { is_subject_of = root total_population >= 300000 gdp >= 1500000 average_sol >= 10 }
- }
-custom_tooltip = { text = aoc_england_new_zealand_developed_tt
- exists = c:NZL
- var:aoc_england_new_zealand_total > 0
- var:aoc_england_new_zealand_owned >= var:aoc_england_new_zealand_target
- c:NZL ?= { is_subject_of = root total_population >= 80000 gdp >= 400000 average_sol >= 10 }
- } }
- on_complete = {
-  set_variable = aoc_england_australasia_completed
-  add_modifier = { name = aoc_england_southern_cross years = 25 } c:AST = { add_modifier = { name = aoc_england_settlement_support years = 25 } } c:NZL = { add_modifier = { name = aoc_england_settlement_support years = 25 } } trigger_event = { id = england_overseas.4 popup = yes }
- }
- event_outcome_completed_desc = { first_valid = { triggered_desc = { desc = aoc_england_australasia_outcome } } }
- invalid = { NOT = { aoc_england_overseas_country = yes } }
- weight = 400
+	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_australasia.dds"
+	group = je_group_historical_content
+	should_be_pinned_by_default_involved = yes
+	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_when_inactive = { aoc_england_overseas_country = yes }
+	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_australasia_completed } } custom_tooltip = { text = aoc_england_australasia_unlocked_tt has_variable = aoc_england_australasia_unlocked } }
+	scripted_button = aoc_england_charter_australia
+	scripted_button = aoc_england_charter_new_zealand
+	immediate = { aoc_england_australia_census_effect = yes aoc_england_new_zealand_census_effect = yes }
+	on_monthly_pulse = { effect = { aoc_england_australia_census_effect = yes aoc_england_new_zealand_census_effect = yes } }
+	status_desc = { first_valid = {
+			triggered_desc = { trigger = { has_variable = aoc_england_australia_total } desc = je_aoc_england_australasia_progress_status }
+			triggered_desc = { desc = je_aoc_england_australasia_status }
+		} }
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_aoc_england_australasia_completed_desc
+		trigger = {
+			custom_tooltip = { text = aoc_england_australia_developed_tt
+				exists = c:AST
+				var:aoc_england_australia_total > 0
+				var:aoc_england_australia_owned >= var:aoc_england_australia_target
+				c:AST ?= { is_subject_of = root total_population >= 300000 gdp >= 1500000 average_sol >= 10 }
+			}
+			custom_tooltip = { text = aoc_england_new_zealand_developed_tt
+				exists = c:NZL
+				var:aoc_england_new_zealand_total > 0
+				var:aoc_england_new_zealand_owned >= var:aoc_england_new_zealand_target
+				c:NZL ?= { is_subject_of = root total_population >= 80000 gdp >= 400000 average_sol >= 10 }
+			}
+		}
+		effect = {
+			set_variable = aoc_england_australasia_completed
+			add_modifier = { name = aoc_england_southern_cross years = 25 } c:AST = { add_modifier = { name = aoc_england_settlement_support years = 25 } } c:NZL = { add_modifier = { name = aoc_england_settlement_support years = 25 } } trigger_event = { id = england_overseas.4 popup = yes }
+		}
+		event_outcome_desc = {
+			first_valid = { triggered_desc = { desc = aoc_england_australasia_outcome } }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { aoc_england_overseas_country = yes }
+		}
+		effect = {
+
+		}
+	}
+	weight = 400
+
+	activation_description = { always = yes }
 }
 
 je_aoc_england_hudson_bay = {
- icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_hudson_bay.dds"
- group = je_group_historical_content
- should_be_pinned_by_default_involved = yes
- is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
- is_shown_when_inactive = { aoc_england_overseas_country = yes }
- possible = { hidden_trigger = { NOT = { has_variable = aoc_england_hudson_bay_completed } }  }
- scripted_button = aoc_england_charter_hudson_bay
- complete = { custom_tooltip = { text = aoc_england_hudson_bay_developed_tt
- exists = c:HBC
- has_company = company_type:company_aoc_england_hudson_bay
- c:HBC ?= {
-  is_subject_of = root is_subject_type = subject_type_chartered_company
-  total_population >= 100000 gdp >= 400000
-  any_scope_state = { any_scope_building = { is_building_type = building_hunting_lodge level >= 5 occupancy >= 0.5 } }
- }
- any_state_region = { count >= 3 is_in_geographic_region = geographic_region_aoc_england_hudson_bay any_scope_state = { owner = c:HBC } }
- } }
- on_complete = {
-  set_variable = aoc_england_hudson_bay_completed
-  add_modifier = { name = aoc_england_bay_dividends years = 25 } trigger_event = { id = england_overseas.5 popup = yes }
- }
- event_outcome_completed_desc = { first_valid = { triggered_desc = { desc = aoc_england_hudson_bay_outcome } } }
- invalid = { NOT = { aoc_england_overseas_country = yes } }
- weight = 400
+	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_hudson_bay.dds"
+	group = je_group_historical_content
+	should_be_pinned_by_default_involved = yes
+	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_when_inactive = { aoc_england_overseas_country = yes }
+	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_hudson_bay_completed } }  }
+	scripted_button = aoc_england_charter_hudson_bay
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_aoc_england_hudson_bay_completed_desc
+		trigger = {
+			custom_tooltip = { text = aoc_england_hudson_bay_developed_tt
+				exists = c:HBC
+				has_company = company_type:company_aoc_england_hudson_bay
+				c:HBC ?= {
+					is_subject_of = root is_subject_type = subject_type_chartered_company
+					total_population >= 100000 gdp >= 400000
+					any_scope_state = { any_scope_building = { is_building_type = building_hunting_lodge level >= 5 occupancy >= 0.5 } }
+				}
+				any_state_region = { count >= 3 is_in_geographic_region = geographic_region_aoc_england_hudson_bay any_scope_state = { owner = c:HBC } }
+			}
+		}
+		effect = {
+			set_variable = aoc_england_hudson_bay_completed
+			add_modifier = { name = aoc_england_bay_dividends years = 25 } trigger_event = { id = england_overseas.5 popup = yes }
+		}
+		event_outcome_desc = {
+			first_valid = { triggered_desc = { desc = aoc_england_hudson_bay_outcome } }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { aoc_england_overseas_country = yes }
+		}
+		effect = {
+
+		}
+	}
+	weight = 400
+
+	activation_description = { always = yes }
 }
 
 je_aoc_england_royal_navy = {
- icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_royal_navy.dds"
- group = je_group_historical_content
- should_be_pinned_by_default_involved = yes
- is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
- is_shown_when_inactive = { aoc_england_overseas_country = yes }
- possible = { hidden_trigger = { NOT = { has_variable = aoc_england_royal_navy_completed } }  }
- immediate = { set_variable = { name = aoc_england_navy_months value = 0 } }
- on_monthly_pulse = { effect = {
-  if = { limit = { aoc_england_naval_leadership = yes } change_variable = { name = aoc_england_navy_months add = 1 } }
-  else = { set_variable = { name = aoc_england_navy_months value = 0 } }
- } }
- status_desc = { first_valid = {
-  triggered_desc = { trigger = { has_variable = aoc_england_navy_months } desc = je_aoc_england_royal_navy_progress_status }
-  triggered_desc = { desc = je_aoc_england_royal_navy_status }
- } }
- complete = { custom_tooltip = { text = aoc_england_navy_decade_tt
- aoc_england_naval_leadership = yes var:aoc_england_navy_months >= 120
- } }
- on_complete = {
-  set_variable = aoc_england_royal_navy_completed
-  add_modifier = { name = aoc_england_wooden_walls years = 25 } trigger_event = { id = england_overseas.6 popup = yes }
- }
- event_outcome_completed_desc = { first_valid = { triggered_desc = { desc = aoc_england_royal_navy_outcome } } }
- invalid = { NOT = { aoc_england_overseas_country = yes } }
- weight = 400
+	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_royal_navy.dds"
+	group = je_group_historical_content
+	should_be_pinned_by_default_involved = yes
+	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_when_inactive = { aoc_england_overseas_country = yes }
+	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_royal_navy_completed } }  }
+	immediate = { set_variable = { name = aoc_england_navy_months value = 0 } }
+	on_monthly_pulse = { effect = {
+			if = { limit = { aoc_england_naval_leadership = yes } change_variable = { name = aoc_england_navy_months add = 1 } }
+			else = { set_variable = { name = aoc_england_navy_months value = 0 } }
+		} }
+	status_desc = { first_valid = {
+			triggered_desc = { trigger = { has_variable = aoc_england_navy_months } desc = je_aoc_england_royal_navy_progress_status }
+			triggered_desc = { desc = je_aoc_england_royal_navy_status }
+		} }
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_aoc_england_royal_navy_completed_desc
+		trigger = {
+			custom_tooltip = { text = aoc_england_navy_decade_tt
+				aoc_england_naval_leadership = yes var:aoc_england_navy_months >= 120
+			}
+		}
+		effect = {
+			set_variable = aoc_england_royal_navy_completed
+			add_modifier = { name = aoc_england_wooden_walls years = 25 } trigger_event = { id = england_overseas.6 popup = yes }
+		}
+		event_outcome_desc = {
+			first_valid = { triggered_desc = { desc = aoc_england_royal_navy_outcome } }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { aoc_england_overseas_country = yes }
+		}
+		effect = {
+
+		}
+	}
+	weight = 400
+
+	activation_description = { always = yes }
 }
 
 je_aoc_england_new_world = {
- icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_new_world.dds"
- group = je_group_historical_content
- should_be_pinned_by_default_involved = yes
- is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
- is_shown_when_inactive = { aoc_england_overseas_country = yes }
- possible = { hidden_trigger = { NOT = { has_variable = aoc_england_new_world_completed } } custom_tooltip = { text = aoc_england_bay_completed_tt has_variable = aoc_england_hudson_bay_completed } custom_tooltip = { text = aoc_england_navy_completed_tt has_variable = aoc_england_royal_navy_completed } }
- immediate = { aoc_england_new_world_census_effect = yes }
- on_monthly_pulse = { effect = { aoc_england_new_world_census_effect = yes } }
- status_desc = { first_valid = {
-  triggered_desc = { trigger = { has_variable = aoc_england_new_world_gdp } desc = je_aoc_england_new_world_progress_status }
-  triggered_desc = { desc = je_aoc_england_new_world_status }
- } }
- complete = { custom_tooltip = { text = aoc_england_new_world_territory_tt
- any_state_region = { count >= 35 is_in_geographic_region = geographic_region_americas any_scope_state = { owner = { aoc_england_overseas_owner = yes } } }
- any_state_region = { count >= 8 is_in_geographic_region = geographic_region_north_america any_scope_state = { owner = { aoc_england_overseas_owner = yes } } }
- any_state_region = { count >= 6 is_in_geographic_region = geographic_region_central_america any_scope_state = { owner = { aoc_england_overseas_owner = yes } } }
- any_direct_subject = { count >= 4 OR = { is_subject_type = subject_type_colony is_subject_type = subject_type_chartered_company } any_scope_state = { is_in_geographic_region = geographic_region_americas } }
- }
-custom_tooltip = { text = aoc_england_new_world_economy_tt
- var:aoc_england_new_world_population >= 5000000
- var:aoc_england_new_world_gdp >= 20000000
- any_state = { count >= 10 aoc_england_new_world_state = yes any_scope_building = {
-  level >= 5 occupancy >= 0.75
-  OR = { is_building_type = building_textile_mill is_building_type = building_cotton_plantation is_building_type = building_sugar_plantation is_building_type = building_tobacco_plantation is_building_type = building_logging_camp is_building_type = building_hunting_lodge }
- } }
- } }
- on_complete = {
-  set_variable = aoc_england_new_world_completed
-  add_modifier = { name = aoc_england_atlantic_dominion years = 25 } trigger_event = { id = england_overseas.7 popup = yes }
- }
- event_outcome_completed_desc = { first_valid = { triggered_desc = { desc = aoc_england_new_world_outcome } } }
- invalid = { NOT = { aoc_england_overseas_country = yes } }
- weight = 500
+	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_new_world.dds"
+	group = je_group_historical_content
+	should_be_pinned_by_default_involved = yes
+	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_when_inactive = { aoc_england_overseas_country = yes }
+	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_new_world_completed } } custom_tooltip = { text = aoc_england_bay_completed_tt has_variable = aoc_england_hudson_bay_completed } custom_tooltip = { text = aoc_england_navy_completed_tt has_variable = aoc_england_royal_navy_completed } }
+	immediate = { aoc_england_new_world_census_effect = yes }
+	on_monthly_pulse = { effect = { aoc_england_new_world_census_effect = yes } }
+	status_desc = { first_valid = {
+			triggered_desc = { trigger = { has_variable = aoc_england_new_world_gdp } desc = je_aoc_england_new_world_progress_status }
+			triggered_desc = { desc = je_aoc_england_new_world_status }
+		} }
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_aoc_england_new_world_completed_desc
+		trigger = {
+			custom_tooltip = { text = aoc_england_new_world_territory_tt
+				any_state_region = { count >= 35 is_in_geographic_region = geographic_region_americas any_scope_state = { owner = { aoc_england_overseas_owner = yes } } }
+				any_state_region = { count >= 8 is_in_geographic_region = geographic_region_north_america any_scope_state = { owner = { aoc_england_overseas_owner = yes } } }
+				any_state_region = { count >= 6 is_in_geographic_region = geographic_region_central_america any_scope_state = { owner = { aoc_england_overseas_owner = yes } } }
+				any_direct_subject = { count >= 4 OR = { is_subject_type = subject_type_colony is_subject_type = subject_type_chartered_company } any_scope_state = { is_in_geographic_region = geographic_region_americas } }
+			}
+			custom_tooltip = { text = aoc_england_new_world_economy_tt
+				var:aoc_england_new_world_population >= 5000000
+				var:aoc_england_new_world_gdp >= 20000000
+				any_state = { count >= 10 aoc_england_new_world_state = yes any_scope_building = {
+						level >= 5 occupancy >= 0.75
+						OR = { is_building_type = building_textile_mill is_building_type = building_cotton_plantation is_building_type = building_sugar_plantation is_building_type = building_tobacco_plantation is_building_type = building_logging_camp is_building_type = building_hunting_lodge }
+					} }
+			}
+		}
+		effect = {
+			set_variable = aoc_england_new_world_completed
+			add_modifier = { name = aoc_england_atlantic_dominion years = 25 } trigger_event = { id = england_overseas.7 popup = yes }
+		}
+		event_outcome_desc = {
+			first_valid = { triggered_desc = { desc = aoc_england_new_world_outcome } }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { aoc_england_overseas_country = yes }
+		}
+		effect = {
+
+		}
+	}
+	weight = 500
+
+	activation_description = { always = yes }
 }

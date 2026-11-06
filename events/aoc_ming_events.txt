@@ -1,0 +1,16 @@
+namespace = aoc_ming
+
+aoc_ming.1 = {
+	type = country_event
+	title = aoc_ming.1.t
+	desc = aoc_ming.1.d
+	flavor = aoc_ming.1.f
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	duration = 3
+	trigger = { }
+	option = {
+		name = aoc_ming.1.a
+		default_option = yes
+		add_loyalists = { value = small_radicals }
+	}
+}

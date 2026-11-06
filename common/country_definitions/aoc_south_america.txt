@@ -37,16 +37,7 @@ CRJ = { # Carijó
 	capital = STATE_BAJO_PARAGUAY
 }
 
-KHG = { # Kanhgag
-	color = rgb { 241 196 180}
-
-	country_type = decentralized
-
-	tier = kingdom
-
-	cultures = { je }
-	capital = STATE_BAJO_PARAGUAY
-}
+# Defined in aoc_south_america_playable.txt
 
 MBK = { # Mebengokre
 	color = rgb { 5 230 143}
@@ -180,16 +171,7 @@ KAP = { # Kaapor
 	capital = STATE_PARA
 }
 
-REPLACE:AMZ = { # Amazonia
-	color = { 42 102 64 }
-
-	country_type = decentralized
-
-	tier = kingdom
-
-	cultures = { amazonian }
-	capital = STATE_AMAZONAS
-}
+# Defined in aoc_south_america_playable.txt
 
 KIO = { # Kaiowá
 	color = rgb { 242 174 101}
@@ -225,62 +207,17 @@ KGN = { # Carib
 	capital = STATE_MIRANDA
 }
 
-ZIP = { # Zipa
-	color = rgb { 204 186 1}
+# Defined in aoc_south_america_playable.txt
 
-	country_type = decentralized
-
-	tier = principality
-
-	cultures = { muisca }
-	capital = STATE_PATAGONIA
-}
-
-ZAQ = { # Zaque
-	color = rgb { 122 171 216}
-
-	country_type = decentralized
-
-	tier = principality
-
-	cultures = { muisca }
-	capital = STATE_PATAGONIA
-}
+# Defined in aoc_south_america_playable.txt
 
 # Playable
 
-TPAC = { # Tupinamba
-	color = { 157 209 192 }
+# Defined in aoc_south_america_playable.txt
 
-	country_type = unrecognized
+# Defined in aoc_south_america_playable.txt
 
-	tier = principality
-
-	cultures = { tupinamba }
-	capital = STATE_BAHIA
-}
-
-POTC = { # Potiguara
-	color = rgb { 162 83 5}
-
-	country_type = unrecognized
-
-	tier = principality
-
-	cultures = { tupinamba }
-	capital = STATE_CEARA
-}
-
-TPQC = { # Tupiniquim
-	color = rgb { 112 142 208}
-
-	country_type = unrecognized
-
-	tier = principality
-
-	cultures = { tupinamba }
-	capital = STATE_RIO_DE_JANEIRO
-}
+# Defined in aoc_south_america_playable.txt
 
 AIMC = { # Tapuia
 	color = rgb { 186 109 94}
@@ -293,24 +230,6 @@ AIMC = { # Tapuia
 	capital = STATE_RIO_DE_JANEIRO
 }
 
-NDVC = { # Guarani
-	color = rgb { 142 174 101}
+# Defined in aoc_south_america_playable.txt
 
-	country_type = unrecognized
-
-	tier = principality
-
-	cultures = { tupinamba }
-	capital = STATE_RIO_DE_JANEIRO
-}
-
-CUAC = { # Charrua
-	color = rgb { 175 126 0}
-
-	country_type = unrecognized
-
-	tier = principality
-
-	cultures = { charruan }
-	capital = STATE_BAJO_PARAGUAY
-}
+# Defined in aoc_south_america_playable.txt

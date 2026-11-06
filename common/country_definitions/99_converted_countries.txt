@@ -472,13 +472,7 @@ ALW ?= {
 	capital = STATE_RAJPUTANA
 }
 
-AMZ ?= {
-	color = { 42 102 64 }
-	country_type = unrecognized
-	tier = kingdom
-	cultures = { amazonian }
-	capital = STATE_AMAZONAS
-}
+# Defined in aoc_south_america_playable.txt
 
 ANH ?= {
 	color = { 203 93 124 }

@@ -24,8 +24,7 @@ england.100 = {
 			c:ENG ?= this
 			was_formed_from = ENG
 		}
-		game_date >= 1485.1.1
-		game_date < 1509.1.1
+		has_technology_researched = tech_bureaucracy
 	}
 
 	option = {
@@ -72,8 +71,8 @@ england.101 = {
 			c:ENG ?= this
 			was_formed_from = ENG
 		}
-		game_date >= 1485.1.1
-		game_date < 1550.1.1
+		has_technology_researched = renaissance
+		has_variable = wotr_dynasty_york
 	}
 
 	option = {
@@ -120,8 +119,7 @@ england.102 = {
 			c:ENG ?= this
 			was_formed_from = ENG
 		}
-		game_date >= 1509.1.1
-		game_date < 1521.1.1
+		has_technology_researched = tenant_farmers
 	}
 
 	option = {
@@ -1096,11 +1094,7 @@ england.321 = {
 		wotr_clear_civil_war_variables_effect = yes
 		add_modifier = { name = war_of_the_roses_lancastrian_restoration years = 8 is_decaying = yes }
 		add_loyalists = { value = medium_radicals strata = upper }
-		if = {
-			limit = { game_date >= 1485.1.1 }
-			set_variable = war_of_the_roses_lancaster_victory
-			set_variable = wotr_final_settlement
-		}
+
 	}
 }
 
@@ -1126,11 +1120,7 @@ england.322 = {
 		wotr_clear_civil_war_variables_effect = yes
 		add_modifier = { name = war_of_the_roses_yorkist_accession years = 8 is_decaying = yes }
 		add_loyalists = { value = medium_radicals strata = middle }
-		if = {
-			limit = { game_date >= 1485.1.1 }
-			set_variable = war_of_the_roses_york_victory
-			set_variable = wotr_final_settlement
-		}
+
 	}
 }
 
@@ -1180,18 +1170,7 @@ england.324 = {
 		wotr_clear_civil_war_variables_effect = yes
 		add_modifier = { name = war_of_the_roses_crown_victory years = 8 is_decaying = yes }
 		add_loyalists = { value = medium_radicals }
-		if = {
-			limit = { game_date >= 1485.1.1 }
-			set_variable = wotr_final_settlement
-			if = {
-				limit = { has_variable = wotr_dynasty_lancaster }
-				set_variable = war_of_the_roses_lancaster_victory
-			}
-			else_if = {
-				limit = { has_variable = wotr_dynasty_york }
-				set_variable = war_of_the_roses_york_victory
-			}
-		}
+
 	}
 }
 
@@ -1237,7 +1216,7 @@ england.200 = {
 
 		add_involvement = {
 			strategic_region = sr:region_canada
-			value = 2000  
+			value = 2000
 		}
 
 		add_modifier = {

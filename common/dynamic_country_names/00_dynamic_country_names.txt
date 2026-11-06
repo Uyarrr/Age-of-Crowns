@@ -770,6 +770,1542 @@ DEFAULT = {
 	}
 
 
+	# Additional African colonial powers and names based on the colonial capital.
+	dynamic_country_name = {
+		name = colonial_dutch_cape_verde
+		adjective = colonial_dutch_cape_verde_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_senegal
+		adjective = colonial_dutch_senegal_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_zanj
+		adjective = colonial_dutch_zanj_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_southern_africa
+		adjective = colonial_dutch_southern_africa_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_congo
+		adjective = colonial_dutch_congo_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_cape_verde
+		adjective = colonial_danish_cape_verde_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_senegal
+		adjective = colonial_danish_senegal_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_zanj
+		adjective = colonial_danish_zanj_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_southern_africa
+		adjective = colonial_danish_southern_africa_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_congo
+		adjective = colonial_danish_congo_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_cape_verde
+		adjective = colonial_swedish_cape_verde_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_senegal
+		adjective = colonial_swedish_senegal_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_zanj
+		adjective = colonial_swedish_zanj_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_southern_africa
+		adjective = colonial_swedish_southern_africa_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_congo
+		adjective = colonial_swedish_congo_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_cape_verde
+		adjective = colonial_brandenburg_cape_verde_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_senegal
+		adjective = colonial_brandenburg_senegal_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_zanj
+		adjective = colonial_brandenburg_zanj_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_southern_africa
+		adjective = colonial_brandenburg_southern_africa_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_congo
+		adjective = colonial_brandenburg_congo_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_cape_verde
+		adjective = colonial_prussian_cape_verde_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_senegal
+		adjective = colonial_prussian_senegal_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_zanj
+		adjective = colonial_prussian_zanj_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_southern_africa
+		adjective = colonial_prussian_southern_africa_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_congo
+		adjective = colonial_prussian_congo_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_cape_verde
+		adjective = colonial_german_cape_verde_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_senegal
+		adjective = colonial_german_senegal_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_zanj
+		adjective = colonial_german_zanj_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_southern_africa
+		adjective = colonial_german_southern_africa_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_congo
+		adjective = colonial_german_congo_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_cape_verde
+		adjective = colonial_belgian_cape_verde_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_senegal
+		adjective = colonial_belgian_senegal_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_zanj
+		adjective = colonial_belgian_zanj_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_southern_africa
+		adjective = colonial_belgian_southern_africa_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_congo
+		adjective = colonial_belgian_congo_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_cape_verde
+		adjective = colonial_omani_cape_verde_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = cape_verde_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_senegal
+		adjective = colonial_omani_senegal_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_zanj
+		adjective = colonial_omani_zanj_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_southern_africa
+		adjective = colonial_omani_southern_africa_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_congo
+		adjective = colonial_omani_congo_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_english_seat_gold_coast
+		adjective = colonial_english_seat_gold_coast_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_english_or_british_subject = yes capital = { state_region = s:STATE_GOLD_COAST } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_seat_gold_coast
+		adjective = colonial_dutch_seat_gold_coast_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_dutch_subject = yes capital = { state_region = s:STATE_GOLD_COAST } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_seat_gold_coast
+		adjective = colonial_danish_seat_gold_coast_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_danish_subject = yes capital = { state_region = s:STATE_GOLD_COAST } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_seat_gold_coast
+		adjective = colonial_swedish_seat_gold_coast_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_swedish_subject = yes capital = { state_region = s:STATE_GOLD_COAST } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_seat_gold_coast
+		adjective = colonial_brandenburg_seat_gold_coast_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_brandenburg_subject = yes capital = { state_region = s:STATE_GOLD_COAST } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_seat_gold_coast
+		adjective = colonial_prussian_seat_gold_coast_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_prussian_subject = yes capital = { state_region = s:STATE_GOLD_COAST } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_seat_senegambia
+		adjective = colonial_castilian_seat_senegambia_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_castilian_or_spanish_subject = yes capital = { state_region = s:STATE_SENEGAL } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_seat_guinea
+		adjective = colonial_portuguese_seat_guinea_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_portuguese_subject = yes capital = { state_region = s:STATE_GUINEA } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_french_seat_senegal
+		adjective = colonial_french_seat_senegal_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_french_subject = yes capital = { state_region = s:STATE_SENEGAL } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_seat_angola
+		adjective = colonial_portuguese_seat_angola_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_portuguese_subject = yes capital = { OR = { state_region = s:STATE_NORTH_ANGOLA state_region = s:STATE_SOUTH_ANGOLA state_region = s:STATE_EAST_ANGOLA } } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_seat_mozambique
+		adjective = colonial_portuguese_seat_mozambique_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_portuguese_subject = yes capital = { OR = { state_region = s:STATE_MOCAMBIQUE state_region = s:STATE_ZAMBEZIA state_region = s:STATE_LOURENCO_MARQUES } } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_french_seat_madagascar
+		adjective = colonial_french_seat_madagascar_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_french_subject = yes capital = { OR = { state_region = s:STATE_NORTH_MADAGASCAR state_region = s:STATE_SOUTH_MADAGASCAR } } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_english_seat_sierra_leone
+		adjective = colonial_english_seat_sierra_leone_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_english_or_british_subject = yes capital = { state_region = s:STATE_SIERRA_LEONE } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_seat_kamerun
+		adjective = colonial_german_seat_kamerun_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = congo_subject_var aoc_is_german_subject = yes capital = { OR = { state_region = s:STATE_NORTH_CAMEROON state_region = s:STATE_SOUTH_CAMEROON } } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_seat_south_west_africa
+		adjective = colonial_german_seat_south_west_africa_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = southern_africa_subject_var aoc_is_german_subject = yes capital = { OR = { state_region = s:STATE_HEREROLAND state_region = s:STATE_NAMAQUALAND } } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_seat_togoland
+		adjective = colonial_german_seat_togoland_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = senegal_subject_var aoc_is_german_subject = yes capital = { state_region = s:STATE_TOGO } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_seat_zanzibar
+		adjective = colonial_omani_seat_zanzibar_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = zanj_subject_var aoc_is_omani_subject = yes capital = { state_region = s:STATE_ZANZIBAR } }
+		}
+	}
+
+	# American and Australasian national names. Keep these in the single DEFAULT block.
+	dynamic_country_name = {
+		name = colonial_dutch_canada
+		adjective = colonial_dutch_canada_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = canada_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_atlantic_coast
+		adjective = colonial_dutch_atlantic_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_pacific_coast
+		adjective = colonial_dutch_pacific_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_great_plains
+		adjective = colonial_dutch_great_plains_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = great_plains_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_central_america
+		adjective = colonial_dutch_central_america_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_gran_colombia
+		adjective = colonial_dutch_gran_colombia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_andes
+		adjective = colonial_dutch_andes_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = andes_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_la_plata
+		adjective = colonial_dutch_la_plata_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = la_plata_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_brazil
+		adjective = colonial_dutch_brazil_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_canada
+		adjective = colonial_danish_canada_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = canada_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_atlantic_coast
+		adjective = colonial_danish_atlantic_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_pacific_coast
+		adjective = colonial_danish_pacific_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_great_plains
+		adjective = colonial_danish_great_plains_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = great_plains_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_central_america
+		adjective = colonial_danish_central_america_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_gran_colombia
+		adjective = colonial_danish_gran_colombia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_andes
+		adjective = colonial_danish_andes_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = andes_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_la_plata
+		adjective = colonial_danish_la_plata_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = la_plata_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_brazil
+		adjective = colonial_danish_brazil_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_canada
+		adjective = colonial_swedish_canada_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = canada_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_atlantic_coast
+		adjective = colonial_swedish_atlantic_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_pacific_coast
+		adjective = colonial_swedish_pacific_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_great_plains
+		adjective = colonial_swedish_great_plains_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = great_plains_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_central_america
+		adjective = colonial_swedish_central_america_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_gran_colombia
+		adjective = colonial_swedish_gran_colombia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_andes
+		adjective = colonial_swedish_andes_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = andes_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_la_plata
+		adjective = colonial_swedish_la_plata_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = la_plata_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_brazil
+		adjective = colonial_swedish_brazil_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_canada
+		adjective = colonial_brandenburg_canada_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = canada_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_atlantic_coast
+		adjective = colonial_brandenburg_atlantic_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_pacific_coast
+		adjective = colonial_brandenburg_pacific_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_great_plains
+		adjective = colonial_brandenburg_great_plains_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = great_plains_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_central_america
+		adjective = colonial_brandenburg_central_america_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_gran_colombia
+		adjective = colonial_brandenburg_gran_colombia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_andes
+		adjective = colonial_brandenburg_andes_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = andes_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_la_plata
+		adjective = colonial_brandenburg_la_plata_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = la_plata_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_brazil
+		adjective = colonial_brandenburg_brazil_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_canada
+		adjective = colonial_prussian_canada_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = canada_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_atlantic_coast
+		adjective = colonial_prussian_atlantic_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_pacific_coast
+		adjective = colonial_prussian_pacific_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_great_plains
+		adjective = colonial_prussian_great_plains_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = great_plains_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_central_america
+		adjective = colonial_prussian_central_america_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_gran_colombia
+		adjective = colonial_prussian_gran_colombia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_andes
+		adjective = colonial_prussian_andes_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = andes_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_la_plata
+		adjective = colonial_prussian_la_plata_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = la_plata_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_brazil
+		adjective = colonial_prussian_brazil_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_canada
+		adjective = colonial_german_canada_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = canada_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_atlantic_coast
+		adjective = colonial_german_atlantic_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_pacific_coast
+		adjective = colonial_german_pacific_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_great_plains
+		adjective = colonial_german_great_plains_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = great_plains_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_central_america
+		adjective = colonial_german_central_america_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_gran_colombia
+		adjective = colonial_german_gran_colombia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_andes
+		adjective = colonial_german_andes_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = andes_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_la_plata
+		adjective = colonial_german_la_plata_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = la_plata_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_brazil
+		adjective = colonial_german_brazil_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_canada
+		adjective = colonial_belgian_canada_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = canada_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_atlantic_coast
+		adjective = colonial_belgian_atlantic_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_pacific_coast
+		adjective = colonial_belgian_pacific_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_great_plains
+		adjective = colonial_belgian_great_plains_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = great_plains_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_central_america
+		adjective = colonial_belgian_central_america_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_gran_colombia
+		adjective = colonial_belgian_gran_colombia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_andes
+		adjective = colonial_belgian_andes_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = andes_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_la_plata
+		adjective = colonial_belgian_la_plata_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = la_plata_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_brazil
+		adjective = colonial_belgian_brazil_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_canada
+		adjective = colonial_omani_canada_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = canada_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_atlantic_coast
+		adjective = colonial_omani_atlantic_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = atlantic_coast_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_pacific_coast
+		adjective = colonial_omani_pacific_coast_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = pacific_coast_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_great_plains
+		adjective = colonial_omani_great_plains_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = great_plains_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_central_america
+		adjective = colonial_omani_central_america_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_gran_colombia
+		adjective = colonial_omani_gran_colombia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = gran_colombia_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_andes
+		adjective = colonial_omani_andes_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = andes_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_la_plata
+		adjective = colonial_omani_la_plata_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = la_plata_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_brazil
+		adjective = colonial_omani_brazil_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_australia
+		adjective = colonial_castilian_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_castilian_or_spanish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_new_zealand
+		adjective = colonial_castilian_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_castilian_or_spanish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_castilian_seat_caribbean
+		adjective = colonial_castilian_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_castilian_or_spanish_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_australia
+		adjective = colonial_portuguese_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_portuguese_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_new_zealand
+		adjective = colonial_portuguese_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_portuguese_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_portuguese_seat_caribbean
+		adjective = colonial_portuguese_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_portuguese_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_french_australia
+		adjective = colonial_french_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_french_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_french_new_zealand
+		adjective = colonial_french_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_french_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_french_seat_caribbean
+		adjective = colonial_french_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_french_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_english_australia
+		adjective = colonial_english_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_english_or_british_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_english_new_zealand
+		adjective = colonial_english_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_english_or_british_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_english_seat_caribbean
+		adjective = colonial_english_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_english_or_british_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_australia
+		adjective = colonial_dutch_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_new_zealand
+		adjective = colonial_dutch_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_dutch_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_seat_caribbean
+		adjective = colonial_dutch_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_dutch_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_australia
+		adjective = colonial_danish_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_new_zealand
+		adjective = colonial_danish_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_danish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_danish_seat_caribbean
+		adjective = colonial_danish_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_danish_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_australia
+		adjective = colonial_swedish_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_new_zealand
+		adjective = colonial_swedish_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_swedish_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_swedish_seat_caribbean
+		adjective = colonial_swedish_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_swedish_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_australia
+		adjective = colonial_brandenburg_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_new_zealand
+		adjective = colonial_brandenburg_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_brandenburg_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_brandenburg_seat_caribbean
+		adjective = colonial_brandenburg_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_brandenburg_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_australia
+		adjective = colonial_prussian_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_new_zealand
+		adjective = colonial_prussian_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_prussian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_prussian_seat_caribbean
+		adjective = colonial_prussian_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_prussian_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_australia
+		adjective = colonial_german_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_new_zealand
+		adjective = colonial_german_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_german_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_german_seat_caribbean
+		adjective = colonial_german_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_german_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_australia
+		adjective = colonial_belgian_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_new_zealand
+		adjective = colonial_belgian_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_belgian_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_belgian_seat_caribbean
+		adjective = colonial_belgian_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_belgian_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_australia
+		adjective = colonial_omani_australia_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_new_zealand
+		adjective = colonial_omani_new_zealand_adj
+		priority = 200
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes aoc_is_omani_subject = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_omani_seat_caribbean
+		adjective = colonial_omani_seat_caribbean_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = central_america_subject_var aoc_is_omani_subject = yes capital = { is_in_geographic_region = geographic_region_aoc_spanish_caribbean } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_seat_new_holland
+		adjective = colonial_dutch_seat_new_holland_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { has_variable = brazil_subject_var aoc_is_dutch_subject = yes capital = { OR = { state_region = s:STATE_PERNAMBUCO state_region = s:STATE_PARAIBA state_region = s:STATE_RIO_GRANDE_DO_NORTE } } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_english_seat_tasmania
+		adjective = colonial_english_seat_tasmania_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_english_or_british_subject = yes capital = { state_region = s:STATE_TASMANIA } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_dutch_seat_tasmania
+		adjective = colonial_dutch_seat_tasmania_adj
+		priority = 220
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes aoc_is_dutch_subject = yes capital = { state_region = s:STATE_TASMANIA } }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_admin_australia
+		adjective = colonial_admin_australia_adj
+		use_overlord_prefix = yes
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_australian_colonial_nation = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = colonial_admin_new_zealand
+		adjective = colonial_admin_new_zealand_adj
+		use_overlord_prefix = yes
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { aoc_is_new_zealand_colonial_nation = yes }
+		}
+	}
+
 	dynamic_country_name = {
 		name = colonial_admin_cape_verde
 		adjective = colonial_admin_cape_verde_adj

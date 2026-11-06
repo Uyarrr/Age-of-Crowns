@@ -6,7 +6,7 @@ wotr_summon_great_council_button = {
 		has_journal_entry = je_england_2
 	}
 
-	cooldown = { months = 48 }
+	cooldown = { days = 1460 }
 
 	ai_chance = {
 		base = 10
@@ -21,6 +21,11 @@ wotr_summon_great_council_button = {
 			text = wotr_has_active_crisis_tt
 			has_journal_entry = je_england_2
 		}
+		custom_tooltip = {
+			text = wotr_council_available_tt
+			NOT = { has_modifier = war_of_the_roses_great_council }
+			NOT = { has_variable = wotr_council_cooldown }
+		}
 		NOT = {
 			custom_tooltip = {
 				text = wotr_no_active_civil_war_tt
@@ -30,6 +35,7 @@ wotr_summon_great_council_button = {
 	}
 
 	effect = {
+		set_variable = { name = wotr_council_cooldown months = 48 }
 		custom_tooltip = {
 			text = wotr_summon_great_council_button_effect_tt
 			change_variable = { name = war_of_roses_tension_offset_var add = -10 }
@@ -50,7 +56,7 @@ wotr_favor_lancaster_button = {
 		has_journal_entry = je_england_2
 	}
 
-	cooldown = { months = 36 }
+	cooldown = { days = 1095 }
 
 	ai_chance = {
 		base = 10
@@ -106,7 +112,7 @@ wotr_favor_york_button = {
 		has_journal_entry = je_england_2
 	}
 
-	cooldown = { months = 36 }
+	cooldown = { days = 1095 }
 
 	ai_chance = {
 		base = 10

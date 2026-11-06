@@ -254,6 +254,8 @@ building_orchard = {
 }
 
 building_silk_farm = {
+	# Preserve silk-growing potential from the inherited state-region map.
+	aliases = { building_silk_plantation }
 	building_group = bg_agriculture
 	icon = "gfx/interface/icons/building_icons/silk_farm_uyr.dds"
 	required_construction = construction_cost_low

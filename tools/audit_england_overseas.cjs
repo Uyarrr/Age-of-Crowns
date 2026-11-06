@@ -134,8 +134,14 @@ for (const j of journals) {
  assert.equal(dds.readUInt32LE(12),256, `${icon}: height`);
  assert.equal(dds.readUInt32LE(16),256, `${icon}: width`);
  assert.equal(dds.readUInt32LE(28),9, `${icon}: full mip chain`);
- assert.equal(dds.toString('ascii',84,88),'DXT5', `${icon}: conventional DDS texture`);
- assert.equal(dds.length,87536, `${icon}: mip payload length`);
+ const format = dds.toString('ascii',84,88);
+ assert(['DXT5','DX10'].includes(format), `${icon}: unsupported DDS texture`);
+ if (format === 'DX10') {
+  assert([77,78,98,99].includes(dds.readUInt32LE(128)), `${icon}: expected BC3 or BC7 format`);
+  assert.equal(dds.readUInt32LE(132),3, `${icon}: expected 2D texture`);
+  assert.equal(dds.readUInt32LE(140),1, `${icon}: expected one array layer`);
+ }
+ assert.equal(dds.length,87536+(format==='DX10'?20:0), `${icon}: mip payload length`);
  const lobby=one(j.value,'is_shown_in_lobby');
  assert(JSON.stringify(lobby).includes('c:ENG') && JSON.stringify(lobby).includes('c:GBR'), `${j.key}: England and Britain lobby visibility`);
  assert(!one(j.value,'possible').value.some(n=>n.key==='aoc_england_overseas_country'), `${j.key}: redundant visible country eligibility`);
@@ -190,7 +196,8 @@ const navy=one(journals,'je_aoc_england_royal_navy');
 const pulse=one(one(navy.value,'on_monthly_pulse').value,'effect').value;
 const gain=Number(one(one(one(pulse,'if').value,'change_variable').value,'add').value);
 const reset=Number(one(one(one(pulse,'else').value,'set_variable').value,'value').value);
-const target=Number(one(one(one(navy.value,'complete').value,'custom_tooltip').value,'var:aoc_england_navy_months').value);
+const navyOutcome=navy.value.find(n=>n.key==='outcome'&&!n.value.some(c=>c.key==='flags'));
+const target=Number(one(one(one(navyOutcome.value,'trigger').value,'custom_tooltip').value,'var:aoc_england_navy_months').value);
 let months=0;
 for(let i=0;i<119;i++) months+=gain;
 assert(months<target);

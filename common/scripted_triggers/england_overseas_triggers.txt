@@ -1,6 +1,6 @@
 # Country scope unless noted. ROOT is always the journal/button owner.
 aoc_england_overseas_country = {
- OR = { c:ENG ?= this c:GBR ?= this }
+ OR = { c:ENG ?= this c:GBR ?= this was_formed_from = ENG }
  is_subject = no
  is_revolutionary = no
  is_secessionist = no

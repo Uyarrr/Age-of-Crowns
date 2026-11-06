@@ -586,8 +586,8 @@ movement_particularist = {
 			limit = {
 				OR = {
 					has_law_or_variant = law_type:law_centralized_offices
-					has_law_or_variant = law_type:law_namestnik_office
-					has_law_or_variant = law_type:law_rentekammeret
+					has_law = law_type:law_namestnik_office
+					has_law = law_type:law_rentekammeret
 				}
 			}
 			multiply = 1.5

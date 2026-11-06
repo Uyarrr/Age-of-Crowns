@@ -19,7 +19,7 @@ aoc_country_is_republic = {
 aoc_country_has_curtailed_nobility = {
 	OR = {
 		has_law_or_variant = law_type:law_curtail_the_nobility
-		has_law_or_variant = law_type:law_court_of_the_star_chamber
+		has_law = law_type:law_court_of_the_star_chamber
 	}
 }
 

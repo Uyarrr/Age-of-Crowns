@@ -1,8 +1,6 @@
 ﻿BUILDINGS={
-	s:STATE_ECUADOR={
-		region_state:N01={
-		}
-		region_state:QTO={
+	s:STATE_ECUADOR = {
+		region_state:QTO = {
 			create_building={
 				building="building_trade_center"
 				add_ownership={
@@ -15,349 +13,105 @@
 				activate_production_methods={ "pm_trade_center" "pm_building_trade_center_trade_2" }
 			}
 		}
-		region_state:CHM={
-		}
-		region_state:AYA={
-		}
 	}
-	s:STATE_GUAYANA={
-		region_state:L16={
-		}
-		region_state:N01={
-		}
+	s:STATE_GUAYANA = {
 	}
-	s:STATE_ZULIA={
-		region_state:T36={
-		}
-		region_state:N01={
-		}
+	s:STATE_ZULIA = {
 	}
-	s:STATE_MIRANDA={
-		region_state:N01={
-		}
-		region_state:J05={
-		}
+	s:STATE_MIRANDA = {
 	}
-	s:STATE_BOLIVAR={
-		region_state:K36={
-		}
-		region_state:W20={
-		}
-		region_state:N01={
-		}
+	s:STATE_BOLIVAR = {
 	}
-	s:STATE_ANTIOQUIA={
-		region_state:N01={
-		}
-		region_state:EE1={
-		}
-		region_state:MUI={
-		}
-		region_state:T36={
-		}
-		region_state:WYU={
-		}
-		region_state:Z06={
-		}
+	s:STATE_ANTIOQUIA = {
 	}
-	s:STATE_GUAVIARE={
-		region_state:N01={
-		}
-		region_state:G21={
-		}
-		region_state:MUI={
-		}
+	s:STATE_GUAVIARE = {
 	}
-	s:STATE_CUNDINAMARCA={
-		region_state:N01={
-		}
-		region_state:MUI={
-		}
+	s:STATE_CUNDINAMARCA = {
 	}
-	s:STATE_CAUCA={
-		region_state:N01={
-		}
-		region_state:MUI={
-		}
+	s:STATE_CAUCA = {
 	}
-	s:STATE_PASTAZA={
-		region_state:AMZ={
-		}
-		region_state:CYA={
-		}
+	s:STATE_PASTAZA = {
 	}
-	s:STATE_TARAPACA={
-		region_state:QTR={
-		}
+	s:STATE_TARAPACA = {
 	}
-	s:STATE_ANTOFAGASTA={
-		region_state:QTR={
-		}
+	s:STATE_ANTOFAGASTA = {
 	}
-	s:STATE_SANTA_CRUZ={
-		region_state:AVA={
-		}
-		region_state:CRA={
-		}
-		region_state:CCH={
-		}
+	s:STATE_SANTA_CRUZ = {
 	}
-	s:STATE_LA_PAZ={
-		region_state:KWY={
-		}
-		region_state:LLG={
-		}
-		region_state:PCJ={
-		}
-		region_state:CRA={
-		}
+	s:STATE_LA_PAZ = {
 	}
-	s:STATE_POTOSI={
-		region_state:PCJ={
-		}
-		region_state:CRA={
-		}
+	s:STATE_POTOSI = {
 	}
-	s:STATE_CAJAMARCA={
-		region_state:CHM={
-		}
-		region_state:AYA={
-		}
-		region_state:CYA={
-		}
-		region_state:HUA={
-		}
+	s:STATE_CAJAMARCA = {
 	}
-	s:STATE_LIMA={
-		region_state:N01={
-		}
-		region_state:CYA={
-		}
-		region_state:CHM={
-		}
-		region_state:HUA={
-		}
-		region_state:ICM={
-		}
-		region_state:WAN={
-		}
-		region_state:AMN={
-		}
+	s:STATE_LIMA = {
 	}
-	s:STATE_ICA={
-		region_state:CSU={
-		}
-		region_state:WAN={
-		}
-		region_state:N01={
-		}
-		region_state:AMN={
-		}
+	s:STATE_ICA = {
 	}
-	s:STATE_AREQUIPA={
-		region_state:CBY={
-		}
-		region_state:LLG={
-		}
-		region_state:CSU={
-		}
-		region_state:N01={
-		}
+	s:STATE_AREQUIPA = {
 	}
-	s:STATE_URUGUAY={
-		region_state:CUA={
-		}
+	s:STATE_URUGUAY = {
 	}
-	s:STATE_JUJUY={
-		region_state:QIM={
-		}
-		region_state:PCJ={
-		}
-		region_state:CCH={
-		}
+	s:STATE_JUJUY = {
 	}
-	s:STATE_ALTO_PARAGUAY={
-		region_state:MGR={
-		}
+	s:STATE_ALTO_PARAGUAY = {
 	}
-	s:STATE_BAJO_PARAGUAY={
-		region_state:NDV={
-		}
+	s:STATE_BAJO_PARAGUAY = {
 	}
 
 
-	s:STATE_RIO_NEGRO={
-		region_state:MPC={
-		}
-		region_state:MYC={
-		}
+	s:STATE_RIO_NEGRO = {
 	}
-	s:STATE_LA_PAMPA={
-		region_state:MPC={
-		}
+	s:STATE_LA_PAMPA = {
 	}
-	s:STATE_SANTA_FE={
-		region_state:MGR={
-		}
-		region_state:CUA={
-		}
+	s:STATE_SANTA_FE = {
 	}
-	s:STATE_CORRIENTES={
-		region_state:NDV={
-		}
+	s:STATE_CORRIENTES = {
 	}
-	s:STATE_TUCUMAN={
-		region_state:MYC={
-		}
-		region_state:ALC={
-		}
-		region_state:QIM={
-		}
+	s:STATE_TUCUMAN = {
 	}
-	s:STATE_CHACO={
-		region_state:MGR={
-		}
+	s:STATE_CHACO = {
 	}
-	s:STATE_SANTIAGO={
-		region_state:PHE={
-		}
-		region_state:CYC={
-		}
-		region_state:CPU={
-		}
+	s:STATE_SANTIAGO = {
 	}
 
-	s:STATE_ARAUCANIA={
-		region_state:THL={
-		}
-		region_state:MPC={
-		}
-		region_state:SLK={
-		}
+	s:STATE_ARAUCANIA = {
 	}
-	s:STATE_SOUTH_ATLANTIC_ISLANDS={
-		region_state:SLK={
-		}
+	s:STATE_SOUTH_ATLANTIC_ISLANDS = {
 	}
 
-	s:STATE_MARANHAO={
-		region_state:TRM={
-		}
-		region_state:TBI={
-		}
-		region_state:KAP={
-		}
+	s:STATE_MARANHAO = {
 	}
-	s:STATE_AMAZONAS={
-		region_state:AMZ={
-		}
+	s:STATE_AMAZONAS = {
 	}
-	s:STATE_ACRE={
-		region_state:AMZ={
-		}
+	s:STATE_ACRE = {
 	}
-	s:STATE_GOIAS={
-		region_state:AKW={
-		}
+	s:STATE_GOIAS = {
 	}
-	s:STATE_MATO_GROSSO={
-		region_state:AMZ={
-		}
-		region_state:KIO={
-		}
+	s:STATE_MATO_GROSSO = {
 	}
-	s:STATE_RIO_GRANDE_DO_SUL={
-		region_state:NDV={
-		}
-		region_state:CRJ={
-		}
-		region_state:NDVC={
-		}
+	s:STATE_RIO_GRANDE_DO_SUL = {
 	}
-	s:STATE_PARANA={
-		region_state:CRJ={
-		}
-		region_state:KHG={
-		}
-		region_state:NDV={
-		}
+	s:STATE_PARANA = {
 	}
-	s:STATE_SANTA_CATARINA={
-		region_state:NDV={
-		}
-		region_state:CRJ={
-		}
-		region_state:KHG={
-		}
+	s:STATE_SANTA_CATARINA = {
 	}
-	s:STATE_SAO_PAULO={
-		region_state:KHG={
-		}
-		region_state:TPQ={
-		}
+	s:STATE_SAO_PAULO = {
 	}
-	s:STATE_MINAS_GERAIS={
-		region_state:AIM={
-		}
-		region_state:MBK={
-		}
-		region_state:TPQ={
-		}
+	s:STATE_MINAS_GERAIS = {
 	}
-	s:STATE_RIO_DE_JANEIRO={
-		region_state:TPQ={
-		}
-		region_state:AIMC={
-		}
+	s:STATE_RIO_DE_JANEIRO = {
 	}
-	s:STATE_BAHIA={
-		region_state:TPA={
-		}
-		region_state:AIM={
-		}
-		region_state:KRR={
-		}
-		region_state:TPQC={
-		}
+	s:STATE_BAHIA = {
 	}
-	s:STATE_RIO_GRANDE_DO_NORTE={
-		region_state:POT={
-		}
-		region_state:KRR={
-		}
+	s:STATE_RIO_GRANDE_DO_NORTE = {
 	}
-	s:STATE_CEARA={
-		region_state:TBI={
-		}
-		region_state:POTC={
-		}
-		region_state:KRR={
-		}
-		region_state:SUC={
-		}
+	s:STATE_CEARA = {
 	}
-	s:STATE_PIAUI={
-		region_state:TRM={
-		}
-		region_state:TBI={
-		}
+	s:STATE_PIAUI = {
 	}
-	s:STATE_PARAIBA={
-		region_state:POT={
-		}
-		region_state:CAE={
-		}
-		region_state:KRR={
-		}
+	s:STATE_PARAIBA = {
 	}
-	s:STATE_PERNAMBUCO={
-		region_state:CAE={
-		}
-		region_state:TBI={
-		}
-		region_state:TPA={
-		}
-		region_state:KRR={
-		}
+	s:STATE_PERNAMBUCO = {
 	}
 }

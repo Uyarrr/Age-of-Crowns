@@ -217,7 +217,7 @@ s:STATE_ACEH = {
 		}
 	}
 s:STATE_ACRE = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
@@ -876,7 +876,7 @@ s:STATE_ALTAI = {
 		}
 	}
 s:STATE_ALTO_PARAGUAY = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = mascoian
 				religion = animist
@@ -907,8 +907,6 @@ s:STATE_ALTO_PARAGUAY = {
 				religion = animist
 				size = 309
 			}
-		}
-		region_state:Q04 = {
 			create_pop = {
 				culture = guaicuruan
 				religion = animist
@@ -1045,7 +1043,7 @@ s:STATE_AL_RIF = {
 		}
 	}
 s:STATE_AMAZONAS = {
-		region_state:K39 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
@@ -1056,15 +1054,11 @@ s:STATE_AMAZONAS = {
 				religion = animist
 				size = 3000
 			}
-		}
-		region_state:M45 = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
 				size = 7200
 			}
-		}
-		region_state:N01 = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
@@ -1685,42 +1679,38 @@ s:STATE_ANNAM = {
 		}
 	}
 s:STATE_ANTIOQUIA = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 8094
+				size = 7770
 			}
 			create_pop = {
 				culture = guajiro
 				religion = catholic
-				size = 3600
+				size = 3456
 			}
 			create_pop = {
 				culture = embera
 				religion = animist
-				size = 80941
+				size = 77703
 			}
-		}
-		region_state:EE1 = {
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 5008
+				size = 4452
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
 				pop_type = slaves
-				size = 653
+				size = 580
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 30376
+				size = 27001
 			}
-		}
-		region_state:MUI = {
 			create_pop = {
 				culture = muisca
 				religion = animist
@@ -1732,31 +1722,63 @@ s:STATE_ANTIOQUIA = {
 				pop_type = slaves
 				size = 2610
 			}
-		}
-		region_state:T36 = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
 				size = 4650
 			}
-		}
-		region_state:WYU = {
 			create_pop = {
 				culture = guajiro
 				religion = catholic
-				size = 24429
+				size = 12215
 			}
-		}
-		region_state:Z06 = {
 			create_pop = {
 				culture = embera
 				religion = animist
 				size = 48601
 			}
 		}
+		region_state:TAY = {
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 324
+			}
+			create_pop = {
+				culture = guajiro
+				religion = catholic
+				size = 144
+			}
+			create_pop = {
+				culture = embera
+				religion = animist
+				size = 3238
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 556
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 73
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 3375
+			}
+			create_pop = {
+				culture = guajiro
+				religion = catholic
+				size = 12214
+			}
+		}
 	}
 s:STATE_ANTOFAGASTA = {
-		region_state:TWT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = aimara
 				religion = animist
@@ -1897,14 +1919,12 @@ s:STATE_ARAKAN = {
 		}
 	}
 s:STATE_ARAUCANIA = {
-		region_state:PAT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = south_andean
 				religion = animist
 				size = 16561
 			}
-		}
-		region_state:N10 = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
@@ -1933,51 +1953,139 @@ s:STATE_ARAUCANIA = {
 		}
 	}
 s:STATE_AREQUIPA = {
-		region_state:AYM = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 12216
+				size = 7126
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
 				pop_type = slaves
-				size = 22
+				size = 13
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 10180
-			}
-			create_pop = {
-				culture = aimara
-				religion = animist
-				pop_type = slaves
-				size = 19
-			}
-		}
-		region_state:TWT = {
-			create_pop = {
-				culture = aimara
-				religion = animist
-				size = 12216
+				size = 5938
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
 				pop_type = slaves
-				size = 22
+				size = 11
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 22470
+				size = 7126
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				pop_type = slaves
+				size = 13
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 13107
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 26075
+				size = 15211
+			}
+		}
+		region_state:CSU = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1527
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				pop_type = slaves
+				size = 3
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1273
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				pop_type = slaves
+				size = 2
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1527
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				pop_type = slaves
+				size = 3
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 2809
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3259
+			}
+		}
+		region_state:LLG = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 3563
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				pop_type = slaves
+				size = 6
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 2969
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				pop_type = slaves
+				size = 6
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 3563
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				pop_type = slaves
+				size = 6
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 6554
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 7605
 			}
 		}
 	}
@@ -2877,51 +2985,90 @@ s:STATE_BAHAMAS = {
 		}
 	}
 s:STATE_BAHIA = {
-		region_state:A22 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = je
 				religion = animist
-				size = 36575
+				size = 35245
 			}
-		}
-		region_state:T29 = {
 			create_pop = {
 				culture = tupinamba
 				religion = animist
-				size = 6373
+				size = 6141
 			}
 			create_pop = {
 				culture = tupinamba
 				religion = animist
 				pop_type = slaves
-				size = 1607
+				size = 1549
 			}
 			create_pop = {
 				culture = tupinamba
 				religion = animist
-				size = 30948
-			}
-		}
-		region_state:N01 = {
-			create_pop = {
-				culture = tupinamba
-				religion = animist
-				size = 36575
+				size = 29823
 			}
 			create_pop = {
 				culture = tupinamba
 				religion = animist
-				size = 36575
+				size = 35245
 			}
 			create_pop = {
 				culture = tupinamba
 				religion = animist
-				size = 33395
+				size = 35245
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				size = 32181
 			}
 			create_pop = {
 				culture = je
 				religion = animist
-				size = 36575
+				size = 35245
+			}
+		}
+		region_state:TPAC = {
+			create_pop = {
+				culture = je
+				religion = animist
+				size = 1330
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				size = 232
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				pop_type = slaves
+				size = 58
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				size = 1125
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				size = 1330
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				size = 1330
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				size = 1214
+			}
+			create_pop = {
+				culture = je
+				religion = animist
+				size = 1330
 			}
 		}
 	}
@@ -3017,16 +3164,28 @@ s:STATE_BAJIO = {
 		}
 	}
 s:STATE_BAJO_PARAGUAY = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = guarani
 				religion = animist
-				size = 69719
+				size = 47229
 			}
 			create_pop = {
 				culture = guarani
 				religion = animist
-				size = 124439
+				size = 84297
+			}
+		}
+		region_state:NDVC = {
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 22490
+			}
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 40142
 			}
 		}
 	}
@@ -4204,7 +4363,7 @@ s:STATE_BOHEMIA = {
 		}
 	}
 s:STATE_BOLIVAR = {
-		region_state:K36 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = cariban
 				religion = animist
@@ -4221,15 +4380,11 @@ s:STATE_BOLIVAR = {
 				religion = animist
 				size = 7731
 			}
-		}
-		region_state:W20 = {
 			create_pop = {
 				culture = waroid
 				religion = animist
 				size = 35784
 			}
-		}
-		region_state:N01 = {
 			create_pop = {
 				culture = cariban
 				religion = animist
@@ -5111,61 +5266,232 @@ s:STATE_BUSAN = {
 		}
 	}
 s:STATE_CAJAMARCA = {
-		region_state:TWT = {
+		region_state:AYA = {
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 34572
+				size = 8135
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 457
+				size = 108
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 12965
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				pop_type = slaves
-				size = 171
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				size = 12965
+				size = 3051
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 171
+				size = 40
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 12965
+				size = 3051
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 171
+				size = 40
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3051
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 40
 			}
 			create_pop = {
 				culture = maranon
 				religion = animist
-				size = 17285
+				size = 4067
 			}
 			create_pop = {
 				culture = maranon
 				religion = animist
 				pop_type = slaves
-				size = 229
+				size = 54
+			}
+		}
+		region_state:CHM = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 10168
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 134
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3813
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 51
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3813
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 51
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3813
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 51
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 5084
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				pop_type = slaves
+				size = 67
+			}
+		}
+		region_state:CYA = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 8135
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 108
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3051
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 40
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3051
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 40
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3051
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 40
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 4067
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				pop_type = slaves
+				size = 54
+			}
+		}
+		region_state:HUA = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 8134
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 107
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3050
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 40
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3050
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 40
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 3050
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 40
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 4067
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				pop_type = slaves
+				size = 54
 			}
 		}
 	}
@@ -5476,7 +5802,7 @@ s:STATE_CATALONIA = {
 		}
 	}
 s:STATE_CAUCA = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = embera
 				religion = animist
@@ -5487,8 +5813,6 @@ s:STATE_CAUCA = {
 				religion = animist
 				size = 20400
 			}
-		}
-		region_state:MUI = {
 			create_pop = {
 				culture = muisca
 				religion = animist
@@ -5497,7 +5821,7 @@ s:STATE_CAUCA = {
 		}
 	}
 s:STATE_CEARA = {
-		region_state:P19 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = je
 				religion = animist
@@ -6250,7 +6574,7 @@ s:STATE_CEYLON = {
 		}
 	}
 s:STATE_CHACO = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = guaicuruan
 				religion = animist
@@ -7177,7 +7501,7 @@ s:STATE_CONSTANTINE = {
 		}
 	}
 s:STATE_CORRIENTES = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = charruan
 				religion = animist
@@ -7329,38 +7653,106 @@ s:STATE_CROATIA = {
 		}
 	}
 s:STATE_CUNDINAMARCA = {
-		region_state:MUI = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = embera
 				religion = animist
-				size = 49261
+				size = 13435
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 49849
-			}
-			create_pop = {
-				culture = muisca
-				religion = animist
-				pop_type = slaves
-				size = 285
-			}
-			create_pop = {
-				culture = muisca
-				religion = animist
-				size = 42728
+				size = 13595
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
 				pop_type = slaves
-				size = 244
+				size = 78
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 9911
+				size = 11653
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 67
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 2703
+			}
+		}
+		region_state:ZAQ = {
+			create_pop = {
+				culture = embera
+				religion = animist
+				size = 13435
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 13595
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 78
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 11653
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 66
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 2703
+			}
+		}
+		region_state:ZIP = {
+			create_pop = {
+				culture = embera
+				religion = animist
+				size = 22391
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 22659
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 129
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 19422
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 111
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 4505
 			}
 		}
 	}
@@ -9083,33 +9475,44 @@ s:STATE_EAST_SWITZERLAND = {
 		}
 	}
 s:STATE_ECUADOR = {
-		region_state:TWT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 29124
+				size = 12482
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 2912
+				size = 1248
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 29124
+				size = 12482
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
 				pop_type = slaves
-				size = 2912
+				size = 1248
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 24964
+				size = 10699
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 1070
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 24963
 			}
 			create_pop = {
 				culture = muisca
@@ -9120,34 +9523,224 @@ s:STATE_ECUADOR = {
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 58248
+				size = 12482
 			}
 			create_pop = {
 				culture = muisca
 				religion = animist
 				pop_type = slaves
-				size = 5825
-			}
-			create_pop = {
-				culture = muisca
-				religion = animist
-				size = 29124
-			}
-			create_pop = {
-				culture = muisca
-				religion = animist
-				pop_type = slaves
-				size = 2912
+				size = 1248
 			}
 			create_pop = {
 				culture = amazonian
 				religion = animist
-				size = 16558
+				size = 7096
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 74419
+				size = 31894
+			}
+		}
+		region_state:AYA = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 594
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 60
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 594
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 60
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 510
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 51
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 1189
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 119
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 594
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 60
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 338
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1519
+			}
+		}
+		region_state:CHM = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 594
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 59
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 594
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 59
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 509
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 51
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 1189
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 119
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 594
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 59
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 338
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1519
+			}
+		}
+		region_state:QTO = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 15454
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 1545
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 15454
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 1545
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 13246
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 1324
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 30907
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 3091
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 15454
+			}
+			create_pop = {
+				culture = muisca
+				religion = animist
+				pop_type = slaves
+				size = 1545
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 8786
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 39487
 			}
 		}
 	}
@@ -10466,7 +11059,7 @@ s:STATE_GEORGIA = {
 		}
 	}
 s:STATE_GOIAS = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = tupinamba
 				religion = animist
@@ -11126,7 +11719,7 @@ s:STATE_GUATEMALA = {
 		}
 	}
 s:STATE_GUAVIARE = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = lokono
 				religion = animist
@@ -11142,15 +11735,11 @@ s:STATE_GUAVIARE = {
 				religion = animist
 				size = 8399
 			}
-		}
-		region_state:G21 = {
 			create_pop = {
 				culture = lokono
 				religion = animist
 				size = 26400
 			}
-		}
-		region_state:MUI = {
 			create_pop = {
 				culture = muisca
 				religion = animist
@@ -11159,7 +11748,7 @@ s:STATE_GUAVIARE = {
 		}
 	}
 s:STATE_GUAYANA = {
-		region_state:L16 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = cariban
 				religion = animist
@@ -13058,82 +13647,220 @@ s:STATE_HYDERABAD = {
 		}
 	}
 s:STATE_ICA = {
-		region_state:TWT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 16028
+				size = 7592
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 26
+				size = 12
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 32058
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				pop_type = slaves
-				size = 51
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				size = 2404
+				size = 15186
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 4
+				size = 24
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 10018
+				size = 1139
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 16
+				size = 2
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 4746
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 8
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 4008
+				size = 1899
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
 				pop_type = slaves
-				size = 6
+				size = 3
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 6010
+				size = 2847
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 10
+				size = 5
 			}
 			create_pop = {
 				culture = amazonian
 				religion = animist
-				size = 1642
+				size = 778
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 49984
+				size = 23677
+			}
+		}
+		region_state:CSU = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 7592
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 12
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 15185
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 24
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1139
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 2
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 4745
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 7
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1898
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				pop_type = slaves
+				size = 3
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2847
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 5
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 778
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 23676
+			}
+		}
+		region_state:WAN = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 844
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 2
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1687
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 3
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 126
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 527
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 1
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 211
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 316
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 86
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2631
 			}
 		}
 	}
@@ -13860,33 +14587,85 @@ s:STATE_JIANGXI = {
 		}
 	}
 s:STATE_JUJUY = {
-		region_state:AYM = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 8383
+				size = 2551
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 3593
+				size = 1094
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 1397
+				size = 425
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 5988
+				size = 1823
 			}
-		}
-		region_state:TWT = {
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 3793
+				size = 1154
+			}
+		}
+		region_state:CCH = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 5650
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 2421
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 942
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 4035
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2556
+			}
+		}
+		region_state:PCJ = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 182
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 78
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 30
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 130
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 83
 			}
 		}
 	}
@@ -16330,7 +17109,7 @@ s:STATE_LAZIO = {
 		}
 	}
 s:STATE_LA_PAMPA = {
-		region_state:N10 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
@@ -16344,38 +17123,132 @@ s:STATE_LA_PAMPA = {
 		}
 	}
 s:STATE_LA_PAZ = {
-		region_state:AYM = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 21272
+				size = 16970
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 18908
+				size = 15084
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 11818
+				size = 9428
 			}
-		}
-		region_state:TWT = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
-				size = 11488
+				size = 9165
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 100946
+				size = 80530
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 93625
+				size = 74689
+			}
+		}
+		region_state:CRA = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 956
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 850
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 531
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 516
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 4537
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 4208
+			}
+		}
+		region_state:LLG = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 2151
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1912
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1195
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 1162
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 10208
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 9468
+			}
+		}
+		region_state:PCJ = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1195
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1062
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 664
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 645
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 5671
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 5260
 			}
 		}
 	}
@@ -16635,93 +17508,538 @@ s:STATE_LIBERIA = {
 	}
 
 s:STATE_LIMA = {
-		region_state:TWT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 12869
+				size = 6894
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 160
+				size = 86
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 16087
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				pop_type = slaves
-				size = 200
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				size = 32173
+				size = 8618
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 401
+				size = 107
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 13405
+				size = 17235
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 167
+				size = 215
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 7181
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 89
 			}
 			create_pop = {
 				culture = maranon
 				religion = animist
-				size = 8043
+				size = 4309
 			}
 			create_pop = {
 				culture = maranon
 				religion = animist
 				pop_type = slaves
-				size = 100
+				size = 54
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 8043
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				pop_type = slaves
-				size = 100
-			}
-			create_pop = {
-				culture = quechua
-				religion = animist
-				size = 13405
+				size = 4309
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
 				pop_type = slaves
-				size = 167
+				size = 54
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 7181
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 89
 			}
 			create_pop = {
 				culture = amazonian
 				religion = animist
-				size = 4016
+				size = 2152
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 41893
+				size = 22443
+			}
+		}
+		region_state:CHM = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 690
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 9
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 862
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 11
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1724
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 22
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 718
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 9
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 431
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				pop_type = slaves
+				size = 5
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 431
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 5
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 718
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 9
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 215
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2244
+			}
+		}
+		region_state:CYA = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 689
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 9
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 862
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 11
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1724
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 21
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 718
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 9
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 431
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				pop_type = slaves
+				size = 5
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 431
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 5
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 718
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 9
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 215
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2244
+			}
+		}
+		region_state:HUA = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2298
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 28
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2872
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 36
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 5745
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 72
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2394
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 30
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 1436
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				pop_type = slaves
+				size = 18
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1436
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 18
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2394
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 30
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 717
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 7481
+			}
+		}
+		region_state:ICM = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 689
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 8
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 862
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 10
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1723
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 21
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 718
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 9
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 431
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				pop_type = slaves
+				size = 5
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 431
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 5
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 718
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 9
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 215
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2244
+			}
+		}
+		region_state:WAN = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1609
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 20
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2011
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 25
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 4022
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 50
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1676
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 21
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 1005
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				pop_type = slaves
+				size = 13
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1005
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 13
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1676
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				pop_type = slaves
+				size = 21
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 502
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 5237
 			}
 		}
 	}
@@ -17954,7 +19272,7 @@ s:STATE_MANITOBA = {
 		}
 	}
 s:STATE_MARANHAO = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = je
 				religion = animist
@@ -17965,8 +19283,6 @@ s:STATE_MARANHAO = {
 				religion = animist
 				size = 23961
 			}
-		}
-		region_state:T34 = {
 			create_pop = {
 				culture = tupinamba
 				religion = animist
@@ -18122,7 +19438,7 @@ s:STATE_MASSACHUSETTS = {
 		}
 	}
 s:STATE_MATO_GROSSO = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = je
 				religion = animist
@@ -18604,7 +19920,7 @@ s:STATE_MIDLANDS = {
 		}
 	}
 s:STATE_MINAS_GERAIS = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = je
 				religion = animist
@@ -18625,8 +19941,6 @@ s:STATE_MINAS_GERAIS = {
 				religion = animist
 				size = 54390
 			}
-		}
-		region_state:T29 = {
 			create_pop = {
 				culture = tupinamba
 				religion = animist
@@ -18861,7 +20175,7 @@ s:STATE_MINSK = {
 		}
 	}
 s:STATE_MIRANDA = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = lokono
 				religion = animist
@@ -18877,8 +20191,6 @@ s:STATE_MIRANDA = {
 				religion = animist
 				size = 18062
 			}
-		}
-		region_state:J05 = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
@@ -22870,25 +24182,50 @@ s:STATE_PANAMA = {
 	}
 
 s:STATE_PARAIBA = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = je
 				religion = animist
-				size = 13534
+				size = 9023
 			}
 			create_pop = {
 				culture = tupinamba
 				religion = animist
-				size = 27195
+				size = 18130
+			}
+		}
+		region_state:POTC = {
+			create_pop = {
+				culture = je
+				religion = animist
+				size = 4511
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				size = 9065
 			}
 		}
 	}
 s:STATE_PARANA = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = guarani
 				religion = animist
-				size = 10970
+				size = 843
+			}
+		}
+		region_state:KHG = {
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 1873
+			}
+
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 8254
 			}
 		}
 	}
@@ -22943,31 +24280,58 @@ s:STATE_PASHTUNISTAN = {
 		}
 	}
 s:STATE_PASTAZA = {
-		region_state:TWT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = muisca
 				religion = animist
-				size = 267
+				size = 234
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 2138
+				size = 1874
 			}
 			create_pop = {
 				culture = maranon
 				religion = animist
-				size = 267
+				size = 234
 			}
 			create_pop = {
 				culture = amazonian
 				religion = animist
-				size = 19529
+				size = 17121
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 5669
+				size = 4970
+			}
+		}
+		region_state:CYA = {
+			create_pop = {
+				culture = muisca
+				religion = animist
+				size = 33
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 264
+			}
+			create_pop = {
+				culture = maranon
+				religion = animist
+				size = 33
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 2408
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 699
 			}
 		}
 	}
@@ -23171,7 +24535,7 @@ s:STATE_PERM = {
 		}
 	}
 s:STATE_PERNAMBUCO = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = tupinamba
 				religion = animist
@@ -23244,7 +24608,7 @@ s:STATE_PERSIAN_KURDISTAN = {
 		}
 	}
 s:STATE_PIAUI = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = je
 				religion = animist
@@ -23614,21 +24978,38 @@ s:STATE_POSEN = {
 		}
 	}
 s:STATE_POTOSI = {
-		region_state:AYM = {
+		region_state:CRA = {
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 22857
+				size = 6636
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 13714
+				size = 3981
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 11428
+				size = 3318
+			}
+		}
+		region_state:PCJ = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 16221
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 9733
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 8110
 			}
 		}
 	}
@@ -24548,27 +25929,50 @@ s:STATE_RIGA = {
 		}
 	}
 s:STATE_RIO_DE_JANEIRO = {
-		region_state:A22 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = je
 				religion = animist
-				size = 47649
+				size = 32759
 			}
 			create_pop = {
 				culture = je
 				religion = animist
 				pop_type = slaves
-				size = 39773
+				size = 27344
 			}
 			create_pop = {
 				culture = je
 				religion = animist
-				size = 97198
+				size = 66824
 			}
 			create_pop = {
 				culture = tupinamba
 				religion = animist
-				size = 51684
+				size = 35533
+			}
+		}
+		region_state:TPQC = {
+			create_pop = {
+				culture = je
+				religion = animist
+				size = 14890
+			}
+			create_pop = {
+				culture = je
+				religion = animist
+				pop_type = slaves
+				size = 12429
+			}
+			create_pop = {
+				culture = je
+				religion = animist
+				size = 30374
+			}
+			create_pop = {
+				culture = tupinamba
+				religion = animist
+				size = 16151
 			}
 		}
 	}
@@ -24601,21 +26005,33 @@ s:STATE_RIO_GRANDE = {
 		}
 	}
 s:STATE_RIO_GRANDE_DO_NORTE = {
-		region_state:P19 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = brazilian
 				religion = catholic
-				size = 24901
+				size = 16601
 			}
 			create_pop = {
 				culture = je
 				religion = animist
-				size = 1483
+				size = 989
+			}
+		}
+		region_state:POTC = {
+			create_pop = {
+				culture = brazilian
+				religion = catholic
+				size = 8300
+			}
+			create_pop = {
+				culture = je
+				religion = animist
+				size = 494
 			}
 		}
 	}
 s:STATE_RIO_GRANDE_DO_SUL = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = charruan
 				religion = animist
@@ -24626,8 +26042,6 @@ s:STATE_RIO_GRANDE_DO_SUL = {
 				religion = animist
 				size = 7189
 			}
-		}
-		region_state:GRI = {
 			create_pop = {
 				culture = guarani
 				religion = animist
@@ -24642,21 +26056,17 @@ s:STATE_RIO_GRANDE_DO_SUL = {
 		}
 	}
 s:STATE_RIO_NEGRO = {
-		region_state:H11 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
 				size = 5100
 			}
-		}
-		region_state:PAT = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
 				size = 46350
 			}
-		}
-		region_state:TWT = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
@@ -24868,7 +26278,7 @@ s:STATE_SAKHALIN = {
 	}
 
 s:STATE_SANTA_CATARINA = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = guarani
 				religion = animist
@@ -24877,62 +26287,140 @@ s:STATE_SANTA_CATARINA = {
 		}
 	}
 s:STATE_SANTA_CRUZ = {
-		region_state:AYM = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 6547
+				size = 4706
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 4244
+				size = 3050
 			}
 			create_pop = {
 				culture = aimara
 				religion = animist
-				size = 3637
+				size = 2614
 			}
-		}
-		region_state:N01 = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
-				size = 19860
+				size = 14274
 			}
 			create_pop = {
 				culture = guarani
 				religion = animist
-				size = 8100
+				size = 5822
 			}
 			create_pop = {
 				culture = zamucoan
 				religion = animist
-				size = 6000
+				size = 4313
 			}
 			create_pop = {
 				culture = guarani
 				religion = animist
-				size = 1500
+				size = 1078
 			}
-		}
-		region_state:TWT = {
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 6120
+				size = 4399
+			}
+		}
+		region_state:CCH = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 204
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 133
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 114
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 621
+			}
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 253
+			}
+			create_pop = {
+				culture = zamucoan
+				religion = animist
+				size = 187
+			}
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 47
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 191
+			}
+		}
+		region_state:CRA = {
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1637
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 1061
+			}
+			create_pop = {
+				culture = aimara
+				religion = animist
+				size = 909
+			}
+			create_pop = {
+				culture = amazonian
+				religion = animist
+				size = 4965
+			}
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 2025
+			}
+			create_pop = {
+				culture = zamucoan
+				religion = animist
+				size = 1500
+			}
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 375
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 1530
 			}
 		}
 	}
 s:STATE_SANTA_FE = {
-		region_state:C23 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = charruan
 				religion = animist
 				size = 22397
 			}
-		}
-		region_state:N01 = {
 			create_pop = {
 				culture = guaicuruan
 				religion = animist
@@ -24941,7 +26429,7 @@ s:STATE_SANTA_FE = {
 		}
 	}
 s:STATE_SANTIAGO = {
-		region_state:TWT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
@@ -24978,7 +26466,7 @@ s:STATE_SAN_SALVADOR = {
 		}
 	}
 s:STATE_SAO_PAULO = {
-		region_state:N01 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = guarani
 				religion = animist
@@ -26725,14 +28213,12 @@ s:STATE_SOUTH_ANGOLA = {
 		}
 	}
 s:STATE_SOUTH_ATLANTIC_ISLANDS = {
-		region_state:NM1 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = mande
 				religion = sunni
 				size = 300
 			}
-		}
-		region_state:SH1 = {
 			create_pop = {
 				culture = makua
 				religion = catholic
@@ -26743,15 +28229,11 @@ s:STATE_SOUTH_ATLANTIC_ISLANDS = {
 				religion = catholic
 				size = 3
 			}
-		}
-		region_state:SL1 = {
 			create_pop = {
 				culture = dragon
 				religion = catholic
 				size = 200
 			}
-		}
-		region_state:T24 = {
 			create_pop = {
 				culture = equine
 				religion = animist
@@ -28018,7 +29500,7 @@ s:STATE_TANGANYIKA = {
 		}
 	}
 s:STATE_TARAPACA = {
-		region_state:TWT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = aimara
 				religion = animist
@@ -29139,11 +30621,24 @@ s:STATE_TRIPOLI = {
 		}
 	}
 s:STATE_TUCUMAN = {
-		region_state:TWT = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 23702
+				size = 13763
+			}
+		}
+		region_state:QIM = {
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 2061
+			}
+
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 7878
 			}
 		}
 	}
@@ -30087,21 +31582,38 @@ s:STATE_URMIA = {
 		}
 	}
 s:STATE_URUGUAY = {
-		region_state:C23 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = charruan
 				religion = animist
-				size = 28558
+				size = 24015
 			}
 			create_pop = {
 				culture = guarani
 				religion = animist
-				size = 5999
+				size = 5045
 			}
 			create_pop = {
 				culture = guaicuruan
 				religion = animist
-				size = 7403
+				size = 6225
+			}
+		}
+		region_state:CUAC = {
+			create_pop = {
+				culture = charruan
+				religion = animist
+				size = 4543
+			}
+			create_pop = {
+				culture = guarani
+				religion = animist
+				size = 954
+			}
+			create_pop = {
+				culture = guaicuruan
+				religion = animist
+				size = 1178
 			}
 		}
 	}
@@ -33201,14 +34713,12 @@ s:STATE_ZHILI = {
 		}
 	}
 s:STATE_ZULIA = {
-		region_state:T36 = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = amazonian
 				religion = animist
 				size = 1212
 			}
-		}
-		region_state:N01 = {
 			create_pop = {
 				culture = muisca
 				religion = animist

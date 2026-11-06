@@ -1,6 +1,6 @@
 POPS = {
 	s:STATE_BUENOS_AIRES = {
-		region_state:CUAC = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = charruan
 				religion = animist
@@ -33,8 +33,6 @@ POPS = {
 				pop_type = slaves
 				size = 59
 			}
-		}
-		region_state:MPC = {
 			create_pop = {
 				culture = charruan
 				religion = animist
@@ -471,58 +469,108 @@ POPS = {
 		}
 	}
 	s:STATE_LOS_RIOS = {
-		region_state:MPC = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
-				size = 29842
+				size = 22105
 			}
 			create_pop = {
 				culture = patagonian
 				religion = animist
-				size = 805
+				size = 596
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 7897
+				size = 5850
 			}
 			create_pop = {
 				culture = patagonian
 				religion = animist
-				size = 30647
+				size = 22701
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 7897
+				size = 5850
+			}
+			create_pop = {
+				culture = patagonian
+				religion = animist
+				size = 1105
+			}
+			create_pop = {
+				culture = patagonian
+				religion = animist
+				size = 30
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 293
+			}
+			create_pop = {
+				culture = patagonian
+				religion = animist
+				size = 1135
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 293
 			}
 		}
-		region_state:PHE = {
+		region_state:MPCC = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
-				size = 4421
+				size = 7737
 			}
 			create_pop = {
 				culture = patagonian
 				religion = animist
-				size = 119
+				size = 209
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 1170
+				size = 2047
 			}
 			create_pop = {
 				culture = patagonian
 				religion = animist
-				size = 4540
+				size = 7946
 			}
 			create_pop = {
 				culture = quechua
 				religion = animist
-				size = 1170
+				size = 2047
+			}
+			create_pop = {
+				culture = patagonian
+				religion = animist
+				size = 3316
+			}
+			create_pop = {
+				culture = patagonian
+				religion = animist
+				size = 89
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 877
+			}
+			create_pop = {
+				culture = patagonian
+				religion = animist
+				size = 3405
+			}
+			create_pop = {
+				culture = quechua
+				religion = animist
+				size = 877
 			}
 		}
 	}
@@ -1011,8 +1059,6 @@ POPS = {
 				religion = animist
 				size = 5857
 			}
-		}
-		region_state:TBI = {
 			create_pop = {
 				culture = tupinamba
 				religion = animist
@@ -1131,8 +1177,6 @@ POPS = {
 				religion = animist
 				size = 328
 			}
-		}
-		region_state:TPAC = {
 			create_pop = {
 				culture = tupinamba
 				religion = animist
@@ -1228,7 +1272,7 @@ POPS = {
 		}
 	}
 	s:STATE_PATAGONIA = {
-		region_state:MPC = {
+		region_state:AMZ = {
 			create_pop = {
 				culture = patagonian
 				religion = animist
@@ -1254,8 +1298,6 @@ POPS = {
 				religion = animist
 				size = 1731
 			}
-		}
-		region_state:THL = {
 			create_pop = {
 				culture = patagonian
 				religion = animist

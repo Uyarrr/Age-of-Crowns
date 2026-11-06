@@ -207,7 +207,7 @@ movement_peasant_league = {
 		OR = {
 			has_law_or_variant = law_type:law_serfdom
 			has_law_or_variant = law_type:law_tenant_farmers
-			has_law_or_variant = law_type:law_enclosed_estates
+			has_law = law_type:law_enclosed_estates
 		}
 	}
 	creation_weight = {
@@ -451,7 +451,7 @@ movement_commons = {
 	creation_weight = {
 		value = 100
 		if = {
-			limit = { has_law_or_variant = law_type:law_enclosed_estates }
+			limit = { has_law = law_type:law_enclosed_estates }
 			multiply = 3
 		}
 		if = {
@@ -571,7 +571,7 @@ movement_commons = {
 
 		if = {
 			limit = {
-				owner = { has_law_or_variant = law_type:law_enclosed_estates }
+				owner = { has_law = law_type:law_enclosed_estates }
 			}
 			multiply = {
 				value = 1.5
@@ -601,7 +601,7 @@ movement_commons = {
 	additional_radicalism_factors = {
 		if = {
 			limit = {
-				owner ?= { has_law_or_variant = law_type:law_enclosed_estates }
+				owner ?= { has_law = law_type:law_enclosed_estates }
 			}
 			add = {
 				value = 0.15
@@ -762,7 +762,7 @@ movement_yeomanry = {
 	additional_radicalism_factors = {
 		if = {
 			limit = {
-				owner ?= { has_law_or_variant = law_type:law_enclosed_estates }
+				owner ?= { has_law = law_type:law_enclosed_estates }
 			}
 			add = {
 				value = 0.05
