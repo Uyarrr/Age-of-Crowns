@@ -9,6 +9,7 @@
     is_very_obsolete = { has_technology_researched = war_galley }
 
     modifier = {
+        ship_power_projection_add = 10
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 700
         ship_crew_max_add = 300
@@ -63,6 +64,7 @@ ship_type_mediterranean_galley = {
     is_very_obsolete = { has_technology_researched = galleass }
 
     modifier = {
+        ship_power_projection_add = 15
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 850
         ship_crew_max_add = 350
@@ -119,6 +121,7 @@ ship_type_war_galley = {
     is_very_obsolete = { has_technology_researched = xebec }
 
     modifier = {
+        ship_power_projection_add = 20
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1000
         ship_crew_max_add = 400
@@ -177,6 +180,7 @@ ship_type_galleass = {
     is_very_obsolete = { has_technology_researched = archipelago_frigate }
 
     modifier = {
+        ship_power_projection_add = 25
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1200
         ship_crew_max_add = 450
@@ -236,6 +240,7 @@ ship_type_xebec = {
     is_obsolete = { has_technology_researched = archipelago_frigate }
 
     modifier = {
+        ship_power_projection_add = 30
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1450
         ship_crew_max_add = 500
@@ -292,6 +297,7 @@ ship_type_archipelago_frigate = {
     base_construction_cost = 80
 
     modifier = {
+        ship_power_projection_add = 35
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1700
         ship_crew_max_add = 550

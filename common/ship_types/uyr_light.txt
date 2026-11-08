@@ -10,6 +10,7 @@ ship_type_barque = {
     is_very_obsolete = { has_technology_researched = pinnace }
 
     modifier = {
+        ship_power_projection_add = 35
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 650
         ship_crew_max_add = 350
@@ -62,6 +63,7 @@ ship_type_caravel = {
     is_very_obsolete = { has_technology_researched = frigate }
 
     modifier = {
+        ship_power_projection_add = 45
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 800
         ship_crew_max_add = 400
@@ -115,6 +117,7 @@ ship_type_pinnace = {
     is_very_obsolete = { has_technology_researched = heavy_frigate }
 
     modifier = {
+        ship_power_projection_add = 55
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1000
         ship_crew_max_add = 450
@@ -168,6 +171,7 @@ ship_type_frigate = {
     is_obsolete = { has_technology_researched = heavy_frigate }
 
     modifier = {
+        ship_power_projection_add = 100
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1250
         ship_crew_max_add = 500
@@ -222,6 +226,7 @@ ship_type_heavy_frigate = {
     base_construction_cost = 55
 
     modifier = {
+        ship_power_projection_add = 110
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1550
         ship_crew_max_add = 550
@@ -275,6 +280,7 @@ ship_type_bomb_ketch = {
     base_construction_cost = 70
 
     modifier = {
+        ship_power_projection_add = 100
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1900
         ship_crew_max_add = 600

@@ -9,6 +9,7 @@ ship_type_early_carrack = {
     is_very_obsolete = { has_technology_researched = galleon }
 
     modifier = {
+        ship_power_projection_add = 50
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1400
         ship_crew_max_add = 600
@@ -63,6 +64,7 @@ ship_type_carrack = {
     is_very_obsolete = { has_technology_researched = two_decker }
 
     modifier = {
+        ship_power_projection_add = 60
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1750
         ship_crew_max_add = 700
@@ -118,6 +120,7 @@ ship_type_galleon = {
     is_very_obsolete = { has_technology_researched = three_decker }
 
     modifier = {
+        ship_power_projection_add = 70
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2150
         ship_crew_max_add = 800
@@ -173,6 +176,7 @@ ship_type_war_galleon = {
     is_obsolete = { has_technology_researched = three_decker }
 
     modifier = {
+        ship_power_projection_add = 80
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2600
         ship_crew_max_add = 900
@@ -229,6 +233,7 @@ ship_type_two_decker = {
     can_be_flagship = yes
 
     modifier = {
+        ship_power_projection_add = 90
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 3100
         ship_crew_max_add = 1000
@@ -286,6 +291,7 @@ ship_type_three_decker = {
     can_be_flagship = yes
 
     modifier = {
+        ship_power_projection_add = 100
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 3600
         ship_crew_max_add = 1100
@@ -344,6 +350,7 @@ ship_type_first_rate_ship_of_the_line = {
     can_be_flagship = yes
 
     modifier = {
+        ship_power_projection_add = 110
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 4200
         ship_crew_max_add = 1250
