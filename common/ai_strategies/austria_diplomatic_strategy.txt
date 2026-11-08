@@ -57,7 +57,10 @@
 				}
 			}
 
-			add = 1000
+			add = {
+				value = 1000
+				desc = AOC_AI_DEFEND_HRE_MEMBER
+			}
 		}
 
 		# -------------------------------------------------------------
@@ -80,7 +83,10 @@
 				}
 			}
 
-			add = -1000
+			add = {
+				value = -1000
+				desc = AOC_AI_OPPOSE_HRE_ATTACK
+			}
 		}
 
 		# -------------------------------------------------------------
@@ -102,7 +108,10 @@
 				}
 			}
 
-			add = -500
+			add = {
+				value = -500
+				desc = AOC_AI_HRE_INTERNAL_NEUTRALITY
+			}
 		}
 	}
 

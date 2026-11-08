@@ -1,0 +1,61 @@
+# Root = country evaluating a treaty; scope:other_country = treaty partner.
+# A modest shared score keeps religion relevant without overriding attitude,
+# relations, infamy, treaty fairness, or military interests.
+aoc_faith_treaty_acceptance = {
+	value = 0
+
+	if = {
+		limit = {
+			root.religion = scope:other_country.religion
+			NOT = { country_has_state_religion = rel:atheist }
+		}
+		add = {
+			value = 16
+			desc = AOC_DIPLOMACY_SHARED_FAITH
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					religion = { has_discrimination_trait = heritage_christian }
+					scope:other_country = { religion = { has_discrimination_trait = heritage_christian } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_islamic }
+					scope:other_country = { religion = { has_discrimination_trait = heritage_islamic } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_dharmic }
+					scope:other_country = { religion = { has_discrimination_trait = heritage_dharmic } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_taoic }
+					scope:other_country = { religion = { has_discrimination_trait = heritage_taoic } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_mazdan }
+					scope:other_country = { religion = { has_discrimination_trait = heritage_mazdan } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_gnostic }
+					scope:other_country = { religion = { has_discrimination_trait = heritage_gnostic } }
+				}
+			}
+		}
+		add = {
+			value = 5
+			desc = AOC_DIPLOMACY_RELATED_FAITH
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { country_has_state_religion = rel:atheist }
+			scope:other_country = { NOT = { country_has_state_religion = rel:atheist } }
+		}
+		add = {
+			value = -8
+			desc = AOC_DIPLOMACY_DIFFERENT_FAITH
+		}
+	}
+}

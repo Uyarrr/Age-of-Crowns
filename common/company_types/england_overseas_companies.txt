@@ -2,14 +2,14 @@ company_aoc_england_east_india = {
  icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_eic.dds"
  background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
  flavored_company = yes
- building_types = { building_textile_mill building_cotton_plantation building_tea_garden }
+ building_types = { building_cotton_plantation building_dye_plantation }
  extension_building_types = { building_port building_shipyard }
- possible_prestige_goods = { prestige_good_aoc_england_company_calico }
+ possible_prestige_goods = { prestige_good_calico }
  potential = { aoc_england_overseas_country = yes }
  attainable = { has_technology_researched = colonization }
  possible = { has_variable = aoc_england_east_india_chartered }
  prosperity_modifier = { country_convoys_capacity_mult = 0.10
- building_textile_mill_throughput_add = 0.10 }
+ building_cotton_plantation_throughput_add = 0.10 }
 }
 
 company_aoc_england_hudson_bay = {
@@ -18,7 +18,7 @@ company_aoc_england_hudson_bay = {
  flavored_company = yes
  building_types = { building_hunting_lodge building_logging_camp }
  extension_building_types = { building_port building_textile_mill }
- possible_prestige_goods = { prestige_good_aoc_england_company_furs }
+ possible_prestige_goods = { prestige_good_beaver_fur }
  potential = { aoc_england_overseas_country = yes }
  attainable = { has_technology_researched = colonization }
  possible = { has_variable = aoc_england_hudson_bay_chartered }

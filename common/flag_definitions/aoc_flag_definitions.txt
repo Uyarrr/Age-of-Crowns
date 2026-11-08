@@ -1155,3 +1155,20 @@ WUR = { # Wurttemberg
 		}
 	}		
 }
+
+BOS = { # Bosnia
+	flag_definition = {
+		coa = BOS
+		priority = 1
+	}
+	flag_definition = {
+		coa = BOS_late
+		priority = 2
+		trigger = {
+			OR = {
+				coa_def_kingdom_or_higher_trigger = yes
+				coa_def_reformation_age_4_trigger = yes
+			}
+		}
+	}
+}

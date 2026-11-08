@@ -1,0 +1,19 @@
+# Country scope: copy SOURCE's current state religion and primary cultures.
+# Example: aoc_copy_country_identity_effect = { SOURCE = scope:the_sponsor }
+# Existing primary cultures absent from SOURCE are removed; pops are unchanged.
+aoc_copy_country_identity_effect = {
+ save_scope_as = aoc_identity_target
+ $SOURCE$ = {
+  religion = { save_temporary_scope_as = aoc_identity_religion }
+  every_primary_culture = {
+   limit = { NOT = { is_primary_culture_of = scope:aoc_identity_target } }
+   save_temporary_scope_as = aoc_identity_culture
+   scope:aoc_identity_target = { add_primary_culture = scope:aoc_identity_culture }
+  }
+ }
+ set_state_religion = scope:aoc_identity_religion
+ every_primary_culture = {
+  limit = { NOT = { is_primary_culture_of = $SOURCE$ } }
+  scope:aoc_identity_target = { remove_primary_culture = prev }
+ }
+}

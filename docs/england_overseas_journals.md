@@ -56,13 +56,16 @@ tracked on the sponsor so annexing and re-creating a subject cannot farm buildin
 
 BIC and HBC are chartered-company subjects of the sponsor. Separate unique company
 types belong to the English/British sponsor, link to their territorial country with
-the vanilla `add_owned_country` effect, and own the initial colonial textile mills
+the vanilla `add_owned_country` effect, and own the initial cotton plantations
 or hunting lodges. This follows vanilla Britain's company/country ownership model.
-Their prestige goods are Company Calicoes (`clothes`) and Hudson's Bay Beaver
-Pelts (`fur`), using existing art and the normal company prestige-goods mechanics.
+The East India Company can produce Calico (`fabric`), and Hudson's Bay can
+produce the existing Beaver Fur prestige good (`fur`).
 
-Initial endowments: Cape two ranch levels; BIC two company-owned textile levels
-and two cotton plantation levels; AST two ranch levels; NZL two logging levels;
+The East India Company also operates dye plantations, and Hudson's Bay operates
+logging camps; neither produces an additional prestige good.
+
+Initial endowments: Cape two ranch levels; BIC two textile levels
+and two company-owned cotton plantation levels; AST two ranch levels; NZL two logging levels;
 HBC three company-owned hunting-lodge levels. Coastal possessions receive a basic
 port. Population is developed through normal gameplay rather than fabricated pops.
 BIC receives claims to Gujarat, Bombay, Madras, Circars, and East and West Bengal;

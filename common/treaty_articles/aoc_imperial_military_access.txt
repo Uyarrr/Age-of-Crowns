@@ -1,0 +1,41 @@
+# A zero-influence, mutual access article for the HRE leader and each member.
+# The engine grants land access through the hardcoded is_military_access flag.
+aoc_imperial_military_access = {
+	kind = mutual
+	cost = 0
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_access_treaties.dds"
+
+	flags = {
+		is_military_access
+	}
+
+	usage_limit = once_per_treaty
+
+	requirement_to_maintain = {
+		trigger = {
+			scope:first_country = {
+				is_in_same_power_bloc = scope:second_country
+				power_bloc ?= { has_identity = identity:identity_holy_roman_empire }
+			}
+			OR = {
+				scope:first_country = { is_power_bloc_leader = yes }
+				scope:second_country = { is_power_bloc_leader = yes }
+			}
+		}
+	}
+
+	visible = {}
+	possible = {}
+	can_propose = { always = no }
+	can_withdraw = { always = no }
+	on_entry_into_force = {}
+	on_withdrawal = {}
+	on_break = {}
+
+	ai = {
+		treaty_categories = { none }
+		evaluation_chance = { value = 0 }
+		article_ai_usage = { none }
+		inherent_accept_score = { value = 0 }
+	}
+}

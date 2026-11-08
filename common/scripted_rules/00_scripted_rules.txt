@@ -124,6 +124,15 @@ can_join_side_in_diplomatic_play = {
 			strategic_region = scope:region
 			value >= interest_tier_effect_can_join_diplomatic_plays_min_tier
 		}
+		# The HRE leader can intervene when an outsider attacks a member,
+		# even if it has no declared interest in that member's region.
+		AND = {
+			is_power_bloc_leader = yes
+			power_bloc ?= { has_identity = identity:identity_holy_roman_empire }
+			is_in_same_power_bloc = scope:target_country
+			NOT = { is_in_same_power_bloc = scope:enemy_country }
+			scope:target_country = { scope:initiator != this }
+		}
 		has_treaty_alliance_with = { TARGET = scope:target_country }
 		AND = {
 			has_treaty_defensive_pact_with = { TARGET = scope:target_country }

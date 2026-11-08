@@ -1,0 +1,29 @@
+# Startup also covers existing saves; monthly upkeep handles new members and
+# changes of emperor without scanning every country pair.
+on_game_started = {
+	on_actions = { aoc_initialize_imperial_military_access }
+}
+
+aoc_initialize_imperial_military_access = {
+	effect = {
+		every_country = {
+			limit = {
+				is_power_bloc_leader = yes
+				power_bloc ?= { has_identity = identity:identity_holy_roman_empire }
+			}
+			aoc_maintain_imperial_military_access = yes
+		}
+	}
+}
+
+on_monthly_pulse_country = {
+	on_actions = { aoc_monthly_imperial_military_access }
+}
+
+aoc_monthly_imperial_military_access = {
+	trigger = {
+		is_power_bloc_leader = yes
+		power_bloc ?= { has_identity = identity:identity_holy_roman_empire }
+	}
+	effect = { aoc_maintain_imperial_military_access = yes }
+}

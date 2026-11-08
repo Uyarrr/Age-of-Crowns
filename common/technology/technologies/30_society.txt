@@ -853,7 +853,7 @@ colonization = {
 
 	modifier = {
 		state_colony_growth_creation_factor = 0.01
-		state_colony_growth_speed_mult = -0.35
+		state_colony_growth_speed_mult = -0.30
 	}
 
 	unlocking_technologies = {
@@ -881,7 +881,7 @@ colonization = {
 }
 
 confederal_union = {
-	#Unlocks Colonial Laws
+	#Confederal Union Law
 	era = era_3
 	texture = "gfx/interface/icons/law_icons/confederal_union.dds"
 	category = society

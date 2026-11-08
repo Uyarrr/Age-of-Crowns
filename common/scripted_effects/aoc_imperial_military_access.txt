@@ -1,0 +1,31 @@
+# Root = current HRE leader. Creates only missing leader/member access pacts.
+aoc_maintain_imperial_military_access = {
+	if = {
+		limit = {
+			is_power_bloc_leader = yes
+			power_bloc ?= { has_identity = identity:identity_holy_roman_empire }
+		}
+		power_bloc = {
+			every_power_bloc_member = {
+				limit = {
+					NOT = { this = root }
+					NOT = {
+						any_scope_treaty = {
+							binds = root
+							any_scope_article = { has_type = aoc_imperial_military_access }
+						}
+					}
+				}
+				create_treaty = {
+					first_country = root
+					second_country = this
+					is_draft = no
+					binding_period = { years = 1 }
+					articles_to_create = {
+						{ article = aoc_imperial_military_access }
+					}
+				}
+			}
+		}
+	}
+}

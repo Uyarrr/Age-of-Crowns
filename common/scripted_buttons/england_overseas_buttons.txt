@@ -102,6 +102,7 @@ aoc_england_charter_east_india = {
    set_state_owner = c:BIC
   }
 
+ c:BIC = { aoc_copy_country_identity_effect = { SOURCE = scope:aoc_england_overlord } }
  set_variable = aoc_england_east_india_chartered
  aoc_england_charter_company_slots_effect = yes
  if = { limit = { NOT = { has_company = company_type:company_aoc_england_east_india } } add_company = company_type:company_aoc_england_east_india }
@@ -113,8 +114,8 @@ aoc_england_charter_east_india = {
     root = { set_variable = aoc_england_east_india_endowed }
     set_variable = aoc_england_east_india_endowed
     capital = {
-     create_building = { building = building_textile_mill add_ownership = { company = { type = company_aoc_england_east_india country = scope:aoc_england_overlord levels = 2 } } reserves = 0.5 }
-     create_building = { building = building_cotton_plantation level = 2 reserves = 0.5 }
+     create_building = { building = building_textile_mill level = 2 reserves = 0.5 }
+     create_building = { building = building_cotton_plantation add_ownership = { company = { type = company_aoc_england_east_india country = scope:aoc_england_overlord levels = 2 } } reserves = 0.5 }
     }
     random_scope_state = {
      limit = { is_coastal = yes }
@@ -300,6 +301,7 @@ aoc_england_charter_hudson_bay = {
    set_state_owner = c:HBC
   }
 
+ c:HBC = { aoc_copy_country_identity_effect = { SOURCE = scope:aoc_england_overlord } }
  set_variable = aoc_england_hudson_bay_chartered
  aoc_england_charter_company_slots_effect = yes
  if = { limit = { NOT = { has_company = company_type:company_aoc_england_hudson_bay } } add_company = company_type:company_aoc_england_hudson_bay }
