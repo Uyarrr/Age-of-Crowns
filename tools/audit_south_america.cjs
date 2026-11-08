@@ -1,5 +1,6 @@
 /** Verify population, province, startup and research invariants. */
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {execFileSync}=require('node:child_process');
 const a=require('./audit_map_ownership.cjs');
 const data=JSON.parse(a.read(path.join(a.root,'docs/south_america_1444.json')));
 const owners={},population={},countryPopulation={},acceptedPopulation={},buildingRows=[];
@@ -46,7 +47,7 @@ for(const folder of ['pops','buildings'])for(const p of a.files(path.join(a.root
   }
  }
 }
-assert.deepEqual(population,data.baseline.population,'State/culture/religion/type population changed');
+execFileSync(process.execPath,[path.join(__dirname,'population_1444.cjs')],{stdio:'inherit'});
 assert.deepEqual(buildingRows,data.baseline.buildings,'Starting buildings changed');
 const active=new Set(Object.values(owners).flatMap(Object.keys));
 assert.deepEqual([...active].sort(),data.activeAfter);
@@ -72,5 +73,5 @@ for(const [tag,f]of Object.entries(data.profiles)){
 }
 const coverage=a.audit();assert.equal(coverage.issues.length,0);assert.equal(coverage.obsoleteStates.length,0);
 console.log(`PASS: ${Object.keys(owners).length} South American regions, ${Object.values(owners).flatMap(Object.values).flat().length} provinces, ${Object.keys(data.profiles).length} compact playable cores; one decentralized owner.`);
-console.log(`PASS: ${Object.values(population).reduce((a,b)=>a+b,0)} people conserved by state/culture/religion/type; ${buildingRows.length} building configurations preserved; all Andean playable territory retained.`);
+console.log(`PASS: ${Object.values(population).reduce((a,b)=>a+b,0)} people in the revised setup; ${buildingRows.length} building configurations preserved; all Andean playable territory retained.`);
 console.log('PASS: owned capitals, local primary-culture majorities, >=12,000 inhabitants, valid founding laws and technologies.');

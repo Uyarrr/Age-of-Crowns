@@ -1,0 +1,167 @@
+aoc_indigenous_canarian = {
+	color = { 196 150 72 }
+	religion = animist
+	heritage = heritage_berber
+	language = language_berber
+	traditions = { }
+	male_common_first_names = { ber_Abayghur ber_Abazza ber_Acku ber_Adal ber_Adergazuz ber_Adum ber_Agama ber_Agellid ber_Ahamatu ber_Akawel ber_Akorakor ber_Amayas ber_Amder ber_Amellal ber_Amenzu ber_Amma ber_Amri ber_Antaken ber_Aqqasen ber_Aras ber_Asirem ber_Awlagh ber_Awragh ber_Axamuk }
+	female_common_first_names = { ber_Aazzi ber_Adjan ber_Aduda ber_Aldjiya ber_Amghnna ber_Anya ber_Bakka ber_Bibya ber_Cabha ber_Cuca ber_Dassin ber_Dassine ber_Dhabba ber_Dihya ber_Dimya ber_Faghissa ber_Fariza ber_Ferada ber_Ferrudja ber_Gedduda ber_Ghenima ber_Ghida ber_Gwejda ber_Hadeja }
+	noble_last_names = {
+		el_Krim
+		Al-Khattabi
+	}
+	common_last_names = { dyn_ber_Aarab dyn_ber_Abdel dyn_ber_Abdeli dyn_ber_Abdellaoui dyn_ber_Abdo dyn_ber_Abdou dyn_ber_Abid dyn_ber_Abou dyn_ber_Achour dyn_ber_Adam dyn_ber_Ahmed dyn_ber_Aissa dyn_ber_Aissaoui dyn_ber_Ait dyn_ber_Alami dyn_ber_Alaoui dyn_ber_Ali dyn_ber_Allali dyn_ber_Amara dyn_ber_Amari dyn_ber_Ameur dyn_ber_Amine dyn_ber_Amrani dyn_ber_Amraoui }
+	ethnicities = {
+		1 = arab
+	}
+	graphics = arabic
+}
+
+aoc_romaniote = {
+	color = { 114 156 180 }
+	religion = jewish
+	heritage = heritage_sephardic
+	language = language_greek
+	traditions = { tradition_israelite tradition_rumelian }
+	male_common_first_names = { he_Aaron he_Abraham he_Achaziah he_Aderet he_Adin he_Adir he_Adiv he_Admon he_Adon he_Adriel he_Aharon he_Aitan he_Aizik he_Alon he_Amichal he_Amikam he_Amnon he_Amon he_Amram he_Arad he_Ardon he_Ari he_Ariav he_Arnon }
+	female_common_first_names = { he_Abira he_Abra he_Adah he_Aderes he_Adiella he_Adina he_Adira he_Agava he_Aharona he_Ahava he_Ahuva he_Alana he_Aleeza he_Aliza he_Alizah he_Alumit he_Amalyah he_Amita he_Arella he_Ariel he_Ariza he_Arnice he_Ash he_Ashira }
+	noble_last_names = {
+		Abrabanel
+		Camondo
+		Curiel
+		De_Leon
+		Sassoon
+	}
+	common_last_names={
+		Banai
+		Barak
+		Ben_Ami
+		Benveniste
+		Canetti
+		Cantor
+		Cardoso
+		Cohen
+		Disraeli
+		Gaon
+		Golan
+		Haddad
+		Halevi
+		Levy
+		Maimon
+		Mizrachi
+		Montefiore
+		Peretz
+		Rafaeli
+		Saban
+		Sebag
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+aoc_eastern_jewish = {
+	color = { 177 143 78 }
+	religion = jewish
+	heritage = heritage_sephardic
+	language = language_arabic
+	traditions = { tradition_israelite }
+	male_common_first_names = { he_Aaron he_Abraham he_Achaziah he_Aderet he_Adin he_Adir he_Adiv he_Admon he_Adon he_Adriel he_Aharon he_Aitan he_Aizik he_Alon he_Amichal he_Amikam he_Amnon he_Amon he_Amram he_Arad he_Ardon he_Ari he_Ariav he_Arnon }
+	female_common_first_names = { he_Abira he_Abra he_Adah he_Aderes he_Adiella he_Adina he_Adira he_Agava he_Aharona he_Ahava he_Ahuva he_Alana he_Aleeza he_Aliza he_Alizah he_Alumit he_Amalyah he_Amita he_Arella he_Ariel he_Ariza he_Arnice he_Ash he_Ashira }
+	noble_last_names = {
+		Abrabanel
+		Camondo
+		Curiel
+		De_Leon
+		Sassoon
+	}
+	common_last_names={
+		Banai
+		Barak
+		Ben_Ami
+		Benveniste
+		Canetti
+		Cantor
+		Cardoso
+		Cohen
+		Disraeli
+		Gaon
+		Golan
+		Haddad
+		Halevi
+		Levy
+		Maimon
+		Mizrachi
+		Montefiore
+		Peretz
+		Rafaeli
+		Saban
+		Sebag
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+aoc_jurchen = {
+	color = { 189 161 77 }
+	religion = animist
+	heritage = heritage_manchu
+	language = language_jurchenic
+	traditions = { tradition_sinosphere }
+	obsessions = {
+		tea
+	}
+	male_common_first_names = { mnc_Aguda mnc_Ahacu mnc_Atai mnc_Bahai mnc_Baindari mnc_Bugan mnc_Bujantai mnc_BukU_ri mnc_Buyan mnc_Cinggiyanu mnc_Cirgani mnc_Cukungge mnc_CungS_an mnc_Darhan mnc_Fanca mnc_FiyanggU_ mnc_Fuman mnc_Giocangga mnc_Hanpu mnc_Helibo mnc_Hurhan mnc_Jintaiji mnc_Kesina mnc_Limanchu }
+	female_common_first_names = {
+		Abahai
+		Huixing
+		Linggui
+		Quejing
+		Wanrong
+		Wengjing
+		Xingzhen
+	}
+	noble_last_names = { An Cheng Chun Fu Gong Guo He Heng Hui Jingjin Keqin LiLu Ning Qian Rong Rui Shen Shuncheng Su Wen Xian Xun Yi Ying }
+	common_last_names = { dyn_mnc_Aangang dyn_mnc_Acigecalr dyn_mnc_Aha_Gioro dyn_mnc_Aihui dyn_mnc_Aisin_Gioro dyn_mnc_Aiyi dyn_mnc_Aiyos dyn_mnc_Akjan dyn_mnc_Ala dyn_mnc_Alai dyn_mnc_Alar dyn_mnc_Albaki dyn_mnc_Altanemok dyn_mnc_Alte dyn_mnc_Amuharnu dyn_mnc_Amunibutas dyn_mnc_Amuru dyn_mnc_Andara dyn_mnc_Angiya dyn_mnc_Aogiya dyn_mnc_Aora dyn_mnc_Aoratosin dyn_mnc_Arabiancian dyn_mnc_Arakcou }
+	ethnicities = {
+		1 = asian
+	}
+	graphics = east_asian
+}
+
+aoc_chimu = {
+	color = { 184 129 84 }
+	religion = aoc_andean
+	heritage = heritage_andean
+	language = language_quechuan
+	traditions = { }
+	male_common_first_names = { qu_Anquimarca qu_Anta-Accla qu_Apo qu_Apu qu_Atahualpa qu_Atoc qu_Atoc-Sopa qu_Atoc-Suqui qu_Auqui-Huaman qu_Canchari qu_Capac-Tupac qu_Cariapata qu_Cayo-Topa qu_Chalcuchima qu_Challco qu_Chiaquitinta qu_Chiguan-Topa qu_Chilche }
+	female_common_first_names = { qu_Aca qu_Anas qu_Anclla qu_Anta qu_Chimpu qu_Choque qu_Chumbi qu_Coca qu_Collque qu_Cuillor qu_Cura qu_Curi qu_Cusi qu_Huaco qu_Huarcay qu_Inguill qu_Mama qu_Marca }
+	noble_last_names = {
+		Collahuazo
+		Duchicela
+		Poma
+		Quispe
+		Santa_Cruz
+	}
+	common_last_names = { dyn_qu_Achachau dyn_qu_Alca dyn_qu_Allauca dyn_qu_Allcca dyn_qu_Allccarima dyn_qu_Alqa dyn_qu_Amary dyn_qu_Anhuaman dyn_qu_Aucapuca dyn_qu_Auquitayasi dyn_qu_Cahua dyn_qu_Caipa dyn_qu_Callanaupa dyn_qu_Cancha dyn_qu_Canchon dyn_qu_Carhuanina dyn_qu_Carihuasari dyn_qu_Ccahua }
+	ethnicities = {
+		1 = native_american
+	}
+	graphics = decentralised_americas
+}
+aoc_beta_israel = {
+	color = { 163 113 177 }
+	religion = jewish
+	heritage = heritage_abyssinian
+	language = language_amharic
+	traditions = { tradition_israelite }
+	male_common_first_names = { he_Aaron he_Abraham he_Daniel he_David he_Eliyahu he_Ezra }
+	female_common_first_names = { he_Adah he_Ariel he_Miriam }
+	noble_last_names = { he_Baruch he_Dayan }
+	common_last_names = { he_Baruch he_Dayan }
+	ethnicities = { 1 = african }
+}

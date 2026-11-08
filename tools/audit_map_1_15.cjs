@@ -2,6 +2,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { execFileSync } = require('node:child_process');
 const { audit, parse, children, scalar, words, canonical, read, files, root } = require('./audit_map_ownership.cjs');
 const { historyTotals } = require('./migrate_map_1_15.cjs');
 const manifest = JSON.parse(read(path.join(root, 'docs/map_1_15_migration.json')));
@@ -49,7 +50,7 @@ for (const folder of ['pops', 'buildings']) {
     }
   }
 }
-assert.deepEqual(historyTotals('pops'), manifest.populationTotals, 'Population totals changed');
+execFileSync(process.execPath, [path.join(__dirname, 'population_1444.cjs')], { stdio: 'inherit' });
 assert.deepEqual(historyTotals('buildings'), manifest.buildingTotals, 'Building configurations changed');
 for (const filename of ['aoc_states_resource_potential.txt', 'aoc_states_agricultural_potential.txt']) {
   const seen = new Set();
@@ -89,5 +90,5 @@ for (const folder of ['country_creation', 'country_formation']) for (const p of 
 }
 console.log(`PASS: ${result.landStates} land states, ${result.assignedProvinces} provinces, unique complete coverage.`);
 console.log(`PASS: exact 1444 ownership in ${Object.keys(actual).length} migrated states; valid owners and migrated capitals.`);
-console.log(`PASS: ${Object.values(manifest.populationTotals).reduce((a, b) => a + b, 0)} population and ${Object.values(manifest.buildingTotals).reduce((a, b) => a + b, 0)} building blocks preserved.`);
+console.log(`PASS: ${Object.values(manifest.buildingTotals).reduce((a, b) => a + b, 0)} building blocks preserved.`);
 console.log('PASS: migrated population/building scopes, resource history, formation/release lists, and no retired state references.');

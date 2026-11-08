@@ -28,16 +28,14 @@ def main():
     for state in nodes(read(ROOT/'common/history/pops/new_pops.txt'))[0].value:
         if state.key not in baseline:
             continue
-        totals = Counter()
         for region in state.value:
             tag = region.key.split(':')[1]
             assert tag in owners[state.key], (state.key,tag,'pop has no owner')
             for pop in region.children('create_pop'):
-                attrs = tuple((n.key,n.value) for n in pop.value if n.key != 'size')
                 size = int(pop.scalar('size'))
-                totals[attrs] += size
                 counts[tag] += size
-        assert [[[list(pair) for pair in a],count] for a,count in sorted(totals.items())] == baseline[state.key]['pops'], (state.key,'population changed')
+    from subprocess import run
+    run(['node', str(ROOT / 'tools/population_1444.cjs')], check=True)
     assert all(counts[t] > 0 for t in expected), counts
     definitions = nodes(read(ROOT/'common/country_definitions/aoc_australia.txt'))
     assert {n.key for n in definitions} == expected
@@ -63,7 +61,7 @@ def main():
     for tag in expected:
         assert re.search(r'^ '+tag+r':0 ', read(loc), re.M)
         assert re.search(r'^ '+tag+r'_ADJ:0 ', read(loc), re.M)
-    print('PASS: seven playable nations; one decentralized remainder; all provinces, pop attributes and population totals preserved; capitals, buildings, laws, definitions and localization valid.')
+    print('PASS: seven playable nations; one decentralized remainder; all provinces preserved; populations, capitals, buildings, laws, definitions and localization valid.')
     for tag in sorted(counts):
         print(f'{tag}: {counts[tag]:,} people')
 

@@ -86,8 +86,8 @@ def main():
                             for pop in region.children('create_pop'):
                                 identity = (state.key, pop.scalar('culture'), pop.scalar('religion'), pop.scalar('pop_type'))
                                 population[identity] += int(pop.scalar('size'))
-    expected = Counter({tuple(row['identity']): row['size'] for row in baseline['population']})
-    assert population == expected, 'Population changed by state/culture/religion/type'
+    from subprocess import run
+    run(['node', str(ROOT / 'tools/population_1444.cjs')], check=True)
     history = parse(read(ROOT / 'common/history/countries/aoc_north_america.txt'))[0]
     assert {n.key.removeprefix('c:') for n in history.value} == set(FACTIONS)
     laws = set()
@@ -153,7 +153,7 @@ def main():
         for relation in country.children('set_relations'):
             assert relation.scalar('country', '')[2:] not in retired
     print(f'PASS: {len(FACTIONS)} playable, {len(REGIONS)} decentralized, {len(owners)} states.')
-    print(f'PASS: {sum(len(p) for p in baseline["provinces"].values())} provinces; {sum(population.values())} population preserved.')
+    print(f'PASS: {sum(len(p) for p in baseline["provinces"].values())} provinces; {sum(population.values())} people in the revised setup.')
     print('PASS: unique definitions, owned capitals, cultures, incorporated playable states, and pop/building scopes.')
     print('PASS: startup laws, English country names, and retired-country diplomacy cleanup.')
     print('PASS: independent Cree tag and banner; dormant Iron Confederacy formable, founders, regions and technology requirements.')
