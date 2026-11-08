@@ -103,6 +103,7 @@ aoc_england_charter_east_india = {
   }
 
  set_variable = aoc_england_east_india_chartered
+ aoc_england_charter_company_slots_effect = yes
  if = { limit = { NOT = { has_company = company_type:company_aoc_england_east_india } } add_company = company_type:company_aoc_england_east_india }
  company:company_aoc_england_east_india = { add_owned_country = c:BIC }
 
@@ -285,6 +286,7 @@ aoc_england_charter_hudson_bay = {
     state = scope:aoc_england_charter_state
     on_created = {
      aoc_england_overseas_identity_effect = yes
+     add_modifier = { name = aoc_colonial_settlement_protection years = 15 }
      set_country_type = company
      activate_law = law_type:law_presidential_republic
      activate_law = law_type:law_oligarchy
@@ -299,6 +301,7 @@ aoc_england_charter_hudson_bay = {
   }
 
  set_variable = aoc_england_hudson_bay_chartered
+ aoc_england_charter_company_slots_effect = yes
  if = { limit = { NOT = { has_company = company_type:company_aoc_england_hudson_bay } } add_company = company_type:company_aoc_england_hudson_bay }
  company:company_aoc_england_hudson_bay = { add_owned_country = c:HBC }
 

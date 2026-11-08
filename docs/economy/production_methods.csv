@@ -59,8 +59,8 @@ pm_building_chancery_gold_1,common/production_methods/uyr_optional_luxury_and_mi
 pm_building_chancery_gold_2,common/production_methods/uyr_optional_luxury_and_minting.txt,300.0,0,-300.0,-345.0,0,production_age_4,input gold 3
 pm_building_chancery_main_1,common/production_methods/chancery_pm.txt,0,0,0,0.0,500.0,,
 pm_building_chancery_main_2,common/production_methods/chancery_pm.txt,240.0,0,-240.0,-276.0,500.0,formalized_administration,input paper 8
-pm_building_chancery_main_3,common/production_methods/chancery_pm.txt,300.0,0,-300.0,-345.0,500.0,printing_press,input paper 10
-pm_building_chancery_main_4,common/production_methods/chancery_pm.txt,360.0,0,-360.0,-414.0,500.0,administrative_suzerainty,input paper 12
+pm_building_chancery_main_3,common/production_methods/chancery_pm.txt,300.0,0,-300.0,-345.0,500.0,printing_press,input paper 7; input book 2
+pm_building_chancery_main_4,common/production_methods/chancery_pm.txt,345.0,0,-345.0,-396.75,500.0,administrative_suzerainty,input paper 7; input book 3
 pm_building_chancery_silver_0,common/production_methods/chancery_pm.txt,0,0,0,0.0,0,,
 pm_building_chancery_silver_1,common/production_methods/chancery_pm.txt,180.0,0,-180.0,-207.0,0,,input silver 3
 pm_building_chancery_silver_2,common/production_methods/chancery_pm.txt,300.0,0,-300.0,-345.0,0,formalized_administration,input silver 5
@@ -234,9 +234,9 @@ pm_building_pottery_workshop_main_1,common/production_methods/pottery_workshop_p
 pm_building_pottery_workshop_main_2,common/production_methods/pottery_workshop_pm.txt,490.0,2250.0,1760.0,1349.0,3000.0,production_age_2,input wood 5; input stone 5; input tools 3; input tin 3; output pottery 75
 pm_building_pottery_workshop_main_3,common/production_methods/pottery_workshop_pm.txt,790.0,3150.0,2360.0,1769.0,3000.0,production_age_3,input coal 6; input stone 7; input tools 5; input tin 5; output pottery 105
 pm_building_pottery_workshop_main_4,common/production_methods/pottery_workshop_pm.txt,1270.0,4350.0,3080.0,2237.0,3000.0,pottery_manufactories,input coal 10; input stone 11; input tools 8; input tin 8; output pottery 145
-pm_building_printing_mill_main_1,common/production_methods/printing_mill_pm.txt,200.0,1350.0,1150.0,917.5,3000.0,,input leather 1; input paper 3; input dye 2; output book 45
-pm_building_printing_mill_main_2,common/production_methods/printing_mill_pm.txt,510.0,2100.0,1590.0,1198.5,3000.0,production_age_2,input leather 1; input paper 8; input dye 3; input lead 3; output book 70
-pm_building_printing_mill_main_3,common/production_methods/printing_mill_pm.txt,800.0,3750.0,2950.0,2267.5,3000.0,production_age_3,input leather 5; input paper 11; input dye 5; input lead 3; output book 125
+pm_building_printing_mill_main_1,common/production_methods/printing_mill_pm.txt,870.0,2025.0,1155.0,720.75,3000.0,,input leather 3; input paper 22; input dye 3; output book 45
+pm_building_printing_mill_main_2,common/production_methods/printing_mill_pm.txt,1560.0,3150.0,1590.0,883.5,3000.0,production_age_2,input leather 4; input paper 36; input dye 5; input lead 4; output book 70
+pm_building_printing_mill_main_3,common/production_methods/printing_mill_pm.txt,2670.0,5625.0,2955.0,1710.75,3000.0,production_age_3,input leather 10; input paper 63; input dye 8; input lead 4; output book 125
 pm_building_rice_farm_main_1,common/production_methods/farms_pm.txt,160.0,1800.0,1640.0,1346.0,6000.0,,output grain 90; input tools 4
 pm_building_rice_farm_main_2,common/production_methods/farms_pm.txt,680.0,3000.0,2320.0,1768.0,6000.0,manured_fields,input livestock 17; output grain 150
 pm_building_rice_farm_main_3,common/production_methods/farms_pm.txt,1240.0,4400.0,3160.0,2314.0,6000.0,potatoes,input livestock 31; output grain 220
@@ -248,7 +248,7 @@ pm_building_road_main_4,common/production_methods/road_pm.txt,100.0,450.0,350.0,
 pm_building_road_transport_0,common/production_methods/road_pm.txt,0,0,0,0.0,0,,
 pm_building_road_transport_1,common/production_methods/road_pm.txt,130.0,300.0,170.0,105.5,0,pack_animal_transport,input horse 2; input leather 1; output transportation 10
 pm_building_road_transport_2,common/production_methods/road_pm.txt,260.0,600.0,340.0,211.0,0,wagon_transport,input horse 2; input leather 2; input wood 5; output transportation 20
-pm_building_royal_court_main_1,common/production_methods/royal_court_pm.txt,1200.0,0,-1200.0,-1380.0,1000.0,,input paper 15; input book 5; input luxury_clothes 5; input luxury_furniture 5
+pm_building_royal_court_main_1,common/production_methods/royal_court_pm.txt,1275.0,0,-1275.0,-1466.25,1000.0,,input paper 15; input book 5; input luxury_clothes 5; input luxury_furniture 5
 pm_building_saffron_field_main_1,common/production_methods/saffron_farm_pm.txt,80.0,900.0,820.0,673.0,3000.0,,output saffron 15; input tools 2
 pm_building_saffron_field_main_2,common/production_methods/saffron_farm_pm.txt,320.0,1500.0,1180.0,907.0,3000.0,production_age_2,input tools 8; output saffron 25
 pm_building_saffron_field_main_3,common/production_methods/saffron_farm_pm.txt,520.0,2100.0,1580.0,1187.0,3000.0,production_age_3,input tools 13; output saffron 35
@@ -324,7 +324,7 @@ pm_building_trade_center_trade_3,common/production_methods/trade_pm.txt,250.0,0,
 pm_building_trade_center_trade_4,common/production_methods/trade_pm.txt,300.0,0,-300.0,-345.0,0,behaviorism,input merchant_marine 6
 pm_building_university_main_1,common/production_methods/university_pm.txt,250.0,0,-250.0,-287.5,500.0,,input paper 5; input bronze 2
 pm_building_university_main_2,common/production_methods/university_pm.txt,440.0,0,-440.0,-506.0,500.0,dissemination_of_knowledge,input paper 8; input bronze 4
-pm_building_university_main_3,common/production_methods/university_pm.txt,570.0,0,-570.0,-655.5,500.0,behaviorism,input book 9; input bronze 6
+pm_building_university_main_3,common/production_methods/university_pm.txt,555.0,0,-555.0,-638.25,500.0,behaviorism,input book 9; input bronze 3
 pm_building_village_main_1,common/production_methods/village_pm.txt,60.0,300.0,240.0,186.0,1000.0,,output bread 10; input grain 2; input wood 1
 pm_building_village_main_2,common/production_methods/village_pm.txt,60.0,300.0,240.0,186.0,1000.0,,output clothes 10; input fabric 1; input fiber 2
 pm_building_village_main_3,common/production_methods/village_pm.txt,60.0,300.0,240.0,186.0,1000.0,,output furniture 10; input fabric 1; input wood 2
@@ -428,7 +428,7 @@ pm_market_squares,common/production_methods/06_urban_center.txt,60.0,600.0,540.0
 pm_market_stalls,common/production_methods/06_urban_center.txt,0,450.0,450.0,382.5,4800.0,,output services 15
 pm_mobile_warfare_tactics,common/production_methods/05_military.txt,0,0,0,0.0,0,behaviorism,
 pm_mobile_warfare_tactics_conscription,common/production_methods/05_military.txt,0,0,0,0.0,0,behaviorism,
-pm_monument_al_qarawiyyin_university,common/production_methods/monument_pm.txt,2300.0,0,-2300.0,-2645.0,6000.0,,input book 30; input beeswax 20; input paper 20
+pm_monument_al_qarawiyyin_university,common/production_methods/monument_pm.txt,2750.0,0,-2750.0,-3162.5,6000.0,,input book 30; input beeswax 20; input paper 20
 pm_monument_no_effects,base_game/common/production_methods/08_monuments.txt,0,0,0,0.0,0,,
 pm_monument_prestige_only,base_game/common/production_methods/08_monuments.txt,0,0,0,0.0,0,,
 pm_monument_prestige_only_vatican_city,base_game/common/production_methods/08_monuments.txt,0,0,0,0.0,0,,

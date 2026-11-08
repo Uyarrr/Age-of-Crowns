@@ -67,3 +67,17 @@ aoc_england_new_zealand_census_effect = {
  set_variable = { name = aoc_england_new_zealand_target value = var:aoc_england_new_zealand_total }
  change_variable = { name = aoc_england_new_zealand_target multiply = 0.5 }
 }
+
+# Reconcile charter slots when a subject is lost or regained.
+aoc_england_charter_company_slots_effect = {
+ if = {
+  limit = { has_variable = aoc_england_east_india_chartered exists = c:BIC c:BIC ?= { is_subject_of = root is_subject_type = subject_type_chartered_company } }
+  if = { limit = { NOT = { has_modifier = aoc_england_east_india_company_slot } } add_modifier = { name = aoc_england_east_india_company_slot } }
+ }
+ else = { remove_modifier = aoc_england_east_india_company_slot }
+ if = {
+  limit = { has_variable = aoc_england_hudson_bay_chartered exists = c:HBC c:HBC ?= { is_subject_of = root is_subject_type = subject_type_chartered_company } }
+  if = { limit = { NOT = { has_modifier = aoc_england_hudson_bay_company_slot } } add_modifier = { name = aoc_england_hudson_bay_company_slot } }
+ }
+ else = { remove_modifier = aoc_england_hudson_bay_company_slot }
+}

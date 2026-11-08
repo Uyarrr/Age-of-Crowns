@@ -77,7 +77,7 @@ province_governors = {
 construction = {
 	# Unlocks Construction Sector
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/construction_plans.dds"
+	texture = "gfx/interface/icons/invention_icons/construction.dds"
 	category = society
 
 	ai_weight = {
@@ -129,7 +129,7 @@ urbanization = {
 national_guard = {
 	# Unlocks National Guard Law
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/legitimization_of_power_law.dds"
+	texture = "gfx/interface/icons/law_icons/national_guard.dds"
 	category = society
 
 	modifier = {
@@ -258,7 +258,7 @@ master_masons = {
 expanded_archives = {
 	# Increases Influence
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/diplomatic_influence.dds"
+	texture = "gfx/interface/icons/invention_icons/formal_administration	.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -331,10 +331,10 @@ landed_voting = {
 	}
 }
 
-tech_bureaucracy = {
+bureaucracy = {
 	# Unlocks Government Administration building
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/bureaucracy_law.dds"
+	texture = "gfx/interface/icons/invention_icons/bailiff_bureacracy.dds"
 	category = society
 
 	modifier = {
@@ -370,7 +370,7 @@ guilds = {
 
 guild_charters = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/national_trade.dds"
+	texture = "gfx/interface/icons/invention_icons/guild_charters.dds"
 	category = society
 
 	modifier = {
@@ -500,7 +500,7 @@ tenant_farmers = {
 agrarianism = {
 	#Unlocks Agrarianism Law
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/economical_policies_law.dds"
+	texture = "gfx/interface/icons/invention_icons/agriculture.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -573,7 +573,7 @@ patron_of_arts = {
 wealth_voting = {
 	# Unlocks Wealth Voting Law
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/nobles_rights_laws.dds"
+	texture = "gfx/interface/icons/invention_icons/wealth_voting.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -1154,7 +1154,7 @@ cultural_integration = {
 census_suffrage = {
 	# Unlocks Census Suffrage Law
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/nobles_rights_laws.dds"
+	texture = "gfx/interface/icons/law_icons/census_suffrage.dds"
 	category = society
 
 	unlocking_technologies = {
@@ -1262,7 +1262,7 @@ representative_assemblies = {
 
 monumental_construction = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	texture = "gfx/interface/icons/invention_icons/monumental_construction.dds"
 	category = society
 
 	modifier = {
@@ -1622,6 +1622,23 @@ armed_police_corps = {
 	}
 }
 
+viceroys = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/viceroys.dds"
+	category = society
+
+	modifier = {
+		country_subject_income_transfer_mult = 0.05
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 ############## ERA 6 ################
 
 enlightenment = {
@@ -1695,5 +1712,22 @@ behaviorism = {
 
 	ai_weight = {
 		value = 1
+	}
+}
+
+regulation_bureau = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/regulation_bureau.dds"
+	category = society
+
+	modifier = {
+		country_minting_mult = 0.1
+	}
+
+	unlocking_technologies = {
+	}
+
+	ai_weight = {
+		value = 1 # Important in general
 	}
 }

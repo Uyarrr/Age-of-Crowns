@@ -101,6 +101,8 @@ def rebalance():
         for index,key in enumerate(seq):
             if '_ivory_' in key and 'camp' not in key:continue # Explicit, matched luxury recipes.
             if key.startswith(('pm_building_port_main_','pm_building_caravan_hub_main_')):continue
+            # Printing recipes are calibrated to book prices and their paper supply chain.
+            if key.startswith('pm_building_printing_mill_main_'):continue
             pm=pms[key];emp=max(0,a.workers(pm))
             rank=0 if a.is_alternative(group) else min(index,3)
             if emp>=500:

@@ -8,12 +8,12 @@ Vanilla-sized tax capacity and similar public cost per bureaucracy, with paper a
 
 Base state tax capacity is restored to vanilla 100 by removing the mod -80 injection. Other global modifiers and construction recipes are unchanged. Existing PM IDs and staffing remain; existing saves retain their chosen PM IDs. A previously selected advanced method can now require research that the country lacks; recheck those offices after loading.
 
-| Main office | Bureaucracy | Tax capacity | Paper/week |
-|---|---:|---:|---:|
-| 1 | 20 | 2 | 0 |
-| 2 | 35 | 6 | 8 |
-| 3 | 45 | 10 | 10 |
-| 4 | 55 | 20 | 12 |
+| Main office | Bureaucracy | Tax capacity | Paper/week | Books/week |
+|---|---:|---:|---:|---:|
+| 1 | 20 | 2 | 0 | 0 |
+| 2 | 35 | 6 | 8 | 0 |
+| 3 | 45 | 10 | 7 | 2 |
+| 4 | 55 | 20 | 7 | 3 |
 
 | Coinage group | Metal/week | Bureaucracy | Tax capacity |
 |---|---:|---:|---:|
@@ -35,7 +35,7 @@ Full employment, base goods prices, annual reference base wage 5; hereditary/rel
 | 1 | 50 / 7 | £836.7 | 50 / 10 | £756.7 | +10.6% |
 | 2 | 80 / 13 | £1,196.7 | 50 / 10 | £756.7 | -1.2% |
 | 3 | 90 / 17 | £1,256.7 | 65 / 15 | £1,056.7 | -14.1% |
-| 4 | 110 / 30 | £1,416.7 | 100 / 30 | £1,406.7 | -8.4% |
+| 4 | 110 / 30 | £1,401.7 | 100 / 30 | £1,406.7 | -9.4% |
 
 These use both available metals, not a claim every country can source both. Silver-only starting administration supplies 35 bureaucracy / 4 capacity at £636.73, versus its former 30 / 20 at the same cost. No-metal outputs are the main office table above. All four available profession/religion staffing combinations are represented in the JSON configuration data; all calculations exclude throughput.
 

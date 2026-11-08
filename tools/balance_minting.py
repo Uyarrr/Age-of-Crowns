@@ -7,11 +7,11 @@ import re
 import economy_audit as a
 
 MAIN = [
-    # bureaucracy, tax capacity, paper, technology
-    (20, 2, 0, None),
-    (35, 6, 8, 'formalized_administration'),
-    (45, 10, 10, 'printing_press'),
-    (55, 20, 12, 'administrative_suzerainty'),
+    # bureaucracy, tax capacity, paper, books, technology
+    (20, 2, 0, 0, None),
+    (35, 6, 8, 0, 'formalized_administration'),
+    (45, 10, 7, 2, 'printing_press'),
+    (55, 20, 7, 3, 'administrative_suzerainty'),
 ]
 SILVER = [(0, 0, 0, None), (3, 15, 2, None),
           (5, 30, 4, 'formalized_administration')]
@@ -63,9 +63,14 @@ def apply():
                 '# Minting groups are additive; off options provide no benefits.']
     icons = ['simple_organization', 'horizontal_drawer_cabinets',
              'vertical_filing_cabinets', 'telephone_switchboards']
-    for tier, (bureaucracy, tax, paper, technology) in enumerate(MAIN, 1):
+    for tier, (bureaucracy, tax, paper, books, technology) in enumerate(MAIN, 1):
         unlock = f'\n\tunlocking_technologies = {{ {technology} }}\n' if technology else ''
-        inputs = f'\n\t\tworkforce_scaled = {{ goods_input_paper_add = {paper} }}' if paper else ''
+        inputs = ''
+        if paper:
+            inputs = f'\n\t\tworkforce_scaled = {{\n\t\t\tgoods_input_paper_add = {paper}'
+            if books:
+                inputs += f'\n\t\t\tgoods_input_book_add = {books}'
+            inputs += '\n\t\t}'
         snippets.append(f'''pm_building_chancery_main_{tier} = {{
 \ttexture = "gfx/interface/icons/production_method_icons/{icons[tier-1]}.dds"
 {unlock}

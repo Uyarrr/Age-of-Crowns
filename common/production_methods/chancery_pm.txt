@@ -27,7 +27,9 @@ pm_building_chancery_main_2 = {
 		workforce_scaled = { state_tax_capacity_add = 6 }
 	}
 	building_modifiers = {
-		workforce_scaled = { goods_input_paper_add = 8 }
+		workforce_scaled = {
+			goods_input_paper_add = 8
+		}
 		level_scaled = { building_employment_clerks_add = 500 }
 	}
 }
@@ -44,7 +46,10 @@ pm_building_chancery_main_3 = {
 		workforce_scaled = { state_tax_capacity_add = 10 }
 	}
 	building_modifiers = {
-		workforce_scaled = { goods_input_paper_add = 10 }
+		workforce_scaled = {
+			goods_input_paper_add = 7
+			goods_input_book_add = 2
+		}
 		level_scaled = { building_employment_clerks_add = 500 }
 	}
 }
@@ -61,7 +66,10 @@ pm_building_chancery_main_4 = {
 		workforce_scaled = { state_tax_capacity_add = 20 }
 	}
 	building_modifiers = {
-		workforce_scaled = { goods_input_paper_add = 12 }
+		workforce_scaled = {
+			goods_input_paper_add = 7
+			goods_input_book_add = 3
+		}
 		level_scaled = { building_employment_clerks_add = 500 }
 	}
 }

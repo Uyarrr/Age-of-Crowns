@@ -113,11 +113,12 @@ def main():
             f'pm_building_chancery_{metal}_{i}' for metal in ['silver', 'gold'] for i in range(3)]:
         texture = pms[key].scalar('texture').strip('"')
         check((a.ROOT/texture).exists() or (a.BASE/texture).exists(), f'{key}: missing texture {texture}')
-    for tier, (bur, tax, paper, tech) in enumerate(policy.MAIN, 1):
+    for tier, (bur, tax, paper, books, tech) in enumerate(policy.MAIN, 1):
         node = pms[f'pm_building_chancery_main_{tier}']
         check(a.benefit_value(node, 'country_bureaucracy_add') == bur, f'main {tier}: bureaucracy')
         check(a.benefit_value(node, 'state_tax_capacity_add') == tax, f'main {tier}: tax capacity')
         check(a.benefit_value(node, 'goods_input_paper_add') == paper, f'main {tier}: paper')
+        check(a.benefit_value(node, 'goods_input_book_add') == books, f'main {tier}: books')
         check(node.words('unlocking_technologies') == ([tech] if tech else []), f'main {tier}: gate')
         if tech:
             check(tech in techs, f'main {tier}: missing tech')
@@ -222,9 +223,9 @@ def write_report(data):
              '## Design', '',
              'Vanilla-sized tax capacity and similar public cost per bureaucracy, with paper and bullion sharing the output. The no-metal office remains functional; imported or domestic bullion enables the efficient path. Both minting groups grant bureaucracy AND tax capacity. Gold is available through the era-one minting_house technology; advanced silver accompanies era-two paper; advanced gold requires production age four. Paper upgrades use formalized_administration (2), printing_press (3), administrative_suzerainty (4).', '',
              'Base state tax capacity is restored to vanilla 100 by removing the mod -80 injection. Other global modifiers and construction recipes are unchanged. Existing PM IDs and staffing remain; existing saves retain their chosen PM IDs. A previously selected advanced method can now require research that the country lacks; recheck those offices after loading.', '',
-             '| Main office | Bureaucracy | Tax capacity | Paper/week |', '|---|---:|---:|---:|']
-    for i, (bur, tax, paper, gate) in enumerate(policy.MAIN, 1):
-        lines.append(f'| {i} | {bur} | {tax} | {paper} |')
+             '| Main office | Bureaucracy | Tax capacity | Paper/week | Books/week |', '|---|---:|---:|---:|---:|']
+    for i, (bur, tax, paper, books, gate) in enumerate(policy.MAIN, 1):
+        lines.append(f'| {i} | {bur} | {tax} | {paper} | {books} |')
     lines += ['', '| Coinage group | Metal/week | Bureaucracy | Tax capacity |', '|---|---:|---:|---:|']
     for metal, rows in [('Silver', policy.SILVER), ('Gold', policy.GOLD)]:
         for i, (qty, bur, tax, gate) in enumerate(rows):

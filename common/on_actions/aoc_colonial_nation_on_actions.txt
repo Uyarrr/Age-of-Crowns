@@ -23,6 +23,7 @@ aoc_colonial_nation_monthly_maintenance = {
 			limit = { aoc_is_or_was_colonial_nation = yes }
 			aoc_initialize_colonial_nation_effect = yes
 		}
+		aoc_england_charter_company_slots_effect = yes
 		if = {
 			limit = {
 				is_subject = yes
