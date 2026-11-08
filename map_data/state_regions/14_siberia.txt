@@ -10,22 +10,58 @@ STATE_URAL = {
     mine = "x492819"
     wood = "x317252"
     arable_land = 60
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_orchard" "building_stud_farm" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 84
-        building_iron_mine = 96
-        building_lead_mine = 81
-        building_copper_mine = 6
-        building_gold_mine = 2
         building_logging_camp = 27
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 6
+        amount = 3
+        undiscovered_amount = 3
     }
     min_cold_effect = 0.02
     max_cold_effect = 0.67
+    resource = {
+        type = "building_coal_mine"
+        amount = 46
+        undiscovered_amount = 45
+    }
+    resource = {
+        type = "building_iron_mine"
+        amount = 51
+        undiscovered_amount = 52
+    }
+    resource = {
+        type = "building_lead_mine"
+        amount = 45
+        undiscovered_amount = 44
+    }
+    resource = {
+        type = "building_copper_mine"
+        amount = 12
+        undiscovered_amount = 12
+    }
+    resource = {
+        type = "building_gold_mine"
+        amount = 0
+        undiscovered_amount = 1
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_tin_mine"
+        amount = 2
+        undiscovered_amount = 2
+    }
+    resource = {
+        type = "building_silver_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
 }
 
 STATE_TOMSK = {
@@ -41,14 +77,32 @@ STATE_TOMSK = {
     mine = "xAD226E"
     wood = "x02FAB2"
     arable_land = 90
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_orchard" "building_stud_farm" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 85
-        building_iron_mine = 27
         building_logging_camp = 26
     }
     min_cold_effect = 0.05
     max_cold_effect = 0.75
+    resource = {
+        type = "building_coal_mine"
+        amount = 46
+        undiscovered_amount = 46
+    }
+    resource = {
+        type = "building_iron_mine"
+        amount = 15
+        undiscovered_amount = 14
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_tin_mine"
+        amount = 1
+        undiscovered_amount = 2
+    }
 }
 
 STATE_TUVA = {
@@ -62,14 +116,32 @@ STATE_TUVA = {
     wood = "x01871B"
     arable_land = 15
     traits = { "state_trait_yenisei_river" }
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_orchard" "building_stud_farm" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 44
-        building_iron_mine = 18
         building_logging_camp = 14
     }
     min_cold_effect = 0.05
     max_cold_effect = 0.65
+    resource = {
+        type = "building_coal_mine"
+        amount = 24
+        undiscovered_amount = 24
+    }
+    resource = {
+        type = "building_iron_mine"
+        amount = 10
+        undiscovered_amount = 9
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_tin_mine"
+        amount = 1
+        undiscovered_amount = 2
+    }
 }
 
 STATE_TOBOLSK = {
@@ -84,18 +156,28 @@ STATE_TOBOLSK = {
     mine = "xB50B04"
     wood = "xC2DCCF"
     arable_land = 53
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_orchard" "building_stud_farm" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 44
-        building_iron_mine = 10
         building_logging_camp = 30
     }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 60
-    }
+    
     min_cold_effect = 0.06
     max_cold_effect = 0.76
+    resource = {
+        type = "building_coal_mine"
+        amount = 24
+        undiscovered_amount = 24
+    }
+    resource = {
+        type = "building_iron_mine"
+        amount = 6
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
 }
 
 STATE_UPPER_YENISEYSK = {
@@ -111,15 +193,32 @@ STATE_UPPER_YENISEYSK = {
     mine = "x49BC6A"
     wood = "x38CAD7"
     arable_land = 10
-    arable_resources = { "building_livestock_ranch" }
+    arable_resources = { "building_livestock_ranch" "building_orchard" "building_stud_farm" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 15
-        building_iron_mine = 10
-        building_copper_mine = 6
         building_logging_camp = 48
     }
     min_cold_effect = 0.17
     max_cold_effect = 0.98
+    resource = {
+        type = "building_coal_mine"
+        amount = 8
+        undiscovered_amount = 8
+    }
+    resource = {
+        type = "building_iron_mine"
+        amount = 5
+        undiscovered_amount = 6
+    }
+    resource = {
+        type = "building_copper_mine"
+        amount = 3
+        undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
 }
 
 STATE_OB = {
@@ -135,17 +234,23 @@ STATE_OB = {
     mine = "x565055"
     wood = "xB28F60"
     arable_land = 2
-    arable_resources = { "building_livestock_ranch" }
+    arable_resources = { "building_livestock_ranch" "building_orchard" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 20
         building_logging_camp = 22
     }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 60
-    }
+    
     min_cold_effect = 0.18
     max_cold_effect = 1.00
+    resource = {
+        type = "building_coal_mine"
+        amount = 11
+        undiscovered_amount = 11
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
 }
 
 STATE_KAMCHATKA = {
@@ -161,21 +266,35 @@ STATE_KAMCHATKA = {
     mine = "x33BBD3"
     wood = "x9E6A2C"
     arable_land = 6
-    arable_resources = { "building_livestock_ranch" }
+    arable_resources = { "building_livestock_ranch" "building_orchard" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 36
         building_logging_camp = 26
         building_fishing_wharf = 21
-        building_whaling_station = 11
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 6
+        amount = 3
+        undiscovered_amount = 3
     }
     naval_exit_id = 3132
     min_cold_effect = 0.08
     max_cold_effect = 0.80
+    resource = {
+        type = "building_coal_mine"
+        amount = 20
+        undiscovered_amount = 19
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_tin_mine"
+        amount = 1
+        undiscovered_amount = 2
+    }
 }
 
 STATE_OKHOTSK = {
@@ -192,21 +311,35 @@ STATE_OKHOTSK = {
     wood = "x806D27"
     arable_land = 2
     
-    arable_resources = { "building_livestock_ranch" }
+    arable_resources = { "building_livestock_ranch" "building_orchard" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 36
         building_fishing_wharf = 10
-        building_whaling_station = 5
         building_logging_camp = 10
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
+        amount = 4
+        undiscovered_amount = 4
     }
     naval_exit_id = 3118
     min_cold_effect = 0.09
     max_cold_effect = 0.84
+    resource = {
+        type = "building_coal_mine"
+        amount = 20
+        undiscovered_amount = 19
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 2
+        undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_tin_mine"
+        amount = 2
+        undiscovered_amount = 1
+    }
 }
 
 STATE_YAKUTSK = {
@@ -222,23 +355,34 @@ STATE_YAKUTSK = {
     mine = "xF71C2F"
     wood = "xDF23A0"
     arable_land = 14
-    arable_resources = { "building_livestock_ranch" }
+    arable_resources = { "building_livestock_ranch" "building_orchard" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 36
-        building_lead_mine = 16
         building_logging_camp = 23
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
+        amount = 4
+        undiscovered_amount = 4
     }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 5
-    }
+    
     min_cold_effect = 0.14
     max_cold_effect = 0.93
+    resource = {
+        type = "building_coal_mine"
+        amount = 19
+        undiscovered_amount = 20
+    }
+    resource = {
+        type = "building_lead_mine"
+        amount = 9
+        undiscovered_amount = 9
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
 }
 
 STATE_TRANS_BAIKAL = {
@@ -252,20 +396,48 @@ STATE_TRANS_BAIKAL = {
     mine = "x2C83FA"
     wood = "x521AC8"
     arable_land = 36
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_orchard" "building_stud_farm" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 80
-        building_iron_mine = 33
-        building_lead_mine = 28
-        building_sulfur_mine = 44
         building_logging_camp = 24
     }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 10
-    }
+    
     min_cold_effect = 0.05
     max_cold_effect = 0.69
+    resource = {
+        type = "building_coal_mine"
+        amount = 44
+        undiscovered_amount = 43
+    }
+    resource = {
+        type = "building_iron_mine"
+        amount = 17
+        undiscovered_amount = 18
+    }
+    resource = {
+        type = "building_lead_mine"
+        amount = 16
+        undiscovered_amount = 15
+    }
+    resource = {
+        type = "building_sulfur_mine"
+        amount = 23
+        undiscovered_amount = 23
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_tin_mine"
+        amount = 2
+        undiscovered_amount = 3
+    }
+    resource = {
+        type = "building_silver_mine"
+        amount = 4
+        undiscovered_amount = 4
+    }
 }
 
 STATE_IRKUTSK = {
@@ -280,16 +452,31 @@ STATE_IRKUTSK = {
     wood = "x982F85"
     arable_land = 30
     
-    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_orchard" "building_stud_farm" "building_hunting_lodge" }
     capped_resources = {
-        building_coal_mine = 50
-        building_iron_mine = 36
         building_logging_camp = 30
     }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 10
-    }
+    
     min_cold_effect = 0.06
     max_cold_effect = 0.77
+    resource = {
+        type = "building_coal_mine"
+        amount = 27
+        undiscovered_amount = 27
+    }
+    resource = {
+        type = "building_iron_mine"
+        amount = 19
+        undiscovered_amount = 19
+    }
+    resource = {
+        type = "building_stone_mine"
+        amount = 5
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "building_tin_mine"
+        amount = 2
+        undiscovered_amount = 1
+    }
 }

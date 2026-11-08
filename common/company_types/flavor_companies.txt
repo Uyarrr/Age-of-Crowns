@@ -1,5 +1,5 @@
 ﻿company_saxony_bronze = {
-	icon = "gfx/interface/icons/company_icons/saxony_bronze_company.dds"
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/bell_bronze.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
@@ -13,7 +13,7 @@
 	}
 
 	possible_prestige_goods = {
-		prestige_good_bronze_1
+		prestige_good_bell_bronze
 	}
 
     potential = {
@@ -26,11 +26,12 @@
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.05
+		country_max_companies_add = 1
 	}
 }
 
 company_brittany_tin = {
-	icon = "gfx/interface/icons/company_icons/brittany_tin_company.dds"
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/stream_tin.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
@@ -44,7 +45,7 @@ company_brittany_tin = {
 	}
 
 	possible_prestige_goods = {
-		prestige_good_tin_1
+		prestige_good_stream_tin
 	}
 
     potential = {
@@ -61,7 +62,7 @@ company_brittany_tin = {
 }
 
 company_sweden_iron = {
-	icon = "gfx/interface/icons/company_icons/sweden_iron_company.dds"
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/osmond_iron_ore.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
@@ -75,7 +76,7 @@ company_sweden_iron = {
 	}
 
 	possible_prestige_goods = {
-		prestige_good_iron_1
+		prestige_good_osmond_iron_ore
 	}
 
     potential = {
@@ -88,25 +89,26 @@ company_sweden_iron = {
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.05
+		country_max_companies_add = 1
 	}
 }
 
-company_england_cloth = {
-	icon = "gfx/interface/icons/company_icons/england_cloth_company.dds"
+company_england_fabric = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/broadcloth.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
 
 	building_types = {
-		building_textile_mill
-	}
-
-	extension_building_types = {
 		building_livestock_ranch
 	}
 
+	extension_building_types = {
+		building_textile_mill
+	}
+
 	possible_prestige_goods = {
-		prestige_good_cloth_1
+		prestige_good_broadcloth
 	}
 
     potential = {
@@ -119,11 +121,12 @@ company_england_cloth = {
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.05
+		country_max_companies_add = 1
 	}
 }
 
 company_france_wine = {
-	icon = "gfx/interface/icons/company_icons/france_wine_company.dds"
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/pinot_noir.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
@@ -137,7 +140,7 @@ company_france_wine = {
 	}
 
 	possible_prestige_goods = {
-		prestige_good_cloth_1
+		prestige_good_pinot_noir
 	}
 
     potential = {
@@ -150,11 +153,174 @@ company_france_wine = {
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.05
+		country_max_companies_add = 1
+	}
+}
+
+company_portugal_wine = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/malvasia.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_vineyard
+	}
+
+	extension_building_types = {
+		building_glassworks
+	}
+
+	possible_prestige_goods = {
+		prestige_good_malvasia
+	}
+
+	potential = { c:POR ?= this }
+	possible = { c:POR ?= this }
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_max_companies_add = 1
+	}
+}
+
+company_hungary_wine = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/tokaji_aszu.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = { building_vineyard }
+	extension_building_types = { building_glassworks }
+	possible_prestige_goods = { prestige_good_tokaji_aszu }
+
+	potential = { c:HUN ?= this }
+	possible = { c:HUN ?= this }
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_max_companies_add = 1
+	}
+}
+
+company_lithuania_wood = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/oak_wood.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_logging_camp
+	}
+
+	extension_building_types = {
+		building_furniture_manufactory
+	}
+
+	possible_prestige_goods = {
+		prestige_good_oak_wood
+	}
+
+	potential = { c:LIT ?= this }
+	possible = { c:LIT ?= this }
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_max_companies_add = 1
+	}
+}
+
+company_candar_wood = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/oak_wood.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+	building_types = { building_logging_camp }
+	extension_building_types = { building_furniture_manufactory }
+	possible_prestige_goods = { prestige_good_oak_wood }
+
+	potential = { c:CND ?= this }
+	possible = { c:CND ?= this }
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_max_companies_add = 1
+	}
+}
+
+company_venice_naval_supplies = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/cordage.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+	building_types = { building_shipyard }
+	extension_building_types = { building_logging_camp }
+	possible_prestige_goods = { prestige_good_cordage }
+
+	potential = { c:VEN ?= this }
+	possible = { c:VEN ?= this }
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_max_companies_add = 1
+	}
+}
+
+company_novgorod_fur = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/beaver_fur.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+	building_types = { building_hunting_lodge }
+	extension_building_types = { building_furniture_manufactory }
+	possible_prestige_goods = { prestige_good_beaver_fur }
+
+	potential = { c:NOV ?= this }
+	possible = { c:NOV ?= this }
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_max_companies_add = 1
+	}
+}
+
+company_muscovy_fur = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/sable_fur.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+	building_types = { building_hunting_lodge }
+	extension_building_types = { building_furniture_manufactory }
+	possible_prestige_goods = { prestige_good_sable_fur }
+
+	potential = { c:MUS ?= this }
+	possible = { c:MUS ?= this }
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_max_companies_add = 1
+	}
+}
+
+company_norway_fish = {
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/cod.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+	building_types = { building_fishing_wharf }
+	possible_prestige_goods = { prestige_good_cod }
+
+	potential = { c:NOR ?= this }
+	possible = { c:NOR ?= this }
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_max_companies_add = 1
 	}
 }
 
 company_morocco_furniture_livestock = {
-	icon = "gfx/interface/icons/company_icons/morocco_company.dds"
+	icon = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes

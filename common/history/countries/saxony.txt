@@ -2,8 +2,8 @@
 	c:SAX ?= {
 		add_era_researched = era_1
 
-		add_company = company_type:company_saxony_bronze_tin
-		company:company_saxony_bronze_tin = {
+		add_company = company_type:company_saxony_bronze
+		company:company_saxony_bronze = {
 			set_company_establishment_date = 1444.11.11
 			set_company_state_region = s:STATE_SAXONY
 		}

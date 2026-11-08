@@ -4,11 +4,10 @@
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
-					building={
-						type="building_company_sweden_iron"
+					company={
+						type=company_sweden_iron
 						country="c:SWE"
-						levels=3
-						region="STATE_SVEALAND"
+						levels=5
 					}
 				}
 				reserves=1
@@ -1497,11 +1496,9 @@
 			create_building={
 				building="building_vineyard"
 				add_ownership={
-					building={
-						type="building_company_france_wine"
+					country={
 						country="c:FRA"
 						levels=1
-						region="STATE_ILE_DE_FRANCE"
 					}
 				}
 				reserves=1
@@ -2084,11 +2081,10 @@
 			create_building={
 				building="building_tin_mine"
 				add_ownership={
-					building={
-						type="building_company_brittany_tin"
+					company={
+						type=company_brittany_tin
 						country="c:BRI"
-						levels=4
-						region="STATE_BRITTANY"
+						levels=5
 					}
 				}
 				reserves=1
@@ -3569,6 +3565,11 @@
 			create_building={
 				building="building_bronze_foundry"
 				add_ownership={
+					company={
+						type=company_saxony_bronze
+						country="c:SAX"
+						levels=5
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_building_bronze_foundry_main_1" }

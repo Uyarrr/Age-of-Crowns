@@ -11,8 +11,8 @@
 		add_journal_entry = { type = je_england_3 }
 		add_journal_entry = { type = je_england_colonization_of_canada }
 
-		add_company = company_type:company_england_cloth
-		company:company_england_cloth = {
+		add_company = company_type:company_england_fabric
+		company:company_england_fabric = {
 			set_company_establishment_date = 1444.11.11
 			set_company_state_region = s:STATE_HOME_COUNTIES
 		}

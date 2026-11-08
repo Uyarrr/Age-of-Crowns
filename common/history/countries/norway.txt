@@ -1,5 +1,11 @@
 ﻿COUNTRIES = {
 	c:NOR ?= {
 		add_era_researched = era_1
+
+		add_company = company_type:company_norway_fish
+		company:company_norway_fish = {
+			set_company_establishment_date = 1444.11.11
+			set_company_state_region = s:STATE_NORTHERN_NORWAY
+		}
 	}
 }

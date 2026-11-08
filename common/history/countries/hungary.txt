@@ -2,6 +2,12 @@
 	c:HUN ?= {
 		add_era_researched = era_1
 
+		add_company = company_type:company_hungary_wine
+		company:company_hungary_wine = {
+			set_company_establishment_date = 1444.11.11
+			set_company_state_region = s:STATE_SLOVAKIA
+		}
+
 		add_modifier = {
 			name = strong_nation
 			years = 25

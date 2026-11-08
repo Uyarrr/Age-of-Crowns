@@ -1,9 +1,9 @@
 ﻿# prestige_goods types
 
-prestige_good_bronze_1 = {
+prestige_good_bell_bronze = {
 	base_good = bronze
 	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/bronze_prestige_1.dds"
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/bell_bronze.dds"
 }
 
 prestige_good_rug = {
@@ -12,20 +12,8 @@ prestige_good_rug = {
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
 }
 
-prestige_good_tin_1 = {
-	base_good = tin
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
-}
-
 prestige_good_wood_1 = {
 	base_good = wood
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
-}
-
-prestige_good_iron_1 = {
-	base_good = iron
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
 }
@@ -58,4 +46,118 @@ prestige_good_silk_3 = {
 	base_good = silk
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/rug_prestige.dds"
+}
+
+prestige_good_woollen_garments = {
+	base_good = clothes
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/woollen_garments.dds"
+}
+
+prestige_good_pinot_noir = {
+	base_good = wine
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/pinot_noir.dds"
+}
+
+prestige_good_malvasia = {
+	base_good = wine
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/malvasia.dds"
+}
+
+prestige_good_oak_wood = {
+	base_good = wood
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/oak_wood.dds"
+}
+
+prestige_good_tokaji_aszu = {
+	base_good = wine
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/tokaji_aszu.dds"
+}
+
+prestige_good_stannite = {
+	base_good = tin
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/stannite.dds"
+}
+
+prestige_good_stream_tin = {
+	base_good = tin
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/stream_tin.dds"
+}
+
+prestige_good_cassiterite = {
+	base_good = tin
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/cassiterite.dds"
+}
+
+prestige_good_osmond_iron_ore = {
+	base_good = iron
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/osmond_iron_ore.dds"
+}
+
+prestige_good_hematite = {
+	base_good = iron
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/hematite.dds"
+}
+
+prestige_good_limonite = {
+	base_good = iron
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/limonite.dds"
+}
+
+prestige_good_cod = {
+	base_good = fish
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/cod.dds"
+}
+
+prestige_good_herring = {
+	base_good = fish
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/herring.dds"
+}
+
+prestige_good_tuna = {
+	base_good = fish
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/tuna.dds"
+}
+
+prestige_good_cordage = {
+	base_good = navalsupplies
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/cordage.dds"
+}
+
+prestige_good_sailcloth = {
+	base_good = navalsupplies
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sailcloth.dds"
+}
+
+prestige_good_broadcloth = {
+	base_good = fabric
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/broadcloth.dds"
+}
+
+prestige_good_beaver_fur = {
+	base_good = fur
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/beaver_fur.dds"
+}
+
+prestige_good_sable_fur = {
+	base_good = fur
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sable_fur.dds"
 }

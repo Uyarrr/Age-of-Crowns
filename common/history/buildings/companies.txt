@@ -2,63 +2,16 @@
 	s:STATE_HOME_COUNTIES={
 		region_state:ENG={
 			create_building={
-				building="building_textile_mill"
+				building="building_livestock_ranch"
 				add_ownership={
                     company={
-                        type=company_england_cloth
+                        type=company_england_fabric
                         country="c:ENG"
                         levels=5
                     }
 				}
 				reserves=1
-			}
-		}
-	}
-
-	s:STATE_SAXONY={
-		region_state:SAX={
-			create_building={
-				building="building_bronze_foundry"
-				add_ownership={
-                    company={
-                        type=company_saxony_bronze
-                        country="c:SAX"
-                        levels=5
-                    }
-				}
-				reserves=1
-			}
-		}
-	}
-
-	s:STATE_SVEALAND={
-		region_state:SWE={
-			create_building={
-				building="building_iron_mine"
-				add_ownership={
-                    company={
-                        type=company_sweden_iron
-                        country="c:SWE"
-                        levels=5
-                    }
-				}
-				reserves=1
-			}
-		}
-	}
-
-	s:STATE_BRITTANY={
-		region_state:BRI={
-			create_building={
-				building="building_tin_mine"
-				add_ownership={
-                    company={
-                        type=company_brittany_tin
-                        country="c:BRI"
-                        levels=5
-                    }
-				}
-				reserves=1
+				activate_production_methods={ "pm_building_livestock_main_1" "pm_building_livestock_sheep_1" }
 			}
 		}
 	}
@@ -75,6 +28,128 @@
                     }
 				}
 				reserves=1
+			}
+		}
+	}
+	s:STATE_ESTREMADURA={
+		region_state:POR={
+			create_building={
+				building="building_vineyard"
+				add_ownership={
+					company={
+						type=company_portugal_wine
+						country="c:POR"
+						levels=5
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_VILNIUS={
+		region_state:LIT={
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					company={
+						type=company_lithuania_wood
+						country="c:LIT"
+						levels=5
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_SLOVAKIA={
+		region_state:HUN={
+			create_building={
+				building="building_vineyard"
+				add_ownership={
+					company={
+						type=company_hungary_wine
+						country="c:HUN"
+						levels=5
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_NORTHERN_NORWAY={
+		region_state:NOR={
+			create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					company={
+						type=company_norway_fish
+						country="c:NOR"
+						levels=5
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_KASTAMONU={
+		region_state:CND={
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					company={
+						type=company_candar_wood
+						country="c:CND"
+						levels=5
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_VENETIA={
+		region_state:VEN={
+			create_building={
+				building="building_shipyard"
+				add_ownership={
+					company={
+						type=company_venice_naval_supplies
+						country="c:VEN"
+						levels=5
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_NOVGOROD={
+		region_state:NOV={
+			create_building={
+				building="building_hunting_lodge"
+				add_ownership={
+					company={
+						type=company_novgorod_fur
+						country="c:NOV"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_hunting_lodge_main_1" }
+			}
+		}
+	}
+	s:STATE_MOSCOW={
+		region_state:MUS={
+			create_building={
+				building="building_hunting_lodge"
+				add_ownership={
+					company={
+						type=company_muscovy_fur
+						country="c:MUS"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_building_hunting_lodge_main_1" }
 			}
 		}
 	}
