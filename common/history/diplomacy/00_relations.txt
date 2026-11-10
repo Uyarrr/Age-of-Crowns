@@ -1,4 +1,4 @@
-DIPLOMACY = {
+﻿DIPLOMACY = {
 	c:A06 ?= {
 
 		set_relations = { country = c:X26 value = -200 }
@@ -1120,7 +1120,7 @@ DIPLOMACY = {
 		set_relations = { country = c:MOR value = -100 }
 		set_relations = { country = c:TLE value = -200 }
 		set_relations = { country = c:FRC value = -100 }
-		set_relations = { country = c:W39 value = 25 }
+		set_relations = { country = c:FZA value = 25 }
 	}
 	c:TUR ?= {
 		set_relations = { country = c:AUS value = -200 }
@@ -1788,7 +1788,7 @@ DIPLOMACY = {
 		set_relations = { country = c:T82 value = -100 }
 		set_relations = { country = c:MUN value = -200 }
 	}
-	c:W39 ?= {
+	c:FZA ?= {
 		set_relations = { country = c:TUN value = 25 }
 		set_relations = { country = c:W44 value = -100 }
 	}
@@ -1814,7 +1814,7 @@ DIPLOMACY = {
 	}
 	c:W44 ?= {
 		set_relations = { country = c:TUG value = -200 }
-		set_relations = { country = c:W39 value = -100 }
+		set_relations = { country = c:FZA value = -100 }
 	}
 	c:W45 ?= {
 		set_relations = { country = c:BOH value = 10 }
