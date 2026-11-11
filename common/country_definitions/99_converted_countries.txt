@@ -1007,7 +1007,7 @@ BA1 ?= {
 	capital = STATE_YUNNAN
 }
 
-BAD ?= {
+BDE ?= {
 	color = { 118 229 215 }
 	country_type = recognized
 	tier = grand_principality
@@ -1364,7 +1364,7 @@ BOR ?= {
 	capital = STATE_BORNU
 }
 
-BRA ?= {
+BRU ?= {
 	color = { 116 92 39 }
 	country_type = recognized
 	tier = principality
@@ -1424,7 +1424,7 @@ BRN ?= {
 	capital = STATE_AMHARA
 }
 
-BRU ?= {
+BNI ?= {
 	color = { 41 89 174 }
 	country_type = unrecognized
 	tier = principality
@@ -3472,15 +3472,6 @@ HER ?= {
 	capital = STATE_HERAT
 }
 
-HES ?= {
-	color = { 146 108 146 }
-	country_type = recognized
-	tier = grand_principality
-	cultures = { north_german }
-	religion = catholic
-	capital = STATE_HESSE
-}
-
 HH1 ?= {
 	color = { 217 255 253 }
 	country_type = decentralized
@@ -4691,15 +4682,6 @@ KOK ?= {
 	cultures = { uzbek }
 	religion = sunni
 	capital = STATE_TAJIKISTAN
-}
-
-KON ?= {
-	color = { 199 160 139 }
-	country_type = decentralized
-	tier = principality
-	cultures = { bakongo }
-	religion = animist
-	capital = STATE_NORTH_ANGOLA
 }
 
 KOR ?= {
@@ -6392,15 +6374,6 @@ NAR ?= {
 	capital = STATE_ORISSA
 }
 
-NAS ?= {
-	color = { 107 94 169 }
-	country_type = recognized
-	tier = principality
-	cultures = { north_german }
-	religion = catholic
-	capital = STATE_RUHR
-}
-
 NAV ?= {
 	color = { 252 233 58 }
 	country_type = recognized
@@ -7158,15 +7131,6 @@ PAK ?= {
 	cultures = { baluchi kashmiri panjabi pashtun sindi }
 	religion = sunni
 	capital = STATE_SINDH
-}
-
-PAL ?= {
-	color = { 0 142 76 }
-	country_type = unrecognized
-	tier = principality
-	cultures = { mashriqi }
-	religion = sunni
-	capital = STATE_PALESTINE
 }
 
 PAN ?= {
@@ -10189,15 +10153,6 @@ U32 ?= {
 	capital = STATE_MALAYA
 }
 
-U33 ?= {
-	color = { 57 151 142 }
-	country_type = recognized
-	tier = principality
-	cultures = { south_german }
-	religion = catholic
-	capital = STATE_BADEN
-}
-
 U34 ?= {
 	color = { 254 254 0 }
 	country_type = unrecognized
@@ -13178,15 +13133,6 @@ X35 ?= {
 	cultures = { burmese }
 	religion = theravada
 	capital = STATE_MANDALAY
-}
-
-X36 ?= {
-	color = { 205 178 107 }
-	country_type = recognized
-	tier = city_state
-	cultures = { occitan }
-	religion = catholic
-	capital = STATE_PROVENCE
 }
 
 X37 ?= {

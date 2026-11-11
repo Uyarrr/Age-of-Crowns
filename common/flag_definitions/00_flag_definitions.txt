@@ -755,10 +755,10 @@ AZB = { # Azerbaijan
 	}
 }
 
-BAD = { # Baden
+BDE = { # Baden
 	flag_definition = {
-		coa = BAD
-		subject_canton = BAD
+		coa = BDE
+		subject_canton = BDE
 		allow_overlord_canton = yes
 		priority = 1
 	}
@@ -1318,30 +1318,6 @@ BOS = { # Bosnia
 	}
 }
 
-BRA = { # Brunswick
-	flag_definition = {
-		coa = BRA
-		subject_canton = BRA
-		priority = 1
-	}
-	flag_definition = {
-		coa = BRA_republic
-		subject_canton = BRA_republic
-		priority = 10
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = BRA_absolute_monarchy
-		subject_canton = BRA_absolute_monarchy
-		priority = 20
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}
-}
-
 BRE = { # Bremen
 	flag_definition = {
 		coa = BRE
@@ -1420,10 +1396,10 @@ BRI = { # Brittany
 	}
 }
 
-BRU = { # Brunei
+BNI = { # Brunei
 	flag_definition = {
-		coa = BRU
-		subject_canton = BRU
+		coa = BNI
+		subject_canton = BNI
 		allow_overlord_canton = yes
 		priority = 1
 	}
@@ -3294,102 +3270,6 @@ FLA = {	# Flanders
 	}
 }
 
-FRA = { # France
-	flag_definition = {
-		coa = FRA
-		subject_canton = FRA
-		allow_overlord_canton = yes
-		coa_with_overlord_canton = FRA_subject
-		priority = 1
-	}
-	flag_definition = {
-		coa = FRA
-		subject_canton = FRA
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.337 0.337 }
-		priority = 10
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_dictatorship
-		subject_canton = FRA_dictatorship
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_bourbon
-		subject_canton = FRA_bourbon
-		priority = 30
-		allow_overlord_canton = yes
-		coa_with_overlord_canton = FRA_subject
-		trigger = {
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				has_variable = legitimist_restoration_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = FRA_absolute_monarchy
-		subject_canton = FRA_absolute_monarchy
-		allow_overlord_canton = yes
-		coa_with_overlord_canton = FRA_subject
-		priority = 25
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_second_empire
-		subject_canton = FRA
-		allow_overlord_canton = yes
-		coa_with_overlord_canton = FRA_subject
-		priority = 30
-		trigger = {
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				has_variable = bonapartist_restoration_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = FRA_theocracy
-		subject_canton = FRA_theocracy
-		priority = 20
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_communist
-		subject_canton = FRA_communist_canton
-		priority = 1500
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_military
-		subject_canton = FRA_military
-		priority = 1500
-		trigger = {
-			coa_def_military_junta_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_fascist
-		subject_canton = FRA_fascist
-		priority = 1550
-		trigger = {
-			coa_def_fascist_flag_trigger = yes
-		}
-	}
-}
-
 FRM = { # Frankfurt
 	flag_definition = {
 		coa = FRM
@@ -4393,64 +4273,6 @@ HEK = {
 		subject_canton = HEK
 		allow_overlord_canton = yes
 		priority = 1
-	}
-}
-
-HES = { # Hesse
-	flag_definition = {
-		coa = HES
-		subject_canton = HES
-		allow_overlord_canton = yes
-		coa_with_overlord_canton = HES_subject
-		priority = 1
-	}
-	flag_definition = {
-		coa = HES_absolute_monarchy
-		priority = 10
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = HES_republic
-		subject_canton = HES_republic
-		allow_overlord_canton = yes
-		priority = 10
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = HES_oligarchy
-		subject_canton = HES_oligarchy
-		priority = 25
-		trigger = {
-			coa_def_oligarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = HES_communist
-		priority = 1500
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = HES_subject
-		allow_overlord_canton = yes
-		overlord_canton_offset = { 0.01 0.015 }
-		overlord_canton_scale = { 0.48 0.47 }
-		priority = 50
-		trigger = {
-			coa_def_french_ensign_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = HES_subject_PRU
-		priority = 50
-		trigger = {
-			coa_def_prussian_ensign_trigger = yes
-		}
 	}
 }
 
@@ -6906,37 +6728,6 @@ NAR = { # Narsinghpur
 				coa_def_british_ensign_trigger = yes
 				coa_def_british_india_trigger = yes
 			}
-		}
-	}
-}
-
-NAS = { # Nassau
-	flag_definition = {
-		coa = NAS
-		subject_canton = NAS
-		priority = 1
-	}
-	flag_definition = {
-		coa = NAS_republic
-		subject_canton = NAS_republic
-		priority = 10
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = NAS_absolute_monarchy
-		subject_canton = NAS_absolute_monarchy
-		priority = 20
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = NAS_subject_PRU
-		priority = 30
-		trigger = {
-			coa_def_prussian_ensign_trigger = yes
 		}
 	}
 }

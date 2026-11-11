@@ -3,7 +3,7 @@
 African administrations now have national names for twelve colonial traditions:
 Castilian/Spanish, Portuguese, French, English/British, Dutch, Danish, Swedish,
 Brandenburg, Prussian, German, Belgian, and Omani. The Dutch rules recognize both
-Holland and the Netherlands; Brandenburg uses this mod's BBR tag.
+Holland and the Netherlands; Brandenburg uses this mod's BRA tag.
 
 This adds 40 national names across the five existing administration areas and 17
 names selected by the colonial capital. Every name has an English adjective.

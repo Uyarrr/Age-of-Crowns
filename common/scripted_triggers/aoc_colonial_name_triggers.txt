@@ -56,7 +56,7 @@ aoc_is_swedish_subject = {
 
 aoc_is_brandenburg_subject = {
 	OR = {
-		AND = { exists = c:BBR is_direct_subject_of = c:BBR }
+		AND = { exists = c:BRA is_direct_subject_of = c:BRA }
 	}
 }
 

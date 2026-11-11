@@ -28,7 +28,7 @@ const recursive=dir=>fs.existsSync(dir)?fs.readdirSync(dir,{withFileTypes:true})
 function audit(){
  const english=new Map(),localKeys=new Set(),duplicates=new Set();let englishFiles=0,entries=0;
  for(const dir of [path.join(a.base,'localization/english'),path.join(a.root,'localization/english')])for(const p of recursive(dir).filter(p=>p.endsWith('.yml'))){
-  const local=p.startsWith(a.root),text=a.read(p);if(local){englishFiles++;assert(text.startsWith('l_english:'),`Bad language header: ${p}`);}
+  const local=p.startsWith(a.root),text=a.read(p);if(local){englishFiles++;assert(text.startsWith('l_english:'),`BDE language header: ${p}`);}
   for(const [i,line]of text.split(/\r?\n/).entries()){
    if(!line.trim()||line.trim().startsWith('#')||line==='l_english:')continue;
    const m=line.match(/^\s*([^#\s:]+):\d*\s+"(.*)"\s*(?:#.*)?$/);

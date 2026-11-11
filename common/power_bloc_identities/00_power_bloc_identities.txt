@@ -380,7 +380,7 @@ identity_ideological_union = {
 		 	}
 		 	add = {
 		 		add = "scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type_with(scope:with_country)"
-		 		divide = 200 # bad progressiveness difference is usually around 100
+		 		divide = 200 # BDE progressiveness difference is usually around 100
 		 		multiply = -1
 		 		multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 		 		desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
@@ -393,7 +393,7 @@ identity_ideological_union = {
 		 	}
 		 	add = {
 		 		add = "scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type_without(scope:without_country)"
-		 		divide = 200 # bad progressiveness difference is usually around 100
+		 		divide = 200 # BDE progressiveness difference is usually around 100
 		 		multiply = -1
 		 		multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 		 		desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
@@ -403,7 +403,7 @@ identity_ideological_union = {
 		 	limit = { "scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type" != 0 }
 		 	add = {
 				add = scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type
-				divide = 200 # bad progressiveness difference is usually around 100
+				divide = 200 # BDE progressiveness difference is usually around 100
 				multiply = -1
 				multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 				desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE

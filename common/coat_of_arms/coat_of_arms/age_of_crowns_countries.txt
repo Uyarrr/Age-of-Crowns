@@ -372,7 +372,7 @@ KNI_subject = { # The Knights - Subject
 	}
 }
 
-BBR = { # Brandenburg - Default
+BRA = { # Brandenburg - Default
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -4410,4 +4410,436 @@ HAB_emperor = { # Austria - Imperial eagle & escutcheon variant
 		color2 = color4
 		mask = { 3 }
 	}
+}
+
+PAL = { # Pfalz - Palatinate of the Rhine
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "red_light"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
+	}
+}
+PAL_emperor = { # Palatinate - Imperial eagle & escutcheon variant
+	pattern = "pattern_special_eagle_escutcheon_heart_40.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+	color4 = hsv360 	{	0	0	20	}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = hsv360 	{	42	65	60	}
+		color2 = hsv360 	{	42	65	60	}
+		instance = { position = { 0.390 0.147 } scale = { 0.35 0.35 }  }
+		instance = { position = { 0.610 0.147 } scale = { 0.35 0.35 }  }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "yellow_pale"
+		color2 = "yellow_pale"
+		instance = { position = { 0.390 0.147 } scale = { 0.30 0.30 }  }
+		instance = { position = { 0.610 0.147 } scale = { 0.30 0.30 }  }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_doubleheaded_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "white_secondary"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "black_secondary"
+		color2 = "black_secondary"
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_crowned_shield.dds"
+		color1 = "yellow"
+		color2 = hsv360 	{	358 	60	75	}
+		color3 = hsv360 	{	358 	60	75	}
+		instance = { position = { 0.5 0.505 } scale = { 0.36 0.36 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "yellow_dark"
+		color2 = "yellow_dark"
+		mask = { 3 }
+	}
+}
+
+BDE = { # Baden - Markgrafen (only design used in timeframe)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_bend.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+BDE_grand_duchy_early = { # Baden - Grand Duchy early
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	30	90	70	}	
+	color2 = "yellow_light"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color1			
+	}	
+}
+BDE_grand_duchy = { # Baden - Grand Duchy late 19th c.
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color1			
+	}	
+}
+BDE_grand_duchy_barry = { # Baden - Grand Duchy - Barry variant
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_barry_04.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color1			
+	}	
+}
+
+HES = { # Hessen
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red_mid"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_barruly_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}		
+}
+HES_grand_duchy = {  # Hessen - Gd Duchy
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.125 } scale = { 1.0 0.25 } }				
+		instance = { position = { 0.5 0.875 } scale = { 1.0 0.25 } }				
+	}	
+}
+HES_emperor = { # Hessen - Imperial eagle & escutcheon variant
+	pattern = "pattern_special_eagle_escutcheon_heart_40.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+	color4 = hsv360 	{	0	0	20	}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = hsv360 	{	42	65	60	}
+		color2 = hsv360 	{	42	65	60	}
+		instance = { position = { 0.390 0.147 } scale = { 0.35 0.35 }  }
+		instance = { position = { 0.610 0.147 } scale = { 0.35 0.35 }  }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "yellow_pale"
+		color2 = "yellow_pale"
+		instance = { position = { 0.390 0.147 } scale = { 0.30 0.30 }  }
+		instance = { position = { 0.610 0.147 } scale = { 0.30 0.30 }  }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_doubleheaded_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "white_secondary"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue_mid"
+		color2 = "blue_mid"
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_crowned_thuringia_shield.dds"
+		color1 = "white"
+		color2 = "red_light"
+		color3 = "yellow"
+		instance = { position = { 0.5 0.505 } scale = { 0.36 0.36 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color4
+		color2 = color4
+		mask = { 3 }
+	}
+}
+
+BRU = { # Brunswick
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_passant_guardant_long_wide.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.275 } scale = { 1.0 1.0 } }
+		instance = { position = { 0.5 0.725 } scale = { 1.0 1.0 } }	
+	}		
+}
+BRU_duchy = { # Brunswick - Duchy 19th c.
+	pattern = "pattern_solid.dds"
+	color1 = "blue_light"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2				
+	}
+}
+BRU_quarterly = { # Brunswick-Lüneburg (historical quartering)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+	color4 = "white"
+	color5 = "red"
+
+    sub = {
+        parent = "BRU" # Q1 Q4 Brunswick
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+    }
+    sub = {
+        parent = "LUN" # Q2 Q3 Luneburg
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		color1 = "yellow"
+		color2 = "blue"
+		color3 = "red_secondary"
+    }
+    sub = {
+        parent = "sub_quartered_bold"
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		color1 = "red"
+		color2 = "red"
+    }
+}
+BRU_emperor = { # Brunswick - Imperial eagle & escutcheon variant
+	pattern = "pattern_special_eagle_escutcheon_heart_40.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+	color4 = hsv360 	{	0	0	20	}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = hsv360 	{	42	65	60	}
+		color2 = hsv360 	{	42	65	60	}
+		instance = { position = { 0.390 0.147 } scale = { 0.35 0.35 }  }
+		instance = { position = { 0.610 0.147 } scale = { 0.35 0.35 }  }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "yellow_pale"
+		color2 = "yellow_pale"
+		instance = { position = { 0.390 0.147 } scale = { 0.30 0.30 }  }
+		instance = { position = { 0.610 0.147 } scale = { 0.30 0.30 }  }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_doubleheaded_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "white_secondary"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red"
+		color2 = "red"
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_lions_02_passant_guardant_shield.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		color3 = "red"
+		instance = { position = { 0.5 0.5 } scale = { 0.36 0.375 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color4
+		color2 = color4
+		mask = { 3 }
+	}
+}
+
+NSA = { # Nassau - Full dynastic arms
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.30 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.50 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.70 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.90 0.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.00 0.20 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.20 0.20 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.80 0.20 } scale = { 0.04 0.125 } }
+		instance = { position = { 1.00 0.20 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.10 0.40 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.30 0.40 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.90 0.40 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.00 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.20 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.40 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.80 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 1.00 0.60 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.10 0.80 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.30 0.80 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.50 0.80 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.90 0.80 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.00 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.20 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.40 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.60 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 0.80 1.00 } scale = { 0.04 0.125 } }
+		instance = { position = { 1.00 1.00 } scale = { 0.04 0.125 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}		
+}
+NSA_duchy = {  # Nassau - Duchy
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	23	80	80	}
+	color2 = hsv360 	{	216	75	45	}
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color1			
+	}
+}
+AQN = { # Aquitaine
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue_secondary"
+
+	colored_emblem = {
+		texture = "ce_lion_passant_guardant_wide.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+AQN_capetian = { # Aquitaine qtly France (modern)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+    sub = { # Q1
+        parent = "sub_france_three_fleurs" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }	
+    }
+    sub = { # Q2
+        parent = "sub_aquitaine" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }	
+    }	
+    sub = { # Q3
+        parent = "sub_aquitaine" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+    }	
+    sub = { # Q4
+        parent = "sub_france_three_fleurs" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+    }			
+    sub = { # quartering
+        parent = "sub_div_quarterly" 
+    }	
+}
+AQN_valois = { # Aquitaine qtly Berry (modern)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+    sub = { # Q1
+        parent = "sub_BER_three_fleurs"  # maybe just Valois
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }	
+    }
+    sub = { # Q2
+        parent = "sub_aquitaine" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }	
+    }	
+    sub = { # Q3
+        parent = "sub_aquitaine" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+    }	
+    sub = { # Q4
+        parent = "sub_BER_three_fleurs" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+    }			
+    sub = { # quartering
+        parent = "sub_div_quarterly" 
+    }	
 }

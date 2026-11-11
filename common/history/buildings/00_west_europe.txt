@@ -1639,7 +1639,7 @@
 		}
 	}
 	s:STATE_PROVENCE={
-		region_state:PAP={
+		region_state:X36={
 		}
 		region_state:SAV={
 		}
@@ -1669,12 +1669,12 @@
 		}
 	}
 	s:STATE_NORMANDY={
-		region_state:ENG={
+		region_state:NRM={
 			create_building={
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:ENG"
+						country="c:NRM"
 						levels=1
 					}
 				}
@@ -1686,7 +1686,7 @@
 				add_ownership={
 					building={
 						type="building_caravan_hub"
-						country="c:ENG"
+						country="c:NRM"
 						levels=1
 						region="STATE_NORMANDY"
 					}
@@ -1700,7 +1700,7 @@
 				add_ownership={
 					building={
 						type="building_trade_center"
-						country="c:ENG"
+						country="c:NRM"
 						levels=1
 						region="STATE_NORMANDY"
 					}
@@ -2319,12 +2319,12 @@
 		}
 	}
 	s:STATE_AQUITAINE={
-		region_state:ENG={
+		region_state:AQN={
 			create_building={
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:ENG"
+						country="c:AQN"
 						levels=1
 					}
 				}
@@ -2336,7 +2336,7 @@
 				add_ownership={
 					building={
 						type="building_caravan_hub"
-						country="c:ENG"
+						country="c:AQN"
 						levels=1
 						region="STATE_AQUITAINE"
 					}
@@ -2350,7 +2350,7 @@
 				add_ownership={
 					building={
 						type="building_trade_center"
-						country="c:ENG"
+						country="c:AQN"
 						levels=1
 						region="STATE_AQUITAINE"
 					}
@@ -3183,7 +3183,7 @@
 				activate_production_methods={ "pm_building_road_main_1" "pm_building_road_transport_0" }
 			}
 		}
-		region_state:BBR={
+		region_state:BRA={
 		}
 	}
 	s:STATE_ELBE={
@@ -3293,13 +3293,13 @@
 				activate_production_methods={ "pm_building_caravan_hub_main_1" }
 			}
 		}
-		region_state:BBR={
+		region_state:BRA={
 		}
 	}
 	s:STATE_RHINELAND={
 		region_state:TRI={
 		}
-		region_state:U33={
+		region_state:PAL={
 		}
 	}
 	s:STATE_NORTH_RHINE={
@@ -3353,12 +3353,12 @@
 		}
 		region_state:W45={
 		}
-		region_state:BBR={
+		region_state:BRA={
 			create_building={
 				building="building_caravan_hub"
 				add_ownership={
 					country={
-						country="c:BBR"
+						country="c:BRA"
 						levels=1
 					}
 				}
@@ -3386,12 +3386,12 @@
 	s:STATE_BADEN={
 		region_state:HAB={
 		}
-		region_state:BAD={
+		region_state:BDE={
 			create_building={
 				building="building_caravan_hub"
 				add_ownership={
 					country={
-						country="c:BAD"
+						country="c:BDE"
 						levels=1
 					}
 				}
@@ -3402,7 +3402,7 @@
 				building="building_barrack"
 				add_ownership={
 					country={
-						country="c:BAD"
+						country="c:BDE"
 						levels=1
 					}
 				}
@@ -3410,7 +3410,7 @@
 				activate_production_methods={ "pm_no_organization" }
 			}
 		}
-		region_state:U33={
+		region_state:PAL={
 		}
 		region_state:KNZ={
 			create_building={
@@ -3449,7 +3449,7 @@
 		}
 	}
 	s:STATE_HANNOVER={
-		region_state:BRA={
+		region_state:BRU={
 		}
 		region_state:OLD={
 		}
@@ -3472,12 +3472,12 @@
 		}
 	}
 	s:STATE_BRUNSWICK={
-		region_state:BRA={
+		region_state:BRU={
 			create_building={
 				building="building_caravan_hub"
 				add_ownership={
 					country={
-						country="c:BRA"
+						country="c:BRU"
 						levels=1
 					}
 				}
@@ -3488,7 +3488,7 @@
 				building="building_barrack"
 				add_ownership={
 					country={
-						country="c:BRA"
+						country="c:BRU"
 						levels=1
 					}
 				}
@@ -3515,7 +3515,7 @@
 	s:STATE_BAVARIA={
 		region_state:T79={
 		}
-		region_state:U33={
+		region_state:PAL={
 		}
 		region_state:U51={
 		}
@@ -3648,7 +3648,7 @@
 		}
 	}
 	s:STATE_RUHR={
-		region_state:NAS={
+		region_state:NSA={
 		}
 		region_state:U71={
 			create_building={

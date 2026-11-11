@@ -1,4 +1,4 @@
-DIPLOMACY = {
+﻿DIPLOMACY = {
 	c:DEN ?= {
 		create_diplomatic_pact = {
 			country = c:SWE
@@ -92,6 +92,16 @@ DIPLOMACY = {
 	c:BGY ?= {
 		create_diplomatic_pact = {
 			country = c:NEV
+			type = puppet
+		}
+	}
+	c:ENG ?= {
+		create_diplomatic_pact = {
+			country = c:NRM
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:AQN
 			type = puppet
 		}
 	}
@@ -209,6 +219,12 @@ DIPLOMACY = {
 	c:PAP ?= {
 		create_diplomatic_pact = {
 			country = c:PEG
+			type = puppet
+		}
+	}
+	c:PAP ?= {
+		create_diplomatic_pact = {
+			country = c:X36
 			type = puppet
 		}
 	}

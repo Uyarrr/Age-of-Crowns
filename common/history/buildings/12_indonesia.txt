@@ -12,12 +12,12 @@ BUILDINGS={
 		}
 	}
 	s:STATE_NORTH_BORNEO={
-		region_state:BRU={
+		region_state:BNI={
 			create_building={
 				building="building_trade_center"
 				add_ownership={
 					country={
-						country="c:BRU"
+						country="c:BNI"
 						levels=1
 					}
 				}
@@ -264,7 +264,7 @@ BUILDINGS={
 		}
 	}
 	s:STATE_LUZON={
-		region_state:BRU={
+		region_state:BNI={
 		}
 		region_state:C15={
 		}

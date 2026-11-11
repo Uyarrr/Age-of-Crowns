@@ -230,10 +230,10 @@ KNI = { # The Knights
 	}
 }
 
-BBR = { # Brandenburg
+BRA = { # Brandenburg
 	flag_definition = {
-		coa = BBR
-		subject_canton = BBR
+		coa = BRA
+		subject_canton = BRA
 		allow_overlord_canton = yes
 		priority = 1
 	}
@@ -655,10 +655,11 @@ NOR = { # Norway
 NEV = { # Nevers
 	flag_definition = {
 		coa = NEV
-		priority = 999
+		priority = 1
 	}
 	flag_definition = {
 		coa = NEV_flanders
+		allow_overlord_canton = yes
 		priority = 10
 		trigger = {
 			coa_def_dampierre_flanders_dynasty_trigger = yes
@@ -1205,6 +1206,186 @@ MAN = { # Mantua
 		trigger = {
 			# age 3 possibly
 			coa_def_duchy_or_higher_trigger = yes
+		}
+	}
+}
+
+FRA = { # France
+	flag_definition = {
+		coa = FRA
+		subject_canton = FRA
+		priority = 9991
+	}
+	flag_definition = {
+		coa = FRA_renaissance
+		subject_canton = FRA_renaissance
+		priority = 2
+		trigger = {
+			coa_def_discovery_age_3_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = FRA_white
+		subject_canton = FRA_white
+		priority = 3
+		trigger = {
+			coa_def_absolutism_age_5_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = FRA_absolute_monarchy
+		subject_canton = FRA_white
+		priority = 10
+		trigger = {
+			coa_def_absolutism_age_5_trigger = yes
+			coa_def_absolute_monarchy_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = FRA_merchant
+		subject_canton = FRA_republic
+		priority = 99
+		trigger = {
+			coa_def_republic_trigger = yes
+			# TODO
+		}
+	}	
+	flag_definition = {
+		coa = FRA_republic
+		subject_canton = FRA_republic
+		priority = 100
+		trigger = {
+			coa_def_republic_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = FRA_revolutionary_republic
+		subject_canton = FRA_revolutionary_republic
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}
+
+PAL = { # Palatinate of the Rhine
+	flag_definition = {
+		coa = PAL
+		priority = 1
+	}
+	flag_definition = {
+		coa = PAL_emperor
+		priority = 0 # Commented out for now (update to DH if restored)
+		trigger = {
+			coa_def_hre_emperor_trigger = yes
+		}
+	}
+}
+
+BDE = { # Baden
+	# BDE - Duchy : bend OG
+	#x BDE_grand_duchy_early - Gd Duchy 19th c.  Tricolor OMO
+	# BDE_grand_duchy - Gd Duchy tricolor OGO
+	#x BDE_grand_duchy_barry - Gd Duchy barry OG
+
+	flag_definition = {
+		coa = BDE
+		priority = 9991
+	}
+	flag_definition = {
+		coa = BDE_grand_duchy
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}
+
+HES = { # Hessen
+	flag_definition = {
+		coa = HES
+		priority = 9991
+	}
+	flag_definition = {
+		coa = HES_emperor
+		priority = 0 # Commented out for now (update to DH if restored)
+		trigger = {
+			coa_def_hre_emperor_trigger = yes
+		}
+	}		
+	flag_definition = {
+		coa = HES_grand_duchy
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}
+
+BRU = { # Brunswick
+	flag_definition = {
+		coa = BRU
+		priority = 9991
+	}
+	flag_definition = {
+		coa = BRU_emperor
+		priority = 0 # Commented out for now (update to DH if restored)
+		trigger = {
+			coa_def_hre_emperor_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BRU_quarterly
+		priority = 100
+		trigger = {
+			coa_def_duchy_or_higher_trigger = yes
+			coa_def_luneburg_ownership_trigger = yes
+		}
+	}
+}
+
+AQN = { # Aquitaine
+	# AQN - GO lion passant guardant
+	# AQN_capetian - Qtly w/ france modern (same principle as Berry-Aquitaine)
+	# AQN_valois - 15th c. Qtly w/ Berry modern (as designed for Charles de Valois, duke of Berry & Aquitaine)
+
+	flag_definition = {
+		coa = AQN
+		priority = 9991
+	}
+	flag_definition = {
+		coa = AQN_capetian
+		priority = 2
+		trigger = {
+			coa_def_capetian_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = AQN_valois
+		priority = 3
+		trigger = {
+			coa_def_valois_dynasty_trigger = yes
+		}
+	}
+}
+
+NSA = { # Nassau
+	flag_definition = {
+		coa = NSA
+		priority = 9991
+	}
+	flag_definition = {
+		coa = FCB_emperor
+		priority = 0 # Commented out for now (update to DH if restored)
+		trigger = {
+			coa_def_hre_emperor_trigger = yes
+		}
+	}		
+	flag_definition = {
+		coa = NSA_duchy
+		priority = 200
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
 		}
 	}
 }

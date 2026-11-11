@@ -71,7 +71,7 @@ function select(env) {
   if (matches.length > 1) assert.notEqual(one(matches[0], 'priority'), one(matches[1], 'priority'), `Ambiguous name: ${JSON.stringify(env)}`);
   return matches[0] && one(matches[0], 'name');
 }
-const powers = {castilian:['CAS','SPA'], portuguese:['POR'], french:['FRA'], english:['ENG','GBR'], dutch:['NET','HOL'], danish:['DEN'], swedish:['SWE'], brandenburg:['BBR'], prussian:['PRU'], german:['GER'], belgian:['BEL'], omani:['OMA']};
+const powers = {castilian:['CAS','SPA'], portuguese:['POR'], french:['FRA'], english:['ENG','GBR'], dutch:['NET','HOL'], danish:['DEN'], swedish:['SWE'], brandenburg:['BRA'], prussian:['PRU'], german:['GER'], belgian:['BEL'], omani:['OMA']};
 const regions = ['cape_verde','senegal','zanj','southern_africa','congo','canada','atlantic_coast','pacific_coast','great_plains','central_america','gran_colombia','andes','la_plata','brazil'];
 assert(fs.existsSync(path.join(game, 'map_data/state_regions')), 'Game state definitions unavailable');
 const stateText = files(path.join(game,'map_data/state_regions')).map(f => fs.readFileSync(f,'utf8')).join('\n');

@@ -257,7 +257,7 @@ s:STATE_ALSACE_LORRAINE = {
 		}
 		add_homeland = cu:french
 		add_homeland = cu:south_german
-		add_claim = c:U33
+		add_claim = c:PAL
 	}
 s:STATE_ALTAI = {
 		create_state = {
@@ -389,7 +389,7 @@ s:STATE_ANHALT = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:BBR
+			country = c:BRA
 			owned_provinces = { xA51232 xCBA4A5 xE0C0A0 }
 			state_type = incorporated
 		}
@@ -452,7 +452,7 @@ s:STATE_APULIA = {
 	}
 s:STATE_AQUITAINE = {
 		create_state = {
-			country = c:ENG
+			country = c:AQN
 			owned_provinces = { x073FC4 x606DEC x6E16BB x70A080 x76BA85 xA220D0 xBBF036 xF0A080 }
 			state_type = unincorporated
 		}
@@ -744,12 +744,12 @@ s:STATE_BADEN = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:BAD
+			country = c:BDE
 			owned_provinces = { xB00160 }
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:U33
+			country = c:PAL
 			owned_provinces = { x318061 xE0A2B9 }
 			state_type = incorporated
 		}
@@ -759,7 +759,7 @@ s:STATE_BADEN = {
 			state_type = incorporated
 		}
 		add_homeland = cu:south_german
-		add_claim = c:BAD
+		add_claim = c:BDE
 	}
 s:STATE_BAGHDAD = {
 		create_state = {
@@ -936,7 +936,7 @@ s:STATE_BAVARIA = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:U33
+			country = c:PAL
 			owned_provinces = { x82F4B9 }
 			state_type = incorporated
 		}
@@ -1184,7 +1184,7 @@ s:STATE_BRANDENBURG = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:BBR
+			country = c:BRA
 			owned_provinces = { x069CFB x61C0A0 x82F9A8 x83B1A8 x9E7304 xA040A0 xA65DA6 xB90BFF xF77289 xF8D457 }
 			state_type = incorporated
 		}
@@ -1232,7 +1232,7 @@ s:STATE_BRITTANY = {
 	}
 s:STATE_BRUNSWICK = {
 		create_state = {
-			country = c:BRA
+			country = c:BRU
 			owned_provinces = { x2180E0 xA001E0 xA61E6E }
 			state_type = incorporated
 		}
@@ -3086,7 +3086,7 @@ s:STATE_HAITI = {
 	}
 s:STATE_HANNOVER = {
 		create_state = {
-			country = c:BRA
+			country = c:BRU
 			owned_provinces = { x165E05 x694B91 xBBA504 xBF00DF xC00161 }
 			state_type = incorporated
 		}
@@ -4451,7 +4451,7 @@ s:STATE_LURISTAN = {
 	}
 s:STATE_LUZON = {
 		create_state = {
-			country = c:BRU
+			country = c:BNI
 			owned_provinces = { x946A22 }
 			state_type = incorporated
 		}
@@ -5376,7 +5376,7 @@ s:STATE_NINGXIA = {
 
 s:STATE_NORMANDY = {
 		create_state = {
-			country = c:ENG
+			country = c:NRM
 			owned_provinces = { x065CAE x0B7098 x1020C0 x65728E x79C0E6 x9020C0 x90A040 xA786BB xB06080 xB8903B xD642B5 }
 			state_type = unincorporated
 		}
@@ -5552,7 +5552,7 @@ s:STATE_NORTH_ANGOLA = {
 	}
 s:STATE_NORTH_BORNEO = {
 		create_state = {
-			country = c:BRU
+			country = c:BNI
 			owned_provinces = { x002310 x0141B0 x0F01DC x1C6623 x242519 x26DE63 x278E1E x2EE734 x3CCBAA x461E0E x61FE7A x6D3CF9 x6FEE71 x75D5D2 x762FBA x763646 x800170 x8041B0 x821B67 x905338 x91B40F x965EF0 x9E0616 xB689E6 xC0B7FD xC531AE xC65120 xCED863 xD0AC5F xD78953 xDD9CFE xE66512 xE9FB27 xEF6FBE xF2BC79 xF61121 xFB18B8 xFC8025 }
 			state_type = incorporated
 		}
@@ -6212,7 +6212,7 @@ s:STATE_POMERANIA = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:BBR
+			country = c:BRA
 			owned_provinces = { x19AE19 }
 			state_type = incorporated
 		}
@@ -6229,7 +6229,7 @@ s:STATE_POSEN = {
 	}
 s:STATE_PROVENCE = {
 		create_state = {
-			country = c:PAP
+			country = c:X36
 			owned_provinces = { xB0C0E0 }
 			state_type = incorporated
 		}
@@ -6418,7 +6418,7 @@ s:STATE_RHINELAND = {
 			state_type = incorporated
 		}
 		create_state = {
-			country = c:U33
+			country = c:PAL
 			owned_provinces = { x11C021 x5D7A68 x707505 x904020 }
 			state_type = incorporated
 		}
@@ -6544,7 +6544,7 @@ s:STATE_ROSTOV = {
 	}
 s:STATE_RUHR = {
 		create_state = {
-			country = c:NAS
+			country = c:NSA
 			owned_provinces = { x5101A0 xD08021 }
 			state_type = incorporated
 		}
