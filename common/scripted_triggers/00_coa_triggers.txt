@@ -460,8 +460,8 @@ coa_def_russian_ensign_trigger = {
 }
 
 coa_def_austrian_ensign_trigger = {
-	exists = c:AUS
-	c:AUS ?= { save_temporary_scope_as = custom_overlord }
+	exists = c:HAB
+	c:HAB ?= { save_temporary_scope_as = custom_overlord }
 	coa_def_ensign_trigger = yes
 }
 

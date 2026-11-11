@@ -18,7 +18,7 @@
 	aggression = {
 		value = 0.20
 
-		# Phase I: establish island bases before attempting the conquest of Mexico.
+		# Caribbean bases remain the highest priority.
 		if = {
 			limit = {
 				NOT = { scope:target_country = { is_subject_of = root } }
@@ -32,10 +32,9 @@
 			add = 3.50
 		}
 
-		# Phase II: the mainland opens after Spain establishes its Caribbean bases.
+		# Mainland targets are available as soon as Spain can reach them.
 		if = {
 			limit = {
-				has_variable = aoc_spanish_mainland_phase
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
@@ -47,10 +46,9 @@
 			add = 2.75
 		}
 
-		# Phase III: after a mainland foothold, attention broadens southward.
+		# South America remains a standing overseas target.
 		if = {
 			limit = {
-				has_variable = aoc_spanish_south_america_phase
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				scope:target_country = {
@@ -125,6 +123,11 @@
 		}
 	}
 
+	strategic_region_stance_type_scores = {
+		stance_colonize_region = { value = 40 }
+	}
+	max_active_stances = { add = 3 }
+
 	strategic_region_scores = {
 		if = {
 			limit = {
@@ -142,7 +145,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_spanish_south_america_phase
 				scope:region = sr:region_gran_colombia
 			}
 			add = 600
@@ -150,7 +152,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_spanish_south_america_phase
 				scope:region = sr:region_andes
 			}
 			add = 500
@@ -158,7 +159,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_spanish_southern_cone_phase
 				scope:region = sr:region_la_plata
 			}
 			add = 350
@@ -241,7 +241,6 @@
 
 				if = {
 					limit = {
-						has_variable = aoc_spanish_mainland_phase
 						scope:target_country = {
 							any_scope_state = { is_in_geographic_region = geographic_region_aoc_spanish_mainland }
 						}
@@ -292,7 +291,6 @@
 
 				if = {
 					limit = {
-						has_variable = aoc_spanish_mainland_phase
 						scope:target_country = {
 							any_scope_state = { is_in_geographic_region = geographic_region_aoc_spanish_mainland }
 						}
@@ -379,7 +377,6 @@
 
 			if = {
 				limit = {
-					has_variable = aoc_spanish_mainland_phase
 					scope:target_state = { is_in_geographic_region = geographic_region_aoc_spanish_mainland }
 				}
 				add = 400
@@ -387,7 +384,6 @@
 
 			if = {
 				limit = {
-					has_variable = aoc_spanish_south_america_phase
 					scope:target_state = {
 						OR = {
 							region = sr:region_gran_colombia
@@ -445,7 +441,6 @@
 
 			if = {
 				limit = {
-					has_variable = aoc_spanish_mainland_phase
 					scope:target_state = { is_in_geographic_region = geographic_region_aoc_spanish_mainland }
 				}
 				add = 200
@@ -453,7 +448,6 @@
 
 			if = {
 				limit = {
-					has_variable = aoc_spanish_south_america_phase
 					scope:target_state = {
 						OR = {
 							region = sr:region_gran_colombia

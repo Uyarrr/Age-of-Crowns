@@ -63,7 +63,7 @@ ITA = {
 
 	potential = {
         NOR = {
-            c:AUS ?= this
+            c:HAB ?= this
             c:KUK ?= this
             c:HRE ?= this
         }
@@ -76,7 +76,7 @@ ITA = {
 		}
 		is_country_type = recognized
         NOR = {
-            c:AUS ?= this
+            c:HAB ?= this
             c:KUK ?= this
             c:HRE ?= this
         }
@@ -86,7 +86,7 @@ ITA = {
 	can_be_formation_candidate = {
 		country_rank >= rank_value:minor_power
         NOR = {
-            c:AUS ?= this
+            c:HAB ?= this
             c:KUK ?= this
             c:HRE ?= this
         }
@@ -221,7 +221,7 @@ YUG = {
 	
 	potential = {
         NOR = {
-            c:AUS ?= this
+            c:HAB ?= this
             c:KUK ?= this
         }
 		trigger_if = {
@@ -237,7 +237,7 @@ YUG = {
 
 	possible = {
         NOR = { # Not Danubian State or HRE
-            c:AUS ?= this
+            c:HAB ?= this
             c:KUK ?= this
             c:HRE ?= this
         }
@@ -257,7 +257,7 @@ YUG = {
 	can_be_formation_candidate = {
 		country_rank >= rank_value:major_power
         NOR = { # Not Danubian State or HRE
-            c:AUS ?= this
+            c:HAB ?= this
             c:KUK ?= this
             c:HRE ?= this
         }

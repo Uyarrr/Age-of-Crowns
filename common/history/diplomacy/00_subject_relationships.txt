@@ -163,11 +163,11 @@ DIPLOMACY = {
 	}
 	c:BOH ?= {
 		create_diplomatic_pact = {
-			country = c:U26
+			country = c:OPL
 			type = puppet
 		}
 	}
-	c:U26 ?= {
+	c:OPL ?= {
 		add_liberty_desire = -33.125
 	}
 	c:SAX ?= {

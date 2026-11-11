@@ -1,0 +1,67 @@
+﻿# The Church is a standing, global journal entry. Its involved-country list is
+# maintained by the journal system from each country's current state religion.
+je_aoc_catholic_church = {
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+	group = je_group_aoc_catholic_church
+
+	activation_description = { always = yes }
+	is_shown_when_inactive = { always = yes }
+	scripted_progress_bar = aoc_catholic_reform_desire
+	widget = {
+		gui = "gui/journal_entry_widgets/aoc_catholic_church.gui"
+		name = "widget_aoc_catholic_pope"
+		container = "custom_widget_container_je_icon"
+	}
+
+	should_be_involved = {
+		country_has_state_religion = rel:catholic
+	}
+	should_show_when_not_involved = { always = yes }
+	should_be_pinned_by_default_involved = yes
+
+	# A country reference on the JE works in the UI for a contextless entry.
+	immediate = {
+		aoc_church_initialize_tithe = yes
+		aoc_church_refresh_relief_debtors = yes
+		if = {
+			limit = { exists = c:PAP }
+			scope:journal_entry = {
+				set_variable = { name = aoc_papal_country value = c:PAP }
+			}
+		}
+	}
+
+	# Also initialize the reference for a save in which the entry was already active.
+	on_weekly_pulse = {
+		effect = {
+			aoc_church_initialize_tithe = yes
+			aoc_church_collect_weekly_tithe = yes
+			aoc_church_refresh_relief_debtors = yes
+			if = {
+				limit = { exists = c:PAP }
+				scope:journal_entry = {
+					set_variable = { name = aoc_papal_country value = c:PAP }
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			aoc_church_settle_tithe = yes
+			aoc_church_ai_issue_papal_bulls = yes
+			aoc_church_refresh_relief_debtors = yes
+
+			if = {
+				limit = {
+					NOT = { has_global_variable = aoc_reformation_started }
+					scope:journal_entry = {
+						"scripted_bar_progress(aoc_catholic_reform_desire)" >= 100
+					}
+				}
+				# Future Reformation content can use this global flag.
+				set_global_variable = aoc_reformation_started
+			}
+		}
+	}
+}

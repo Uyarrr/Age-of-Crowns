@@ -7,10 +7,10 @@
 
 	is_visible = {
 		NOR = {
-			c:AUS ?= this # For the Austrian Empire and its subjects
+			c:HAB ?= this # For the Austrian Empire and its subjects
 			AND = {
-				exists = c:AUS
-				is_subject_of = c:AUS
+				exists = c:HAB
+				is_subject_of = c:HAB
 			}
 		}
 	}
@@ -61,10 +61,10 @@ law_crownland_diets = {
 
 	is_visible = {
 		OR = {
-			c:AUS ?= this # For the Austrian Empire and its subjects
+			c:HAB ?= this # For the Austrian Empire and its subjects
 			AND = {
-				exists = c:AUS
-				is_subject_of = c:AUS
+				exists = c:HAB
+				is_subject_of = c:HAB
 			}
 		}
 	}

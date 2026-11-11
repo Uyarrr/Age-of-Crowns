@@ -1,0 +1,195 @@
+﻿# The journal provides the member flag grid below this papal header.
+flowcontainer = {
+	name = "widget_aoc_catholic_pope"
+	ignoreinvisible = yes
+	direction = vertical
+	spacing = 8
+
+	widget = {
+		size = { 520 220 }
+		parentanchor = hcenter
+
+		background = {
+			using = entry_bg_fancy_dark
+			alpha = 0.9
+		}
+		background = {
+			texture = "gfx/interface/illustrations/journal/je_group_illu_international_situations.dds"
+			using = top_illu_properties
+			alpha = 0.25
+		}
+
+		character_portrait_medium_torso = {
+			parentanchor = left|vcenter
+			position = { 35 0 }
+			datacontext = "[JournalEntry.MakeScope.Var('aoc_papal_country').GetCountry.GetRuler]"
+			blockoverride "show_hat" {}
+			blockoverride "highlight" {}
+		}
+
+		textbox = {
+			parentanchor = top|left
+			position = { 185 53 }
+			size = { 310 32 }
+			text = "aoc_catholic_church_pope_title"
+			using = fontsize_large
+			align = center|nobaseline
+		}
+		textbox = {
+			parentanchor = top|left
+			position = { 185 93 }
+			size = { 310 30 }
+			text = "[JournalEntry.MakeScope.Var('aoc_papal_country').GetCountry.GetRuler.GetFullName]"
+			using = fontsize_medium
+			align = center|nobaseline
+			elide = right
+		}
+		textbox = {
+			parentanchor = top|left
+			position = { 185 133 }
+			size = { 310 28 }
+			text = "aoc_catholic_church_papal_seat"
+			using = fontsize_small
+			align = center|nobaseline
+		}
+	}
+
+	flowcontainer = {
+		parentanchor = hcenter
+		spacing = 4
+
+		button_tab = {
+			size = { 253 35 }
+			text = "aoc_church_overview_tab"
+			down = "[Not(GetVariableSystem.Exists('aoc_church_bulls_tab'))]"
+			onclick = "[GetVariableSystem.Clear('aoc_church_bulls_tab')]"
+		}
+		button_tab = {
+			size = { 253 35 }
+			text = "aoc_church_bulls_tab"
+			down = "[GetVariableSystem.Exists('aoc_church_bulls_tab')]"
+			onclick = "[GetVariableSystem.Set('aoc_church_bulls_tab', 'true')]"
+		}
+	}
+
+	textbox = {
+		parentanchor = hcenter
+		size = { 510 78 }
+		text = "aoc_church_tithe_balance"
+		tooltip = "aoc_church_tithe_tooltip"
+		multiline = yes
+		align = center|nobaseline
+		background = { using = entry_bg_fancy_dark }
+	}
+
+	textbox = {
+		parentanchor = hcenter
+		size = { 510 28 }
+		text = "aoc_church_personal_tithe_status"
+		align = center|nobaseline
+	}
+
+	flowcontainer = {
+		parentanchor = hcenter
+		direction = vertical
+		spacing = 9
+		ignoreinvisible = yes
+		visible = "[GetVariableSystem.Exists('aoc_church_bulls_tab')]"
+
+		textbox = {
+			size = { 510 28 }
+			text = "aoc_church_last_bull_status"
+			align = center|nobaseline
+		}
+		button = {
+			using = default_button_action
+			size = { 510 48 }
+			text = "aoc_church_dei_gratia_rex"
+			tooltip = "aoc_church_dei_gratia_rex_tooltip"
+			enabled = "[GetScriptedGui('aoc_church_dei_gratia_rex_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			onclick = "[GetScriptedGui('aoc_church_dei_gratia_rex_gui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+		}
+		button = {
+			using = default_button_action
+			size = { 510 48 }
+			text = "aoc_church_illius_qui_se_pro_divini"
+			tooltip = "aoc_church_illius_tooltip"
+			enabled = "[GetScriptedGui('aoc_church_illius_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			onclick = "[GetScriptedGui('aoc_church_illius_gui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+		}
+
+		button = {
+			using = default_button_action
+			parentanchor = hcenter
+			size = { 510 48 }
+			text = "aoc_church_relief_title"
+			tooltip = "aoc_church_relief_tooltip"
+			enabled = "[GetScriptedGui('aoc_church_issue_relief_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			onclick = "[GetVariableSystem.Toggle('aoc_church_pick_relief_recipient')]"
+		}
+		textbox = {
+			size = { 510 28 }
+			text = "aoc_church_relief_cooldown_status"
+			visible = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.ScriptValue('aoc_church_relief_on_cooldown'), '(CFixedPoint)0')]"
+			align = center|nobaseline
+		}
+		textbox = {
+			size = { 510 28 }
+			text = "aoc_church_relief_no_grant"
+			visible = "[IsDataModelEmpty(JournalEntry.MakeScope.GetList('aoc_church_relief_grants'))]"
+			align = center|nobaseline
+		}
+		flowcontainer = {
+			direction = vertical
+			spacing = 4
+			datamodel = "[JournalEntry.MakeScope.GetList('aoc_church_relief_grants')]"
+			item = {
+				textbox = {
+					size = { 510 52 }
+					datacontext = "[Scope.GetState.GetCountry]"
+					text = "aoc_church_relief_active"
+					tooltip = "aoc_church_relief_status_tooltip"
+					multiline = yes
+					align = center|nobaseline
+				}
+			}
+		}
+		textbox = {
+			size = { 510 30 }
+			text = "aoc_church_pick_relief_recipient"
+			align = center|nobaseline
+			visible = "[And(GetVariableSystem.Exists('aoc_church_pick_relief_recipient'), GetScriptedGui('aoc_church_issue_relief_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+		}
+		textbox = {
+			size = { 510 30 }
+			text = "aoc_church_no_debtors"
+			align = center|nobaseline
+			visible = "[And(GetVariableSystem.Exists('aoc_church_pick_relief_recipient'), And(GetScriptedGui('aoc_church_issue_relief_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End), IsDataModelEmpty(JournalEntry.MakeScope.GetList('aoc_church_relief_debtors'))))]"
+		}
+		dynamicgridbox = {
+			visible = "[And(GetVariableSystem.Exists('aoc_church_pick_relief_recipient'), GetScriptedGui('aoc_church_issue_relief_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+			datamodel = "[JournalEntry.MakeScope.GetList('aoc_church_relief_debtors')]"
+			datamodel_wrap = 3
+			flipdirection = yes
+
+			item = {
+				widget = {
+					size = { 170 44 }
+					datacontext = "[Scope.GetState.GetCountry]"
+					visible = "[GreaterThan_CFixedPoint(Country.GetPrincipal, '(CFixedPoint)0')]"
+					button_standard = {
+						parentanchor = center
+						size = { 160 34 }
+						text = "[Country.GetName]"
+						elide = right
+						tooltip = "aoc_church_relief_recipient_tooltip"
+						enabled = "[GetScriptedGui('aoc_church_issue_relief_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_relief_target', Country.MakeScope).End)]"
+						onclick = "[GetScriptedGui('aoc_church_issue_relief_gui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_relief_target', Country.MakeScope).End)]"
+						onclick = "[GetVariableSystem.Clear('aoc_church_pick_relief_recipient')]"
+					}
+				}
+			}
+		}
+
+	}
+}

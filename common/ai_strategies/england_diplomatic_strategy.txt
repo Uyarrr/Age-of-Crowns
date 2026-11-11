@@ -19,6 +19,48 @@
 
 	recklessness = { value = 1.15 }
 
+	# The Crown's diplomatic strategy also drives its overseas expansion.
+	building_group_weights = { bg_navy = 1.5 }
+	colonial_interest_ratio = { value = 0.65 }
+	max_active_stances = { add = 3 }
+	strategic_region_stance_type_scores = {
+		stance_colonize_region = { value = 35 }
+	}
+	strategic_region_scores = {
+		if = {
+			limit = { scope:region = sr:region_southern_africa }
+			add = 700
+		}
+		if = {
+			limit = { scope:region = sr:region_south_india }
+			add = 550
+		}
+		if = {
+			limit = { scope:region = sr:region_north_india }
+			add = 400
+		}
+		if = {
+			limit = {
+				scope:region = {
+					any_scope_state = {
+						is_in_geographic_region = geographic_region_aoc_england_australia
+					}
+				}
+			}
+			add = 450
+		}
+		if = {
+			limit = {
+				scope:region = {
+					any_scope_state = {
+						is_in_geographic_region = geographic_region_aoc_england_new_zealand
+					}
+				}
+			}
+			add = 300
+		}
+	}
+
 	# ---------------------------------------------------------------------
 	# AGGRESSION
 	# ---------------------------------------------------------------------

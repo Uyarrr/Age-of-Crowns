@@ -6,6 +6,10 @@ law_colonial_nation = {
 	can_enact = { aoc_is_or_was_colonial_nation = yes }
 	can_impose = { aoc_is_or_was_colonial_nation = yes }
 	on_enact = { set_variable = aoc_was_colonial_nation }
-	modifier = { state_working_adult_ratio_add = 0.10 }
+	modifier = {
+		state_working_adult_ratio_add = 0.10
+		# Colonial administrations have no ordinary company charters.
+		country_max_companies_add = -100
+	}
 	ai_enact_weight_modifier = { value = 1000 }
 }

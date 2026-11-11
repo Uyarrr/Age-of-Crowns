@@ -18,7 +18,7 @@
 	aggression = {
 		value = 0.25
 
-		# Portugal initially follows the African coast rather than rushing Brazil.
+		# The African coast is a route to Brazil and the Indian Ocean.
 		if = {
 			limit = {
 				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
@@ -37,7 +37,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_brazil_phase
 				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
@@ -51,7 +50,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_brazil_phase
 				exists = c:BRZ
 				scope:target_country = { c:BRZ ?= this }
 				NOT = { scope:target_country = { is_subject_of = root } }
@@ -62,7 +60,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_indian_ocean_phase
 				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
@@ -126,6 +123,11 @@
 		}
 	}
 
+	strategic_region_stance_type_scores = {
+		stance_colonize_region = { value = 40 }
+	}
+	max_active_stances = { add = 3 }
+
 	strategic_region_scores = {
 		if = {
 			limit = { scope:region = sr:region_west_africa }
@@ -144,7 +146,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_brazil_phase
 				scope:region = sr:region_brazil
 			}
 			add = 950
@@ -166,7 +167,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_indian_ocean_phase
 				scope:region = sr:region_southern_africa
 			}
 			add = 350
@@ -174,7 +174,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_indian_ocean_phase
 				scope:region = sr:region_east_africa
 			}
 			add = 300
@@ -182,7 +181,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_indian_ocean_phase
 				scope:region = sr:region_arabia
 			}
 			add = 175
@@ -190,7 +188,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_indian_ocean_phase
 				scope:region = sr:region_south_india
 			}
 			add = 300
@@ -198,7 +195,6 @@
 
 		if = {
 			limit = {
-				has_variable = aoc_portuguese_indian_ocean_phase
 				scope:region = sr:region_indonesia
 			}
 			add = 250
@@ -246,11 +242,9 @@
 				OR = {
 					scope:target_country = { any_scope_state = { region = sr:region_west_africa } }
 					AND = {
-						has_variable = aoc_portuguese_brazil_phase
 						scope:target_country = { any_scope_state = { region = sr:region_brazil } }
 					}
 					AND = {
-						has_variable = aoc_portuguese_indian_ocean_phase
 						scope:target_country = {
 							any_scope_state = {
 								OR = {
@@ -269,7 +263,6 @@
 
 				if = {
 					limit = {
-						has_variable = aoc_portuguese_brazil_phase
 						scope:target_country = {
 							any_scope_state = { region = sr:region_brazil }
 						}
@@ -279,7 +272,6 @@
 
 				if = {
 					limit = {
-						has_variable = aoc_portuguese_brazil_phase
 						exists = c:BRZ
 						scope:target_country = { c:BRZ ?= this }
 					}
@@ -300,7 +292,6 @@
 				OR = {
 					scope:target_country = { any_scope_state = { region = sr:region_west_africa } }
 					AND = {
-						has_variable = aoc_portuguese_brazil_phase
 						scope:target_country = { any_scope_state = { region = sr:region_brazil } }
 					}
 				}
@@ -341,7 +332,6 @@
 
 			if = {
 				limit = {
-					has_variable = aoc_portuguese_brazil_phase
 					scope:target_country = {
 						any_scope_state = { region = sr:region_brazil }
 					}
@@ -368,7 +358,6 @@
 					OR = {
 						scope:target_country = { any_scope_state = { region = sr:region_west_africa } }
 						AND = {
-							has_variable = aoc_portuguese_indian_ocean_phase
 							scope:target_country = {
 								any_scope_state = {
 									OR = {
@@ -388,7 +377,6 @@
 		conquer_state = {
 			if = {
 				limit = {
-					has_variable = aoc_portuguese_brazil_phase
 					scope:target_state = { region = sr:region_brazil }
 				}
 				add = 225
@@ -416,7 +404,6 @@
 
 			if = {
 				limit = {
-					has_variable = aoc_portuguese_brazil_phase
 					scope:target_state = { region = sr:region_brazil }
 				}
 				add = 100
@@ -431,7 +418,6 @@
 
 			if = {
 				limit = {
-					has_variable = aoc_portuguese_indian_ocean_phase
 					scope:target_state = {
 						OR = {
 							region = sr:region_southern_africa
@@ -444,7 +430,6 @@
 
 			if = {
 				limit = {
-					has_variable = aoc_portuguese_indian_ocean_phase
 					scope:target_state = {
 						OR = {
 							region = sr:region_south_india

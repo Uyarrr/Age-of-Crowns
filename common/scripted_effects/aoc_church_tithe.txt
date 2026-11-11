@@ -1,0 +1,259 @@
+﻿aoc_church_initialize_tithe = {
+	if = {
+		limit = { NOT = { has_global_variable = aoc_church_tithe } }
+		set_global_variable = { name = aoc_church_tithe value = 0 }
+		set_global_variable = { name = aoc_church_tithe_last_collection value = 0 }
+		set_global_variable = { name = aoc_church_relief_months value = 0 }
+	}
+	if = {
+		limit = { NOT = { has_global_variable = aoc_church_tithe_current_collection } }
+		set_global_variable = { name = aoc_church_tithe_current_collection value = 0 }
+	}
+	# Older saves use the debt at migration and keep up to six payments.
+	if = {
+		limit = { has_global_variable = aoc_church_relief_recipient }
+		global_var:aoc_church_relief_recipient ?= {
+			if = {
+				limit = { aoc_church_relief_debtor = yes global_var:aoc_church_relief_months > 0 }
+				set_variable = {
+					name = aoc_church_relief_remaining
+					value = { value = global_var:aoc_church_relief_months max = 6 }
+				}
+				aoc_church_set_relief_installment = yes
+				set_global_variable = { name = aoc_church_relief_issuance_cooldown months = 3 }
+			}
+		}
+		remove_global_variable = aoc_church_relief_recipient
+		remove_global_variable = aoc_church_relief_months
+	}
+}
+
+aoc_church_collect_weekly_tithe = {
+	every_country = {
+		limit = {
+			OR = {
+				country_has_state_religion = rel:catholic
+				has_variable = aoc_church_tithe_verified_rate
+				has_modifier = aoc_church_tithe_budget_expense
+			}
+		}
+		# Credit the Church for the rate carried by the previous week's budget.
+		if = {
+			limit = {
+				has_variable = aoc_church_tithe_verified_rate
+				has_modifier = aoc_church_tithe_budget_expense
+			}
+			if = {
+				limit = { NOT = { has_variable = aoc_church_tithe_accrued } }
+				set_variable = { name = aoc_church_tithe_accrued value = 0 }
+			}
+			change_variable = { name = aoc_church_tithe_accrued add = var:aoc_church_tithe_verified_rate }
+			change_global_variable = { name = aoc_church_tithe_current_collection add = var:aoc_church_tithe_verified_rate }
+			change_global_variable = { name = aoc_church_tithe add = var:aoc_church_tithe_verified_rate }
+		}
+		if = {
+			limit = { has_modifier = aoc_church_tithe_budget_expense }
+			remove_modifier = aoc_church_tithe_budget_expense
+		}
+		if = {
+			limit = {
+				country_has_state_religion = rel:catholic
+				aoc_church_weekly_tithe > 0
+			}
+			# Keep the budget charge and the Church ledger on the same weekly rate.
+			# Reading back the aggregate expense modifier here yields zero in saved games.
+			set_variable = { name = aoc_church_tithe_verified_rate value = aoc_church_weekly_tithe }
+			add_modifier = {
+				name = aoc_church_tithe_budget_expense
+				multiplier = var:aoc_church_tithe_verified_rate
+				days = 8
+			}
+		}
+		else = {
+			remove_variable = aoc_church_tithe_verified_rate
+		}
+	}
+}
+
+# Country scope, applied to the recipient by either the player or AI.
+aoc_church_issue_relief = {
+	set_variable = { name = aoc_church_relief_remaining value = 6 }
+	aoc_church_set_relief_installment = yes
+	set_global_variable = { name = aoc_church_relief_issuance_cooldown months = 3 }
+	set_global_variable = { name = aoc_church_last_bull value = 3 }
+}
+
+aoc_church_set_relief_installment = {
+	set_variable = {
+		name = aoc_church_relief_installment
+		value = { value = principal multiply = 0.10 }
+	}
+	set_variable = { name = aoc_church_relief_recipient_cooldown years = 1 }
+}
+
+aoc_church_settle_tithe = {
+	aoc_church_initialize_tithe = yes
+	set_global_variable = { name = aoc_church_tithe_last_collection value = global_var:aoc_church_tithe_current_collection }
+	set_global_variable = { name = aoc_church_tithe_current_collection value = 0 }
+	every_country = {
+		limit = {
+			OR = {
+				has_variable = aoc_church_tithe_paid
+				has_variable = aoc_church_relief_paid
+				has_variable = aoc_church_tithe_accrued
+			}
+		}
+		if = {
+			limit = { has_variable = aoc_church_relief_paid }
+			remove_variable = aoc_church_relief_paid
+		}
+		if = {
+			limit = { has_variable = aoc_church_tithe_accrued }
+			set_variable = { name = aoc_church_tithe_paid value = var:aoc_church_tithe_accrued }
+			remove_variable = aoc_church_tithe_accrued
+		}
+		else = {
+			remove_variable = aoc_church_tithe_paid
+		}
+	}
+
+	every_country = {
+		limit = { has_variable = aoc_church_relief_remaining }
+		if = {
+			limit = {
+				aoc_church_relief_debtor = yes
+				aoc_church_monthly_relief > 0
+			}
+			set_variable = { name = aoc_church_relief_paid value = aoc_church_monthly_relief }
+			add_treasury = var:aoc_church_relief_paid
+			change_global_variable = { name = aoc_church_tithe subtract = var:aoc_church_relief_paid }
+		}
+		change_variable = { name = aoc_church_relief_remaining subtract = 1 }
+		if = {
+			limit = {
+				OR = {
+					var:aoc_church_relief_remaining <= 0
+					NOT = { aoc_church_relief_debtor = yes }
+				}
+			}
+			remove_variable = aoc_church_relief_remaining
+			remove_variable = aoc_church_relief_installment
+		}
+	}
+}
+
+aoc_church_ai_issue_relief = {
+	if = {
+		limit = {
+			c:PAP ?= {
+				is_ai = yes
+				aoc_church_can_issue_relief = yes
+			}
+		}
+		ordered_country = {
+			limit = {
+				aoc_church_relief_eligible = yes
+				"relations(c:PAP)" >= relations_threshold:neutral
+			}
+			order_by = "relations(c:PAP)"
+			max = 1
+			check_range_bounds = no
+			aoc_church_issue_relief = yes
+		}
+	}
+}
+
+# Shared by the player buttons and the AI. Recheck the balance before spending.
+aoc_church_issue_papal_bull = {
+	if = {
+		limit = { aoc_church_can_issue_papal_bull = { COOLDOWN = $COOLDOWN$ } }
+		change_global_variable = { name = aoc_church_tithe subtract = aoc_church_papal_bull_cost }
+		set_global_variable = { name = $COOLDOWN$ years = 5 }
+		set_global_variable = { name = aoc_church_last_bull value = $BULL_ID$ }
+		every_country = {
+			limit = { country_has_state_religion = rel:catholic }
+			add_modifier = { name = $MODIFIER$ years = 3 }
+		}
+	}
+}
+
+aoc_church_ai_issue_papal_bulls = {
+	c:PAP ?= {
+		if = {
+			limit = {
+				is_ai = yes
+				country_has_state_religion = rel:catholic
+			}
+			if = {
+				limit = {
+					aoc_church_can_issue_papal_bull = { COOLDOWN = aoc_church_illius_cooldown }
+					any_country = {
+						country_has_state_religion = rel:catholic
+						is_at_war = yes
+					}
+				}
+				aoc_church_issue_papal_bull = {
+					COOLDOWN = aoc_church_illius_cooldown
+					MODIFIER = aoc_church_illius_qui_se_pro_divini
+					BULL_ID = 2
+				}
+			}
+			else_if = {
+				limit = {
+					aoc_church_can_issue_papal_bull = { COOLDOWN = aoc_church_dei_gratia_rex_cooldown }
+				}
+				aoc_church_issue_papal_bull = {
+					COOLDOWN = aoc_church_dei_gratia_rex_cooldown
+					MODIFIER = aoc_church_dei_gratia_rex
+					BULL_ID = 1
+				}
+			}
+			else = {
+				aoc_church_ai_issue_relief = yes
+			}
+		}
+	}
+}
+
+aoc_church_refresh_relief_debtors = {
+	scope:journal_entry = {
+		clear_variable_list = aoc_church_relief_debtors
+		clear_variable_list = aoc_church_relief_grants
+	}
+	every_country = {
+		limit = {
+			has_variable = aoc_church_relief_remaining
+			exists = capital
+		}
+		scope:journal_entry = {
+			add_to_variable_list = { name = aoc_church_relief_grants target = prev.capital }
+		}
+	}
+	aoc_church_add_debtors_by_name = yes
+	# Include countries with dynamic tags or tags added by another mod.
+	every_country = {
+		limit = {
+			aoc_church_relief_eligible = yes
+			exists = capital
+			scope:journal_entry = {
+				NOT = { is_target_in_variable_list = { name = aoc_church_relief_debtors target = prev.capital } }
+			}
+		}
+		scope:journal_entry = {
+			add_to_variable_list = { name = aoc_church_relief_debtors target = prev.capital }
+		}
+	}
+}
+
+aoc_church_add_relief_debtor = {
+	if = {
+		limit = {
+			aoc_church_relief_eligible = yes
+			exists = capital
+		}
+		scope:journal_entry = {
+			# The picker resolves each capital's owner as a Country in the GUI.
+			add_to_variable_list = { name = aoc_church_relief_debtors target = prev.capital }
+		}
+	}
+}

@@ -13,7 +13,7 @@
 				activate_production_methods={ "pm_building_caravan_hub_main_1" }
 			}
 		}
-		region_state:V54={
+		region_state:MAN={
 		}
 		region_state:VEN={
 			create_building={
@@ -2087,12 +2087,12 @@
 		}
 	}
 	s:STATE_SLOVENIA={
-		region_state:AUS={
+		region_state:HAB={
 			create_building={
 				building="building_naval_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -2103,7 +2103,7 @@
 				building="building_trade_center"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2114,7 +2114,7 @@
 				building="building_road"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2199,12 +2199,12 @@
 		}
 	}
 	s:STATE_ISTRIA={
-		region_state:AUS={
+		region_state:HAB={
 			create_building={
 				building="building_naval_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -2215,7 +2215,7 @@
 				building="building_shipyard"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=3
 					}
 				}
@@ -2226,7 +2226,7 @@
 				building="building_trade_center"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2237,7 +2237,7 @@
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2248,7 +2248,7 @@
 				building="building_road"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}

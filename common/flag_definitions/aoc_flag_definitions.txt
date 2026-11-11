@@ -1172,3 +1172,39 @@ BOS = { # Bosnia
 		}
 	}
 }
+
+HAB = { # Austria TODO
+	flag_definition = {
+		coa = HAB
+		priority = 1
+	}
+	flag_definition = {
+		coa = HAB_emperor
+		priority = 0 # Commented out for now (update to DH if restored)
+		trigger = {
+			coa_def_hre_emperor_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = HAB_IMPERIAL
+		priority = 50
+		trigger = {
+			has_variable = hab_imperial_flag # Monarchy, empire rank, revo era
+		}
+	}
+}
+
+MAN = { # Mantua
+	flag_definition = {
+		coa = MAN
+		priority = 1
+	}
+	flag_definition = {
+		coa = MAN_duchy
+		priority = 9992
+		trigger = {
+			# age 3 possibly
+			coa_def_duchy_or_higher_trigger = yes
+		}
+	}
+}

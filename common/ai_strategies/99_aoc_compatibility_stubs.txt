@@ -14,13 +14,6 @@ ai_strategy_anti_imperialism = {
 	weight = { value = 0 }
 }
 
-ai_strategy_colonial_extraction = {
-	icon = "gfx/interface/icons/ai_strategy_icons/placate_population.dds"
-	type = administrative
-	possible = { always = no }
-	weight = { value = 0 }
-}
-
 ai_strategy_economic_imperialism = {
 	icon = "gfx/interface/icons/ai_strategy_icons/placate_population.dds"
 	type = diplomatic

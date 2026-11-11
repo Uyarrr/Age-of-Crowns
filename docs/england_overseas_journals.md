@@ -46,7 +46,7 @@ Country completion flags prevent repeated rewards, including after tag formation
 ## Charters and companies
 
 The five charter buttons create the existing historical tags **at runtime**:
-SAF (Cape), BIC (India), AST (Australia), NZL (New Zealand), and HBC. `AUS` is
+SAF (Cape), BIC (India), AST (Australia), NZL (New Zealand), and HBC. `HAB` is
 Austria and is deliberately not used. Fixed tags preserve existing country,
 flag, and formation content; no duplicate anonymous dynamic country is generated.
 An existing foreign-held tag blocks the charter. Existing qualifying subjects can

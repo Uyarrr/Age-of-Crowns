@@ -1,0 +1,30 @@
+﻿aoc_church_can_issue_relief = {
+	c:PAP ?= this
+	country_has_state_religion = rel:catholic
+	NOT = { has_global_variable = aoc_church_relief_issuance_cooldown }
+	has_global_variable = aoc_church_tithe
+	global_var:aoc_church_tithe > 0
+}
+
+# Country scope. Debt is outstanding credit, independent of the weekly budget balance.
+aoc_church_relief_debtor = {
+	NOT = { c:PAP ?= this }
+	country_has_state_religion = rel:catholic
+	principal > 0
+}
+
+aoc_church_relief_eligible = {
+	aoc_church_relief_debtor = yes
+	NOT = { has_variable = aoc_church_relief_remaining }
+	NOT = { has_variable = aoc_church_relief_recipient_cooldown }
+}
+
+aoc_church_can_issue_papal_bull = {
+	c:PAP ?= this
+	country_has_state_religion = rel:catholic
+	NOT = { has_global_variable = $COOLDOWN$ }
+	has_global_variable = aoc_church_tithe
+	aoc_church_papal_bull_cost > 0
+	global_var:aoc_church_tithe >= aoc_church_papal_bull_cost
+}
+

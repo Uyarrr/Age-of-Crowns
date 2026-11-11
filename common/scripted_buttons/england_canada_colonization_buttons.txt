@@ -16,7 +16,6 @@ je_england_canada_new_brunswick = {
 	ai_chance = { value = 100 }
 	effect = {
 		save_scope_as = england_canada_overlord
-		religion = { save_scope_as = england_canada_overlord_religion }
 		create_country = {
 			tag = NBS
 			origin = root
@@ -43,8 +42,6 @@ je_england_canada_new_brunswick = {
 			province = p:x8E553E
 			province = p:x70C040
 			on_created = {
-				save_scope_as = england_canada_new_subject
-				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_new_brunswick_established
 				activate_law = law_type:law_colonial_administration
 				aoc_initialize_colonial_nation_effect = yes
@@ -52,6 +49,7 @@ je_england_canada_new_brunswick = {
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
 		}
+		c:NBS = { england_canada_inherit_overlord_identity_effect = yes }
 		hidden_effect = {
 			create_diplomatic_pact = { country = c:NBS type = colony }
 		}
@@ -74,7 +72,6 @@ je_england_canada_nova_scotia = {
 	ai_chance = { value = 100 }
 	effect = {
 		save_scope_as = england_canada_overlord
-		religion = { save_scope_as = england_canada_overlord_religion }
 		create_country = {
 			tag = NVS
 			origin = root
@@ -97,8 +94,6 @@ je_england_canada_nova_scotia = {
 			province = p:xEAFA99
 			province = p:xF04040
 			on_created = {
-				save_scope_as = england_canada_new_subject
-				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_nova_scotia_established
 				activate_law = law_type:law_colonial_administration
 				aoc_initialize_colonial_nation_effect = yes
@@ -106,6 +101,7 @@ je_england_canada_nova_scotia = {
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
 		}
+		c:NVS = { england_canada_inherit_overlord_identity_effect = yes }
 		hidden_effect = {
 			create_diplomatic_pact = { country = c:NVS type = colony }
 		}
@@ -126,14 +122,11 @@ je_england_canada_quebec = {
 	ai_chance = { value = 100 }
 	effect = {
 		save_scope_as = england_canada_overlord
-		religion = { save_scope_as = england_canada_overlord_religion }
 		create_country = {
 			tag = QUE
 			origin = root
 			state = s:STATE_QUEBEC.region_state:ROOT
 			on_created = {
-				save_scope_as = england_canada_new_subject
-				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_quebec_established
 				activate_law = law_type:law_colonial_administration
 				aoc_initialize_colonial_nation_effect = yes
@@ -141,6 +134,7 @@ je_england_canada_quebec = {
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
 		}
+		c:QUE = { england_canada_inherit_overlord_identity_effect = yes }
 		hidden_effect = {
 			create_diplomatic_pact = { country = c:QUE type = colony }
 		}
@@ -161,14 +155,11 @@ je_england_canada_ontario = {
 	ai_chance = { value = 100 }
 	effect = {
 		save_scope_as = england_canada_overlord
-		religion = { save_scope_as = england_canada_overlord_religion }
 		create_country = {
 			tag = ONT
 			origin = root
 			state = s:STATE_ONTARIO.region_state:ROOT
 			on_created = {
-				save_scope_as = england_canada_new_subject
-				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_ontario_established
 				activate_law = law_type:law_colonial_administration
 				aoc_initialize_colonial_nation_effect = yes
@@ -176,6 +167,7 @@ je_england_canada_ontario = {
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
 		}
+		c:ONT = { england_canada_inherit_overlord_identity_effect = yes }
 		hidden_effect = {
 			create_diplomatic_pact = { country = c:ONT type = colony }
 		}
@@ -196,14 +188,11 @@ je_england_canada_columbia = {
 	ai_chance = { value = 100 }
 	effect = {
 		save_scope_as = england_canada_overlord
-		religion = { save_scope_as = england_canada_overlord_religion }
 		create_country = {
 			tag = ORG
 			origin = root
 			state = s:STATE_BRITISH_COLUMBIA.region_state:ROOT
 			on_created = {
-				save_scope_as = england_canada_new_subject
-				england_canada_inherit_overlord_identity_effect = yes
 				set_variable = england_canada_columbia_established
 				activate_law = law_type:law_colonial_administration
 				aoc_initialize_colonial_nation_effect = yes
@@ -211,6 +200,7 @@ je_england_canada_columbia = {
 				every_scope_state = { effect_destroy_colonial_office = yes }
 			}
 		}
+		c:ORG = { england_canada_inherit_overlord_identity_effect = yes }
 		hidden_effect = {
 			create_diplomatic_pact = { country = c:ORG type = colony }
 		}

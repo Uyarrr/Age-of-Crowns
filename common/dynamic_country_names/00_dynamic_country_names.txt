@@ -5658,9 +5658,9 @@ VNZ = {
 					}
 				}
 				AND = {
-					exists = c:AUS
+					exists = c:HAB
 					scope:actor ?= {
-						is_subject_of = c:AUS
+						is_subject_of = c:HAB
 					}
 				}
 			}
@@ -6313,11 +6313,11 @@ CRO = {
 		trigger = {
 			OR = {
 				AND = {
-					c:AUS ?= {
+					c:HAB ?= {
 						country_has_monarchy_law = yes
 					}
 					scope:actor ?= {
-						is_subject_of = c:AUS
+						is_subject_of = c:HAB
 					}
 				}
 				scope:actor = {
@@ -6366,7 +6366,7 @@ MPH = {
 KUK = {
 	dynamic_country_name = {
 		name = dyn_c_usga
-		adjective = AUS_ADJ
+		adjective = HAB_ADJ
 
 		is_main_tag_only = yes
 		priority = 1
@@ -6375,7 +6375,7 @@ KUK = {
 			exists = scope:actor
 			scope:actor = {
 				country_has_monarchy_law = yes
-				was_formed_from = AUS
+				was_formed_from = HAB
 			}
 		}
 	}
@@ -6395,10 +6395,10 @@ KUK = {
 	}
 }
 
-AUS = {
+HAB = {
 	dynamic_country_name = {
 		name = dyn_c_federal_state_of_austria
-		adjective = AUS_ADJ
+		adjective = HAB_ADJ
 
 		is_main_tag_only = yes
 		priority = 1

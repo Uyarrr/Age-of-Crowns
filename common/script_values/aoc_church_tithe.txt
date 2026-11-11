@@ -1,0 +1,65 @@
+﻿# Country scope. Scale the weekly government expense by gross income.
+aoc_church_weekly_tithe = {
+	value = total_income
+	min = 0
+	multiply = 0.01
+}
+
+aoc_church_current_tithe_expense = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = aoc_church_tithe_verified_rate
+			has_modifier = aoc_church_tithe_budget_expense
+		}
+		add = var:aoc_church_tithe_verified_rate
+	}
+}
+
+aoc_church_papal_bull_cost = {
+	value = 0
+	if = {
+		limit = { has_global_variable = aoc_church_tithe_last_collection }
+		add = global_var:aoc_church_tithe_last_collection
+		multiply = 0.50
+	}
+}
+
+aoc_church_last_bull_type = {
+	value = 0
+	if = {
+		limit = { has_global_variable = aoc_church_last_bull }
+		add = global_var:aoc_church_last_bull
+	}
+}
+
+aoc_church_monthly_relief = {
+	value = var:aoc_church_relief_installment
+	max = principal
+	max = global_var:aoc_church_tithe
+	min = 0
+}
+
+aoc_church_relief_on_cooldown = {
+	value = 0
+	if = {
+		limit = { has_global_variable = aoc_church_relief_issuance_cooldown }
+		add = 1
+	}
+}
+
+aoc_church_last_tithe_payment = {
+	value = 0
+	if = {
+		limit = { has_variable = aoc_church_tithe_paid }
+		add = var:aoc_church_tithe_paid
+	}
+}
+
+aoc_church_last_relief_payment = {
+	value = 0
+	if = {
+		limit = { has_variable = aoc_church_relief_paid }
+		add = var:aoc_church_relief_paid
+	}
+}

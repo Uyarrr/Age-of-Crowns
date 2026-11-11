@@ -670,7 +670,7 @@ AUL ?= {
 	capital = STATE_KENYA
 }
 
-AUS ?= {
+HAB ?= {
 	color = { 211 220 240 }
 	primary_unit_color = { 211 220 240 }
 	secondary_unit_color = { 211 220 240 }
@@ -10135,15 +10135,6 @@ U25 ?= {
 	capital = STATE_ORYOL
 }
 
-U26 ?= {
-	color = { 117 140 36 }
-	country_type = recognized
-	tier = principality
-	cultures = { polish }
-	religion = catholic
-	capital = STATE_UPPER_SILESIA
-}
-
 U27 ?= {
 	color = { 216 121 139 }
 	country_type = recognized
@@ -11429,15 +11420,6 @@ V53 ?= {
 	capital = STATE_EGYPTIAN_DESERT
 }
 
-V54 ?= {
-	color = { 191 83 101 }
-	country_type = recognized
-	tier = city_state
-	cultures = { north_italian }
-	religion = catholic
-	capital = STATE_LOMBARDY
-}
-
 V55 ?= {
 	color = { 78 149 191 }
 	country_type = decentralized
@@ -11472,15 +11454,6 @@ V58 ?= {
 	cultures = { bengali }
 	religion = hindu
 	capital = STATE_BIHAR
-}
-
-V59 ?= {
-	color = { 101 189 23 }
-	country_type = recognized
-	tier = city_state
-	cultures = { south_german }
-	religion = catholic
-	capital = STATE_TYROL
 }
 
 V60 ?= {

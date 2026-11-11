@@ -41,7 +41,7 @@ ai_strategy_territorial_expansion = {
 	}
 
 	aggression = {
-		value = 1
+		value = 1.5
 
 		if = {
 			limit = {
@@ -59,7 +59,7 @@ ai_strategy_territorial_expansion = {
 					attitude = antagonistic
 				}
 			}
-			multiply = 0.25
+			multiply = 0.65
 		}
 
 		# More aggressive against ideological enemies, a bit less aggressive against ideological allies
@@ -82,9 +82,9 @@ ai_strategy_territorial_expansion = {
 	}
 
 	wargoal_weights = {
-		annex_country = 1.5
-		conquer_state = 1.5
-		return_state = 1.5
+		annex_country = 2.0
+		conquer_state = 2.5
+		return_state = 2.0
 		force_nationalization = 0.25
 	}
 
@@ -97,6 +97,19 @@ ai_strategy_territorial_expansion = {
 				scope:target_country.country_rank <= root.country_rank
 			}
 			score = {
+				# An opponent holding part of one of our state regions leaves a split state.
+				if = {
+					limit = {
+						scope:target_country = {
+							any_scope_state = {
+								state_region = {
+									any_scope_state = { owner = root }
+								}
+							}
+						}
+					}
+					add = 150
+				}
 				if = {
 					limit = {
 						NOT = { is_country_type = unrecognized }
@@ -111,6 +124,33 @@ ai_strategy_territorial_expansion = {
 					add = 50
 				}
 			}
+		}
+	}
+
+	wargoal_scores = {
+		conquer_state = {
+			if = {
+				limit = {
+					scope:target_state = {
+						state_region = {
+							any_scope_state = { owner = root }
+						}
+					}
+				}
+				add = 250
+			}
+		}
+	}
+
+	state_value = {
+		value = 0
+		if = {
+			limit = {
+				scope:target_state = {
+					state_region = { any_scope_state = { owner = root } }
+				}
+			}
+			add = 100
 		}
 	}
 
@@ -471,7 +511,7 @@ ai_strategy_colonial_expansion = {
 	}
 
 	colonial_interest_ratio = {
-		value = 0.10
+		value = 0.35
 
 		if = {
 			limit = { navy_size >= 30 }
@@ -495,6 +535,20 @@ ai_strategy_colonial_expansion = {
 	}
 
 	strategic_region_scores = {
+		# Reinforce an existing foothold before scattering colonies worldwide.
+		if = {
+			limit = {
+				scope:region = {
+					any_scope_state = {
+						OR = {
+							owner = root
+							owner = { is_subject_of = root }
+						}
+					}
+				}
+			}
+			add = 125
+		}
 		if = {
 			limit = {
 				scope:region = {
@@ -503,7 +557,7 @@ ai_strategy_colonial_expansion = {
 					}
 				}
 			}
-			add = 50
+			add = 100
 		}
 	}
 
@@ -518,7 +572,7 @@ ai_strategy_colonial_expansion = {
 				}
 				else_if = {
 					limit = {
-						ai_country_is_valid_colonization_target = yes
+						scope:target_country = { ai_country_is_valid_colonization_target = yes }
 					}
 					add = 200
 				}

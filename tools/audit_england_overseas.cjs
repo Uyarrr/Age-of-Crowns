@@ -165,7 +165,7 @@ for (const button of buttons) {
  assert.equal(createNodes.length,1);
  const tag = one(createNodes[0].value,'tag').value;
  assert(['SAF','BIC','AST','NZL','HBC'].includes(tag));
- assert(!JSON.stringify(button).includes('"AUS"'), 'AUS is Austria');
+ assert(!JSON.stringify(button).includes('"HAB"'), 'HAB is Austria');
  const id = button.key.replace('aoc_england_charter_','');
  assert(JSON.stringify(button).includes(`aoc_england_${id}_endowed`), 'Missing endowment lock');
 }

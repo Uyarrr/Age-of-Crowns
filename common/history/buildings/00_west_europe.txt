@@ -2294,7 +2294,7 @@
 		}
 	}
 	s:STATE_FRANCHE_COMTE={
-		region_state:AUS={
+		region_state:HAB={
 		}
 		region_state:BGY={
 		}
@@ -2548,12 +2548,12 @@
 		}
 	}
 	s:STATE_AUSTRIA={
-		region_state:AUS={
+		region_state:HAB={
 			create_building={
 				building="building_caravan_hub"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2564,7 +2564,7 @@
 				building="building_naval_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -2575,7 +2575,7 @@
 				building="building_slaughterhouse"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2586,7 +2586,7 @@
 				building="building_tannery"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2597,7 +2597,7 @@
 				building="building_stud_farm"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2608,7 +2608,7 @@
 				building="building_livestock_ranch"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2619,7 +2619,7 @@
 				building="building_apiary"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2630,7 +2630,7 @@
 				building="building_vineyard"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2641,7 +2641,7 @@
 				building="building_trade_center"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2652,7 +2652,7 @@
 				building="building_apothecary"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2663,7 +2663,7 @@
 				building="building_perfumery"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2674,7 +2674,7 @@
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -2685,7 +2685,7 @@
 				building="building_road"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2725,12 +2725,12 @@
 	}
 
 	s:STATE_STYRIA={
-		region_state:AUS={
+		region_state:HAB={
 			create_building={
 				building="building_naval_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -2741,7 +2741,7 @@
 				building="building_luxury_cloth_workshop"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2752,7 +2752,7 @@
 				building="building_luxury_furniture_workshop"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2763,7 +2763,7 @@
 				building="building_iron_mine"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2774,7 +2774,7 @@
 				building="building_coal_mine"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2785,7 +2785,7 @@
 				building="building_silver_mine"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2796,7 +2796,7 @@
 				building="building_logging_camp"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2807,7 +2807,7 @@
 				building="building_stone_mine"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2818,7 +2818,7 @@
 				building="building_paper_mill"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2829,7 +2829,7 @@
 				building="building_weapon_workshop"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2840,7 +2840,7 @@
 				building="building_tooling_workshop"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2851,7 +2851,7 @@
 				building="building_textile_mill"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2862,7 +2862,7 @@
 				building="building_ironworks"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2873,7 +2873,7 @@
 				building="building_trade_center"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -2884,7 +2884,7 @@
 				building="building_brewery"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2895,7 +2895,7 @@
 				building="building_temple"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2906,7 +2906,7 @@
 				building="building_hospital"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2917,7 +2917,7 @@
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -2928,7 +2928,7 @@
 				building="building_road"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2939,12 +2939,12 @@
 		}
 	}
 	s:STATE_TYROL={
-		region_state:AUS={
+		region_state:HAB={
 			create_building={
 				building="building_naval_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -2955,7 +2955,7 @@
 				building="building_trade_center"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2966,7 +2966,7 @@
 				building="building_slaughterhouse"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2977,7 +2977,7 @@
 				building="building_road"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -2988,16 +2988,16 @@
 		}
 		region_state:SLZ={
 		}
-		region_state:V59={
+		region_state:MBZ={
 		}
 	}
 	s:STATE_SOUTH_TYROL={
-		region_state:AUS={
+		region_state:HAB={
 			create_building={
 				building="building_naval_administration"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=2
 					}
 				}
@@ -3008,7 +3008,7 @@
 				building="building_trade_center"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -3019,7 +3019,7 @@
 				building="building_slaughterhouse"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -3030,7 +3030,7 @@
 				building="building_road"
 				add_ownership={
 					country={
-						country="c:AUS"
+						country="c:HAB"
 						levels=1
 					}
 				}
@@ -3384,7 +3384,7 @@
 		}
 	}
 	s:STATE_BADEN={
-		region_state:AUS={
+		region_state:HAB={
 		}
 		region_state:BAD={
 			create_building={

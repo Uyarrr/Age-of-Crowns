@@ -35,6 +35,8 @@ national_colonization.1 = {
 			strategic_region = sr:region_central_america
 			value = 2000
 		}
+		add_involvement = { strategic_region = sr:region_gran_colombia value = 750 }
+		add_involvement = { strategic_region = sr:region_andes value = 500 }
 		add_modifier = { name = colonial_rush years = 10 }
 		activate_law = law_type:law_colonial_resettlement
 	}
@@ -79,6 +81,9 @@ national_colonization.2 = {
 			strategic_region = sr:region_west_africa
 			value = 2000
 		}
+		add_involvement = { strategic_region = sr:region_brazil value = 1250 }
+		add_involvement = { strategic_region = sr:region_southern_africa value = 750 }
+		add_involvement = { strategic_region = sr:region_south_india value = 500 }
 		add_modifier = { name = colonial_rush years = 10 }
 		activate_law = law_type:law_colonial_resettlement
 	}

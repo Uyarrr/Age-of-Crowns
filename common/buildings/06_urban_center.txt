@@ -59,7 +59,7 @@ building_art_academy = {
 		if = { # AI Metternich really wants arts academies
 			limit = {
 				owner ?= {
-					c:AUS ?= this
+					c:HAB ?= this
 					has_journal_entry = je_metternich
 				}
 			}

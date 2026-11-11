@@ -6,6 +6,7 @@ aoc_initialize_colonial_nation_effect = {
 		set_variable = aoc_was_colonial_nation
 		set_variable = aoc_colonial_nation_initialized
 		activate_law = law_type:law_colonial_nation
+		activate_law = law_type:law_colonial_resettlement
 		add_modifier = { name = aoc_colonial_settlement_protection years = 15 }
 	}
 }

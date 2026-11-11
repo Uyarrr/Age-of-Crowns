@@ -14,3 +14,19 @@
 	building_group_bg_private_infrastructure_allowed_collectivization_add = 0.9
 	building_group_bg_arts_allowed_collectivization_add = 0.9
 }
+
+aoc_church_tithe_budget_expense = {
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+	country_expenses_add = 1
+}
+
+aoc_church_dei_gratia_rex = {
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+	country_legitimacy_base_add = 5
+	interest_group_ig_devout_approval_add = 2
+}
+
+aoc_church_illius_qui_se_pro_divini = {
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+	country_infamy_generation_mult = -0.10
+}

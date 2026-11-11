@@ -127,7 +127,7 @@ law_neo_absolutism = { # Reward for completing the neo-absolutist content
 	}
 
 	is_visible = {
-		c:AUS ?= this
+		c:HAB ?= this
 		has_global_variable = neo_absolutism_victory
 	}
 

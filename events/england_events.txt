@@ -1,4 +1,4 @@
-﻿namespace = england
+namespace = england
 
 england.100 = {
 	type = country_event
@@ -1218,6 +1218,8 @@ england.200 = {
 			strategic_region = sr:region_canada
 			value = 2000
 		}
+		add_involvement = { strategic_region = sr:region_southern_africa value = 1500 }
+		add_involvement = { strategic_region = sr:region_south_india value = 1000 }
 
 		add_modifier = {
 			name = colonial_rush

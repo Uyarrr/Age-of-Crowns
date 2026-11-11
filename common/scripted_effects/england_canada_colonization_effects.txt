@@ -2,6 +2,10 @@
 # England's colonies are uniformly Anglo-Canadian. The current English/British
 # primary cultures and state religion are inherited as well.
 england_canada_inherit_overlord_identity_effect = {
+	save_scope_as = england_canada_new_subject
+	scope:england_canada_overlord = {
+		religion = { save_temporary_scope_as = england_canada_overlord_religion }
+	}
 	set_state_religion = scope:england_canada_overlord_religion
 
 	if = {
