@@ -1,0 +1,25 @@
+aoc_content_english_researched = {
+	value = 0
+	if = { limit = { has_technology_researched = england_wool_staple_system } add = 1 }
+	if = { limit = { has_technology_researched = england_magna_carta } add = 1 }
+	if = { limit = { has_technology_researched = england_longbowman } add = 1 }
+	if = { limit = { has_technology_researched = england_cinque_port } add = 1 }
+	if = { limit = { has_technology_researched = england_lionhearts } add = 1 }
+	if = { limit = { has_technology_researched = england_dominions } add = 1 }
+	if = { limit = { has_technology_researched = england_royal_dockyards } add = 1 }
+	if = { limit = { has_technology_researched = england_reformed_longbowman } add = 1 }
+	if = { limit = { has_technology_researched = england_renaissance } add = 1 }
+	if = { limit = { has_technology_researched = england_enclosure_of_common_fields } add = 1 }
+	if = { limit = { has_technology_researched = england_secretaries_of_state } add = 1 }
+	if = { limit = { has_technology_researched = england_royal_navy } add = 1 }
+	if = { limit = { has_technology_researched = england_art_of_navigation } add = 1 }
+	if = { limit = { has_technology_researched = england_the_book_of_common_prayer } add = 1 }
+	if = { limit = { has_technology_researched = england_the_act_of_supremacy } add = 1 }
+	if = { limit = { has_technology_researched = england_coke_smelting } add = 1 }
+	if = { limit = { has_technology_researched = england_the_sick_and_hurt_board } add = 1 }
+	if = { limit = { has_technology_researched = england_palladian_architecture } add = 1 }
+	if = { limit = { has_technology_researched = england_bill_of_rights } add = 1 }
+	if = { limit = { has_technology_researched = england_water_frame } add = 1 }
+	if = { limit = { has_technology_researched = england_rulers_of_the_waves } add = 1 }
+	if = { limit = { has_technology_researched = england_seed_drill } add = 1 }
+}

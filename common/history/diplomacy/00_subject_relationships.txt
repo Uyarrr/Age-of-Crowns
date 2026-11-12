@@ -20,7 +20,7 @@
 	c:DEN ?= {
 		create_diplomatic_pact = {
 			country = c:HOL
-			type = puppet
+			type = vassal
 		}
 	}
 	c:HOL ?= {
@@ -29,7 +29,7 @@
 	c:BYZ ?= {
 		create_diplomatic_pact = {
 			country = c:ATH
-			type = puppet
+			type = vassal
 		}
 	}
 	c:ATH ?= {
@@ -47,7 +47,7 @@
 	c:SCO ?= {
 		create_diplomatic_pact = {
 			country = c:LOI
-			type = puppet
+			type = vassal
 		}
 	}
 	c:LOI ?= {
@@ -56,7 +56,7 @@
 	c:POL ?= {
 		create_diplomatic_pact = {
 			country = c:MZV
-			type = puppet
+			type = vassal
 		}
 	}
 	c:MZV ?= {
@@ -92,17 +92,21 @@
 	c:BGY ?= {
 		create_diplomatic_pact = {
 			country = c:NEV
-			type = puppet
+			type = vassal
 		}
 	}
 	c:ENG ?= {
 		create_diplomatic_pact = {
 			country = c:NRM
-			type = puppet
+			type = vassal
 		}
 		create_diplomatic_pact = {
 			country = c:AQN
-			type = puppet
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:MJA
+			type = vassal
 		}
 	}
 	c:NEV ?= {
@@ -111,7 +115,7 @@
 	c:FRA ?= {
 		create_diplomatic_pact = {
 			country = c:ORL
-			type = puppet
+			type = appanage
 		}
 	}
 	c:ORL ?= {
@@ -120,7 +124,7 @@
 	c:FRA ?= {
 		create_diplomatic_pact = {
 			country = c:AMG
-			type = puppet
+			type = appanage
 		}
 	}
 	c:AMG ?= {
@@ -129,7 +133,7 @@
 	c:FRA ?= {
 		create_diplomatic_pact = {
 			country = c:AUV
-			type = puppet
+			type = appanage
 		}
 	}
 	c:AUV ?= {
@@ -138,7 +142,7 @@
 	c:FRA ?= {
 		create_diplomatic_pact = {
 			country = c:FOI
-			type = puppet
+			type = appanage
 		}
 	}
 	c:FOI ?= {
@@ -147,7 +151,7 @@
 	c:FRA ?= {
 		create_diplomatic_pact = {
 			country = c:BOU
-			type = puppet
+			type = appanage
 		}
 	}
 	c:BOU ?= {
@@ -165,7 +169,7 @@
 	c:BOH ?= {
 		create_diplomatic_pact = {
 			country = c:W45
-			type = puppet
+			type = vassal
 		}
 	}
 	c:W45 ?= {
@@ -174,7 +178,7 @@
 	c:BOH ?= {
 		create_diplomatic_pact = {
 			country = c:OPL
-			type = puppet
+			type = vassal
 		}
 	}
 	c:OPL ?= {
@@ -192,7 +196,7 @@
 	c:WBG ?= {
 		create_diplomatic_pact = {
 			country = c:BAM
-			type = puppet
+			type = vassal
 		}
 	}
 	c:BAM ?= {
@@ -210,7 +214,7 @@
 	c:PAP ?= {
 		create_diplomatic_pact = {
 			country = c:T81
-			type = puppet
+			type = vassal
 		}
 	}
 	c:T81 ?= {
@@ -219,13 +223,13 @@
 	c:PAP ?= {
 		create_diplomatic_pact = {
 			country = c:PEG
-			type = puppet
+			type = vassal
 		}
 	}
 	c:PAP ?= {
 		create_diplomatic_pact = {
 			country = c:X36
-			type = puppet
+			type = vassal
 		}
 	}
 	c:PEG ?= {
@@ -234,7 +238,7 @@
 	c:SAV ?= {
 		create_diplomatic_pact = {
 			country = c:W47
-			type = puppet
+			type = vassal
 		}
 	}
 	c:W47 ?= {
@@ -243,7 +247,7 @@
 	c:SAV ?= {
 		create_diplomatic_pact = {
 			country = c:MFA
-			type = puppet
+			type = vassal
 		}
 	}
 	c:MFA ?= {
@@ -252,7 +256,7 @@
 	c:VEN ?= {
 		create_diplomatic_pact = {
 			country = c:V98
-			type = puppet
+			type = vassal
 		}
 	}
 	c:V98 ?= {
@@ -261,7 +265,7 @@
 	c:GEO ?= {
 		create_diplomatic_pact = {
 			country = c:U87
-			type = puppet
+			type = vassal
 		}
 	}
 	c:U87 ?= {
@@ -270,7 +274,7 @@
 	c:MUS ?= {
 		create_diplomatic_pact = {
 			country = c:PKV
-			type = puppet
+			type = vassal
 		}
 	}
 	c:PKV ?= {
@@ -279,7 +283,7 @@
 	c:MUS ?= {
 		create_diplomatic_pact = {
 			country = c:YSL
-			type = puppet
+			type = vassal
 		}
 	}
 	c:YSL ?= {
@@ -288,7 +292,7 @@
 	c:MUS ?= {
 		create_diplomatic_pact = {
 			country = c:BLZ
-			type = puppet
+			type = vassal
 		}
 	}
 	c:BLZ ?= {
@@ -297,7 +301,7 @@
 	c:MUS ?= {
 		create_diplomatic_pact = {
 			country = c:U67
-			type = puppet
+			type = vassal
 		}
 	}
 	c:U67 ?= {
@@ -306,7 +310,7 @@
 	c:MUS ?= {
 		create_diplomatic_pact = {
 			country = c:PRM
-			type = puppet
+			type = vassal
 		}
 	}
 	c:PRM ?= {
@@ -369,7 +373,7 @@
 	c:U54 ?= {
 		create_diplomatic_pact = {
 			country = c:X62
-			type = puppet
+			type = vassal
 		}
 	}
 	c:X62 ?= {
@@ -378,7 +382,7 @@
 	c:U54 ?= {
 		create_diplomatic_pact = {
 			country = c:V81
-			type = puppet
+			type = vassal
 		}
 	}
 	c:V81 ?= {
@@ -432,7 +436,7 @@
 	c:DAG ?= {
 		create_diplomatic_pact = {
 			country = c:A15
-			type = puppet
+			type = vassal
 		}
 	}
 	c:A15 ?= {
@@ -485,7 +489,7 @@
 	c:S41 ?= {
 		create_diplomatic_pact = {
 			country = c:U79
-			type = puppet
+			type = vassal
 		}
 	}
 	c:U79 ?= {
@@ -494,7 +498,7 @@
 	c:S44 ?= {
 		create_diplomatic_pact = {
 			country = c:U73
-			type = puppet
+			type = vassal
 		}
 	}
 	c:U73 ?= {
@@ -948,7 +952,7 @@
 	c:T79 ?= {
 		create_diplomatic_pact = {
 			country = c:U51
-			type = puppet
+			type = vassal
 		}
 	}
 	c:U51 ?= {

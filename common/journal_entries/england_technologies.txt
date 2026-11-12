@@ -1,0 +1,17 @@
+je_england_technologies = {
+	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
+	group = je_group_aoc_national_content
+
+	should_be_pinned_by_default_involved = yes
+
+	is_shown_in_lobby = { OR = { c:ENG ?= this was_formed_from = ENG } }
+	is_shown_when_inactive = { OR = { c:ENG ?= this was_formed_from = ENG } }
+	possible = { OR = { c:ENG ?= this was_formed_from = ENG } }
+	activation_description = { always = yes }
+
+	widget = {
+		gui = "gui/journal_entry_widgets/england_technologies.gui"
+		name = "widget_england_technologies"
+		container = "custom_widget_container_1"
+	}
+}

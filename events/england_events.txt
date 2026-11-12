@@ -1,6 +1,8 @@
 namespace = england
 
 england.100 = {
+	immediate = { set_variable = aoc_content_seen_england_100 }
+
 	type = country_event
 
 	title = england_the_justices_of_peace.title
@@ -32,7 +34,7 @@ england.100 = {
 		default_option = yes
 
 		add_modifier = {
-			name = the_justices_of_peace_a
+			name = england_the_justices_of_peace_a
 			days = long_modifier_time
 		}
 	}
@@ -41,13 +43,15 @@ england.100 = {
 		name = england_the_justices_of_peace.b
 
 		add_modifier = {
-			name = the_justices_of_peace_b
+			name = england_the_justices_of_peace_b
 			days = long_modifier_time
 		}
 	}
 }
 
 england.101 = {
+	immediate = { set_variable = aoc_content_seen_england_101 }
+
 	type = country_event
 
 	title = england_the_yorkist_tradition.title
@@ -96,6 +100,8 @@ england.101 = {
 }
 
 england.102 = {
+	immediate = { set_variable = aoc_content_seen_england_102 }
+
 	type = country_event
 
 	title = england_the_enclosure_movement.title
@@ -143,6 +149,8 @@ england.102 = {
 }
 
 england.302 = {
+	immediate = { set_variable = aoc_content_seen_england_302 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_start.title
@@ -171,6 +179,8 @@ england.302 = {
 }
 
 england.303 = {
+	immediate = { set_variable = aoc_content_seen_england_303 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_lancaster.title
@@ -211,6 +221,8 @@ england.303 = {
 }
 
 england.304 = {
+	immediate = { set_variable = aoc_content_seen_england_304 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_york.title
@@ -251,6 +263,8 @@ england.304 = {
 }
 
 england.305 = {
+	immediate = { set_variable = aoc_content_seen_england_305 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_realm_arms.title
@@ -335,6 +349,8 @@ england.306 = {
 	trigger = {}
 
 	immediate = {
+		set_variable = aoc_content_seen_england_306
+
 		if = {
 			limit = {
 				NOT = {
@@ -392,6 +408,8 @@ england.306 = {
 }
 
 england.307 = {
+	immediate = { set_variable = aoc_content_seen_england_307 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_protectorate.title
@@ -443,6 +461,8 @@ england.307 = {
 }
 
 england.308 = {
+	immediate = { set_variable = aoc_content_seen_england_308 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_livery.title
@@ -500,6 +520,8 @@ england.308 = {
 }
 
 england.309 = {
+	immediate = { set_variable = aoc_content_seen_england_309 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_queen_party.title
@@ -551,6 +573,8 @@ england.309 = {
 }
 
 england.310 = {
+	immediate = { set_variable = aoc_content_seen_england_310 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_warwick.title
@@ -602,6 +626,8 @@ england.310 = {
 }
 
 england.311 = {
+	immediate = { set_variable = aoc_content_seen_england_311 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_st_albans.title
@@ -655,6 +681,8 @@ england.311 = {
 }
 
 england.312 = {
+	immediate = { set_variable = aoc_content_seen_england_312 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_loveday.title
@@ -710,6 +738,8 @@ england.312 = {
 }
 
 england.313 = {
+	immediate = { set_variable = aoc_content_seen_england_313 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_attainders.title
@@ -773,6 +803,8 @@ england.313 = {
 }
 
 england.314 = {
+	immediate = { set_variable = aoc_content_seen_england_314 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_accord.title
@@ -813,6 +845,8 @@ england.314 = {
 }
 
 england.315 = {
+	immediate = { set_variable = aoc_content_seen_england_315 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_wakefield.title
@@ -856,6 +890,8 @@ england.315 = {
 }
 
 england.316 = {
+	immediate = { set_variable = aoc_content_seen_england_316 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_kingmaker.title
@@ -905,6 +941,8 @@ england.317 = {
 	trigger = {}
 
 	immediate = {
+		set_variable = aoc_content_seen_england_317
+
 		remove_variable = war_of_the_roses_war_warning
 		if = {
 			limit = {
@@ -953,6 +991,8 @@ england.318 = {
 	trigger = {}
 
 	immediate = {
+		set_variable = aoc_content_seen_england_318
+
 		random_scope_character = {
 			limit = { has_variable = wotr_edward_iv_character }
 			kill_character = yes
@@ -1016,6 +1056,8 @@ england.319 = {
 	trigger = {}
 
 	immediate = {
+		set_variable = aoc_content_seen_england_319
+
 		wotr_ensure_henry_tudor_effect = yes
 		remove_variable = war_of_the_roses_war_warning
 		if = {
@@ -1051,6 +1093,8 @@ england.319 = {
 }
 
 england.320 = {
+	immediate = { set_variable = aoc_content_seen_england_320 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_civil_war.title
@@ -1073,6 +1117,8 @@ england.320 = {
 }
 
 england.321 = {
+	immediate = { set_variable = aoc_content_seen_england_321 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_lancaster_restored.title
@@ -1099,6 +1145,8 @@ england.321 = {
 }
 
 england.322 = {
+	immediate = { set_variable = aoc_content_seen_england_322 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_york_accession.title
@@ -1125,6 +1173,8 @@ england.322 = {
 }
 
 england.323 = {
+	immediate = { set_variable = aoc_content_seen_england_323 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_tudor_victory.title
@@ -1151,6 +1201,8 @@ england.323 = {
 }
 
 england.324 = {
+	immediate = { set_variable = aoc_content_seen_england_324 }
+
 	type = country_event
 
 	title = england_war_of_the_roses_crown_victory.title
@@ -1175,6 +1227,8 @@ england.324 = {
 }
 
 england.200 = {
+	immediate = { set_variable = aoc_content_seen_england_200 }
+
 	type = country_event
 
 	title = england_new_world_canada.title
@@ -1197,7 +1251,6 @@ england.200 = {
 		is_subject = no
 		OR = {
 			c:ENG ?= this
-			c:GBR ?= this
 			was_formed_from = ENG
 			# A victorious War of the Roses revolutionary country keeps a
 			# dynamic civil-war identity rather than becoming/forming ENG.
@@ -1235,6 +1288,8 @@ england.200 = {
 }
 
 england.201 = {
+	immediate = { set_variable = aoc_content_seen_england_201 }
+
 	type = country_event
 
 	title = england_new_world_atlantic_coast.title
@@ -1257,7 +1312,6 @@ england.201 = {
 		is_subject = no
 		OR = {
 			c:ENG ?= this
-			c:GBR ?= this
 			was_formed_from = ENG
 			# Preserve English colonial content after a War of the Roses
 			# revolutionary victory changes the country's identity.
@@ -1302,6 +1356,8 @@ england.201 = {
 }
 
 england.300 = {
+	immediate = { set_variable = aoc_content_seen_england_300 }
+
 	type = country_event
 
 	title = england_hyw_victory.title
@@ -1335,6 +1391,8 @@ england.300 = {
 }
 
 england.301 = {
+	immediate = { set_variable = aoc_content_seen_england_301 }
+
 	type = country_event
 
 	title = england_hyw_defeat.title

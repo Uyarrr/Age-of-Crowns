@@ -1,0 +1,66 @@
+namespace = aoc_church
+
+# Bulls are applied when issued. These events record the proclamation only.
+aoc_church.1 = {
+	type = country_event
+	placement = root
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:aoc_church_pope
+	title = aoc_church.1.t
+	desc = aoc_church.1.d
+	flavor = aoc_church.1.f
+	event_image = { texture = "gfx/event_pictures/aoc_bull_dei_gratia_rex.dds" }
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+	duration = 30
+	trigger = { country_has_state_religion = rel:catholic }
+	immediate = {
+		c:PAP ?= { ruler ?= { save_scope_as = aoc_church_pope } }
+	}
+	option = {
+		name = aoc_church.1.a
+		default_option = yes
+	}
+}
+
+aoc_church.2 = {
+	type = country_event
+	placement = root
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:aoc_church_pope
+	title = aoc_church.2.t
+	desc = aoc_church.2.d
+	flavor = aoc_church.2.f
+	event_image = { texture = "gfx/event_pictures/aoc_bull_illius.dds" }
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+	duration = 30
+	trigger = { country_has_state_religion = rel:catholic }
+	immediate = {
+		c:PAP ?= { ruler ?= { save_scope_as = aoc_church_pope } }
+	}
+	option = {
+		name = aoc_church.2.a
+		default_option = yes
+	}
+}
+
+# Fired directly in the recipient's country scope when Rome grants relief.
+aoc_church.3 = {
+	type = country_event
+	placement = root
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:aoc_church_pope
+	title = aoc_church.3.t
+	desc = aoc_church.3.d
+	flavor = aoc_church.3.f
+	event_image = { texture = "gfx/event_pictures/aoc_papal_relief.dds" }
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+	duration = 30
+	trigger = { has_variable = aoc_church_relief_remaining }
+	immediate = {
+		c:PAP ?= { ruler ?= { save_scope_as = aoc_church_pope } }
+	}
+	option = {
+		name = aoc_church.3.a
+		default_option = yes
+	}
+}

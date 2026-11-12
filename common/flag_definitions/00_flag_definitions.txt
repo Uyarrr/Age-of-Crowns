@@ -1023,7 +1023,7 @@ BHT = {
 				OR = {
 					is_subject_type = subject_type_chartered_company
 					is_subject_type = subject_type_colony
-					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
 				}
 			}
 		}
@@ -1040,7 +1040,7 @@ BHT = {
 				OR = {
 					is_subject_type = subject_type_chartered_company
 					is_subject_type = subject_type_dominion
-					is_subject_type = subject_type_protectorate
+					is_subject_type = subject_type_tributary
 				}
 			}
 		}
@@ -10698,7 +10698,7 @@ ALK = { # Alaska
 			scope:actor ?= {
 				OR = {
 					is_subject_type = subject_type_colony
-					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
 				}
 			}
 		}

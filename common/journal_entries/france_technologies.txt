@@ -1,0 +1,17 @@
+je_france_technologies = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	group = je_group_aoc_national_content
+
+	should_be_pinned_by_default_involved = yes
+
+	is_shown_in_lobby = { OR = { c:FRA ?= this was_formed_from = FRA } }
+	is_shown_when_inactive = { OR = { c:FRA ?= this was_formed_from = FRA } }
+	possible = { OR = { c:FRA ?= this was_formed_from = FRA } }
+	activation_description = { always = yes }
+
+	widget = {
+		gui = "gui/journal_entry_widgets/aoc_national_technologies.gui"
+		name = "widget_france_technologies"
+		container = "custom_widget_container_1"
+	}
+}

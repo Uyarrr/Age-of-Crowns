@@ -153,7 +153,7 @@ RMZ = {
 # Mamluks
 MAM ?= {
 	color = { 255 205 155 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { misri }
 	religion = sunni
@@ -163,7 +163,7 @@ MAM ?= {
 # Hormuz
 HOR ?= {
 	color = { 234 233 124 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { bedouin }
 	religion = sunni
@@ -207,7 +207,7 @@ MUS ?= {
 # Vijayanagar
 VJY ?= {
 	color = { 246 196 24 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { kannada }
 	religion = hindu
@@ -328,7 +328,7 @@ YSL ?= {
 # Timurids
 TIM ?= {
 	color = { 213 0 39 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { uzbek }
 	religion = sunni
@@ -338,7 +338,7 @@ TIM ?= {
 # Ajam
 AJM ?= {
 	color = { 107 107 225 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = principality
 	cultures = { persian }
 	religion = sunni
@@ -348,7 +348,7 @@ AJM ?= {
 # Sistan
 SIS ?= {
 	color = { 224 74 54 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = principality
 	cultures = { persian }
 	religion = sunni
@@ -358,7 +358,7 @@ SIS ?= {
 # Khorasan
 KHO ?= {
 	color = { 130 168 224 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = principality
 	cultures = { persian }
 	religion = sunni
@@ -418,7 +418,7 @@ KRB ?= {
 # Hisn Kayfa
 HSN ?= {
 	color = { 234 179 30 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = city_state
 	cultures = { kurdish }
 	religion = sunni
@@ -468,7 +468,7 @@ TBZ ?= {
 # Kilwa
 KLW = {
 	color = { 81 141 85 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { yao }
 	religion = sunni
@@ -498,7 +498,7 @@ MOG ?= {
 # Yarkand
 YRK ?= {
 	color = { 100 100 250 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = empire
 	cultures = { uighur }
 	religion = sunni
@@ -508,7 +508,7 @@ YRK ?= {
 # Kara Del
 KRD ?= {
 	color = { 118 193 177 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = principality
 	cultures = { mongol }
 	#religion = tengri_pagan_reformed
@@ -518,7 +518,7 @@ KRD ?= {
 # Sarig Yogir
 SGY ?= {
 	color = { 219 206 94 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = grand_principality
 	cultures = { mongol }
 	#religion = tengri_pagan_reformed
@@ -528,7 +528,7 @@ SGY ?= {
 # Korchin
 KCH ?= {
 	color = { 221 93 170 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { mongol }
 	#religion = tengri_pagan_reformed
@@ -548,7 +548,7 @@ MUL ?= {
 # Nanai
 NNI ?= {
 	color = { 244 148 77 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { aoc_jurchen manchu }
 	religion = tengri_pagan_reformed
@@ -578,7 +578,7 @@ GRA ?= {
 # Tsang
 TSG ?= {
 	color = { 38 101 255 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = principality
 	cultures = { tibetan }
 	religion = gelugpa
@@ -588,7 +588,7 @@ TSG ?= {
 # U
 U42 ?= {
 	color = { 93 102 151 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = principality
 	cultures = { tibetan }
 	religion = gelugpa
@@ -598,7 +598,7 @@ U42 ?= {
 # Kham
 W86 ?= {
 	color = { 33 168 103 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = principality
 	cultures = { tibetan }
 	religion = gelugpa
@@ -925,6 +925,16 @@ AQN ?= {
 	capital = STATE_AQUITAINE
 }
 
+# Maine
+MJA ?= {
+	color = { 111 151 195 }
+	country_type = recognized
+	tier = principality
+	cultures = { french }
+	religion = catholic
+	capital = STATE_MAINE_ANJOU
+}
+
 # Switzerland
 SWI ?= {
 	color = { 165 45 38 }
@@ -1018,7 +1028,7 @@ LIT ?= {
 # Tlemcen
 TLE ?= {
 	color = { 57 160 101 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { berber }
 	religion = sunni
@@ -1028,7 +1038,7 @@ TLE ?= {
 # Oirat
 OIR ?= {
 	color = { 255 224 124 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { mongol }
 	religion = tengri_pagan_reformed
@@ -1038,7 +1048,7 @@ OIR ?= {
 # Morocco
 MOR ?= {
 	color = { 224 146 113 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { maghrebi }
 	religion = sunni
@@ -1048,7 +1058,7 @@ MOR ?= {
 # Mongolia
 MGL ?= {
 	color = { 255 224 124 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { mongol }
 	religion = tengri_pagan_reformed
@@ -1068,7 +1078,7 @@ PAP ?= {
 # Tunisia
 TUN ?= {
 	color = { 131 101 85 }
-	country_type = unrecognized
+	country_type = recognized
 	tier = kingdom
 	cultures = { maghrebi }
 	religion = sunni

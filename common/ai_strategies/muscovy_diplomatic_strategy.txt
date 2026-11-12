@@ -266,7 +266,7 @@
 		conquer_state = 5.0
 		return_state = 4.0
 
-		make_protectorate = 2.0
+		make_tributary = 2.0
 		make_dominion = 0.50
 
 		reduce_autonomy = 4.0
@@ -606,7 +606,7 @@
 		# PROTECTORATE
 		# -------------------------------------------------------------
 
-		make_protectorate = {
+		make_tributary = {
 			if = {
 				limit = {
 					has_secret_goal = {

@@ -1,0 +1,8 @@
+aoc_france_researched = {
+	value = 0
+	if = { limit = { has_technology_researched = france_domaine_royal } add = 1 }
+	if = { limit = { has_technology_researched = france_elan } add = 1 }
+	if = { limit = { has_technology_researched = france_consolidation_of_country } add = 1 }
+	if = { limit = { has_technology_researched = france_appanage_system } add = 1 }
+	if = { limit = { has_technology_researched = france_establishment_of_recettes_generales } add = 1 }
+}

@@ -199,7 +199,7 @@ coa_def_lesser_subject_trigger = {
 			scope:actor ?= {
 				OR = {
 					is_subject_type = subject_type_colony
-					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
 					is_subject_type = subject_type_vassal
 				}
 			}

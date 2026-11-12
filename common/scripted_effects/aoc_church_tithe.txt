@@ -81,6 +81,8 @@ aoc_church_issue_relief = {
 	aoc_church_set_relief_installment = yes
 	set_global_variable = { name = aoc_church_relief_issuance_cooldown months = 3 }
 	set_global_variable = { name = aoc_church_last_bull value = 3 }
+	# This scope is the grant recipient; no other Catholic country is notified.
+	trigger_event = { id = aoc_church.3 popup = no }
 }
 
 aoc_church_set_relief_installment = {
@@ -173,6 +175,7 @@ aoc_church_issue_papal_bull = {
 		every_country = {
 			limit = { country_has_state_religion = rel:catholic }
 			add_modifier = { name = $MODIFIER$ years = 3 }
+			trigger_event = { id = $EVENT$ popup = no }
 		}
 	}
 }
@@ -196,6 +199,7 @@ aoc_church_ai_issue_papal_bulls = {
 					COOLDOWN = aoc_church_illius_cooldown
 					MODIFIER = aoc_church_illius_qui_se_pro_divini
 					BULL_ID = 2
+					EVENT = aoc_church.2
 				}
 			}
 			else_if = {
@@ -206,6 +210,7 @@ aoc_church_ai_issue_papal_bulls = {
 					COOLDOWN = aoc_church_dei_gratia_rex_cooldown
 					MODIFIER = aoc_church_dei_gratia_rex
 					BULL_ID = 1
+					EVENT = aoc_church.1
 				}
 			}
 			else = {

@@ -2,7 +2,7 @@ je_aoc_england_cape = {
 	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds"
 	group = je_group_historical_content
 	should_be_pinned_by_default_involved = yes
-	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_in_lobby = { OR = { c:ENG ?= this was_formed_from = ENG } }
 	is_shown_when_inactive = { aoc_england_overseas_country = yes }
 	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_cape_completed } }  }
 	scripted_button = aoc_england_charter_cape
@@ -56,7 +56,7 @@ je_aoc_england_east_india = {
 	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds"
 	group = je_group_historical_content
 	should_be_pinned_by_default_involved = yes
-	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_in_lobby = { OR = { c:ENG ?= this was_formed_from = ENG } }
 	is_shown_when_inactive = { aoc_england_overseas_country = yes }
 	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_east_india_completed } } custom_tooltip = { text = aoc_england_india_unlocked_tt has_variable = aoc_england_india_unlocked } }
 	scripted_button = aoc_england_charter_east_india
@@ -98,7 +98,7 @@ je_aoc_england_australasia = {
 	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_australasia.dds"
 	group = je_group_historical_content
 	should_be_pinned_by_default_involved = yes
-	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_in_lobby = { OR = { c:ENG ?= this was_formed_from = ENG } }
 	is_shown_when_inactive = { aoc_england_overseas_country = yes }
 	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_australasia_completed } } custom_tooltip = { text = aoc_england_australasia_unlocked_tt has_variable = aoc_england_australasia_unlocked } }
 	scripted_button = aoc_england_charter_australia
@@ -156,7 +156,7 @@ je_aoc_england_hudson_bay = {
 	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_hudson_bay.dds"
 	group = je_group_historical_content
 	should_be_pinned_by_default_involved = yes
-	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_in_lobby = { OR = { c:ENG ?= this was_formed_from = ENG } }
 	is_shown_when_inactive = { aoc_england_overseas_country = yes }
 	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_hudson_bay_completed } }  }
 	scripted_button = aoc_england_charter_hudson_bay
@@ -205,7 +205,7 @@ je_aoc_england_royal_navy = {
 	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_royal_navy.dds"
 	group = je_group_historical_content
 	should_be_pinned_by_default_involved = yes
-	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_in_lobby = { OR = { c:ENG ?= this was_formed_from = ENG } }
 	is_shown_when_inactive = { aoc_england_overseas_country = yes }
 	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_royal_navy_completed } }  }
 	immediate = { set_variable = { name = aoc_england_navy_months value = 0 } }
@@ -255,7 +255,7 @@ je_aoc_england_new_world = {
 	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_new_world.dds"
 	group = je_group_historical_content
 	should_be_pinned_by_default_involved = yes
-	is_shown_in_lobby = { OR = { c:ENG ?= this c:GBR ?= this } }
+	is_shown_in_lobby = { OR = { c:ENG ?= this was_formed_from = ENG } }
 	is_shown_when_inactive = { aoc_england_overseas_country = yes }
 	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_new_world_completed } } custom_tooltip = { text = aoc_england_bay_completed_tt has_variable = aoc_england_hudson_bay_completed } custom_tooltip = { text = aoc_england_navy_completed_tt has_variable = aoc_england_royal_navy_completed } }
 	immediate = { aoc_england_new_world_census_effect = yes }

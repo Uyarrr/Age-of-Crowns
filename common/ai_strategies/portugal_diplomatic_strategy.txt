@@ -224,7 +224,7 @@
 	}
 
 	wargoal_weights = {
-		make_protectorate = 3.5
+		make_tributary = 3.5
 		make_dominion = 2.5
 		take_treaty_port = 3.0
 		conquer_state = 0.75
@@ -319,7 +319,7 @@
 	}
 
 	wargoal_scores = {
-		make_protectorate = {
+		make_tributary = {
 			if = {
 				limit = {
 					has_secret_goal = {

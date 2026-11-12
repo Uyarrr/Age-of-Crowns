@@ -7,13 +7,16 @@
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_society_1
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_magna_carta
+			add_technology_researched = england_cinque_port
+			add_technology_researched = england_dominions
+		}
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_domaine_royal
+			add_technology_researched = france_consolidation_of_country
+			add_technology_researched = france_appanage_system
 		}
 	}
 
@@ -31,13 +34,13 @@ society_age_2 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_society_2
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_renaissance
+			add_technology_researched = england_enclosure_of_common_fields
+		}
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_establishment_of_recettes_generales
 		}
 	}
 
@@ -55,13 +58,8 @@ society_age_3 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_society_3
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_secretaries_of_state
 		}
 	}
 
@@ -79,13 +77,9 @@ society_age_4 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_society_4
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_the_book_of_common_prayer
+			add_technology_researched = england_the_act_of_supremacy
 		}
 	}
 
@@ -103,13 +97,9 @@ society_age_5 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_society_5
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_palladian_architecture
+			add_technology_researched = england_bill_of_rights
 		}
 	}
 
@@ -125,18 +115,6 @@ society_age_6 = {
 
 	can_research = yes
 
-	on_researched = {
-		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_society_6
-		}
-	}
-
 	ai_weight = { value = 3 }
 }
 
@@ -149,13 +127,8 @@ production_age_1 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_production_1
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_wool_staple_system
 		}
 	}
 
@@ -173,13 +146,8 @@ production_age_2 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_production_2
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_royal_dockyards
 		}
 	}
 
@@ -195,18 +163,6 @@ production_age_3 = {
 
 	can_research = yes
 
-	on_researched = {
-		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_production_3
-		}
-	}
-
 	ai_weight = { value = 3 }
 }
 
@@ -218,18 +174,6 @@ production_age_4 = {
 	unlocking_technologies = { production_age_3 }
 
 	can_research = yes
-
-	on_researched = {
-		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_production_4
-		}
-	}
 
 	ai_weight = { value = 3 }
 }
@@ -245,13 +189,8 @@ production_age_5 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_production_5
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_coke_smelting
 		}
 	}
 
@@ -269,13 +208,9 @@ production_age_6 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_production_6
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_water_frame
+			add_technology_researched = england_seed_drill
 		}
 	}
 
@@ -291,13 +226,13 @@ military_age_1 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_military_1
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_longbowman
+			add_technology_researched = england_lionhearts
+		}
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_elan
 		}
 	}
 
@@ -315,13 +250,8 @@ military_age_2 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_military_2
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_reformed_longbowman
 		}
 	}
 
@@ -339,13 +269,9 @@ military_age_3 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_military_3
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_royal_navy
+			add_technology_researched = england_art_of_navigation
 		}
 	}
 
@@ -361,17 +287,6 @@ military_age_4 = {
 
 	can_research = yes
 
-	on_researched = {
-		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_military_4
-		}
-	}
 
 	ai_weight = { value = 3 }
 }
@@ -387,13 +302,8 @@ military_age_5 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_military_5
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_the_sick_and_hurt_board
 		}
 	}
 
@@ -411,13 +321,8 @@ military_age_6 = {
 
 	on_researched = {
 		if = {
-			limit = {
-				OR = {
-					c:ENG ?= this
-					c:GBR ?= this
-				}
-			}
-			add_technology_researched = england_military_6
+			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
+			add_technology_researched = england_rulers_of_the_waves
 		}
 	}
 

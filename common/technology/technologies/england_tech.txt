@@ -1,6 +1,6 @@
-﻿england_production_1 = {
+﻿england_wool_staple_system = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	texture = "gfx/interface/icons/invention_icons/wool_staple_system.dds"
 	category = production
 
     can_research = no
@@ -17,18 +17,15 @@
 	}
 }
 
-england_military_1 = {
+england_magna_carta = {
+	# Unlocks Magna Carta Major Goverment Law
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
-	category = military
+	texture = "gfx/interface/icons/law_icons/magna_carta.dds"
+	category = society
 
     can_research = no
 
 	modifier = {
-		unit_combat_unit_type_light_infantry_1_offense_mult = 0.10
-		unit_combat_unit_type_light_infantry_1_defense_mult = 0.20
-		unit_combat_unit_type_light_infantry_2_offense_mult = 0.10
-		unit_combat_unit_type_light_infantry_2_defense_mult = 0.20
 	}
 
 	on_researched = {
@@ -39,9 +36,29 @@ england_military_1 = {
 	}
 }
 
-england_society_1 = {
+england_longbowman = {
+	# Unlocks Military Unit
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	texture = "gfx/interface/icons/invention_icons/archer_1.dds"
+	category = military
+
+    can_research = no
+
+	modifier = {
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_cinque_port = {
+	# Unlocks Cinque Port PM for Ports
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/cinque_port.dds"
 	category = society
 
     can_research = no
@@ -49,37 +66,31 @@ england_society_1 = {
 	modifier = {
 	}
 
-	ai_weight = {
-		value = 1
+	on_researched = {
 	}
-}
-
-england_production_2 = {
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
-	category = production
-
-	modifier = {
-		building_shipyard_throughput_add = 0.20
-	}
-
-    can_research = no
 
 	ai_weight = {
 		value = 1
 	}
 }
 
-england_military_2 = {
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+england_lionhearts = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/lionhearts.dds"
 	category = military
 
     can_research = no
 
 	modifier = {
-		ship_hit_points_max_mult = 0.20
-		ship_max_distance_to_port_add = 1
+		unit_combat_unit_type_heavy_infantry_1_offense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_1_defense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_2_offense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_2_defense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_3_offense_mult = 0.10
+		unit_combat_unit_type_heavy_infantry_3_defense_mult = 0.10
+	}
+
+	on_researched = {
 	}
 
 	ai_weight = {
@@ -87,7 +98,61 @@ england_military_2 = {
 	}
 }
 
-england_society_2 = {
+england_dominions = {
+	# Unlocks the English Dominion diplomatic play.
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/crown.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_royal_dockyards = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/royal_dockyards.dds"
+	category = production
+
+    can_research = no
+
+	modifier = {
+		building_shipyard_throughput_add = 0.15
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_reformed_longbowman = {
+	# Unlocks Military Unit
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/archer_2.dds"
+	category = military
+
+    can_research = no
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_renaissance = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
 	category = society
@@ -104,61 +169,31 @@ england_society_2 = {
 	}
 }
 
-england_production_3 = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
-	category = production
-
-	modifier = {
-		state_trade_capacity_mult = 0.2
-	}
-
-    can_research = no
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-england_military_3 = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
-	category = military
-
-    can_research = no
-
-	modifier = {
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-england_society_3 = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+england_enclosure_of_common_fields = {
+	# Unlocks Enclosure Law
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/enclosure_system.dds"
 	category = society
 
     can_research = no
+
+	modifier = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_secretaries_of_state = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/secretaries_of_state.dds"
+	category = society
 
 	modifier = {
 		country_influence_mult = 0.15
 	}
 
-	ai_weight = {
-		value = 1
-	}
-}
-
-england_production_4 = {
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
-	category = production
-
-	modifier = {
-	}
-
     can_research = no
 
 	ai_weight = {
@@ -166,30 +201,49 @@ england_production_4 = {
 	}
 }
 
-england_military_4 = {
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+england_royal_navy = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/reinforced_hulls.dds"
 	category = military
 
-    can_research = no
-
 	modifier = {
-		building_gunsmith_workshop_throughput_add = 0.20
+		country_prestige_from_navy_power_projection_mult = 0.10
+		ship_power_projection_mult = 0.10
+		ship_hit_points_max_mult = 0.10
 	}
+
+    can_research = no
 
 	ai_weight = {
 		value = 1
 	}
 }
 
-england_society_4 = {
+england_art_of_navigation = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/colonial_range.dds"
+	category = military
+
+	modifier = {
+		ship_movement_speed_mult = 0.10
+	}
+
+    can_research = no
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_the_book_of_common_prayer = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	texture = "gfx/interface/icons/invention_icons/book_of_the_common_prayer.dds"
 	category = society
 
     can_research = no
 
 	modifier = {
+		state_conversion_mult = 0.15
 	}
 
 	ai_weight = {
@@ -197,9 +251,25 @@ england_society_4 = {
 	}
 }
 
-england_production_5 = {
+england_the_act_of_supremacy = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/book_of_knowledge.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		state_conversion_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_coke_smelting = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	texture = "gfx/interface/icons/invention_icons/coke_smelting.dds"
 	category = production
 
 	modifier = {
@@ -213,15 +283,15 @@ england_production_5 = {
 	}
 }
 
-england_military_5 = {
+england_the_sick_and_hurt_board = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	texture = "gfx/interface/icons/goods_icons/anchor.dds"
 	category = military
 
     can_research = no
 
 	modifier = {
-		country_navy_goods_cost_mult  = -0.15
+		country_navy_goods_cost_mult  = -0.10
 	}
 
 	ai_weight = {
@@ -229,9 +299,9 @@ england_military_5 = {
 	}
 }
 
-england_society_5 = {
+england_palladian_architecture = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	texture = "gfx/interface/icons/invention_icons/palladian_architecture.dds"
 	category = society
 
     can_research = no
@@ -245,9 +315,25 @@ england_society_5 = {
 	}
 }
 
-england_production_6 = {
+england_bill_of_rights = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/bill_of_rights.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		state_radicals_from_political_movements_mult = -0.15
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+england_water_frame = {
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	texture = "gfx/interface/icons/invention_icons/water_frame.dds"
 	category = production
 
 	modifier = {
@@ -261,9 +347,9 @@ england_production_6 = {
 	}
 }
 
-england_military_6 = {
+england_rulers_of_the_waves = {
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
+	texture = "gfx/interface/icons/invention_icons/greater_blockade.dds"
 	category = military
 
     can_research = no
@@ -277,16 +363,15 @@ england_military_6 = {
 	}
 }
 
-england_society_6 = {
+england_seed_drill = {
 	era = era_6
-	texture = "gfx/interface/icons/invention_icons/england_coa.dds"
-	category = society
+	texture = "gfx/interface/icons/invention_icons/seed_drill.dds"
+	category = production
 
     can_research = no
 
 	modifier = {
-		unit_combat_unit_type_light_infantry_6_offense_mult = 0.10
-		unit_combat_unit_type_light_infantry_6_defense_mult = 0.10
+		building_group_bg_agriculture_throughput_add = 0.25
 	}
 
 	ai_weight = {

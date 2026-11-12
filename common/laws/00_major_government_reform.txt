@@ -21,7 +21,7 @@ law_magna_carta = {
 	progressiveness = -25
 
 	unlocking_technologies = {
-		england_society_1
+		england_magna_carta
 	}
 
 	modifier = {
@@ -36,8 +36,8 @@ law_magna_carta = {
 
 	is_visible = {
 		OR = {
-			c:ENG ?= this # For the Austrian Empire and its subjects
-			c:GBR ?= this # For the Austrian Empire and its subjects
+			c:ENG ?= this #
+			c:GBR ?= this #
 		}
 	}
 

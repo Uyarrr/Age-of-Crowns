@@ -1,0 +1,19 @@
+dp_make_english_dominion = {
+	war_goal = make_english_dominion
+	texture = "gfx/interface/icons/war_goals/make_dominion.dds"
+
+	possible = {
+		aggressive_diplomatic_plays_permitted = yes
+		OR = {
+			c:ENG ?= this
+			was_formed_from = ENG
+		}
+		has_technology_researched = england_dominions
+		NOT = { scope:target_country = { has_modifier = modifier_ryukyu_rivalry_secured_neutrality } }
+	}
+
+	ai_acceptance_max = 90
+	on_weekly_pulse = {}
+	on_war_begins = {}
+	on_war_end = {}
+}

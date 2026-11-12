@@ -1,0 +1,113 @@
+﻿france_domaine_royal = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/france_domaine_royal.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_minting_mult = 0.05
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_elan = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/france_elan.dds"
+	category = military
+
+    can_research = no
+
+	modifier = {
+		unit_morale_loss_mult  = -0.15
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_consolidation_of_country = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/france_consolidation_of_country.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		state_contiguous_incorporation_speed_mult = 0.10
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_appanage_system = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/france_appanage_system.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_liberty_desire_of_subjects_add = 0.02
+		country_subject_income_transfer_mult = 0.05
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_establishment_of_recettes_generales = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/treasure_chest.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_minting_mult = 0.05
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_breton_marriage = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/breton_marriage.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}

@@ -586,7 +586,7 @@ je_england_3 = {
 }
 
 # Colonization of Canada
-# England and Great Britain establish the historical Canadian colonies one at a time,
+# England and countries formed from it establish the historical Canadian colonies one at a time,
 # instead of consolidating the entire strategic region into a generic colonial state.
 je_england_colonization_of_canada = {
 	icon = "gfx/interface/icons/invention_icons/colonial_canada.dds"
@@ -602,7 +602,6 @@ je_england_colonization_of_canada = {
 	is_shown_when_inactive = {
 		OR = {
 			c:ENG ?= this
-			c:GBR ?= this
 			was_formed_from = ENG
 		}
 	}
@@ -610,7 +609,6 @@ je_england_colonization_of_canada = {
 	possible = {
 		OR = {
 			c:ENG ?= this
-			c:GBR ?= this
 			was_formed_from = ENG
 		}
 		is_subject = no

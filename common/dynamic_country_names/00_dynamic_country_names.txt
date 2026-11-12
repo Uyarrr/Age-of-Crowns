@@ -3282,7 +3282,7 @@ UBD = { # Baltic
 			c:RUS ?= {
 				has_diplomatic_pact = {
 					who = c:UBD
-					type = puppet
+					type = vassal
 					is_initiator = yes
 				}
 			}
@@ -5007,7 +5007,7 @@ KAZ = {
 					OR = {
 						has_diplomatic_pact = {
 							who = scope:actor
-							type = puppet
+							type = vassal
 							is_initiator = yes
 						}
 						has_diplomatic_pact = {
@@ -5017,7 +5017,7 @@ KAZ = {
 						}
 						has_diplomatic_pact = {
 							who = scope:actor
-							type = protectorate
+							type = tributary
 							is_initiator = yes
 						}
 					}
@@ -5044,7 +5044,7 @@ KAZ = {
 					OR = {
 						has_diplomatic_pact = {
 							who = scope:actor
-							type = puppet
+							type = vassal
 							is_initiator = yes
 						}
 						has_diplomatic_pact = {
@@ -5054,7 +5054,7 @@ KAZ = {
 						}
 						has_diplomatic_pact = {
 							who = scope:actor
-							type = protectorate
+							type = tributary
 							is_initiator = yes
 						}
 					}
