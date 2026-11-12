@@ -185,6 +185,22 @@ england_enclosure_of_common_fields = {
 	}
 }
 
+england_merchant_adventures = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/centralized_tribute.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		state_trade_capacity_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 england_secretaries_of_state = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/secretaries_of_state.dds"
@@ -226,6 +242,7 @@ england_art_of_navigation = {
 
 	modifier = {
 		ship_movement_speed_mult = 0.10
+		country_ship_group_supply_ships_construction_efficiency_add = 0.05
 	}
 
     can_research = no
