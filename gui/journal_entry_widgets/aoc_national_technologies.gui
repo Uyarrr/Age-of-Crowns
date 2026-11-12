@@ -173,8 +173,35 @@ flowcontainer = {
 		flowcontainer = {
 			spacing = 9
 			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_breton_marriage')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_breton_marriage" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_colonial_ventures')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_colonial_ventures" }
+			}
+			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_establishment_of_recettes_generales')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_establishment_of_recettes_generales" }
+			}
+		}
+		aoc_national_age_header = {
+			blockoverride "age_icon" { texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds" }
+			blockoverride "age_name" { text = "aoc_national_tech_era_5" }
+		}
+		flowcontainer = {
+			spacing = 9
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_manufacture_royale_des_glaces')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_manufacture_royale_des_glaces" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_académie_royale_des_sciences')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_académie_royale_des_sciences" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_bourbon_absolutism')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_bourbon_absolutism" }
 			}
 		}
 	}

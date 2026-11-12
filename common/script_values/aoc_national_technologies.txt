@@ -5,4 +5,9 @@ aoc_france_researched = {
 	if = { limit = { has_technology_researched = france_consolidation_of_country } add = 1 }
 	if = { limit = { has_technology_researched = france_appanage_system } add = 1 }
 	if = { limit = { has_technology_researched = france_establishment_of_recettes_generales } add = 1 }
+	if = { limit = { has_technology_researched = france_breton_marriage } add = 1 }
+	if = { limit = { has_technology_researched = france_colonial_ventures } add = 1 }
+	if = { limit = { has_technology_researched = france_manufacture_royale_des_glaces } add = 1 }
+	if = { limit = { has_technology_researched = france_bourbon_absolutism } add = 1 }
+	if = { limit = { has_technology_researched = france_académie_royale_des_sciences } add = 1 }
 }

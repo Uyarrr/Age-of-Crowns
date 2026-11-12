@@ -228,6 +228,10 @@ flowcontainer = {
 		flowcontainer = {
 			spacing = 9
 			aoc_england_technology_card = {
+				datacontext = "[GetTechnology('england_merchant_adventures')]"
+				blockoverride "research_hint" { tooltip = "aoc_content_unlock_england_merchant_adventures" }
+			}
+			aoc_england_technology_card = {
 				datacontext = "[GetTechnology('england_renaissance')]"
 				blockoverride "research_hint" { tooltip = "aoc_content_unlock_england_renaissance" }
 			}

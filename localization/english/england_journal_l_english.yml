@@ -16,8 +16,8 @@
  aoc_content_group_overseas: "Overseas Expansion"
  aoc_content_group_other: "Other Events"
  # BEGIN GENERATED CONTENT
- aoc_england_content_summary: "#v 22#! unique technologies · #v 37#! events"
- aoc_content_research_progress: "Unlocked #v [GetPlayer.MakeScope.ScriptValue('aoc_content_english_researched')|0] / 22#!"
+ aoc_england_content_summary: "#v 23#! unique technologies · #v 37#! events"
+ aoc_content_research_progress: "Unlocked #v [GetPlayer.MakeScope.ScriptValue('aoc_content_english_researched')|0] / 23#!"
  aoc_content_unlock_england_wool_staple_system: "Granted when you research [GetTechnology('production_age_1').GetName]."
  aoc_content_unlock_england_magna_carta: "Granted when you research [GetTechnology('society_age_1').GetName]."
  aoc_content_unlock_england_longbowman: "Granted when you research [GetTechnology('military_age_1').GetName]."
@@ -28,6 +28,7 @@
  aoc_content_unlock_england_reformed_longbowman: "Granted when you research [GetTechnology('military_age_2').GetName]."
  aoc_content_unlock_england_renaissance: "Granted when you research [GetTechnology('society_age_2').GetName]."
  aoc_content_unlock_england_enclosure_of_common_fields: "Granted when you research [GetTechnology('society_age_2').GetName]."
+ aoc_content_unlock_england_merchant_adventures: "Granted when you research [GetTechnology('society_age_2').GetName]."
  aoc_content_unlock_england_secretaries_of_state: "Granted when you research [GetTechnology('society_age_3').GetName]."
  aoc_content_unlock_england_royal_navy: "Granted when you research [GetTechnology('military_age_3').GetName]."
  aoc_content_unlock_england_art_of_navigation: "Granted when you research [GetTechnology('military_age_3').GetName]."

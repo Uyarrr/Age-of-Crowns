@@ -37,10 +37,13 @@ society_age_2 = {
 			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
 			add_technology_researched = england_renaissance
 			add_technology_researched = england_enclosure_of_common_fields
+			add_technology_researched = england_merchant_adventures
 		}
 		if = {
 			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
 			add_technology_researched = france_establishment_of_recettes_generales
+			add_technology_researched = france_breton_marriage
+			add_technology_researched = france_colonial_ventures
 		}
 	}
 
@@ -100,6 +103,11 @@ society_age_5 = {
 			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
 			add_technology_researched = england_palladian_architecture
 			add_technology_researched = england_bill_of_rights
+		}
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_bourbon_absolutism
+			add_technology_researched = france_académie_royale_des_sciences
 		}
 	}
 
@@ -191,6 +199,10 @@ production_age_5 = {
 		if = {
 			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
 			add_technology_researched = england_coke_smelting
+		}
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_manufacture_royale_des_glaces
 		}
 	}
 

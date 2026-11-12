@@ -12,7 +12,8 @@ subject_type_appanage = {
 	use_for_release_country = no
 	gives_prestige_to_overlord = yes
 
-	diplomatic_action = vassal
+	diplomatic_action = appanage
+	re_establish_war_goal = make_tributary
 	autonomy_level = 1
 	category = same_as_vassal
 

@@ -96,12 +96,88 @@ france_establishment_of_recettes_generales = {
 
 france_breton_marriage = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/breton_marriage.dds"
+	texture = "gfx/interface/icons/event_icons/breton_marriage.dds"
 	category = society
 
     can_research = no
 
 	modifier = {
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_colonial_ventures = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/france_colonial_ventures.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		state_colony_growth_speed_mult = 0.15
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_manufacture_royale_des_glaces = {
+	era = era_5
+	texture = "gfx/interface/icons/goods_icons/glass.dds"
+	category = production
+
+    can_research = no
+
+	modifier = {
+		building_glassworks_throughput_add = 0.15
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_bourbon_absolutism = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/absolutism.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_authority_mult = 0.20
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+france_académie_royale_des_sciences = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/renaissance.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		country_weekly_innovation_max_add = 50
 	}
 
 	on_researched = {
