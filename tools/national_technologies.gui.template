@@ -97,6 +97,11 @@ types aoc_national_technology_types
 			block "event_conditions" {}
 		}
 		icon = {
+			position = { 460 9 }
+			size = { 34 34 }
+			block "event_age" { visible = no }
+		}
+		icon = {
 			position = { 479 49 }
 			size = { 22 22 }
 			texture = "gfx/interface/icons/generic_icons/green_checkmark.dds"

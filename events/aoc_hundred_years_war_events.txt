@@ -69,6 +69,7 @@ aoc_hyw.310 = {
 	title = aoc_hyw_maine_title
 	desc = aoc_hyw_maine_desc
 	flavor = aoc_hyw_maine_flavor
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 	event_image = { texture = "gfx/event_pictures/aoc_hyw_english_court.dds" }
 	duration = 3
 	fire_only_once = yes
@@ -109,6 +110,7 @@ aoc_hyw.311 = {
 	type = country_event
 	title = aoc_hyw_maine_returned_title
 	desc = aoc_hyw_maine_returned_desc
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
 	duration = 3
 	fire_only_once = yes
@@ -121,6 +123,7 @@ aoc_hyw.312 = {
 	type = country_event
 	title = aoc_hyw_maine_denied_title
 	desc = aoc_hyw_maine_denied_desc
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
 	duration = 3
 	fire_only_once = yes
@@ -131,6 +134,7 @@ aoc_hyw.320 = {
 	type = country_event
 	title = aoc_hyw_summons_title
 	desc = aoc_hyw_summons_desc
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 	event_image = { texture = "gfx/event_pictures/hundred_years_war.dds" }
 	duration = 1
 	trigger = {
@@ -192,6 +196,7 @@ aoc_hyw.321 = {
 	type = country_event
 	title = aoc_hyw_refusal_title
 	desc = aoc_hyw_refusal_desc
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 	event_image = { texture = "gfx/event_pictures/hundred_years_war.dds" }
 	duration = 1
 	option = { name = aoc_hyw_refusal_option }
@@ -201,6 +206,7 @@ aoc_hyw.330 = {
 	type = country_event
 	title = aoc_hyw_autonomy_title
 	desc = aoc_hyw_autonomy_desc
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
 	duration = 1
 	trigger = { scope:aoc_hyw_petitioner ?= { aoc_hyw_france_subject = yes } }
@@ -245,6 +251,7 @@ aoc_hyw.340 = {
 	type = country_event
 	title = aoc_hyw_invitation_title
 	desc = aoc_hyw_invitation_desc
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
 	event_image = { texture = "gfx/event_pictures/aoc_hyw_envoys.dds" }
 	duration = 1
 	option = {
@@ -273,5 +280,29 @@ aoc_hyw.340 = {
 			limit = { aoc_hyw_pending_invite_matches = yes }
 			remove_variable = aoc_hyw_pending_invite
 		}
+	}
+}
+
+aoc_hyw.350 = {
+	type = country_event
+	placement = root
+	title = aoc_hyw_support_news_title
+	desc = aoc_hyw_support_news_desc
+	flavor = aoc_hyw_support_news_flavor
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_envoys.dds" }
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+
+	trigger = {
+		is_involved_in_journal_entry = je_england_1
+		exists = scope:aoc_hyw_announced_supporter
+		exists = scope:aoc_hyw_announced_crown
+	}
+
+	option = {
+		name = aoc_hyw_support_news_option
+		default_option = yes
 	}
 }

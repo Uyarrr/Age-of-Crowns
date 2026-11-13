@@ -30,12 +30,20 @@ The English subject tags represent local administrations under Henry VI. Normand
 - Titles and accepted petitions to confirm privileges secure a pledge for the next campaign. Their treaties specify £1,000 weekly and a 12-month binding period. AI actions and event responses use the same eligibility rules as player actions.
 - Appanages have no autonomy steps. France can grant independence, and an independence play can restore the Appanage relationship if France wins. The privilege petition secures a military pledge without changing the subject type.
 - In game, check that the subject relationship displays **Appanage** with the Personal Union icon and that France's subject action reads **Grant Independence**. After using Influence, check that England and the appanage can see the English Subsidy, neither can withdraw, and the treaty and weekly payments end automatically after 12 months. These checks are pending.
-- England can claim the French throne before the first campaign. The claim gives 75 Infamy, applies a −100% Infamy decay modifier until conclusion, and adds 0.5 monthly peacetime Tension. All journal outcomes call `aoc_hyw_conclude` to remove the decay modifier.
+- England can claim the French throne before the first campaign. The claim gives 75 Infamy, applies a −100% Infamy decay modifier until conclusion, and adds 1 monthly peacetime Tension. All journal outcomes call `aoc_hyw_conclude` to remove the decay modifier.
+
+## Support announcements
+
+The popup follows vanilla’s `iberia.11` in `events/iberia_events/iberian_union_events.txt` and the Balkan League events. The description names the country and the crown it backs, the flavor shows the news reaching court, and the single option acknowledges the report.
+
+The first roster refresh establishes the baseline in new campaigns and older saves. Later refreshes announce each new or restored alignment after updating journal involvement for all countries. Every player in the journal receives the news, including neutral appanages and a player whose own country joins. Accepted invitations, qualifying treaties, and subjects gaining or regaining a pledge all use the same roster rules.
+
+In game, start as a neutral French appanage and check that the starting roster loads quietly. Have one country accept England’s invitation and another begin backing France through a treaty or pledge. Verify both popups name the correct country and crown, including when two alignments are detected on the same refresh. In multiplayer, check that both crowns, neutral appanages, and the joining players receive the news, and that an outside player receives neither report. Advance another week and reload to check for duplicates. Withdraw support and later regain it to check for one new report.
 
 ## Campaigns and settlements
 
-- The Surrender of Maine targets England after a delay. Ceding Maine lets France annex `MIE` and gives England −20% Prestige and −10 Legitimacy for ten years. Refusal adds 0.5 monthly peacetime Tension. France receives its own event for either answer.
-- Tension rises by 1 per month in peace and falls by 3 during the campaign’s play or war. At 100, the journal opens its scripted play when the crowns are free to fight. Eligible supporters receive a summons. Refusal costs 75 Relations with the summoning crown and triggers the same five-year withdrawal for an outside supporter. Outside countries already at war with the crown cannot answer a stale summons.
+- The Surrender of Maine targets England after a delay. Ceding Maine lets France annex `MIE` and gives England −20% Prestige and −10 Legitimacy for ten years. Refusal adds 0.5 monthly peacetime Tension while England or an English subject holds land in Maine-Anjou. France receives its own event for either answer.
+- The bar shows current Tension out of 100. Tension rises by 1.5 per month in peace and falls by 3 during the campaign’s play or war. At 100, the next weekly pulse opens the scripted play if England and France are free to fight. The play starts at 80 Escalation. Eligible supporters receive a summons. Refusal costs 75 Relations with the summoning crown and triggers the same five-year withdrawal for an outside supporter. Outside countries already at war with the crown cannot answer a stale summons.
 - Enforcing the campaign demand scores a win. A round with no sole winner scores a stalemate. Three wins decide the settlement, and three stalemates conclude the journal with the existing borders and subjects.
 - England keeps its holdings and imposes a 25-year treaty with French payments and investment rights. If England claimed the throne, France also becomes its junior partner. A French victory transfers England’s own holdings in geographic France and annexes English subjects with holdings in that region.
 
@@ -59,6 +67,7 @@ After restarting Victoria 3, verify that the ordinary play action is unavailable
 
 ## In-game regression checks
 
+- Reload a save at 100 Tension with both crowns free to fight. Advance through the next weekly pulse and check that England opens a single campaign play against France at 80 Escalation, both sides have the Supremacy demand, and eligible supporters can join by accepting their summons. Repeat with a truce and check that the play waits until the truce expires.
 - Start a fresh 1444 campaign as France and check that **The Hundred Years War in France** opens once on entering the map. Its only choice is **We shall be victorious!**
 - Start as England and check that Henry VI rules while **The Wars of the Roses** is inactive. Resolve the Hundred Years’ War through either victory or a stalemate and check that the English journal activates and opens its first event. Reload a legacy save with an active or settled dynastic crisis and check that the crisis keeps its progress or settlement.
 - As Castile, accept England’s invitation and confirm the English roster and force totals include Castile. Start an ordinary English play against an outside country such as an Irish minor and back its target. Once Castile opposes England, check that the pledge disappears by the next weekly refresh and that Castile receives no English summons. Repeat with negative relations and no war.

@@ -9,12 +9,22 @@ aoc_hyw_tension = {
 	monthly_progress = {
 		progress_condition = {
 			limit = { aoc_hyw_round_open = no }
-			add = { desc = aoc_hyw_tension_rivalry value = 1 }
+			add = { desc = aoc_hyw_tension_rivalry value = 1.5 }
 		}
 		progress_condition = {
 			limit = {
 				aoc_hyw_round_open = no
 				c:ENG ?= { has_variable = aoc_hyw_maine_refused }
+				s:STATE_MAINE_ANJOU = {
+					any_scope_state = {
+						owner = {
+							OR = {
+								c:ENG ?= this
+								is_subject_of = c:ENG
+							}
+						}
+					}
+				}
 			}
 			add = { desc = aoc_hyw_tension_maine value = 0.5 }
 		}
@@ -23,7 +33,7 @@ aoc_hyw_tension = {
 				aoc_hyw_round_open = no
 				c:ENG ?= { has_variable = aoc_hyw_claimed_throne }
 			}
-			add = { desc = aoc_hyw_tension_claim value = 0.5 }
+			add = { desc = aoc_hyw_tension_claim value = 1 }
 		}
 		progress_condition = {
 			limit = { aoc_hyw_round_open = yes }

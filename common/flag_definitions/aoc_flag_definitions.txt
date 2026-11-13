@@ -1411,8 +1411,8 @@ MIE = { # Maine
 	}
 	flag_definition = {
 		coa = MIE
-		priority = 2
-		trigger = {
+		priority = 2999
+		#trigger = {
 			OR = {
 				coa_def_capetian_trigger = yes
 				coa_def_FRA_ensign_trigger = yes
@@ -1428,6 +1428,20 @@ MIE = { # Maine
 				coa_def_FRA_ensign_trigger = yes
 			}
 			coa_def_discovery_age_3_trigger = yes
+		}
+	}
+}
+
+SAV = { # Savoy
+	flag_definition = {
+		coa = SAV
+		priority = 1
+	}
+	flag_definition = {
+		coa = SAV_merchant
+		priority = 100
+		trigger = {
+			coa_def_republic_trigger = yes
 		}
 	}
 }

@@ -32,13 +32,29 @@ aoc_hyw_refresh_journal = {
 			}
 			if = {
 				limit = { aoc_hyw_english_supporter = yes }
-				aoc_hyw_add_supporter = { SIDE = english }
+				aoc_hyw_add_supporter = { SIDE = english CROWN = c:ENG }
 			}
 			else_if = {
 				limit = { aoc_hyw_french_supporter = yes }
-				aoc_hyw_add_supporter = { SIDE = french }
+				aoc_hyw_add_supporter = { SIDE = french CROWN = c:FRA }
+			}
+			else = {
+				remove_variable = aoc_hyw_roster_crown
 			}
 		}
+		every_in_list = {
+			list = aoc_hyw_new_supporters
+			save_scope_as = aoc_hyw_announced_supporter
+			var:aoc_hyw_roster_crown = { save_scope_as = aoc_hyw_announced_crown }
+			every_country = {
+				limit = {
+					is_ai = no
+					is_involved_in_journal_entry = je_england_1
+				}
+				trigger_event = { id = aoc_hyw.350 popup = yes }
+			}
+		}
+		scope:journal_entry = { set_variable = aoc_hyw_support_roster_initialized }
 		aoc_hyw_refresh_targets = yes
 	}
 }
@@ -84,6 +100,14 @@ aoc_hyw_review_support = {
 }
 
 aoc_hyw_add_supporter = {
+	if = {
+		limit = { NOT = { var:aoc_hyw_roster_crown ?= $CROWN$ } }
+		set_variable = { name = aoc_hyw_roster_crown value = $CROWN$ }
+		if = {
+			limit = { scope:journal_entry = { has_variable = aoc_hyw_support_roster_initialized } }
+			add_to_temporary_list = aoc_hyw_new_supporters
+		}
+	}
 	scope:journal_entry = {
 		add_to_variable_list = { name = aoc_hyw_$SIDE$_supporters target = prev }
 		change_variable = { name = aoc_hyw_$SIDE$_army add = prev.army_size }
@@ -102,8 +126,13 @@ aoc_hyw_monthly = {
 			trigger_event = { id = aoc_hyw.310 months = 6 popup = yes }
 		}
 	}
+	aoc_hyw_ai_actions = yes
+}
+
+aoc_hyw_try_start_round = {
 	if = {
 		limit = {
+			aoc_hyw_crowns_available = yes
 			aoc_hyw_round_open = no
 			scope:journal_entry = {
 				"scripted_bar_progress(aoc_hyw_tension)" >= 100
@@ -113,12 +142,11 @@ aoc_hyw_monthly = {
 			}
 			c:ENG = {
 				NOT = { has_truce_with = c:FRA }
-				NOT = { is_diplomatic_play_enemy_of = c:FRA }
+				aoc_hyw_not_fighting_crown = { CROWN = c:FRA }
 			}
 		}
 		aoc_hyw_start_round = yes
 	}
-	aoc_hyw_ai_actions = yes
 }
 
 aoc_hyw_start_round = {
@@ -138,18 +166,26 @@ aoc_hyw_start_round = {
 			set_variable = { name = aoc_hyw_round_crown value = c:FRA }
 		}
 	}
-	# Closing manoeuvres bypass the ordinary sway and obligation window.
-	c:FRA = {
+	c:ENG = {
 		create_diplomatic_play = {
 			name = dp_aoc_hyw
 			type = dp_aoc_hyw
-			initiator = c:ENG
+			target_country = c:FRA
 			escalation = 80
+			add_war_goal = {
+				holder = c:FRA
+				type = aoc_hyw_supremacy
+				target_country = c:ENG
+				primary_demand = yes
+			}
 		}
 	}
 	random_diplomatic_play = {
-		limit = { is_diplomatic_play_type = dp_aoc_hyw }
-		add_war_goal = { holder = c:FRA type = aoc_hyw_supremacy country = c:ENG primary_demand = yes }
+		limit = {
+			is_diplomatic_play_type = dp_aoc_hyw
+			initiator = { c:ENG ?= this }
+			target = { c:FRA ?= this }
+		}
 		save_scope_as = aoc_hyw_round_play
 		aoc_hyw_enforce_play_roster = yes
 	}
@@ -273,6 +309,7 @@ aoc_hyw_conclude = {
 		remove_variable = aoc_hyw_round_crown
 		remove_variable = aoc_hyw_answered_summons
 		remove_variable = aoc_hyw_subject_pledge
+		remove_variable = aoc_hyw_roster_crown
 		remove_variable = aoc_hyw_skip_french_summons
 		remove_variable = aoc_hyw_french_neutrality
 	}

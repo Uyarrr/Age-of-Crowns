@@ -215,7 +215,7 @@ const groups = [
 	['reforms', /^england\.10/],
 	['hundred_years', /^(?:england\.30[01]|aoc_hyw\.)/],
 	['roses', /^england\.3(?:0[2-9]|[12][0-9])$/],
-	['overseas', /^england(?:_overseas\.|\.20)/],
+	['overseas', /^(?:england(?:_overseas\.|\.20)|national_colonization\.)/],
 ];
 const eventGroup = id => groups.find(([, pattern]) => pattern.test(id))?.[0] ?? 'other';
 const storylineAges = { hundred_years: 1, roses: 2, overseas: 3 };
@@ -264,19 +264,22 @@ for (const index of ages.keys()) {
 	}
 }
 
-function eventRow(node) {
-	const key = eventKey(node.key);
-	const tooltip = `aoc_content_player_${key}`;
+function eventAgeBadge(node) {
 	const { era, required } = eventAge(node);
-	const badge = era ? `
+	return era ? `
 			blockoverride "event_age" {
 				texture = "${ageIcon(era)}"
 				tooltip = "aoc_content_${required ? 'required' : 'storyline'}_age_${era}"
 			}` : '';
-	return `\t\taoc_content_event_row = {
+}
+
+function eventRow(node, rowType, fallbackConditions) {
+	const key = eventKey(node.key);
+	const tooltip = `aoc_content_player_${key}`;
+	return `\t\t${rowType} = {
 			blockoverride "event_icon" { texture = "${field(node, 'icon') ?? 'gfx/interface/icons/event_icons/waving_flag.dds'}" tooltip = "${tooltip}" }
 			blockoverride "event_title" { text = "${field(node, 'title')}" tooltip = "${tooltip}" }
-			blockoverride "event_conditions" { text = "${conditions[node.key] ? `aoc_content_when_${key}` : 'aoc_content_when_unlisted'}" tooltip = "${tooltip}" }${badge}
+			blockoverride "event_conditions" { text = "${conditions[node.key] ? `aoc_content_when_${key}` : fallbackConditions}" tooltip = "${tooltip}" }${eventAgeBadge(node)}
 			blockoverride "event_details" { tooltip = "aoc_content_details_${key}" }
 			blockoverride "event_seen" {
 				visible = "[GetScriptedGui('aoc_content_check_${key}').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -381,7 +384,7 @@ function playerEffect(entry) {
 		const value = field(entry, 'value');
 		if (region && /^-?\d+(?:\.\d+)?$/.test(value)) {
 			const amount = Number(value);
-			return `#v ${amount > 0 ? '+' : ''}${amount.toLocaleString('en-US')}#! [concept_involvement] in $${region}$`;
+			return `${amount < 0 ? '#n' : '#p'} ${amount > 0 ? '+' : ''}${amount.toLocaleString('en-US')}#! [concept_involvement] in $${region}$`;
 		}
 	}
 	if (entry.key === 'activate_law' && typeof entry.value === 'string') {
@@ -394,7 +397,10 @@ function playerEffect(entry) {
 		const duration = entry.value.find(argument => ['days', 'weeks', 'months', 'years'].includes(argument.key));
 		const period = duration && (durationLabels[duration.value] || (/^\d+$/.test(duration.value)
 			? `${duration.value} ${duration.value === '1' ? duration.key.slice(0, -1) : duration.key}` : null));
-		return `[GetStaticModifier('${modifier}').GetName] · Your country${period ? ` · #v ${period}#!` : ''}\n[GetStaticModifier('${modifier}').GetDesc]`;
+		return `#v [GetStaticModifier('${modifier}').GetName]#!${period ? ` for #v ${period}#!` : ''}#indent_newline:3 \n[GetStaticModifier('${modifier}').GetDesc]#!`;
+	}
+	if (entry.key === 'set_variable' && entry.value === 'aoc_french_canada_phase') {
+		return 'Begin the French colonial effort in Canada';
 	}
 	if (entry.key === 'change_variable' && Array.isArray(entry.value)) {
 		const label = variableLabels[field(entry, 'name')];
@@ -418,7 +424,7 @@ function playerOptionEffects(entries) {
 			continue;
 		}
 		const effect = playerEffect(entry);
-		if (effect) lines.push(effect);
+		if (effect) lines.push(`• ${effect}`);
 		else hasDetails = true;
 	}
 	return { lines, hasDetails };
@@ -434,26 +440,29 @@ function playerDetails(node) {
 	if (safeLocalization(description)) lines.push(`$${description}$`);
 	if (conditions[node.key]) lines.push('$TOOLTIP_DELIMITER$', '#bold When it can happen#!', `$aoc_content_when_${eventKey(node.key)}$`);
 	const options = node.value.filter(entry => entry.key === 'option');
-	if (options.length) lines.push('$TOOLTIP_DELIMITER$', '#bold Event choices#!');
 	for (const [index, option] of options.entries()) {
 		const name = field(option, 'name');
 		const effects = playerOptionEffects(option.value);
-		if (index > 0) lines.push('');
-		lines.push(`#v #bold ${safeLocalization(name) ? `$${name}$` : 'Event option'}#!#!`, ...effects.lines);
+		const label = safeLocalization(name) ? `$${name}$` : 'Event option';
+		lines.push('$TOOLTIP_DELIMITER$', `#header Option ${index + 1} · ${label}#!`, ...effects.lines);
 		if (effects.hasDetails) lines.push('See the information icon for additional effects and conditions.');
 		else if (!effects.lines.length) lines.push('No additional effects.');
 	}
 	return ` aoc_content_player_${eventKey(node.key)}: "${lines.join('\n').replace(/\n/g, '\\n')}"`;
 }
-const eventRows = [...groups.map(([group]) => group), 'other'].flatMap(group => {
-	const rows = events.filter(node => eventGroup(node.key) === group);
-	if (!rows.length) return [];
-	const collapsed = `aoc_content_collapsed_${group}`;
-	const open = `[Not(GetVariableSystem.Exists('${collapsed}'))]`;
-	return [
-		`\t\tbutton_standard = {
+
+function groupEvents(eventList) {
+	return [...groups.map(([group]) => group), 'other'].map(group =>
+		[group, eventList.filter(node => eventGroup(node.key) === group)]);
+}
+
+function eventSections(groupedEvents, prefix, rowType, fallbackConditions) {
+	return groupedEvents.filter(([, rows]) => rows.length).map(([group, rows]) => {
+		const collapsed = `${prefix}_collapsed_${group}`;
+		const open = `[Not(GetVariableSystem.Exists('${collapsed}'))]`;
+		return `\t\tbutton_standard = {
 			size = { 510 36 }
-			text = "aoc_content_category_${group}"
+			text = "${prefix}_category_${group}"
 			onclick = "[GetVariableSystem.Toggle('${collapsed}')]"
 			icon = {
 				position = { 16 11 }
@@ -469,15 +478,23 @@ const eventRows = [...groups.map(([group]) => group), 'other'].flatMap(group => 
 				visible = "${open}"
 				alwaystransparent = yes
 			}
-		}`,
-		`\t\tflowcontainer = {
+		}
+		flowcontainer = {
 			visible = "${open}"
 			direction = vertical
 			spacing = 4
-${rows.map(node => eventRow(node).replace(/^/gm, '\t')).join('\n')}
-		}`,
-	];
-});
+${rows.map(node => eventRow(node, rowType, fallbackConditions).replace(/^/gm, '\t')).join('\n')}
+		}`;
+	});
+}
+
+function eventCategoryLabels(groupedEvents, prefix) {
+	return groupedEvents.map(([group, rows]) =>
+		` ${prefix}_category_${group}: "$aoc_content_group_${group}$ · ${rows.length}"`);
+}
+
+const englishEventGroups = groupEvents(events);
+const eventRows = eventSections(englishEventGroups, 'aoc_content', 'aoc_content_event_row', 'aoc_content_when_unlisted');
 
 const template = fs.readFileSync(path.join(__dirname, 'nation_content.gui.template'), 'utf8').replace(/\r\n/g, '\n');
 const gui = template.replace('\t\t# TECHNOLOGY_ROWS', techRows.join('\n'))
@@ -498,8 +515,7 @@ const counts = [
 			` aoc_content_storyline_age_${era}: "Storyline age: $aoc_england_tech_era_${era}$"`,
 		];
 	}),
-	...[...groups.map(([group]) => group), 'other'].map(group =>
-		` aoc_content_category_${group}: "$aoc_content_group_${group}$ · ${events.filter(node => eventGroup(node.key) === group).length}"`),
+	...eventCategoryLabels(englishEventGroups, 'aoc_content'),
 ].join('\n');
 const locFile = 'localization/english/england_journal_l_english.yml';
 const loc = fs.readFileSync(path.join(root, locFile), 'utf8').replace(/\r\n/g, '\n');
@@ -524,20 +540,12 @@ ${tech.map(({ key }) => `	if = { limit = { has_technology_researched = ${key} } 
 }\n`;
 
 const otherNations = [...nationData].filter(([nation]) => nation !== 'england');
+const nationalEventGroups = new Map([...nationalEvents].map(([nation, eventList]) =>
+	[nation, groupEvents(eventList).filter(([, rows]) => rows.length)]));
 const nationName = nation => nation.split('_').map(part => part[0].toUpperCase() + part.slice(1)).join(' ');
 const nationalWidget = ([nation, { tech: nationTech }]) => {
-	const nationEventRows = (nationalEvents.get(nation) || []).map(node => {
-		const key = eventKey(node.key);
-		return `		aoc_national_event_row = {
-			blockoverride "event_icon" { texture = "${field(node, 'icon') || 'gfx/interface/icons/event_icons/waving_flag.dds'}" tooltip = "aoc_content_player_${key}" }
-			blockoverride "event_title" { text = "${field(node, 'title')}" tooltip = "aoc_content_player_${key}" }
-			blockoverride "event_conditions" { text = "${conditions[node.key] ? `aoc_content_when_${key}` : 'aoc_national_event_conditions'}" tooltip = "aoc_content_player_${key}" }
-			blockoverride "event_details" { tooltip = "aoc_content_details_${key}" }
-			blockoverride "event_seen" {
-				visible = "[GetScriptedGui('aoc_content_check_${key}').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-			}
-		}`;
-	});
+	const nationEventRows = eventSections(nationalEventGroups.get(nation), `aoc_${nation}_content`,
+		'aoc_national_event_row', 'aoc_national_event_conditions');
 	if (!nationEventRows.length) nationEventRows.push('		textbox = { size = { 510 32 } text = "aoc_national_no_events" align = center|nobaseline }');
 	const rows = [];
 	for (const index of ages.keys()) {
@@ -617,6 +625,7 @@ const nationalLoc = '\uFEFFl_english:\n'
 			` je_${nation}_technologies_reason: "Browse this nation's unique technologies and historical events."`,
 			` aoc_${nation}_tech_summary: "#v ${nationTech.length}#! unique technologies · #v ${nationEventList.length}#! events"`,
 			` aoc_${nation}_tech_progress: "Unlocked #v [GetPlayer.MakeScope.ScriptValue('aoc_${nation}_researched')|0] / ${nationTech.length}#!"`,
+			...eventCategoryLabels(nationalEventGroups.get(nation), `aoc_${nation}_content`),
 			...nationTech.map(({ key }) => ` aoc_${nation}_unlock_${key}: "Granted when you research [GetTechnology('${allGrants.get(key).ageKey}').GetName]."`),
 			...nationTech.flatMap(({ key }) => [key, `${key}_desc`].filter(locKey => !english.has(locKey))
 				.map(locKey => ` ${locKey}: "${locKey.endsWith('_desc') ? `A national technology of ${name}.` : nationName(key.slice(nation.length + 1))}"`)),
