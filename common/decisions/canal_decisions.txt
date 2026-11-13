@@ -1,0 +1,165 @@
+suez_survey_decision = {
+	is_shown = {
+		NOT = {
+			has_variable = survey_suez_taken
+			has_global_variable = suez_canal_complete
+		}
+		OR = {
+			country_rank = rank_value:great_power
+			s:STATE_SINAI = {
+				any_scope_state = {
+					owner = ROOT
+				}
+			}
+		}
+		s:STATE_SINAI = {
+			NOT = {
+				any_scope_state = {
+					has_building = building_suez_canal
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_interest_marker_in_region = sr:region_nile_basin
+		has_technology_researched = colonization
+		produced_bureaucracy > 1000
+	}
+
+	when_taken = {
+		set_variable = {
+			name = survey_suez_taken
+			value = 0
+		}
+		add_modifier = {
+			name = modifier_surveying_suez
+		}
+		add_journal_entry = {
+			type = je_suez_survey
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { produced_bureaucracy > 5000 }
+			add = 10
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+			}
+			multiply = 0
+		}
+	}
+}
+
+stop_suez_survey_decision = {
+	is_shown = {
+		has_modifier = modifier_surveying_suez
+	}
+	possible = {
+		has_modifier = modifier_surveying_suez
+	}
+	when_taken = {
+		remove_variable = survey_suez_taken
+		remove_modifier = modifier_surveying_suez
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+
+panama_survey_decision = {
+	is_shown = {
+		NOT = {
+			has_variable = survey_panama_taken
+			has_global_variable = panama_canal_complete
+		}
+		OR = {
+			country_rank = rank_value:great_power
+			s:STATE_PANAMA = {
+				any_scope_state = {
+					owner = ROOT
+				}
+			}
+		}
+		s:STATE_PANAMA = {
+			NOT = {
+				any_scope_state = {
+					has_building = building_panama_canal
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_interest_marker_in_region = sr:region_central_america
+		has_technology_researched = civilizing_mission
+		produced_bureaucracy > 1000
+	}
+
+	when_taken = {
+		set_variable = {
+			name = survey_panama_taken
+			value = 0
+		}
+		add_modifier = {
+			name = modifier_surveying_panama
+		}
+		add_journal_entry = {
+			type = je_panama_survey
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { produced_bureaucracy > 5000 }
+			add = 10
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+			}
+			multiply = 0
+		}
+	}
+}
+
+stop_panama_survey_decision = {
+	is_shown = {
+		has_modifier = modifier_surveying_panama
+	}
+	possible = {
+		has_modifier = modifier_surveying_panama
+	}
+	when_taken = {
+		remove_variable = survey_panama_taken
+		remove_modifier = modifier_surveying_panama
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+

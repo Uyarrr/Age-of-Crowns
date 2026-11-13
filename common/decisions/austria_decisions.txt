@@ -1,0 +1,76 @@
+
+
+aus_integrate_crown_lands_decision = {
+	is_shown = {
+		c:AUS ?= this
+		NOT = {
+			has_journal_entry = je_matter_of_hungary
+		}
+		NOT = {
+			has_variable = crownlands_annexed_var
+		}
+		any_subject_or_below = {
+			is_subject_type = subject_type_crown_land
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = matter_of_hungary_integrate_crown_lands_tt
+			NOT = {
+				any_subject_or_below = {
+					is_subject_type = subject_type_crown_land
+					liberty_desire > 25
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		set_variable = crownlands_annexed_var
+		every_subject_or_below = {
+			limit = {
+				is_subject_type = subject_type_crown_land
+			}
+			if = {
+				limit = {
+					is_player = yes
+				}
+				play_as = prev
+			}
+			root = {
+				annex = prev
+			}
+		}
+		add_modifier = {
+			name = modifier_streamline_crown_lands
+			days = normal_modifier_time
+		}
+		add_radicals = {
+			culture = cu:hungarian
+			value = medium_radicals
+		}
+		add_radicals = {
+			culture = cu:polish
+			value = medium_radicals
+		}
+		add_radicals = {
+			culture = cu:croat
+			value = medium_radicals
+		}
+	}
+
+	ai_chance = {
+		value = 10
+		if = {
+			limit = { # Will not annex players until their liberty desire is below 5.
+				any_subject_or_below = {
+					is_subject_type = subject_type_crown_land
+					is_player = yes
+					liberty_desire > 5
+				}
+			}
+			add = -100
+		}
+	}
+}

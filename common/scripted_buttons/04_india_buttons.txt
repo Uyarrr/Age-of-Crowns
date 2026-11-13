@@ -1,0 +1,135 @@
+
+
+
+je_communal_divides_federal_solution = {
+	name = "je_communal_divides_federal_solution"
+	desc = "je_communal_divides_federal_solution_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	possible = {
+		hidden_trigger = {
+			NOT = {
+				has_variable = selected_federal_solution_var
+			}
+		}
+		is_at_war = no
+		country_or_subject_owns_entire_state_region = STATE_EAST_BENGAL
+		country_or_subject_owns_entire_state_region = STATE_PUNJAB
+		country_or_subject_owns_entire_state_region = STATE_SINDH
+		country_or_subject_owns_entire_state_region = STATE_KASHMIR
+		NOT = {
+			has_law_or_variant = law_type:law_state_religion
+			exists = c:BGL
+			exists = c:IDS
+		}
+		OR = {
+			custom_tooltip = {
+				text = granted_home_rule_tt
+				has_global_variable = india_home_rule
+			}
+			is_subject = no
+		}
+	}
+
+	effect = {
+		set_variable = selected_federal_solution_var
+		custom_tooltip = confederacy_of_india
+		custom_tooltip = {
+			text = create_indusstan_bangla_tt
+			if = {
+				limit = {
+					c:BIC ?= ROOT
+				}
+				create_country = {
+					origin = root
+					tag = BGL
+					state = s:STATE_EAST_BENGAL.region_state:BIC
+					on_created = {
+						set_variable = indian_federation_member
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					c:BHT ?= ROOT
+				}
+				create_country = {
+					origin = root
+					tag = BGL
+					state = s:STATE_EAST_BENGAL.region_state:BHT
+					on_created = {
+						set_variable = indian_federation_member
+					}
+				}
+			}
+			if = {
+				limit = {
+					c:BIC ?= ROOT
+				}
+				create_country = {
+					origin = root
+					tag = IDS
+					state = s:STATE_PUNJAB.region_state:BIC
+					on_created = {
+						set_variable = indian_federation_member
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					c:BHT ?= ROOT
+				}
+				create_country = {
+					origin = root
+					tag = IDS
+					state = s:STATE_PUNJAB.region_state:BHT
+					on_created = {
+						set_variable = indian_federation_member
+					}
+				}
+			}
+			create_diplomatic_pact = {
+				country = c:BGL
+				type = puppet
+			}
+			create_diplomatic_pact = {
+				country = c:IDS
+				type = puppet
+			}
+			every_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_PUNJAB
+						state_region = s:STATE_SINDH
+						state_region = s:STATE_KASHMIR
+						state_region = s:STATE_PASHTUNISTAN
+						state_region = s:STATE_BALUCHISTAN
+						state_region = s:STATE_QUETTA
+					}
+				}
+				set_state_owner = c:IDS
+			}
+		}
+		add_radicals = {
+			value = large_radicals
+			religion = rel:hindu
+		}
+		add_loyalists = {
+			value = medium_radicals
+			religion = rel:sunni
+		}
+		add_loyalists = {
+			value = small_radicals
+			religion = rel:shiite
+		}
+		custom_tooltip = break_confederation_promise_tt
+	}
+}
+

@@ -1,0 +1,66 @@
+
+jap_upgrade_the_shinsengumi = {
+	is_shown = {
+		exists = c:JAP
+		c:JAP = THIS
+		has_law = law_type:law_shinsengumi
+	}
+
+	possible = {
+		has_law = law_type:law_shinsengumi
+		has_technology_researched = central_archives
+		any_interest_group = { # Anyone in government loves to Arrange Accidents
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_secret_police
+				value > neutral
+			}
+		}
+		bureaucracy >= 0
+		approaching_bureaucracy_shortage = no
+	}
+
+	when_taken = {
+		every_interest_group = {
+			limit = {
+				law_stance = {
+					law = law_type:law_secret_police
+					value > neutral
+				}
+			}
+			add_modifier = {
+				name = modifier_expanded_shinsengumi_positive
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		every_interest_group = {
+			limit = {
+				law_enactment_stance = {
+					law = law_type:law_secret_police
+					value < neutral
+				}
+			}
+			add_modifier = {
+				name = modifier_expanded_shinsengumi_negative
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+		}
+		set_variable = japan_reformed_shinsengumi_var
+		activate_law = law_type:law_secret_police
+		random_law = {
+			limit = {
+				type = law_type:law_secret_police
+			}
+			add_amendment = {
+				type = amendment_reformed_shinsengumi
+				sponsor = PREV.ig:ig_armed_forces
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 10
+	}
+}

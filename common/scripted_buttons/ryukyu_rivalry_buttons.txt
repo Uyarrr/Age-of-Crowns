@@ -1,0 +1,106 @@
+
+
+
+je_ryukyu_rivalry_honor_kikoeogimi_button = {
+    name = "je_ryukyu_rivalry_honor_kikoeogimi_button"
+    desc = "je_ryukyu_rivalry_honor_kikoeogimi_button_desc"
+
+    visible = {
+        OR = {
+            c:JAP ?= this
+            c:CHI ?= this
+        }
+    }
+
+    possible = {
+		trigger_if = {
+			limit = {
+				c:JAP ?= this
+			}
+			NOT = { has_war_with = c:CHI }
+		}
+		trigger_else_if = {
+			limit = {
+				c:CHI ?= this
+			}
+			NOT = { has_war_with = c:JAP }
+		}
+		c:RYU ?= {
+			OR = {
+				has_law = law_type:law_state_religion
+				ig:ig_devout = {
+					is_in_government = yes
+				}
+			}
+		}
+		OR = {
+			has_law = law_type:law_state_religion
+			ig:ig_devout = {
+				ig_approval >= happy
+			}
+		}
+		NOT = {
+			ig:ig_devout = {
+				has_modifier = modifier_ryukyu_rivalry_honor_kikoeogimi
+			}
+		}
+    }
+
+    selected = {
+		ig:ig_devout = {
+			has_modifier = modifier_ryukyu_rivalry_honor_kikoeogimi
+		}
+    }
+
+    effect = {
+		if = {
+			limit = {
+				c:JAP ?= this
+			}
+			change_relations = {  
+				country = c:CHI
+				value = -50  
+			}
+		}
+		else = {
+			change_relations = {  
+				country = c:JAP
+				value = -50  
+			}
+		}
+		ig:ig_devout = {
+			add_modifier = {
+				name = modifier_ryukyu_rivalry_honor_kikoeogimi
+				days = normal_modifier_time
+			}
+		}
+		custom_tooltip = ryukyu_rivalry_medium_influence_gain_self_tt
+    }
+
+    ai_chance = {
+        value = 0
+		
+		if = {
+			limit = {
+				AND = {
+					scope:journal_entry = {
+						"scripted_bar_progress(je_ryukyu_rivalry_score_bar)" < 0
+					}
+					c:JAP ?= this
+				}
+			}
+			add = 10
+		}
+		if = {
+			limit = {
+				AND = {
+					scope:journal_entry = {
+						"scripted_bar_progress(je_ryukyu_rivalry_score_bar)" > 0
+					}
+					c:CHI ?= this
+				}
+			}
+			add = 10
+		}
+    }
+}

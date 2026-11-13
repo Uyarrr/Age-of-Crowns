@@ -1,0 +1,52 @@
+
+
+
+
+
+button_proclaim_independence = {
+	name = "button_proclaim_independence"
+	desc = "button_proclaim_independence_desc"
+
+	visible = {
+		always = yes
+		NOT = {
+			has_variable = button_proclaim_independence_var
+		}
+	}
+
+	possible = {
+		trigger_if = {
+			limit = {
+				exists = c:SPA
+			}
+			calc_true_if = {
+				amount >= 2
+				root.naval_power_projection > c:SPA.naval_power_projection
+				root.army_power_projection > c:SPA.army_power_projection
+				root.prestige > c:SPA.prestige
+			}
+
+		}
+		trigger_if = {
+			limit = {
+				NOT = {
+					exists = c:SPA
+				}
+			}
+			always = yes
+		}
+	}
+
+	effect = {
+		remove_modifier = modifier_not_recognized_by_spain
+		set_variable = button_proclaim_independence_var
+		add_modifier = {
+			name = modifier_a_show_of_strength
+			days = normal_modifier_time
+		}
+	}
+
+	ai_chance = {
+		value = 10
+	}
+}

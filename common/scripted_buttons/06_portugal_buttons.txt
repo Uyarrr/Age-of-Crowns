@@ -1,0 +1,37 @@
+
+je_portugal_and_brazil_pursue_united_kingdom_button = { # Insanity
+	name = je_portugal_and_brazil_pursue_united_kingdom_button
+	desc = je_portugal_and_brazil_pursue_united_kingdom_button_desc
+
+	visible = {
+		exists = c:BRZ
+		NOT = {
+			has_variable = je_portugal_and_brazil_pursue_united_kingdom_button_var
+		}
+	}
+
+	possible = {
+		AND = {
+			custom_tooltip = {
+				text = por_gdp_above_brz_gdp_tt
+				ROOT.gdp > c:BRZ.gdp
+			}
+			custom_tooltip = {
+				text = por_prestige_above_brz_prestige_tt
+				ROOT.prestige > c:BRZ.prestige
+			}
+		}
+	}
+
+	selected = {
+	}
+
+	effect = {
+		set_variable = je_portugal_and_brazil_pursue_united_kingdom_button_var
+		add_journal_entry = { type = je_portugal_united_kingdom }
+	}
+
+	ai_chance = {
+		value = 1
+	}
+}

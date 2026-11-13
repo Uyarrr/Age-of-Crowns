@@ -1,0 +1,46 @@
+je_spa_economic_regeneration_reduce_economic_objectives_button = {
+	name = je_spa_economic_regeneration_reduce_economic_objectives_button
+	desc = je_spa_economic_regeneration_reduce_economic_objectives_button_desc
+
+	visible = {
+		has_variable = economic_regeneration_started_var
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = je_spa_economic_regeneration_reduce_economic_objectives_button_tt_1
+			var:spa_economic_regeneration_var <= 3
+			NOT = {
+				has_variable = reduced_economic_objectives_var
+			}
+		}
+	}
+
+	selected = {
+		has_variable = reduced_economic_objectives_var
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = je_spa_economic_regeneration_reduce_economic_objectives_button_tt_2
+			set_variable = reduced_economic_objectives_var
+	        set_variable = {
+	            name = spa_economic_regeneration_goal_var
+	            value = 3
+	        }
+		}
+		custom_tooltip = je_spa_economic_regeneration_reduce_economic_objectives_button_tt_3
+		add_radicals = {
+			value = small_radicals
+		}
+		add_modifier = {
+			name = modifier_reduced_economic_objectives
+			days = normal_modifier_time
+		}
+	}
+
+	ai_chance = {
+		value = 1
+	}
+}
+

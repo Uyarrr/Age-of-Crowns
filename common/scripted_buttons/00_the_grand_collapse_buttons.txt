@@ -1,0 +1,146 @@
+# Lobby Notables button
+
+# Issue Khutbah button
+je_the_grand_collapse_issue_khutbah_button = {
+	name = "je_the_grand_collapse_issue_khutbah_button"
+	desc = "je_the_grand_collapse_issue_khutbah_button_desc"
+
+		ai_chance = {
+		value = 0
+	}
+
+	visible = {
+		country_has_state_religion = rel:sunni
+	}
+
+	possible = {
+		country_has_state_religion = rel:sunni
+		has_technology_researched = mass_communication
+		NOT = {
+			has_modifier = the_grand_collapse_issued_khutbah_mod
+		}
+		ig:ig_devout ?= {
+			ig_approval > 4
+		}
+	}
+
+	effect = {
+		random_list = {
+			65 = {
+				add_loyalists = {
+					value = small_radicals
+					religion = rel:sunni
+				}
+			}
+			35 = {
+				add_loyalists = {
+					value = medium_radicals
+					religion = rel:sunni
+				}
+			}
+		}
+		add_modifier = {
+			name = the_grand_collapse_issued_khutbah_mod
+			days = 351
+		}
+	}
+}
+
+# Law Speed start button
+je_the_grand_collapse_law_speed_start_button = {
+	name = "je_the_grand_collapse_law_speed_start_button"
+	desc = "je_the_grand_collapse_law_speed_start_button_desc"
+
+		ai_chance = {
+		value = 0
+	}
+
+	visible = {
+		NOT = {
+			has_modifier = the_grand_collapse_law_speed_mod
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_modifier = the_grand_collapse_law_speed_mod
+		}
+	}
+
+	effect = {
+		add_modifier = the_grand_collapse_law_speed_mod
+	}
+}
+
+# Law Speed stop button
+je_the_grand_collapse_law_speed_stop_button = {
+	name = "je_the_grand_collapse_law_speed_stop_button"
+	desc = "je_the_grand_collapse_law_speed_start_button_desc"
+
+		ai_chance = {
+		value = 0
+	}
+
+	visible = {
+		has_modifier = the_grand_collapse_law_speed_mod
+	}
+
+	possible = {
+		has_modifier = the_grand_collapse_law_speed_mod
+	}
+
+	effect = {
+		remove_modifier = the_grand_collapse_law_speed_mod
+	}
+}
+
+# Relation Speed start button
+je_the_grand_collapse_relation_speed_start_button = {
+	name = "je_the_grand_collapse_relation_speed_start_button"
+	desc = "je_the_grand_collapse_relation_speed_start_button_desc"
+
+		ai_chance = {
+		value = 0
+	}
+
+	visible = {
+		NOT = {
+			has_modifier = the_grand_collapse_relation_speed_mod
+		}
+		any_subject_or_below = {
+			count > 0
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_modifier = the_grand_collapse_relation_speed_mod
+		}
+	}
+
+	effect = {
+		add_modifier = the_grand_collapse_relation_speed_mod
+	}
+}
+
+# Relation Speed stop button
+je_the_grand_collapse_relation_Speed_stop_button = {
+	name = "je_the_grand_collapse_relation_Speed_stop_button"
+	desc = "je_the_grand_collapse_relation_speed_start_button_desc"
+
+		ai_chance = {
+		value = 0
+	}
+
+	visible = {
+		has_modifier = the_grand_collapse_relation_speed_mod
+	}
+
+	possible = {
+		has_modifier = the_grand_collapse_relation_speed_mod
+	}
+
+	effect = {
+		remove_modifier = the_grand_collapse_relation_speed_mod
+	}
+}

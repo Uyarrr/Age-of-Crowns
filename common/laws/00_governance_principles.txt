@@ -406,15 +406,6 @@ law_presidential_republic = {
 			deactivate_law = law_type:law_neo_absolutism
 			activate_law = law_type:law_autocracy
 		}
-		if = {
-			limit = {
-				c:POR ?= this
-				ruler ?= {
-					has_template = POR_manuel_ii_de_braganca_template
-				}
-			}
-			trigger_event = { id = portuguese_monarchs.3 }
-		}
 	}
 
 	ai_will_do = {
@@ -573,15 +564,6 @@ law_parliamentary_republic = {
 			}
 			deactivate_law = law_type:law_neo_absolutism
 			activate_law = law_type:law_autocracy
-		}
-		if = {
-			limit = {
-				c:POR ?= this
-				ruler ?= {
-					has_template = POR_manuel_ii_de_braganca_template
-				}
-			}
-			trigger_event = { id = portuguese_monarchs.3 }
 		}
 	}
 

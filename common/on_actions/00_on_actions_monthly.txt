@@ -1,0 +1,140 @@
+# Fired off on_monthly_pulse_country
+
+# Regency switch event
+regency_monthly_events = {
+}
+
+# Coup
+coup_monthly_events = {
+}
+
+# Garibaldi
+garibaldi_monthly_events = {
+}
+
+# Fund Lobbies Events
+fund_lobbies_monthly_events = {
+}
+
+# Captain Nemo Events
+nemo_monthly_events = {
+}
+
+# Halloween Events
+spooky_halloween_events = {
+}
+
+# Sweden Events
+sweden_events = {
+}
+
+# Japan Monarchy Pulse Events
+japan_monarchy_monthly_events = {
+}
+
+tech_monthly_events = {
+}
+
+# je_krakatoa
+krakatoa_on_action = {
+	trigger = {
+		any_scope_state = {
+			devastation > 0
+			has_decree = decree_emergency_relief
+			state_region = { has_variable = is_tsunami_state }
+		}
+	}
+	effect = {
+		random = {
+			chance = krakatoa_decree_emergency_relief_devastation_recovery_chance
+
+			random_scope_state = {
+				limit = {
+					devastation > 0
+					has_decree = decree_emergency_relief
+					state_region = { has_variable = is_tsunami_state }
+				}
+				state_region = { add_devastation = krakatoa_decree_emergency_relief_devastation_recovery_amount }
+			}
+		}
+	}
+}
+
+# Colonial Claims
+colonial_claims_check = {
+	trigger = {
+		owner = {
+			has_strategic_region_interest_tier = {
+				strategic_region = root.region
+				value >= interest_tier_effect_colonial_claim_generation_min_tier
+			}
+		}
+		NOT = { has_claim_by = root.owner }
+		is_under_colonization = yes
+		num_provinces >= {
+			value = state_region.num_provinces
+			multiply = interest_tier_effect_colonial_claim_generation_threshold
+		}
+	}
+	effect = {
+		state_region = {
+			add_claim = root.owner
+		}
+		root = {
+			save_scope_as = colony_notification_state
+		}
+		owner = {
+			save_scope_as = colonizer_notification_country
+			post_notification = colonial_claim_generated
+		}
+	}
+}
+
+exile_pool_culling_on_action = {
+	trigger = {
+		any_character_in_exile_pool = {
+			count > {
+				value = exile_pool_max_size
+				add = 10
+			}
+		}
+	}
+	effect = {
+		save_temporary_scope_value_as = {
+			name = exile_pool_size
+			value = {
+				add = 0
+				every_character_in_exile_pool = {
+					add = 1
+				}
+			}
+		}
+		ordered_character_in_exile_pool = {
+			limit = {
+				is_historical = no # Only consider culling historical characters if there arent generic ones we can remove
+			}
+			alternative_limit = {
+				NOT = { has_variable = exile_pool_culling_immunity }
+			}
+			order_by = {
+				value = popularity
+				multiply = -1
+			}
+			max = {
+				add = scope:exile_pool_size
+				subtract = exile_pool_max_size
+			}
+
+			retire_character = yes
+		}
+	}
+}
+
+# Council Republic
+# Root = Country (inherited from on_monthly_pulse_country)
+council_republic_monthly_events = {
+	trigger = {
+		has_law_or_variant = law_type:law_council_republic
+		has_journal_entry = je_state_and_revolution
+	}
+}

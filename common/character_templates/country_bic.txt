@@ -1,0 +1,1484 @@
+### British India character template file ###
+
+### Rulers
+
+BIC_george_eden = { # George Eden, 1st Earl of Auckland
+	first_name = George
+	last_name = Eden
+    dna = dna_george_eden
+	historical = yes
+    # technically a ruler, but will be set as the ruler of BIC via the company
+	birth_date = 1784.8.25
+	company = company:company_east_india_company
+    culture = cu:british
+	religion = rel:protestant
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+    home_region = STATE_YORKSHIRE
+	traits = {
+        special_character_colonial_business
+		reckless
+	}
+    executive_usage = {
+        country_trigger = { # Must be the country that owns the company
+            c:GBR ?= this
+        }
+        company_trigger = {
+            is_company_type = company_type:company_east_india_company
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1849.1.1
+        #guaranteed to spawn if possible
+    }
+	trait_generation = {
+
+	}
+}
+
+### IG Leaders
+
+# Starting IG Leaders
+
+BIC_haji_shariatullah = {
+	# Haji Shariatullah
+	first_name = Haji
+	last_name = Shariatullah
+    dna = dna_haji_shariatullah
+	historical = yes
+	birth_date = 1781.1.1 # Only year known
+	ig_leader = yes
+    culture = cu:bengali
+    religion = rel:sunni
+	interest_group = ig_rural_folk
+	ideology = ideology_traditionalist_minoritarian
+    home_region = STATE_EAST_BENGAL
+	traits = {
+        pious
+        charismatic
+	}
+	trait_generation = { }
+}
+
+BIC_radhakanta_deb = {
+	# Radhakanta Deb Bahadur
+	first_name = Radhakanta
+	last_name = Deb
+    dna = dna_radhakanta_deb
+	historical = yes
+	birth_date = 1784.3.10
+	ig_leader = yes
+    culture = cu:bengali
+    religion = rel:hindu
+	interest_group = ig_devout
+	ideology = ideology_traditionalist_minoritarian
+    home_region = STATE_WEST_BENGAL
+	traits = {
+        basic_political_operator
+        literary
+	}
+	trait_generation = { }
+}
+
+BIC_robert_grant = {
+	# Robert Grant
+	first_name = Robert
+	last_name = Grant
+    dna = dna_robert_grant
+	historical = yes
+	birth_date = 1779.1.1 # Only year known
+	ig_leader = yes
+    culture = cu:british
+    religion = rel:protestant
+	interest_group = ig_industrialists
+	ideology = ideology_jingoist_leader
+    home_region = STATE_BOMBAY # Born in Bengal, based in Bombay
+	traits = {
+        ambitious
+        imperious
+        experienced_colonial_administrator
+	}
+	trait_generation = { }
+}
+
+BIC_dwarkanath_tagore = {
+	# Dwarkanath Tagore
+	first_name = Dwarkanath
+	last_name = Tagore
+    dna = dna_dwarkanath_tagore
+	historical = yes
+	birth_date = 1794.8.30 # Only year known
+	ig_leader = yes
+	role = character_role_magnate
+    culture = cu:bengali
+    religion = rel:hindu
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+    home_region = STATE_WEST_BENGAL
+	holding_type = building_financial_district
+	traits = {
+        hedonist
+        ambitious
+        expensive_tastes
+	}
+	trait_generation = { }
+}
+
+BIC_prasanna_tagore = {
+	# Prasanna Kumar Tagore
+	first_name = Prasanna
+	last_name = Tagore
+    dna = dna_prasanna_kumar_tagore
+	historical = yes
+	birth_date = 1794.8.30 # Only year known
+	ig_leader = yes
+	role = character_role_magnate
+    culture = cu:bengali
+    religion = rel:hindu
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+    home_region = STATE_WEST_BENGAL
+	holding_type = building_manor_house
+	traits = {
+        experienced_political_operator
+        pious
+	}
+	trait_generation = { }
+}
+
+BIC_ramgopal_ghosh = {
+	# Ramgopal Ghosh
+	first_name = Ramgopal
+	last_name = Ghosh
+    dna = dna_ramgopal_ghosh
+	historical = yes
+	birth_date = 1784.3.10
+	ig_leader = yes
+    culture = cu:bengali
+    religion = rel:atheist
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+    home_region = STATE_WEST_BENGAL
+	traits = {
+        expert_political_operator
+        literary
+	}
+	trait_generation = { }
+}
+
+# Generated IG Leaders
+
+BIC_charles_canning = {
+    first_name = Charles
+    last_name = Canning
+    female = no
+    dna = dna_charles_canning
+    historical = yes
+    birth_date = 1812.12.14
+    role = character_role_politician
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_industrialists
+    ideology = ideology_moderate
+    home_region = STATE_HOME_COUNTIES
+    traits = {
+        experienced_political_operator
+        basic_colonial_administrator
+        tactful
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+            NOT = {
+                has_variable = canning_var
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1841.1.1
+        latest_usage_date = 1862.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_john_lawrence = {
+    first_name = John
+    last_name = Lawrence
+    female = no
+    dna = dna_john_laird_mair_lawrence
+    historical = yes
+    birth_date = 1811.3.4
+    role = character_role_politician
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_industrialists
+    ideology = ideology_pacifist
+    home_region = STATE_YORKSHIRE
+    traits = {
+        experienced_colonial_administrator
+        charismatic
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+            NOT = {
+                has_variable = lawrence_var
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1846.1.1
+        latest_usage_date = 1879.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_muhsin_ad-din_ahmad = { #Muḥsin ad-Dīn Aḥmad, aka Dudu Miyan
+    first_name = Muhsin_ad-Din
+    last_name = Ahmad
+    female = no
+    historical = yes
+    birth_date = 1819.1.1 # Only date known
+    ig_leader = yes
+    culture = cu:bengali
+    religion = rel:sunni
+    interest_group = ig_rural_folk
+    ideology = ideology_land_reformer
+    home_region = STATE_EAST_BENGAL
+    traits = {
+        charismatic
+        pious
+        direct
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1838.1.1
+        latest_usage_date = 1870.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_lakshmeshwar_singh = { #Lakshmeshwar Singh
+    first_name = Lakshmeshwar
+    last_name = Singh
+    female = no
+    dna = dna_lakshmeshwar_singh
+    historical = yes
+    birth_date = 1819.1.1 # Only date known
+    role = character_role_politician
+	role = character_role_magnate
+    culture = cu:bihari
+    religion = rel:hindu
+    interest_group = ig_landowners
+    ideology = ideology_reformer
+    home_region = STATE_BIHAR
+	holding_type = building_manor_house
+    traits = {
+        persistent
+        master_bureaucrat
+        tactful
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1878.1.1
+        latest_usage_date = 1898.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+
+BIC_debendranath_tagore = { #Debendranath Tagore
+    first_name = Debendranath
+    last_name = Tagore
+    female = no
+    dna = dna_debendranath_tagore
+    historical = yes
+    birth_date = 1817.5.15
+    role = character_role_politician
+    culture = cu:bengali
+    religion = rel:hindu
+    interest_group = ig_devout
+    ideology = ideology_moderate
+    home_region = STATE_WEST_BENGAL
+    traits = {
+        persistent
+        honorable
+        direct
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1839.1.1
+        latest_usage_date = 1870.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_dayananda_saraswati = { #Dayananda Saraswati
+    first_name = Dayananda
+    last_name = Saraswati
+    female = no
+    historical = yes
+    birth_date = 1824.2.12
+    role = character_role_politician
+    culture = cu:gujarati
+    religion = rel:hindu
+    interest_group = ig_devout
+    ideology = ideology_reformer # Favoured equal rights for women
+    home_region = STATE_GUJARAT
+    traits = {
+        pious
+        honorable
+        erudite
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1865.1.1
+        latest_usage_date = 1882.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_motilal_nehru = { #Motilal Nehru
+    first_name = Motilal
+    last_name = Nehru
+    female = no
+    dna = dna_motilal_nehru
+    historical = yes
+    birth_date = 1861.5.6
+    role = character_role_politician
+    culture = cu:kashmiri
+    religion = rel:hindu
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+    home_region = STATE_AGRA
+    traits = {
+        experienced_political_operator
+        ambitious
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1883.1.1
+        latest_usage_date = 1928.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_henry_petty-fitzmaurice = { #Henry Petty-Fitzmaurice
+    first_name = Henry
+    last_name = Petty-Fitzmaurice
+    female = no
+    dna = dna_henry_petty_fitzmaurice_lord_lansdowne
+    historical = yes
+    birth_date = 1845.1.14
+    ig_leader = yes
+    culture = cu:irish
+    religion = rel:protestant
+    interest_group = ig_industrialists
+    ideology = ideology_traditionalist
+    home_region = STATE_HOME_COUNTIES
+    traits = {
+        expert_colonial_administrator
+        expensive_tastes
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1880.1.1
+        latest_usage_date = 1910.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_jawaharlal_nehru = { #Jawaharlal Nehru
+    first_name = Jawaharlal
+    last_name = Nehru
+    female = no
+    dna = dna_jawaharlal_nehru
+    historical = yes
+    birth_date = 1889.11.14
+    role = character_role_politician
+    culture = cu:kashmiri
+    religion = rel:hindu
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_state_socialist
+    home_region = STATE_AGRA
+    traits = {
+        expert_political_operator
+        charismatic
+        inspirational_orator
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1912.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_gopal_gokhale = { #Gopal Krishna Gokhale
+    first_name = Gopale
+    last_name = Gokhale
+    female = no
+    dna = dna_gopal_krishna
+    historical = yes
+    birth_date = 1866.5.9
+    role = character_role_politician
+    culture = cu:marathi
+    religion = rel:hindu
+    interest_group = ig_intelligentsia
+    ideology = ideology_reformer
+    home_region = STATE_BOMBAY
+    traits = {
+        cautious
+        experienced_political_operator
+        erudite
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1889.1.1
+        latest_usage_date = 1915.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_swami_vivkananda = { #Swami Vivekananda
+    first_name = Swami
+    last_name = Vivekananda
+    female = no
+    dna = dna_swami_vivekananda
+    historical = yes
+    birth_date = 1863.1.12
+    role = character_role_politician
+    culture = cu:bengali
+    religion = rel:hindu
+    interest_group = ig_devout
+    ideology = ideology_reformer
+    home_region = STATE_WEST_BENGAL
+    traits = {
+        pious
+        erudite
+        sickly
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1885.1.1
+        latest_usage_date = 1900.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_jamshedji_tata = { #Jamshedji Nusserwanji Tata
+    first_name = Jamshedji
+    last_name = Tata
+    female = no
+    dna = dna_jamshedji_tata
+    historical = yes
+    birth_date = 1839.3.3
+    role = character_role_politician
+	role = character_role_magnate
+    culture = cu:gujarati
+    religion = rel:animist # Zoroastrian
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_reformer
+    home_region = STATE_GUJARAT
+	holding_type = building_financial_district
+    traits = {
+        tactful
+        ambitious
+        erudite
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1868.1.1
+        latest_usage_date = 1900.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_rabindranath_tagore = { #Rabindranath Tagore
+    first_name = Rabindranath
+    last_name = Tagore
+    female = no
+    dna = dna_rabindranath_tagore
+    historical = yes
+    birth_date = 1861.5.7
+    role = character_role_politician
+    culture = cu:bengali
+    religion = rel:hindu
+    interest_group = ig_landowners
+    ideology = ideology_reformer
+    home_region = STATE_WEST_BENGAL
+    traits = {
+        literary
+        romantic
+        charismatic
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1868.1.1
+        latest_usage_date = 1900.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_dadabhai_naoroji = { #Dadabhai Naoroji
+    first_name = Dadabhai
+    last_name = Naoroji
+    female = no
+    dna = dna_dadabhai_naoroji
+    historical = yes
+    birth_date = 1825.9.4
+    role = character_role_politician
+    culture = cu:gujarati
+    religion = rel:animist # Zoroastrian
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_reformer
+    home_region = STATE_GUJARAT
+    traits = {
+        erudite
+        expert_political_operator
+        persistent
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1868.1.1
+        latest_usage_date = 1900.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_amritlal_thakkar = { #Amritlal Vithaldas Thakkar, aka Thakkar Bapa
+    first_name = Amritlal
+    last_name = Thakkar
+    female = no
+    dna = dna_thakkar_bapa
+    historical = yes
+    birth_date = 1869.11.29
+    role = character_role_politician
+    culture = cu:gujarati
+    religion = rel:hindu
+    interest_group = ig_rural_folk
+    ideology = ideology_state_socialist
+    home_region = STATE_GUJARAT
+    traits = {
+        direct
+        honorable
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:BIC
+            c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1890.1.1
+        latest_usage_date = 1930.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+### Generals
+
+# Starting Generals
+
+BIC_henry_fane = { # BIC, general
+    first_name = Sir_Henry
+    last_name = Fane
+    dna = dna_henry_fane
+    historical = yes
+    birth_date = 1782.1.26
+    is_general = yes
+    ig_leader = yes
+    commander_rank = commander_rank_4
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_MIDLANDS
+    traits = {
+        basic_defensive_strategist
+        hedonist # Many illegitimate children
+    }
+}
+
+BIC_john_keane = { # BIC, general
+    first_name = John
+    last_name = Keane
+    historical = yes
+    birth_date = 1781.2.6
+    is_general = yes
+    commander_rank = commander_rank_3
+    culture = cu:irish
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_MUNSTER
+    traits = {
+        basic_colonial_administrator
+        scarred
+    }
+}
+
+BIC_robert_o_callaghan = { # BIC, general
+    first_name = Robert
+    last_name = O_Callaghan
+    historical = yes
+    birth_date = 1777.6.30 # Only month known
+    is_general = yes
+    commander_rank = commander_rank_3
+    culture = cu:irish
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_MUNSTER
+    traits = {
+        basic_political_operator
+    }
+}
+
+BIC_peregrine_maitland = { # BIC, general
+    first_name = Peregrine
+    last_name = Maitland
+    dna = dna_peregrine_maitland
+    historical = yes
+    birth_date = 1777.6.30 # Only month known
+    is_general = yes
+    commander_rank = commander_rank_2
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_ethno_nationalist # Introduced Canadian residential schools
+    home_region = STATE_HOME_COUNTIES
+    traits = {
+        bigoted
+        experienced_colonial_administrator
+        basic_defensive_strategist
+    }
+}
+
+# Generated Generals
+
+BIC_william_elphinstone = { # BIC, general
+    first_name = William_George_Keith
+    last_name = Elphinstone
+    dna = dna_william_george_keith_elphinstone
+    historical = yes
+    birth_date = 1782.1.26
+    is_general = yes
+    commander_rank = commander_rank_2
+    culture = cu:scottish
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_royalist
+    home_region = STATE_LOWLANDS
+    traits = {
+        reckless
+        tactful
+    }
+    commander_usage = {
+		country_trigger = {
+			c:BIC ?= THIS
+		}
+		role = general
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1850.1.1
+		#guaranteed to spawn if possible
+	}
+}
+
+BIC_henry_havelock = { # BIC, general
+    first_name = Sir_Henry
+    last_name = Havelock
+    dna = dna_henry_havelock
+    historical = yes
+    birth_date = 1795.4.5
+    is_general = yes
+    commander_rank = default
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_traditionalist
+    home_region = STATE_YORKSHIRE
+    traits = {
+        pious
+    }
+    commander_usage = {
+		country_trigger = {
+			c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+		}
+		role = general
+		earliest_usage_date = 1839.1.1
+		latest_usage_date = 1857.1.1
+		#guaranteed to spawn if possible
+	}
+	trait_generation = { }
+}
+
+BIC_henry_godwin = { # BIC, general
+    first_name = Sir_Henry
+    last_name = Godwin
+    dna = dna_henry_godwin
+    historical = yes
+    birth_date = 1782.1.26
+    is_general = yes
+    commander_rank = commander_rank_1
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_HOME_COUNTIES
+    traits = {
+        basic_offensive_planner
+        forest_commander
+    }
+    commander_usage = {
+		country_trigger = {
+			c:BIC ?= THIS
+			has_dlc_feature = ip2_content
+		}
+		role = general
+		earliest_usage_date = 1845.1.1
+		latest_usage_date = 1853.1.1
+		#guaranteed to spawn if possible
+	}
+	trait_generation = { }
+}
+
+BIC_reginald_dyer = { # Exists for an event
+    first_name = Reginald
+    last_name = Dyer
+    dna = dna_reginald_dyer
+    historical = yes
+    birth_date = 1864.10.09
+    is_general = yes
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_authoritarian
+    home_region = STATE_PUNJAB
+    traits = {
+        war_criminal
+        cruel
+        plains_commander
+    }
+}
+
+BIC_JOD_pratap_singh_of_idar = { # later Pratap Singh
+    first_name = Pratap_Singh
+    last_name = Rathore
+    historical = yes
+    birth_date = 1845.10.21
+    is_general = yes
+    commander_rank = commander_rank_2
+    culture = cu:rajput
+    religion = rel:hindu
+    interest_group = ig_armed_forces # lifelong soldier
+    ideology = ideology_royalist
+    home_region = STATE_RAJPUTANA
+    traits = {
+        honorable
+        brave
+        traditionalist_commander
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            has_dlc_feature = ip2_content
+
+            OR = {
+                c:IDA ?= this
+                AND = {
+                    c:JOD ?= this
+                    NOT = { exists = c:IDA }
+                }
+                AND = {
+                    NOR = {
+                        exists = c:JOD
+                        exists = c:IDA
+                    }
+                    c:BIC ?= this
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1878.1.1 # joined the Jodhpur risala/cavalry
+        latest_usage_date = 1902.8.9 # promoted to Major-General
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            has_dlc_feature = ip2_content
+
+            OR = {
+                c:IDA ?= this
+                AND = {
+                    c:JOD ?= this
+                    NOT = { exists = c:IDA }
+                }
+                AND = {
+                    NOR = {
+                        exists = c:JOD
+                        exists = c:IDA
+                    }
+                    c:BIC ?= this
+                }
+            }
+        }
+        role = general
+        earliest_usage_date = 1878.1.1 # joined the Jodhpur risala/cavalry
+        latest_usage_date = 1902.8.9 # promoted to Major-General
+        #guaranteed to spawn if possible
+    }
+}
+
+### Admirals
+
+# Starting Admirals
+
+BIC_john_wood = { # BIC, admiral
+    first_name = John
+    last_name = Wood
+    historical = yes
+    birth_date = 1812.1.2 # exact date unknown
+    is_admiral = yes
+    hq = region_south_india
+    culture = cu:scottish
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_LOWLANDS
+    traits = {
+        explorer
+        surveyor
+    }
+}
+
+BIC_charles_malcolm = { # BIC, admiral
+    first_name = Sir_Charles
+    last_name = Malcolm
+    dna = dna_charles_malcolm
+    historical = yes
+    birth_date = 1782.12.13 # exact date unknown
+    is_admiral = yes
+    hq = region_south_india
+    culture = cu:scottish
+    religion = rel:protestant
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_LOWLANDS
+    traits = {
+        basic_naval_commander
+        meticulous
+    }
+}
+
+# Generated Admirals
+
+### Agitators
+
+# Starting Agitators
+
+# Generated Agitators
+
+BIC_mohandas_karamchand_gandhi = { # Mohandas Karamchand Gandhi
+	first_name = Mohandas
+	last_name = Gandhi
+	female = no
+    dna = dna_mahatma_gandhi
+	historical = yes
+	birth_date = 1869.10.2
+	is_agitator = yes
+	culture = cu:gujarati
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian
+    home_region = STATE_GUJARAT
+	traits = {
+		persistent
+		inspirational_orator
+		charismatic
+	}
+    # Spawned manully
+}
+
+BIC_muhammad_ali_jinnah = { # Muhammad Ali Jinnah
+	first_name = Muhammad_Ali
+	last_name = Jinnah
+	female = no
+    dna = dna_muhammad_ali_jinnah
+	historical = yes
+	birth_date = 1876.12.25
+	is_agitator = yes
+	culture = cu:gujarati
+	religion = rel:sunni
+	interest_group = ig_intelligentsia
+	ideology = ideology_state_socialist
+    home_region = STATE_SINDH
+	traits = {
+		direct
+		ambitious
+		expert_political_operator
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+			any_scope_state = {
+				state_region = s:STATE_GUJARAT
+			}
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1897.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_bipin_chandra_pal = { # Bipin Chandra Pal
+	first_name = Bipin_Chandra
+	last_name = Pal
+	female = no
+    dna = dna_bipin_chandra_pal
+	historical = yes
+	birth_date = 1858.11.7
+	is_agitator = yes
+	culture = cu:bengali
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	ideology = ideology_state_socialist
+    home_region = STATE_EAST_BENGAL
+	traits = {
+		inspirational_orator
+		firebrand
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+			any_scope_state = {
+				state_region = s:STATE_GUJARAT
+			}
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1887.1.1
+        latest_usage_date = 1932.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_bal_gangadhar_tilak = { # Bal Gangadhar Tilak
+	first_name = Bal_Gangadhar
+	last_name = Tilak
+	female = no
+    dna = dna_bal_gangadhar_tilak
+	historical = yes
+	birth_date = 1856.6.23
+	is_agitator = yes
+	culture = cu:marathi
+	religion = rel:hindu
+	interest_group = ig_devout
+	ideology = ideology_traditionalist_minoritarian
+    home_region = STATE_BOMBAY
+	traits = {
+		firebrand
+        pious
+		bigoted
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+			any_scope_state = {
+				state_region = s:STATE_BOMBAY
+			}
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1890.1.1
+        latest_usage_date = 1920.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_lala_lajpat_rai = { # Lala Lajpat Rai
+	first_name = Lala_Lajpat
+	last_name = Rai
+	female = no
+    dna = dna_lala_lajpat_rai
+	historical = yes
+	birth_date = 1865.1.28
+	is_agitator = yes
+	culture = cu:panjabi
+	religion = rel:hindu
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+    home_region = STATE_PUNJAB
+	traits = {
+		firebrand
+        pious
+		bigoted
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+			any_scope_state = {
+				state_region = s:STATE_PUNJAB
+			}
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1886.1.1
+        latest_usage_date = 1928.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_pandita_ramabai_sarasvati = { # Pandita Ramabai Sarasvati
+	first_name = Pandita
+	last_name = Ramabai
+	female = yes
+    dna = dna_pandita_ramabai
+	historical = yes
+	birth_date = 1858.4.23
+	is_agitator = yes
+	culture = cu:marathi
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+    home_region = STATE_BOMBAY
+	traits = {
+		persistent
+        direct
+		literary
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+			any_scope_state = {
+				state_region = s:STATE_BOMBAY
+			}
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1885.1.1
+        latest_usage_date = 1922.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_bhagat_singh = { # Bhagat Singh
+	first_name = Bhagat
+	last_name = Singh
+	female = no
+    dna = dna_bhagat_singh
+	historical = yes
+	birth_date = 1907.9.27
+	is_agitator = yes
+	culture = cu:panjabi
+	religion = rel:atheist
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+    home_region = STATE_PUNJAB
+	traits = {
+		brave
+        charismatic
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+			any_scope_state = {
+				state_region = s:STATE_PUNJAB
+			}
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1927.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_sarojini_naidu = { # Sarojini Naidu
+	first_name = Sarojini
+	last_name = Naidu
+	female = yes
+    dna = dna_sarojni_naidu
+	historical = yes
+	birth_date = 1879.2.13
+	is_agitator = yes
+	culture = cu:bengali
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+    home_region = STATE_HYDERABAD
+	traits = {
+		inspirational_orator
+        basic_political_operator
+        literary
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+            OR = {
+                any_subject_or_below = {
+                    c:HYD ?= this
+                }
+                any_scope_state = {
+                    this = s:STATE_HYDERABAD
+                }
+            }
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1904.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_maulana_azad = { # Abul Kalam Ghulam Muhiyuddin Ahmed bin Khairuddin Al-Hussaini Azad
+	first_name = Abul
+	last_name = Azad
+	female = no
+    dna = dna_maulana_azad
+	historical = yes
+	birth_date = 1888.11.11
+	is_agitator = yes
+	culture = cu:pashtun
+	religion = rel:sunni
+	interest_group = ig_intelligentsia
+	ideology = ideology_state_socialist
+    home_region = STATE_WEST_BENGAL
+	traits = {
+		literary
+        pious
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+			has_dlc_feature = ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1912.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+
+BIC_mithuben_petit = { # Mithuben Hormusji Petit
+	first_name = Mithuben
+	last_name = Petit
+	female = yes
+    dna = dna_mithuben_petit
+	historical = yes
+	birth_date = 1892.4.11
+	is_agitator = yes
+	culture = cu:persian
+	religion = rel:animist
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_reformer
+    home_region = STATE_BOMBAY
+	traits = {
+		brave
+        persistent
+        charismatic
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:BIC ?= this
+			has_dlc_feature= ip2_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1925.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+### event-only characters
+
+BIC_bhimrao_ramji_ambedkar = { # B. R. Ambedkar
+    first_name = Bhimrao_Ramji
+    last_name = Ambedkar
+    female = no
+    dna = dna_b_r_ambedkar
+    historical = yes
+    birth_date = 1891.4.14
+    is_agitator = yes
+    culture = cu:marathi
+    religion = rel:hindu
+    interest_group = ig_rural_folk
+    ideology = ideology_state_socialist
+    home_region = STATE_CENTRAL_PROVINCES
+    traits = {
+        direct
+        literary
+        expert_political_operator
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:BIC ?= this
+            has_dlc_feature= ip2_content
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1917.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+BIC_erode_venkatappa_ramasamy = { # E. V. Ramasamy aka Periyar
+    first_name = Erode_Venkatappa
+    last_name = Ramasamy
+    female = no
+    dna = dna_erode_venkatappa_ramasamy
+    historical = yes
+    birth_date = 1879.9.17
+    is_agitator = yes
+    culture = cu:tamil
+    religion = rel:atheist
+    interest_group = ig_rural_folk
+    ideology = ideology_state_socialist
+    home_region = STATE_MADRAS
+
+    traits = {
+        direct
+        brave
+        erudite
+    }
+}
+
+BIC_amy_carmichael = { # Amy Carmichael
+    first_name = Amy
+    last_name = Carmichael
+    female = yes
+    dna = dna_amy_carmichael
+    historical = yes
+    birth_date = 1867.12.16
+    culture = cu:irish
+    religion = rel:protestant
+    interest_group = ig_devout
+    ideology = ideology_reformer
+    home_region = STATE_ULSTER
+    traits = {
+        literary
+        pious
+    }
+}
+
+BIC_usha_mehta = { # Usha Mehta
+    first_name = Usha
+    last_name = Mehta
+    female = yes
+    dna = dna_usha_mehta
+    historical = yes
+    birth_date = 1920.3.25
+    culture = cu:gujarati
+    religion = rel:hindu
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    home_region = STATE_GUJARAT
+    traits = {
+        persistent
+        direct
+    }
+}
+
+BIC_jiddu_krishnamurti = { # Jiddu Krishnamurti
+    first_name = Jiddu
+    last_name = Krishmanurti
+    female = no
+    dna = dna_jiddu_krishnamurti
+    historical = yes
+    birth_date = 1895.5.11 # Disputed
+    culture = cu:telegu
+    religion = rel:hindu
+    interest_group = ig_intelligentsia
+    ideology = ideology_humanitarian
+    home_region = STATE_KURNOOL
+    traits = {
+        pious
+        sickly
+    }
+}
+
+BIC_khudiram_bose = { # Khudiram Bose
+    first_name = Khudiram
+    last_name = Bose
+    female = no
+    dna = dna_khudiram_bose
+    historical = yes
+    birth_date = 1889.12.3
+    culture = cu:bengali
+    religion = rel:hindu
+    interest_group = ig_intelligentsia
+    ideology = ideology_radical
+    home_region = STATE_WEST_BENGAL
+    traits = {
+        reckless
+        firebrand
+    }
+}
+
+BIC_damodar_hari_chapekar = { # Damodar Hari Chapekar
+    first_name = Damodar_Hari
+    last_name = Chapekar
+    female = no
+    dna = dna_damodar_hari_chapekar
+    historical = yes
+    birth_date = 1869.6.25
+    is_agitator = yes
+    culture = cu:marathi
+    religion = rel:hindu
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_sovereignist_leader
+    home_region = STATE_BOMBAY
+    traits = {
+        brave
+        reckless
+        pious
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:BIC ?= this
+            any_scope_state = {
+                state_region = s:STATE_BOMBAY
+            }
+            has_dlc_feature = ip2_content
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1893.1.1
+        latest_usage_date = 1910.1.1
+        chance = 50
+    }
+}

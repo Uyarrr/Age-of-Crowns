@@ -1,0 +1,84 @@
+namespace = colonization
+
+colonization.1 = {
+	type = country_event
+
+	title = colonization.1.t
+	desc = colonization.1.d
+	flavor = colonization.1.f
+
+	category = enactment
+
+	event_image = {
+		video = "africa_city_center"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		# triggered by on_action - on_law_checkpoint_advance
+		# triggered by on_action - on_law_checkpoint_debate
+		# triggered by on_action - on_law_checkpoint_stall
+		is_enacting_law = law_type:law_no_colonial_affairs
+		any_country = {
+			is_subject_of = ROOT
+			country_is_colonial_or_company = yes
+			NOT = { has_war_with = root }
+		}
+		NOR = {
+			has_modifier = decolonization
+			has_modifier = refused_to_release_colony
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		random_country = {
+			limit = {
+				is_subject_of = ROOT
+				country_is_colonial_or_company = yes
+				NOT = { has_war_with = root }
+			}
+			save_scope_as = colony_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = { # free the colony
+		name = colonization.1.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = decolonization
+		}
+		scope:colony_scope = {
+			make_independent = yes
+			change_relations = {
+				country = ROOT
+				value = 30
+			}
+		}
+	}
+	option = { # do not free the colony
+		name = colonization.1.b
+		add_enactment_modifier = {
+			name = refused_to_release_colony
+		}
+		scope:colony_scope = {
+			change_relations = {
+				country = ROOT
+				value = -30
+			}
+		}
+	}
+}

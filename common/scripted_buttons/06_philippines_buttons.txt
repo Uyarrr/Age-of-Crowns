@@ -1,0 +1,64 @@
+# For je_philippines_main
+
+# Ilustrados Button
+
+# Mindanao Colonization Button
+je_filipino_ethnogenesis_colonization_button = {
+	name = je_filipino_ethnogenesis_colonization_button
+	desc = je_filipino_ethnogenesis_colonization_button_desc
+
+	visible = {
+		s:STATE_MINDANAO = {
+			any_scope_state = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+		}
+		NOT = {
+			has_variable = je_filipino_ethnogenesis_colonization_button_var
+		}
+	}
+
+	possible = {
+		s:STATE_MINDANAO = {
+			any_scope_state = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+			any_scope_state = {
+				owner = root
+				state_has_decree_variant = { DECREE = decree_greener_grass_campaign }
+			}
+		}
+	}
+
+	effect = {
+		set_variable = je_filipino_ethnogenesis_colonization_button_var
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_no_colonial_affairs
+			}
+			activate_law = law_type:law_frontier_colonization
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_MINDANAO
+			}
+			add_modifier = {
+				name = modifier_integrating_the_highlands
+				days = long_modifier_time
+			}
+		}
+		add_modifier = {
+			name = modifier_settling_the_highlands_cost
+			days = long_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+
+	ai_chance = {
+		value = 10
+	}
+}

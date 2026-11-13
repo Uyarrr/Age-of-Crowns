@@ -1,0 +1,102 @@
+button_je_tenpo_combat_rice_hoarding = {
+	name = button_je_tenpo_combat_rice_hoarding
+	desc = button_je_tenpo_combat_rice_hoarding_desc
+
+	visible = {
+		NOT = {
+			has_variable = button_je_tenpo_combat_rice_hoarding_var
+		}
+	}
+
+	possible = {
+		OR = {
+			AND = {
+	            country_has_building_type_levels = {
+	                target = bt:building_rice_farm
+	                value >= 40
+	            }
+	            NOT = {
+	            	any_scope_state = {
+	            		state_region = {
+	            			is_homeland = cu:japanese
+	            		}
+	            		has_famine = yes
+	            	}
+	            }
+	        }
+			market_capital.market = {
+				mg:grain = {
+					market_goods_pricier < 0.1
+				}
+			}
+		}
+	}
+
+	selected = {
+
+	}
+
+	effect = {
+		set_variable = button_je_tenpo_combat_rice_hoarding_var
+		je:je_tenpo_crisis = {
+			remove_modifier = modifier_rice_hoarding
+		}
+	}
+
+	ai_chance = {
+		value = 100 # Should be used as soon as it's available
+	}
+}
+
+button_je_tenpo_frugal_ordinance = {
+	name = button_je_tenpo_frugal_ordinance
+	desc = button_je_tenpo_frugal_ordinance_desc
+
+	visible = {
+		NOT = {
+			has_variable = button_je_tenpo_frugal_ordinance_var
+		}
+	}
+
+	possible = {
+		OR = {
+			has_law = law_type:law_intermediate_edo_system
+			has_law = law_type:law_strict_edo_system
+		}
+		legitimacy >= 75
+		ig:ig_petty_bourgeoisie = {
+			is_in_government = no
+		}
+	}
+
+	effect = {
+		set_variable = button_je_tenpo_frugal_ordinance_var
+		add_loyalists = {
+			strata = upper
+			value = medium_radicals
+		}
+		add_radicals = {
+			strata = lower
+			value = medium_radicals
+		}
+		active_law:lawgroup_edo_social_system ?= {
+			add_amendment = {
+				type = amendment_frugal_ordinance
+				sponsor = PREV.ig:ig_armed_forces
+				cooldown = 240
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 10
+	}
+}
+
+
+# Hokkaido JE
+
+
+
+
+

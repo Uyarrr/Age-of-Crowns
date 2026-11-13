@@ -1,0 +1,101 @@
+namespace = bureaucracy
+
+bureaucracy.2 = {
+	type = country_event
+
+	title = bureaucracy.2.t
+	desc = bureaucracy.2.d
+	flavor = bureaucracy.2.f
+
+	category = enactment
+
+	event_image = {
+		video = "africa_leader_arguing"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		# triggered by on_action - on_law_checkpoint_advance
+		has_law_or_variant = law_type:law_hereditary_bureaucrats
+		OR = {
+			is_enacting_law = law_type:law_appointed_bureaucrats
+			is_enacting_law = law_type:law_elected_bureaucrats
+		}
+		NOT = { has_modifier = meritocracy }
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		if = {
+			limit = {
+				is_enacting_law = law_type:law_appointed_bureaucrats
+			}
+			ig:ig_intelligentsia ?= {
+				save_scope_as = meritocracy_ig
+			}
+		}
+		if = {
+			limit = {
+				is_enacting_law = law_type:law_elected_bureaucrats
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				save_scope_as = meritocracy_ig
+			}
+		}
+		ig:ig_landowners ?= {
+			save_scope_as = bureaucrat_class
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = { # use this to pass the law
+		name = bureaucracy.2.a
+		default_option = yes
+		# enactment success
+		add_enactment_modifier = {
+			name = meritocracy
+			multiplier = 2
+		}
+	}
+	option = { # use this to disempower landowners
+		name = bureaucracy.2.b
+		# less polstr
+		scope:bureaucrat_class = {
+			add_modifier = {
+				name = meritocracy_ig
+				days = short_modifier_time
+				multiplier = -1
+			}
+		}
+		# enactment success
+		add_enactment_modifier = {
+			name = meritocracy
+		}
+	}
+	option = { # use this to empower new bureaucrat class
+		name = bureaucracy.2.c
+		# less polstr
+		scope:meritocracy_ig = {
+			add_modifier = {
+				name = meritocracy_ig
+				days = short_modifier_time
+			}
+		}
+		# enactment success
+		add_enactment_modifier = {
+			name = meritocracy
+		}
+	}
+}

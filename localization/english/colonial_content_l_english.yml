@@ -90,11 +90,6 @@
 
  colonial_administration_cooldown: "We can only establish a new colonial administration every #variable 3#! months."
 
- colonial_administration_events.1.t: "A Settler Administration"
- colonial_administration_events.1.d: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetName] will be organized as a resettled colony."
- colonial_administration_events.1.f: "The new administration will support migration and permanent settlement."
- colonial_administration_events.1.c: "Build a settler administration."
- colonial_administration_events.1_tt_3: "[SCOPE.sCountry('newly_formed_colonial_nation_scope').GetAdjective] [Concept('concept_law', '$concept_laws$')] will be tailored around #bold immigration#! and #bold colonial settlement.#!"
 
  unbridled_profits_modifier: "Unbridled Profits"
  civilizing_mission_modifier: "Civilizing Mission"
@@ -105,8 +100,4 @@
  religious_missions_colonial_modifier: "Religious Mission Stations"
  resource_extraction_charter_modifier: "Colonial Enterprises"
 
- colonial_administration_events.2.t: "The Severed Limb"
- colonial_administration_events.2.d: "The break with the metropole has left our government short of funds and personnel. Protests are spreading beyond the reach of the colonial forces."
- colonial_administration_events.2.f: "The orders still bear the old seal. No ships arrive to enforce them."
- colonial_administration_events.2.a: "We must govern with what we have."
  colony_alone_modifier: "Masterless Colony"

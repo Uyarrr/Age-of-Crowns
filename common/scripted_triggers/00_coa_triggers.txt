@@ -95,9 +95,6 @@ coa_anarchy_trigger = {
 coa_communist_trigger = {
 	has_law_or_variant = law_type:law_council_republic
 	#OR = {
-	#	ig:ig_trade_unions ?= {
-	#		is_in_government = yes
-	#	}
 	#	any_interest_group = {
 	#		is_in_government = yes
 	#		has_ideology = ideology:ideology_proletarian

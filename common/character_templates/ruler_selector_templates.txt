@@ -1,0 +1,182 @@
+# Ruler Selector Character templates that are only valid on game start date to the first country you select
+
+# Rulers are valid globally
+
+
+ruler_abraham_lincoln = {
+	
+	first_name = Abraham
+    last_name = Lincoln
+    female = no
+    dna = dna_abraham_lincoln
+    historical = yes
+    birth_date = 1809.2.12
+    is_for_ruler_selector = yes
+    ig_leader = yes
+    culture = cu:yankee
+    religion = rel:protestant
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_abolitionist
+    home_region = STATE_KENTUCKY
+    traits = {
+        experienced_political_operator
+        inspirational_orator
+        tactful
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_intelligentsia
+            }
+            NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1836.1.1
+        #guaranteed to spawn if possible
+    }
+    on_created = {
+        set_global_variable = ruler_selector_abraham_lincoln
+    }
+}
+
+ruler_ada_lovelace = {
+	
+	first_name = Ada
+    last_name = Lovelace
+    female = yes
+    dna = dna_ada_lovelace
+    historical = yes
+    birth_date = 1815.11.27
+    is_for_ruler_selector = yes
+    ig_leader = yes
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    home_region = STATE_HOME_COUNTIES
+    traits = {
+        romantic
+        innovative
+        literary
+        cancer
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+            NOR = {
+                has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                has_variable = chose_ethno_nationalism
+            }
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1836.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+ruler_norindo = { # I wonder who could this be
+	
+	first_name = Leon_2
+    last_name = Aso
+    female = no
+    dna = dna_norindo
+    age = 36
+    is_for_ruler_selector = yes
+    ig_leader = yes
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_industrialists
+    ideology = ideology_royalist
+    traits = {
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_industrialists
+            NOR = {
+                has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                has_variable = chose_ethno_nationalism
+            }
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1836.1.1
+        chance = 10
+    }
+}
+
+ruler_karl_marx = { # Ruler Marx
+	
+	first_name = Karl
+	last_name = Marx
+	female = no
+	dna = dna_karl_marx
+	historical = yes
+	birth_date = 1818.5.5
+    is_for_ruler_selector = yes
+	ig_leader = yes
+	culture = cu:north_german
+	religion = rel:atheist
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist_leader
+	home_region = STATE_RHINELAND
+	traits = {
+		direct
+		persistent
+		literary
+	}
+	interest_group_leader_usage = {
+        country_trigger = {
+        	NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
+        }
+        interest_group_trigger = {
+        	is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+            NOR = {
+                has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                has_variable = chose_ethno_nationalism
+            }
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1836.1.1
+        #guaranteed to spawn if possible
+    }
+}

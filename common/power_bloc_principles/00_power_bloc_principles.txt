@@ -658,7 +658,6 @@ principle_food_standardization_1 = {
 			limit = {
 				OR = {
 					ig:ig_rural_folk ?= { is_in_government = yes }
-					ig:ig_trade_unions ?= { is_in_government = yes }
 				}
 			}
 			add = 100

@@ -1,0 +1,788 @@
+### China - CHI character template file ###
+
+### Historical Leaders
+chi_gong_character_template = {
+    first_name = Prince_Gong
+    last_name = Aisin_Gioro
+    female = no
+    historical = yes
+    birth_date = 1833.1.11
+    culture = cu:manchu
+    religion = rel:confucian
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    home_region = STATE_BEIJING
+    traits = {
+        experienced_diplomat
+        expensive_tastes
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:CHI
+            c:CHI ?= THIS
+            c:CHI ?= {
+				country_has_monarchy_law = yes
+			}
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_landowners
+            NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+        }
+        earliest_usage_date = 1853.1.1
+        latest_usage_date = 1898.1.1
+        #guaranteed to spawn if possible
+    }
+}
+chi_daoguang_template = {
+    # The Daoguang Emperor
+    first_name = Daoguang
+    last_name = "Aisin_Gioro" # Not used by the emperor himself but there's got to be something here
+    dna = dna_daoguang_emperor
+    historical = yes
+    birth_date = 1782.9.16
+    ruler = yes
+    culture = cu:manchu
+    religion = rel:confucian
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+    home_region = STATE_BEIJING
+    traits = {
+        cautious
+    }
+}
+chi_xianfeng_template = {
+    # Prince Yizhu, the future Xianfeng Emperor
+    first_name = "Yizhu"
+    last_name = "Aisin_Gioro"
+    historical = yes
+    birth_date = 1831.7.17
+    heir = yes
+    culture = cu:manchu
+    religion = rel:confucian
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+    home_region = STATE_BEIJING
+    traits = {
+        trait_child
+    }
+}
+chi_cixi_template = {
+    first_name = Cixi
+    last_name = Yehe_Nara
+    female = yes
+    dna = dna_empress_dowager_cixi
+    historical = yes
+    birth_date = 1835.11.29
+    culture = cu:manchu
+    religion = rel:confucian
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    home_region = STATE_BEIJING
+    traits = {
+       ambitious
+       reckless
+       experienced_political_operator
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:CHI
+            c:CHI ?= THIS
+            c:CHI ?= {
+				country_has_monarchy_law = yes
+			}
+            has_dlc_feature = ep1_content
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_landowners
+            NOR = {
+                has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                has_variable = chose_ethno_nationalism
+            }
+        }
+        earliest_usage_date = 1852.6.26 # the day she entered the Forbidden City
+        latest_usage_date = 1898.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+CHI_qiying_aisin_gioro = {
+	# Keying, also known as Qiying and Kiyeng and Ch'i-ying
+	first_name = "Qiying"
+	last_name = "Aisin_Gioro"
+	historical = yes
+	birth_date = 1787.3.21
+	ig_leader = yes
+	culture = cu:manchu
+	religion = rel:confucian
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+    home_region = STATE_BEIJING
+	traits = {
+		reckless
+		expensive_tastes # INCREDIBLY corrupt
+		basic_diplomat
+	}
+}
+CHI_zexu_lin = {
+	first_name = Zexu
+	last_name = Lin
+	historical = yes
+	birth_date = 1785.8.30
+	ig_leader = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_traditionalist
+    home_region = STATE_FUJIAN
+	traits = {
+		imperious
+		pious
+		master_bureaucrat
+	}
+}
+CHI_changling_he = {
+	# courtesy name Ougen
+	first_name = Changling
+	last_name = He
+	historical = yes
+	birth_date = 1785.3.18
+	ig_leader = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+    home_region = STATE_HUNAN
+	traits = {
+		meticulous
+	}
+}
+CHI_yuan_ruan = {
+	first_name = Yuan
+	last_name = Ruan
+	historical = yes
+	age = 72 # exact birthday unclear
+	ig_leader = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+    home_region = STATE_JIANGSU
+	traits = {
+		meticulous
+	}
+}
+CHI_lexing_zhang = {
+	first_name = Lexing
+	last_name = Zhang
+	historical = yes
+	age = 24 # exact birthday unknown
+	ig_leader = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_rural_folk
+	ideology = ideology_traditionalist
+    home_region = STATE_NORTHERN_ANHUI
+	traits = {
+		ambitious
+		firebrand
+		bandit
+	}
+}
+CHI_yupian_huang = {
+	first_name = Yupian
+	last_name = Huang
+	historical = yes
+	age = 52 # age unknown, arbitrarily picking an age instead
+	ig_leader = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_devout
+	ideology = ideology_royalist
+    home_region = STATE_GUANGDONG
+	traits = {
+		persistent
+		pious
+	}
+}
+CHI_yijing_aisin_gioro = {
+	first_name = Yijing
+	last_name = Aisin_Gioro
+	birth_date = 1793.6.6 # exact date unknown
+	# CHI, general, stationed someplace
+	is_general = yes
+	culture = cu:manchu
+	religion = rel:confucian
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+    home_region = STATE_BEIJING
+	traits = {
+		basic_offensive_planner
+		expensive_tastes
+	}
+}
+
+CHI_buyantai_yanzha = {
+	first_name = Buyantai
+	last_name = Yanzha
+	historical = yes
+	birth_date = 1791.6.10 # exact date unknown
+	is_general = yes
+	culture = cu:manchu
+	religion = rel:confucian
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+    home_region = STATE_DZUNGARIA # Best fit
+	traits = {
+		basic_colonial_administrator
+		wrathful
+	}
+}
+
+CHI_yunfei_ge = {
+	first_name = Yunfei
+	last_name = Ge_2
+	historical = yes
+	birth_date = 1789.6.6 # exact date unknown
+	is_general = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+    home_region = STATE_HUNAN
+	traits = {
+		brave
+		stalwart_defender
+	}
+}
+
+CHI_qishan_borjigin = {
+	first_name = Qishan
+	last_name = Borjigin
+	historical = yes
+	birth_date = 1786.1.18
+	is_general = yes
+	culture = cu:mongol
+	religion = rel:gelugpa
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+    home_region = STATE_HINGGAN
+	traits = {
+		cautious
+		basic_political_operator
+	}
+}
+
+CHI_delu_wang = {
+	first_name = Delu
+	last_name = Wang
+	historical = yes
+	birth_date = 1772.6.1 # exact date unknown
+	is_general = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+    home_region = STATE_SHANDONG
+	traits = {
+		experienced_offensive_planner
+		experienced_colonial_administrator
+		meticulous
+	}
+}
+
+CHI_yishan_aisin_gioro = {
+	first_name = Yishan
+	last_name = Aisin_Gioro
+	historical = yes
+	birth_date = 1790.6.13
+	is_general = yes
+	culture = cu:manchu
+	religion = rel:confucian
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+    home_region = STATE_BEIJING
+	traits = {
+		reckless
+		alcoholic
+	}
+}
+
+CHI_bingzhang_luo = {
+	first_name = Bingzhang
+	last_name = Luo
+	historical = yes
+	birth_date = 1793.1.9
+	is_general = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_landowners
+	ideology = ideology_reformer
+    home_region = STATE_GUANGDONG
+	traits = {
+		stalwart_defender
+		wrathful
+	}
+}
+
+CHI_guanwen_wanggiya = {
+	first_name = Guanwen
+	last_name = Wanggiya
+	historical = yes
+	birth_date = 1798.12.24 # exact date unknown
+	is_general = yes
+	culture = cu:manchu
+	religion = rel:confucian
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+    home_region = STATE_NORTHERN_MANCHURIA
+	traits = {
+		traditionalist_commander
+		meticulous
+	}
+}
+
+CHI_fang_yang = {
+	first_name = Fang
+	last_name = Yang
+	historical = yes
+	age = 66
+	is_general = yes
+	culture = cu:han
+	religion = rel:confucian
+    home_region = STATE_HUNAN
+	traits = {
+		persistent
+		cautious
+	}
+}
+
+CHI_tianpei_guan = {
+	first_name = Tianpei
+	last_name = Guan
+	historical = yes
+	age = 55
+	is_admiral = yes
+	culture = cu:han
+	religion = rel:confucian
+    home_region = STATE_HUNAN
+	traits = {
+		expert_naval_commander
+		brave
+	}
+}
+
+CHI_huacheng_chen = {
+	first_name = Huacheng
+	last_name = Chen
+	historical = yes
+	age = 60
+	is_admiral = yes
+	culture = cu:han
+	religion = rel:confucian
+    home_region = STATE_HINGGAN
+	traits = {
+		experienced_naval_commander
+		ambitious
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:CHI
+			c:CHI ?= THIS
+		}
+		role = admiral
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1843.1.1 # Killed in action in 1842 at the age of 66
+	}
+}
+
+### Han Monarchs
+CHI_kong_fanhao = {
+	first_name = "Fanhao"
+	last_name = "Kong"
+	historical = yes
+	birth_date = 1806.3.21
+	ruler = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_devout
+    home_region = STATE_SHANDONG
+	traits = {
+	}
+}
+
+CHI_kong_xiangke = {
+	first_name = "Xiangke"
+	last_name = "Kong"
+	historical = yes
+	birth_date = 1848.9.25
+	heir = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_devout
+    home_region = STATE_SHANDONG
+	traits = {
+	}
+}
+
+CHI_kong_lingyi = {
+	first_name = "Lingyi"
+	last_name = "Kong"
+	historical = yes
+	birth_date = 1872.11.29
+	heir = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_devout
+    home_region = STATE_SHANDONG
+	traits = {
+	}
+}
+
+CHI_kong_teh_cheng = {
+	first_name = "Teh_Cheng"
+	last_name = "Kong"
+	historical = yes
+	birth_date = 1920.8.17
+	heir = yes
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_devout
+    home_region = STATE_SHANDONG
+	traits = {
+	}
+}
+
+
+
+### Commanders
+chi_admiral_ding_ruchang = {
+	first_name = Ruchang
+	last_name = Ding
+	female = no
+	historical = yes
+	birth_date = 1836.11.18
+	commander_rank = default
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+    home_region = STATE_SOUTHERN_ANHUI
+	traits = {
+		basic_naval_commander
+		dockyard_master
+		direct
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:CHI
+			c:CHI ?= THIS
+		}
+		role = admiral
+		earliest_usage_date = 1875.2.5
+		latest_usage_date = 1905.1.1
+		#guaranteed to spawn if possible
+	}
+}
+chi_admiral_sa_chenbing = {
+	first_name = Chenbing
+	last_name = Sa
+	female = no
+	historical = yes
+	birth_date = 1859.4.30
+	commander_rank = default
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+    home_region = STATE_FUJIAN
+	traits = {
+		basic_naval_commander
+		innovative
+		cautious
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:CHI
+			c:CHI ?= THIS
+		}
+		role = admiral
+		earliest_usage_date = 1892.2.5
+		latest_usage_date = 1920.1.1
+		#guaranteed to spawn if possible
+	}
+}
+chi_general_yuan_shikai = {
+	first_name = Shikai
+	last_name = Yuan
+	female = no
+	historical = yes
+	birth_date = 1859.9.16
+	commander_rank = default
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+    home_region = STATE_HENAN
+	traits = {
+		ambitious
+		persistent
+		# army reformer, but insignificant field commander
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:CHI
+			c:CHI ?= THIS
+		}
+		role = general
+		earliest_usage_date = 1885.1.1
+		latest_usage_date = 1920.1.1
+		#guaranteed to spawn if possible
+	}
+}
+chi_general_zeng_guofan = {
+	first_name = Guofan
+	last_name = Zeng
+	female = no
+	historical = yes
+	birth_date = 1811.11.26
+	commander_rank = default
+	culture = cu:han
+	religion = rel:confucian
+	interest_group = ig_armed_forces
+	ideology = ideology_traditionalist
+    home_region = STATE_HUNAN
+	traits = {
+		plains_commander
+		pious
+		pillager
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:CHI
+			c:CHI ?= THIS
+		}
+		role = general
+		earliest_usage_date = 1851.1.1
+		latest_usage_date = 1870.1.1
+		#guaranteed to spawn if possible
+	}
+}
+chi_general_sengge_rinchen = {
+	first_name = Sengge_Rinchen
+	last_name = Borjigin
+	female = no
+	historical = yes
+	birth_date = 1811.2.26
+	commander_rank = default
+	culture = cu:mongol
+	religion = rel:gelugpa
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+    home_region = STATE_HINGGAN
+	traits = {
+		stalwart_defender
+		experienced_artillery_commander
+		meticulous
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:CHI
+			c:CHI ?= THIS
+			c:CHI ?= {
+				country_has_monarchy_law = yes
+				owns_entire_state_region = STATE_HINGGAN
+			}
+		}
+		role = general
+		earliest_usage_date = 1850.1.1
+		latest_usage_date = 1873.1.1
+		#guaranteed to spawn if possible
+	}
+}
+
+### Agitators
+
+chi_sun_yat_sen_character_template = {
+    first_name = Sun
+	last_name = Yat_Sen
+	female = no
+	dna = dna_sun_yat_sen
+	historical = yes
+	birth_date = 1866.11.12
+    is_agitator = yes
+	culture = cu:han
+	religion = rel:protestant
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_republican_leader
+    home_region = STATE_GUANGDONG
+	traits = {
+		erudite
+        persistent
+        ambitious
+	}
+}
+
+### Executives
+
+CHI_zhou_xuexi = { #Zhou Xuexi, Kaiping Mines
+    first_name = Xuexi
+    last_name = Zhou
+    dna = dna_zhou_xuexi
+    historical = yes
+    birth_date = 1866.1.12
+    culture = cu:han
+    religion = rel:confucian
+    interest_group = ig_industrialists
+    ideology = ideology_moderate
+    home_region = STATE_ZHILI
+    traits = {
+        basic_entrepreneur
+        erudite
+        basic_political_operator
+    }
+    executive_usage = {
+        country_trigger = {
+			has_dlc_feature = mp1_content
+        }
+        company_trigger = {
+			is_company_type = company_type:company_kaiping_mining
+        }
+	    earliest_usage_date = 1901.1.1
+	    latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+CHI_shen_baozhen = { #Shen Baozhen, Foochow Arsenal
+    first_name = Baozhen
+    last_name = Shen
+    dna = dna_shen_baozhen
+    historical = yes
+    birth_date = 1820.4.9
+    culture = cu:han
+    religion = rel:confucian
+    interest_group = ig_armed_forces
+    ideology = ideology_modernizer_leader
+    home_region = STATE_FUJIAN
+    traits = {
+        literary
+        basic_entrepreneur
+        experienced_political_operator
+    }
+    executive_usage = {
+        country_trigger = {
+			has_dlc_feature = mp1_content
+        }
+        company_trigger = {
+			is_company_type = company_type:company_foochow_arsenal
+        }
+	    earliest_usage_date = 1866.1.1
+	    latest_usage_date = 1879.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+### TPG - Taiping Heavenly Kingdom
+
+TPG_hong_xiuquan = {
+	first_name = Xiuquan
+	last_name = Hong
+	historical = yes
+	birth_date = 1814.1.1
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	ideology = ideology_theocrat
+    home_region = STATE_GUANGDONG
+	traits = {
+		inspirational_orator
+		persistent
+		psychological_affliction
+	}
+}
+
+TPG_xiuqing_yang = {
+	first_name = Xiuqing
+	last_name = Yang
+	historical = yes
+	birth_date = 1821.9.23
+	is_general = yes
+	ig_leader = yes
+	commander_rank = commander_rank_3
+	culture = cu:han
+	religion = rel:protestant
+	interest_group = ig_armed_forces
+	ideology = ideology_theocrat
+    home_region = STATE_GUANGXI
+	traits = {
+		grifter
+		expert_political_operator
+		ambitious
+		demagogue
+	}
+}
+
+TPG_chaogui_xiao = {
+	first_name = Chaogui
+	last_name = Xiao
+	historical = yes
+	birth_date = 1820.1.1
+	is_general = yes
+	ig_leader = yes
+	commander_rank = commander_rank_1
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	ideology = ideology_theocrat
+    home_region = STATE_GUANGXI
+	traits = {
+		reckless
+		charismatic
+		demagogue
+	}
+}
+
+TPG_hong_rengan = {
+	first_name = Rengan
+	last_name = Hong
+	historical = yes
+	birth_date = 1822.2.18
+	ig_leader = yes
+	culture = cu:han
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_market_liberal
+    home_region = STATE_GUANGDONG
+	traits = {
+		innovative
+		persistent
+		basic_diplomat
+	}
+}
+
+TPG_hong_tianguifu = {
+	first_name = Tianguifu
+	last_name = Hong
+	historical = yes
+	birth_date = 1846.6.6
+	heir = yes
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	ideology = ideology_moderate
+    home_region = STATE_NANJING
+	traits = {
+		reserved
+	}
+}

@@ -1,0 +1,175 @@
+
+
+
+
+
+russia_escalate_caucasian_war = {
+	name = "russia_escalate_caucasian_war"
+	desc = "russia_escalate_caucasian_war_desc"
+	visible = {
+		c:RUS ?= this
+		is_subject = no
+		NOT = {
+			owns_entire_state_region = STATE_KUBAN
+			owns_entire_state_region = STATE_NORTH_CAUCASUS
+			owns_entire_state_region = STATE_DAGESTAN
+		}
+		AND = {
+			any_scope_state = {
+				state_region = s:STATE_KUBAN
+			}
+			any_scope_state = {
+				state_region = s:STATE_NORTH_CAUCASUS
+			}
+			any_scope_state = {
+				state_region = s:STATE_DAGESTAN
+			}
+		}
+		OR = {
+			AND = {
+				exists = c:CHC
+				has_truce_with = c:CHC
+			}
+			AND = {
+				exists = c:CIR
+				has_truce_with = c:CIR
+			}
+		}
+		NOT = {
+			has_variable = escalated_caucasian_war
+		}
+	}
+
+	possible = {
+		c:RUS ?= {
+			country_rank >= rank_value:great_power
+		}
+		OR = {
+			s:STATE_KUBAN = {
+				any_scope_state = {
+					OR = {
+						AND = {
+							exists = c:CIR
+							owner = c:CIR
+						}
+						AND = {
+							exists = c:CHC
+							owner = c:CHC
+						}
+					}
+				}
+			}
+			s:STATE_DAGESTAN = {
+				any_scope_state = {
+					OR = {
+						AND = {
+							exists = c:CIR
+							owner = c:CIR
+						}
+						AND = {
+							exists = c:CHC
+							owner = c:CHC
+						}
+					}
+				}
+			}
+			s:STATE_NORTH_CAUCASUS = {
+				any_scope_state = {
+					OR = {
+						AND = {
+							exists = c:CIR
+							owner = c:CIR
+						}
+						AND = {
+							exists = c:CHC
+							owner = c:CHC
+						}
+					}
+				}
+			}
+		}
+		has_technology_researched = rifling
+		has_technology_researched = logistics
+	}
+
+	effect = {
+		set_variable = escalated_caucasian_war
+		end_truce = c:CHC
+		end_truce = c:CIR
+	}
+
+	ai_chance = {
+		value = 15
+	}
+}
+
+
+russia_halt_circassian_expulsions = {
+	name = "russia_halt_circassian_expulsions"
+	desc = "russia_halt_circassian_expulsions_desc"
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_national_supremacy
+				value < neutral
+			}
+		}
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_state_religion
+				value < neutral
+			}
+		}
+		custom_tooltip = {
+			text = halted_expulsions_tt
+			NOT = {
+				has_variable = halted_circassian_deportations
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = halt_circassian_deportations_tt
+			set_variable = halted_circassian_deportations
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					leader = {
+						has_ideology = ideology:ideology_jingoist_leader
+					}
+					law_stance = {
+						law = law_type:law_national_supremacy
+						value > neutral
+					}
+				}
+			}
+			add_modifier = {
+				name = modifier_halted_circassian_expulsions
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 20
+		if = {
+			limit = {
+				OR = {
+					is_at_war = yes
+					in_default = yes
+				}
+			}
+			add = -100
+		}
+	}
+}

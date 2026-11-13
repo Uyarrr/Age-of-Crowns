@@ -1,0 +1,362 @@
+namespace = theocracy
+
+theocracy.2 = {
+	type = country_event
+	placement = root
+	title = theocracy.2.t
+	desc = theocracy.2.d
+	flavor = theocracy.2.f
+
+	category = enactment
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	event_image = {
+		trigger = {
+			religion = rel:jewish
+		}
+		video = "europenorthamerica_judaism"
+	}
+	event_image = {
+		trigger = {
+			OR = {
+				religion = rel:protestant
+				religion = rel:catholic
+				religion = rel:orthodox
+				religion = rel:oriental_orthodox
+			}
+		}
+		video = "southamerica_christianity"
+	}
+	event_image = {
+		trigger = {
+			OR = {
+				religion = rel:hindu
+				religion = rel:sikh
+			}
+		}
+		video = "asia_hinduism_sikhism"
+	}
+	event_image = {
+		trigger = {
+			OR = {
+				religion = rel:shinto
+				religion = rel:confucian
+			}
+		}
+		video = "asia_confucianism_shinto"
+	}
+	event_image = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+			}
+		}
+		video = "asia_buddhism"
+	}
+	event_image = {
+		trigger = {
+			OR = {
+				religion = rel:sunni
+				religion = rel:shiite
+			}
+		}
+		video = "middleeast_islam"
+	}
+	event_image = {
+		trigger = {
+			NOR = {
+				religion = rel:jewish
+				religion = rel:protestant
+				religion = rel:catholic
+				religion = rel:orthodox
+				religion = rel:oriental_orthodox
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+				religion = rel:hindu
+				religion = rel:sikh
+				religion = rel:sunni
+				religion = rel:shiite
+			}
+		}
+		video = "africa_animism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	trigger = {
+		# triggered by on_action - on_law_checkpoint_debate
+		OR = {
+			is_enacting_law = law_type:law_theocracy
+			is_enacting_law = law_type:law_state_religion
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_pop = {
+				religion = {
+					is_state_religion = ROOT
+				}
+			}
+		}
+		NOR = {
+			has_modifier = blasphemy_laws
+			has_modifier = relaxed_blasphemy_laws
+		}
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_type:amendment_draconian_blasphemy_laws
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_devout ?= {
+			save_scope_as = priests_scope
+		}
+		random_scope_state = {
+			limit = {
+				any_scope_pop = {
+					religion = {
+						is_state_religion = ROOT
+					}
+				}
+			}
+			save_scope_as = blasphemy_state
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = theocracy.2.a
+		default_option = yes
+		# enactment time reduced
+		add_enactment_modifier = {
+			name = blasphemy_laws
+		}
+		random_list = {
+			50 = {
+				scope:blasphemy_state = {
+					add_radicals_in_state = {
+						religion = ROOT.religion
+						value = medium_radicals
+					}
+				}
+			}
+			50 = {
+				scope:blasphemy_state = {
+					add_loyalists_in_state = {
+						religion = ROOT.religion
+						value = medium_radicals
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = theocracy.2.b
+		# lose success chance
+		add_enactment_modifier = {
+			name = relaxed_blasphemy_laws
+		}
+	}
+	option = {
+		name = theocracy.2.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					ai_avoids_radicals = yes
+				}
+				add = 10
+			}
+		}
+		highlighted_option = yes
+		trigger = {
+			has_law = law_type:law_outlawed_dissent
+		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_draconian_blasphemy_laws
+				sponsor = scope:priests_scope
+				cooldown = 60
+			}
+		}
+		# enactment speed
+		add_enactment_modifier = {
+			name = blasphemy_laws
+		}
+		scope:blasphemy_state = {
+			add_loyalists_in_state = {
+				religion = ROOT.religion
+				value = 0.1
+			}
+		}
+	}
+}
+
+theocracy.3 = {
+	type = country_event
+	placement = ROOT
+
+	title = theocracy.3.t
+	desc = theocracy.3.d
+	flavor = theocracy.3.f
+
+	category = enactment
+
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	duration = 3
+
+	trigger = {
+		# triggered by on_action - on_law_checkpoint_stall
+		OR = {
+			is_enacting_law = law_type:law_theocracy
+			is_enacting_law = law_type:law_state_religion
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_pop = {
+				PREV = {
+					state_religious_acceptance = {
+						target = PREV.religion
+						value < religious_acceptance_medium
+					}
+				}
+			}
+			any_scope_pop = {
+				religion = ROOT.religion
+				pop_has_primary_culture = yes
+			}
+		}
+		NOR = {
+			has_modifier = pogroms_law_success
+			has_modifier = pogroms_law_time
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				any_scope_pop = {
+					PREV = {
+						state_religious_acceptance = {
+							target = PREV.religion
+							value < religious_acceptance_medium
+						}
+					}
+				}
+				any_scope_pop = {
+					religion = ROOT.religion
+					pop_has_primary_culture = yes
+				}
+			}
+			save_scope_as = pogrom_state
+			random_scope_pop = {
+				limit = {
+					religion = ROOT.religion
+					pop_has_primary_culture = yes
+				}
+				save_scope_as = perpetrator_pop
+			}
+			random_scope_pop = {
+				limit = {
+					PREV = {
+						state_religious_acceptance = {
+							target = PREV.religion
+							value < religious_acceptance_medium
+						}
+					}
+				}
+				save_scope_as = target_pop
+				religion = {
+					save_scope_as = target_religion
+				}
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = theocracy.3.a
+		default_option = yes
+		# massively lose success chance
+		add_enactment_modifier = {
+			name = pogroms_law_success
+		}
+		scope:pogrom_state = {
+			add_religion_standard_of_living_modifier = {
+				religion = scope:target_religion
+				multiplier = -4
+				days = short_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = theocracy.3.b
+		# massively slow down enactment
+		add_enactment_modifier = {
+			name = pogroms_law_time
+			multiplier = 2
+		}
+		scope:pogrom_state = {
+			add_religion_standard_of_living_modifier = {
+				religion = scope:target_religion
+				multiplier = -2
+				days = short_modifier_time
+			}
+		}
+	}
+	option = {
+		name = theocracy.3.c
+		highlighted_option = yes
+		trigger = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 3
+			}
+		}
+		# less slow enactment
+		add_enactment_modifier = {
+			name = pogroms_law_time
+		}
+		scope:pogrom_state = {
+			add_religion_standard_of_living_modifier = {
+				religion = scope:target_religion
+				multiplier = -1
+				days = short_modifier_time
+			}
+		}
+	}
+}

@@ -1,0 +1,168 @@
+# Fired off on_yearly_pulse_country
+
+# Generic Pulse
+on_yearly_events = {
+}
+
+# Russian Monarchy Pulse Events
+russian_monarchy_yearly_events = {
+}
+
+# Japan Monarchy Pulse Events
+japan_monarchy_yearly_events = {
+}
+
+# Austrian Monarchy Pulse Events
+austrian_monarchy_yearly_events = {
+}
+
+# Portugal Single Fire Pulse Events
+portugal_single_fire_yearly_events = {
+}
+
+# Spain Single Fire Pulse Events
+spain_single_fire_yearly_events = {
+}
+
+# Springtie of Peoples
+springtime_of_peoples_yearly_events = {
+}
+
+# Landowners become Oligarchic
+bp1_misc_yearly_events = {
+}
+
+# Man Who Would Be King
+ep1_misc_yearly_events = {
+}
+
+# Indochina JE start
+indochina_yearly_events = {
+}
+
+
+# Exiles
+exiles_yearly_events = {
+}
+
+# Historical Agitators
+historical_agitators_yearly_events = {
+}
+
+# Slavery Abolition
+slavery_abolition_yearly_events = {
+	random_events = {
+		chance_to_happen = 20
+	}
+}
+
+# Lobby Events
+lobby_yearly_events = {
+}
+
+# Krakatoa
+krakatoa_yearly_events = {
+}
+
+# Tunguska
+tunguska_yearly_events = {
+}
+
+# British Dictates
+british_dictate_yearly_events = {
+}
+
+# IP2 misc. yearly events
+ip2_misc_yearly_events = {
+}
+
+# Famine Yearly Events
+famine_yearly_events = {
+}
+
+# On wounded
+on_wounded = {
+	trigger = {
+		has_trait = wounded
+	}
+	effect = {
+		random_list = {
+			80 = {}
+			20 = {
+				remove_trait = wounded
+			}
+		}
+	}
+}
+
+
+# Kamehameha coin toss
+kamehameha_coin_toss = {
+	trigger = {
+		c:HAW ?= this
+		has_law = law_type:law_monarchy
+		ruler = {
+			has_template = HAW_kamehameha_iii
+		}
+		year >= 1850
+		year <= 1855
+	}
+	effect = {
+		random = {
+			chance = 50
+
+			ruler = {
+				kill_character = yes
+			}
+		}
+	}
+}
+
+# Ryukyu Rivalry JE
+ryukyu_rivalry_coin_toss = {
+	trigger = {
+		OR = {
+			c:CHI ?= this
+			c:JAP ?= this
+		}
+        AND = {
+            c:JAP ?= { has_modifier = modifier_ryukyu_rivalry_officer_training }
+            c:CHI ?= { has_modifier = modifier_ryukyu_rivalry_officer_training }
+        }
+		NOT = { has_global_variable = ryukyu_rivalry_training_incident }
+	}
+	effect = {
+		set_global_variable = {
+			name = ryukyu_rivalry_training_incident
+			years = 5
+		}
+		random_list = {
+			1 = {
+				set_global_variable = {
+					name = ryukyu_rivalry_fire
+				}
+			}
+			1 = {
+				set_global_variable = {
+					name = ryukyu_rivalry_accident
+				}
+			}
+			1 = {
+				set_global_variable = {
+					name = ryukyu_rivalry_brawl
+				}
+			}
+		}
+		hidden_effect = { c:JAP ?= {  } } # Consider notification
+		hidden_effect = { c:CHI ?= {  } } # Consider notification
+	}
+}
+
+japan_yearly_events = {
+}
+
+japan_earthquake_events = {
+}
+
+russia_yearly_events = {
+}

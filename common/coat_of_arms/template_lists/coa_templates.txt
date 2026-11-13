@@ -215,9 +215,6 @@ coat_of_arms_template_lists = {
 				scope:target ?= {
 					is_revolutionary = yes
 					OR = {
-						ig:ig_trade_unions ?= {
-							is_in_government = yes
-						}
 						any_interest_group = {
 							is_in_government = yes
 							has_ideology = ideology:ideology_proletarian
@@ -258,9 +255,6 @@ coat_of_arms_template_lists = {
 				scope:target ?= {
 					is_revolutionary = yes
 					OR = {
-						ig:ig_trade_unions ?= {
-							is_in_government = yes
-						}
 						any_interest_group = {
 							is_in_government = yes
 							#has_ideology = ideology:ideology_proletarian

@@ -1,0 +1,46 @@
+
+decision_move_capital_to_buda = {
+	is_shown = {
+		NOT = {
+			has_variable = budapest_made_capital_var
+		}
+		any_scope_state = {
+			state_region = s:STATE_CENTRAL_HUNGARY
+		}
+		c:HUN ?= this
+	}
+
+	possible = {
+		NOT = {
+			capital = {
+				state_region = s:STATE_CENTRAL_HUNGARY
+			}
+		}
+		NOT = {
+			is_subject_type = subject_type_crown_land
+		}
+	}
+
+	when_taken = {
+		set_capital = STATE_CENTRAL_HUNGARY
+		set_variable = budapest_made_capital_var
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CENTRAL_HUNGARY
+			}
+			add_modifier = {
+				name = modifier_buda_made_capital
+				days = long_modifier_time
+			}
+		}
+		add_loyalists = {
+			culture = cu:hungarian
+			value = small_radicals
+		}
+	}
+
+	ai_chance = {
+		value = 10
+	}
+}
+
