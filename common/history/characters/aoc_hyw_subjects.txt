@@ -1,0 +1,26 @@
+CHARACTERS = {
+	c:ORL ?= {
+		create_character = { template = aoc_orl_charles_1444 }
+	}
+	c:AMG ?= {
+		create_character = { template = aoc_amg_jean_1444 }
+	}
+	c:AUV ?= {
+		create_character = { template = aoc_auv_bertrand_1444 }
+	}
+	c:FOI ?= {
+		create_character = { template = aoc_foi_gaston_1444 }
+	}
+	c:BOU ?= {
+		create_character = { template = aoc_bou_charles_1444 }
+	}
+	c:NRM ?= {
+		create_character = { template = aoc_nrm_richard_1444 }
+	}
+	c:AQN ?= {
+		create_character = { template = aoc_aqn_william_1444 }
+	}
+	c:MIE ?= {
+		create_character = { template = aoc_mie_edmund_1444 }
+	}
+}

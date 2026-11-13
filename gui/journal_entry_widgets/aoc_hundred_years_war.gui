@@ -1,0 +1,457 @@
+﻿# Center the trailing partial row separately from full rows.
+types aoc_hyw_widgets {
+	type aoc_hyw_supporter_rows = dynamicgridbox {
+		parentanchor = hcenter
+		datamodel_wrap = 4
+		flipdirection = yes
+		block "supporter_row_data" {}
+
+		item = {
+			widget = {
+				size = { 54 40 }
+				datacontext = "[Scope.GetCountry]"
+				small_flag = {
+					parentanchor = hcenter|vcenter
+				}
+			}
+		}
+	}
+	type aoc_hyw_picker = flowcontainer {
+		direction = vertical
+		spacing = 4
+		ignoreinvisible = yes
+
+		block "visibility" {}
+		button_standard = {
+			size = { 480 32 }
+			block "action_button" {}
+		}
+		dynamicgridbox = {
+			parentanchor = hcenter
+			datamodel_wrap = 3
+			flipdirection = yes
+			block "target_list" {}
+			item = {
+				widget = {
+					size = { 170 44 }
+					datacontext = "[Scope.GetCountry]"
+					block "target_visibility" {}
+					button_standard = {
+						parentanchor = center
+						size = { 160 34 }
+						text = "[Country.GetName]"
+						elide = right
+						block "target_button" {}
+					}
+				}
+			}
+		}
+	}
+
+
+	type aoc_hyw_force_totals = widget {
+		position = { 12 153 }
+		size = { 192 36 }
+		tooltip = "aoc_hyw_forces_tooltip"
+
+		flowcontainer = {
+			parentanchor = center
+			direction = horizontal
+			spacing = 20
+
+			flowcontainer = {
+				direction = horizontal
+				spacing = 4
+				icon = {
+					parentanchor = vcenter
+					size = { 32 32 }
+					texture = "gfx/interface/icons/generic_icons/battalions.dds"
+				}
+				textbox = {
+					parentanchor = vcenter
+					autoresize = yes
+					using = fontsize_large
+					align = nobaseline
+					block "army_total" {}
+				}
+			}
+			flowcontainer = {
+				direction = horizontal
+				spacing = 4
+				icon = {
+					parentanchor = vcenter
+					size = { 32 32 }
+					texture = "gfx/interface/icons/generic_icons/flotillas.dds"
+				}
+				textbox = {
+					parentanchor = vcenter
+					autoresize = yes
+					using = fontsize_large
+					align = nobaseline
+					block "navy_total" {}
+				}
+			}
+		}
+	}
+
+}
+
+# The rival courts and their current diplomatic supporters.
+flowcontainer = {
+	name = "widget_aoc_hundred_years_war"
+	direction = vertical
+	spacing = 8
+
+	widget = {
+		size = { 510 584 }
+		parentanchor = hcenter
+		background = { using = entry_bg_fancy_dark }
+		background = {
+			texture = "gfx/event_pictures/hundred_years_war.dds"
+			using = top_illu_properties
+			alpha = 0.30
+		}
+		background = { using = frame_decorative_light_bg }
+
+		icon = {
+			position = { 217 8 }
+			size = { 76 76 }
+			texture = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+			alwaystransparent = yes
+		}
+
+		textbox = {
+			position = { 15 85 }
+			size = { 480 32 }
+			text = "aoc_hyw_crowns_title"
+			using = fontsize_xxl
+			default_format = "#title"
+			align = center|vcenter|nobaseline
+		}
+		divider_decorative = {
+			position = { 95 117 }
+			blockoverride "size" { size = { 320 6 } }
+			alpha = 0.85
+		}
+
+		widget = {
+			position = { 14 129 }
+			size = { 216 417 }
+			background = { using = entry_bg_simple_solid }
+			background = { using = frame_decorative_light_bg }
+
+			textbox = {
+				position = { 12 10 }
+				size = { 192 31 }
+				text = "aoc_hyw_england"
+				using = fontsize_large
+				default_format = "#title"
+				align = center|vcenter|nobaseline
+			}
+			divider_gold = {
+				position = { 24 42 }
+				size = { 168 3 }
+				alpha = 0.65
+			}
+			fancy_flag_ui = {
+				# The animated flag mesh renders left of the widget's center.
+				parentanchor = hcenter
+				position = { 7 49 }
+				size = { 138 103 }
+				datacontext = "[JournalEntry.MakeScope.Var('aoc_hyw_england').GetCountry]"
+				blockoverride "rank_badge_block" {}
+			}
+			aoc_hyw_force_totals = {
+				blockoverride "army_total" { text = "aoc_hyw_english_army_total" }
+				blockoverride "navy_total" { text = "aoc_hyw_english_navy_total" }
+			}
+			character_portrait_medium_torso = {
+				position = { 35 189 }
+				datacontext = "[JournalEntry.MakeScope.Var('aoc_hyw_england').GetCountry.GetRuler]"
+				blockoverride "portrait_texture" {
+					portrait_texture = "[Character.GetAnimatedPortrait('treaty_portrait_environment_left', 'camera_event_left', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+				}
+				blockoverride "show_hat" {}
+				blockoverride "highlight" {}
+			}
+			textbox = {
+				position = { 9 351 }
+				size = { 198 27 }
+				text = "[JournalEntry.MakeScope.Var('aoc_hyw_england').GetCountry.GetRuler.GetFullName]"
+				using = fontsize_small
+				align = center|vcenter|nobaseline
+				elide = right
+			}
+			textbox = {
+				position = { 9 379 }
+				size = { 198 28 }
+				text = "aoc_hyw_english_score"
+				using = fontsize_small
+				align = center|vcenter|nobaseline
+			}
+		}
+		widget = {
+			position = { 280 129 }
+			size = { 216 417 }
+			background = { using = entry_bg_simple_solid }
+			background = { using = frame_decorative_light_bg }
+
+			textbox = {
+				position = { 12 10 }
+				size = { 192 31 }
+				text = "aoc_hyw_france"
+				using = fontsize_large
+				default_format = "#title"
+				align = center|vcenter|nobaseline
+			}
+			divider_gold = {
+				position = { 24 42 }
+				size = { 168 3 }
+				alpha = 0.65
+			}
+			fancy_flag_ui = {
+				parentanchor = hcenter
+				position = { 7 49 }
+				size = { 138 103 }
+				datacontext = "[JournalEntry.MakeScope.Var('aoc_hyw_france').GetCountry]"
+				blockoverride "rank_badge_block" {}
+			}
+			aoc_hyw_force_totals = {
+				blockoverride "army_total" { text = "aoc_hyw_french_army_total" }
+				blockoverride "navy_total" { text = "aoc_hyw_french_navy_total" }
+			}
+			character_portrait_medium_torso = {
+				position = { 35 189 }
+				datacontext = "[JournalEntry.MakeScope.Var('aoc_hyw_france').GetCountry.GetRuler]"
+				blockoverride "portrait_texture" {
+					portrait_texture = "[Character.GetAnimatedPortrait('treaty_portrait_environment_right', 'camera_event_right', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+				}
+				blockoverride "show_hat" {}
+				blockoverride "highlight" {}
+			}
+			textbox = {
+				position = { 9 351 }
+				size = { 198 27 }
+				text = "[JournalEntry.MakeScope.Var('aoc_hyw_france').GetCountry.GetRuler.GetFullName]"
+				using = fontsize_small
+				align = center|vcenter|nobaseline
+				elide = right
+			}
+			textbox = {
+				position = { 9 379 }
+				size = { 198 28 }
+				text = "aoc_hyw_french_score"
+				using = fontsize_small
+				align = center|vcenter|nobaseline
+			}
+		}
+
+		textbox = {
+			position = { 14 547 }
+			size = { 482 27 }
+			text = "aoc_hyw_stalemate_score"
+			using = fontsize_small
+			align = center|vcenter|nobaseline
+		}
+	}
+
+	flowcontainer = {
+		parentanchor = hcenter
+		direction = vertical
+		spacing = 4
+		margin_top = 6
+		margin_bottom = 8
+		margin_left = 14
+		margin_right = 14
+		background = { using = entry_bg_fancy_dark }
+		background = { using = frame_decorative_light_bg }
+
+		flowcontainer = {
+			parentanchor = hcenter
+			spacing = 50
+
+			flowcontainer = {
+				direction = vertical
+				spacing = 3
+				ignoreinvisible = yes
+
+				textbox = {
+					size = { 216 25 }
+					text = "aoc_hyw_english_supporters_heading"
+					using = fontsize_large
+					default_format = "#title"
+					align = center|vcenter|nobaseline
+				}
+				divider_gold = {
+					size = { 216 3 }
+					alpha = 0.5
+				}
+
+				textbox = {
+					size = { 216 40 }
+					text = "aoc_hyw_no_supporters"
+					using = fontsize_small
+					align = center|vcenter|nobaseline
+					visible = "[IsDataModelEmpty(JournalEntry.MakeScope.GetList('aoc_hyw_english_supporters'))]"
+				}
+				aoc_hyw_supporter_rows = {
+					blockoverride "supporter_row_data" {
+						datamodel = "[DataModelFirst(JournalEntry.MakeScope.GetList('aoc_hyw_english_supporters'), Subtract_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_english_supporters')), Modulo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_english_supporters')), '(int32)4')))]"
+						visible = "[GreaterThanOrEqualTo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_english_supporters')), '(int32)4')]"
+					}
+				}
+				aoc_hyw_supporter_rows = {
+					blockoverride "supporter_row_data" {
+						datamodel = "[DataModelLast(JournalEntry.MakeScope.GetList('aoc_hyw_english_supporters'), Modulo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_english_supporters')), '(int32)4'))]"
+						visible = "[GreaterThan_int32(Modulo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_english_supporters')), '(int32)4'), '(int32)0')]"
+					}
+				}
+			}
+			flowcontainer = {
+				direction = vertical
+				spacing = 3
+				ignoreinvisible = yes
+
+				textbox = {
+					size = { 216 25 }
+					text = "aoc_hyw_french_supporters_heading"
+					using = fontsize_large
+					default_format = "#title"
+					align = center|vcenter|nobaseline
+				}
+				divider_gold = {
+					size = { 216 3 }
+					alpha = 0.5
+				}
+
+				textbox = {
+					size = { 216 40 }
+					text = "aoc_hyw_no_supporters"
+					using = fontsize_small
+					align = center|vcenter|nobaseline
+					visible = "[IsDataModelEmpty(JournalEntry.MakeScope.GetList('aoc_hyw_french_supporters'))]"
+				}
+				aoc_hyw_supporter_rows = {
+					blockoverride "supporter_row_data" {
+						datamodel = "[DataModelFirst(JournalEntry.MakeScope.GetList('aoc_hyw_french_supporters'), Subtract_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_french_supporters')), Modulo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_french_supporters')), '(int32)4')))]"
+						visible = "[GreaterThanOrEqualTo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_french_supporters')), '(int32)4')]"
+					}
+				}
+				aoc_hyw_supporter_rows = {
+					blockoverride "supporter_row_data" {
+						datamodel = "[DataModelLast(JournalEntry.MakeScope.GetList('aoc_hyw_french_supporters'), Modulo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_french_supporters')), '(int32)4'))]"
+						visible = "[GreaterThan_int32(Modulo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('aoc_hyw_french_supporters')), '(int32)4'), '(int32)0')]"
+					}
+				}
+			}
+		}
+	}
+}
+
+flowcontainer = {
+	name = "widget_aoc_hyw_actions"
+	direction = vertical
+	spacing = 6
+	ignoreinvisible = yes
+	parentanchor = hcenter
+
+	aoc_hyw_picker = {
+		blockoverride "visibility" { visible = "[GetScriptedGui('aoc_hyw_influence_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+		blockoverride "action_button" {
+			text = "aoc_hyw_influence"
+			tooltip = "aoc_hyw_influence_desc"
+			down = "[GetVariableSystem.Exists('aoc_hyw_pick_influence')]"
+			onclick = "[GetVariableSystem.Toggle('aoc_hyw_pick_influence')]"
+		}
+		blockoverride "target_list" {
+			datamodel = "[JournalEntry.MakeScope.GetList('aoc_hyw_influence_targets')]"
+			visible = "[GetVariableSystem.Exists('aoc_hyw_pick_influence')]"
+		}
+		blockoverride "target_visibility" {
+			visible = "[GetScriptedGui('aoc_hyw_influence_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_hyw_target', Country.MakeScope).End)]"
+		}
+		blockoverride "target_button" {
+			onclick = "[GetScriptedGui('aoc_hyw_influence_gui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_hyw_target', Country.MakeScope).End)]"
+			onclick = "[GetVariableSystem.Clear('aoc_hyw_pick_influence')]"
+		}
+	}
+
+	aoc_hyw_picker = {
+		blockoverride "visibility" { visible = "[GetScriptedGui('aoc_hyw_titles_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+		blockoverride "action_button" {
+			text = "aoc_hyw_grant_titles"
+			tooltip = "aoc_hyw_grant_titles_desc"
+			down = "[GetVariableSystem.Exists('aoc_hyw_pick_titles')]"
+			onclick = "[GetVariableSystem.Toggle('aoc_hyw_pick_titles')]"
+		}
+		blockoverride "target_list" {
+			datamodel = "[JournalEntry.MakeScope.GetList('aoc_hyw_titles_targets')]"
+			visible = "[GetVariableSystem.Exists('aoc_hyw_pick_titles')]"
+		}
+		blockoverride "target_visibility" {
+			visible = "[GetScriptedGui('aoc_hyw_titles_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_hyw_target', Country.MakeScope).End)]"
+		}
+		blockoverride "target_button" {
+			onclick = "[GetScriptedGui('aoc_hyw_titles_gui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_hyw_target', Country.MakeScope).End)]"
+			onclick = "[GetVariableSystem.Clear('aoc_hyw_pick_titles')]"
+		}
+	}
+
+	aoc_hyw_picker = {
+		blockoverride "visibility" { visible = "[GetScriptedGui('aoc_hyw_appanage_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+		blockoverride "action_button" {
+			text = "aoc_hyw_promote_appanage"
+			tooltip = "aoc_hyw_promote_appanage_desc"
+			down = "[GetVariableSystem.Exists('aoc_hyw_pick_appanage')]"
+			onclick = "[GetVariableSystem.Toggle('aoc_hyw_pick_appanage')]"
+		}
+		blockoverride "target_list" {
+			datamodel = "[JournalEntry.MakeScope.GetList('aoc_hyw_appanage_targets')]"
+			visible = "[GetVariableSystem.Exists('aoc_hyw_pick_appanage')]"
+		}
+		blockoverride "target_visibility" {
+			visible = "[GetScriptedGui('aoc_hyw_appanage_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_hyw_target', Country.MakeScope).End)]"
+		}
+		blockoverride "target_button" {
+			onclick = "[GetScriptedGui('aoc_hyw_appanage_gui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_hyw_target', Country.MakeScope).End)]"
+			onclick = "[GetVariableSystem.Clear('aoc_hyw_pick_appanage')]"
+		}
+	}
+
+	aoc_hyw_picker = {
+		blockoverride "visibility" { visible = "[GetScriptedGui('aoc_hyw_invite_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+		blockoverride "action_button" {
+			text = "aoc_hyw_invite"
+			tooltip = "aoc_hyw_invite_desc"
+			down = "[GetVariableSystem.Exists('aoc_hyw_pick_invite')]"
+			onclick = "[GetVariableSystem.Toggle('aoc_hyw_pick_invite')]"
+		}
+		blockoverride "target_list" {
+			datamodel = "[GetPlayer.MakeScope.GetList('aoc_hyw_invite_targets')]"
+			visible = "[And(GetVariableSystem.Exists('aoc_hyw_pick_invite'), GetScriptedGui('aoc_hyw_invite_ready_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+		}
+		blockoverride "target_visibility" {
+			visible = "[GetScriptedGui('aoc_hyw_invite_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_hyw_target', Country.MakeScope).End)]"
+		}
+		blockoverride "target_button" {
+			onclick = "[GetScriptedGui('aoc_hyw_invite_gui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('aoc_hyw_target', Country.MakeScope).End)]"
+			onclick = "[GetVariableSystem.Clear('aoc_hyw_pick_invite')]"
+		}
+	}
+
+	textbox = {
+		visible = "[And3(GetVariableSystem.Exists('aoc_hyw_pick_invite'), GetScriptedGui('aoc_hyw_invite_gui').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End), Not(GetScriptedGui('aoc_hyw_invite_ready_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)))]"
+		text = "aoc_hyw_invite_unavailable"
+		autoresize = yes
+		parentanchor = hcenter
+		using = fontsize_small
+	}
+
+	textbox = {
+		visible = "[And3(GetVariableSystem.Exists('aoc_hyw_pick_invite'), GetScriptedGui('aoc_hyw_invite_ready_gui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End), IsDataModelEmpty(GetPlayer.MakeScope.GetList('aoc_hyw_invite_targets')))]"
+		text = "aoc_hyw_invite_no_targets"
+		autoresize = yes
+		parentanchor = hcenter
+		using = fontsize_small
+	}
+}

@@ -926,7 +926,7 @@ AQN ?= {
 }
 
 # Maine
-MJA ?= {
+MIE ?= {
 	color = { 111 151 195 }
 	country_type = recognized
 	tier = principality
@@ -1213,4 +1213,34 @@ NSA ?= {
 	cultures = { north_german }
 	religion = catholic
 	capital = STATE_RUHR
+}
+
+# China
+CHI_Ming ?= {
+	color = { 252 185 61 }
+	country_type = recognized
+	tier = empire
+	cultures = { han }
+	religion = confucian
+	capital = STATE_BEIJING
+}
+
+# France
+FRA ?= {
+	color = { 20 50 210 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { french }
+	religion = catholic
+	capital = STATE_ILE_DE_FRANCE
+}
+
+# Castile
+CAS ?= {
+	color = { 198 178 65 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { spanish }
+	religion = catholic
+	capital = STATE_NEW_CASTILE
 }

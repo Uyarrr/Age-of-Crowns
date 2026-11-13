@@ -234,7 +234,7 @@ aoc_church_refresh_relief_debtors = {
 			add_to_variable_list = { name = aoc_church_relief_grants target = prev.capital }
 		}
 	}
-	aoc_church_add_debtors_by_name = yes
+	aoc_for_each_country_by_english_name = { EFFECT = aoc_church_add_relief_debtor }
 	# Include countries with dynamic tags or tags added by another mod.
 	every_country = {
 		limit = {

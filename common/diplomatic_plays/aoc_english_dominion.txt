@@ -3,6 +3,7 @@ dp_make_english_dominion = {
 	texture = "gfx/interface/icons/war_goals/make_dominion.dds"
 
 	possible = {
+		aoc_hyw_internal_play_allowed = yes
 		aggressive_diplomatic_plays_permitted = yes
 		OR = {
 			c:ENG ?= this

@@ -109,9 +109,12 @@
 
 		if = {
 			limit = {
-				scope:target_country = { is_subject_of = root }
+				OR = {
+					scope:target_country = { is_subject_of = root }
+					NOT = { aoc_france_diplomatic_priority = { TARGET = scope:target_country } }
+				}
 			}
-			multiply = 0.1
+			add = -10
 		}
 	}
 
@@ -123,7 +126,7 @@
 	# France joins after developing a mature Era III colonial program. Later
 	# priorities unlock from real colonial footholds rather than calendar dates.
 	colonial_interest_ratio = {
-		value = 0.10
+		value = 0
 		if = {
 			limit = {
 				has_technology_researched = colonization
@@ -134,6 +137,24 @@
 	}
 
 	strategic_region_scores = {
+		if = {
+			limit = {
+				scope:region = { is_in_geographic_region = geographic_region:geographic_region_europe }
+			}
+			add = 350
+		}
+
+		if = {
+			limit = {
+				scope:region = sr:region_west_africa
+				NOT = {
+					any_scope_state = { region = scope:region }
+					any_direct_subject = { any_scope_state = { region = scope:region } }
+				}
+			}
+			add = -1000
+		}
+
 		if = {
 			limit = {
 				has_technology_researched = colonization
@@ -189,9 +210,8 @@
 	secret_goal_weights = {
 		conquer = 2.5
 		dominate = 0.9
-		protect = 0.5
-		befriend = 0.25
-		reconcile = 0.0
+		protect = 1.0
+		befriend = 1.0
 	}
 
 	wargoal_weights = {
@@ -199,12 +219,19 @@
 		return_state = 2.5
 		make_tributary = 1.1
 		make_dominion = 0.5
-		reduce_autonomy = 2.5
-		annex_country = 3.0
+		reduce_autonomy = 0.0
+		annex_country = 0.0
 		force_nationalization = 0.0
 	}
 
 	secret_goal_scores = {
+		none = {
+			trigger = {
+				NOT = { aoc_france_diplomatic_priority = { TARGET = scope:target_country } }
+			}
+			score = { value = 1000 }
+		}
+
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
@@ -275,25 +302,42 @@
 
 		protect = {
 			trigger = {
-				scope:target_country = { is_subject_of = root }
+				scope:target_country = {
+					is_subject_of = root
+					"relations(root)" >= 0
+				}
 			}
 			score = {
-				value = 125
+				value = 350
 			}
 		}
 
 		befriend = {
 			trigger = {
-				scope:target_country = { is_subject_of = root }
+				NOT = { scope:target_country = { c:ENG ?= this } }
+				OR = {
+					scope:target_country = { is_subject_of = root }
+					AND = {
+						c:FRA ?= this
+						NOT = { has_global_variable = aoc_hyw_concluded }
+						scope:target_country = {
+							is_subject = no
+							capital = { is_in_geographic_region = geographic_region:geographic_region_europe }
+							has_strategic_region_interest_tier = {
+								strategic_region = root.capital.region
+								value >= 1
+							}
+							aoc_hyw_not_fighting_crown = { CROWN = c:FRA }
+							NOT = { aoc_hyw_english_supporter = yes }
+						}
+					}
+				}
 			}
 			score = {
-				value = 75
-
+				value = 200
 				if = {
-					limit = {
-						scope:target_country = { relations:root < relations_threshold:amicable }
-					}
-					add = 75
+					limit = { scope:target_country = { is_subject_of = root } }
+					add = 500
 				}
 			}
 		}
@@ -385,21 +429,15 @@
 
 		reduce_autonomy = {
 			if = {
-				limit = {
-					scope:target_country = { is_subject_of = root }
-					scope:target_country = { relations:root >= relations_threshold:amicable }
-				}
-				add = 250
+				limit = { scope:target_country = { is_subject_of = root } }
+				add = -1000
 			}
 		}
 
 		annex_country = {
 			if = {
-				limit = {
-					scope:target_country = { is_subject_of = root }
-					scope:target_country = { relations:root >= relations_threshold:cordial }
-				}
-				add = 300
+				limit = { scope:target_country = { is_subject_of = root } }
+				add = -1000
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 // Run from any directory: node tools/build_nation_content.cjs [--check]
 const fs = require('node:fs');
 const path = require('node:path');
-const { parse, walk } = require('./audit_content.cjs');
+const { parse } = require('./audit_content.cjs');
 
 const root = path.resolve(__dirname, '..');
 const tags = new Set(['ENG']);
@@ -9,7 +9,12 @@ const cultures = new Set(['english']);
 const namespaces = new Set(['england', 'england_overseas']);
 const ages = ['traditions', 'renaissance', 'discovery', 'reformation', 'absolutism', 'revolutions'];
 const categories = ['production', 'military', 'society'];
-const conditions = require('./england_event_conditions.json');
+const catalog = require('./nation_event_catalog.json');
+const conditions = {
+	...require('./england_event_conditions.json'),
+	...Object.fromEntries(Object.entries(catalog).filter(([, entry]) => entry.conditions)
+		.map(([id, entry]) => [id, entry.conditions])),
+};
 const eventKey = id => id.replace('.', '_');
 const recordKey = id => `aoc_content_seen_${eventKey(id)}`;
 const field = (node, key) => node.value.find(child => child.key === key)?.value;
@@ -33,17 +38,18 @@ function definitions(directory, include = () => true) {
 
 // A positive test must be required. An OR with an unrelated alternative,
 // a negative trigger, and a reference in a foreign scope do not qualify.
-function nationOnly(nodes, allowedTags = tags) {
+function nationOnly(nodes, allowedTags = tags, allowedCultures = cultures) {
 	return Array.isArray(nodes) && nodes.some(({ key, op, value }) => {
 		if (!['=', '?='].includes(op)) return false;
-		if (key === 'OR') return value.length > 0 && value.every(branch => nationOnly([branch], allowedTags));
-		if (key === 'AND' || key === 'custom_tooltip') return nationOnly(value, allowedTags);
+		if (key === 'OR') return Array.isArray(value) && value.length > 0
+			&& value.every(branch => nationOnly([branch], allowedTags, allowedCultures));
+		if (key === 'AND' || key === 'custom_tooltip') return nationOnly(value, allowedTags, allowedCultures);
 		if (key.startsWith('c:')) return allowedTags.has(key.slice(2)) && ['this', 'root'].includes(value);
 		if (['this', 'root', 'tag', 'country_definition', 'was_formed_from'].includes(key)) {
 			return typeof value === 'string' && allowedTags.has(value.replace(/^(c|cd):/, ''));
 		}
 		return ['has_primary_culture', 'country_has_primary_culture', 'primary_culture'].includes(key)
-			&& typeof value === 'string' && cultures.has(value.replace(/^(cu|culture):/, ''));
+			&& typeof value === 'string' && allowedCultures?.has(value.replace(/^(cu|culture):/, ''));
 	});
 }
 
@@ -54,13 +60,14 @@ const allGrants = new Map();
 const ageGrants = new Map();
 const nationTags = new Set();
 const nationData = new Map();
+const historyUpdates = [];
 for (const nationFile of nationTechFiles) {
 	const nation = path.basename(nationFile, '_tech.txt');
 	const source = fs.readFileSync(nationFile, 'utf8');
 	const declaredTag = source.match(/^\s*#\s*nation_tag\s*=\s*([A-Z0-9]{3})\s*$/m)?.[1];
 	const historyFile = path.join(root, 'common/history/countries', `${nation}.txt`);
-	const history = fs.existsSync(historyFile)
-		? parse(fs.readFileSync(historyFile, 'utf8'), historyFile).find(node => node.key === 'COUNTRIES') : undefined;
+	const historySource = fs.existsSync(historyFile) ? fs.readFileSync(historyFile, 'utf8') : '';
+	const history = parse(historySource, historyFile, { positions: true }).find(node => node.key === 'COUNTRIES');
 	const historyTags = history?.value.filter(node => /^c:[A-Z0-9]{3}$/.test(node.key))
 		.map(node => node.key.slice(2)) || [];
 	const tag = declaredTag || (historyTags.length === 1 ? historyTags[0] : undefined);
@@ -85,6 +92,27 @@ for (const nationFile of nationTechFiles) {
 		if (!ageGrants.has(ageKey)) ageGrants.set(ageKey, new Map());
 		if (!ageGrants.get(ageKey).has(tag)) ageGrants.get(ageKey).set(tag, []);
 		ageGrants.get(ageKey).get(tag).push(node.key);
+	}
+	const countryBlocks = history?.value.filter(node => node.key === `c:${tag}` && Array.isArray(node.value)) ?? [];
+	const countryEffects = countryBlocks.flatMap(node => node.value);
+	const startingEra = countryEffects.find(node => node.key === 'add_era_researched'
+		&& node.op === '=' && node.value === 'era_1');
+	if (startingEra) {
+		const researched = new Set(countryEffects.filter(node => node.key === 'add_technology_researched'
+			&& node.op === '=').map(node => node.value));
+		const missing = nationTech.filter(node => field(node, 'era') === 'era_1' && !researched.has(node.key));
+		if (missing.length) {
+			const newline = historySource.includes('\r\n') ? '\r\n' : '\n';
+			const lineStart = historySource.lastIndexOf('\n', startingEra.start - 1) + 1;
+			const prefix = historySource.slice(lineStart, startingEra.start);
+			const lineEnd = historySource.indexOf('\n', startingEra.end);
+			const endOfLine = /^[ \t]*$/.test(prefix) && lineEnd !== -1
+				&& /^[ \t]*(?:#[^\r\n]*)?\r?$/.test(historySource.slice(startingEra.end, lineEnd));
+			const additions = missing.map(({ key }) => `add_technology_researched = ${key}`);
+			const insertAt = endOfLine ? lineEnd + 1 : startingEra.end;
+			const insertion = endOfLine ? additions.map(line => prefix + line + newline).join('') : ' ' + additions.join(' ');
+			historyUpdates.push([historyFile, historySource.slice(0, insertAt) + insertion + historySource.slice(insertAt)]);
+		}
 	}
 }
 const grants = new Map([...allGrants].filter(([, grant]) => grant.nation === 'england')
@@ -140,15 +168,31 @@ for (const file of files('localization/english', '.yml')
 		english.set(match[1], match[2]);
 	}
 }
-const allEventDefinitions = definitions('events');
-const events = allEventDefinitions.filter(node => field(node, 'type') === 'country_event'
-	&& field(node, 'hidden') !== 'yes' && english.has(field(node, 'title'))
-	&& (namespaces.has(node.key.split('.')[0]) || nationOnly(field(node, 'trigger'))));
+const allEventDefinitions = definitions('events').filter(node => field(node, 'type') === 'country_event'
+	&& field(node, 'hidden') !== 'yes' && english.has(field(node, 'title')));
+const visibleEventIds = new Set(allEventDefinitions.map(node => node.key));
+for (const [id, { countries }] of Object.entries(catalog)) {
+	if (!visibleEventIds.has(id)) throw new Error(`${id}: catalog entry needs a visible country event with an English title`);
+	if (!Array.isArray(countries) || !countries.length || new Set(countries).size !== countries.length
+		|| countries.some(tag => !tags.has(tag) && !nationTags.has(tag))) {
+		throw new Error(`${id}: catalog countries must be unique tags with national content viewers`);
+	}
+}
+const events = allEventDefinitions.filter(node => catalog[node.key]
+	? catalog[node.key].countries.some(tag => tags.has(tag))
+	: namespaces.has(node.key.split('.')[0]) || nationOnly(field(node, 'trigger')));
 const nationalEvents = new Map([...nationData].filter(([nation]) => nation !== 'england')
-	.map(([nation]) => [nation, allEventDefinitions.filter(node => field(node, 'type') === 'country_event'
-		&& field(node, 'hidden') !== 'yes' && english.has(field(node, 'title'))
-		&& (node.key.startsWith(`${nation}.`) || node.key.startsWith(`${nation}_`)))]));
+	.map(([nation, { tag }]) => {
+		const allowedTags = new Set([tag]);
+		return [nation, allEventDefinitions.filter(node => catalog[node.key]
+			? catalog[node.key].countries.includes(tag)
+			: node.key.startsWith(`${nation}.`) || node.key.startsWith(`${nation}_`)
+				|| nationOnly(field(node, 'trigger'), allowedTags, null))];
+	}));
 const indexedEvents = new Map([...events, ...[...nationalEvents.values()].flat()].map(node => [node.key, node]));
+const englishEventIds = new Set(events.map(node => node.key));
+const otherEventDefinitions = [...indexedEvents.values()].filter(node => !englishEventIds.has(node.key));
+const eventUpdates = [];
 for (const file of files('events', '.txt')) {
 	const original = fs.readFileSync(file, 'utf8');
 	const updated = original.replace(/^([\w.]+)[ \t]*=[ \t]*\{[^]*?(?=^[\w.]+[ \t]*=|(?![^]))/gm, (block, id) => {
@@ -157,7 +201,6 @@ for (const file of files('events', '.txt')) {
 		const immediate = field(event, 'immediate');
 		const marker = recordKey(id);
 		if (Array.isArray(immediate) && immediate.some(node => node.key === 'set_variable' && node.value === marker)) return block;
-		if (process.argv.includes('--check')) throw new Error(`Missing event history marker in ${id}`);
 		const newline = block.includes('\r\n') ? '\r\n' : '\n';
 		if (immediate) {
 			const header = /^(\t| )immediate\s*=\s*\{/m;
@@ -166,11 +209,11 @@ for (const file of files('events', '.txt')) {
 		}
 		return block.replace('{', `{${newline}\timmediate = { set_variable = ${marker} }${newline}`);
 	});
-	if (updated !== original) fs.writeFileSync(file, updated);
+	if (updated !== original) eventUpdates.push([file, updated]);
 }
 const groups = [
 	['reforms', /^england\.10/],
-	['hundred_years', /^england\.30[01]$/],
+	['hundred_years', /^(?:england\.30[01]|aoc_hyw\.)/],
 	['roses', /^england\.3(?:0[2-9]|[12][0-9])$/],
 	['overseas', /^england(?:_overseas\.|\.20)/],
 ];
@@ -252,7 +295,8 @@ function scriptText({ key, op, value }) {
 }
 
 const staticModifiers = new Set(files('common/static_modifiers', '.txt').flatMap(file =>
-	[...fs.readFileSync(file, 'utf8').matchAll(/^([\w]+)\s*=\s*\{/gm)].map(match => match[1])));
+	[...fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '').matchAll(/^([\w]+)\s*=\s*\{/gm)]
+		.map(match => match[1])));
 
 function eventEffect(entry) {
 	if (entry.key === 'add_modifier' && Array.isArray(entry.value)) {
@@ -309,6 +353,7 @@ function eventDetails(node) {
 	section('Firing sources', [...firingSources.get(node.key)]);
 	const cooldown = node.value.find(entry => entry.key === 'cooldown');
 	if (cooldown) lines.push('', scriptText(cooldown));
+	if (field(node, 'fire_only_once') === 'yes') lines.push('', 'Can fire only once.');
 	const immediate = field(node, 'immediate');
 	section('Effects when the event opens', (Array.isArray(immediate) ? immediate : [])
 		.filter(entry => entry.key !== 'set_variable' || entry.value !== recordKey(node.key))
@@ -331,6 +376,18 @@ const variableLabels = {
 	war_of_roses_balance_offset_var: 'Succession',
 };
 function playerEffect(entry) {
+	if (entry.key === 'add_involvement' && Array.isArray(entry.value)) {
+		const region = /^sr:(region_\w+)$/.exec(field(entry, 'strategic_region'))?.[1];
+		const value = field(entry, 'value');
+		if (region && /^-?\d+(?:\.\d+)?$/.test(value)) {
+			const amount = Number(value);
+			return `#v ${amount > 0 ? '+' : ''}${amount.toLocaleString('en-US')}#! [concept_involvement] in $${region}$`;
+		}
+	}
+	if (entry.key === 'activate_law' && typeof entry.value === 'string') {
+		const law = entry.value.match(/^law_type:(law_\w+)$/)?.[1];
+		if (law) return `Enact $${law}$`;
+	}
 	if (entry.key === 'add_modifier' && Array.isArray(entry.value)) {
 		const modifier = field(entry, 'name');
 		if (!staticModifiers.has(modifier)) return undefined;
@@ -347,6 +404,26 @@ function playerEffect(entry) {
 	if (entry.key === 'custom_tooltip' && safeLocalization(entry.value)) return `$${entry.value}$`;
 }
 
+function playerOptionEffects(entries) {
+	const lines = [];
+	let hasDetails = false;
+	for (const entry of entries) {
+		if (['name', 'default_option', 'ai_chance', 'clamp_variable', 'limit'].includes(entry.key)) continue;
+		if (['if', 'else_if', 'else'].includes(entry.key) && Array.isArray(entry.value)) {
+			const branch = playerOptionEffects(entry.value);
+			if (branch.lines.length) {
+				lines.push('#bold Conditional effects#!', ...branch.lines);
+			}
+			hasDetails = true;
+			continue;
+		}
+		const effect = playerEffect(entry);
+		if (effect) lines.push(effect);
+		else hasDetails = true;
+	}
+	return { lines, hasDetails };
+}
+
 function safeLocalization(key) {
 	return english.has(key) && !/[\[\]$]/.test(english.get(key));
 }
@@ -360,12 +437,11 @@ function playerDetails(node) {
 	if (options.length) lines.push('$TOOLTIP_DELIMITER$', '#bold Event choices#!');
 	for (const [index, option] of options.entries()) {
 		const name = field(option, 'name');
-		const entries = option.value.filter(entry => !['name', 'default_option', 'ai_chance', 'clamp_variable'].includes(entry.key));
-		const effects = entries.map(playerEffect);
+		const effects = playerOptionEffects(option.value);
 		if (index > 0) lines.push('');
-		lines.push(`#v #bold ${safeLocalization(name) ? `$${name}$` : 'Event option'}#!#!`, ...effects.filter(Boolean));
-		if (effects.some(effect => !effect)) lines.push('See the information icon for additional effects and conditions.');
-		else if (!effects.length) lines.push('No additional effects.');
+		lines.push(`#v #bold ${safeLocalization(name) ? `$${name}$` : 'Event option'}#!#!`, ...effects.lines);
+		if (effects.hasDetails) lines.push('See the information icon for additional effects and conditions.');
+		else if (!effects.lines.length) lines.push('No additional effects.');
 	}
 	return ` aoc_content_player_${eventKey(node.key)}: "${lines.join('\n').replace(/\n/g, '\\n')}"`;
 }
@@ -455,7 +531,7 @@ const nationalWidget = ([nation, { tech: nationTech }]) => {
 		return `		aoc_national_event_row = {
 			blockoverride "event_icon" { texture = "${field(node, 'icon') || 'gfx/interface/icons/event_icons/waving_flag.dds'}" tooltip = "aoc_content_player_${key}" }
 			blockoverride "event_title" { text = "${field(node, 'title')}" tooltip = "aoc_content_player_${key}" }
-			blockoverride "event_conditions" { text = "aoc_national_event_conditions" tooltip = "aoc_content_player_${key}" }
+			blockoverride "event_conditions" { text = "${conditions[node.key] ? `aoc_content_when_${key}` : 'aoc_national_event_conditions'}" tooltip = "aoc_content_player_${key}" }
 			blockoverride "event_details" { tooltip = "aoc_content_details_${key}" }
 			blockoverride "event_seen" {
 				visible = "[GetScriptedGui('aoc_content_check_${key}').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -544,14 +620,16 @@ const nationalLoc = '\uFEFFl_english:\n'
 			...nationTech.map(({ key }) => ` aoc_${nation}_unlock_${key}: "Granted when you research [GetTechnology('${allGrants.get(key).ageKey}').GetName]."`),
 			...nationTech.flatMap(({ key }) => [key, `${key}_desc`].filter(locKey => !english.has(locKey))
 				.map(locKey => ` ${locKey}: "${locKey.endsWith('_desc') ? `A national technology of ${name}.` : nationName(key.slice(nation.length + 1))}"`)),
-			...nationEventList.flatMap(node => [eventDetails(node), playerDetails(node)]),
 		];
-	}).join('\n') + '\n';
+	}).concat(otherEventDefinitions.flatMap(node => [
+		...(conditions[node.key] ? [` aoc_content_when_${eventKey(node.key)}: "${conditions[node.key]}"`] : []),
+		eventDetails(node), playerDetails(node),
+	])).join('\n') + '\n';
 const nationalProgress = otherNations.map(([nation, { tech: nationTech }]) => `aoc_${nation}_researched = {
 	value = 0
 ${nationTech.map(({ key }) => `	if = { limit = { has_technology_researched = ${key} } add = 1 }`).join('\n')}
 }`).join('\n\n') + '\n';
-const nationalChecks = [...nationalEvents.values()].flat().map(node => `aoc_content_check_${eventKey(node.key)} = {
+const nationalChecks = otherEventDefinitions.map(node => `aoc_content_check_${eventKey(node.key)} = {
 	scope = country
 	is_valid = { has_variable = ${recordKey(node.key)} }
 }`).join('\n\n') + '\n';
@@ -576,7 +654,7 @@ je_${nation}_technologies = {
 }\n`]];
 });
 
-for (const [file, output] of [
+const outputs = [
 	['common/technology/technologies/age_techs.txt', ageOutput],
 	['gui/journal_entry_widgets/england_technologies.gui', gui],
 	[locFile, generatedLoc],
@@ -587,14 +665,12 @@ for (const [file, output] of [
 	['common/script_values/aoc_national_technologies.txt', nationalProgress],
 	['common/scripted_guis/aoc_national_content.txt', nationalChecks],
 	...missingJournals,
-]) {
-	const target = path.join(root, file);
-	if (process.argv.includes('--check')) {
-		if (!fs.existsSync(target) || fs.readFileSync(target, 'utf8').replace(/\r\n/g, '\n') !== output) {
-			throw new Error(`Regenerate ${file} with node tools/build_nation_content.cjs`);
-		}
-	} else {
-		fs.writeFileSync(target, output);
-	}
+].map(([file, output]) => [path.join(root, file), output]);
+const check = process.argv.includes('--check');
+for (const [target, output] of [...historyUpdates, ...eventUpdates, ...outputs]) {
+	const existing = fs.existsSync(target) ? fs.readFileSync(target, 'utf8') : undefined;
+	if (existing?.replace(/\r\n/g, '\n') === output.replace(/\r\n/g, '\n')) continue;
+	if (check) throw new Error(`Regenerate ${path.relative(root, target)} with node tools/build_nation_content.cjs`);
+	fs.writeFileSync(target, output);
 }
-console.log(`Assigned ${allGrants.size} national technologies across ${nationTags.size} ${nationTags.size === 1 ? 'country' : 'countries'}. Indexed ${tech.length} English technologies and ${events.length} events.`);
+console.log(`Assigned ${allGrants.size} national technologies across ${nationTags.size} ${nationTags.size === 1 ? 'country' : 'countries'}. Indexed ${indexedEvents.size} national events.`);

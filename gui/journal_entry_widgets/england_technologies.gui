@@ -415,6 +415,19 @@ flowcontainer = {
 			direction = vertical
 			spacing = 4
 			aoc_content_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/waving_flag.dds" tooltip = "aoc_content_player_aoc_hyw_310" }
+				blockoverride "event_title" { text = "aoc_hyw_maine_title" tooltip = "aoc_content_player_aoc_hyw_310" }
+				blockoverride "event_conditions" { text = "aoc_content_when_aoc_hyw_310" tooltip = "aoc_content_player_aoc_hyw_310" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+					tooltip = "aoc_content_storyline_age_1"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_hyw_310" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_hyw_310').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_england_300" }
 				blockoverride "event_title" { text = "england_hyw_victory.title" tooltip = "aoc_content_player_england_300" }
 				blockoverride "event_conditions" { text = "aoc_content_when_england_300" tooltip = "aoc_content_player_england_300" }

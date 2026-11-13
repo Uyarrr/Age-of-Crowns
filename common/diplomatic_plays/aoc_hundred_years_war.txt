@@ -1,0 +1,22 @@
+﻿dp_aoc_hyw = {
+	war_goal = aoc_hyw_supremacy
+	requires_interest_marker = no
+	enable_switch_sides = no
+	mirror_war_goal = no
+	initiator_can_add_war_goals = no
+	target_can_add_war_goals = no
+	add_infamy_for_starting_initiator_wargoals = no
+	texture = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+
+	selectable_in_lens = { always = no }
+	possible = {}
+	subject_join_initiator_trigger = { always = no }
+	additional_involvement_trigger = { always = no }
+
+	on_weekly_pulse = {
+		if = {
+			limit = { is_war = no }
+			aoc_hyw_enforce_play_roster = yes
+		}
+	}
+}

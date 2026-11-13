@@ -1,0 +1,18 @@
+on_game_started_after_lobby = {
+	on_actions = { aoc_hyw_opening_events }
+}
+
+aoc_hyw_opening_events = {
+	effect = {
+		c:FRA ?= {
+			if = {
+				limit = {
+					aoc_hyw_crowns_available = yes
+					NOT = { has_global_variable = aoc_hyw_concluded }
+					NOT = { has_variable = aoc_hyw_france_intro_seen }
+				}
+				trigger_event = { id = aoc_hyw.299 popup = yes }
+			}
+		}
+	}
+}

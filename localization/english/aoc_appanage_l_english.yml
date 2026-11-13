@@ -1,6 +1,11 @@
-l_english:
- subject_type_appanage: "@vassal! $subject_type_appanage_no_icon$"
+﻿l_english:
+ subject_type_appanage: "@personal_union! $subject_type_appanage_no_icon$"
  subject_type_appanage_no_icon: "Appanage"
  subject_type_appanage_desc: "A hereditary French dependency held by a branch of the royal family."
  appanage: "Appanage"
  appanage_desc: "A French princely dependency held by a branch of the royal family."
+ appanage_action_name: "$subject_type_appanage_no_icon$"
+ appanage_action_break_name: "Grant Independence"
+ appanage_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] is an Appanage under [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]."
+ appanage_action_notification_break_name: "Independence granted"
+ appanage_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] has granted us independence."

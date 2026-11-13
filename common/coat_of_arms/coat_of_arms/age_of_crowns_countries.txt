@@ -4843,3 +4843,139 @@ AQN_valois = { # Aquitaine qtly Berry (modern)
         parent = "sub_div_quarterly" 
     }	
 }
+
+CHI_Ming_dragon = { # China - Dragon chasing the flaming pearl
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	40	75	88	}	
+	color2 = hsv360 	{	358 	80	60	}	
+			
+	colored_emblem = {
+		texture = "ce_border_thin.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}				
+	textured_emblem = {
+		texture = "te_dragon_flaming_pearl_clouds_blue_variant.dds"
+		instance = { position = { 0.5 0.5 } scale = { 0.85 0.8 } }						
+	}		
+}
+
+MIE = { # Maine
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.20 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.60 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.00 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.20 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.40 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.60 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.80 1.00 } scale = { @semy @semy } }
+		instance = { position = { 1.00 1.00 } scale = { @semy @semy } }
+	}
+	colored_emblem = {
+		texture = "ce_border_thin.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }
+	}	
+    sub = {
+        parent = "sub_canton_lion" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }	
+		color1 = "red"
+		color2 = "white"
+    }		
+}
+MIE_three_fleurs = { # Maine - Anjou-Maine
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.33 0.35 } scale = { 0.525 0.525 }  }
+		instance = { position = { 0.67 0.35 } scale = { 0.525 0.525 }  }
+		instance = { position = { 0.5 0.65 } scale = { 0.525 0.525 }  }			
+	}
+	colored_emblem = {
+		texture = "ce_border_thin.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }
+	}	
+    sub = {
+        parent = "sub_canton_lion" 
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }	
+		color1 = "red"
+		color2 = "white"
+    }		
+}
+
+MGE = { # Mongol Empire
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "red_mid"
+	color3 = "white"
+	color4 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_tamgha_mongol_double_bow.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.33 0.5 } scale = { 0.7 0.7 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_border_of_3_thin_line_inner.dds"
+		color1 = color3
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
+	}	
+}
+MGE_soyombo = { # Mongolia (Bhuddist)
+	pattern = "pattern_fringe.dds"
+	color1 = hsv360 	{	36	80	75	}	
+	color2 = "red_scarlet"
+	color3 = "yellow"
+
+	textured_emblem = {
+		texture = "te_mongol_khanate_soyombo_frame.dds"
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 } }			
+	}		
+}

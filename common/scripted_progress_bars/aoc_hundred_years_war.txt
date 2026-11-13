@@ -1,0 +1,33 @@
+aoc_hyw_tension = {
+	name = aoc_hyw_tension
+	desc = aoc_hyw_tension_desc
+	default_bad = yes
+	start_value = 0
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = { aoc_hyw_round_open = no }
+			add = { desc = aoc_hyw_tension_rivalry value = 1 }
+		}
+		progress_condition = {
+			limit = {
+				aoc_hyw_round_open = no
+				c:ENG ?= { has_variable = aoc_hyw_maine_refused }
+			}
+			add = { desc = aoc_hyw_tension_maine value = 0.5 }
+		}
+		progress_condition = {
+			limit = {
+				aoc_hyw_round_open = no
+				c:ENG ?= { has_variable = aoc_hyw_claimed_throne }
+			}
+			add = { desc = aoc_hyw_tension_claim value = 0.5 }
+		}
+		progress_condition = {
+			limit = { aoc_hyw_round_open = yes }
+			add = { desc = aoc_hyw_tension_war value = -3 }
+		}
+	}
+}

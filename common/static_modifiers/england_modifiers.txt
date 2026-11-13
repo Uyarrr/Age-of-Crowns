@@ -26,6 +26,24 @@ hundred_years_war_lost = {
 	interest_group_ig_landowners_approval_add = -2
 }
 
+hundred_years_war_france_won = {
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	country_prestige_mult = 0.20
+	country_legitimacy_base_add = 20
+	country_authority_mult = 0.20
+	interest_group_ig_crown_pol_str_mult = 0.25
+	interest_group_ig_landowners_approval_add = 3
+}
+
+hundred_years_war_france_lost = {
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	country_prestige_mult = -0.15
+	country_legitimacy_base_add = -15
+	country_authority_mult = -0.15
+	interest_group_ig_crown_pol_str_mult = -0.20
+	interest_group_ig_landowners_approval_add = -2
+}
+
 war_of_the_roses_dynastic_tension = {
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
@@ -347,4 +365,20 @@ england_the_enclosure_movement_b = {
 	building_farmers_standard_of_living_add = 1
 	interest_group_ig_rural_folk_approval_add = 4
 	interest_group_ig_landowners_approval_add = -4
+}
+
+aoc_hyw_maine_concession = {
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	country_prestige_mult = -0.20
+	country_legitimacy_base_add = -10
+}
+
+aoc_hyw_subject_privileges = {
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	country_liberty_desire_add = -0.10
+}
+
+aoc_hyw_throne_claim_infamy = {
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	country_infamy_decay_mult = -1
 }

@@ -177,12 +177,19 @@ flowcontainer = {
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_breton_marriage" }
 			}
 			aoc_national_technology_card = {
-				datacontext = "[GetTechnology('france_colonial_ventures')]"
-				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_colonial_ventures" }
-			}
-			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_establishment_of_recettes_generales')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_establishment_of_recettes_generales" }
+			}
+		}
+		aoc_national_age_header = {
+			blockoverride "age_icon" { texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds" }
+			blockoverride "age_name" { text = "aoc_national_tech_era_3" }
+		}
+		flowcontainer = {
+			spacing = 9
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_colonial_ventures')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_colonial_ventures" }
 			}
 		}
 		aoc_national_age_header = {
@@ -211,6 +218,59 @@ flowcontainer = {
 		spacing = 4
 		ignoreinvisible = yes
 		textbox = { size = { 510 40 } text = "aoc_content_event_history_note" multiline = yes align = center|nobaseline using = fontsize_small }
-		textbox = { size = { 510 32 } text = "aoc_national_no_events" align = center|nobaseline }
+		aoc_national_event_row = {
+			blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_299" }
+			blockoverride "event_title" { text = "aoc_hyw_france_intro_title" tooltip = "aoc_content_player_aoc_hyw_299" }
+			blockoverride "event_conditions" { text = "aoc_national_event_conditions" tooltip = "aoc_content_player_aoc_hyw_299" }
+			blockoverride "event_details" { tooltip = "aoc_content_details_aoc_hyw_299" }
+			blockoverride "event_seen" {
+				visible = "[GetScriptedGui('aoc_content_check_aoc_hyw_299').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+		aoc_national_event_row = {
+			blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_300" }
+			blockoverride "event_title" { text = "aoc_hyw_france_victory_title" tooltip = "aoc_content_player_aoc_hyw_300" }
+			blockoverride "event_conditions" { text = "aoc_national_event_conditions" tooltip = "aoc_content_player_aoc_hyw_300" }
+			blockoverride "event_details" { tooltip = "aoc_content_details_aoc_hyw_300" }
+			blockoverride "event_seen" {
+				visible = "[GetScriptedGui('aoc_content_check_aoc_hyw_300').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+		aoc_national_event_row = {
+			blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_301" }
+			blockoverride "event_title" { text = "aoc_hyw_france_defeat_title" tooltip = "aoc_content_player_aoc_hyw_301" }
+			blockoverride "event_conditions" { text = "aoc_national_event_conditions" tooltip = "aoc_content_player_aoc_hyw_301" }
+			blockoverride "event_details" { tooltip = "aoc_content_details_aoc_hyw_301" }
+			blockoverride "event_seen" {
+				visible = "[GetScriptedGui('aoc_content_check_aoc_hyw_301').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+		aoc_national_event_row = {
+			blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/waving_flag.dds" tooltip = "aoc_content_player_aoc_hyw_311" }
+			blockoverride "event_title" { text = "aoc_hyw_maine_returned_title" tooltip = "aoc_content_player_aoc_hyw_311" }
+			blockoverride "event_conditions" { text = "aoc_content_when_aoc_hyw_311" tooltip = "aoc_content_player_aoc_hyw_311" }
+			blockoverride "event_details" { tooltip = "aoc_content_details_aoc_hyw_311" }
+			blockoverride "event_seen" {
+				visible = "[GetScriptedGui('aoc_content_check_aoc_hyw_311').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+		aoc_national_event_row = {
+			blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/waving_flag.dds" tooltip = "aoc_content_player_aoc_hyw_312" }
+			blockoverride "event_title" { text = "aoc_hyw_maine_denied_title" tooltip = "aoc_content_player_aoc_hyw_312" }
+			blockoverride "event_conditions" { text = "aoc_content_when_aoc_hyw_312" tooltip = "aoc_content_player_aoc_hyw_312" }
+			blockoverride "event_details" { tooltip = "aoc_content_details_aoc_hyw_312" }
+			blockoverride "event_seen" {
+				visible = "[GetScriptedGui('aoc_content_check_aoc_hyw_312').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+		aoc_national_event_row = {
+			blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/event_industry.dds" tooltip = "aoc_content_player_national_colonization_3" }
+			blockoverride "event_title" { text = "national_colonization.3.t" tooltip = "aoc_content_player_national_colonization_3" }
+			blockoverride "event_conditions" { text = "aoc_national_event_conditions" tooltip = "aoc_content_player_national_colonization_3" }
+			blockoverride "event_details" { tooltip = "aoc_content_details_national_colonization_3" }
+			blockoverride "event_seen" {
+				visible = "[GetScriptedGui('aoc_content_check_national_colonization_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
 	}
 }

@@ -1,0 +1,9 @@
+CHARACTERS = {
+	c:ENG ?= {
+		create_character = {
+			template = ENG_henry_vi_lancaster_wotr
+			role = character_role_ruler
+			on_created = { set_variable = wotr_henry_vi_character }
+		}
+	}
+}

@@ -1,0 +1,83 @@
+aoc_hyw_influence_gui = {
+	scope = country
+	saved_scopes = { aoc_hyw_target }
+	is_shown = { c:ENG ?= this }
+	is_valid = {
+		aoc_hyw_can_influence = yes
+		scope:aoc_hyw_target ?= { aoc_hyw_influence_target = yes }
+	}
+	effect = {
+		if = {
+			limit = {
+				aoc_hyw_can_influence = yes
+				scope:aoc_hyw_target ?= { aoc_hyw_influence_target = yes }
+			}
+			aoc_hyw_influence_subject = yes
+		}
+	}
+}
+
+aoc_hyw_titles_gui = {
+	scope = country
+	saved_scopes = { aoc_hyw_target }
+	is_shown = { c:FRA ?= this }
+	is_valid = {
+		aoc_hyw_can_grant_titles = yes
+		scope:aoc_hyw_target ?= { aoc_hyw_titles_target = yes }
+	}
+	effect = {
+		if = {
+			limit = {
+				aoc_hyw_can_grant_titles = yes
+				scope:aoc_hyw_target ?= { aoc_hyw_titles_target = yes }
+			}
+			aoc_hyw_grant_titles_to_subject = yes
+		}
+	}
+}
+
+aoc_hyw_appanage_gui = {
+	scope = country
+	saved_scopes = { aoc_hyw_target }
+	is_shown = {
+		c:FRA ?= this
+		any_direct_subject = { aoc_hyw_appanage_target = yes }
+	}
+	is_valid = {
+		aoc_hyw_can_promote_appanage = yes
+		scope:aoc_hyw_target ?= { aoc_hyw_appanage_target = yes }
+	}
+	effect = {
+		if = {
+			limit = {
+				aoc_hyw_can_promote_appanage = yes
+				scope:aoc_hyw_target ?= { aoc_hyw_appanage_target = yes }
+			}
+			scope:aoc_hyw_target = { change_subject_type = subject_type_appanage }
+		}
+	}
+}
+
+aoc_hyw_invite_ready_gui = {
+	scope = country
+	is_valid = { aoc_hyw_can_invite = yes }
+}
+
+aoc_hyw_invite_gui = {
+	scope = country
+	saved_scopes = { aoc_hyw_target }
+	is_shown = { OR = { c:ENG ?= this c:FRA ?= this } }
+	is_valid = {
+		aoc_hyw_can_invite = yes
+		scope:aoc_hyw_target ?= { aoc_hyw_invite_target = { CROWN = root } }
+	}
+	effect = {
+		if = {
+			limit = {
+				aoc_hyw_can_invite = yes
+				scope:aoc_hyw_target ?= { aoc_hyw_invite_target = { CROWN = root } }
+			}
+			aoc_hyw_invite_country = yes
+		}
+	}
+}

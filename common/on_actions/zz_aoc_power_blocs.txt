@@ -4,7 +4,7 @@ on_game_started = {
 
 aoc_initialize_historical_power_bloc_members = {
     effect = {
-        c:CHI ?= { aoc_enroll_chinese_subjects = yes }
+        c:CHI_Ming ?= { aoc_enroll_chinese_subjects = yes }
         c:TYR ?= {
             if = {
                 limit = { power_bloc ?= { has_identity = identity:identity_irish_clans } }

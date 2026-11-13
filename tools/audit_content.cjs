@@ -3,18 +3,22 @@
  */
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const a=require('./audit_map_ownership.cjs');
-function parse(text,file){
- const tokens=[...text.matchAll(/#[^\r\n]*|"(?:\\.|[^"\\])*"|\?=|>=|<=|!=|[{}=<>]|[^\s{}=<>!?"#]+/g)].map(m=>m[0]).filter(t=>!t.startsWith('#'));
+function parse(text,file,{ positions = false } = {}){
+ const matches=[...text.matchAll(/#[^\r\n]*|"(?:\\.|[^"\\])*"|\?=|>=|<=|!=|[{}=<>]|[^\s{}=<>!?"#]+/g)].filter(m=>!m[0].startsWith('#'));
+ const tokens=matches.map(m=>m[0]);
  let i=0;
  function atom(){const t=tokens[i++];assert(t!==undefined&&t!=='}',`${file}: missing value`);return t.startsWith('"')?JSON.parse(t):t;}
  function block(nested=false){
   const out=[];
   while(i<tokens.length&&tokens[i]!=='}'){
-   const key=atom();assert(key!=='{',`${file}: unexpected brace`);
+   const start=i;
+   const key=atom();
+   if(key==='{'){out.push({value:block(true)});continue;}
    if(['=','?=','>=','<=','!=','>','<'].includes(tokens[i])){
     const op=tokens[i++];let value;
     if(tokens[i]==='{'){i++;value=block(true);}else value=atom();
-    out.push({key,op,value});
+    out.push(positions ? {key,op,value,start:matches[start].index,
+     end:matches[i-1].index+tokens[i-1].length} : {key,op,value});
    }else out.push({key});
   }
   if(nested)assert.equal(tokens[i++],'}',`${file}: unclosed block`);
@@ -110,9 +114,14 @@ function audit(){
  const england=trees.get(path.join(a.root,'common/journal_entries/england.txt'));
  const hyw=one(england,'je_england_1');
  const outcomes=hyw.value.filter(n=>n.key==='outcome');
- assert.equal(one(one(one(outcomes[0].value,'effect').value,'trigger_event').value,'id').value,'england.300');
- assert.equal(one(one(one(outcomes[1].value,'effect').value,'trigger_event').value,'id').value,'england.301');
- const lost=one(outcomes[1].value,'trigger').value;assert(lost.some(n=>n.key==='NOT'),'Zero possessions must fail');
+ for(const [index,side,event] of [[0,'english','england.300'],[1,'french','england.301']]){
+  const outcome=outcomes[index].value;
+  const effect=one(one(outcome,'effect').value,'c:ENG').value;
+  assert.equal(one(one(effect,'trigger_event').value,'id').value,event);
+  const threshold=one(one(one(one(outcome,'trigger').value,'custom_tooltip').value,'scope:journal_entry').value,`var:aoc_hyw_${side}_wins`);
+  assert.equal(threshold.op,'>=');
+  assert.equal(threshold.value,'3');
+ }
  const roses=one(england,'je_england_2');
  const monthly=one(one(roses.value,'on_monthly_pulse').value,'effect').value;
  function timerRule(name){return monthly.find(n=>n.key==='if'&&n.value.some(c=>c.key==='change_variable'&&one(c.value,'name').value===name));}

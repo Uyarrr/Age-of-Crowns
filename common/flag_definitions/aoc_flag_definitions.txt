@@ -677,7 +677,7 @@ NEV = { # Nevers
 ULS = { # Ulster
 	flag_definition = {
 		coa = ULS
-		priority = 999
+		priority = 1
 	}
 	flag_definition = {
 		coa = ULS_escutcheon
@@ -1386,6 +1386,48 @@ NSA = { # Nassau
 		priority = 200
 		trigger = {
 			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}
+
+CHI_Ming = { # Ming China
+	flag_definition = {
+		coa = CHI_Ming
+		priority = 1
+	}
+	flag_definition = {
+		coa = CHI_Ming_dragon
+		priority = 100
+		trigger = {
+			coa_def_empire_trigger = yes
+		}
+	}
+}
+
+MIE = { # Maine
+	flag_definition = {
+		coa = MIE_ancient
+		priority = 1
+	}
+	flag_definition = {
+		coa = MIE
+		priority = 2
+		trigger = {
+			OR = {
+				coa_def_capetian_trigger = yes
+				coa_def_FRA_ensign_trigger = yes
+			}
+		}
+	}
+	flag_definition = {
+		coa = MIE_three_fleurs
+		priority = 3
+		trigger = {
+			OR = {
+				coa_def_capetian_trigger = yes
+				coa_def_FRA_ensign_trigger = yes
+			}
+			coa_def_discovery_age_3_trigger = yes
 		}
 	}
 }

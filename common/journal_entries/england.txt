@@ -1,72 +1,107 @@
 ﻿je_england_1 = {
 	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
-
+	group = je_group_aoc_hundred_years_war
 	should_be_pinned_by_default_involved = yes
-	should_be_pinned_by_default_uninvolved_or_context = yes
 
-	group = je_group_historical_content
-
-	is_shown_in_lobby = {
-		c:ENG ?= this
+	widget = {
+		gui = "gui/journal_entry_widgets/aoc_hundred_years_war.gui"
+		name = "widget_aoc_hundred_years_war"
+		container = "custom_widget_container_je_icon"
+	}
+	widget = {
+		gui = "gui/journal_entry_widgets/aoc_hundred_years_war.gui"
+		name = "widget_aoc_hyw_actions"
+		container = "custom_widget_container_3"
 	}
 
+	is_shown_in_lobby = { aoc_hyw_involved = yes }
 	is_shown_when_inactive = {
-		c:ENG ?= this
+		aoc_hyw_crowns_available = yes
+		NOT = { has_global_variable = aoc_hyw_concluded }
 	}
+	should_be_involved = { aoc_hyw_involved = yes }
+	should_show_when_not_involved = { aoc_hyw_involved = yes }
 
-	possible = {
-		c:ENG ?= this
+	scripted_progress_bar = aoc_hyw_tension
+	scripted_button = aoc_hyw_claim_throne
+	scripted_button = aoc_hyw_demand_autonomy
+	scripted_button = aoc_hyw_withdraw
+
+	immediate = { aoc_hyw_refresh_journal = yes }
+	on_weekly_pulse = {
+		effect = {
+			aoc_hyw_score_round = yes
+			aoc_hyw_refresh_journal = yes
+		}
 	}
-
-	immediate = {
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = { aoc_hyw_crowns_available = yes }
+				aoc_hyw_monthly = yes
+			}
+		}
 	}
 
 	outcome = {
-		header = je_standard_completion_header
+		header = aoc_hyw_england_victory_header
 		effect_header = je_standard_on_completion_header
 		color = "gold_positive"
-		conclusion_desc = je_england_1_completed_desc
+		conclusion_desc = aoc_hyw_england_victory_desc
 		trigger = {
-			any_state_region = {
-				count >= 8
-
-				is_in_geographic_region = geographic_region_france
-
-				any_scope_state = { owner = { OR = { this = root is_subject_of = root } } }
+			custom_tooltip = {
+				text = aoc_hyw_england_victory_condition
+				scope:journal_entry = { var:aoc_hyw_english_wins >= 3 }
 			}
 		}
 		effect = {
-			trigger_event = {
-				id = england.300
-				popup = yes
-			}
+			aoc_hyw_conclude = yes
+			aoc_hyw_english_settlement = yes
+			c:ENG ?= { trigger_event = { id = england.300 popup = yes } }
+			c:FRA ?= { trigger_event = { id = aoc_hyw.301 popup = yes } }
 		}
 	}
 
 	outcome = {
-		header = je_standard_failure_header
-		effect_header = je_standard_on_failure_header
-		color = "blue_negative"
-		conclusion_desc = je_standard_failure_conclusion_desc
+		header = aoc_hyw_france_victory_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = aoc_hyw_france_victory_desc
 		trigger = {
-			NOT = {
-				any_state_region = {
-					count >= 3
-					is_in_geographic_region = geographic_region_france
-					any_scope_state = { owner = { OR = { this = root is_subject_of = root } } }
-				}
+			custom_tooltip = {
+				text = aoc_hyw_france_victory_condition
+				scope:journal_entry = { var:aoc_hyw_french_wins >= 3 }
 			}
 		}
 		effect = {
-			trigger_event = {
-				id = england.301
-				popup = yes
+			aoc_hyw_conclude = yes
+			aoc_hyw_french_settlement = yes
+			c:ENG ?= { trigger_event = { id = england.301 popup = yes } }
+			c:FRA ?= { trigger_event = { id = aoc_hyw.300 popup = yes } }
+		}
+	}
+
+	outcome = {
+		header = aoc_hyw_stalemate_header
+		effect_header = je_standard_on_completion_header
+		conclusion_desc = aoc_hyw_stalemate_desc
+		trigger = {
+			custom_tooltip = {
+				text = aoc_hyw_stalemate_condition
+				scope:journal_entry = { var:aoc_hyw_stalemates >= 3 }
 			}
 		}
+		effect = { aoc_hyw_conclude = yes }
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = aoc_hyw_invalid_desc
+		trigger = { aoc_hyw_crowns_available = no }
+		effect = { aoc_hyw_conclude = yes }
 	}
 
 	weight = 100
-
 	activation_description = { always = yes }
 }
 
@@ -90,6 +125,11 @@ je_england_2 = {
 	}
 
 	possible = {
+		custom_tooltip = {
+			text = wotr_hyw_concluded_tt
+			has_global_variable = aoc_hyw_concluded
+		}
+		NOT = { has_variable = wotr_final_settlement }
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG
@@ -122,7 +162,6 @@ je_england_2 = {
 			set_variable = { name = wotr_wars_fought_var value = 0 }
 			set_variable = { name = wotr_stability_months_var value = 0 }
 			set_variable = { name = wotr_peaceful_months_var value = 0 }
-			wotr_install_lancaster_ruler_effect = yes
 			wotr_ensure_richard_of_york_effect = yes
 			trigger_event = { id = england.302 popup = yes }
 		}
@@ -529,7 +568,12 @@ je_england_2 = {
 
 	weight = 200
 
-	activation_description = { always = yes }
+	activation_description = {
+		custom_tooltip = {
+			text = wotr_hyw_concluded_tt
+			has_global_variable = aoc_hyw_concluded
+		}
+	}
 }
 
 je_england_3 = {

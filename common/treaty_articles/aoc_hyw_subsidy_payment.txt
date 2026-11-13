@@ -1,0 +1,21 @@
+aoc_hyw_subsidy_payment = {
+	kind = directed
+	cost = 0
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/bankroll_treaties.dds"
+	flags = { is_money_transfer }
+	usage_limit = once_per_treaty
+	required_inputs = { quantity }
+
+	can_propose = { always = no }
+	can_withdraw = { always = no }
+
+	# The treaty ends when its sole article loses its maintenance requirement.
+	requirement_to_maintain = {
+		trigger = {
+			trigger_if = {
+				limit = { exists = scope:is_treaty_active }
+				scope:treaty.remaining_binding_period > 0
+			}
+		}
+	}
+}

@@ -1,0 +1,238 @@
+﻿aoc_hyw_crowns_available = {
+	exists = c:ENG
+	exists = c:FRA
+	c:ENG ?= { is_subject = no }
+	c:FRA ?= { is_subject = no }
+}
+
+aoc_hyw_involved = {
+	OR = {
+		aoc_hyw_crown_or_subject = yes
+		AND = {
+			exists = c:ENG
+			exists = c:FRA
+			OR = { aoc_hyw_english_supporter = yes aoc_hyw_french_supporter = yes }
+		}
+	}
+}
+
+aoc_hyw_crown_or_subject = {
+	OR = {
+		c:ENG ?= this
+		c:FRA ?= this
+		AND = { exists = c:ENG is_subject_of = c:ENG }
+		AND = { exists = c:FRA is_subject_of = c:FRA }
+	}
+}
+
+aoc_hyw_can_withdraw = {
+	aoc_hyw_peacetime_action = yes
+	aoc_hyw_crown_or_subject = no
+	aoc_hyw_involved = yes
+}
+
+aoc_hyw_not_fighting_crown = {
+	NOR = {
+		has_war_with = $CROWN$
+		is_diplomatic_play_enemy_of = $CROWN$
+	}
+}
+
+aoc_hyw_external_support_valid = {
+	aoc_hyw_crown_or_subject = no
+	is_subject = no
+	NOT = { has_variable = aoc_hyw_summons_refused }
+	"relations($CROWN$)" >= 0
+	aoc_hyw_not_fighting_crown = { CROWN = $CROWN$ }
+}
+
+aoc_hyw_can_answer_summons = {
+	aoc_hyw_round_open = yes
+	var:aoc_hyw_round_crown ?= scope:aoc_hyw_summoning_crown
+	OR = {
+		AND = {
+			scope:aoc_hyw_summoning_crown = c:ENG
+			aoc_hyw_english_supporter = yes
+		}
+		AND = {
+			scope:aoc_hyw_summoning_crown = c:FRA
+			aoc_hyw_french_supporter = yes
+		}
+	}
+}
+
+aoc_hyw_pending_invite_matches = {
+	has_variable = aoc_hyw_pending_invite
+	OR = {
+		var:aoc_hyw_pending_invite ?= scope:aoc_hyw_inviting_crown
+		# Older saves stored an unscoped marker.
+		NOR = {
+			var:aoc_hyw_pending_invite ?= c:ENG
+			var:aoc_hyw_pending_invite ?= c:FRA
+		}
+	}
+}
+
+aoc_hyw_round_open = {
+	has_global_variable = aoc_hyw_round_active
+}
+
+aoc_hyw_peacetime_action = {
+	is_involved_in_journal_entry = je_england_1
+	aoc_hyw_crowns_available = yes
+	NOT = { has_global_variable = aoc_hyw_concluded }
+	aoc_hyw_round_open = no
+}
+
+aoc_hyw_france_subject = {
+	exists = c:FRA
+	is_subject = yes
+	NOT = { c:FRA ?= this }
+	overlord = c:FRA
+}
+
+aoc_hyw_english_supporter = {
+	NOT = { c:ENG ?= this }
+	NOT = { c:FRA ?= this }
+	NOT = { is_subject_of = c:FRA }
+	aoc_hyw_not_fighting_crown = { CROWN = c:ENG }
+	OR = {
+		is_subject_of = c:ENG
+		AND = {
+			aoc_hyw_external_support_valid = { CROWN = c:ENG }
+			OR = {
+				var:aoc_hyw_pledged_crown ?= c:ENG
+				aoc_hyw_existing_ally = { CROWN = c:ENG RIVAL = c:FRA }
+			}
+		}
+	}
+}
+
+aoc_hyw_french_supporter = {
+	NOT = { c:ENG ?= this }
+	NOT = { c:FRA ?= this }
+	NOT = { is_subject_of = c:ENG }
+	aoc_hyw_not_fighting_crown = { CROWN = c:FRA }
+	NOR = { has_variable = aoc_hyw_french_neutrality has_variable = aoc_hyw_skip_french_summons }
+	OR = {
+		AND = {
+			is_subject_of = c:FRA
+			OR = {
+				NOT = { is_subject_type = subject_type_appanage }
+				has_variable = aoc_hyw_subject_pledge
+			}
+		}
+		AND = {
+			aoc_hyw_external_support_valid = { CROWN = c:FRA }
+			OR = {
+				var:aoc_hyw_pledged_crown ?= c:FRA
+				aoc_hyw_existing_ally = { CROWN = c:FRA RIVAL = c:ENG }
+			}
+		}
+	}
+}
+
+aoc_hyw_existing_ally = {
+	is_subject = no
+	NOT = { has_variable = aoc_hyw_pledged_crown }
+	any_scope_treaty = {
+		binds = $CROWN$
+		any_scope_article = { OR = { has_type = alliance has_type = defensive_pact } }
+	}
+	NOT = {
+		any_scope_treaty = {
+			binds = $RIVAL$
+			any_scope_article = { OR = { has_type = alliance has_type = defensive_pact } }
+		}
+	}
+}
+
+aoc_hyw_influence_target = {
+	aoc_hyw_france_subject = yes
+	is_subject_type = subject_type_appanage
+	NOT = { has_variable = aoc_hyw_french_neutrality }
+}
+
+aoc_hyw_titles_target = {
+	aoc_hyw_france_subject = yes
+	aoc_hyw_french_supporter = no
+}
+
+aoc_hyw_appanage_target = {
+	aoc_hyw_france_subject = yes
+	is_subject_type = subject_type_vassal
+	is_country_type = recognized
+	country_rank <= rank_value:minor_power
+	country_rank < c:FRA.country_rank
+	aoc_hyw_not_fighting_crown = { CROWN = c:FRA }
+}
+
+aoc_hyw_can_promote_appanage = {
+	c:FRA ?= this
+	aoc_hyw_peacetime_action = yes
+	is_country_type = recognized
+	country_rank >= rank_value:minor_power
+}
+
+aoc_hyw_inviting_crown_has_interest = {
+	$CROWN$ ?= {
+		has_strategic_region_interest_tier = {
+			strategic_region = prev.capital.region
+			value >= 2 # Engaged
+		}
+	}
+}
+
+aoc_hyw_invite_target = {
+	aoc_hyw_invitation_eligible = { CROWN = $CROWN$ }
+	NOT = { has_variable = aoc_hyw_pending_invite }
+}
+
+aoc_hyw_invitation_eligible = {
+	NOT = { is_country_type = decentralized }
+	aoc_hyw_external_support_valid = { CROWN = $CROWN$ }
+	NOT = { has_variable = aoc_hyw_pledged_crown }
+	NOT = { aoc_hyw_involved = yes }
+	"relations($CROWN$)" >= 50
+	aoc_hyw_inviting_crown_has_interest = { CROWN = $CROWN$ }
+	has_strategic_region_interest_tier = {
+		strategic_region = $CROWN$.capital.region
+		value >= 1
+	}
+}
+
+aoc_hyw_can_influence = {
+	c:ENG ?= this
+	aoc_hyw_peacetime_action = yes
+	NOT = { has_variable = aoc_hyw_influence_cooldown }
+	in_default = no
+}
+
+aoc_hyw_can_grant_titles = {
+	c:FRA ?= this
+	aoc_hyw_peacetime_action = yes
+	NOT = { has_variable = aoc_hyw_titles_cooldown }
+	in_default = no
+}
+
+aoc_hyw_can_invite = {
+	OR = { c:ENG ?= this c:FRA ?= this }
+	aoc_hyw_peacetime_action = yes
+	NOT = { has_variable = aoc_hyw_invite_cooldown }
+}
+
+# Country scope with scope:target_country supplied by diplomatic play availability.
+aoc_hyw_internal_play_allowed = {
+	custom_tooltip = {
+		text = aoc_hyw_internal_play_restricted_tt
+		NOT = {
+			AND = {
+				NOT = { has_global_variable = aoc_hyw_concluded }
+				aoc_hyw_crowns_available = yes
+				aoc_hyw_involved = yes
+				exists = scope:target_country
+				scope:target_country = { aoc_hyw_involved = yes }
+			}
+		}
+	}
+}

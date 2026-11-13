@@ -15,13 +15,12 @@ england.100 = {
 
 	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
 	trigger = {
+		NOT = { has_variable = aoc_content_seen_england_100 }
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG
@@ -64,13 +63,12 @@ england.101 = {
 
 	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
 	trigger = {
+		NOT = { has_variable = aoc_content_seen_england_101 }
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG
@@ -114,13 +112,12 @@ england.102 = {
 
 	icon = "gfx/interface/icons/invention_icons/england_coa.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
 	trigger = {
+		NOT = { has_variable = aoc_content_seen_england_102 }
 		OR = {
 			c:ENG ?= this
 			was_formed_from = ENG
@@ -163,9 +160,7 @@ england.302 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -193,9 +188,7 @@ england.303 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -235,9 +228,7 @@ england.304 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -277,9 +268,7 @@ england.305 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -340,9 +329,7 @@ england.306 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -422,9 +409,7 @@ england.307 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -475,9 +460,7 @@ england.308 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -534,9 +517,7 @@ england.309 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -587,9 +568,7 @@ england.310 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -640,9 +619,7 @@ england.311 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -695,9 +672,7 @@ england.312 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -752,9 +727,7 @@ england.313 = {
 
 	icon = "gfx/interface/icons/event_icons/war_of_the_roses.dds"
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -1369,12 +1342,10 @@ england.300 = {
 	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	event_image = {
-		texture = "gfx/event_pictures/hundred_years_war.dds"
+		texture = "gfx/event_pictures/aoc_hyw_english_court.dds"
 	}
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 
@@ -1407,9 +1378,7 @@ england.301 = {
 		texture = "gfx/event_pictures/hundred_years_war.dds"
 	}
 
-	cooldown = {
-		years = 999
-	}
+	fire_only_once = yes
 
 	duration = 3
 

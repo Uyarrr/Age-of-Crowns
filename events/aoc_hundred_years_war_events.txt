@@ -1,0 +1,277 @@
+namespace = aoc_hyw
+
+aoc_hyw.299 = {
+	type = country_event
+	title = aoc_hyw_france_intro_title
+	desc = aoc_hyw_france_intro_desc
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		NOT = { has_variable = aoc_hyw_france_intro_seen }
+	}
+
+	immediate = {
+		set_variable = aoc_content_seen_aoc_hyw_299
+ set_variable = aoc_hyw_france_intro_seen }
+
+	option = {
+		name = aoc_hyw_france_intro_option
+		default_option = yes
+	}
+}
+
+aoc_hyw.300 = {
+	immediate = { set_variable = aoc_content_seen_aoc_hyw_300 }
+
+	type = country_event
+	title = aoc_hyw_france_victory_title
+	desc = aoc_hyw_france_victory_event_desc
+	flavor = aoc_hyw_france_victory_flavor
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
+	fire_only_once = yes
+	duration = 3
+	trigger = {}
+	option = {
+		name = aoc_hyw_france_victory_option
+		add_modifier = { name = hundred_years_war_france_won years = 20 }
+	}
+}
+
+aoc_hyw.301 = {
+	immediate = { set_variable = aoc_content_seen_aoc_hyw_301 }
+
+	type = country_event
+	title = aoc_hyw_france_defeat_title
+	desc = aoc_hyw_france_defeat_event_desc
+	flavor = aoc_hyw_france_defeat_flavor
+	icon = "gfx/interface/icons/event_icons/hundred_years_war.dds"
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_english_court.dds" }
+	fire_only_once = yes
+	duration = 3
+	trigger = {}
+	option = {
+		name = aoc_hyw_france_defeat_option
+		add_modifier = { name = hundred_years_war_france_lost years = 20 }
+	}
+}
+
+aoc_hyw.310 = {
+	immediate = { set_variable = aoc_content_seen_aoc_hyw_310 }
+
+	type = country_event
+	title = aoc_hyw_maine_title
+	desc = aoc_hyw_maine_desc
+	flavor = aoc_hyw_maine_flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_english_court.dds" }
+	duration = 3
+	fire_only_once = yes
+	trigger = {
+		c:ENG ?= this
+		aoc_hyw_crowns_available = yes
+		c:MIE ?= { is_subject_of = c:ENG }
+	}
+	option = {
+		name = aoc_hyw_maine_yield
+		default_option = yes
+		trigger = { exists = c:FRA c:MIE ?= { is_subject_of = c:ENG } }
+		ai_chance = {
+			base = 60
+			modifier = { trigger = { army_power_projection > c:FRA.army_power_projection } add = -35 }
+		}
+		c:FRA = {
+			annex = c:MIE
+			trigger_event = { id = aoc_hyw.311 popup = yes }
+		}
+		add_modifier = { name = aoc_hyw_maine_concession years = 10 }
+	}
+	option = {
+		name = aoc_hyw_maine_hold
+		ai_chance = { base = 40 }
+		if = {
+			limit = { exists = c:FRA c:MIE ?= { is_subject_of = c:ENG } }
+			set_variable = aoc_hyw_maine_refused
+			custom_tooltip = aoc_hyw_maine_refused_tt
+			c:FRA = { trigger_event = { id = aoc_hyw.312 popup = yes } }
+		}
+	}
+}
+
+aoc_hyw.311 = {
+	immediate = { set_variable = aoc_content_seen_aoc_hyw_311 }
+
+	type = country_event
+	title = aoc_hyw_maine_returned_title
+	desc = aoc_hyw_maine_returned_desc
+	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
+	duration = 3
+	fire_only_once = yes
+	option = { name = aoc_hyw_maine_returned_option }
+}
+
+aoc_hyw.312 = {
+	immediate = { set_variable = aoc_content_seen_aoc_hyw_312 }
+
+	type = country_event
+	title = aoc_hyw_maine_denied_title
+	desc = aoc_hyw_maine_denied_desc
+	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
+	duration = 3
+	fire_only_once = yes
+	option = { name = aoc_hyw_maine_denied_option }
+}
+
+aoc_hyw.320 = {
+	type = country_event
+	title = aoc_hyw_summons_title
+	desc = aoc_hyw_summons_desc
+	event_image = { texture = "gfx/event_pictures/hundred_years_war.dds" }
+	duration = 1
+	trigger = {
+		exists = scope:aoc_hyw_round_play
+		exists = var:aoc_hyw_round_crown
+	}
+	immediate = {
+		var:aoc_hyw_round_crown = { save_scope_as = aoc_hyw_summoning_crown }
+	}
+	option = {
+		name = aoc_hyw_summons_accept
+		trigger = {
+			exists = scope:aoc_hyw_round_play
+			aoc_hyw_can_answer_summons = yes
+		}
+		ai_chance = {
+			base = 65
+			modifier = { trigger = { is_subject_of = scope:aoc_hyw_summoning_crown } add = 30 }
+			modifier = { trigger = { is_at_war = yes } add = -45 }
+			modifier = { trigger = { in_default = yes } add = -40 }
+		}
+		set_variable = aoc_hyw_answered_summons
+		scope:aoc_hyw_round_play ?= {
+			if = {
+				limit = {
+					is_war = yes
+					war ?= { NOT = { is_war_participant = root } }
+				}
+				war = { join_war = { target = root side = scope:aoc_hyw_summoning_crown } }
+			}
+			else_if = {
+				limit = { is_war = no scope:aoc_hyw_summoning_crown = c:ENG }
+				add_initiator_backers = { root }
+			}
+			else_if = {
+				limit = { is_war = no }
+				add_target_backers = { root }
+			}
+		}
+	}
+	option = {
+		name = aoc_hyw_summons_refuse
+		default_option = yes
+		ai_chance = { base = 35 }
+		if = {
+			limit = { exists = scope:aoc_hyw_round_play aoc_hyw_can_answer_summons = yes }
+			save_scope_as = aoc_hyw_refusing_country
+			change_relations = { country = scope:aoc_hyw_summoning_crown value = -75 }
+			if = {
+				limit = { aoc_hyw_crown_or_subject = no }
+				aoc_hyw_withdraw_support = yes
+			}
+			scope:aoc_hyw_summoning_crown = { trigger_event = { id = aoc_hyw.321 popup = yes } }
+		}
+	}
+}
+
+aoc_hyw.321 = {
+	type = country_event
+	title = aoc_hyw_refusal_title
+	desc = aoc_hyw_refusal_desc
+	event_image = { texture = "gfx/event_pictures/hundred_years_war.dds" }
+	duration = 1
+	option = { name = aoc_hyw_refusal_option }
+}
+
+aoc_hyw.330 = {
+	type = country_event
+	title = aoc_hyw_autonomy_title
+	desc = aoc_hyw_autonomy_desc
+	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
+	duration = 1
+	trigger = { scope:aoc_hyw_petitioner ?= { aoc_hyw_france_subject = yes } }
+	option = {
+		name = aoc_hyw_autonomy_accept
+		trigger = {
+			aoc_hyw_peacetime_action = yes
+			scope:aoc_hyw_petitioner ?= { aoc_hyw_france_subject = yes in_default = no }
+		}
+		ai_chance = {
+			base = 45
+			modifier = { trigger = { scope:aoc_hyw_petitioner.army_size >= 5 } add = 35 }
+		}
+		scope:aoc_hyw_petitioner = {
+			remove_variable = aoc_hyw_french_neutrality
+			remove_variable = aoc_hyw_skip_french_summons
+			set_variable = aoc_hyw_subject_pledge
+			add_liberty_desire = -20
+			add_modifier = { name = aoc_hyw_subject_privileges years = 5 }
+		}
+		aoc_hyw_payment_treaty = {
+			PAYER = scope:aoc_hyw_petitioner
+			RECIPIENT = c:FRA
+			NAME = aoc_hyw_autonomy_treaty
+			ARTICLE = money_transfer
+			MONTHS = 12
+			RATE = 1000
+		}
+	}
+	option = {
+		name = aoc_hyw_autonomy_reject
+		default_option = yes
+		ai_chance = { base = 55 }
+		scope:aoc_hyw_petitioner ?= {
+			add_liberty_desire = 10
+			change_relations = { country = c:FRA value = -15 }
+		}
+	}
+}
+
+aoc_hyw.340 = {
+	type = country_event
+	title = aoc_hyw_invitation_title
+	desc = aoc_hyw_invitation_desc
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_envoys.dds" }
+	duration = 1
+	option = {
+		name = aoc_hyw_invitation_accept
+		trigger = {
+			aoc_hyw_pending_invite_matches = yes
+			scope:aoc_hyw_inviting_crown ?= {
+				OR = { c:ENG ?= this c:FRA ?= this }
+				aoc_hyw_peacetime_action = yes
+			}
+			aoc_hyw_invitation_eligible = { CROWN = scope:aoc_hyw_inviting_crown }
+		}
+		ai_chance = {
+			base = 40
+			modifier = { trigger = { "relations(scope:aoc_hyw_inviting_crown)" >= 75 } add = 40 }
+			modifier = { trigger = { is_at_war = yes } add = -30 }
+		}
+		set_variable = { name = aoc_hyw_pledged_crown value = scope:aoc_hyw_inviting_crown }
+		remove_variable = aoc_hyw_pending_invite
+	}
+	option = {
+		name = aoc_hyw_invitation_decline
+		default_option = yes
+		ai_chance = { base = 60 }
+		if = {
+			limit = { aoc_hyw_pending_invite_matches = yes }
+			remove_variable = aoc_hyw_pending_invite
+		}
+	}
+}

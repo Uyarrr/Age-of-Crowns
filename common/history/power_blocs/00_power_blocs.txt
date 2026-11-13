@@ -1,4 +1,4 @@
-POWER_BLOCS = {
+﻿POWER_BLOCS = {
 	c:HAB ?= {
 		create_power_bloc = {
 			name = HOLY_ROMAN_EMPIRE
@@ -119,7 +119,7 @@ POWER_BLOCS = {
 			member = c:YMN
 		}
 	}
-    c:CHI ?= {
+    c:CHI_Ming ?= {
         create_power_bloc = {
             name = MANDATE_OF_HEAVEN
             map_color = { 220 180 50 }

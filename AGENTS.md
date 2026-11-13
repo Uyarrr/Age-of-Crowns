@@ -4,6 +4,19 @@
 
 - Every journal entry with `is_shown_in_lobby` needs an English `<journal_entry_key>_lobby` localization. Keep it to one or two concise, distinct sentences that introduce the situation and objective without repeating the full journal description.
 
+## Journal country pickers
+
+- For decisions that ask the player to choose a country, follow the Papal Bulls picker. Build the list from eligible targets in alphabetical order, use three columns, and show each country's flag and name with `[Country.GetName]`. Apply this to invitations, influence, subject titles, and appanage promotion.
+- Share the gameplay eligibility trigger between list generation and scripted GUI validation. Hide stale or ineligible rows and recheck eligibility when the player selects a target.
+
+## Hundred Years’ War
+
+- Keep journal involvement separate from military support. French appanages start involved and neutral. Country actions should use explicit actor and target checks. A French subject must have France as its overlord, and France itself is excluded.
+- Outside countries participate through valid support. Keep the withdrawal cooldown shared between treaty and invitation support. Recheck relations and active enemies when reviewing pledges and answering summons. Use `change_subject_type` on the direct French vassal for promotion.
+- For Invite to War, require the inviting crown to have Engaged or higher interest in the target capital's strategic region. The target can have any interest tier in the crown's region. Apply the check to the picker, AI invitations, and invitation acceptance.
+- Block ordinary diplomatic plays between participants in the play's `possible` trigger before launch. Keep the scripted campaign exempt. Use the [Hundred Years’ War notes](docs/hundred_years_war.md) for the implementation and in-game checks.
+- Center icon-and-value groups using content-sized text inside a centered container. See the [journal UI guide](docs/journal_entry_gui.md).
+
 ## Victoria 3 modifier tooltips
 
 - When an action previews a static modifier, render its actual effects in localization with `[GetStaticModifier('modifier_key').GetDesc]`. Use the same key as the gameplay script's `add_modifier` so the tooltip tracks balance changes and uses the game's modifier labels and formatting.

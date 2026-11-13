@@ -1,0 +1,14 @@
+# France prioritizes its subjects, Europe and countries in regions where it
+# already has a territorial or subject foothold.
+aoc_france_diplomatic_priority = {
+	OR = {
+		$TARGET$ = {
+			capital = { is_in_geographic_region = geographic_region:geographic_region_europe }
+		}
+		$TARGET$ = { is_subject_of = root }
+		any_scope_state = { region = $TARGET$.capital.region }
+		any_direct_subject = {
+			any_scope_state = { region = $TARGET$.capital.region }
+		}
+	}
+}

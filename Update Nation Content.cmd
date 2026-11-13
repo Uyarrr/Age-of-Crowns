@@ -8,7 +8,7 @@ if errorlevel 1 (
     exit /b 1
 )
 
-echo Updating nation age grants and technology journals...
+echo Updating national technologies, starting history grants, and event journals...
 node "tools\build_nation_content.cjs"
 set "result=%errorlevel%"
 

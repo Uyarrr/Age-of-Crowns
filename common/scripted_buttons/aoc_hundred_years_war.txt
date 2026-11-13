@@ -1,0 +1,67 @@
+﻿aoc_hyw_claim_throne = {
+	name = aoc_hyw_claim_throne
+	desc = aoc_hyw_claim_throne_desc
+	visible = { c:ENG ?= this }
+	possible = {
+		aoc_hyw_peacetime_action = yes
+		NOT = { has_variable = aoc_hyw_claimed_throne }
+		NOT = { has_global_variable = aoc_hyw_campaign_started }
+		scope:journal_entry = {
+			var:aoc_hyw_english_wins = 0
+			var:aoc_hyw_french_wins = 0
+			var:aoc_hyw_stalemates = 0
+		}
+	}
+	effect = {
+		set_variable = aoc_hyw_claimed_throne
+		change_infamy = 75
+		add_modifier = { name = aoc_hyw_throne_claim_infamy }
+	}
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { army_power_projection > c:FRA.army_power_projection }
+			add = 50
+		}
+	}
+}
+
+aoc_hyw_withdraw = {
+	name = aoc_hyw_withdraw
+	desc = aoc_hyw_withdraw_desc
+	visible = { aoc_hyw_crown_or_subject = no aoc_hyw_involved = yes }
+	possible = { aoc_hyw_can_withdraw = yes }
+	effect = {
+		if = {
+			limit = { aoc_hyw_can_withdraw = yes }
+			aoc_hyw_withdraw_support = yes
+			aoc_hyw_refresh_journal = yes
+		}
+	}
+	ai_chance = { base = 0 } # The weekly support review handles AI withdrawals.
+}
+
+aoc_hyw_demand_autonomy = {
+	name = aoc_hyw_demand_autonomy
+	desc = aoc_hyw_demand_autonomy_desc
+	visible = { aoc_hyw_france_subject = yes }
+	possible = {
+		aoc_hyw_france_subject = yes
+		aoc_hyw_peacetime_action = yes
+		in_default = no
+		NOT = { has_variable = aoc_hyw_autonomy_cooldown }
+		NOT = { has_variable = aoc_hyw_subject_pledge }
+	}
+	effect = {
+		set_variable = { name = aoc_hyw_autonomy_cooldown years = 3 }
+		save_scope_as = aoc_hyw_petitioner
+		c:FRA ?= { trigger_event = { id = aoc_hyw.330 popup = yes } }
+	}
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { liberty_desire >= 40 gold_reserves > 1000 }
+			add = 20
+		}
+	}
+}

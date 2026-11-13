@@ -1,0 +1,505 @@
+﻿# The journal owns the scoreboard. The play and event callbacks share only round state.
+aoc_hyw_refresh_journal = {
+	scope:journal_entry = {
+		if = {
+			limit = { NOT = { has_variable = aoc_hyw_english_wins } }
+			set_variable = { name = aoc_hyw_english_wins value = 0 }
+			set_variable = { name = aoc_hyw_french_wins value = 0 }
+			set_variable = { name = aoc_hyw_stalemates value = 0 }
+		}
+		clear_variable_list = aoc_hyw_english_supporters
+		clear_variable_list = aoc_hyw_french_supporters
+	}
+	if = {
+		limit = { aoc_hyw_crowns_available = yes }
+		scope:journal_entry = {
+			set_variable = { name = aoc_hyw_england value = c:ENG }
+			set_variable = { name = aoc_hyw_france value = c:FRA }
+			set_variable = { name = aoc_hyw_english_army value = c:ENG.army_size }
+			set_variable = { name = aoc_hyw_english_navy value = c:ENG.navy_size }
+			set_variable = { name = aoc_hyw_french_army value = c:FRA.army_size }
+			set_variable = { name = aoc_hyw_french_navy value = c:FRA.navy_size }
+		}
+		every_country = {
+			aoc_hyw_review_support = yes
+			if = {
+				limit = { aoc_hyw_involved = yes NOT = { is_involved_in_journal_entry = je_england_1 } }
+				scope:journal_entry = { add_involved_country = prev }
+			}
+			else_if = {
+				limit = { aoc_hyw_involved = no is_involved_in_journal_entry = je_england_1 }
+				scope:journal_entry = { remove_involved_country = prev }
+			}
+			if = {
+				limit = { aoc_hyw_english_supporter = yes }
+				aoc_hyw_add_supporter = { SIDE = english }
+			}
+			else_if = {
+				limit = { aoc_hyw_french_supporter = yes }
+				aoc_hyw_add_supporter = { SIDE = french }
+			}
+		}
+		aoc_hyw_refresh_targets = yes
+	}
+}
+
+aoc_hyw_withdraw_support = {
+	remove_variable = aoc_hyw_pledged_crown
+	remove_variable = aoc_hyw_pending_invite
+	set_variable = { name = aoc_hyw_summons_refused years = 5 }
+}
+
+aoc_hyw_review_support = {
+	if = {
+		limit = {
+			has_variable = aoc_hyw_pledged_crown
+			OR = {
+				NOR = {
+					var:aoc_hyw_pledged_crown ?= c:ENG
+					var:aoc_hyw_pledged_crown ?= c:FRA
+				}
+				NOT = { aoc_hyw_external_support_valid = { CROWN = var:aoc_hyw_pledged_crown } }
+			}
+		}
+		aoc_hyw_withdraw_support = yes
+	}
+	else_if = {
+		limit = {
+			is_ai = yes
+			is_subject = no
+			NOT = { has_variable = aoc_hyw_summons_refused }
+			OR = {
+				AND = {
+					NOT = { aoc_hyw_external_support_valid = { CROWN = c:ENG } }
+					aoc_hyw_existing_ally = { CROWN = c:ENG RIVAL = c:FRA }
+				}
+				AND = {
+					NOT = { aoc_hyw_external_support_valid = { CROWN = c:FRA } }
+					aoc_hyw_existing_ally = { CROWN = c:FRA RIVAL = c:ENG }
+				}
+			}
+		}
+		aoc_hyw_withdraw_support = yes
+	}
+}
+
+aoc_hyw_add_supporter = {
+	scope:journal_entry = {
+		add_to_variable_list = { name = aoc_hyw_$SIDE$_supporters target = prev }
+		change_variable = { name = aoc_hyw_$SIDE$_army add = prev.army_size }
+		change_variable = { name = aoc_hyw_$SIDE$_navy add = prev.navy_size }
+	}
+}
+
+aoc_hyw_monthly = {
+	c:ENG = {
+		if = {
+			limit = {
+				NOT = { has_variable = aoc_hyw_maine_sent }
+				c:MIE ?= { is_subject_of = c:ENG }
+			}
+			set_variable = aoc_hyw_maine_sent
+			trigger_event = { id = aoc_hyw.310 months = 6 popup = yes }
+		}
+	}
+	if = {
+		limit = {
+			aoc_hyw_round_open = no
+			scope:journal_entry = {
+				"scripted_bar_progress(aoc_hyw_tension)" >= 100
+				var:aoc_hyw_english_wins < 3
+				var:aoc_hyw_french_wins < 3
+				var:aoc_hyw_stalemates < 3
+			}
+			c:ENG = {
+				NOT = { has_truce_with = c:FRA }
+				NOT = { is_diplomatic_play_enemy_of = c:FRA }
+			}
+		}
+		aoc_hyw_start_round = yes
+	}
+	aoc_hyw_ai_actions = yes
+}
+
+aoc_hyw_start_round = {
+	remove_global_variable = aoc_hyw_english_round_victory
+	remove_global_variable = aoc_hyw_french_round_victory
+	set_global_variable = aoc_hyw_round_active
+	every_country = {
+		aoc_hyw_review_support = yes
+		remove_variable = aoc_hyw_round_crown
+		remove_variable = aoc_hyw_answered_summons
+		if = {
+			limit = { aoc_hyw_english_supporter = yes }
+			set_variable = { name = aoc_hyw_round_crown value = c:ENG }
+		}
+		else_if = {
+			limit = { aoc_hyw_french_supporter = yes }
+			set_variable = { name = aoc_hyw_round_crown value = c:FRA }
+		}
+	}
+	# Closing manoeuvres bypass the ordinary sway and obligation window.
+	c:FRA = {
+		create_diplomatic_play = {
+			name = dp_aoc_hyw
+			type = dp_aoc_hyw
+			initiator = c:ENG
+			escalation = 80
+		}
+	}
+	random_diplomatic_play = {
+		limit = { is_diplomatic_play_type = dp_aoc_hyw }
+		add_war_goal = { holder = c:FRA type = aoc_hyw_supremacy country = c:ENG primary_demand = yes }
+		save_scope_as = aoc_hyw_round_play
+		aoc_hyw_enforce_play_roster = yes
+	}
+	if = {
+		limit = { exists = scope:aoc_hyw_round_play }
+		set_global_variable = aoc_hyw_campaign_started
+		every_country = {
+			limit = { has_variable = aoc_hyw_round_crown }
+			trigger_event = { id = aoc_hyw.320 popup = yes }
+		}
+	}
+	else = {
+		remove_global_variable = aoc_hyw_round_active
+	}
+}
+
+aoc_hyw_enforce_play_roster = {
+	every_scope_initiator_ally = {
+		limit = {
+			NOT = { c:ENG ?= this }
+			OR = {
+				NOT = { var:aoc_hyw_round_crown ?= c:ENG }
+				NOT = { has_variable = aoc_hyw_answered_summons }
+				aoc_hyw_english_supporter = no
+			}
+		}
+		prev = { remove_initiator_backers = { prev } }
+	}
+	every_scope_target_ally = {
+		limit = {
+			NOT = { c:FRA ?= this }
+			OR = {
+				NOT = { var:aoc_hyw_round_crown ?= c:FRA }
+				NOT = { has_variable = aoc_hyw_answered_summons }
+				aoc_hyw_french_supporter = no
+			}
+		}
+		prev = { remove_target_backers = { prev } }
+	}
+}
+
+aoc_hyw_score_round = {
+	if = {
+		limit = {
+			aoc_hyw_round_open = yes
+			NOT = { any_diplomatic_play = { is_diplomatic_play_type = dp_aoc_hyw } }
+		}
+		remove_global_variable = aoc_hyw_round_active
+		scope:journal_entry = {
+			if = {
+				limit = {
+					has_global_variable = aoc_hyw_english_round_victory
+					NOT = { has_global_variable = aoc_hyw_french_round_victory }
+				}
+				change_variable = { name = aoc_hyw_english_wins add = 1 }
+			}
+			else_if = {
+				limit = {
+					has_global_variable = aoc_hyw_french_round_victory
+					NOT = { has_global_variable = aoc_hyw_english_round_victory }
+				}
+				change_variable = { name = aoc_hyw_french_wins add = 1 }
+			}
+			else = { change_variable = { name = aoc_hyw_stalemates add = 1 } }
+		}
+		every_country = {
+			limit = {
+				OR = {
+					has_variable = aoc_hyw_round_crown
+					has_variable = aoc_hyw_skip_french_summons
+				}
+			}
+			if = {
+				limit = { var:aoc_hyw_round_crown ?= c:FRA }
+				remove_variable = aoc_hyw_subject_pledge
+			}
+			remove_variable = aoc_hyw_skip_french_summons
+			remove_variable = aoc_hyw_round_crown
+			remove_variable = aoc_hyw_answered_summons
+		}
+		remove_global_variable = aoc_hyw_english_round_victory
+		remove_global_variable = aoc_hyw_french_round_victory
+	}
+}
+
+aoc_hyw_english_settlement = {
+	if = {
+		limit = { exists = c:FRA exists = c:ENG }
+		create_treaty = {
+			name = aoc_hyw_english_treaty
+			first_country = c:FRA
+			second_country = c:ENG
+			is_draft = no
+			binding_period = { years = 25 }
+			articles_to_create = {
+				{ article = foreign_investment_rights source_country = c:FRA target_country = c:ENG }
+				{
+					article = money_transfer
+					source_country = c:FRA
+					target_country = c:ENG
+					inputs = { { quantity = 1000 } }
+				}
+			}
+		}
+		c:ENG = {
+			if = {
+				limit = { has_variable = aoc_hyw_claimed_throne }
+				create_diplomatic_pact = { country = c:FRA type = personal_union }
+			}
+		}
+	}
+}
+
+aoc_hyw_conclude = {
+	set_global_variable = aoc_hyw_concluded
+	remove_global_variable = aoc_hyw_round_active
+	every_country = {
+		remove_variable = aoc_hyw_pledged_crown
+		remove_variable = aoc_hyw_pending_invite
+		remove_variable = aoc_hyw_summons_refused
+		remove_variable = aoc_hyw_round_crown
+		remove_variable = aoc_hyw_answered_summons
+		remove_variable = aoc_hyw_subject_pledge
+		remove_variable = aoc_hyw_skip_french_summons
+		remove_variable = aoc_hyw_french_neutrality
+	}
+	c:ENG ?= {
+		if = {
+			limit = { has_modifier = aoc_hyw_throne_claim_infamy }
+			remove_modifier = aoc_hyw_throne_claim_infamy
+		}
+	}
+}
+
+aoc_hyw_french_settlement = {
+	# Snapshot the subjects before annexation changes the subject hierarchy.
+	c:FRA ?= {
+		clear_variable_list = aoc_hyw_subjects_to_annex
+		every_country = {
+			limit = {
+				exists = c:ENG
+				is_subject_of = c:ENG
+				any_scope_state = { is_in_geographic_region = geographic_region:geographic_region_france }
+			}
+			c:FRA = { add_to_variable_list = { name = aoc_hyw_subjects_to_annex target = prev } }
+		}
+		every_in_list = {
+			variable = aoc_hyw_subjects_to_annex
+			c:FRA = { annex = prev }
+		}
+		clear_variable_list = aoc_hyw_subjects_to_annex
+	}
+	c:ENG ?= {
+		every_scope_state = {
+			limit = { is_in_geographic_region = geographic_region:geographic_region_france }
+			set_state_owner = c:FRA
+		}
+	}
+}
+
+aoc_hyw_payment_treaty = {
+	create_treaty = {
+		name = $NAME$
+		first_country = $PAYER$
+		second_country = $RECIPIENT$
+		is_draft = no
+		binding_period = { months = $MONTHS$ }
+		articles_to_create = {
+			{
+				article = $ARTICLE$
+				source_country = $PAYER$
+				target_country = $RECIPIENT$
+				inputs = { { quantity = $RATE$ } }
+			}
+		}
+	}
+}
+
+aoc_hyw_refresh_targets = {
+	scope:journal_entry = {
+		clear_variable_list = aoc_hyw_influence_targets
+		clear_variable_list = aoc_hyw_titles_targets
+		clear_variable_list = aoc_hyw_appanage_targets
+	}
+	c:ENG ?= { clear_variable_list = aoc_hyw_invite_targets }
+	c:FRA ?= { clear_variable_list = aoc_hyw_invite_targets }
+	if = {
+		limit = { aoc_hyw_round_open = no }
+		aoc_for_each_country_by_english_name = { EFFECT = aoc_hyw_collect_target }
+		c:PAP ?= { aoc_hyw_collect_target = yes }
+		every_country = {
+			limit = {
+				OR = {
+					aoc_hyw_france_subject = yes
+					aoc_hyw_invite_target = { CROWN = c:ENG }
+					aoc_hyw_invite_target = { CROWN = c:FRA }
+				}
+			}
+			aoc_hyw_collect_target = yes
+		}
+	}
+}
+
+aoc_hyw_collect_target = {
+	if = {
+		limit = { aoc_hyw_influence_target = yes }
+		aoc_hyw_add_target = { LIST = aoc_hyw_influence_targets }
+	}
+	if = {
+		limit = { aoc_hyw_titles_target = yes }
+		aoc_hyw_add_target = { LIST = aoc_hyw_titles_targets }
+	}
+	if = {
+		limit = { aoc_hyw_appanage_target = yes }
+		aoc_hyw_add_target = { LIST = aoc_hyw_appanage_targets }
+	}
+	if = {
+		limit = { aoc_hyw_invite_target = { CROWN = c:ENG } }
+		c:ENG = { aoc_hyw_add_invite_target = yes }
+	}
+	if = {
+		limit = { aoc_hyw_invite_target = { CROWN = c:FRA } }
+		c:FRA = { aoc_hyw_add_invite_target = yes }
+	}
+}
+
+aoc_hyw_add_invite_target = {
+	if = {
+		limit = { NOT = { is_target_in_variable_list = { name = aoc_hyw_invite_targets target = prev } } }
+		add_to_variable_list = { name = aoc_hyw_invite_targets target = prev }
+	}
+}
+
+aoc_hyw_add_target = {
+	scope:journal_entry = {
+		if = {
+			limit = { NOT = { is_target_in_variable_list = { name = $LIST$ target = prev } } }
+			add_to_variable_list = { name = $LIST$ target = prev }
+		}
+	}
+}
+
+aoc_hyw_influence_subject = {
+	set_variable = { name = aoc_hyw_influence_cooldown years = 2 }
+	scope:aoc_hyw_target = {
+		add_liberty_desire = 25
+		remove_variable = aoc_hyw_subject_pledge
+		set_variable = { name = aoc_hyw_french_neutrality years = 5 }
+		set_variable = aoc_hyw_skip_french_summons
+	}
+	aoc_hyw_payment_treaty = {
+		PAYER = c:ENG
+		RECIPIENT = scope:aoc_hyw_target
+		NAME = aoc_hyw_influence_treaty
+		ARTICLE = aoc_hyw_subsidy_payment
+		MONTHS = 12
+		RATE = 1000
+	}
+}
+
+aoc_hyw_grant_titles_to_subject = {
+	set_variable = { name = aoc_hyw_titles_cooldown years = 2 }
+	scope:aoc_hyw_target = {
+		add_liberty_desire = -25
+		remove_variable = aoc_hyw_french_neutrality
+		remove_variable = aoc_hyw_skip_french_summons
+		set_variable = aoc_hyw_subject_pledge
+	}
+	aoc_hyw_payment_treaty = {
+		PAYER = c:FRA
+		RECIPIENT = scope:aoc_hyw_target
+		NAME = aoc_hyw_titles_treaty
+		ARTICLE = money_transfer
+		MONTHS = 12
+		RATE = 1000
+	}
+}
+
+aoc_hyw_invite_country = {
+	set_variable = { name = aoc_hyw_invite_cooldown months = 6 }
+	save_scope_as = aoc_hyw_inviting_crown
+	scope:aoc_hyw_target = {
+		set_variable = { name = aoc_hyw_pending_invite value = scope:aoc_hyw_inviting_crown months = 3 }
+		trigger_event = { id = aoc_hyw.340 popup = yes }
+	}
+}
+
+aoc_hyw_ai_actions = {
+	c:ENG = {
+		if = {
+			limit = {
+				is_ai = yes
+				aoc_hyw_can_influence = yes
+				gold_reserves >= 52000
+				scope:journal_entry = { "scripted_bar_progress(aoc_hyw_tension)" >= 85 }
+			}
+			random = {
+				chance = 15
+				c:FRA = {
+					random_direct_subject = {
+						limit = { aoc_hyw_influence_target = yes aoc_hyw_french_supporter = yes }
+						save_scope_as = aoc_hyw_target
+					}
+				}
+				if = { limit = { exists = scope:aoc_hyw_target } aoc_hyw_influence_subject = yes }
+			}
+		}
+	}
+	c:FRA = {
+		if = {
+			limit = {
+				is_ai = yes
+				aoc_hyw_can_grant_titles = yes
+				gold_reserves >= 52000
+				scope:journal_entry = { "scripted_bar_progress(aoc_hyw_tension)" >= 80 }
+			}
+			random = {
+				chance = 15
+				random_direct_subject = {
+					limit = { aoc_hyw_titles_target = yes }
+					save_scope_as = aoc_hyw_ai_titles_target
+				}
+				if = {
+					limit = { exists = scope:aoc_hyw_ai_titles_target }
+					scope:aoc_hyw_ai_titles_target = { save_scope_as = aoc_hyw_target }
+					aoc_hyw_grant_titles_to_subject = yes
+				}
+			}
+		}
+	}
+	c:ENG = { aoc_hyw_ai_invite = { CROWN = c:ENG } }
+	c:FRA = { aoc_hyw_ai_invite = { CROWN = c:FRA } }
+}
+
+aoc_hyw_ai_invite = {
+	if = {
+		limit = { is_ai = yes aoc_hyw_can_invite = yes }
+		random = {
+			chance = 15
+			random_country = {
+				limit = {
+					aoc_hyw_invite_target = { CROWN = $CROWN$ }
+					army_size >= 5
+				}
+				save_scope_as = aoc_hyw_ai_invite_candidate
+				prev = {
+					scope:aoc_hyw_ai_invite_candidate = { save_scope_as = aoc_hyw_target }
+					aoc_hyw_invite_country = yes
+				}
+			}
+		}
+	}
+}
