@@ -1,0 +1,4817 @@
+﻿# Default and vanilla templates referenced by the mod scripts.
+
+# Source: 00_default_template.txt
+
+default = {
+	first_name = culture 		# Picks a random first and last name from the culture, combines those together to make one name
+	last_name = culture
+	female = no
+	dna = random 				# Generate random dna from a random ethnicity in the culture
+	historical = no
+	age = default 				# A random age base on AGE_GENERATION_STARTVAL + ( random_int % ( AGE_GENERATION_DICE_ROLL_MAGNITUDE + 1 ) )
+	commander_rank = default	# commander rank if this character would be a military commander
+	culture = ig_before_random_accepted # Valid inputs: primary_culture/random_accepted/random/ig_before_primary_culture/ig_before_random_accepted/ig_before_random/specific key. random/random_accepted weight based on share of political strength within the country. If home region is specified, random is based on home state, otherwise home country.
+	religion = random_accepted # Valid inputs: random_accepted/random/specific key. random & random_accepted weight based on share of political strength within the character's culture. If home region is specified, random is based on home state, otherwise home country.
+	interest_group = random 	# Select a random interest group based on clout
+	home_region = random		# valid inputs: state region key, state scope, random
+	holding_type = random		# valid inputs: building type key, building type scope, random
+	trait_generation = { 		# this effect will run as soon as the character is created (should only be used for traits)
+		if = {
+			limit = {
+				trait_value > 0
+			}
+			set_variable = has_historical_traits
+			add_experience = trait_value
+		}
+		else = {
+			add_experience = 4
+		}
+
+		if = {
+			limit = {
+				is_adult = no
+			}
+			add_trait = trait_child
+		}
+		if = {
+			limit = {
+				is_adult = yes
+				trait_value = 0
+			}
+			add_random_trait = personality
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_variable = has_historical_traits }
+						trait_value <= 3
+					}
+				}
+				add_random_trait = skill
+			}
+		}
+
+		if = {
+			limit = {
+				age >= 45
+				trait_value < 8
+			}
+			random_list = {
+				33 = {}
+				33 = { add_experience = 1 }
+				33 = {
+					add_experience = 2
+					add_random_trait = skill
+				}
+			}
+		}
+		if = {
+			limit = {
+				age >= 30
+				NOT = { has_variable = has_historical_traits }
+			}
+			random_list = {
+				95 = {}
+				5 = { add_random_trait = condition }
+			}
+		}
+	}
+}
+
+# Source: colonial_governor_templates.txt
+
+character_template_colonial_governor_plantation = {
+	first_name = culture
+	last_name = culture
+	female = no
+	culture = scope:overlord_primary_culture
+	religion = scope:overlord_religion
+	interest_group = scope:plantation_ig_scope
+	traits = {
+		special_character_colonial_plantation
+		political_appointee
+	}
+}
+
+character_template_colonial_governor_local = {
+	first_name = culture
+	last_name = culture
+	female = no
+	culture = scope:primary_culture_scope
+	traits = {
+		special_character_colonial_local
+	}
+}
+
+character_template_colonial_governor_extraction = {
+	first_name = culture
+	last_name = culture
+	female = no
+	culture = scope:overlord_primary_culture
+	religion = scope:overlord_religion
+	interest_group = scope:extraction_ig_scope
+	traits = {
+		special_character_colonial_extraction
+		political_appointee
+	}
+}
+
+character_template_colonial_governor_business = {
+	first_name = culture
+	last_name = culture
+	female = no
+	culture = scope:overlord_primary_culture
+	religion = scope:overlord_religion
+	interest_group = scope:business_ig_scope
+	traits = {
+		special_character_colonial_business
+		political_appointee
+	}
+}
+
+character_template_colonial_governor_military = {
+	first_name = culture
+	last_name = culture
+	female = no
+	is_general = yes
+	culture = scope:overlord_primary_culture
+	religion = scope:overlord_religion
+	interest_group = ig_armed_forces
+	traits = {
+		special_character_colonial_military
+		political_appointee
+	}
+}
+
+# Source: country_arg.txt
+
+ARG_Juan_Manuel_de_Rosas = {
+	# Juan Manuel de Rosas
+	first_name = "Juan_Manuel"
+	last_name = "de_Rosas"
+	dna = dna_president_manuel_de_rosas
+	historical = yes
+	birth_date = 1793.3.30
+	ruler = yes
+	is_general = yes
+	role = character_role_magnate
+	culture = primary_culture # intentional
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	home_region = STATE_BUENOS_AIRES
+	holding_type = building_manor_house
+	traits = {
+		ambitious
+		wrathful
+	}
+	trait_generation = { }
+}
+
+# Source: country_aus.txt
+
+aus_franz_josef_I_habsburg_template = {
+    # Franz Joseph I of Austria
+    first_name = Franz_Josef
+    last_name = von_Habsburg_Lothringen
+    dna = dna_franz_joseph_i
+    historical = yes
+    noble = yes
+    birth_date = 1830.8.18
+    heir = yes
+    culture = cu:south_german
+    religion = rel:catholic
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+	home_region = STATE_AUSTRIA
+    traits = {
+        direct
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_habsburg }
+    }
+}
+
+aus_maximilian_I_habsburg_template = {
+    # Maximilian I of Mexico
+    first_name = Maximillian
+    last_name = von_Habsburg_Lothringen
+    dna = dna_maximilian_i_of_mexico
+    historical = yes
+    noble = yes
+    birth_date = 1832.7.6
+    heir = yes
+    is_admiral = yes
+    culture = cu:south_german
+    religion = rel:catholic
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+	home_region = STATE_AUSTRIA
+    traits = {
+        ambitious
+        #experienced_naval_commander trait is added in austria_events.31
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_habsburg }
+    }
+}
+
+aus_karl_I_habsburg = {
+    # Charles I of Austria
+    first_name = Karl
+    last_name = von_Habsburg_Lothringen
+    dna = dna_emperor_karl_i_of_austria
+    historical = yes
+    noble = yes
+    birth_date = 1887.8.17
+    heir = yes
+    culture = cu:south_german
+    religion = rel:catholic
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+	home_region = STATE_AUSTRIA
+    traits = {
+        pious
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_habsburg }
+    }
+}
+
+aus_franz_ferdinand = {
+    # Archduke Franz Ferdinand of Austria
+    first_name = Franz_Ferdinand
+    last_name = von_Osterreich-Este
+    dna = dna_archduke_franz_ferdinand_of_austria
+    historical = yes
+    noble = yes
+    birth_date = 1863.12.18
+    heir = yes
+    culture = cu:south_german
+    religion = rel:catholic
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+	home_region = STATE_STYRIA
+    traits = {
+        experienced_diplomat
+        experienced_offensive_planner
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_habsburg }
+    }
+}
+
+aus_klemens_von_metternich = {
+    # Klemens von Metternich, Prince of Metternich-Winneburg zu Beilstein
+    first_name = Klemens
+    last_name = von_Metternich
+    dna = dna_kemens_von_metternich
+    historical = yes
+    birth_date = 1773.5.15
+    ig_leader = yes
+    culture = cu:south_german
+    religion = rel:catholic
+    interest_group = ig_landowners
+    ideology = ideology_authoritarian
+	home_region = STATE_RHINELAND
+    traits = {
+        meticulous
+        masterful_diplomat
+        experienced_political_operator
+    }
+}
+
+# Source: country_chi.txt
+
+TPG_hong_xiuquan = {
+	first_name = Xiuquan
+	last_name = Hong
+	historical = yes
+	birth_date = 1814.1.1
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	ideology = ideology_theocrat
+    home_region = STATE_GUANGDONG
+	traits = {
+		inspirational_orator
+		persistent
+		psychological_affliction
+	}
+}
+
+TPG_xiuqing_yang = {
+	first_name = Xiuqing
+	last_name = Yang
+	historical = yes
+	birth_date = 1821.9.23
+	is_general = yes
+	ig_leader = yes
+	commander_rank = commander_rank_3
+	culture = cu:han
+	religion = rel:protestant
+	interest_group = ig_armed_forces
+	ideology = ideology_theocrat
+    home_region = STATE_GUANGXI
+	traits = {
+		grifter
+		expert_political_operator
+		ambitious
+		demagogue
+	}
+}
+
+TPG_chaogui_xiao = {
+	first_name = Chaogui
+	last_name = Xiao
+	historical = yes
+	birth_date = 1820.1.1
+	is_general = yes
+	ig_leader = yes
+	commander_rank = commander_rank_1
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	ideology = ideology_theocrat
+    home_region = STATE_GUANGXI
+	traits = {
+		reckless
+		charismatic
+		demagogue
+	}
+}
+
+TPG_hong_rengan = {
+	first_name = Rengan
+	last_name = Hong
+	historical = yes
+	birth_date = 1822.2.18
+	ig_leader = yes
+	culture = cu:han
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_market_liberal
+    home_region = STATE_GUANGDONG
+	traits = {
+		innovative
+		persistent
+		basic_diplomat
+	}
+}
+
+TPG_hong_tianguifu = {
+	first_name = Tianguifu
+	last_name = Hong
+	historical = yes
+	birth_date = 1846.6.6
+	heir = yes
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	ideology = ideology_moderate
+    home_region = STATE_NANJING
+	traits = {
+		reserved
+	}
+}
+
+# Source: country_chl.txt
+
+CHL_joaquin_edwards_bello = { #Víctor Lorenzo Joaquín Edwards Bello
+	first_name = Joaquin
+	last_name = Edwards
+	female = no
+	historical = yes
+	birth_date = 1887.5.10
+	is_agitator = yes
+	culture = primary_culture # intentional
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_fascist # Chilean Nazi
+    home_region = STATE_SANTIAGO
+	traits = {
+		literary
+		bigoted
+		firebrand # Not really, but Bigoted is such a decrease in character popularity that it's needed.
+	}
+    agitator_usage = {
+        country_trigger = {
+			NOT = {
+				is_template_used = CHL_joaquin_edwards_bello
+			}
+			OR = {
+				c:CHL ?= THIS
+				AND = {
+					c:FND ?= THIS
+					any_scope_state = {
+						state_region = s:STATE_SANTIAGO
+					}
+				}
+				AND = {
+					c:PLT ?= THIS
+					country_has_primary_culture = cu:south_andean
+					any_scope_state = {
+						state_region = s:STATE_SANTIAGO
+					}
+				}
+			}
+			has_dlc_feature = rp1_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1918.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+# Source: country_fin.txt
+
+fin_general_mannerheim = {
+	first_name = Carl_Gustav_Emil
+	last_name = Mannerheim
+	female = no
+	dna = dna_carl_gustaf_emil_mannerheim
+	historical = yes
+	birth_date = 1867.6.4
+	commander_rank = default
+	culture = cu:swedish
+	religion = rel:protestant
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	home_region = STATE_UUSIMAA
+	traits = {
+		direct
+		stalwart_defender
+		meticulous
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:FIN
+			c:FIN ?= THIS
+		}
+		role = general
+		earliest_usage_date = 1900.1.1
+		latest_usage_date = 1936.1.1
+		#guaranteed to spawn if possible
+	}
+}
+
+# Source: country_fra.txt
+
+FRA_ferdinand_philippe = {
+	first_name = "Ferdinand_Philippe"
+	last_name = d_Orleans
+	historical = yes
+	birth_date = 1810.9.3
+	role = heir
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_orleanist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		popular_commander
+		wrathful
+		expensive_tastes
+	}
+	trait_generation = { }
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_orleans }
+	}
+}
+
+FRA_philippe_de_orleans_of_paris = {
+	# Prince Philippe, Count of Paris
+	first_name = "Philippe"
+	last_name = "d_Orleans"
+	dna = dna_ferdinand_philippe_of_orleans
+	historical = yes
+	birth_date = 1838.8.24
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_orleanist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		# historian & journalist
+		# "outspoken democrat"
+		basic_offensive_planner # served "with distinction" as a staff officer in the Peninsula Campaign
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_orleans }
+	}
+}
+
+FRA_philippe_de_orleans_of_orleans = {
+	first_name = "Philippe"
+	last_name = "d_Orleans"
+	historical = yes
+	birth_date = 1869.2.6
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_orleanist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		basic_political_operator
+		persistent
+		explorer
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_orleans }
+	}
+}
+
+FRA_jean_de_orleans = {
+	first_name = "Jean"
+	last_name = "d_Orleans"
+	historical = yes
+	birth_date = 1874.9.4
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_orleanist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		erudite
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_orleans }
+	}
+}
+
+FRA_henri_de_orleans = {
+	first_name = "Henri"
+	last_name = "d_Orleans"
+	historical = yes
+	birth_date = 1908.7.5
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_orleanist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		ambitious
+		experienced_political_operator
+		arrogant
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_orleans }
+	}
+}
+
+FRA_louis_antoine_de_bourbon = {
+	# Louis Antoine, Duke of Angoulême
+	first_name = "Louis"
+	last_name = "de_Bourbon"
+	dna = dna_louis_antoine_duke_of_angouleme
+	historical = yes
+	birth_date = 1775.8.6
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_legitimist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		basic_offensive_planner # see the battle of Trocadero
+		bigoted
+	}
+	on_created = {
+		set_variable = legitimist_leader
+		set_variable = { name = dynasty_var value = flag:house_bourbon }
+	}
+}
+
+FRA_henri_de_bourbon = {
+	# Henri, Count of Chambord
+	first_name = "Henri"
+	last_name = "de_Bourbon"
+	dna = dna_henri_count_of_chambord
+	historical = yes
+	birth_date = 1820.9.29
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_legitimist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		arrogant
+		basic_political_operator
+	}
+	on_created = {
+		set_variable = legitimist_leader
+		set_variable = { name = dynasty_var value = flag:house_bourbon }
+	}
+}
+
+FRA_napoleon_eugene_louis_bonaparte = {
+	# Napoléon Eugène Louis Jean Joseph Bonaparte
+	first_name = "Napoleon"
+	last_name = "Bonaparte"
+	historical = yes
+	birth_date = 1856.3.16
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_bonapartist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		brave
+		surveyor
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bonaparte }
+	}
+}
+
+FRA_victor_bonaparte = {
+	# Victor, Prince Napoléon
+	first_name = "Victor"
+	last_name = "Bonaparte"
+	historical = yes
+	birth_date = 1862.7.18
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_bonapartist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		arrogant
+		basic_political_operator
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bonaparte }
+	}
+}
+
+FRA_louis_bonaparte = {
+	# Louis, Prince Napoléon
+	first_name = "Louis"
+	last_name = "Bonaparte"
+	historical = yes
+	birth_date = 1914.1.23
+	heir = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_bonapartist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		brave
+		reckless
+		mountain_commander
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bonaparte }
+	}
+}
+
+PRC_gustave_cluseret = {
+	first_name = Gustave
+	last_name = Cluseret
+	historical = yes
+	birth_date = 1823.6.13
+	ig_leader = yes
+	is_general = yes
+	commander_rank = commander_rank_2
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_republican_leader # Ideology: "?????"
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		grifter
+		reckless
+		explorer
+	}
+}
+
+PRC_eugene_varlin = {
+	first_name = Eugene
+	last_name = Varlin
+	historical = yes
+	birth_date = 1839.10.5
+	ig_leader = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		persistent
+		brave
+		charismatic
+	}
+}
+
+# Source: country_gbr.txt
+
+GBR_rotha_lintorn-orman = {
+	first_name = Rotha
+	last_name = Lintorn-Orman
+	female = yes
+    dna = dna_rotha_lintorn_orman
+	historical = yes
+	birth_date = 1895.2.7
+    is_agitator = yes
+	culture = cu:british
+	religion = rel:protestant
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_fascist
+	home_region = STATE_HOME_COUNTIES
+	traits = {
+        hedonist
+        alcoholic
+        demagogue
+	}
+	agitator_usage = {
+		country_trigger = {
+			exists = c:GBR
+			c:GBR ?= THIS
+            NOT = {
+                is_template_used = GBR_rotha_lintorn-orman
+            }
+			has_dlc_feature = ep1_content
+            has_technology_researched = political_agitation
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+		earliest_usage_date = 1923.1.1
+		latest_usage_date = 1933.12.30
+		#guaranteed to spawn if possible
+	}
+}
+
+GBR_florence_nightingale = {
+    first_name = Florence
+    last_name = Nightingale
+    female = yes
+    dna = dna_florence_nightingale
+    historical = yes
+    birth_date = 1820.8.12
+    is_agitator = yes
+    ig_leader = no
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_intelligentsia
+    ideology = ideology_humanitarian
+	home_region = STATE_HOME_COUNTIES
+    traits = {
+        literary
+        aesthete
+        erudite
+    }
+}
+
+# Source: country_gre.txt
+
+agitator_ion_dragoumis = { # Ion Dragoumis
+    first_name = Ion
+    last_name = Dragoumis
+    female = no
+    historical = yes
+    birth_date = 1878.9.14
+    culture = cu:greek
+    religion = rel:orthodox
+    interest_group = ig_landowners
+    ideology = ideology_fascist
+    home_region = STATE_ATTICA
+    traits = {
+        experienced_diplomat
+        literary
+        ambitious
+    }
+    agitator_usage = {
+        country_trigger = {
+            has_dlc_feature = voice_of_the_people_content
+            NOT = {
+                is_template_used = agitator_ion_dragoumis
+            }
+            c:GRE ?= this
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_landowners
+                is_interest_group_type = ig_petty_bourgeoisie
+            }
+        }
+        earliest_usage_date = 1907.1.1
+        latest_usage_date = 1935.12.31 # Historically, he was shot in 1920
+        #guaranteed to spawn if possible
+    }
+}
+
+# Source: country_haw.txt
+
+HAW_kamehameha_iii = {
+	# Kamehameha III
+	first_name = "Kamehameha"
+	last_name = "Kamehameha"
+	historical = yes
+	age = 22
+	ruler = yes
+	culture = cu:hawaiian
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_pacifist
+	home_region = STATE_HAWAIIAN_ISLANDS
+	traits = {
+		direct
+		innovative
+	}
+}
+
+# Source: country_jap.txt
+
+JAP_ninko_yamato = {
+	# Emperor Ninko
+	first_name = "Ninko" # Ayahito
+	last_name = "Yamato"
+	dna = dna_ninko
+	historical = yes
+	culture = cu:japanese
+	noble = yes
+	birth_date = 1800.1.1
+	role = character_role_emperor_of_japan
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_devout # Mostly interested in court rituals and education
+	ideology = ideology_moderate
+	home_region = STATE_KYOTO
+	traits = {
+		reserved # not very active in affairs of state
+		sickly
+		special_character_japanese_emperor
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+	}
+}
+
+JAP_komei_yamato = {
+	first_name = "Osahito" # Later Komei
+	last_name = Yamato
+	dna = dna_emperor_komei
+	historical = yes
+	culture = cu:japanese
+	noble = yes
+	birth_date = 1831.1.1
+	role = character_role_emperor_of_japan
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_armed_forces
+	ideology = ideology_shojoi
+	home_region = STATE_KYOTO
+	traits = {
+		wrathful
+		sickly
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			add_trait = special_character_japanese_emperor
+		}
+	}
+}
+
+JAP_meiji_yamato = {
+	first_name = "Mutsuhito" # Later Meiji
+	last_name = "Yamato"
+	dna = dna_emperor_meiji
+	historical = yes
+	culture = cu:japanese
+	noble = yes
+	birth_date = 1852.1.1
+	role = character_role_emperor_of_japan
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_industrialists
+	ideology = ideology_modernizer_leader
+	home_region = STATE_KYOTO
+	traits = {
+		innovative
+		charismatic
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			add_trait = special_character_japanese_emperor
+		}
+	}
+}
+
+JAP_taisho_yamato = {
+	first_name = "Yoshihito" # Later Taisho
+	last_name = "Yamato"
+	dna = dna_taisho_yamato
+	historical = yes
+	culture = cu:japanese
+	noble = yes
+	birth_date = 1879.1.1
+	role = character_role_emperor_of_japan
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	home_region = STATE_KANTO
+	traits = {}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_technology_researched = antibiotics }
+				}
+			}
+			add_trait = sickly
+		}
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			add_trait = special_character_japanese_emperor
+		}
+	}
+}
+
+JAP_showa_yamato = {
+	first_name = "Hirohito" # Later Showa
+	last_name = "Yamato"
+	dna = dna_showa_yamato
+	historical = yes
+	culture = cu:japanese
+	noble = yes
+	birth_date = 1901.1.1
+	role = character_role_emperor_of_japan
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	home_region = STATE_KANTO
+	traits = {
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			add_trait = special_character_japanese_emperor
+		}
+	}
+}
+
+JAP_backup_emperor_template = {
+	first_name = culture
+	last_name = "Yamato"
+	noble = yes
+	role = character_role_emperor_of_japan
+	culture = cu:japanese
+	religion = rel:mahayana
+	ideology = ideology_moderate
+	home_region = STATE_KYOTO
+	traits = {
+		special_character_japanese_emperor
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+	}
+}
+
+JAP_ienari_tokugawa = {
+    first_name = Ienari
+    last_name = Tokugawa
+    dna = dna_shogun_tokugawa_ienari
+    historical = yes
+	noble = yes
+    birth_date = 1773.11.18
+    ruler = yes
+	is_general = yes
+	commander_rank = commander_rank_ruler
+    culture = cu:japanese
+    religion = rel:mahayana
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+	home_region = STATE_KANTO
+    traits = {
+        arrogant
+        expensive_tastes # bit of corruption
+		hedonist # Known as the "fur seal shogun" for his many children, and consuming powdered seal penises to increase sexual virility
+		experienced_political_operator
+    }
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		set_variable = shogun_var
+	}
+}
+
+JAP_ieyoshi_tokugawa = {
+	first_name = Ieyoshi
+	last_name = Tokugawa
+	dna = dna_ieyoshi_tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1793.6.22
+	heir = yes
+	is_general = yes
+	commander_rank = commander_rank_2
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_KANTO
+	traits = {
+		reserved
+		pious
+		aesthete
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+	}
+}
+
+JAP_iesada_tokugawa = {
+	first_name = Iesada
+	last_name = Tokugawa
+	dna = dna_iesada_tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1824.5.6
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KANTO
+	traits = {
+		reserved
+		sickly
+		scarred
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+	}
+}
+
+JAP_iemochi_tokugawa = {
+	first_name = Yoshitomi # Later Iemochi
+	last_name = Tokugawa
+	dna = dna_iemochi_tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1846.7.16
+	role = character_role_magnate
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KANSAI
+	holding_type = building_manor_house
+	trait_generation = {
+		add_trait = sickly
+		if = {
+			limit = {
+				game_date <= 1862.1.1
+			}
+			add_trait = trait_child
+		}
+		else = {
+			add_trait = romantic
+			add_trait = innovative
+		}
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KANSAI }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_yoshinobu_tokugawa = {
+	first_name = Yoshinobu
+	last_name = Tokugawa
+	dna = dna_yoshinobu_tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1837.10.28
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_modernizer_leader
+	home_region = STATE_KANTO
+	trait_generation = {
+		if = {
+			limit = {
+				game_date <= 1853.1.1
+			}
+			add_trait = trait_child
+		}
+		else = {
+			add_trait = ambitious
+			add_trait = experienced_diplomat
+		}
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+	}
+}
+
+JAP_iesato_tokugawa = {
+	first_name = Iesato
+	last_name = Tokugawa
+	dna = dna_iesato_tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1863.8.24
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KANTO
+	trait_generation = {
+		if = {
+			limit = {
+				game_date <= 1880.1.1
+			}
+			add_trait = trait_child
+		}
+		else = {
+			add_trait = tactful
+			add_trait = experienced_diplomat
+			add_trait = basic_political_operator
+		}
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+	}
+}
+
+JAP_backup_shogun_template = {
+	first_name = culture
+	last_name = Tokugawa
+	noble = yes
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+	}
+}
+
+JAP_nariakira_shimazu = {
+	first_name = Nariakira
+	last_name = Shimazu
+	dna = dna_nariakira_shimazu
+	historical = yes
+	noble = yes
+	birth_date = 1809.4.28
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_industrialists
+	ideology = ideology_jingoist_leader
+	home_region = STATE_KYUSHU
+	holding_type = building_manor_house
+	traits = {
+		innovative
+		basic_political_operator
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KYUSHU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_hisamitsu_shimazu = {
+	first_name = Hisamitsu
+	last_name = Shimazu
+	dna = dna_hisamitsu_shimazu
+	historical = yes
+	noble = yes
+	birth_date = 1817.11.28
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_industrialists
+	ideology = ideology_jingoist_leader
+	home_region = STATE_KYUSHU
+	holding_type = building_manor_house
+	traits = {
+		innovative
+		basic_political_operator
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KYUSHU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_tadayoshi_shimazu = {
+	first_name = Tadayoshi
+	last_name = Shimazu
+	dna = dna_tadayoshi_shimazu
+	historical = yes
+	noble = yes
+	birth_date = 1840.5.22
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_industrialists
+	ideology = ideology_jingoist_leader
+	home_region = STATE_KYUSHU
+	holding_type = building_manor_house
+	traits = {
+		reserved
+		compliant
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KYUSHU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_tadashige_shimazu = {
+	first_name = Tadashige
+	last_name = Shimazu
+	dna = dna_tadashige_shimazu
+	historical = yes
+	noble = yes
+	birth_date = 1886.10.20
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_industrialists
+	ideology = ideology_jingoist_leader
+	home_region = STATE_KYUSHU
+	holding_type = building_manor_house
+	traits = {
+		romantic
+		basic_naval_commander
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KYUSHU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_motonori_mori = {
+	first_name = Motonori
+	last_name = Mori
+	dna = dna_motonori_mori
+	historical = yes
+	noble = yes
+	birth_date = 1839.10.28
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_shojoi
+	home_region = STATE_CHUGOKU
+	holding_type = building_manor_house
+	traits = {
+		ambitious
+		reckless
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_CHUGOKU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_motoaki_mori = {
+	first_name = Motoaki
+	last_name = Mori
+	dna = dna_motoaki_mori
+	historical = yes
+	noble = yes
+	birth_date = 1865.2.7
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_shojoi
+	home_region = STATE_CHUGOKU
+	holding_type = building_manor_house
+	traits = {
+		aesthete
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_CHUGOKU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_yoshiatsu_tokugawa = {
+	first_name = Yoshiatsu
+	last_name = Tokugawa
+	dna = dna_yoshiatsu_tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1832.5.3
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate # Mito fell off after Nariaki
+	home_region = STATE_KANTO
+	holding_type = building_manor_house
+	traits = {
+		cautious
+		compliant # Weathervane
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KANTO }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_akitake_tokugawa = {
+	first_name = Akitake
+	last_name = Tokugawa
+	dna = dna_akitake_tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1853.10.26
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	home_region = STATE_KANTO
+	holding_type = building_manor_house
+	traits = {
+		experienced_diplomat
+		explorer
+		charismatic
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KANTO }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_hachisuka_narihiro = {
+	first_name = Narihiro
+	last_name = Hachisuka
+	dna = dna_hachisuka_narihiro
+	historical = yes
+	noble = yes
+	birth_date = 1821.10.14
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate # Could not make up his mind
+	home_region = STATE_SHIKOKU
+	holding_type = building_manor_house
+	traits = {
+		alcoholic
+		innovative
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_SHIKOKU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_hachisuka_mochiaki = {
+	first_name = Mochiaki
+	last_name = Hachisuka
+	dna = dna_hachisuka_mochiaki
+	historical = yes
+	noble = yes
+	birth_date = 1846.9.28
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_industrialists
+	ideology = ideology_modernizer_leader
+	home_region = STATE_SHIKOKU
+	holding_type = building_manor_house
+	traits = {
+		experienced_entrepreneur
+		basic_diplomat
+		meticulous
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_SHIKOKU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_hachisuka_maasaki = {
+	first_name = Masaki
+	last_name = Hachisuka
+	dna = dna_hachisuka_maasaki
+	historical = yes
+	noble = yes
+	birth_date = 1871.3.8
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_SHIKOKU
+	holding_type = building_manor_house
+	traits = {
+		expensive_tastes # Bad at managing money
+		basic_political_operator
+		ambitious
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_SHIKOKU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_tokugawa_nariyuki = {
+	# Tokugawa Nariyuki
+	first_name = Nariyuki
+	last_name = Tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1801.9.9
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KANSAI
+	holding_type = building_manor_house
+	traits = {
+		expensive_tastes
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KANSAI }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_tokugawa_narikatsu = {
+	first_name = Narikatsu
+	last_name = Tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1820.6.8
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KANSAI
+	holding_type = building_manor_house
+	traits = {
+		sickly
+		tuberculosis
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KANSAI }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_tokugawa_mochitsugu = {
+	first_name = Mochitsugu
+	last_name = Tokugawa
+	dna = dna_tokugawa_mochitsugu
+	historical = yes
+	noble = yes
+	birth_date = 1844.3.1
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	home_region = STATE_KANSAI
+	holding_type = building_manor_house
+	traits = {
+		sickly
+		basic_political_operator
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KANSAI }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_tokugawa_naritaka = {
+	first_name = Naritaka
+	last_name = Tokugawa
+	dna = dna_tokugawa_naritaka
+	historical = yes
+	noble = yes
+	birth_date = 1810.7.14
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_TOKAI
+	holding_type = building_manor_house
+	traits = {
+		expensive_tastes
+		inept # Was not cut out for his position
+		sickly
+		tuberculosis
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_TOKAI }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_tokugawa_yoshikatsu = {
+	first_name = Yoshikatsu
+	last_name = Tokugawa
+	dna = dna_tokugawa_yoshikatsu
+	historical = yes
+	noble = yes
+	birth_date = 1824.4.14
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_armed_forces # Championed by low-ranking samurai
+	ideology = ideology_mitogaku
+	home_region = STATE_TOKAI
+	holding_type = building_manor_house
+	traits = {
+		ambitious
+		persistent
+		experienced_political_operator
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_TOKAI }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_tokugawa_yoshinori = {
+	first_name = Yoshinori
+	last_name = Tokugawa
+	historical = yes
+	noble = yes
+	birth_date = 1863.10.31
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_TOKAI
+	holding_type = building_manor_house
+	traits = {
+		hedonist # Scandalous
+		basic_diplomat
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_tokugawa }
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_TOKAI }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+}
+
+JAP_ii_naosuke = {
+	first_name = Naosuke
+	last_name = Ii
+	dna = dna_naosuke_ii
+	historical = yes
+	noble = yes
+	birth_date = 1815.11.29
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	home_region = STATE_KYOTO
+	holding_type = building_manor_house
+	traits = {
+		experienced_political_operator
+		imperious
+		brave
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KYOTO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_ii_naonori = {
+	first_name = Ii
+	last_name = Naonori
+	dna = dna_ii_naonori
+	historical = yes
+	noble = yes
+	birth_date = 1848.5.22
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_armed_forces # Patronised the lower samurai
+	ideology = ideology_moderate
+	home_region = STATE_KYOTO
+	holding_type = building_manor_house
+	traits = {
+		cautious
+		traditionalist_commander
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KYOTO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_ii_naotada = {
+	first_name = Ii
+	last_name = Naotada
+	dna = dna_ii_naotada
+	historical = yes
+	noble = yes
+	birth_date = 1881.5.29
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KYOTO
+	holding_type = building_manor_house
+	traits = {
+		aesthete # Dedicated his life to theatre
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KYOTO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_maeda_yoshiyasu = {
+	first_name = Yoshiyasu
+	last_name = Maeda
+	dna = dna_maeda_yoshiyasu
+	historical = yes
+	noble = yes
+	birth_date = 1820.5.4
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_mitogaku
+	home_region = STATE_HOKUSHINETSU
+	holding_type = building_manor_house
+	traits = {
+		inept
+		sickly
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_HOKUSHINETSU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_maeda_toshitsugu = {
+	first_name = Toshitsugu
+	last_name = Maeda
+	dna = dna_maeda_toshitsugu
+	historical = yes
+	noble = yes
+	birth_date = 1858.5.31
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_HOKUSHINETSU
+	holding_type = building_manor_house
+	traits = {
+		basic_colonial_administrator
+		basic_diplomat
+		sickly
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_HOKUSHINETSU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_date_yoshikuni = {
+	first_name = Yoshikuni
+	last_name = Date
+	dna = dna_date_yoshikuni
+	historical = yes
+	noble = yes
+	birth_date = 1825.10.17
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_TOHOKU
+	holding_type = building_manor_house
+	traits = {
+		traditionalist_commander
+		compliant # Indecisive
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_TOHOKU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_date_muneatsu = {
+	first_name = Muneatsu
+	last_name = Date
+	dna = dna_date_muneatsu
+	historical = yes
+	noble = yes
+	birth_date = 1852.5.27
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_TOHOKU
+	holding_type = building_manor_house
+	traits = {
+		basic_political_operator
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_TOHOKU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_date_munemoto = {
+	first_name = Munemoto
+	last_name = Date
+	dna = dna_date_munemoto
+	historical = yes
+	noble = yes
+	birth_date = 1866.8.24
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_TOHOKU
+	holding_type = building_manor_house
+	traits = {
+		reserved
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_TOHOKU }
+		}
+		designate_as_tozama_daimyo = yes
+	}
+}
+
+JAP_matsumae_yoshihiro = {
+	# Matsumai Yoshihiro
+	first_name = Yoshihiro
+	last_name = Matsumae
+	historical = yes
+	noble = yes
+	birth_date = 1823.5.23
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_HOKKAIDO
+	holding_type = building_financial_district
+	traits = {
+		sickly
+		tuberculosis
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_HOKKAIDO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_matsumae_masahiro = {
+	first_name = Masahiro
+	last_name = Matsumae
+	historical = yes
+	noble = yes
+	birth_date = 1825.10.9
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_traditionalist
+	home_region = STATE_HOKKAIDO
+	holding_type = building_financial_district
+	traits = {
+		sickly # Did not have a good life
+		tuberculosis
+		psychological_affliction
+		hedonist
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_HOKKAIDO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_matsumae_takahiro = {
+	first_name = Takahiro
+	last_name = Matsumae
+	dna = dna_matsumae_takahiro
+	historical = yes
+	noble = yes
+	birth_date = 1829.12.10
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	home_region = STATE_HOKKAIDO
+	holding_type = building_financial_district
+	traits = {
+		sickly
+		experienced_diplomat
+		innovative
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_HOKKAIDO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_matsumae_norihiro = {
+	first_name = Norihiro
+	last_name = Matsumae
+	dna = dna_matsumae_norihiro
+	historical = yes
+	noble = yes
+	birth_date = 1844.3.14
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_HOKKAIDO
+	holding_type = building_financial_district
+	traits = {
+		sickly # Really did not have a good life
+		tuberculosis
+		psychological_affliction
+		compliant
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_HOKKAIDO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_matsumae_nagahiro = {
+	first_name = Nagahiro
+	last_name = Matsumae
+	historical = yes
+	noble = yes
+	birth_date = 1865.11.2
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_HOKKAIDO
+	holding_type = building_financial_district
+	traits = {
+		sickly
+		expensive_tastes
+		persistent
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_HOKKAIDO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_matsumae_yoshihiro_ii = {
+	first_name = Yoshihiro
+	last_name = Matsumae
+	historical = yes
+	noble = yes
+	birth_date = 1889.5.10
+	role = character_role_magnate
+	role = character_role_politician
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_HOKKAIDO
+	holding_type = building_financial_district
+	traits = {
+		basic_entrepreneur
+		expensive_tastes # Incredibly corrupt
+	}
+	on_created = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_HOKKAIDO }
+		}
+		designate_as_fudai_daimyo = yes
+	}
+}
+
+JAP_moriko_yamato = { # Princess Moriko
+	first_name = "Moriko"
+	last_name = "Yamato"
+	female = yes
+	historical = yes
+	noble = yes
+	birth_date = 1824.6.7
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KYOTO
+	traits = {
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+		set_variable = japan_imperial_princess
+	}
+}
+
+JAP_sumiko_yamato = { # Princess Sumiko
+	first_name = "Sumiko"
+	last_name = "Yamato"
+	female = yes
+	historical = yes
+	noble = yes
+	birth_date = 1829.2.22
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KYOTO
+	traits = {
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+		set_variable = japan_imperial_princess
+	}
+}
+
+JAP_chikako_yamato = {
+	first_name = "Chikako" # Princess Chikako
+	last_name = "Yamato"
+	female = yes
+	dna = dna_chikako_yamato
+	historical = yes
+	noble = yes
+	birth_date = 1846.7.3
+	culture = cu:japanese
+	religion = rel:mahayana
+	interest_group = ig_devout
+	ideology = ideology_mitogaku
+	home_region = STATE_KYOTO
+	traits = {
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_yamato }
+		set_variable = japan_imperial_princess
+	}
+}
+
+# Source: country_mon.txt
+
+mon_petar_II_petrovic_njegos = {
+    first_name = "Petar"
+    last_name = "Petrovic_Njegos"
+    dna = dna_petar_ii_petrovic_njegos
+    historical = yes
+    birth_date = 1813.11.13
+    ruler = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_armed_forces
+    ideology = ideology_theocrat
+    home_region = STATE_MONTENEGRO
+    traits = {
+        ambitious
+        literary
+        charismatic
+        tuberculosis
+    }
+}
+
+mon_danilo_petrovic_njegos = {
+    first_name = "Danilo"
+    last_name = "Petrovic_Njegos"
+    dna = dna_danilo_petrovic_njegos
+    historical = yes
+    birth_date = 1826.05.25
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_armed_forces
+    ideology = ideology_royalist
+    home_region = STATE_MONTENEGRO
+    traits = {
+        tactful
+        demagogue
+        persistent
+    }
+}
+
+# Source: country_mor.txt
+
+MOR_muhammad_al_alawi = {
+	# Muhammad IV
+	first_name = "Muhammad"
+	last_name = "al-Alawi"
+	dna = dna_muhammad_iv
+	historical = yes
+	age = 26 # born in either 1803 or 1810
+	heir = yes
+	culture = cu:maghrebi
+	religion = rel:sunni
+	interest_group = ig_armed_forces
+	ideology = ideology_modernizer_leader
+	home_region = STATE_FEZ
+	traits = {
+		imperious
+		basic_political_operator
+	}
+}
+
+MOR_hasan_al_alawi = {
+	# Hasan I
+	first_name = "Hasan"
+	last_name = "al-Alawi"
+	historical = yes
+	birth_date = 1836.1.1
+	heir = yes
+	culture = cu:maghrebi
+	religion = rel:sunni
+	interest_group = ig_landowners
+	ideology = ideology_modernizer_leader
+	home_region = STATE_FEZ
+	traits = {
+		meticulous
+		ambitious
+	}
+}
+
+MOR_abdelaziz_al_alawi = {
+	# Abdulaziz bin Hasan
+	first_name = "Abdulaziz"
+	last_name = "al-Alawi"
+	historical = yes
+	birth_date = 1881.2.24
+	heir = yes
+	culture = cu:maghrebi
+	religion = rel:sunni
+	interest_group = ig_landowners
+	ideology = ideology_pacifist
+	home_region = STATE_FEZ
+	traits = {
+		hedonist
+		reserved
+	}
+}
+
+MOR_abd_alhafid_al_alawi = {
+	# Abd al-Hafid
+	first_name = "Abd_al-Hafid"
+	last_name = "al-Alawi"
+	historical = yes
+	birth_date = 1875.2.24
+	heir = yes
+	culture = cu:maghrebi
+	religion = rel:sunni
+	interest_group = ig_devout
+	ideology = ideology_authoritarian
+	home_region = STATE_FEZ
+	traits = {
+		reckless
+	}
+}
+
+MOR_yusef_al_alawi = {
+	# Yusef bin Hasan
+	first_name = "Yusef"
+	last_name = "al-Alawi"
+	historical = yes
+	birth_date = 1881.1.1
+	heir = yes
+	culture = cu:maghrebi
+	religion = rel:sunni
+	interest_group = ig_devout
+	ideology = ideology_traditionalist
+	home_region = STATE_FEZ
+	traits = {
+		pious
+		compliant
+	}
+}
+
+MOR_muhammad_v_al_alawi = {
+	# Muhammad V
+	first_name = "Muhammad"
+	last_name = "al-Alawi"
+	historical = yes
+	birth_date = 1909.8.10
+	heir = yes
+	culture = cu:maghrebi
+	religion = rel:sunni
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	home_region = STATE_FEZ
+	traits = {
+		charismatic
+		honorable
+	}
+}
+
+# Source: country_por.txt
+
+POR_maria_ii_de_braganca = {
+	# Maria II of Portugal, second reign
+	first_name = "Maria"
+	last_name = "de_Braganca"
+	female = yes
+	dna = dna_queen_maria
+	historical = yes
+	birth_date = 1819.4.4
+	ruler = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie # Maria II was sympathetic to the right-wing liberals, ie PB.
+	ideology = ideology_reformer
+	home_region = STATE_ESTREMADURA
+	traits = {
+		persistent
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+    }
+}
+
+POR_pedro_v_de_braganca_template = {
+	# Pedro V of Portugal, son of Maria II
+	first_name = "Pedro"
+	last_name = "de_Braganca"
+	dna = dna_king_pedro_v
+	historical = yes
+	birth_date = 1837.9.16
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_intelligentsia
+	ideology = ideology_modernizer_leader
+	home_region = STATE_ESTREMADURA
+	traits = {
+		meticulous
+		ambitious
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+    }
+}
+
+POR_luis_i_de_braganca_template = {
+	# Luis I of Portugal, son of Maria II
+	first_name = "Luis"
+	last_name = "de_Braganca"
+	dna = dna_king_luis_i
+	historical = yes
+	birth_date = 1838.10.31
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	home_region = STATE_ESTREMADURA
+	traits = {
+		aesthete
+		romantic
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+    }
+}
+
+POR_carlos_i_de_braganca_template = {
+	# Carlos I of Portugal, son of Luis I
+	first_name = "Carlos"
+	last_name = "de_Braganca"
+	dna = dna_king_carlos_i
+	historical = yes
+	birth_date = 1863.9.28
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	home_region = STATE_ESTREMADURA
+	traits = {
+		reckless
+		innovative
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+    }
+}
+
+POR_manuel_ii_de_braganca_template = {
+	# Manuel II of Portugal, son of Carlos I
+	first_name = "Manuel"
+	last_name = "de_Braganca"
+	dna = dna_king_manuel_ii
+	historical = yes
+	birth_date = 1889.7.2
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	home_region = STATE_ESTREMADURA
+	traits = {
+		cautious
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+    }
+}
+
+POR_miguel_i_de_braganca_template = {
+	first_name = "Miguel"
+	last_name = "de_Braganca"
+	historical = yes
+	#dna = dna_king_miguel_i
+	birth_date = 1802.10.26
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_miguelist
+	home_region = STATE_ESTREMADURA
+	traits = {
+		ambitious
+		persistent
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_miguelist_2
+        }
+    }
+}
+
+POR_maria_das_neves_de_braganca_template = {
+	first_name = "Maria_das_Neves"
+	last_name = "de_Braganca"
+	female = yes
+	historical = yes
+	#dna = dna_maria_das_neves_de_braganca
+	birth_date = 1852.8.5
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_miguelist
+	home_region = STATE_ESTREMADURA
+	traits = {
+		ambitious
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_miguelist_2
+        }
+    }
+}
+
+POR_miguel_januario_de_braganca_template = {
+	first_name = "Miguel"
+	last_name = "de_Braganca"
+	historical = yes
+	#dna = dna_miguel_januario_de_braganca
+	birth_date = 1853.9.19
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_miguelist
+	home_region = STATE_ESTREMADURA
+	traits = {
+		persistent
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_miguelist_2
+        }
+    }
+}
+
+POR_duarte_nuno_de_braganca_template = {
+	first_name = "Duarte"
+	last_name = "de_Braganca"
+	historical = yes
+	#dna = dna_duarte_nuno_de_braganca
+	birth_date = 1907.9.23
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_miguelist
+	home_region = STATE_ESTREMADURA
+	traits = {
+		basic_political_operator
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_miguelist_2
+        }
+    }
+}
+
+POR_ana_de_jesus_maria_de_braganca_template = {
+	first_name = "Ana_de_Jesus_Maria"
+	last_name = "de_Braganca"
+	female = yes
+	historical = yes
+	birth_date = 1806.10.23
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_ESTREMADURA
+	traits = {
+		romantic
+		reserved
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+    }
+}
+
+POR_fernando_de_saxe_coburg_gotha_template = {
+	first_name = "Fernando"
+	last_name = "de_SaxO_nia-Coburgo_e_Gota"
+	historical = yes
+	birth_date = 1816.10.29
+	heir = yes
+	culture = cu:north_german
+	religion = rel:catholic
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	home_region = STATE_ESTREMADURA
+	traits = {
+		aesthete
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+    }
+}
+
+POR_afonso_de_braganca_template = {
+	first_name = "Afonso"
+	last_name = "de_Braganca"
+	historical = yes
+	birth_date = 1865.7.31
+	heir = yes
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	home_region = STATE_ESTREMADURA
+	traits = {
+		romantic
+		brave
+		popular_commander
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_braganca }
+    }
+}
+
+POR_sidonio_pais = {
+	first_name = SidO_nio
+	last_name = Pais
+	historical = yes
+	birth_date = 1872.5.1
+	# Sidónio Bernardino Cardoso da Silva Pais
+	role = character_role_politician
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	home_region = STATE_ESTREMADURA
+	traits = {
+		charismatic
+		erudite
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                c:POR ?= this
+                country_has_primary_culture = cu:portuguese
+            }
+            any_scope_state = {
+                state_region = s:STATE_ESTREMADURA
+            }
+            has_dlc_feature = ip4_content
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1905.1.1
+        latest_usage_date = 1918.12.5
+        #guaranteed to spawn if possible
+    }
+    trait_generation = { }
+    on_created = { }
+}
+
+# Source: country_rus.txt
+
+RUS_nicholas_i = { #Nicholas I
+	first_name = Nikolai
+	last_name = Romanov
+	dna = dna_tsar_nicolas_01
+	historical = yes
+	birth_date = 1796.7.6
+	ruler = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_armed_forces
+	ideology = ideology_traditionalist
+	home_region = STATE_INGRIA
+	traits = {
+		arrogant
+		pious
+		imposing
+		engineer
+	}
+	trait_generation = {
+
+	}
+	on_created = {
+		set_variable = is_married
+		set_variable = { name = dynasty_var value = flag:house_romanov }
+	}
+}
+
+RUS_alexander_ii = { #Alexander II, son of Nicholas I
+	first_name = Aleksandr
+	last_name = Romanov
+	dna = dna_tsar_alexander_02
+	historical = yes
+	birth_date = 1818.4.29
+	heir = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_landowners
+	ideology = ideology_modernizer_leader
+	home_region = STATE_INGRIA
+	traits = {
+		meticulous
+		romantic
+		basic_diplomat
+	}
+	trait_generation = {
+
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_romanov }
+	}
+}
+
+RUS_tsarevich_nicholas_alexandrovich = { #Tsarevich Nicholas Alexandrovich, eldest son of Alexander II
+	first_name = Nikolai
+	last_name = Romanov
+	dna = dna_tsarevich_nicholas
+	historical = yes
+	birth_date = 1843.9.8
+	heir = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_intelligentsia
+	ideology = ideology_modernizer_leader
+	home_region = STATE_INGRIA
+	traits = {
+		erudite
+		romantic
+		charismatic
+	}
+	trait_generation = {
+
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_romanov }
+	}
+}
+
+RUS_alexander_iii = { #Alexander III, second son of Alexander II
+	first_name = Aleksandr
+	last_name = Romanov
+	dna = dna_tsar_alexander_03
+	historical = yes
+	birth_date = 1845.3.10
+	heir = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_armed_forces
+	ideology = ideology_traditionalist
+	home_region = STATE_INGRIA
+	traits = {
+		imposing
+		charismatic
+		bigoted
+		master_bureaucrat
+	}
+	trait_generation = {
+
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_romanov }
+	}
+}
+
+RUS_nicholas_ii = { #Nicholas II, son of Alexander III
+	first_name = Nikolai
+	last_name = Romanov
+	dna = dna_tsar_nicolas_02
+	historical = yes
+	birth_date = 1868.5.18
+	heir = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	home_region = STATE_INGRIA
+	traits = {
+		imperious
+		pious
+		inept
+	}
+	trait_generation = {
+
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_romanov }
+	}
+}
+
+RUS_george_i = { #Georgy Romanov
+	first_name = Georgy
+	last_name = Romanov
+	dna = dna_george_i_of_russia
+	historical = yes
+	birth_date = 1871.5.9
+	heir = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	home_region = STATE_INGRIA
+	traits = {
+		erudite
+		basic_naval_commander
+		sickly
+		reserved
+		honorable
+	}
+	trait_generation = {
+
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_romanov }
+	}
+}
+
+RUS_michael_ii = { #Mikhail Romanov
+	first_name = Mikhail
+	last_name = Romanov
+	dna = dna_michael_ii_of_russia
+	historical = yes
+	birth_date = 1878.5.9
+	heir = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_INGRIA
+	traits = {
+		basic_artillery_commander
+		tactful
+		brave
+	}
+	trait_generation = {
+
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_romanov }
+	}
+}
+
+RUS_alexei_ii = { #Alexei Romanov, son of Nicholas II
+	first_name = Alexei
+	last_name = Romanov
+	dna = dna_alexei_ii_of_russia
+	historical = yes
+	birth_date = 1904.8.12
+	heir = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_landowners
+	ideology = ideology_jingoist_leader
+	home_region = STATE_INGRIA
+	traits = {
+		hemophilia
+		arrogant
+		romantic
+		inexperienced
+	}
+	trait_generation = {
+
+	}
+    on_created = {
+    	set_variable = { name = dynasty_var value = flag:house_romanov }
+    	owner = {
+		}
+    }
+}
+
+rus_witte_character_template = {
+    first_name = Sergei
+    last_name = Witte
+    female = no
+    dna = dna_sergei_witte
+    historical = yes
+    birth_date = 1849.6.29
+    culture = cu:russian
+    religion = rel:orthodox
+    interest_group = ig_industrialists
+    ideology = ideology_reformer
+    home_region = STATE_INGRIA
+    traits = {
+        experienced_political_operator
+        meticulous
+        innovative
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:RUS
+            c:RUS ?= THIS
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1879.1.1
+        latest_usage_date = 1915.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+RUS_viktor_mikhailovich_chernov = {
+    first_name = Viktor
+    last_name = Chernov
+    female = no
+    dna = dna_chernov
+    historical = yes
+    birth_date = 1873.12.7
+    culture = cu:russian
+    religion = rel:orthodox
+    interest_group = ig_rural_folk
+    ideology = ideology_radical
+    home_region = STATE_SARATOV
+    traits = {
+        charismatic
+        persistent
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:RUS
+            c:RUS ?= THIS
+			OR = {
+				has_dlc_feature = ep1_content
+				has_dlc_feature = ip5_content
+			}
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+RUS_alexander_fyodorovich_kerensky = {
+    first_name = Alexander
+    last_name = Kerensky
+    female = no
+    dna = dna_kerensky
+    historical = yes
+    birth_date = 1881.5.4
+    culture = cu:russian
+    religion = rel:orthodox
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_state_socialist
+    home_region = STATE_SARATOV
+    traits = {
+        arrogant
+        inspirational_orator
+        experienced_political_operator
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:RUS
+            c:RUS ?= THIS
+			OR = {
+				has_dlc_feature = ep1_content
+				has_dlc_feature = ip5_content
+			}
+            has_technology_researched = dialectics
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1912.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+rus_general_grand_duke_nicholas = {
+	first_name = Grand_Duke_Nicholas
+	last_name = Romanov
+	female = no
+	dna = dna_nicholas_nikolaevich_the_younger
+	historical = yes
+	birth_date = 1856.11.6
+	commander_rank = default
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_INGRIA
+	traits = {
+		popular_commander
+		pious
+		basic_offensive_planner
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:RUS
+			c:RUS ?= THIS
+			c:RUS ?= { country_has_monarchy_law = yes }
+		}
+		role = general
+		earliest_usage_date = 1884.1.1
+		latest_usage_date = 1920.1.1
+		#guaranteed to spawn if possible
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_romanov }
+	}
+}
+
+rus_general_wrangel = {
+	first_name = Pyotr
+	last_name = Wrangel
+	female = no
+      dna = dna_pyotr_wrangel
+	historical = yes
+	birth_date = 1878.8.27
+	commander_rank = default
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_INGRIA
+	traits = {
+		experienced_offensive_planner
+		popular_commander
+		direct
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:RUS
+			c:RUS ?= THIS
+		}
+		role = general
+		earliest_usage_date = 1914.1.1
+		latest_usage_date = 1936.1.1
+		#guaranteed to spawn if possible
+	}
+}
+
+rus_grand_duke_dmitri_pavlovich = {
+    first_name = Grand_Duke_Dmitri
+    last_name = Romanov
+    female = no
+    dna = dna_dmitri_pavlovich_of_russia
+    historical = yes
+    birth_date = 1891.9.18
+    commander_rank = default
+    culture = cu:russian
+    religion = rel:orthodox
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    home_region = STATE_MOSCOW
+    traits = {
+        popular_commander
+        charismatic
+        basic_offensive_planner
+    }
+    commander_usage = {
+        country_trigger = {
+            exists = c:RUS
+            c:RUS ?= THIS
+            c:RUS ?= { country_has_monarchy_law = yes }
+        }
+        role = general
+        earliest_usage_date = 1909.1.1
+        latest_usage_date = 1935.1.1
+    }
+}
+
+RUS_nikolai_vasilyevich_tchaikovsky = {
+	first_name = Nikolai
+	last_name = Tchaikovsky
+	female = no
+	historical = yes
+	birth_date = 1851.1.7
+	is_agitator = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_rural_folk
+	ideology = ideology_radical
+	home_region = STATE_URAL
+	traits = {
+		pious
+		experienced_diplomat
+		ambitious
+	}
+    agitator_usage = {
+        country_trigger = {
+			exists = c:RUS
+			c:RUS ?= THIS
+			OR = {
+				has_dlc_feature = ep1_content
+				has_dlc_feature = ip5_content
+			}
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1872.1.1
+        latest_usage_date = 1917.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+agitator_nestor_makhno = {
+	first_name = Nestor
+	last_name = Makhno
+	female = no
+	dna = dna_mahno
+	historical = yes
+	birth_date = 1888.11.8 # October 27th in the Old Style calendar
+	culture = cu:ukrainian
+	religion = rel:atheist
+	interest_group = ig_rural_folk
+	ideology = ideology_anarchist
+	home_region = STATE_CHERSON
+	traits = {
+		social_bandit
+		imposing
+		celebrity_commander
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				c:RUS ?= this
+				c:UKR ?= this
+			}
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_rural_folk
+            }
+        }
+		earliest_usage_date = 1910.1.1
+		latest_usage_date = 1935.12.31
+		#guaranteed to spawn if possible
+	}
+}
+
+rus_leon_trotsky_character_template = { # Generated by event
+    first_name = Leon_2
+	last_name = Trotsky
+	female = no
+	dna = dna_trotsky
+	historical = yes
+	birth_date = 1879.10.26
+    is_agitator = yes
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	interest_group = ig_intelligentsia
+	ideology = ideology_vanguardist
+	home_region = STATE_CHERSON
+	traits = {
+		innovative
+        charismatic
+        persistent
+	}
+}
+
+rus_jaroslaw_dabrowski_character_template = { # Generated by event
+    first_name = Jaroslaw
+    last_name = Dabrowski
+    female = no
+    dna = dna_jaroslaw_dabrowski
+    historical = yes
+    birth_date = 1836.11.13
+    is_agitator = yes
+    culture = cu:polish
+    religion = rel:catholic
+    interest_group = ig_armed_forces
+    ideology = ideology_radical
+    home_region = STATE_GREATER_POLAND
+    traits = {
+        persistent
+        brave
+        mountain_commander
+    }
+}
+
+rus_lenin_character_template = { # Generated by event
+    first_name = Vladimir
+    last_name = Lenin
+    female = no
+    dna = dna_lenin
+    historical = yes
+    birth_date = 1870.4.22
+    is_agitator = yes
+    culture = cu:russian
+    religion = rel:atheist
+    interest_group = ig_intelligentsia
+    ideology = ideology_vanguardist
+    home_region = STATE_SARATOV
+    traits = {
+        firebrand
+        charismatic
+        reckless
+    }
+}
+
+RUS_alexander_pushkin = { # The father of Russian literature
+    first_name = Alexander
+    last_name = Pushkin
+    dna = dna_aleksandr_pushkin
+    historical = yes
+    birth_date = 1799.6.6 # Gregorian Calendar
+    role = character_role_notable
+    culture = cu:russian
+    interest_group = ig_intelligentsia
+    ideology = ideology_radical
+    home_region = STATE_MOSCOW
+    traits = {
+        romantic
+        aesthete
+        wrathful # in lieu of 'Jealous'
+        literary
+    }
+    on_created = {
+        if ={
+            limit = { year > 1837 } # so, if after his real year of death...
+		    add_trait = wounded # ... he mayhaps survived, but wounded
+        }
+	}
+}
+
+RUS_maria_spiridonova = { # Maria Spiridonova, Narodnik-inspired revolutionary. Tried to assassinate a security official (a Gavriil Luzhenovsky)
+    first_name = Maria
+    last_name = Spiridonova
+    female = yes
+    dna = dna_maria_spiridonova
+    historical = yes
+    birth_date = 1884.10.16 # died, 1941, age 56. CoD: execution (in the Medvedevsky Forest massacre)
+    culture = cu:ashkenazi
+    religion = rel:atheist
+    interest_group = ig_rural_folk # Head of the Peasant Section of the All-Russian Central Executive Committee
+    ideology = ideology_nihilist # Narodnik, really
+    home_region = STATE_TAMBOV
+    traits = {
+        ambitious
+        brave
+        firebrand # a member of the Shesterka ("Six")
+    }
+    agitator_usage = {
+        country_trigger = {
+            has_dlc_feature = ip5_content
+            c:RUS ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1906.1.1
+        latest_usage_date = 1936.1.1 #died 1941, age 56
+        chance = 20
+    }
+}
+
+RUS_alexander_kolchak = { # Alexander Kolchak, Minister of War and Navy of the Provisional Government
+    first_name = Alexander
+    last_name = Kolchak
+    female = no
+    dna = dna_alexander_kolchak
+    historical = yes
+    birth_date = 1874.11.16 # (O.S: 1874.11.4). Died: 1920.2.7, age 45.
+    culture = cu:russian
+    religion = rel:orthodox
+    interest_group = ig_armed_forces
+    ideology = ideology_authoritarian
+    home_region = STATE_INGRIA
+    traits = {
+        arrogant
+		imperious
+		basic_naval_commander
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            has_dlc_feature = ip5_content
+            exists = c:RUS
+            c:RUS ?= THIS
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1904.1.1 # Fought in the Russo-Japanese War (and WWI)
+        latest_usage_date = 1920.1.1 # Leader of the Whites, executed by the Bolsheviks in 1920
+        chance = 50
+    }
+    commander_usage = {
+		country_trigger = {
+            has_dlc_feature = ip5_content
+            exists = c:RUS
+            c:RUS ?= THIS
+        }
+		role = admiral
+		earliest_usage_date = 1904.1.1 # Fought in the Russo-Japanese War (and WWI)
+        latest_usage_date = 1920.1.1 # Leader of the Whites, executed by the Bolsheviks in 1920
+        chance = 50
+	}
+}
+
+RUS_anton_denikin = { # Anton Denikin, Commander-in-Chief of the Armed Forces of South Russia (the unified military armies of the White movement)
+    first_name = Anton
+    last_name = Denikin
+    female = no
+    dna = dna_anton_denikin
+    historical = yes
+    birth_date = 1872.12.16 # (O.S: 1874.12.4). Died: 1947.8.7, age 74.
+    culture = cu:russian # was bi-lingual (Russian and Polish) and probably...
+    religion = rel:orthodox # ... sort of raised partially Catholic too (his father was a devout Russian Orthodox; his mom Polish Catholic)
+    interest_group = ig_armed_forces
+    ideology = ideology_authoritarian
+    home_region = STATE_GREATER_POLAND
+    traits = {
+        brave
+		direct
+        persistent
+		basic_artillery_commander
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            has_dlc_feature = ip5_content
+            exists = c:RUS
+            c:RUS ?= THIS
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1904.1.1 # Fought in the Russo-Japanese War (and WWI)
+        latest_usage_date = 1920.1.1 # # Assumed command of the AFSR in 1919, but went into exile in 1920
+        chance = 50
+    }
+    commander_usage = {
+		country_trigger = {
+            has_dlc_feature = ip5_content
+            exists = c:RUS
+            c:RUS ?= THIS
+        }
+		role = general
+		earliest_usage_date = 1904.1.1 # Fought in the Russo-Japanese War (and WWI)
+        latest_usage_date = 1920.1.1 # # Assumed command of the AFSR in 1919, but went into exile in 1920
+        chance = 50
+	}
+}
+
+RUS_iosif_dzhugashvili = { # Iosif Dzhugashvili (aka Joseph Stalin)
+    first_name = Iosif
+    last_name = Dzhugashvili
+    female = no
+    dna = dna_stalin
+    historical = yes
+    birth_date = 1878.12.18 # Died: 1953, age 74.
+    culture = cu:georgian
+    religion = rel:atheist
+    interest_group = ig_intelligentsia
+    ideology = ideology_vanguardist
+    home_region = STATE_GREATER_CAUCASUS
+    traits = {
+        reckless
+        ruthless
+        social_bandit
+        experienced_political_operator
+    }
+    agitator_usage = {
+        country_trigger = {
+            has_dlc_feature = ip5_content
+            OR = {
+                AND = {
+                    exists = c:RUS
+                    c:RUS ?= THIS
+                }
+                AND = {
+                    exists = c:GEO
+                    c:GEO ?= THIS
+                }
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1898.1.1
+        latest_usage_date = 1936.1.1
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            has_dlc_feature = ip5_content
+            OR = {
+                AND = {
+                    exists = c:RUS
+                    c:RUS ?= THIS
+                }
+                AND = {
+                    exists = c:GEO
+                    c:GEO ?= THIS
+                }
+            }
+            ig:ig_intelligentsia ?= {
+                has_ideology = ideology:ideology_defensist
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1912.1.1 # Marxism and the National Question
+        latest_usage_date = 1936.1.1
+    }
+}
+
+RUS_jozef_pilsudski = { # Józef Piłsudski, Chief of State of Poland
+    first_name = Jozef_2
+    last_name = Pilsudski
+    female = no
+    dna = dna_josef_pilsudski
+    historical = yes
+    birth_date = 1867.12.5 # Died: 1935, age 67
+    culture = cu:polish
+    religion = rel:catholic
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_republican_leader
+    home_region = STATE_LITHUANIA # Zułowo
+    traits = {
+        ambitious
+        persistent
+        charismatic
+        convoy_raider_commander
+    }
+    agitator_usage = {
+        country_trigger = {
+            has_dlc_feature = ip5_content
+            exists = c:RUS
+            c:RUS ?= THIS
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1905.1.1  # influential leader of PPS at this point
+        latest_usage_date = 1935.1.1 # died of liver cancer, 1935, age 67
+        chance = 50
+    }
+}
+
+RUS_grigoriy_rasputin = { # Grigoriy Rasputin, spawned by rasputin.1
+    first_name = Grigoriy
+    last_name = Rasputin
+    dna = dna_rasputin
+    historical = yes
+    birth_date = 1869.1.21
+    role = character_role_notable
+    home_region = STATE_TOBOLSK
+    culture = cu:russian
+    interest_group = ig_rural_folk # very much at odds with the church establishment
+    ideology = ideology_royalist # not perfect
+    traits = {
+        demagogue
+        pious
+        hedonist
+        grifter
+    }
+}
+
+# Source: country_ser.txt
+
+SER_mihailo_obrenovic = {
+    first_name = "Mihailo"
+    last_name = "Obrenovic"
+    dna = dna_mihailo_obrenovic
+    historical = yes
+    birth_date = 1823.1.1
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_landowners
+    ideology = ideology_reformer
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        cautious
+        ambitious
+    }
+     on_created = {
+        set_variable = { name = dynasty_var value = flag:house_obrenovic }
+    }
+}
+
+SER_milos_obrenovic = {
+    # Miloš Obrenovic I, Prince of Serbia
+    first_name = "MiloS_"
+    last_name = "Obrenovic"
+    dna = dna_milos_obrenovic
+    historical = yes
+    age = 56
+    ruler = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_landowners
+    ideology = ideology_authoritarian # man loved himself some autocracy
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        persistent
+    }
+    on_created = {
+        set_variable = is_married
+        set_variable = { name = dynasty_var value = flag:house_obrenovic }
+    }
+}
+
+SER_milan_obrenovic = {
+    first_name = "Milan"
+    last_name = "Obrenovic"
+    dna = dna_milan_obrenovic_ii
+    historical = yes
+    age = 17
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        reserved
+        sickly
+        tuberculosis
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_obrenovic }
+    }
+}
+
+SER_milan_iv_obrenovic = {
+    first_name = "Milan"
+    last_name = "Obrenovic"
+    historical = yes
+    birth_date = 1854.8.22
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_petty_bourgeoisie # Aligned with the Progressive Party
+    ideology = ideology_market_liberal
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        hedonist
+        erudite
+        experienced_diplomat
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_obrenovic }
+    }
+}
+
+SER_alexander_obrenovic = {
+    first_name = "Alexander"
+    last_name = "Obrenovic"
+    historical = yes
+    birth_date = 1876.8.14
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_armed_forces
+    ideology = ideology_authoritarian
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        imperious
+        ambitious
+        basic_diplomat
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_obrenovic }
+    }
+}
+
+SER_alexandar_karadordevic = {
+    first_name = Prince_Aleksandar
+    last_name = Karadordevic
+    dna = dna_alexander_karadordevic
+    historical = yes
+    birth_date = 1806.10.11
+    is_general = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        innovative
+        master_bureaucrat
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_karadordevic }
+    }
+}
+
+SER_petar_i_karadordevic = {
+    first_name = Petar
+    last_name = Karadordevic
+    historical = yes
+    birth_date = 1844.8.14
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        explorer
+        persistent
+        ruthless
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_karadordevic }
+    }
+}
+
+SER_george_karadordevic = {
+    first_name = D_orD_e
+    last_name = Karadordevic
+    historical = yes
+    birth_date = 1887.9.8
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        psychological_affliction
+        wrathful
+        firebrand
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_karadordevic }
+    }
+}
+
+SER_alexander_i_karadordevic = {
+    first_name = Aleksandar
+    last_name = Karadordevic
+    historical = yes
+    birth_date = 1888.12.16
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        reserved
+        brave
+        basic_defensive_strategist
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_karadordevic }
+    }
+}
+
+SER_petar_ii_karadordevic = {
+    first_name = Aleksandar
+    last_name = Karadordevic
+    historical = yes
+    birth_date = 1923.9.6
+    heir = yes
+    culture = cu:serb
+    religion = rel:orthodox
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+    home_region = STATE_WESTERN_SERBIA
+    traits = {
+        charismatic
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_karadordevic }
+    }
+}
+
+# Source: country_spa.txt
+
+spa_isabel_de_borbon_template = { # Isabel II, María Isabel Luisa de Borbón y Borbón-Dos Sicilias
+    first_name = "Isabel"
+    last_name = "de_Borbon"
+    female = yes
+    dna = dna_queen_isabella_02
+    historical = yes
+    birth_date = 1830.10.10
+    heir = yes # Regency at game start
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        trait_child
+    }
+    on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bourbon }
+    }
+}
+
+spa_luisa_fernanda_de_borbon_template = { # María Luisa Fernanda de Borbón y Borbón-Dos Sicilias, Duchess of Montpensier
+    first_name = "Maria_Luisa"
+    last_name = "de_Borbon"
+    female = yes
+    historical = yes
+    birth_date = 1832.1.30
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_intelligentsia # More liberal than Isabella II
+    ideology = ideology_moderate
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        reserved
+        aesthete
+    }
+    on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bourbon }
+    }
+}
+
+spa_isabel_francisca_de_borbon_template = { # María Isabel Francisca de Asís Cristina Francisca de Paula Dominga de Borbón y Borbón, Countess of Girgenti
+    first_name = "Isabel"
+    last_name = "de_Borbon"
+    female = yes
+    historical = yes
+    birth_date = 1851.12.20
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        charismatic
+        basic_diplomat
+    }
+    on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bourbon }
+    }
+}
+
+spa_alfonso_xii_de_borbon_template = { # Alfonso Francisco de Asís Fernando Pío Juan María de la Concepción Gregorio Pelayo de Borbón y Borbón
+    first_name = "Alfonso"
+    last_name = "de_Borbon"
+    dna = dna_king_alfonso_xii_de_borbon
+    historical = yes
+    birth_date = 1857.11.28
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        charismatic
+        cautious
+    }
+    on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bourbon }
+    }
+}
+
+spa_alfonso_xiii_de_borbon_template = { # Alfonso León Fernando María Santiago Isidro Pascual Antón de Borbón y de Habsburgo-Lorena
+    first_name = "Alfonso"
+    last_name = "de_Borbon"
+    dna = dna_king_alfonso_xiii_de_borbon
+    historical = yes
+    birth_date = 1886.5.17
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_armed_forces
+    ideology = ideology_royalist
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        imperious
+        reckless
+    }
+    on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bourbon }
+    }
+}
+
+SPA_baldomero_espartero = {
+	first_name = Baldomero
+	last_name = Espartero
+	dna = dna_baldomero_espartero
+	historical = yes
+	birth_date = 1793.2.27
+	is_general = yes
+	ig_leader = yes
+	commander_rank = commander_rank_3
+	hq = region_southern_europe
+	culture = cu:spanish
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_liberal_leader
+	home_region = STATE_NEW_CASTILE
+	traits = {
+		ambitious
+		charismatic
+        resupply_commander
+        experienced_political_operator # Exceptional amongst Spanish commanders, as he ensured his soldiers actually got paid.
+	}
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_espartero }
+    }
+}
+
+SPA_ramon_maria_narvaez = { # Ramón María Narváez, Duque de Valencia
+    first_name = RamO_n_MarI_a
+    last_name = NarvA_ez
+    historical = yes
+    noble = yes
+    birth_date = 1800.8.5
+    is_general = yes
+	ig_leader = yes
+    commander_rank = default
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate # Remembered as authoritarian for his actions in 1848, which is not a good barometer for his ideology in 1836
+    home_region = STATE_UPPER_ANDALUSIA
+    traits = {
+        experienced_offensive_planner
+        ruthless
+        traditionalist_commander
+    }
+}
+
+# Source: country_spc.txt
+
+SPC_carlos_v_de_borbon_template = { # Carlos María Isidro Benito de Borbón y Borbón-Parma, Count of Molina
+    first_name = "Carlos"
+    last_name = "de_BorbO_n_Anjou"
+    dna = dna_carlos_v_de_borbon
+    historical = yes
+    birth_date = 1788.3.29
+    ruler = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_landowners
+    ideology = ideology_carlist
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        ambitious
+        persistent
+        arrogant
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_bourbon }
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_carlist_2
+        }
+    }
+}
+
+SPC_carlos_vi_de_borbon_template = { # Carlos Luis María de Borbón, Count of Montemolín
+    first_name = "Carlos"
+    last_name = "de_BorbO_n_Anjou"
+    dna = dna_carlos_vi_de_borbon
+    historical = yes
+    birth_date = 1818.1.31
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_armed_forces
+    ideology = ideology_carlist
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        imperious
+        brave
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_bourbon }
+		set_variable = legitimist_leader
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_carlist_2
+        }
+    }
+}
+
+SPC_juan_iii_de_borbon_template = { # Juan Carlos María Isidro de Borbón
+    first_name = "Juan"
+    last_name = "de_Borbon"
+    dna = dna_juan_iii_de_borbon
+    historical = yes
+    birth_date = 1822.5.15
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_devout
+    ideology = ideology_carlist
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        compliant
+        honorable
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_bourbon }
+		set_variable = legitimist_leader
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_carlist_2
+        }
+    }
+}
+
+SPC_carlos_vii_de_borbon_template = { # Carlos de Borbón y Austria-Este
+    first_name = "Carlos"
+    last_name = "de_BorbO_n_Anjou"
+    dna = dna_carlos_vii_de_borbon
+    historical = yes
+    birth_date = 1848.4.3
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_armed_forces
+    ideology = ideology_carlist
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        charismatic
+        brave
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_bourbon }
+		set_variable = legitimist_leader
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_carlist_2
+        }
+    }
+}
+
+SPC_jaime_iii_de_borbon_template = { # Jaime de Borbón y de Borbón-Parma, Duke of Madrid
+    first_name = "Jaime"
+    last_name = "de_Borbon"
+    dna = dna_jaime_iii_de_borbon
+    historical = yes
+    birth_date = 1870.6.27
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_devout
+    ideology = ideology_carlist
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        reserved
+        pious
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_bourbon }
+		set_variable = legitimist_leader
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_carlist_2
+        }
+    }
+}
+
+SPC_alfonso_i_de_borbon_template = { # Alfonso Carlos de Borbón
+    first_name = "Alfonso"
+    last_name = "de_Borbon"
+    dna = dna_alfonso_i_de_borbon
+    historical = yes
+    birth_date = 1849.9.12
+    heir = yes
+    culture = cu:spanish
+    religion = rel:catholic
+    interest_group = ig_devout
+    ideology = ideology_carlist
+    home_region = STATE_NEW_CASTILE
+    traits = {
+        imposing
+        pious
+        persistent
+    }
+    on_created = {
+        set_variable = { name = dynasty_var value = flag:house_bourbon }
+		set_variable = legitimist_leader
+        if = {
+            limit = {
+                owner ?= {
+                    has_technology_researched = corporatism
+                }
+            }
+            set_ideology = ideology:ideology_carlist_2
+        }
+    }
+}
+
+# Source: country_swe.txt
+
+swe_oscar_bernadotte_template = {
+    # Oscar I of Sweden
+    first_name = "Oscar"
+    last_name = "Bernadotte"
+    dna = dna_oscar_bernadotte
+    historical = yes
+    birth_date = 1799.7.4
+    heir = yes
+    culture = cu:french # moved to Stockholm when he was 12
+    religion = rel:protestant
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    home_region = STATE_SVEALAND
+    traits = {
+        romantic
+    }
+    on_created = {
+        set_variable = is_married
+    }
+}
+
+swe_charles_bernadotte_template = {
+    #Charles XV - Carl Ludvig Eugen of Sweden
+    first_name = "Charles"
+    last_name = "Bernadotte"
+    dna = dna_charles_bernadotte
+    historical = yes
+    birth_date = 1826.5.3
+    culture = cu:swedish # born in Stockholm
+    religion = rel:protestant #Charles was Lutheran
+    interest_group = ig_intelligentsia
+    ideology = ideology_utilitarian_leader
+    home_region = STATE_SVEALAND
+    traits = {
+        charismatic
+        innovative
+    }
+}
+
+# Source: country_tur.txt
+
+tur_abdulmecid_osmanoglu_template = {
+	first_name = Abdulmecid
+	last_name = Osmanoglu
+	historical = yes
+	noble = yes
+	birth_date = 1823.4.25
+	heir = yes
+	culture = cu:turkish
+	religion = rel:sunni
+	interest_group = ig_intelligentsia
+	ideology = ideology_modernizer_leader
+	home_region = STATE_EASTERN_THRACE
+	traits = {
+		trait_child
+		aesthete
+	}
+}
+
+tur_abdulaziz_osmanoglu_template = {
+	first_name = Abdulaziz
+	last_name = Osmanoglu
+	female = no
+	dna = dna_sultan_abdulaziz
+	historical = yes
+	birth_date = 1842.2.8
+	heir = yes
+	culture = cu:turkish
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_EASTERN_THRACE
+	traits = {
+		imposing
+		pious
+	}
+	on_created = {
+		set_variable = is_abdulaziz_osmanoglu
+	}
+}
+
+tur_murad_v_osmanoglu_template = {
+	first_name = Murad
+	last_name = Osmanoglu
+	female = no
+	historical = yes
+	birth_date = 1840.9.21
+	heir = yes
+	culture = cu:turkish
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	home_region = STATE_EASTERN_THRACE
+	traits = {
+		psychological_affliction
+		romantic
+	}
+	on_created = {
+		set_variable = is_murad_osmanoglu
+	}
+}
+
+tur_abdulhamid_ii_osmanoglu_template = {
+	first_name = Abdulhamid
+	last_name = Osmanoglu
+	female = no
+	dna = dna_abdul_hamid_ii
+	historical = yes
+	birth_date = 1842.9.21
+	heir = yes
+	culture = cu:turkish
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	home_region = STATE_EASTERN_THRACE
+	traits = {
+		pious
+		persistent
+		basic_diplomat
+	}
+}
+
+tur_reshad_osmanoglu_template = {
+	first_name = Reshad
+	last_name = Osmanoglu
+	female = no
+	historical = yes
+	birth_date = 1844.11.2
+	heir = yes
+	culture = cu:turkish
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_EASTERN_THRACE
+	traits = {
+		reserved
+	}
+}
+
+tur_vahideddin_osmanoglu_template = {
+	first_name = Vahideddin
+	last_name = Osmanoglu
+	female = no
+	historical = yes
+	birth_date = 1861.1.14
+	heir = yes
+	culture = cu:turkish
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_EASTERN_THRACE
+	traits = {
+		pious
+	}
+}
+
+# Source: country_usa.txt
+
+USA_robert_rantoul = {
+	first_name = Robert
+	last_name = Rantoul
+	dna = dna_rantoul
+	historical = yes
+	birth_date = 1805.8.13
+	ig_leader = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	home_region = STATE_MASSACHUSETTS
+	traits = {
+		meticulous
+		basic_political_operator
+		erudite
+	}
+}
+
+# Source: french_dynastic_template.txt
+
+dynamic_legitimist_ruler_template = {
+	first_name = Charles
+	last_name = de_Bourbon
+	female = no
+	ruler = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_landowners
+	ideology = ideology_legitimist
+	traits = {
+	}
+	on_created = {
+		set_variable = legitimist_leader
+		set_variable = { name = dynasty_var value = flag:house_bourbon }
+	}
+}
+
+dynamic_bonapartist_ruler_template = {
+	first_name = Napoleon
+	last_name = Bonaparte
+	female = no
+	ruler = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_armed_forces
+	ideology = ideology_bonapartist
+	traits = {
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bonaparte }
+	}
+}
+
+dynamic_orleanist_ruler_template = {
+	first_name = Louis
+	last_name = d_Orleans
+	female = no
+	ruler = yes
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_orleanist
+	traits = {
+	}
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_orleans }
+	}
+}
+
+# Source: garibaldi_template.txt
+
+garibaldi_character_template = {
+	first_name = Giuseppe
+	last_name = Garibaldi
+	female = no
+	dna = dna_giuseppe_garibaldi
+	historical = yes
+	birth_date = 1807.7.4
+	is_agitator = yes
+	culture = cu:north_italian
+	religion = rel:catholic # He hated the pope, but still identified as a Christian
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_PROVENCE
+	traits = {
+		brave
+		basic_offensive_planner
+	}
+	on_created = {
+		set_global_variable = garibaldi_is_alive_global_var
+	}
+}
+
+# Source: historical_agitators.txt
+
+agitator_louise_michel = {
+	first_name = Louise
+	last_name = Michel
+	female = yes
+	dna = dna_louise_michel
+	historical = yes
+	birth_date = 1830.5.29
+	culture = cu:french
+	religion = rel:catholic
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		brave
+		firebrand
+		persistent
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			c:FRA ?= this
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+		earliest_usage_date = 1869.1.1
+		latest_usage_date = 1890.1.1
+		#guaranteed to spawn if possible
+	}
+}
+
+agitator_ernst_rohm = {
+	first_name = Ernst
+	last_name = RO_hm
+	female = no
+	dna = dna_rohm_ernst
+	historical = yes
+	birth_date = 1887.11.28
+	culture = cu:south_german
+	religion = rel:protestant
+	interest_group = ig_armed_forces
+	ideology = ideology_fascist
+	home_region = STATE_BAVARIA
+	traits = {
+		ambitious
+		bigoted
+		direct
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				is_template_used = agitator_ernst_rohm
+			}
+			OR = {
+				c:BAV ?= this
+				c:SGF ?= this
+				c:GER ?= this
+				c:BOL ?= this # Yes, Bolivia.
+			}
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+                is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_petty_bourgeoisie
+            }
+        }
+		earliest_usage_date = 1917.1.1
+		latest_usage_date = 1935.12.31
+		chance = 50
+	}
+}
+
+agitator_alfred_hugenberg = {
+	first_name = Alfred
+	last_name = Hugenberg
+	female = no
+	dna = dna_hugenberg
+	historical = yes
+	birth_date = 1865.6.19
+	culture = cu:north_german
+	religion = rel:protestant
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_fascist
+	home_region = STATE_HANNOVER
+	traits = {
+		direct
+		literary
+		master_bureaucrat
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				is_template_used = agitator_alfred_hugenberg
+			}
+			OR = {
+				c:HAN ?= this
+				c:NGF ?= this
+				c:GER ?= this
+			}
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+		earliest_usage_date = 1916.1.1
+		latest_usage_date = 1936.1.1
+		chance = 50
+	}
+}
+
+agitator_giovanni_gentile = {
+	first_name = Giovanni
+	last_name = Gentile
+	female = no
+	dna = dna_giovanni_gentille
+	historical = yes
+	birth_date = 1875.5.30
+	culture = cu:south_italian
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_fascist
+	home_region = STATE_SICILY
+	traits = {
+		literary
+		charismatic
+		erudite
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				is_template_used = agitator_giovanni_gentile
+			}
+			OR = {
+				c:ITA ?= this
+				AND = {
+					c:SIC ?= this
+					NOT = { exists = c:ITA }
+				}
+			}
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+	            is_interest_group_type = ig_petty_bourgeoisie
+	            is_interest_group_type = ig_intelligentsia
+	        }
+        }
+		earliest_usage_date = 1922.1.1
+		latest_usage_date = 1935.12.31
+		chance = 50
+	}
+}
+
+agitator_gabriele_d_annunzio = { # Gabriele D'Annunzio
+	first_name = Gabriele
+	last_name = D_Annunzio
+	female = no
+	dna = dna_gabriele_dannunzio
+	historical = yes
+	birth_date = 1863.3.12
+	culture = cu:south_italian
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_fascist
+	home_region = STATE_ABRUZZO
+	traits = {
+		hedonist
+		literary
+		ambitious
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				is_template_used = agitator_gabriele_d_annunzio
+			}
+			OR = {
+				c:ITA ?= this
+				AND = {
+					c:SIC ?= this
+					NOT = { exists = c:ITA }
+				}
+			}
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            OR = {
+			    is_interest_group_type = ig_landowners
+			    is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_intelligentsia
+			}
+        }
+		earliest_usage_date = 1899.1.1
+		latest_usage_date = 1924.1.1
+		#guaranteed to spawn if possible
+	}
+}
+
+agitator_antonio_sardinha = { # António Sardinha, integralist
+	first_name = Antonio_2
+	last_name = Sardinha
+	female = no
+	historical = yes
+	birth_date = 1887.9.9
+	culture = cu:portuguese
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_integralist
+	home_region = STATE_ALENTEJO
+	traits = {
+		direct
+		bigoted
+		ambitious
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				is_template_used = agitator_antonio_sardinha
+			}
+			c:POR ?= this
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+		earliest_usage_date = 1910.1.1
+		latest_usage_date = 1935.12.31 # Historically he died young in 1925 at the age of 37
+		#guaranteed to spawn if possible
+	}
+}
+
+fra_delescluze_character_template = {
+    first_name = Louis_Charles
+    last_name = Delescluze
+    female = no
+    dna = dna_louis_delescluze
+    historical = yes
+    birth_date = 1809.5.25
+    is_agitator = yes
+    culture = cu:french
+    religion = rel:catholic
+    interest_group = ig_intelligentsia
+    ideology = ideology_communist_leader
+    home_region = STATE_NORMANDY
+    traits = {
+        literary
+        inspirational_orator
+        brave
+    }
+}
+
+fra_napoleon_iii_character_template = {
+    first_name = "Louis-Napoleon"
+    last_name = "Bonaparte"
+    female = no
+    dna = dna_emperor_napoleon_03
+    historical = yes
+    birth_date = 1808.4.20
+    is_agitator = yes
+    culture = cu:french
+    religion = rel:catholic
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_bonapartist
+    home_region = STATE_ILE_DE_FRANCE
+    traits = {
+        ambitious
+        experienced_political_operator
+        demagogue
+    }
+	on_created = {
+		set_variable = { name = dynasty_var value = flag:house_bonaparte }
+	}
+}
+
+# Source: ruler_selector_templates.txt
+
+ruler_karl_marx = { # Ruler Marx
+	
+	first_name = Karl
+	last_name = Marx
+	female = no
+	dna = dna_karl_marx
+	historical = yes
+	birth_date = 1818.5.5
+    is_for_ruler_selector = yes
+	ig_leader = yes
+	culture = cu:north_german
+	religion = rel:atheist
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist_leader
+	home_region = STATE_RHINELAND
+	traits = {
+		direct
+		persistent
+		literary
+	}
+	interest_group_leader_usage = {
+        country_trigger = {
+        	NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
+        }
+        interest_group_trigger = {
+        	is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+            NOR = {
+                has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                has_variable = chose_ethno_nationalism
+            }
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1836.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+ruler_abraham_lincoln = {
+	
+	first_name = Abraham
+    last_name = Lincoln
+    female = no
+    dna = dna_abraham_lincoln
+    historical = yes
+    birth_date = 1809.2.12
+    is_for_ruler_selector = yes
+    ig_leader = yes
+    culture = cu:yankee
+    religion = rel:protestant
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_abolitionist
+    home_region = STATE_KENTUCKY
+    traits = {
+        experienced_political_operator
+        inspirational_orator
+        tactful
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_intelligentsia
+            }
+            NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1836.1.1
+        #guaranteed to spawn if possible
+    }
+    on_created = {
+        set_global_variable = ruler_selector_abraham_lincoln
+    }
+}
+
+ruler_ada_lovelace = {
+	
+	first_name = Ada
+    last_name = Lovelace
+    female = yes
+    dna = dna_ada_lovelace
+    historical = yes
+    birth_date = 1815.11.27
+    is_for_ruler_selector = yes
+    ig_leader = yes
+    culture = cu:british
+    religion = rel:protestant
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    home_region = STATE_HOME_COUNTIES
+    traits = {
+        romantic
+        innovative
+        literary
+        cancer
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+            NOR = {
+                has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                has_variable = chose_ethno_nationalism
+            }
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1836.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+# Source: spooky_templates.txt
+
+canonic_count_dracula = {
+	first_name = Vladislas
+	last_name = Dracula
+	female = no
+	dna = dna_dracula
+	historical = yes
+	age = 51
+	is_general = yes
+	culture = cu:szekely
+	religion = rel:orthodox
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_NORTHERN_TRANSYLVANIA
+	traits = {
+		erudite
+		imposing
+		charismatic
+		forest_commander
+	}
+}
+
+exile_count_dracula = {
+	first_name = Ladislaus
+	last_name = De_Ville
+	female = no
+	dna = dna_dracula
+	historical = yes
+	age = 51
+	is_general = yes
+	culture = cu:szekely
+	religion = rel:orthodox
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	home_region = STATE_NORTHERN_TRANSYLVANIA
+	traits = {
+		erudite
+		imposing
+		charismatic
+		forest_commander
+	}
+}
+
+nemo_prince = {
+	first_name = Nemo
+	last_name = Dakkar
+	female = no
+	dna = dna_nemo
+	historical = yes
+	age = 25
+	is_admiral = yes
+	culture = cu:hindustani
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	ideology = ideology_positivist
+	home_region = STATE_BUNDELKHAND
+	traits = {
+		erudite
+		engineer
+		imposing
+		expert_naval_commander
+	}
+}
