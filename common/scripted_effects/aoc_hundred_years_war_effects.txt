@@ -500,20 +500,18 @@ aoc_hyw_ai_actions = {
 			limit = {
 				is_ai = yes
 				aoc_hyw_can_grant_titles = yes
-				gold_reserves >= 52000
-				scope:journal_entry = { "scripted_bar_progress(aoc_hyw_tension)" >= 80 }
+				gold_reserves >= 13000
 			}
-			random = {
-				chance = 15
-				random_direct_subject = {
-					limit = { aoc_hyw_titles_target = yes }
-					save_scope_as = aoc_hyw_ai_titles_target
+			ordered_direct_subject = {
+				limit = {
+					is_subject_type = subject_type_appanage
+					aoc_hyw_titles_target = yes
 				}
-				if = {
-					limit = { exists = scope:aoc_hyw_ai_titles_target }
-					scope:aoc_hyw_ai_titles_target = { save_scope_as = aoc_hyw_target }
-					aoc_hyw_grant_titles_to_subject = yes
-				}
+				order_by = army_size
+				max = 1
+				check_range_bounds = no
+				save_scope_as = aoc_hyw_target
+				c:FRA = { aoc_hyw_grant_titles_to_subject = yes }
 			}
 		}
 	}
@@ -524,17 +522,36 @@ aoc_hyw_ai_actions = {
 aoc_hyw_ai_invite = {
 	if = {
 		limit = { is_ai = yes aoc_hyw_can_invite = yes }
-		random = {
-			chance = 15
-			random_country = {
+		ordered_country = {
+			limit = { aoc_hyw_invite_target = { CROWN = $CROWN$ } }
+			order_by = army_size
+			max = 1
+			check_range_bounds = no
+			save_scope_as = aoc_hyw_target
+			$CROWN$ = { aoc_hyw_invite_country = yes }
+		}
+		if = {
+			limit = { aoc_hyw_can_invite = yes }
+			ordered_country = {
 				limit = {
-					aoc_hyw_invite_target = { CROWN = $CROWN$ }
-					army_size >= 5
+					aoc_hyw_invitation_prospect = { CROWN = $CROWN$ }
+					"relations($CROWN$)" < 50
+					$CROWN$ = {
+						has_diplomatic_relevance = prev
+						NOT = { has_diplomatic_pact = { who = prev type = damage_relations } }
+					}
 				}
-				save_scope_as = aoc_hyw_ai_invite_candidate
-				prev = {
-					scope:aoc_hyw_ai_invite_candidate = { save_scope_as = aoc_hyw_target }
-					aoc_hyw_invite_country = yes
+				order_by = "relations($CROWN$)"
+				max = 1
+				check_range_bounds = no
+				save_scope_as = aoc_hyw_ai_invite_prospect
+				$CROWN$ = {
+					if = {
+						limit = {
+							NOT = { has_diplomatic_pact = { who = scope:aoc_hyw_ai_invite_prospect type = increase_relations is_initiator = yes } }
+						}
+						create_diplomatic_pact = { country = scope:aoc_hyw_ai_invite_prospect type = increase_relations }
+					}
 				}
 			}
 		}

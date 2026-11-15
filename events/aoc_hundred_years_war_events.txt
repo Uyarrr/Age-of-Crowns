@@ -153,6 +153,7 @@ aoc_hyw.320 = {
 		ai_chance = {
 			base = 65
 			modifier = { trigger = { is_subject_of = scope:aoc_hyw_summoning_crown } add = 30 }
+			modifier = { trigger = { var:aoc_hyw_pledged_crown ?= scope:aoc_hyw_summoning_crown } add = 45 }
 			modifier = { trigger = { is_at_war = yes } add = -45 }
 			modifier = { trigger = { in_default = yes } add = -40 }
 		}
@@ -265,7 +266,7 @@ aoc_hyw.340 = {
 			aoc_hyw_invitation_eligible = { CROWN = scope:aoc_hyw_inviting_crown }
 		}
 		ai_chance = {
-			base = 40
+			base = 65
 			modifier = { trigger = { "relations(scope:aoc_hyw_inviting_crown)" >= 75 } add = 40 }
 			modifier = { trigger = { is_at_war = yes } add = -30 }
 		}
@@ -275,7 +276,7 @@ aoc_hyw.340 = {
 	option = {
 		name = aoc_hyw_invitation_decline
 		default_option = yes
-		ai_chance = { base = 60 }
+		ai_chance = { base = 35 }
 		if = {
 			limit = { aoc_hyw_pending_invite_matches = yes }
 			remove_variable = aoc_hyw_pending_invite

@@ -155,6 +155,7 @@ aoc_hyw_influence_target = {
 
 aoc_hyw_titles_target = {
 	aoc_hyw_france_subject = yes
+	aoc_hyw_not_fighting_crown = { CROWN = c:FRA }
 	aoc_hyw_french_supporter = no
 }
 
@@ -189,11 +190,15 @@ aoc_hyw_invite_target = {
 }
 
 aoc_hyw_invitation_eligible = {
+	aoc_hyw_invitation_prospect = { CROWN = $CROWN$ }
+	"relations($CROWN$)" >= 50
+}
+
+aoc_hyw_invitation_prospect = {
 	NOT = { is_country_type = decentralized }
 	aoc_hyw_external_support_valid = { CROWN = $CROWN$ }
 	NOT = { has_variable = aoc_hyw_pledged_crown }
 	NOT = { aoc_hyw_involved = yes }
-	"relations($CROWN$)" >= 50
 	aoc_hyw_inviting_crown_has_interest = { CROWN = $CROWN$ }
 	has_strategic_region_interest_tier = {
 		strategic_region = $CROWN$.capital.region
