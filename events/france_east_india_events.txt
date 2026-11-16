@@ -1,0 +1,17 @@
+﻿namespace = france_east_india
+
+france_east_india.1 = {
+	immediate = { set_variable = aoc_content_seen_france_east_india_1 }
+
+	type = country_event
+	title = france_east_india.1.t
+	desc = france_east_india.1.d
+	flavor = france_east_india.1.f
+	event_image = { video = "votp_french_algeria" }
+	icon = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	immediate = { set_variable = aoc_content_seen_france_east_india_1 }
+
+	option = { name = france_east_india.1.a default_option = yes }
+}

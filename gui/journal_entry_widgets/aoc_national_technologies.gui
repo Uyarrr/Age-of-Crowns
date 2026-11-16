@@ -2,7 +2,7 @@
 types aoc_national_technology_types
 {
 	type aoc_national_technology_card = widget {
-		size = { 164 94 }
+		block "card_size" { size = { 164 94 } }
 		background = { using = entry_bg_fancy_dark }
 		icon = {
 			position = { 8 19 }
@@ -54,6 +54,12 @@ types aoc_national_technology_types
 					}
 				}
 			}
+		}
+		flowcontainer = {
+			position = { 8 94 }
+			direction = vertical
+			spacing = 2
+			block "journal_unlocks" {}
 		}
 	}
 	type aoc_national_age_header = widget {
@@ -156,8 +162,23 @@ flowcontainer = {
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_elan" }
 			}
 			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_french_noble_armies')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_french_noble_armies" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_ancient_french_taxation')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_ancient_french_taxation" }
+			}
+		}
+		flowcontainer = {
+			spacing = 9
+			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_appanage_system')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_appanage_system" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_chateau_de_vincennes')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_chateau_de_vincennes" }
 			}
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_consolidation_of_country')]"
@@ -170,6 +191,21 @@ flowcontainer = {
 				datacontext = "[GetTechnology('france_domaine_royal')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_domaine_royal" }
 			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_french_monarchy')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_french_monarchy" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_hospices_de_beaune')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_hospices_de_beaune" }
+			}
+		}
+		flowcontainer = {
+			spacing = 9
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_royal_construction_commissions')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_construction_commissions" }
+			}
 		}
 		aoc_national_age_header = {
 			blockoverride "age_icon" { texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds" }
@@ -178,12 +214,27 @@ flowcontainer = {
 		flowcontainer = {
 			spacing = 9
 			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_renaissance_gendarmes')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_renaissance_gendarmes" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_royal_exploration_carrack')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_exploration_carrack" }
+			}
+			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_breton_marriage')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_breton_marriage" }
 			}
+		}
+		flowcontainer = {
+			spacing = 9
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_establishment_of_recettes_generales')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_establishment_of_recettes_generales" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_royal_guild_privileges')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_guild_privileges" }
 			}
 		}
 		aoc_national_age_header = {
@@ -193,8 +244,51 @@ flowcontainer = {
 		flowcontainer = {
 			spacing = 9
 			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_atlantic_fisheries')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_atlantic_fisheries" }
+			}
+			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_colonial_ventures')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_colonial_ventures" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_parish_registration')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_parish_registration" }
+			}
+		}
+		aoc_national_age_header = {
+			blockoverride "age_icon" { texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds" }
+			blockoverride "age_name" { text = "aoc_national_tech_era_4" }
+		}
+		flowcontainer = {
+			spacing = 9
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_grasse_perfumed_gloves')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_grasse_perfumed_gloves" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_east_india_company')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_east_india_company" }
+				blockoverride "card_size" { size = { 164 126 } }
+				blockoverride "journal_unlocks" {
+					widget = {
+						size = { 152 30 }
+						icon = { size = { 24 24 } position = { 0 3 } texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds" tooltip = "aoc_content_unlock_je_aoc_england_east_india" }
+						textbox = {
+							position = { 30 0 }
+							size = { 120 30 }
+							text = "aoc_content_unlock_je_aoc_england_east_india_label"
+							tooltip = "aoc_content_unlock_je_aoc_england_east_india"
+							multiline = yes
+							align = left|vcenter|nobaseline
+							using = fontsize_small
+						}
+					}
+				}
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_edict_of_nantes')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_edict_of_nantes" }
 			}
 		}
 		aoc_national_age_header = {
@@ -214,6 +308,17 @@ flowcontainer = {
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_bourbon_absolutism')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_bourbon_absolutism" }
+			}
+		}
+		aoc_national_age_header = {
+			blockoverride "age_icon" { texture = "gfx/interface/icons/invention_icons/age_6_revolutions.dds" }
+			blockoverride "age_name" { text = "aoc_national_tech_era_6" }
+		}
+		flowcontainer = {
+			spacing = 9
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_the_gribeauval_system')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_the_gribeauval_system" }
 			}
 		}
 	}
@@ -346,6 +451,39 @@ flowcontainer = {
 				blockoverride "event_details" { tooltip = "aoc_content_details_national_colonization_3" }
 				blockoverride "event_seen" {
 					visible = "[GetScriptedGui('aoc_content_check_national_colonization_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+		}
+		button_standard = {
+			size = { 510 36 }
+			text = "aoc_france_content_category_other"
+			onclick = "[GetVariableSystem.Toggle('aoc_france_content_collapsed_other')]"
+			icon = {
+				position = { 16 11 }
+				size = { 14 14 }
+				texture = "gfx/interface/politics_view/summary_arrow_right.dds"
+				visible = "[GetVariableSystem.Exists('aoc_france_content_collapsed_other')]"
+				alwaystransparent = yes
+			}
+			icon = {
+				position = { 16 11 }
+				size = { 14 14 }
+				texture = "gfx/interface/politics_view/summary_arrow_down.dds"
+				visible = "[Not(GetVariableSystem.Exists('aoc_france_content_collapsed_other'))]"
+				alwaystransparent = yes
+			}
+		}
+		flowcontainer = {
+			visible = "[Not(GetVariableSystem.Exists('aoc_france_content_collapsed_other'))]"
+			direction = vertical
+			spacing = 4
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds" tooltip = "aoc_content_player_france_east_india_1" }
+				blockoverride "event_title" { text = "france_east_india.1.t" tooltip = "aoc_content_player_france_east_india_1" }
+				blockoverride "event_conditions" { text = "aoc_content_when_france_east_india_1" tooltip = "aoc_content_player_france_east_india_1" }
+				blockoverride "event_details" { tooltip = "aoc_content_details_france_east_india_1" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_france_east_india_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				}
 			}
 		}

@@ -355,10 +355,7 @@ relevant_law_is_critical_to_modernization = { # Takes scope:law
             ROOT = {
                 has_law_or_variant = law_type:law_serfdom
             }
-            OR = {
-                scope:law.type = law_type:law_tenant_farmers
-                scope:law.type = law_type:law_commercialized_agriculture
-            }
+            scope:law.type = law_type:law_tenant_farmers
         }
         AND = {
             ROOT = {
@@ -367,38 +364,6 @@ relevant_law_is_critical_to_modernization = { # Takes scope:law
             OR = {
                 scope:law.type = law_type:law_protectionism
                 scope:law.type = law_type:law_free_trade
-            }
-        }
-        AND = {
-            ROOT = {
-                has_law_or_variant = law_type:law_guild_system
-            }
-            OR = {
-                scope:law.type = law_type:law_combination_acts
-                scope:law.type = law_type:law_anti_strike_laws
-                scope:law.type = law_type:law_corporatized_unions
-                scope:law.type = law_type:law_right_to_associate
-            }
-        }
-        AND = {
-            ROOT = {
-                OR = {
-                    has_law_or_variant = law_type:law_traditionalism
-                    has_law_or_variant = law_type:law_industry_banned
-                }
-            }
-            OR = {
-                scope:law.type = law_type:law_interventionism
-                scope:law.type = law_type:law_laissez_faire
-            }
-        }
-        AND = {
-            ROOT = {
-                has_law_or_variant = law_type:law_peasant_levies
-            }
-            OR = {
-                scope:law.type = law_type:law_professional_army
-                scope:law.type = law_type:law_mass_conscription
             }
         }
         AND = {

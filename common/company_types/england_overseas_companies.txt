@@ -8,7 +8,7 @@ company_aoc_england_east_india = {
  potential = { aoc_england_overseas_country = yes }
  attainable = { has_technology_researched = colonization }
  possible = { has_variable = aoc_england_east_india_chartered }
- prosperity_modifier = { country_convoys_capacity_mult = 0.10
+ prosperity_modifier = { state_trade_capacity_mult = 0.10
  building_cotton_plantation_throughput_add = 0.10 }
 }
 

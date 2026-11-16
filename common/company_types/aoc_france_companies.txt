@@ -1,0 +1,13 @@
+﻿company_aoc_france_east_india = {
+ icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_eic.dds"
+ background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+ flavored_company = yes
+ building_types = { building_cotton_plantation building_dye_plantation }
+ extension_building_types = { building_port building_shipyard }
+ possible_prestige_goods = { prestige_good_calico }
+ potential = { aoc_french_east_india_sponsor = yes }
+ attainable = { has_technology_researched = france_east_india_company }
+ possible = { has_variable = aoc_england_east_india_chartered }
+ prosperity_modifier = { state_trade_capacity_mult = 0.10
+ building_cotton_plantation_throughput_add = 0.10 }
+}

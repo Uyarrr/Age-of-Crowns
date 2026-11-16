@@ -1,0 +1,41 @@
+﻿on_state_owner_change = {
+	on_actions = { aoc_wonders_owner_changed }
+}
+
+# remove_building takes a building key. Keep the registry in step with bg_monuments.
+aoc_wonders_owner_changed = {
+	trigger = {
+		any_scope_building = { is_building_group = bg_monuments }
+	}
+
+	effect = {
+		aoc_remove_transferred_wonder = { WONDER = building_al_qarawiyyin_university }
+		aoc_remove_transferred_wonder = { WONDER = building_angkor_wat }
+		aoc_remove_transferred_wonder = { WONDER = building_big_ben }
+		aoc_remove_transferred_wonder = { WONDER = building_chateau_de_vincennes }
+		aoc_remove_transferred_wonder = { WONDER = building_cristo_redentor }
+		aoc_remove_transferred_wonder = { WONDER = building_eiffel_tower }
+		aoc_remove_transferred_wonder = { WONDER = building_estacion_de_madrid_atocha }
+		aoc_remove_transferred_wonder = { WONDER = building_forbidden_city }
+		aoc_remove_transferred_wonder = { WONDER = building_gran_teatro_de_la_habana }
+		aoc_remove_transferred_wonder = { WONDER = building_hagia_sophia }
+		aoc_remove_transferred_wonder = { WONDER = building_hospices_de_beaune }
+		aoc_remove_transferred_wonder = { WONDER = building_kaiserforum_1 }
+		aoc_remove_transferred_wonder = { WONDER = building_kaiserforum_2 }
+		aoc_remove_transferred_wonder = { WONDER = building_kaiserforum_3 }
+		aoc_remove_transferred_wonder = { WONDER = building_kaiserforum_4 }
+		aoc_remove_transferred_wonder = { WONDER = building_manila_cathedral_monument }
+		aoc_remove_transferred_wonder = { WONDER = building_mosque_of_djenne }
+		aoc_remove_transferred_wonder = { WONDER = building_pena_palace }
+		aoc_remove_transferred_wonder = { WONDER = building_power_bloc_statue }
+		aoc_remove_transferred_wonder = { WONDER = building_sagrada_familia_cathedral_1 }
+		aoc_remove_transferred_wonder = { WONDER = building_sagrada_familia_cathedral_2 }
+		aoc_remove_transferred_wonder = { WONDER = building_sagrada_familia_cathedral_3 }
+		aoc_remove_transferred_wonder = { WONDER = building_saint_basils_cathedral }
+		aoc_remove_transferred_wonder = { WONDER = building_statue_of_liberty }
+		aoc_remove_transferred_wonder = { WONDER = building_taj_mahal }
+		aoc_remove_transferred_wonder = { WONDER = building_vatican_city }
+		aoc_remove_transferred_wonder = { WONDER = building_victoria_terminus }
+		aoc_remove_transferred_wonder = { WONDER = building_white_house }
+	}
+}

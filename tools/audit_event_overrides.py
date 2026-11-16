@@ -80,12 +80,11 @@ def audit(game):
     replaced = set(metadata["game_custom_data"]["replace_paths"])
     errors = []
     for rel, path in game_files.items():
-        if rel in paths:
+        if rel in paths or rel.parent.as_posix() in replaced:
             continue
         if rel.parts[0] == "events":
-            errors.append(f"Vanilla event file without a same-path override: {rel}")
-        if not any(p.as_posix() in replaced for p in (rel, *rel.parents)):
-            paths[rel] = path
+            errors.append(f"Vanilla event file in an unreplaced directory without a same-path override: {rel}")
+        paths[rel] = path
 
     definitions = Counter()
     law_events = set()

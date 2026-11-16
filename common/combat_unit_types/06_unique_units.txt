@@ -57,3 +57,34 @@ combat_unit_type_england_elite_longbowman = {
 		combat_unit_type_light_infantry_6
 	}
 }
+
+combat_unit_type_france_renaissance_gendarmes = {
+	group = combat_unit_group_heavy_cavalry
+	supply_capacity = 30
+	max_manpower = 1000
+	conscript_peasant_levies = no
+
+	unlocking_technologies = { france_renaissance_gendarmes }
+
+	battle_modifier = {
+		unit_offense_add = 34
+		unit_defense_add = 21
+		unit_morale_damage_mult = 0.40
+	}
+
+	upkeep_modifier = {
+		goods_input_weapons_add = 3
+		goods_input_warhorse_add = 1
+		goods_input_ironingot_add = 2
+		goods_input_leather_add = 2
+	}
+
+	combat_unit_image = { texture = "gfx/unit_illustrations/heavy_cavalry_2.dds" }
+
+	upgrades = {
+		combat_unit_type_heavy_cavalry_3
+		combat_unit_type_heavy_cavalry_4
+		combat_unit_type_heavy_cavalry_5
+		combat_unit_type_heavy_cavalry_6
+	}
+}

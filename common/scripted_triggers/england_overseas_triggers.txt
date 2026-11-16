@@ -33,22 +33,70 @@ aoc_england_cape_developed = {
   average_sol >= 10
  }
 }
-aoc_england_indian_presidencies = {
- exists = c:BIC
- has_company = company_type:company_aoc_england_east_india
- c:BIC ?= {
-  is_subject_of = root
-  is_subject_type = subject_type_chartered_company
-  total_population >= 250000
-  gdp >= 500000
- }
- # Count distinct state regions, not multiple owners' fragments of one region.
- any_state_region = {
-  count >= 3
-  is_in_geographic_region = geographic_region_india
-  any_scope_state = { owner = c:BIC num_provinces >= 1 }
- }
+# Country scope. Each charter has its own country tag and company type.
+aoc_east_india_sponsor = {
+	OR = {
+		aoc_england_overseas_country = yes
+		aoc_french_east_india_sponsor = yes
+	}
 }
+
+aoc_french_east_india_sponsor = {
+	c:FRA ?= this
+	is_subject = no
+	is_revolutionary = no
+	is_secessionist = no
+}
+
+aoc_east_india_unlocked = {
+	OR = {
+		AND = {
+			aoc_england_overseas_country = yes
+			custom_tooltip = {
+				text = aoc_england_india_unlocked_tt
+				has_variable = aoc_england_india_unlocked
+			}
+		}
+		AND = {
+			aoc_french_east_india_sponsor = yes
+			has_technology_researched = france_east_india_company
+		}
+	}
+}
+
+aoc_east_india_charter_possible = {
+	OR = {
+		NOT = { exists = c:$TAG$ }
+		c:$TAG$ ?= {
+			is_subject_of = root
+			is_subject_type = subject_type_chartered_company
+		}
+	}
+	OR = {
+		any_scope_state = { is_in_geographic_region = geographic_region_india }
+		c:$TAG$ ?= {
+			is_subject_of = root
+			NOT = { has_variable = aoc_england_east_india_endowed }
+		}
+	}
+}
+
+aoc_east_india_presidencies = {
+	has_company = company_type:$COMPANY$
+	c:$TAG$ ?= {
+		is_subject_of = root
+		is_subject_type = subject_type_chartered_company
+		total_population >= 250000
+		gdp >= 500000
+	}
+	# Count distinct state regions rather than fragments of the same region.
+	any_state_region = {
+		count >= 3
+		is_in_geographic_region = geographic_region_india
+		any_scope_state = { owner = c:$TAG$ num_provinces >= 1 }
+	}
+}
+
 aoc_england_naval_leadership = {
  naval_power_projection > 0
  NOT = { any_country = { count >= 3 naval_power_projection > root.naval_power_projection } }

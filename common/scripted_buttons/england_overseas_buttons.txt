@@ -61,77 +61,38 @@ aoc_england_charter_cape = {
 }
 
 aoc_england_charter_east_india = {
- name = aoc_england_charter_east_india
- desc = aoc_england_charter_east_india_desc
- visible = { aoc_england_overseas_country = yes }
- cooldown = { days = 30 }
- possible = {
-  has_technology_researched = colonization
-  has_variable = aoc_england_india_unlocked
-  is_at_war = no
-  is_diplomatic_play_committed_participant = no
-  OR = { NOT = { exists = c:BIC } c:BIC ?= { is_subject_of = root is_subject_type = subject_type_chartered_company } }
-  OR = {
-   any_scope_state = { is_in_geographic_region = geographic_region_india }
-   AND = { exists = c:BIC c:BIC ?= { is_subject_of = root NOT = { has_variable = aoc_england_east_india_endowed } } }
-  }
- }
- ai_chance = { value = 100 }
- effect = {
-  save_scope_as = aoc_england_overlord
-  religion = { save_scope_as = aoc_england_overlord_religion }
-  if = {
-   limit = { NOT = { exists = c:BIC } }
-   random_scope_state = { limit = { is_in_geographic_region = geographic_region_india } save_scope_as = aoc_england_charter_state }
-   create_country = {
-    tag = BIC
-    origin = root
-    state = scope:aoc_england_charter_state
-    on_created = {
-     aoc_england_overseas_identity_effect = yes
-     set_country_type = company
-     activate_law = law_type:law_presidential_republic
-     activate_law = law_type:law_oligarchy
-    }
-   }
-   create_diplomatic_pact = { country = c:BIC type = chartered_company }
-  }
-  every_scope_state = {
-   limit = { is_in_geographic_region = geographic_region_india }
-   effect_destroy_colonial_office = yes
-   set_state_owner = c:BIC
-  }
+	name = aoc_england_charter_east_india
+	desc = aoc_england_charter_east_india_desc
+	visible = { aoc_east_india_sponsor = yes }
+	cooldown = { days = 30 }
 
- c:BIC = { aoc_copy_country_identity_effect = { SOURCE = scope:aoc_england_overlord } }
- set_variable = aoc_england_east_india_chartered
- aoc_england_charter_company_slots_effect = yes
- if = { limit = { NOT = { has_company = company_type:company_aoc_england_east_india } } add_company = company_type:company_aoc_england_east_india }
- company:company_aoc_england_east_india = { add_owned_country = c:BIC }
+	possible = {
+		aoc_east_india_unlocked = yes
+		has_technology_researched = colonization
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+		OR = {
+			AND = {
+				aoc_england_overseas_country = yes
+				aoc_east_india_charter_possible = { TAG = BIC }
+			}
+			AND = {
+				aoc_french_east_india_sponsor = yes
+				aoc_east_india_charter_possible = { TAG = FIC }
+			}
+		}
+	}
 
-  c:BIC = {
-   if = {
-    limit = { root = { NOT = { has_variable = aoc_england_east_india_endowed } } }
-    root = { set_variable = aoc_england_east_india_endowed }
-    set_variable = aoc_england_east_india_endowed
-    capital = {
-     create_building = { building = building_textile_mill level = 2 reserves = 0.5 }
-     create_building = { building = building_cotton_plantation add_ownership = { company = { type = company_aoc_england_east_india country = scope:aoc_england_overlord levels = 2 } } reserves = 0.5 }
-    }
-    random_scope_state = {
-     limit = { is_coastal = yes }
-     create_building = { building = building_port level = 1 reserves = 0.5 activate_production_methods = { pm_building_port_main_1 } }
-    }
-   }
-  }
-
-  s:STATE_GUJARAT = { add_claim = c:BIC }
-  s:STATE_BOMBAY = { add_claim = c:BIC }
-  s:STATE_MADRAS = { add_claim = c:BIC }
-  s:STATE_WEST_BENGAL = { add_claim = c:BIC }
-  s:STATE_EAST_BENGAL = { add_claim = c:BIC }
-  s:STATE_CIRCARS = { add_claim = c:BIC }
-  custom_tooltip = aoc_england_charter_east_india_tt
- }
+	ai_chance = { value = 100 }
+	effect = {
+		if = {
+			limit = { aoc_england_overseas_country = yes }
+			aoc_charter_east_india = { TAG = BIC COMPANY = company_aoc_england_east_india }
+		}
+		else = {
+			aoc_charter_east_india = { TAG = FIC COMPANY = company_aoc_france_east_india }
+		}
+	}
 }
 
 aoc_england_charter_australia = {

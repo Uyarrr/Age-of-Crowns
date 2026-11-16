@@ -168,6 +168,73 @@ for (const file of files('localization/english', '.yml')
 		english.set(match[1], match[2]);
 	}
 }
+
+const scriptedJournalGates = new Map(definitions('common/scripted_triggers')
+	.map(node => [node.key, node.value]));
+const displayedTechs = new Set([...allGrants.keys(), ...tech.map(node => node.key)]);
+const journalUnlocks = new Map();
+
+function journalGateTechnologies(nodes, visited = new Set()) {
+	const keys = [];
+	for (const { key, op, value } of nodes ?? []) {
+		if (op !== '=') continue;
+		if (key === 'has_technology_researched' && displayedTechs.has(value)) {
+			keys.push(value);
+		} else if (['AND', 'OR', 'hidden_trigger', 'custom_tooltip'].includes(key) && Array.isArray(value)) {
+			keys.push(...journalGateTechnologies(value, visited));
+		} else if (value === 'yes' && scriptedJournalGates.has(key) && !visited.has(key)) {
+			keys.push(...journalGateTechnologies(scriptedJournalGates.get(key), new Set([...visited, key])));
+		}
+	}
+	return keys;
+}
+
+const journalDefinitions = new Map();
+function addJournalUnlock(techKey, journal) {
+	if (!journalUnlocks.has(techKey)) journalUnlocks.set(techKey, new Map());
+	journalUnlocks.get(techKey).set(journal.key, journal);
+}
+
+for (const journal of definitions('common/journal_entries')) {
+	const icon = field(journal, 'icon');
+	if (typeof icon !== 'string' || !english.has(journal.key)) continue;
+	const display = { key: journal.key, icon };
+	journalDefinitions.set(journal.key, display);
+	for (const key of journalGateTechnologies(field(journal, 'possible'))) {
+		addJournalUnlock(key, display);
+	}
+}
+
+for (const technology of allTech.filter(node => displayedTechs.has(node.key))) {
+	for (const effect of field(technology, 'on_researched') ?? []) {
+		if (effect.key !== 'add_journal_entry' || !Array.isArray(effect.value)) continue;
+		const journal = journalDefinitions.get(field(effect, 'type'));
+		if (journal) addJournalUnlock(technology.key, journal);
+	}
+}
+
+function journalUnlockOverrides(techKey) {
+	const journals = journalUnlocks.get(techKey);
+	if (!journals?.size) return '';
+	return `
+				blockoverride "card_size" { size = { 164 ${94 + 32 * journals.size} } }
+				blockoverride "journal_unlocks" {
+${[...journals.values()].map(({ key, icon }) => `					widget = {
+						size = { 152 30 }
+						icon = { size = { 24 24 } position = { 0 3 } texture = "${icon}" tooltip = "aoc_content_unlock_${key}" }
+						textbox = {
+							position = { 30 0 }
+							size = { 120 30 }
+							text = "aoc_content_unlock_${key}_label"
+							tooltip = "aoc_content_unlock_${key}"
+							multiline = yes
+							align = left|vcenter|nobaseline
+							using = fontsize_small
+						}
+					}`).join('\n')}
+				}`;
+}
+
 const allEventDefinitions = definitions('events').filter(node => field(node, 'type') === 'country_event'
 	&& field(node, 'hidden') !== 'yes' && english.has(field(node, 'title')));
 const visibleEventIds = new Set(allEventDefinitions.map(node => node.key));
@@ -258,7 +325,7 @@ for (const index of ages.keys()) {
 					visible = yes
 					texture = "gfx/interface/icons/war_goals/make_dominion.dds"
 					tooltip = "aoc_content_unlock_english_dominion"
-				}` : ''}
+				}` : ''}${journalUnlockOverrides(key)}
 			}`);
 		techRows.push(['\t\tflowcontainer = {', '\t\t\tspacing = 9', ...row, '\t\t}'].join('\n'));
 	}
@@ -563,7 +630,7 @@ const nationalWidget = ([nation, { tech: nationTech }]) => {
 			spacing = 9
 ${cards.slice(start, start + 3).map(({ key }) => `			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('${key}')]"
-				blockoverride "research_hint" { tooltip = "aoc_${nation}_unlock_${key}" }
+				blockoverride "research_hint" { tooltip = "aoc_${nation}_unlock_${key}" }${journalUnlockOverrides(key)}
 			}`).join('\n')}
 		}`);
 		}
@@ -614,6 +681,8 @@ const nationalGui = nationalTemplate.replace('# NATION_WIDGETS', otherNations.ma
 const nationalLoc = '\uFEFFl_english:\n'
 	+ ' aoc_national_no_technologies: "No national technologies have been defined yet."\n'
 	+ ' aoc_national_no_events: "No national events have been added yet."\n'
+	+ [...new Set([...journalUnlocks.values()].flatMap(journals => [...journals.keys()]))].sort()
+		.map(key => ` aoc_content_unlock_${key}_label: "Unlocks $${key}$"\n aoc_content_unlock_${key}: "Unlocks $${key}$ Journal Entry"\n`).join('')
 	+ ' aoc_national_event_conditions: "See the information icon for conditions and effects."\n'
 	+ ages.map((age, index) => ` aoc_national_tech_era_${index + 1}: "Age of ${age[0].toUpperCase() + age.slice(1)}"`).join('\n') + '\n'
 	+ otherNations.flatMap(([nation, { tech: nationTech }]) => {

@@ -4,9 +4,6 @@ aus_integrate_crown_lands_decision = {
 	is_shown = {
 		c:AUS ?= this
 		NOT = {
-			has_journal_entry = je_matter_of_hungary
-		}
-		NOT = {
 			has_variable = crownlands_annexed_var
 		}
 		any_subject_or_below = {

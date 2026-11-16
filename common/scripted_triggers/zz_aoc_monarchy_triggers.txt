@@ -1,0 +1,8 @@
+﻿# The vanilla trigger is used by regencies and personal unions.
+country_has_monarchy_law = {
+	OR = {
+		has_law = law_type:law_monarchy
+		has_law = law_type:law_social_monarchy
+		has_law = law_type:law_french_monarchy
+	}
+}

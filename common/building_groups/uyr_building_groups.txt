@@ -668,6 +668,7 @@ bg_monuments = {
 	lens = special
 	inheritable_construction = yes
 	economy_of_scale = no
+	ignores_productivity_when_hiring = yes
 
 	default_building = building_eiffel_tower # TODO PRCAL-42162 - remove this, it's only here to avoid read errors
 }

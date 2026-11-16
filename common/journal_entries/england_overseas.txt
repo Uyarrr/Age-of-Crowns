@@ -57,9 +57,18 @@ je_aoc_england_east_india = {
 	group = je_group_historical_content
 	should_be_pinned_by_default_involved = yes
 	is_shown_in_lobby = { OR = { c:ENG ?= this was_formed_from = ENG } }
-	is_shown_when_inactive = { aoc_england_overseas_country = yes }
-	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_east_india_completed } } custom_tooltip = { text = aoc_england_india_unlocked_tt has_variable = aoc_england_india_unlocked } }
+	is_shown_when_inactive = { aoc_east_india_sponsor = yes }
+	possible = { hidden_trigger = { NOT = { has_variable = aoc_england_east_india_completed } } aoc_east_india_sponsor = yes aoc_east_india_unlocked = yes }
 	scripted_button = aoc_england_charter_east_india
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { aoc_england_overseas_country = yes }
+				desc = je_aoc_england_east_india_status
+			}
+			triggered_desc = { desc = je_aoc_france_east_india_status }
+		}
+	}
 	outcome = {
 		header = je_standard_completion_header
 		effect_header = je_standard_on_completion_header
@@ -67,15 +76,39 @@ je_aoc_england_east_india = {
 		conclusion_desc = je_aoc_england_east_india_completed_desc
 		trigger = {
 			custom_tooltip = { text = aoc_england_indian_presidencies_tt
-				aoc_england_indian_presidencies = yes
+				OR = {
+					AND = {
+						aoc_england_overseas_country = yes
+						aoc_east_india_presidencies = { TAG = BIC COMPANY = company_aoc_england_east_india }
+					}
+					AND = {
+						aoc_french_east_india_sponsor = yes
+						aoc_east_india_presidencies = { TAG = FIC COMPANY = company_aoc_france_east_india }
+					}
+				}
 			}
 		}
 		effect = {
 			set_variable = aoc_england_east_india_completed
-			add_modifier = { name = aoc_england_india_trade years = 25 } set_variable = aoc_england_australasia_unlocked trigger_event = { id = england_overseas.3 popup = yes }
+			add_modifier = { name = aoc_england_india_trade years = 25 }
+			if = {
+				limit = { aoc_england_overseas_country = yes }
+				set_variable = aoc_england_australasia_unlocked
+				trigger_event = { id = england_overseas.3 popup = yes }
+			}
+			else = {
+				c:FIC = { save_scope_as = aoc_french_indian_company }
+				trigger_event = { id = france_east_india.1 popup = yes }
+			}
 		}
 		event_outcome_desc = {
-			first_valid = { triggered_desc = { desc = aoc_england_east_india_outcome } }
+			first_valid = {
+				triggered_desc = {
+					trigger = { aoc_england_overseas_country = yes }
+					desc = aoc_england_east_india_outcome
+				}
+				triggered_desc = { desc = aoc_france_east_india_outcome }
+			}
 		}
 	}
 
@@ -83,7 +116,7 @@ je_aoc_england_east_india = {
 		flags = { hidden invalid_outcome }
 		conclusion_desc = je_standard_failure_conclusion_desc
 		trigger = {
-			NOT = { aoc_england_overseas_country = yes }
+			NOT = { aoc_east_india_sponsor = yes }
 		}
 		effect = {
 

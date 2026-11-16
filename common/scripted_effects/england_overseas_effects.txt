@@ -71,7 +71,19 @@ aoc_england_new_zealand_census_effect = {
 # Reconcile charter slots when a subject is lost or regained.
 aoc_england_charter_company_slots_effect = {
  if = {
-  limit = { has_variable = aoc_england_east_india_chartered exists = c:BIC c:BIC ?= { is_subject_of = root is_subject_type = subject_type_chartered_company } }
+  limit = {
+   has_variable = aoc_england_east_india_chartered
+   OR = {
+    AND = {
+     aoc_england_overseas_country = yes
+     c:BIC ?= { is_subject_of = root is_subject_type = subject_type_chartered_company }
+    }
+    AND = {
+     aoc_french_east_india_sponsor = yes
+     c:FIC ?= { is_subject_of = root is_subject_type = subject_type_chartered_company }
+    }
+   }
+  }
   if = { limit = { NOT = { has_modifier = aoc_england_east_india_company_slot } } add_modifier = { name = aoc_england_east_india_company_slot } }
  }
  else = { remove_modifier = aoc_england_east_india_company_slot }
@@ -80,4 +92,61 @@ aoc_england_charter_company_slots_effect = {
   if = { limit = { NOT = { has_modifier = aoc_england_hudson_bay_company_slot } } add_modifier = { name = aoc_england_hudson_bay_company_slot } }
  }
  else = { remove_modifier = aoc_england_hudson_bay_company_slot }
+}
+
+# Country scope. The charter variables retain their original keys for existing campaigns.
+aoc_charter_east_india = {
+  save_scope_as = aoc_england_overlord
+  religion = { save_scope_as = aoc_england_overlord_religion }
+  if = {
+   limit = { NOT = { exists = c:$TAG$ } }
+   random_scope_state = { limit = { is_in_geographic_region = geographic_region_india } save_scope_as = aoc_england_charter_state }
+   create_country = {
+    tag = $TAG$
+    origin = root
+    state = scope:aoc_england_charter_state
+    on_created = {
+     aoc_england_overseas_identity_effect = yes
+     set_country_type = company
+     activate_law = law_type:law_presidential_republic
+     activate_law = law_type:law_oligarchy
+    }
+   }
+   create_diplomatic_pact = { country = c:$TAG$ type = chartered_company }
+  }
+  every_scope_state = {
+   limit = { is_in_geographic_region = geographic_region_india }
+   effect_destroy_colonial_office = yes
+   set_state_owner = c:$TAG$
+  }
+
+ c:$TAG$ = { aoc_copy_country_identity_effect = { SOURCE = scope:aoc_england_overlord } }
+ set_variable = aoc_england_east_india_chartered
+ aoc_england_charter_company_slots_effect = yes
+ if = { limit = { NOT = { has_company = company_type:$COMPANY$ } } add_company = company_type:$COMPANY$ }
+ company:$COMPANY$ = { add_owned_country = c:$TAG$ }
+
+  c:$TAG$ = {
+   if = {
+    limit = { root = { NOT = { has_variable = aoc_england_east_india_endowed } } }
+    root = { set_variable = aoc_england_east_india_endowed }
+    set_variable = aoc_england_east_india_endowed
+    capital = {
+     create_building = { building = building_textile_mill level = 2 reserves = 0.5 }
+     create_building = { building = building_cotton_plantation add_ownership = { company = { type = $COMPANY$ country = scope:aoc_england_overlord levels = 2 } } reserves = 0.5 }
+    }
+    random_scope_state = {
+     limit = { is_coastal = yes }
+     create_building = { building = building_port level = 1 reserves = 0.5 activate_production_methods = { pm_building_port_main_1 } }
+    }
+   }
+  }
+
+  s:STATE_GUJARAT = { add_claim = c:$TAG$ }
+  s:STATE_BOMBAY = { add_claim = c:$TAG$ }
+  s:STATE_MADRAS = { add_claim = c:$TAG$ }
+  s:STATE_WEST_BENGAL = { add_claim = c:$TAG$ }
+  s:STATE_EAST_BENGAL = { add_claim = c:$TAG$ }
+  s:STATE_CIRCARS = { add_claim = c:$TAG$ }
+  custom_tooltip = aoc_england_charter_east_india_tt
 }

@@ -1,0 +1,41 @@
+﻿building_hospices_de_beaune = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/hospital_uyr.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = { pmg_hospices_de_beaune }
+	unlocking_technologies = { france_hospices_de_beaune }
+	required_construction = construction_cost_monument
+
+	potential = { state_region = s:STATE_BURGUNDY }
+	possible = {
+		owner = { c:FRA ?= this }
+		this = p:x8C3297.state
+	}
+
+	ai_value = 100
+}
+
+building_chateau_de_vincennes = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/council_hall_uyr.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = { pmg_chateau_de_vincennes }
+	unlocking_technologies = { france_chateau_de_vincennes }
+	required_construction = construction_cost_monument
+
+	potential = { state_region = s:STATE_ILE_DE_FRANCE }
+	possible = {
+		owner = { c:FRA ?= this }
+		this = p:x906000.state
+	}
+
+	ai_value = 100
+}

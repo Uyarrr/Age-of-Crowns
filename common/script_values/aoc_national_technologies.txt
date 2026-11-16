@@ -4,10 +4,25 @@ aoc_france_researched = {
 	if = { limit = { has_technology_researched = france_elan } add = 1 }
 	if = { limit = { has_technology_researched = france_consolidation_of_country } add = 1 }
 	if = { limit = { has_technology_researched = france_appanage_system } add = 1 }
+	if = { limit = { has_technology_researched = france_royal_construction_commissions } add = 1 }
 	if = { limit = { has_technology_researched = france_establishment_of_recettes_generales } add = 1 }
 	if = { limit = { has_technology_researched = france_breton_marriage } add = 1 }
+	if = { limit = { has_technology_researched = france_royal_guild_privileges } add = 1 }
 	if = { limit = { has_technology_researched = france_colonial_ventures } add = 1 }
+	if = { limit = { has_technology_researched = france_atlantic_fisheries } add = 1 }
+	if = { limit = { has_technology_researched = france_grasse_perfumed_gloves } add = 1 }
+	if = { limit = { has_technology_researched = france_edict_of_nantes } add = 1 }
 	if = { limit = { has_technology_researched = france_manufacture_royale_des_glaces } add = 1 }
 	if = { limit = { has_technology_researched = france_bourbon_absolutism } add = 1 }
 	if = { limit = { has_technology_researched = france_académie_royale_des_sciences } add = 1 }
+	if = { limit = { has_technology_researched = france_the_gribeauval_system } add = 1 }
+	if = { limit = { has_technology_researched = france_french_monarchy } add = 1 }
+	if = { limit = { has_technology_researched = france_ancient_french_taxation } add = 1 }
+	if = { limit = { has_technology_researched = france_french_noble_armies } add = 1 }
+	if = { limit = { has_technology_researched = france_hospices_de_beaune } add = 1 }
+	if = { limit = { has_technology_researched = france_chateau_de_vincennes } add = 1 }
+	if = { limit = { has_technology_researched = france_renaissance_gendarmes } add = 1 }
+	if = { limit = { has_technology_researched = france_royal_exploration_carrack } add = 1 }
+	if = { limit = { has_technology_researched = france_parish_registration } add = 1 }
+	if = { limit = { has_technology_researched = france_east_india_company } add = 1 }
 }

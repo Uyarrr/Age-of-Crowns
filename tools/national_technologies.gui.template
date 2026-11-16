@@ -2,7 +2,7 @@
 types aoc_national_technology_types
 {
 	type aoc_national_technology_card = widget {
-		size = { 164 94 }
+		block "card_size" { size = { 164 94 } }
 		background = { using = entry_bg_fancy_dark }
 		icon = {
 			position = { 8 19 }
@@ -54,6 +54,12 @@ types aoc_national_technology_types
 					}
 				}
 			}
+		}
+		flowcontainer = {
+			position = { 8 94 }
+			direction = vertical
+			spacing = 2
+			block "journal_unlocks" {}
 		}
 	}
 	type aoc_national_age_header = widget {

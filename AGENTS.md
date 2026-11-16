@@ -1,5 +1,9 @@
 # Age of Crowns modding notes
 
+## Victoria 3 metadata replacement paths
+
+- In `.metadata/metadata.json`, list every directory being replaced in `game_custom_data.replace_paths`. Victoria 3 applies each entry only to files directly inside that directory. Keep `events` and each vanilla event subdirectory listed explicitly. Before deleting a same-path override, verify that its immediate parent directory is listed, including for DLC content.
+
 ## Journal entries in the lobby
 
 - Every journal entry with `is_shown_in_lobby` needs an English `<journal_entry_key>_lobby` localization. Keep it to one or two concise, distinct sentences that introduce the situation and objective without repeating the full journal description.
@@ -34,3 +38,7 @@
 - Pin the global Church journal for Catholic members with `should_be_pinned_by_default_involved = yes` in `common/journal_entries/aoc_catholic_church.txt`.
 - The Money tooltip splits Catholic Tithe out of Additional Expenses. Keep the actual budget charge, the displayed amount, and the Church ledger tied to the same stored weekly rate. Hiding the timed modifier from the country panel is a UI change.
 - In the Money tooltip, close all formatting around the amount before rendering the title. The tithe row uses `#tooltippable_concept $aoc_church_budget_tithe$#!` for the vanilla gold style. Check the rendered tooltip in game after changing markup.
+
+## Historical localization
+
+- Write concise, period-appropriate descriptions in the style of Victoria 3. Give technologies, laws, units, and buildings distinct historical flavor. Leave mechanical effects to their tooltips.

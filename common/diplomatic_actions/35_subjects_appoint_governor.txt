@@ -55,7 +55,6 @@ da_appoint_colonial_governor = {
 					}
 					OR = {
 						is_subject_type = subject_type_colony
-						is_subject_type = subject_type_puppet
 						is_subject_type = subject_type_dominion
 						is_subject_type = subject_type_vassal
 						is_subject_type = subject_type_crown_land
@@ -68,7 +67,6 @@ da_appoint_colonial_governor = {
 					is_country_type = unrecognized
 					OR = {
 						is_subject_type = subject_type_colony
-						is_subject_type = subject_type_puppet
 						is_subject_type = subject_type_dominion
 						is_subject_type = subject_type_vassal
 						is_subject_type = subject_type_crown_land

@@ -2,7 +2,7 @@
 types aoc_england_content_types
 {
 	type aoc_england_technology_card = widget {
-		size = { 164 94 }
+		block "card_size" { size = { 164 94 } }
 		background = { using = entry_bg_fancy_dark }
 
 		icon = {
@@ -63,6 +63,12 @@ types aoc_england_content_types
 			visible = no
 			using = tooltip_se
 			block "subject_unlock" {}
+		}
+		flowcontainer = {
+			position = { 8 94 }
+			direction = vertical
+			spacing = 2
+			block "journal_unlocks" {}
 		}
 	}
 

@@ -8,6 +8,7 @@ const game = process.argv[2] || 'C:/Program Files (x86)/Steam/steamapps/common/V
 const read = p => fs.readFileSync(path.join(root, p), 'utf8').replace(/^\uFEFF/, '');
 const files = [
  'common/company_types/england_overseas_companies.txt',
+ 'common/company_types/aoc_france_companies.txt',
  'common/geographic_regions/england_overseas_regions.txt',
  'common/journal_entries/england_overseas.txt',
  'common/scripted_buttons/england_overseas_buttons.txt',
@@ -15,7 +16,8 @@ const files = [
  'common/scripted_effects/england_overseas_effects.txt',
  'common/scripted_triggers/england_overseas_triggers.txt',
  'common/static_modifiers/england_overseas_modifiers.txt',
- 'events/england_overseas_events.txt'
+ 'events/england_overseas_events.txt',
+ 'events/france_east_india_events.txt'
 ];
 function parse(text, file) {
  const tokens = [...text.matchAll(/#[^\r\n]*|"(?:\\.|[^"\\])*"|\?=|>=|<=|!=|[{}=<>]|[^\s{}=<>!?"#]+/g)]
@@ -82,14 +84,16 @@ function existsSymbol(dir, key) {
  assert(directoryCache.get(cacheKey).has(key), `Undefined ${dir}: ${key}`);
 }
 const localizationPath = 'localization/english/england_overseas_l_english.yml';
-const rawLoc = fs.readFileSync(path.join(root,localizationPath));
-assert.deepEqual([...rawLoc.subarray(0,3)], [239,187,191], 'Localization needs a UTF-8 BOM');
 const localization = new Map();
-for (const line of read(localizationPath).split(/\r?\n/).slice(1).filter(Boolean)) {
- const m = line.match(/^ ([\w.]+): ("(?:\\.|[^"\\])*")$/);
- assert(m, `Malformed localization: ${line}`);
- assert(!localization.has(m[1]), `Duplicate localization: ${m[1]}`);
- localization.set(m[1], JSON.parse(m[2]));
+for (const file of [localizationPath, 'localization/english/aoc_france_content_l_english.yml']) {
+ const rawLoc = fs.readFileSync(path.join(root, file));
+ assert.deepEqual([...rawLoc.subarray(0,3)], [239,187,191], `${file}: Localization needs a UTF-8 BOM`);
+ for (const line of read(file).split(/\r?\n/).slice(1).filter(Boolean)) {
+  const m = line.match(/^ ([\w.]+): ("(?:\\.|[^"\\])*")$/);
+  assert(m, `Malformed localization: ${line}`);
+  assert(!localization.has(m[1]), `Duplicate localization: ${m[1]}`);
+  localization.set(m[1], JSON.parse(m[2]));
+ }
 }
 const requireLoc = key => assert(localization.has(key), `Missing English localization: ${key}`);
 const referenceTypes = {
@@ -103,8 +107,12 @@ const referenceTypes = {
 let assetCount = 0, referenceCount = 0;
 for (const [f, nodes] of trees) walk(nodes, (n, parents) => {
  if (typeof n.value === 'string') {
-  if (referenceTypes[n.key]) { existsSymbol(referenceTypes[n.key],n.value); referenceCount++; }
-  if (['text','title','desc','flavor'].includes(n.key) && /^(aoc_england_|england_overseas\.)/.test(n.value)) requireLoc(n.value);
+  if (referenceTypes[n.key] && !n.value.startsWith('$')) { existsSymbol(referenceTypes[n.key],n.value); referenceCount++; }
+  if (['TAG','COMPANY'].includes(n.key)) {
+   existsSymbol(n.key === 'TAG' ? 'common/country_definitions' : 'common/company_types', n.value);
+   referenceCount++;
+  }
+  if (['text','title','desc','flavor'].includes(n.key) && /^(aoc_england_|england_overseas\.|france_east_india\.)/.test(n.value)) requireLoc(n.value);
   if (n.key === 'name' && parents.at(-1)?.startsWith('aoc_england_charter_')) requireLoc(n.value);
   if (n.key === 'scripted_button') assert(definitions.has(n.value), `Missing button ${n.value}`);
   if (n.key === 'id' && parents.at(-1) === 'trigger_event') assert(definitions.has(n.value), `Missing event ${n.value}`);
@@ -143,9 +151,9 @@ for (const j of journals) {
  }
  assert.equal(dds.length,87536+(format==='DX10'?20:0), `${icon}: mip payload length`);
  const lobby=one(j.value,'is_shown_in_lobby');
- assert(JSON.stringify(lobby).includes('c:ENG') && JSON.stringify(lobby).includes('c:GBR'), `${j.key}: England and Britain lobby visibility`);
+ assert(JSON.stringify(lobby).includes('c:ENG') && JSON.stringify(lobby).includes('was_formed_from'), `${j.key}: England and successor lobby visibility`);
  assert(!one(j.value,'possible').value.some(n=>n.key==='aoc_england_overseas_country'), `${j.key}: redundant visible country eligibility`);
- for (const suffix of ['', '_reason', '_status']) requireLoc(j.key+suffix);
+ for (const suffix of ['', '_lobby', '_reason', '_status']) requireLoc(j.key+suffix);
  const done = j.key.replace('je_aoc_england_','aoc_england_')+'_completed';
  assert(JSON.stringify(one(j.value,'possible')).includes(done), `${j.key}: no completion lock`);
  walk(j.value, n => {
@@ -161,13 +169,15 @@ for (const button of buttons) {
  const possible = JSON.stringify(one(button.value,'possible'));
  assert(possible.includes('is_at_war') && possible.includes('is_diplomatic_play_committed_participant'));
  const createNodes = [];
- walk(button.value,n => { if(n.key==='create_country') createNodes.push(n); });
+ const charter = button.key === 'aoc_england_charter_east_india'
+  ? one(effects, 'aoc_charter_east_india') : button;
+ walk(charter.value,n => { if(n.key==='create_country') createNodes.push(n); });
  assert.equal(createNodes.length,1);
  const tag = one(createNodes[0].value,'tag').value;
- assert(['SAF','BIC','AST','NZL','HBC'].includes(tag));
+ assert(['SAF','AST','NZL','HBC','$TAG$'].includes(tag));
  assert(!JSON.stringify(button).includes('"HAB"'), 'HAB is Austria');
  const id = button.key.replace('aoc_england_charter_','');
- assert(JSON.stringify(button).includes(`aoc_england_${id}_endowed`), 'Missing endowment lock');
+ assert(JSON.stringify(charter).includes(`aoc_england_${id}_endowed`), 'Missing endowment lock');
 }
 // All modifier tokens must exist in the engine log, or be a valid dynamic building modifier.
 const modifierDocs=read('docs/modifiers.log');
@@ -187,10 +197,11 @@ for(const f of ['common/journal_entries/england.txt','common/scripted_buttons/en
  assert(!read(f).includes('scripted_button = je_england_canada_hudsons_bay'));
 }
 const triggerNodes=trees.get('common/scripted_triggers/england_overseas_triggers.txt');
-for(const [name,tag] of [['cape_station_ready','SAF'],['cape_developed','SAF'],['indian_presidencies','BIC']]) {
+for(const [name,tag] of [['cape_station_ready','SAF'],['cape_developed','SAF']]) {
  const body=one(triggerNodes,'aoc_england_'+name).value;
  assert(body.some(n=>n.key==='exists'&&n.value==='c:'+tag), `${name}: absent tag must not pass`);
 }
+assert.equal(one(one(triggerNodes, 'aoc_east_india_presidencies').value, 'c:$TAG$').op, '?=');
 // Exercise the timer operations from the actual parsed monthly pulse.
 const navy=one(journals,'je_aoc_england_royal_navy');
 const pulse=one(one(navy.value,'on_monthly_pulse').value,'effect').value;

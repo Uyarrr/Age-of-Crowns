@@ -17,6 +17,11 @@
 			add_technology_researched = france_domaine_royal
 			add_technology_researched = france_consolidation_of_country
 			add_technology_researched = france_appanage_system
+			add_technology_researched = france_royal_construction_commissions
+			add_technology_researched = france_french_monarchy
+			add_technology_researched = france_ancient_french_taxation
+			add_technology_researched = france_hospices_de_beaune
+			add_technology_researched = france_chateau_de_vincennes
 		}
 	}
 
@@ -43,6 +48,7 @@ society_age_2 = {
 			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
 			add_technology_researched = france_establishment_of_recettes_generales
 			add_technology_researched = france_breton_marriage
+			add_technology_researched = france_royal_guild_privileges
 		}
 	}
 
@@ -66,6 +72,8 @@ society_age_3 = {
 		if = {
 			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
 			add_technology_researched = france_colonial_ventures
+			add_technology_researched = france_atlantic_fisheries
+			add_technology_researched = france_parish_registration
 		}
 	}
 
@@ -86,6 +94,11 @@ society_age_4 = {
 			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
 			add_technology_researched = england_the_book_of_common_prayer
 			add_technology_researched = england_the_act_of_supremacy
+		}
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_edict_of_nantes
+			add_technology_researched = france_east_india_company
 		}
 	}
 
@@ -186,6 +199,13 @@ production_age_4 = {
 
 	can_research = yes
 
+	on_researched = {
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_grasse_perfumed_gloves
+		}
+	}
+
 	ai_weight = { value = 3 }
 }
 
@@ -248,6 +268,7 @@ military_age_1 = {
 		if = {
 			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
 			add_technology_researched = france_elan
+			add_technology_researched = france_french_noble_armies
 		}
 	}
 
@@ -267,6 +288,11 @@ military_age_2 = {
 		if = {
 			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
 			add_technology_researched = england_reformed_longbowman
+		}
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_renaissance_gendarmes
+			add_technology_researched = france_royal_exploration_carrack
 		}
 	}
 
@@ -338,6 +364,10 @@ military_age_6 = {
 		if = {
 			limit = { OR = { c:ENG ?= this was_formed_from = ENG } }
 			add_technology_researched = england_rulers_of_the_waves
+		}
+		if = {
+			limit = { OR = { c:FRA ?= this was_formed_from = FRA } }
+			add_technology_researched = france_the_gribeauval_system
 		}
 	}
 
