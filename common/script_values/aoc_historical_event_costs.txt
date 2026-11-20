@@ -1,0 +1,26 @@
+# Country scope. Weekly gross income is clamped before calculating the one-time cost.
+
+aoc_historical_event_cost_1 = {
+	value = fixed_income
+	min = 0
+	multiply = 1
+}
+
+aoc_historical_event_cost_2 = {
+	value = fixed_income
+	min = 0
+	multiply = 2
+}
+
+aoc_historical_event_cost_4 = {
+	value = fixed_income
+	min = 0
+	multiply = 4
+}
+
+# Snapshot this weekly revenue when the Paulette is adopted.
+aoc_historical_event_office_revenue = {
+	value = fixed_income
+	min = 0
+	multiply = 0.02
+}

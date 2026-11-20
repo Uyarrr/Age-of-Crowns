@@ -673,6 +673,16 @@ bg_monuments = {
 	default_building = building_eiffel_tower # TODO PRCAL-42162 - remove this, it's only here to avoid read errors
 }
 
+bg_aoc_france_monuments = {
+	parent_group = bg_government
+	lens = special
+	# Completed monuments transfer, but unfinished construction does not.
+	inheritable_construction = no
+	economy_of_scale = no
+	ignores_productivity_when_hiring = yes
+	default_building = building_chateau_de_vincennes
+}
+
 # Military
 
 bg_military = {

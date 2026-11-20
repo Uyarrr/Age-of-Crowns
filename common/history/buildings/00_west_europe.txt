@@ -1494,12 +1494,6 @@
 	s:STATE_ILE_DE_FRANCE={
 		region_state:FRA={
 			create_building={
-				building="building_chateau_de_vincennes"
-				add_ownership={ country={ country="c:FRA" levels=1 } }
-				reserves=1
-				activate_production_methods={ "pm_chateau_de_vincennes" }
-			}
-			create_building={
 				building="building_vineyard"
 				add_ownership={
 					country={
@@ -2234,12 +2228,6 @@
 			}
 		}
 		region_state:BGY={
-			create_building={
-				building="building_hospices_de_beaune"
-				add_ownership={ country={ country="c:BGY" levels=1 } }
-				reserves=1
-				activate_production_methods={ "pm_hospices_de_beaune" }
-			}
 			create_building={
 				building="building_caravan_hub"
 				add_ownership={

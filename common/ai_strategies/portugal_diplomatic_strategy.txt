@@ -124,7 +124,24 @@
 	}
 
 	strategic_region_stance_type_scores = {
-		stance_colonize_region = { value = 40 }
+		stance_colonize_region = {
+			if = {
+				limit = {
+					has_technology_researched = colonization
+					NOT = { has_law_or_variant = law_type:law_no_colonial_affairs }
+					scope:target_region = {
+						OR = {
+							this = sr:region_brazil
+							this = sr:region_west_africa
+							this = sr:region_southern_africa
+							this = sr:region_east_africa
+						}
+						any_scope_state = { owner = { is_country_type = decentralized } }
+					}
+				}
+				add = 150
+			}
+		}
 	}
 	max_active_stances = { add = 3 }
 
@@ -148,7 +165,12 @@
 			limit = {
 				scope:region = sr:region_brazil
 			}
-			add = 950
+			add = 550
+
+			if = {
+				limit = { has_variable = aoc_portuguese_brazil_phase }
+				add = 400
+			}
 
 			if = {
 				limit = {
@@ -447,7 +469,7 @@
 
 	possible = {
 		is_subject = no
-		c:POR ?= this
+		OR = { c:POR ?= this was_formed_from = POR }
 	}
 
 	weight = {

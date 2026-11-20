@@ -1,5 +1,7 @@
 ﻿l_english:
  lawgroup_army_doctrine: "Army Doctrine"
+ lawgroup_navy_doctrine: "Naval Doctrine"
+ lawgroup_rights_of_the_crown: "Rights of the Crown"
  lawgroup_feudal_de_jure_laws: "Feudal 'De Jure' Laws"
  lawgroup_administrative_system: "Administrative System"
  lawgroup_rights_of_the_nobility: "Rights of the Nobility"
@@ -22,7 +24,7 @@
  # EDUCATION OF THE MASSES #
 
  law_uneducated_masses: "Uneducated Masses"
- law_uneducated_masses_desc: "Learning remains the privilege of courts, religious institutions, and wealthy households. Most people acquire only the knowledge required by custom and occupation, leaving literacy rare and uneven."
+ law_uneducated_masses_desc: "Books and tutors belong chiefly to courts, religious houses, and wealthy households. Most children learn their calling at home or at work."
 
  law_religious_teachings: "Religious Teachings"
  law_religious_teachings_desc: "Parishes, mosques, temples, and other religious institutions provide elementary instruction, teaching literacy through sacred texts while placing education under clerical guidance."
@@ -52,7 +54,7 @@
  # RECRUITMENT SYSTEM #
 
  law_expanded_levies: "Expanded Levies"
- law_expanded_levies_desc: "In time of war, the Crown calls a wider portion of the population to service than is customary. Parish rolls, local musters, and community obligations provide the means to assemble a larger host."
+ law_expanded_levies_desc: "The sovereign calls for men beyond those who owe customary service. Local officers draw up parish rolls and name the households that must furnish recruits."
 
  law_noble_army: "Noble Army"
  law_noble_army_desc: "Military service is founded upon the obligations of the landed nobility. Great lords furnish retainers and mounted men, while noble officers command the forces they have raised in the sovereign's name."
@@ -61,7 +63,7 @@
  law_early_standing_army_desc: "Permanent regiments are retained in the ruler's pay even in peacetime. Regular drill, established officers, and permanent garrisons gradually replace the temporary forces raised only for a campaign."
 
  law_elite_training: "Elite Training"
- law_elite_training_desc: "Selected troops receive prolonged drill under experienced officers and are expected to master coordinated movement, discipline, and the use of their arms. Such formations form the professional core of the army."
+ law_elite_training_desc: "Selected companies drill throughout the year under veteran officers. Their ranks are taught to march, manoeuvre, and handle their arms together."
 
  law_devsirme_system: "Devşirme System"
  law_devsirme_system_desc: "Under the devşirme, boys from Christian communities in the Ottoman domains are taken into the Sultan's service, converted to Islam, and educated for the palace, administration, or Janissary corps."
@@ -103,181 +105,205 @@
  # MAJOR GOVERNMENT REFORM
 
  law_no_reform: "No Government Reform"
- law_no_reform_desc: "The existing structure of government remains unchanged. Traditional institutions continue to govern the state, preserving established practices and power balances while postponing major administrative or political reforms."
+ law_no_reform_desc: "Petitions, judgments, and acts of government proceed under the forms handed down by earlier generations."
 
 # ARMY DOCTRINE #
 
  law_no_army_doctrine: "No Formal Doctrine"
- law_no_army_doctrine_desc: "The army lacks a unified doctrine, relying instead on tradition, local practices, and the judgment of individual commanders. While flexible, such forces lack the cohesion and efficiency of a formally organized military system."
+ law_no_army_doctrine_desc: "Captains muster their companies and array them for battle according to the custom of their service and the needs of the day."
 
  law_offensive_stance: "Offensive Doctrine"
- law_offensive_stance_desc: "Victory is achieved through relentless aggression. Commanders favor bold advances, decisive engagements, and constant pressure to overwhelm the enemy before they can respond."
+ law_offensive_stance_desc: "Commanders seek to bring the enemy to battle on their own terms, pressing the march before the opposing host can gather."
 
  law_defensive_stance: "Defensive Doctrine"
- law_defensive_stance_desc: "Endurance and discipline define this doctrine. Armies are trained to hold fortified positions, absorb enemy assaults, and deny ground at all costs, trading mobility for resilience."
+ law_defensive_stance_desc: "Commanders choose the ground on which they will stand, anchoring their lines on fieldworks, rivers, and fortified towns."
 
  law_artillery_warfare: "Grand Batteries"
- law_artillery_warfare_desc: "Massed artillery formations dominate the battlefield, breaking enemy lines with thunderous volleys. Warfare revolves around firepower and coordination, though at great financial and logistical cost."
+ law_artillery_warfare_desc: "Gunners survey the approaches and lay their pieces in batteries. Where once sappers alone set to work, a breach may now be opened by the gun."
 
  law_infantry_warfare: "Pike and Shot Tradition"
- law_infantry_warfare_desc: "Infantry stands at the heart of the army, combining pikes and firearms in disciplined formations. These troops provide both offensive strength and defensive stability across all terrains."
+ law_infantry_warfare_desc: "Battalions form around the foot soldier. The long pike keeps horsemen at bay while ranks of shot fire and retire to reload."
 
  law_cavalry_warfare: "Mounted Warfare"
- law_cavalry_warfare_desc: "Speed and shock define this doctrine. Cavalry units strike swiftly, outmaneuvering enemies, exploiting weaknesses, and securing territory before resistance can form."
+ law_cavalry_warfare_desc: "Mounted troops screen the march and harry the enemy's flanks. Squadrons gather for the charge when the opposing line begins to waver."
 
 # FEUDAL DE JURE LAW #
 
  law_by_tradition: "By Tradition"
- law_by_tradition_desc: "Authority is upheld through ancient custom, inherited obligations, and the accepted rights of the realm. Rule draws its strength from continuity and legitimacy, though such a system often resists central direction and reform."
+ law_by_tradition_desc: "The rights of lord and vassal rest on old usage, the testimony of local courts, and the obligations sworn by their forebears."
 
  law_by_blood: "By Blood"
- law_by_blood_desc: "Authority flows first and foremost through bloodlines, dynastic right, and noble inheritance. This strengthens the personal power of the ruler and the landed elite, but ties the realm more closely to aristocratic privilege and factional ambition."
+ law_by_blood_desc: "Claims to fiefs and jurisdictions descend by blood. A pedigree may carry as much weight before a court as any charter."
 
 # Administrative System #
 
  law_autonomous_councils: "Autonomous Councils"
- law_autonomous_councils_desc: "Regional councils, noble assemblies, and local estates govern much of the realm in their own right. This strengthens local loyalties and eases the management of subjects, but weakens the direct authority of the crown."
+ law_autonomous_councils_desc: "Provincial estates and town councils govern under their own charters, sending delegates to the capital when a matter concerns the whole realm."
 
  law_central_council: "Central Council"
- law_central_council_desc: "The affairs of the realm are directed through a strong central council acting in the name of the state. Administration becomes more efficient and military coordination improves, but subjects grow less content under tighter control."
+ law_central_council_desc: "The chief officers of the realm sit together at the capital, where petitions are heard and instructions sent to provincial governors."
 
  law_local_courts: "Local Courts"
- law_local_courts_desc: "Justice and administration are left largely in the hands of provincial magistrates, customary courts, and local authorities. This reduces political unrest and preserves regional customs, though it comes at the cost of bureaucratic efficiency."
+ law_local_courts_desc: "Provincial magistrates and customary courts hear the disputes of their districts according to local usage."
 
  law_confederal_union: "Confederal Union"
- law_confederal_union_desc: "The state is organized as a loose union of semi-autonomous members bound together by common interests, privileges, and negotiated obligations. Such a system reduces subject discontent and strengthens diplomatic reach, but limits central authority."
+ law_confederal_union_desc: "The members of the union retain their own laws and estates. Their envoys meet to bargain over contributions and common undertakings."
 
  law_federal_state: "Federal State"
- law_federal_state_desc: "The realm is organized as a union of semi-autonomous states, each retaining its own customs, laws, and institutions. While regional authorities govern local affairs, all remain bound under a central federal government and its overarching rule."
+ law_federal_state_desc: "A common charter divides the powers of government between a federal authority and its constituent states, each with its own courts and assemblies."
 
  law_absolute_leadership: "Absolute Leadership"
- law_absolute_leadership_desc: "All meaningful authority is concentrated in the hands of the ruler, whose will overrides customary privilege, local autonomy, and competing centers of power. The state becomes more disciplined and ideologically coherent, but such domination breeds resentment among the realm's established interests."
+ law_absolute_leadership_desc: "Orders go out in the ruler's name. Provincial officers answer to the sovereign, who may revoke the privileges on which their predecessors relied."
 
  law_feudal_administration: "Feudal Administration"
- law_feudal_administration_desc: "The realm is administered through a network of feudal lords, hereditary offices, and personal obligations. Local nobles govern in the name of the crown, providing stability through tradition but limiting the development of a centralized bureaucracy."
+ law_feudal_administration_desc: "The Crown governs through fiefs and oaths. Each lord holds court on his lands and renders the service owed for them."
 
  law_unitary_administration: "Unitary Administration"
- law_unitary_administration_desc: "The state is governed as a single unified entity under the supreme authority of the central government. Provincial institutions hold little independent power, as administration, law, and policy are directed from the center to ensure cohesion and control."
+ law_unitary_administration_desc: "Officials in every province carry out the same ordinances and answer to the ministries of the capital."
 
 # Noble Privileges #
 
  law_strengthen_the_nobility: "Strengthen Noble Privileges"
- law_strengthen_the_nobility_desc: "The nobility has long served as the backbone of the realm, providing leadership, military service, and local governance. By expanding their rights and privileges, we secure their loyalty and reinforce traditional order, though at the cost of centralized authority."
+ law_strengthen_the_nobility_desc: "Patents and charters confirm the nobility's exemptions, jurisdiction, and customary precedence in the service of the realm."
 
  law_curtail_the_nobility: "Curtail Noble Privileges"
- law_curtail_the_nobility_desc: "The influence of the nobility must be restrained if the state is to govern effectively. By reducing their privileges and limiting their authority, the crown strengthens central control, though at the risk of alienating powerful aristocratic interests."
+ law_curtail_the_nobility_desc: "The Crown calls in old charters for review. Noble households must defend their courts and exemptions before the sovereign's officers."
 
  # Cultural Traditions #
 
  law_martial_society: "Martial Society"
- law_martial_society_desc: "The values of war and discipline shape every aspect of society, where honor is earned through battle and strength is the measure of status. Such a culture produces experienced warriors and favors conquest, but risks unrest and instability within the realm."
+ law_martial_society_desc: "Service in the host is held to be a mark of honour. Families preserve the memory of campaigns in their songs, heraldry, and rites of passage."
 
  law_civil_society: "Civil Society"
- law_civil_society_desc: "The state prioritizes order, governance, and civic life over warfare, fostering stable institutions and effective administration. While such a society strengthens internal cohesion and prosperity, it lacks the martial edge of more warlike cultures."
+ law_civil_society_desc: "Public distinction is sought in the council chamber, the learned professions, and service to the town."
 
  # Levy Law #
 
-law_inclusive_levy: "Inclusive Levies"
-law_inclusive_levy_desc: "The state draws upon a broad base of its population for military service, incorporating diverse groups into its armies. While this strengthens cohesion and reduces unrest among subjects, it requires a more complex administrative apparatus to manage recruitment and logistics."
+ law_inclusive_levy: "Inclusive Levies"
+ law_inclusive_levy_desc: "Muster rolls draw on the towns, estates, and communities of the realm. Each is called upon to furnish men according to its obligations."
 
-law_noble_levy: "Noble Levies"
-law_noble_levy_desc: "Military service is the duty of the nobility, who raise and lead forces in the name of the crown. These levies are better trained and equipped, but reliance on aristocratic power weakens central authority and increases the influence of the landed elite."
+ law_noble_levy: "Noble Levies"
+ law_noble_levy_desc: "The sovereign issues the summons to the lords, who assemble their retainers and lead them beneath their own banners."
 
-law_peasant_levy: "Peasant Levies"
-law_peasant_levy_desc: "The state mobilizes the peasantry en masse in times of war, fielding large but poorly trained armies. While cheap to maintain and vast in number, such forces lack discipline and experience, often suffering heavy losses in battle."
+ law_peasant_levy: "Peasant Levies"
+ law_peasant_levy_desc: "The summons passes from village to village. Each parish names the households that must send men to the muster."
 
 # Economic Policy #
 
-law_no_economic_policy: "No Economic Policy"
-law_no_economic_policy_desc: "The state takes no active role in shaping the economy. Production and trade are left to local customs, tradition, and circumstance, resulting in a fragmented and inefficient economic landscape."
+ law_no_economic_policy: "No Economic Policy"
+ law_no_economic_policy_desc: "Markets, workshops, and farms are governed by the ordinances and bargains of the places in which they are found."
 
-law_lockean_proviso: "Lockean Proviso"
-law_lockean_proviso_desc: "Land and resources may be claimed freely, so long as enough and as good is left for others. This encourages expansion and productivity while maintaining a minimal sense of fairness."
+ law_lockean_proviso: "Lockean Proviso"
+ law_lockean_proviso_desc: "Those who work the land may claim it as their own, provided that they leave enough and as good for others."
 
-law_war_economy: "War Economy"
-law_war_economy_desc: "The entire economy is directed toward sustaining warfare. Industry and resources are mobilized to supply the military, often at the expense of civilian needs."
+ law_war_economy: "War Economy"
+ law_war_economy_desc: "The first claims on foundries, workshops, and stores belong to the army. Officials issue contracts and requisitions to supply the host."
 
-law_economic_theory: "Economic Theory"
-law_economic_theory_desc: "Emerging financial and economic ideas guide the state’s policies. Structured taxation, lending systems, and monetary control strengthen the economy and state finances."
+ law_economic_theory: "Economic Theory"
+ law_economic_theory_desc: "Treasury officers and men of letters debate the coinage, public credit, and the proper use of the sovereign's revenue."
 
-law_agriculture_economy: "Agrarian Economy"
-law_agriculture_economy_desc: "The economy is centered around agriculture and rural production. While ensuring food security and stability, it limits the growth of industry and urban development."
+ law_agriculture_economy: "Agrarian Economy"
+ law_agriculture_economy_desc: "The court regards the land as the source of the realm's wealth. Its ordinances concern fields, herds, and the business of the market town."
 
-law_fishing_economy: "Maritime Economy"
-law_fishing_economy_desc: "Fishing and naval activity form the backbone of the economy. Coastal industries thrive, and naval power is strengthened, but inland development suffers."
+ law_fishing_economy: "Maritime Economy"
+ law_fishing_economy_desc: "Coastal towns live by their fisheries and the sea. Charters govern the landing, curing, and sale of the catch."
 
-law_pirate_economy: "Privateering Economy"
-law_pirate_economy_desc: "Wealth is acquired through raiding, smuggling, and exploitation. While highly profitable in the short term, it destabilizes lawful trade and invites retaliation from other nations."
+ law_pirate_economy: "Privateering Economy"
+ law_pirate_economy_desc: "Captains sail under letters of marque and bring captured vessels to port, where judges hear claims to the cargo and divide the prizes."
 
 # Foreign Cultural Law #
 
-law_allow_foreign_rituals: "Allow Foreign Rituals"
-law_allow_foreign_rituals_desc: "Foreign customs, languages, and traditions are permitted to flourish within the realm. This policy fosters tolerance and coexistence, improving relations between diverse populations at the cost of cultural unity."
+ law_allow_foreign_rituals: "Allow Foreign Rituals"
+ law_allow_foreign_rituals_desc: "Communities may keep their own feast days, rites, and places of worship under the protection of the magistrate."
 
-law_integrate_foreign_traditions: "Integrate Foreign Traditions"
-law_integrate_foreign_traditions_desc: "The state actively encourages the blending of foreign customs into the dominant culture. Over time, distinct identities are absorbed, creating a more unified but less diverse society."
+ law_integrate_foreign_traditions: "Integrate Foreign Traditions"
+ law_integrate_foreign_traditions_desc: "Customs brought from abroad are taken up in local festivals, households, and guilds until they have a place in the public life of the realm."
 
 # Rights of the Clergy
 
-law_strengthen_the_clergy: "Strengthen Rights of the Clergy"
-law_strengthen_the_clergy_desc: "Grant greater influence and privileges to the clergy, reinforcing their role in guiding society, spreading faith, and supporting the state through religious institutions."
+ law_strengthen_the_clergy: "Strengthen Rights of the Clergy"
+ law_strengthen_the_clergy_desc: "Religious houses hold property and administer their own affairs under charters confirmed by the state."
 
-law_curtail_the_clergy: "Curtail the Clergy"
-law_curtail_the_clergy_desc: "Reduce the influence of religious authorities, bringing their power under state control and limiting their role in politics and society."
+ law_curtail_the_clergy: "Curtail the Clergy"
+ law_curtail_the_clergy_desc: "Clerical courts and estates are brought under civil jurisdiction. Ecclesiastical privileges are subject to review by the magistrate."
 
 # Rights of the Burghers
 
-law_strengthen_the_burghers: "Strengthen Rights of the Burghers"
-law_strengthen_the_burghers_desc: "Empower the urban classes, granting privileges to merchants, artisans, and guilds. Their growing influence fuels commerce, industry, and the prosperity of cities."
+ law_strengthen_the_burghers: "Strengthen Rights of the Burghers"
+ law_strengthen_the_burghers_desc: "Chartered towns choose their officers, regulate their markets, and send deputies to speak on behalf of their burgesses."
 
-law_curtail_the_burghers: "Curtail the Burghers"
-law_curtail_the_burghers_desc: "Restrict the power of merchants and guilds, placing urban wealth firmly under state authority while limiting their political influence and independence."
+ law_curtail_the_burghers: "Curtail the Burghers"
+ law_curtail_the_burghers_desc: "The sovereign reserves the right to appoint town officers and review the privileges claimed under municipal and guild charters."
 
 # Mining Laws
-law_no_mining_ownership: "Unregulated Extraction"
-law_no_mining_ownership_desc: "Mining activities are largely unregulated, with no clear ownership structure. Resources are extracted in a disorganized and inefficient manner, often leading to waste and local disputes."
+ law_no_mining_ownership: "Unregulated Extraction"
+ law_no_mining_ownership_desc: "Prospectors sink shafts by local custom and settle disputes over seams and workings before the nearest magistrate."
 
-law_noble_controlled_mining: "Noble-Controlled Mining"
-law_noble_controlled_mining_desc: "Mining rights are granted to the nobility, who oversee extraction through feudal obligations. While this ensures organized expansion, it reinforces aristocratic dominance over economic life."
+ law_noble_controlled_mining: "Noble-Controlled Mining"
+ law_noble_controlled_mining_desc: "The holder of a seigneury may work the veins beneath his land or grant a lease in return for rent and a share of the ore."
 
-law_burghers_controlled_mining: "Burghers-Controlled Mining"
-law_burghers_controlled_mining_desc: "Urban elites and merchant guilds manage mining operations, focusing on efficiency and profit. This system encourages commercial growth and integrates mining into broader market networks."
+ law_burghers_controlled_mining: "Burgher-Controlled Mining"
+ law_burghers_controlled_mining_desc: "Companies of burghers pool their capital, purchase mining leases, and employ masters to oversee the workings."
 
-law_commoner_controlled_mining: "Commoner Mining Rights"
-law_commoner_controlled_mining_desc: "Mining is carried out by local communities and free workers. This promotes mobility and opportunity but lacks centralized coordination, leading to uneven productivity."
+ law_commoner_controlled_mining: "Commoner Mining Rights"
+ law_commoner_controlled_mining_desc: "Miners may stake a claim and work it in their own right. Local mining courts hear disputes over boundaries and shares."
 
-law_royal_fifth_mining: "Royal Fifth"
-law_royal_fifth_mining_desc: "The Crown claims a fifth of all precious metal production, asserting direct control over valuable mining output. This strengthens royal authority and ensures a steady flow of wealth to the state."
+ law_royal_fifth_mining: "Royal Fifth"
+ law_royal_fifth_mining_desc: "Gold and silver are brought before the royal assayer, who weighs the metal and sets aside the fifth owed to the Crown."
 
 # Economic System
 
-law_manorial_economy: "Manorial Economy"
-law_manorial_economy_desc: "Land and labor are bound by a web of customary dues and obligations. Lords draw wealth from their estates, while local production meets much of the countryside's needs."
+ law_manorial_economy: "Manorial Economy"
+ law_manorial_economy_desc: "Land and labor are bound by a web of customary dues and obligations. Lords draw wealth from their estates, while local production meets much of the countryside's needs."
 
-law_chartered_economy: "Chartered Economy"
-law_chartered_economy_desc: "The Crown grants charters to privileged enterprises, entrusting private investors with ventures that serve the realm's commercial and fiscal ambitions."
+ law_chartered_economy: "Chartered Economy"
+ law_chartered_economy_desc: "The Crown grants charters to privileged enterprises, entrusting private investors with ventures that serve the realm's commercial and fiscal ambitions."
 
-law_agrarian_economy: "Agrarian Economy"
-law_agrarian_economy_desc: "Landowners and farmers hold the foremost place in economic life. Their fields and herds provide the foundation of the nation's wealth."
+ law_agrarian_economy: "Agrarian Economy"
+ law_agrarian_economy_desc: "Landowners and farmers hold the foremost place in economic life. Their fields and herds provide the foundation of the nation's wealth."
 
-law_colonial_economy: "Colonial Economy"
-law_colonial_economy_desc: "Plantations, farms, and mines supply the needs of an overlord, while restrictions on manufacturing keep the colony dependent on goods from abroad."
+ law_colonial_economy: "Colonial Economy"
+ law_colonial_economy_desc: "Plantations, farms, and mines supply the needs of an overlord, while restrictions on manufacturing keep the colony dependent on goods from abroad."
 
-law_economic_liberalism: "Economic Liberalism"
-law_economic_liberalism_desc: "Private enterprise and open competition guide investment and production. The state's direct ownership gives way to the judgment of merchants and investors."
+ law_economic_liberalism: "Economic Liberalism"
+ law_economic_liberalism_desc: "Private enterprise and open competition guide investment and production. The state's direct ownership gives way to the judgment of merchants and investors."
 
-law_merchant_economy: "Merchant Economy"
-law_merchant_economy_desc: "Commerce rests in the hands of merchants, shopkeepers, and independent producers. Private ventures and the rewards of trade shape the fortunes of the realm."
+ law_merchant_economy: "Merchant Economy"
+ law_merchant_economy_desc: "Commerce rests in the hands of merchants, shopkeepers, and independent producers. Private ventures and the rewards of trade shape the fortunes of the realm."
 
-law_state_directed_economy: "State-Directed Economy"
-law_state_directed_economy_desc: "Officials direct investment and oversee enterprises in pursuit of the state's priorities. Private interests remain, but the government holds the commanding role."
+ law_state_directed_economy: "State-Directed Economy"
+ law_state_directed_economy_desc: "Officials direct investment and oversee enterprises in pursuit of the state's priorities. Private interests remain, but the government holds the commanding role."
 
-law_interventionism: "Crown Oversight"
-law_laissez_faire: "Market Economy"
-law_cooperative_ownership: "Communal Economy"
-law_command_economy: "Crown-Controlled Economy"
+ law_interventionism: "Crown Oversight"
+ law_laissez_faire: "Market Economy"
+ law_cooperative_ownership: "Communal Economy"
+ law_command_economy: "Crown-Controlled Economy"
 
-law_enclosed_estates: "Enclosed Estates"
-law_enclosed_estates_desc: "Common fields are consolidated into privately owned estates, encouraging commercial agriculture and greater efficiency. While this system strengthens the landed elite and fuels economic development, it undermines traditional rural communities and the customary rights of the peasantry."
-law_magna_carta: "Magna Carta"
-law_magna_carta_desc: "The authority of the Crown is bound by long-established rights and legal customs. The ruler governs with the consent of the realm's leading estates, preserving liberty under law while limiting the exercise of absolute power."
+ law_enclosed_estates: "Enclosed Estates"
+ law_enclosed_estates_desc: "Surveyors parcel out the common fields and mark their new boundaries. Hedges and fences follow where villagers once held rights of pasture."
+ law_magna_carta: "Magna Carta"
+ law_magna_carta_desc: "The king confirms the liberties of the realm in a charter, binding the Crown to customary justice and to the counsel of its leading subjects."
+
+ law_noble_command: "Noble Command"
+ law_noble_command_desc: "Command belongs to families whose rank and service entitle them to lead the host."
+
+ law_meritocratic_leadership: "Meritocratic Leadership"
+ law_meritocratic_leadership_desc: "Officers earn commissions through service in the field and the judgment of their superiors."
+
+ law_ruler_general: "Sovereign in Command"
+ law_ruler_general_desc: "The sovereign takes the field in person, receiving reports from the captains and issuing orders beneath the royal standard."
+
+ law_steppe_horde: "Steppe Horde"
+ law_steppe_horde_desc: "A khan rules through a confederation of clans whose chiefs bring mounted retinues to his standard. Assemblies of leading lineages acclaim the ruler and deliberate on war and succession."
+
+ law_no_navy_doctrine: "No Naval Doctrine"
+ law_no_navy_doctrine_desc: "Captains put to sea in the sovereign's service with orders for the voyage at hand, relying on the customs of their ports and the judgment of their crews."
+
+ law_figurehead_position: "Figurehead Crown"
+ law_figurehead_position_desc: "The sovereign presides over ceremonies and gives assent in name. Ministers and assemblies conduct the government of the realm."
+
+ law_absolute_rule: "Absolute Rule"
+ law_absolute_rule_desc: "The sovereign issues ordinances by prerogative and calls councils at pleasure. The estates may petition the throne, whose judgment is final."
+
+ law_court_of_the_star_chamber: "Court of Star Chamber"
+ law_court_of_the_star_chamber_desc: "The king's councillors hear cases of riot, intimidation, and abuse of office, even when the accused can command the loyalty of the local courts."

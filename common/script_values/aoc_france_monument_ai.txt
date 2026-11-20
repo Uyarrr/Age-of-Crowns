@@ -1,0 +1,35 @@
+# Building AI values run in state scope. Each monument checks its own upkeep buffer.
+aoc_france_monument_ai_score = {
+	value = 0
+	owner = {
+		if = {
+			limit = {
+				in_default = no
+				scaled_debt < 0.25
+				is_construction_paused = no
+				construction_queue_government_duration < 26
+				OR = {
+					net_total_income >= 0
+					scaled_gold_reserves >= 0.25
+				}
+				NOT = {
+					any_scope_building = {
+						is_building_group = bg_aoc_france_monuments
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 3500
+
+			# Put spare capacity to work when France can fund its current spending.
+			if = {
+				limit = {
+					has_wasted_construction = yes
+					net_total_income >= 0
+					is_at_war = no
+				}
+				add = 3000
+			}
+		}
+	}
+}

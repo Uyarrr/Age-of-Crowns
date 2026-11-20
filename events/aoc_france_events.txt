@@ -1,0 +1,1107 @@
+namespace = aoc_france
+
+aoc_france.1 = {
+	immediate = { set_variable = aoc_content_seen_aoc_france_1 }
+
+	type = country_event
+	title = aoc_presidial_courts.title
+	desc = aoc_presidial_courts.desc
+	flavor = aoc_presidial_courts.flavor
+
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 3 }
+		aoc_era_event_window_open = { ERA = 3 }
+	}
+
+	option = {
+		name = aoc_presidial_courts.a
+		default_option = yes
+		add_modifier = { name = aoc_presidial_courts_bureaucracy years = 10 }
+	}
+
+	option = {
+		name = aoc_presidial_courts.b
+		add_modifier = { name = aoc_presidial_courts_tax_capacity years = 10 }
+	}
+}
+
+aoc_france.2 = {
+	type = country_event
+	title = aoc_france_ottoman_alliance.title
+	desc = aoc_france_ottoman_alliance.desc
+	flavor = aoc_france_ottoman_alliance.flavor
+
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_envoys.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 3 }
+		aoc_era_event_window_open = { ERA = 3 }
+		aoc_france_can_offer_ottoman_alliance = yes
+	}
+
+	immediate = {
+		set_variable = aoc_content_seen_aoc_france_2
+
+		save_scope_as = aoc_france_envoys
+		c:TUR = { save_scope_as = aoc_france_ottoman_court }
+	}
+
+	option = {
+		name = aoc_france_ottoman_alliance.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = { aoc_france_can_offer_ottoman_alliance = yes }
+		if = {
+			limit = {
+				NOT = {
+					has_strategic_region_interest_tier = {
+						strategic_region = scope:aoc_france_ottoman_court.capital.region
+						value >= 2
+					}
+				}
+			}
+			add_involvement = {
+				strategic_region = scope:aoc_france_ottoman_court.capital.region
+				value = 2500
+			}
+		}
+		scope:aoc_france_ottoman_court = { trigger_event = { id = aoc_france.9 popup = yes } }
+	}
+
+	option = {
+		name = aoc_france_ottoman_alliance.b
+		ai_chance = { base = 20 }
+	}
+}
+
+aoc_france.3 = {
+	type = country_event
+	title = aoc_france_calais.title
+	desc = aoc_france_calais.desc
+	flavor = aoc_france_calais.flavor
+
+	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_late = { ERA = 3 }
+		aoc_era_event_window_open = { ERA = 3 }
+		aoc_france_can_attack_calais = yes
+	}
+
+	immediate = {
+		set_variable = aoc_content_seen_aoc_france_3
+
+		p:xE0A0C0.state.owner = { save_scope_as = aoc_france_calais_holder }
+	}
+
+	option = {
+		name = aoc_france_calais.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = {
+			aoc_france_can_attack_calais = yes
+			scope:aoc_france_calais_holder ?= { this = p:xE0A0C0.state.owner }
+		}
+		create_diplomatic_play = {
+			name = aoc_france_calais_war
+			type = dp_conquer_state
+			target_state = p:xE0A0C0.state
+			war = yes
+		}
+		add_modifier = { name = aoc_france_calais_campaign years = 10 }
+	}
+
+	option = {
+		name = aoc_france_calais.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_calais_abandoned years = 10 }
+	}
+}
+
+aoc_france.4 = {
+	immediate = { set_variable = aoc_content_seen_aoc_france_4 }
+
+	type = country_event
+	title = aoc_france_francs_archers.title
+	desc = aoc_france_francs_archers.desc
+	flavor = aoc_france_francs_archers.flavor
+
+	event_image = { texture = "gfx/event_pictures/hundred_years_war_french.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 1 }
+		aoc_france_traditions_window_open = yes
+	}
+
+	option = {
+		name = aoc_france_francs_archers.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_modifier = { name = aoc_france_parish_archers years = 10 }
+	}
+
+	option = {
+		name = aoc_france_francs_archers.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_muster_drills years = 10 }
+	}
+}
+
+aoc_france.5 = {
+	type = country_event
+	title = aoc_france_cloth_of_gold.title
+	desc = aoc_france_cloth_of_gold.desc
+	flavor = aoc_france_cloth_of_gold.flavor
+
+	event_image = { texture = "gfx/event_pictures/joust.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 2 }
+		aoc_era_event_window_open = { ERA = 2 }
+		is_subject = no
+		any_country = {
+			aoc_english_successor = yes
+			aoc_france_can_negotiate_with = { OTHER = root }
+		}
+	}
+
+	immediate = {
+		set_variable = aoc_content_seen_aoc_france_5
+
+		save_scope_as = aoc_france_envoys
+		if = {
+			limit = { c:ENG ?= { aoc_france_can_negotiate_with = { OTHER = root } } }
+			c:ENG = { save_scope_as = aoc_france_cloth_of_gold_guest }
+		}
+		else = {
+			ordered_country = {
+				limit = {
+					aoc_english_successor = yes
+					aoc_france_can_negotiate_with = { OTHER = root }
+				}
+				order_by = prestige
+				max = 1
+				save_scope_as = aoc_france_cloth_of_gold_guest
+			}
+		}
+	}
+
+	option = {
+		name = aoc_france_cloth_of_gold.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = {
+			scope:aoc_france_cloth_of_gold_guest ?= {
+				aoc_english_successor = yes
+				aoc_france_can_negotiate_with = { OTHER = root }
+			}
+		}
+		scope:aoc_france_cloth_of_gold_guest = { trigger_event = { id = aoc_france.10 popup = yes } }
+	}
+
+	option = {
+		name = aoc_france_cloth_of_gold.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_court_splendor years = 10 }
+	}
+}
+
+aoc_france.6 = {
+	immediate = { set_variable = aoc_content_seen_aoc_france_6 }
+
+	type = country_event
+	title = aoc_france_antarctique.title
+	desc = aoc_france_antarctique.desc
+	flavor = aoc_france_antarctique.flavor
+
+	event_image = { texture = "gfx/event_pictures/discovery.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 3 }
+		aoc_era_event_window_open = { ERA = 3 }
+	}
+
+	option = {
+		name = aoc_france_antarctique.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_modifier = { name = aoc_france_antarctique_patronage years = 10 }
+		custom_tooltip = aoc_france_antarctique_involvement_tt
+	}
+
+	option = {
+		name = aoc_france_antarctique.b
+		ai_chance = { base = 20 }
+	}
+}
+
+aoc_france.7 = {
+	type = country_event
+	title = aoc_france_assassination.title
+	desc = aoc_france_assassination.desc
+	flavor = aoc_france_assassination.flavor
+
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_late = { ERA = 4 }
+		aoc_era_event_window_open = { ERA = 4 }
+		country_has_monarchy_law = yes
+		has_gov_regency = no
+		ruler ?= { is_immortal = no }
+	}
+
+	immediate = {
+		set_variable = aoc_content_seen_aoc_france_7
+
+		ruler = { save_scope_as = aoc_france_assassinated_ruler }
+	}
+
+	option = {
+		name = aoc_france_assassination.a
+		default_option = yes
+		ai_chance = { base = 100 }
+		if = {
+			limit = {
+				country_has_monarchy_law = yes
+				ruler ?= { this = scope:aoc_france_assassinated_ruler is_immortal = no }
+			}
+			ruler = { kill_character = yes }
+			add_modifier = { name = aoc_france_assassination_regency years = 10 }
+		}
+	}
+}
+
+aoc_france.8 = {
+	immediate = { set_variable = aoc_content_seen_aoc_france_8 }
+
+	type = country_event
+	title = aoc_france_glass_charter.title
+	desc = aoc_france_glass_charter.desc
+	flavor = aoc_france_glass_charter.flavor
+
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 5 }
+		aoc_era_event_window_open = { ERA = 5 }
+	}
+
+	option = {
+		name = aoc_france_glass_charter.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_modifier = { name = aoc_france_royal_glassworks years = 10 }
+	}
+
+	option = {
+		name = aoc_france_glass_charter.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_glass_merchants years = 10 }
+	}
+}
+
+aoc_france.9 = {
+	type = country_event
+	title = aoc_france_ottoman_reply.title
+	desc = aoc_france_ottoman_reply.desc
+	flavor = aoc_france_ottoman_reply.flavor
+
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_envoys.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:TUR ?= this
+		scope:aoc_france_envoys ?= { aoc_france_can_offer_ottoman_alliance = yes }
+	}
+
+	option = {
+		name = aoc_france_ottoman_reply.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = { scope:aoc_france_envoys ?= { aoc_france_can_offer_ottoman_alliance = yes } }
+		set_relations = { country = scope:aoc_france_envoys value = 100 }
+		create_treaty = {
+			name = aoc_france_ottoman_alliance_treaty
+			first_country = scope:aoc_france_envoys
+			second_country = this
+			is_draft = no
+			articles_to_create = { { article = alliance } }
+		}
+	}
+
+	option = {
+		name = aoc_france_ottoman_reply.b
+		ai_chance = { base = 20 }
+	}
+}
+
+aoc_france.10 = {
+	immediate = { set_variable = aoc_content_seen_aoc_france_10 }
+
+	type = country_event
+	title = aoc_france_cloth_of_gold_reply.title
+	desc = aoc_france_cloth_of_gold_reply.desc
+	flavor = aoc_france_cloth_of_gold_reply.flavor
+
+	event_image = { texture = "gfx/event_pictures/joust.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		aoc_english_successor = yes
+		exists = scope:aoc_france_envoys
+		aoc_france_can_negotiate_with = { OTHER = scope:aoc_france_envoys }
+	}
+
+	option = {
+		name = aoc_france_cloth_of_gold_reply.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = {
+			exists = scope:aoc_france_envoys
+			aoc_france_can_negotiate_with = { OTHER = scope:aoc_france_envoys }
+		}
+		change_relations = { country = scope:aoc_france_envoys value = 40 }
+	}
+
+	option = {
+		name = aoc_france_cloth_of_gold_reply.b
+		ai_chance = { base = 20 }
+	}
+}
+
+aoc_france.11 = {
+	type = country_event
+	title = aoc_france_argentier.title
+	desc = aoc_france_argentier.desc
+	flavor = aoc_france_argentier.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 1 }
+		aoc_france_traditions_window_open = yes
+		country_has_monarchy_law = yes
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_11 }
+
+	option = {
+		name = aoc_france_argentier.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = 1 }
+		add_modifier = { name = aoc_france_argentier_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_argentier.b
+		ai_chance = { base = 20 }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		add_modifier = { name = aoc_france_argentier_b years = 10 }
+	}
+}
+
+aoc_france.12 = {
+	type = country_event
+	title = aoc_france_customs.title
+	desc = aoc_france_customs.desc
+	flavor = aoc_france_customs.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 1 }
+		aoc_france_traditions_window_open = yes
+		country_has_monarchy_law = yes
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_12 }
+
+	option = {
+		name = aoc_france_customs.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		add_modifier = { name = aoc_france_customs_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_customs.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_customs_b years = 10 }
+	}
+}
+
+aoc_france.13 = {
+	type = country_event
+	title = aoc_france_sorbonne.title
+	desc = aoc_france_sorbonne.desc
+	flavor = aoc_france_sorbonne.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_late = { ERA = 1 }
+		aoc_france_traditions_window_open = yes
+		any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE }
+	}
+
+	cancellation_trigger = {
+		NOT = { any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE } }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_13 }
+
+	option = {
+		name = aoc_france_sorbonne.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = { any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE } }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		every_scope_state = {
+			limit = { state_region = s:STATE_ILE_DE_FRANCE }
+			add_modifier = { name = aoc_france_sorbonne_a years = 10 }
+		}
+	}
+
+	option = {
+		name = aoc_france_sorbonne.b
+		ai_chance = { base = 20 }
+		trigger = { any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE } }
+		every_scope_state = {
+			limit = { state_region = s:STATE_ILE_DE_FRANCE }
+			add_modifier = { name = aoc_france_sorbonne_b years = 10 }
+		}
+	}
+}
+
+aoc_france.14 = {
+	type = country_event
+	title = aoc_france_lyon_fairs.title
+	desc = aoc_france_lyon_fairs.desc
+	flavor = aoc_france_lyon_fairs.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 2 }
+		aoc_era_event_window_open = { ERA = 2 }
+		any_scope_state = { state_region = s:STATE_RHONE }
+	}
+
+	cancellation_trigger = {
+		NOT = { any_scope_state = { state_region = s:STATE_RHONE } }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_14 }
+
+	option = {
+		name = aoc_france_lyon_fairs.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = { any_scope_state = { state_region = s:STATE_RHONE } }
+		every_scope_state = {
+			limit = { state_region = s:STATE_RHONE }
+			add_modifier = { name = aoc_france_lyon_fairs_a years = 10 }
+		}
+	}
+
+	option = {
+		name = aoc_france_lyon_fairs.b
+		ai_chance = { base = 20 }
+		trigger = { any_scope_state = { state_region = s:STATE_RHONE } }
+		every_scope_state = {
+			limit = { state_region = s:STATE_RHONE }
+			add_modifier = { name = aoc_france_lyon_fairs_b years = 10 }
+		}
+	}
+}
+
+aoc_france.15 = {
+	type = country_event
+	title = aoc_france_blois_books.title
+	desc = aoc_france_blois_books.desc
+	flavor = aoc_france_blois_books.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 2 }
+		aoc_era_event_window_open = { ERA = 2 }
+		any_scope_state = { state_region = s:STATE_ORLEANS }
+		country_has_monarchy_law = yes
+	}
+
+	cancellation_trigger = {
+		NOT = { any_scope_state = { state_region = s:STATE_ORLEANS } }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_15 }
+
+	option = {
+		name = aoc_france_blois_books.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = { any_scope_state = { state_region = s:STATE_ORLEANS } }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		every_scope_state = {
+			limit = { state_region = s:STATE_ORLEANS }
+			add_modifier = { name = aoc_france_blois_books_a years = 10 }
+		}
+	}
+
+	option = {
+		name = aoc_france_blois_books.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_blois_books_b years = 10 }
+	}
+}
+
+aoc_france.16 = {
+	type = country_event
+	title = aoc_france_royal_readers.title
+	desc = aoc_france_royal_readers.desc
+	flavor = aoc_france_royal_readers.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_late = { ERA = 2 }
+		aoc_era_event_window_open = { ERA = 2 }
+		any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE }
+		country_has_monarchy_law = yes
+		any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE has_building = building_university }
+	}
+
+	cancellation_trigger = {
+		NOT = { any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE } }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_16 }
+
+	option = {
+		name = aoc_france_royal_readers.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = { any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE } }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		every_scope_state = {
+			limit = { state_region = s:STATE_ILE_DE_FRANCE }
+			add_modifier = { name = aoc_france_royal_readers_a years = 10 }
+		}
+	}
+
+	option = {
+		name = aoc_france_royal_readers.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_royal_readers_b years = 10 }
+	}
+}
+
+aoc_france.17 = {
+	type = country_event
+	title = aoc_france_lyon_silk.title
+	desc = aoc_france_lyon_silk.desc
+	flavor = aoc_france_lyon_silk.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 3 }
+		aoc_era_event_window_open = { ERA = 3 }
+		any_scope_state = { state_region = s:STATE_RHONE }
+		any_scope_state = { state_region = s:STATE_RHONE has_building = building_luxury_cloth_workshop }
+		market = { mg:silk = { market_goods_sell_orders > 0 } }
+	}
+
+	cancellation_trigger = {
+		NOT = { any_scope_state = { state_region = s:STATE_RHONE } }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_17 }
+
+	option = {
+		name = aoc_france_lyon_silk.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = { any_scope_state = { state_region = s:STATE_RHONE } }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		every_scope_state = {
+			limit = { state_region = s:STATE_RHONE }
+			add_modifier = { name = aoc_france_lyon_silk_a years = 10 }
+		}
+	}
+
+	option = {
+		name = aoc_france_lyon_silk.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_lyon_silk_b years = 10 }
+	}
+}
+
+aoc_france.18 = {
+	type = country_event
+	title = aoc_france_villers_cotterets.title
+	desc = aoc_france_villers_cotterets.desc
+	flavor = aoc_france_villers_cotterets.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 3 }
+		aoc_era_event_window_open = { ERA = 3 }
+		country_has_monarchy_law = yes
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_18 }
+
+	option = {
+		name = aoc_france_villers_cotterets.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		add_modifier = { name = aoc_france_villers_cotterets_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_villers_cotterets.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_villers_cotterets_b years = 10 }
+	}
+}
+
+aoc_france.19 = {
+	type = country_event
+	title = aoc_france_lescot_louvre.title
+	desc = aoc_france_lescot_louvre.desc
+	flavor = aoc_france_lescot_louvre.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_late = { ERA = 3 }
+		aoc_era_event_window_open = { ERA = 3 }
+		any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE }
+		country_has_monarchy_law = yes
+	}
+
+	cancellation_trigger = {
+		NOT = { any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE } }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_19 }
+
+	option = {
+		name = aoc_france_lescot_louvre.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_4 multiply = -1 }
+		add_modifier = { name = aoc_france_lescot_louvre_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_lescot_louvre.b
+		ai_chance = { base = 20 }
+		trigger = { any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE } }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		every_scope_state = {
+			limit = { state_region = s:STATE_ILE_DE_FRANCE }
+			add_modifier = { name = aoc_france_lescot_louvre_b years = 10 }
+		}
+	}
+}
+
+aoc_france.20 = {
+	type = country_event
+	title = aoc_france_poissy.title
+	desc = aoc_france_poissy.desc
+	flavor = aoc_france_poissy.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 4 }
+		aoc_era_event_window_open = { ERA = 4 }
+		country_has_state_religion = rel:catholic
+		any_scope_state = { any_scope_pop = { religion = rel:protestant } }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_20 }
+
+	option = {
+		name = aoc_france_poissy.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		add_modifier = { name = aoc_france_poissy_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_poissy.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_poissy_b years = 10 }
+	}
+}
+
+aoc_france.21 = {
+	type = country_event
+	title = aoc_france_gregorian_calendar.title
+	desc = aoc_france_gregorian_calendar.desc
+	flavor = aoc_france_gregorian_calendar.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 4 }
+		aoc_era_event_window_open = { ERA = 4 }
+		country_has_state_religion = rel:catholic
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_21 }
+
+	option = {
+		name = aoc_france_gregorian_calendar.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		add_modifier = { name = aoc_france_gregorian_calendar_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_gregorian_calendar.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_gregorian_calendar_b years = 10 }
+	}
+}
+
+aoc_france.22 = {
+	type = country_event
+	title = aoc_france_paulette.title
+	desc = aoc_france_paulette.desc
+	flavor = aoc_france_paulette.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_late = { ERA = 4 }
+		aoc_era_event_window_open = { ERA = 4 }
+		country_has_monarchy_law = yes
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_22 }
+
+	option = {
+		name = aoc_france_paulette.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_modifier = { name = aoc_france_paulette_a years = 10 }
+		add_modifier = { name = aoc_france_office_revenue years = 10 multiplier = aoc_historical_event_office_revenue }
+	}
+
+	option = {
+		name = aoc_france_paulette.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_paulette_b years = 10 }
+	}
+}
+
+aoc_france.23 = {
+	type = country_event
+	title = aoc_france_riquet_canal.title
+	desc = aoc_france_riquet_canal.desc
+	flavor = aoc_france_riquet_canal.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 5 }
+		aoc_era_event_window_open = { ERA = 5 }
+		any_scope_state = { state_region = s:STATE_LANGUEDOC }
+		any_scope_state = { state_region = s:STATE_AQUITAINE }
+	}
+
+	cancellation_trigger = {
+		NOT = { any_scope_state = { state_region = s:STATE_LANGUEDOC } }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_23 }
+
+	option = {
+		name = aoc_france_riquet_canal.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LANGUEDOC }
+			any_scope_state = { state_region = s:STATE_AQUITAINE }
+		}
+		add_treasury = { value = aoc_historical_event_cost_4 multiply = -1 }
+		every_scope_state = {
+			limit = { state_region = s:STATE_LANGUEDOC }
+			add_modifier = { name = aoc_france_riquet_canal_a years = 10 }
+		}
+		every_scope_state = {
+			limit = { state_region = s:STATE_AQUITAINE }
+			add_modifier = { name = aoc_france_riquet_canal_a years = 10 }
+		}
+	}
+
+	option = {
+		name = aoc_france_riquet_canal.b
+		ai_chance = { base = 20 }
+		trigger = { any_scope_state = { state_region = s:STATE_LANGUEDOC } }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		every_scope_state = {
+			limit = { state_region = s:STATE_LANGUEDOC }
+			add_modifier = { name = aoc_france_riquet_canal_b years = 10 }
+		}
+	}
+}
+
+aoc_france.24 = {
+	type = country_event
+	title = aoc_france_science_academy.title
+	desc = aoc_france_science_academy.desc
+	flavor = aoc_france_science_academy.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 5 }
+		aoc_era_event_window_open = { ERA = 5 }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_24 }
+
+	option = {
+		name = aoc_france_science_academy.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		add_modifier = { name = aoc_france_science_academy_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_science_academy.b
+		ai_chance = { base = 20 }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		add_modifier = { name = aoc_france_science_academy_b years = 10 }
+	}
+}
+
+aoc_france.25 = {
+	type = country_event
+	title = aoc_france_cassini_map.title
+	desc = aoc_france_cassini_map.desc
+	flavor = aoc_france_cassini_map.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_late = { ERA = 5 }
+		aoc_era_event_window_open = { ERA = 5 }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_25 }
+
+	option = {
+		name = aoc_france_cassini_map.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_4 multiply = -1 }
+		add_modifier = { name = aoc_france_cassini_map_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_cassini_map.b
+		ai_chance = { base = 20 }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		add_modifier = { name = aoc_france_cassini_map_b years = 10 }
+	}
+}
+
+aoc_france.26 = {
+	type = country_event
+	title = aoc_france_chappe_telegraph.title
+	desc = aoc_france_chappe_telegraph.desc
+	flavor = aoc_france_chappe_telegraph.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_early = { ERA = 6 }
+		aoc_era_event_window_open = { ERA = 6 }
+		any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE }
+		any_scope_state = { state_region = s:STATE_FRENCH_LOW_COUNTRIES }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_26 }
+
+	option = {
+		name = aoc_france_chappe_telegraph.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_4 multiply = -1 }
+		add_modifier = { name = aoc_france_chappe_telegraph_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_chappe_telegraph.b
+		ai_chance = { base = 20 }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		add_modifier = { name = aoc_france_chappe_telegraph_b years = 10 }
+	}
+}
+
+aoc_france.27 = {
+	type = country_event
+	title = aoc_france_metric_measures.title
+	desc = aoc_france_metric_measures.desc
+	flavor = aoc_france_metric_measures.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_mid = { ERA = 6 }
+		aoc_era_event_window_open = { ERA = 6 }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_27 }
+
+	option = {
+		name = aoc_france_metric_measures.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		add_modifier = { name = aoc_france_metric_measures_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_metric_measures.b
+		ai_chance = { base = 20 }
+		add_treasury = { value = aoc_historical_event_cost_1 multiply = -1 }
+		add_modifier = { name = aoc_france_metric_measures_b years = 10 }
+	}
+}
+
+aoc_france.28 = {
+	type = country_event
+	title = aoc_france_civil_code.title
+	desc = aoc_france_civil_code.desc
+	flavor = aoc_france_civil_code.flavor
+	event_image = { texture = "gfx/event_pictures/aoc_hyw_france_intro.dds" }
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	fire_only_once = yes
+	duration = 3
+
+	trigger = {
+		c:FRA ?= this
+		aoc_era_research_late = { ERA = 6 }
+		aoc_era_event_window_open = { ERA = 6 }
+	}
+
+	immediate = { set_variable = aoc_content_seen_aoc_france_28 }
+
+	option = {
+		name = aoc_france_civil_code.a
+		default_option = yes
+		ai_chance = { base = 80 }
+		add_treasury = { value = aoc_historical_event_cost_2 multiply = -1 }
+		add_modifier = { name = aoc_france_civil_code_a years = 10 }
+	}
+
+	option = {
+		name = aoc_france_civil_code.b
+		ai_chance = { base = 20 }
+		add_modifier = { name = aoc_france_civil_code_b years = 10 }
+	}
+}

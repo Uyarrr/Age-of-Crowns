@@ -1,25 +1,33 @@
-﻿pm_hospices_de_beaune = {
+﻿# At full employment, base-price inputs and wage-weighted payroll rise by 25% per unlock age.
+pm_hospices_de_beaune = {
 	texture = "gfx/interface/icons/production_method_icons/scholastic_education.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_medicaments_add = 30
-			goods_input_fabric_add = 15
-			goods_input_bread_add = 15
-			goods_input_tools_add = 8
+			goods_input_medicaments_add = 55
+			goods_input_fabric_add = 25
+			goods_input_bread_add = 35
+			goods_input_tools_add = 10
 		}
 		level_scaled = {
-			building_employment_academics_add = 125
-			building_employment_clergymen_add = 125
-			building_employment_clerks_add = 150
-			building_employment_laborers_add = 100
+			building_employment_academics_add = 100
+			building_employment_clergymen_add = 175
+			building_employment_clerks_add = 300
+			building_employment_laborers_add = 5425
 		}
 	}
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_welfare_payments_add = 0.10
+			state_welfare_payments_mult = 0.10
 			state_mortality_mult = -0.075
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 10
+			country_authority_add = 50
 		}
 	}
 }
@@ -29,28 +37,183 @@ pm_chateau_de_vincennes = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_stone_add = 15
-			goods_input_wood_add = 20
+			goods_input_stone_add = 26
+			goods_input_wood_add = 25
+			goods_input_wine_add = 12
 			goods_input_tools_add = 10
-			goods_input_fine_art_add = 5
+			goods_input_weapons_add = 10
+			goods_input_luxury_clothes_add = 6
+			goods_input_luxury_furniture_add = 6
 		}
 		level_scaled = {
+			building_employment_aristocrats_add = 100
 			building_employment_bureaucrats_add = 100
-			building_employment_clerks_add = 150
-			building_employment_laborers_add = 250
+			building_employment_clerks_add = 200
+			building_employment_laborers_add = 5600
 		}
 	}
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_devastation_decay_mult = 0.15
-			state_infrastructure_add = 5
+			state_infrastructure_add = 10
+			state_bureaucracy_population_base_cost_factor_mult = -0.10
+			state_education_access_add = 0.05
 		}
 	}
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_prestige_add = 15
+			country_prestige_add = 10
+			country_authority_add = 50
+		}
+	}
+}
+
+pm_chateau_de_chambord = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_stone_add = 40
+			goods_input_wood_add = 40
+			goods_input_luxury_furniture_add = 25
+			goods_input_wine_add = 20
+		}
+
+		level_scaled = {
+			building_employment_aristocrats_add = 500
+			building_employment_clerks_add = 1000
+			building_employment_laborers_add = 4500
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_migration_pull_mult = 0.25
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 10
+		}
+	}
+}
+
+pm_royal_atlantic_naval_yard = {
+	texture = "gfx/interface/icons/production_method_icons/reinforced_wooden_ships.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 80
+			goods_input_fabric_add = 40
+			goods_input_bronze_add = 20
+			goods_input_ironingot_add = 30
+			goods_input_tools_add = 18
+
+			goods_output_navalsupplies_add = 150
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_engineers_add = 1250
+			building_employment_machinists_add = 1250
+			building_employment_laborers_add = 3000
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_ship_construction_add = 30
+			country_prestige_add = 10
+			country_ship_construction_efficiency_add = 0.10
+		}
+	}
+}
+
+pm_academie_francaise = {
+	texture = "gfx/interface/icons/production_method_icons/scholastic_education.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_book_add = 66
+			goods_input_paper_add = 54
+			goods_input_beeswax_add = 35
+			goods_input_tools_add = 26
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 2300
+			building_employment_clerks_add = 762
+			building_employment_laborers_add = 2938
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 25
+			country_weekly_innovation_max_add = 25
+			country_prestige_add = 10
+		}
+	}
+}
+
+pm_palace_of_versailles = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_luxury_clothes_add = 45
+			goods_input_luxury_furniture_add = 45
+			goods_input_wine_add = 35
+			goods_input_glass_add = 20
+			goods_input_tools_add = 21
+		}
+
+		level_scaled = {
+			building_employment_aristocrats_add = 1800
+			building_employment_bureaucrats_add = 1000
+			building_employment_clerks_add = 804
+			building_employment_laborers_add = 2396
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 100
+			country_prestige_add = 10
+		}
+	}
+}
+
+pm_louvre_museum = {
+	texture = "gfx/interface/icons/production_method_icons/traditional_art.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_book_add = 81
+			goods_input_paper_add = 50
+			goods_input_glass_add = 64
+			goods_input_tools_add = 82
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 4800
+			building_employment_clerks_add = 704
+			building_employment_laborers_add = 496
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.35
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			state_working_adult_ratio_add = 0.05
+			country_prestige_add = 10
 		}
 	}
 }

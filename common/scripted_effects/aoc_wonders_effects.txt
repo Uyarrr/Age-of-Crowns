@@ -1,6 +1,9 @@
 ﻿aoc_remove_transferred_wonder = {
 	if = {
-		limit = { has_building = $WONDER$ }
+		limit = {
+			always = $DESTROY$
+			has_building = $WONDER$
+		}
 		remove_building = $WONDER$
 	}
 }

@@ -21,19 +21,18 @@ movement_absolutist = {
 		has_technology_researched = sovereignty
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
 			limit = {
 				OR = {
+					has_law_or_variant = law_type:law_figurehead_position
 					has_law_or_variant = law_type:law_strengthen_the_nobility
-					aoc_country_is_decentralized = yes
+					has_law_or_variant = law_type:law_autonomous_councils
+					has_law_or_variant = law_type:law_feudal_administration
+					has_law_or_variant = law_type:law_confederal_union
 				}
 			}
-			multiply = 2
-		}
-		if = {
-			limit = { has_technology_researched = absolutism }
-			multiply = 2
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -224,16 +223,19 @@ movement_centralist = {
 		has_technology_researched = formalized_administration
 	}
 	creation_weight = {
-		value = 100
-		if = {
-			limit = { aoc_country_is_decentralized = yes }
-			multiply = 2
-		}
+		value = 50
 		if = {
 			limit = {
-				any_scope_state = { count >= 10 }
+				OR = {
+					has_law_or_variant = law_type:law_decentralized_offices
+					has_law_or_variant = law_type:law_hereditary_bureaucrats
+					has_law_or_variant = law_type:law_autonomous_councils
+					has_law_or_variant = law_type:law_local_courts
+					has_law_or_variant = law_type:law_feudal_administration
+					has_law_or_variant = law_type:law_confederal_union
+				}
 			}
-			multiply = 1.5
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -370,18 +372,18 @@ movement_magnate = {
 		NOT = { has_law_or_variant = law_type:law_chiefdom }
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { aoc_country_has_curtailed_nobility = yes }
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_curtail_the_nobility
+					has_law_or_variant = law_type:law_absolute_rule
+					has_law_or_variant = law_type:law_absolute_leadership
+					has_law_or_variant = law_type:law_peasant_levy
+					has_law_or_variant = law_type:law_burghers_controlled_mining
+				}
+			}
 			multiply = 3
-		}
-		if = {
-			limit = { aoc_country_has_absolute_crown = yes }
-			multiply = 2
-		}
-		if = {
-			limit = { has_law_or_variant = law_type:law_strengthen_the_nobility }
-			multiply = 0.5
 		}
 	}
 	on_created = {
@@ -577,20 +579,18 @@ movement_particularist = {
 		any_scope_state = { count >= 4 }
 	}
 	creation_weight = {
-		value = 100
-		if = {
-			limit = { aoc_country_is_centralized = yes }
-			multiply = 2
-		}
+		value = 50
 		if = {
 			limit = {
 				OR = {
 					has_law_or_variant = law_type:law_centralized_offices
-					has_law = law_type:law_namestnik_office
-					has_law = law_type:law_rentekammeret
+					has_law_or_variant = law_type:law_appointed_bureaucrats
+					has_law_or_variant = law_type:law_central_council
+					has_law_or_variant = law_type:law_absolute_leadership
+					has_law_or_variant = law_type:law_unitary_administration
 				}
 			}
-			multiply = 1.5
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -803,10 +803,16 @@ movement_royalist = {
 		NOT = { aoc_country_is_monarchy = yes }
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_law_or_variant = law_type:law_theocracy }
-			multiply = 0.5
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_parliamentary_republic
+					has_law_or_variant = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_theocracy
+				}
+			}
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -995,26 +1001,21 @@ movement_republican = {
 	}
 
 	creation_trigger = {
-		aoc_country_is_monarchy = yes
+		aoc_country_is_republic = no
 		has_technology_researched = renaissance
 	}
 	creation_weight = {
-		value = 100
-		if = {
-			limit = { has_technology_researched = representative_assemblies }
-			multiply = 2
-		}
+		value = 50
 		if = {
 			limit = {
-				any_neighbouring_state = {
-					owner = { aoc_country_is_republic = yes }
+				OR = {
+					has_law_or_variant = law_type:law_monarchy
+					has_law_or_variant = law_type:law_steppe_horde
+					has_law_or_variant = law_type:law_autocracy
+					has_law_or_variant = law_type:law_absolute_rule
 				}
 			}
-			multiply = 1.5
-		}
-		if = {
-			limit = { has_law_or_variant = law_type:law_steppe_horde }
-			multiply = 0.1
+			multiply = 3
 		}
 	}
 	on_created = {

@@ -37,6 +37,7 @@ types aoc_national_technology_types
 			spacing = 2
 			wrap_count = 4
 			datamodel = "[Technology.GetUnlocks(GetPlayer.Self)]"
+			block "journal_unlocks" {}
 			item = {
 				icon = {
 					size = { 20 20 }
@@ -54,12 +55,6 @@ types aoc_national_technology_types
 					}
 				}
 			}
-		}
-		flowcontainer = {
-			position = { 8 94 }
-			direction = vertical
-			spacing = 2
-			block "journal_unlocks" {}
 		}
 	}
 	type aoc_national_age_header = widget {
@@ -100,7 +95,7 @@ types aoc_national_technology_types
 			multiline = yes
 			align = left|top|nobaseline
 			using = fontsize_small
-			block "event_conditions" {}
+			block "event_briefing" {}
 		}
 		icon = {
 			position = { 460 9 }
@@ -120,6 +115,56 @@ types aoc_national_technology_types
 			texture = "gfx/interface/icons/generic_icons/information.dds"
 			block "event_details" {}
 		}
+	}
+}
+
+flowcontainer = {
+	name = "widget_burgundy_technologies"
+	parentanchor = hcenter
+	direction = vertical
+	spacing = 8
+	ignoreinvisible = yes
+	textbox = { size = { 510 38 } text = "aoc_burgundy_tech_summary" align = center|nobaseline }
+	flowcontainer = {
+		parentanchor = hcenter
+		spacing = 4
+		button_tab = {
+			size = { 253 35 }
+			text = "aoc_content_technologies_tab"
+			down = "[Not(GetVariableSystem.Exists('aoc_burgundy_events_tab'))]"
+			onclick = "[GetVariableSystem.Clear('aoc_burgundy_events_tab')]"
+		}
+		button_tab = {
+			size = { 253 35 }
+			text = "aoc_content_events_tab"
+			down = "[GetVariableSystem.Exists('aoc_burgundy_events_tab')]"
+			onclick = "[GetVariableSystem.Set('aoc_burgundy_events_tab', 'true')]"
+		}
+	}
+	flowcontainer = {
+		visible = "[Not(GetVariableSystem.Exists('aoc_burgundy_events_tab'))]"
+		direction = vertical
+		spacing = 7
+		textbox = { size = { 510 24 } text = "aoc_burgundy_tech_progress" align = center|nobaseline }
+		aoc_national_age_header = {
+			blockoverride "age_icon" { texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds" }
+			blockoverride "age_name" { text = "aoc_national_tech_era_1" }
+		}
+		flowcontainer = {
+			spacing = 9
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('burgundy_hospices_de_beaune')]"
+				blockoverride "research_hint" { tooltip = "aoc_burgundy_unlock_burgundy_hospices_de_beaune" }
+			}
+		}
+	}
+	flowcontainer = {
+		visible = "[GetVariableSystem.Exists('aoc_burgundy_events_tab')]"
+		direction = vertical
+		spacing = 4
+		ignoreinvisible = yes
+		textbox = { size = { 510 40 } text = "aoc_content_event_history_note" multiline = yes align = center|nobaseline using = fontsize_small }
+		textbox = { size = { 510 32 } text = "aoc_national_no_events" align = center|nobaseline }
 	}
 }
 
@@ -162,8 +207,8 @@ flowcontainer = {
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_elan" }
 			}
 			aoc_national_technology_card = {
-				datacontext = "[GetTechnology('france_french_noble_armies')]"
-				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_french_noble_armies" }
+				datacontext = "[GetTechnology('france_noblesse_d_epee')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_noblesse_d_epee" }
 			}
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_ancient_french_taxation')]"
@@ -195,17 +240,6 @@ flowcontainer = {
 				datacontext = "[GetTechnology('france_french_monarchy')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_french_monarchy" }
 			}
-			aoc_national_technology_card = {
-				datacontext = "[GetTechnology('france_hospices_de_beaune')]"
-				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_hospices_de_beaune" }
-			}
-		}
-		flowcontainer = {
-			spacing = 9
-			aoc_national_technology_card = {
-				datacontext = "[GetTechnology('france_royal_construction_commissions')]"
-				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_construction_commissions" }
-			}
 		}
 		aoc_national_age_header = {
 			blockoverride "age_icon" { texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds" }
@@ -222,8 +256,8 @@ flowcontainer = {
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_exploration_carrack" }
 			}
 			aoc_national_technology_card = {
-				datacontext = "[GetTechnology('france_breton_marriage')]"
-				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_breton_marriage" }
+				datacontext = "[GetTechnology('france_chateau_de_chambord')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_chateau_de_chambord" }
 			}
 		}
 		flowcontainer = {
@@ -231,10 +265,6 @@ flowcontainer = {
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_establishment_of_recettes_generales')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_establishment_of_recettes_generales" }
-			}
-			aoc_national_technology_card = {
-				datacontext = "[GetTechnology('france_royal_guild_privileges')]"
-				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_guild_privileges" }
 			}
 		}
 		aoc_national_age_header = {
@@ -244,9 +274,20 @@ flowcontainer = {
 		flowcontainer = {
 			spacing = 9
 			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_elite_gendarmes')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_elite_gendarmes" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_royal_atlantic_naval_yard')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_atlantic_naval_yard" }
+			}
+			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_atlantic_fisheries')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_atlantic_fisheries" }
 			}
+		}
+		flowcontainer = {
+			spacing = 9
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_colonial_ventures')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_colonial_ventures" }
@@ -254,6 +295,10 @@ flowcontainer = {
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_parish_registration')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_parish_registration" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_royal_construction_commissions')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_construction_commissions" }
 			}
 		}
 		aoc_national_age_header = {
@@ -267,25 +312,24 @@ flowcontainer = {
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_grasse_perfumed_gloves" }
 			}
 			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_academie_francaise')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_academie_francaise" }
+			}
+			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_east_india_company')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_east_india_company" }
-				blockoverride "card_size" { size = { 164 126 } }
 				blockoverride "journal_unlocks" {
-					widget = {
-						size = { 152 30 }
-						icon = { size = { 24 24 } position = { 0 3 } texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds" tooltip = "aoc_content_unlock_je_aoc_england_east_india" }
-						textbox = {
-							position = { 30 0 }
-							size = { 120 30 }
-							text = "aoc_content_unlock_je_aoc_england_east_india_label"
-							tooltip = "aoc_content_unlock_je_aoc_england_east_india"
-							multiline = yes
-							align = left|vcenter|nobaseline
-							using = fontsize_small
-						}
+					icon = {
+						size = { 20 20 }
+						texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds"
+						tooltip = "aoc_content_unlock_je_aoc_england_east_india"
+						using = tooltip_se
 					}
 				}
 			}
+		}
+		flowcontainer = {
+			spacing = 9
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_edict_of_nantes')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_edict_of_nantes" }
@@ -302,12 +346,23 @@ flowcontainer = {
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_manufacture_royale_des_glaces" }
 			}
 			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_royal_manufactories')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_royal_manufactories" }
+			}
+			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_académie_royale_des_sciences')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_académie_royale_des_sciences" }
 			}
+		}
+		flowcontainer = {
+			spacing = 9
 			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_bourbon_absolutism')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_bourbon_absolutism" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_palace_of_versailles')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_palace_of_versailles" }
 			}
 		}
 		aoc_national_age_header = {
@@ -317,8 +372,27 @@ flowcontainer = {
 		flowcontainer = {
 			spacing = 9
 			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_grande_armee')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_grande_armee" }
+			}
+			aoc_national_technology_card = {
 				datacontext = "[GetTechnology('france_the_gribeauval_system')]"
 				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_the_gribeauval_system" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_ecole_polytechnique')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_ecole_polytechnique" }
+			}
+		}
+		flowcontainer = {
+			spacing = 9
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_liberte_egalite_fraternite')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_liberte_egalite_fraternite" }
+			}
+			aoc_national_technology_card = {
+				datacontext = "[GetTechnology('france_louvre_museum')]"
+				blockoverride "research_hint" { tooltip = "aoc_france_unlock_france_louvre_museum" }
 			}
 		}
 	}
@@ -354,7 +428,7 @@ flowcontainer = {
 			aoc_national_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_299" }
 				blockoverride "event_title" { text = "aoc_hyw_france_intro_title" tooltip = "aoc_content_player_aoc_hyw_299" }
-				blockoverride "event_conditions" { text = "aoc_national_event_conditions" tooltip = "aoc_content_player_aoc_hyw_299" }
+				blockoverride "event_briefing" { text = "aoc_hyw_france_intro_desc" tooltip = "aoc_content_player_aoc_hyw_299" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_storyline_age_1"
@@ -367,7 +441,7 @@ flowcontainer = {
 			aoc_national_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_300" }
 				blockoverride "event_title" { text = "aoc_hyw_france_victory_title" tooltip = "aoc_content_player_aoc_hyw_300" }
-				blockoverride "event_conditions" { text = "aoc_national_event_conditions" tooltip = "aoc_content_player_aoc_hyw_300" }
+				blockoverride "event_briefing" { text = "aoc_hyw_france_victory_event_desc" tooltip = "aoc_content_player_aoc_hyw_300" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_storyline_age_1"
@@ -380,7 +454,7 @@ flowcontainer = {
 			aoc_national_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_301" }
 				blockoverride "event_title" { text = "aoc_hyw_france_defeat_title" tooltip = "aoc_content_player_aoc_hyw_301" }
-				blockoverride "event_conditions" { text = "aoc_national_event_conditions" tooltip = "aoc_content_player_aoc_hyw_301" }
+				blockoverride "event_briefing" { text = "aoc_hyw_france_defeat_event_desc" tooltip = "aoc_content_player_aoc_hyw_301" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_storyline_age_1"
@@ -393,7 +467,7 @@ flowcontainer = {
 			aoc_national_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_311" }
 				blockoverride "event_title" { text = "aoc_hyw_maine_returned_title" tooltip = "aoc_content_player_aoc_hyw_311" }
-				blockoverride "event_conditions" { text = "aoc_content_when_aoc_hyw_311" tooltip = "aoc_content_player_aoc_hyw_311" }
+				blockoverride "event_briefing" { text = "aoc_hyw_maine_returned_desc" tooltip = "aoc_content_player_aoc_hyw_311" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_storyline_age_1"
@@ -406,7 +480,7 @@ flowcontainer = {
 			aoc_national_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_312" }
 				blockoverride "event_title" { text = "aoc_hyw_maine_denied_title" tooltip = "aoc_content_player_aoc_hyw_312" }
-				blockoverride "event_conditions" { text = "aoc_content_when_aoc_hyw_312" tooltip = "aoc_content_player_aoc_hyw_312" }
+				blockoverride "event_briefing" { text = "aoc_hyw_maine_denied_desc" tooltip = "aoc_content_player_aoc_hyw_312" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_storyline_age_1"
@@ -443,7 +517,7 @@ flowcontainer = {
 			aoc_national_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/event_industry.dds" tooltip = "aoc_content_player_national_colonization_3" }
 				blockoverride "event_title" { text = "national_colonization.3.t" tooltip = "aoc_content_player_national_colonization_3" }
-				blockoverride "event_conditions" { text = "aoc_content_when_national_colonization_3" tooltip = "aoc_content_player_national_colonization_3" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_national_colonization_3" tooltip = "aoc_content_player_national_colonization_3" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_required_age_3"
@@ -478,12 +552,354 @@ flowcontainer = {
 			direction = vertical
 			spacing = 4
 			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_4" }
+				blockoverride "event_title" { text = "aoc_france_francs_archers.title" tooltip = "aoc_content_player_aoc_france_4" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_4" tooltip = "aoc_content_player_aoc_france_4" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+					tooltip = "aoc_content_required_age_1"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_4" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_11" }
+				blockoverride "event_title" { text = "aoc_france_argentier.title" tooltip = "aoc_content_player_aoc_france_11" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_11" tooltip = "aoc_content_player_aoc_france_11" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+					tooltip = "aoc_content_required_age_1"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_11" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_11').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_12" }
+				blockoverride "event_title" { text = "aoc_france_customs.title" tooltip = "aoc_content_player_aoc_france_12" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_12" tooltip = "aoc_content_player_aoc_france_12" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+					tooltip = "aoc_content_required_age_1"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_12" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_12').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_13" }
+				blockoverride "event_title" { text = "aoc_france_sorbonne.title" tooltip = "aoc_content_player_aoc_france_13" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_13" tooltip = "aoc_content_player_aoc_france_13" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
+					tooltip = "aoc_content_required_age_1"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_13" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_13').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_14" }
+				blockoverride "event_title" { text = "aoc_france_lyon_fairs.title" tooltip = "aoc_content_player_aoc_france_14" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_14" tooltip = "aoc_content_player_aoc_france_14" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
+					tooltip = "aoc_content_required_age_2"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_14" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_14').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_5" }
+				blockoverride "event_title" { text = "aoc_france_cloth_of_gold.title" tooltip = "aoc_content_player_aoc_france_5" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_5" tooltip = "aoc_content_player_aoc_france_5" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
+					tooltip = "aoc_content_required_age_2"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_5" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_15" }
+				blockoverride "event_title" { text = "aoc_france_blois_books.title" tooltip = "aoc_content_player_aoc_france_15" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_15" tooltip = "aoc_content_player_aoc_france_15" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
+					tooltip = "aoc_content_required_age_2"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_15" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_15').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_16" }
+				blockoverride "event_title" { text = "aoc_france_royal_readers.title" tooltip = "aoc_content_player_aoc_france_16" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_16" tooltip = "aoc_content_player_aoc_france_16" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
+					tooltip = "aoc_content_required_age_2"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_16" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_16').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_1" }
+				blockoverride "event_title" { text = "aoc_presidial_courts.title" tooltip = "aoc_content_player_aoc_france_1" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_1" tooltip = "aoc_content_player_aoc_france_1" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+					tooltip = "aoc_content_required_age_3"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_1" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_2" }
+				blockoverride "event_title" { text = "aoc_france_ottoman_alliance.title" tooltip = "aoc_content_player_aoc_france_2" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_2" tooltip = "aoc_content_player_aoc_france_2" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+					tooltip = "aoc_content_required_age_3"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_2" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_17" }
+				blockoverride "event_title" { text = "aoc_france_lyon_silk.title" tooltip = "aoc_content_player_aoc_france_17" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_17" tooltip = "aoc_content_player_aoc_france_17" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+					tooltip = "aoc_content_required_age_3"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_17" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_17').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_6" }
+				blockoverride "event_title" { text = "aoc_france_antarctique.title" tooltip = "aoc_content_player_aoc_france_6" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_6" tooltip = "aoc_content_player_aoc_france_6" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+					tooltip = "aoc_content_required_age_3"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_6" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_18" }
+				blockoverride "event_title" { text = "aoc_france_villers_cotterets.title" tooltip = "aoc_content_player_aoc_france_18" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_18" tooltip = "aoc_content_player_aoc_france_18" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+					tooltip = "aoc_content_required_age_3"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_18" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_18').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_3" }
+				blockoverride "event_title" { text = "aoc_france_calais.title" tooltip = "aoc_content_player_aoc_france_3" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_3" tooltip = "aoc_content_player_aoc_france_3" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+					tooltip = "aoc_content_required_age_3"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_3" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_19" }
+				blockoverride "event_title" { text = "aoc_france_lescot_louvre.title" tooltip = "aoc_content_player_aoc_france_19" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_19" tooltip = "aoc_content_player_aoc_france_19" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
+					tooltip = "aoc_content_required_age_3"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_19" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_19').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds" tooltip = "aoc_content_player_france_east_india_1" }
 				blockoverride "event_title" { text = "france_east_india.1.t" tooltip = "aoc_content_player_france_east_india_1" }
-				blockoverride "event_conditions" { text = "aoc_content_when_france_east_india_1" tooltip = "aoc_content_player_france_east_india_1" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_france_east_india_1" tooltip = "aoc_content_player_france_east_india_1" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+					tooltip = "aoc_content_required_age_4"
+				}
 				blockoverride "event_details" { tooltip = "aoc_content_details_france_east_india_1" }
 				blockoverride "event_seen" {
 					visible = "[GetScriptedGui('aoc_content_check_france_east_india_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_20" }
+				blockoverride "event_title" { text = "aoc_france_poissy.title" tooltip = "aoc_content_player_aoc_france_20" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_20" tooltip = "aoc_content_player_aoc_france_20" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+					tooltip = "aoc_content_required_age_4"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_20" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_20').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_21" }
+				blockoverride "event_title" { text = "aoc_france_gregorian_calendar.title" tooltip = "aoc_content_player_aoc_france_21" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_21" tooltip = "aoc_content_player_aoc_france_21" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+					tooltip = "aoc_content_required_age_4"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_21" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_21').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_7" }
+				blockoverride "event_title" { text = "aoc_france_assassination.title" tooltip = "aoc_content_player_aoc_france_7" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_7" tooltip = "aoc_content_player_aoc_france_7" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+					tooltip = "aoc_content_required_age_4"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_7" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_22" }
+				blockoverride "event_title" { text = "aoc_france_paulette.title" tooltip = "aoc_content_player_aoc_france_22" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_22" tooltip = "aoc_content_player_aoc_france_22" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_4_reformation.dds"
+					tooltip = "aoc_content_required_age_4"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_22" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_22').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_23" }
+				blockoverride "event_title" { text = "aoc_france_riquet_canal.title" tooltip = "aoc_content_player_aoc_france_23" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_23" tooltip = "aoc_content_player_aoc_france_23" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds"
+					tooltip = "aoc_content_required_age_5"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_23" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_23').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_8" }
+				blockoverride "event_title" { text = "aoc_france_glass_charter.title" tooltip = "aoc_content_player_aoc_france_8" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_8" tooltip = "aoc_content_player_aoc_france_8" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds"
+					tooltip = "aoc_content_required_age_5"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_8" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_8').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_24" }
+				blockoverride "event_title" { text = "aoc_france_science_academy.title" tooltip = "aoc_content_player_aoc_france_24" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_24" tooltip = "aoc_content_player_aoc_france_24" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds"
+					tooltip = "aoc_content_required_age_5"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_24" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_24').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_25" }
+				blockoverride "event_title" { text = "aoc_france_cassini_map.title" tooltip = "aoc_content_player_aoc_france_25" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_25" tooltip = "aoc_content_player_aoc_france_25" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_5_absolutism.dds"
+					tooltip = "aoc_content_required_age_5"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_25" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_25').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_26" }
+				blockoverride "event_title" { text = "aoc_france_chappe_telegraph.title" tooltip = "aoc_content_player_aoc_france_26" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_26" tooltip = "aoc_content_player_aoc_france_26" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_6_revolutions.dds"
+					tooltip = "aoc_content_required_age_6"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_26" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_26').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_27" }
+				blockoverride "event_title" { text = "aoc_france_metric_measures.title" tooltip = "aoc_content_player_aoc_france_27" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_27" tooltip = "aoc_content_player_aoc_france_27" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_6_revolutions.dds"
+					tooltip = "aoc_content_required_age_6"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_27" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_27').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			aoc_national_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_28" }
+				blockoverride "event_title" { text = "aoc_france_civil_code.title" tooltip = "aoc_content_player_aoc_france_28" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_28" tooltip = "aoc_content_player_aoc_france_28" }
+				blockoverride "event_age" {
+					texture = "gfx/interface/icons/invention_icons/age_6_revolutions.dds"
+					tooltip = "aoc_content_required_age_6"
+				}
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_28" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_28').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				}
 			}
 		}

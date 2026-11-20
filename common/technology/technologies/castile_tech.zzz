@@ -1,0 +1,57 @@
+﻿castile_castilian_wheatlands = {
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/grain.dds"
+	category = production
+
+    can_research = no
+
+	modifier = {
+		building_wheat_farm_throughput_add = 0.10
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+castile_a_land_of_castles = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/black_placeholder.dds"
+	category = military
+
+    can_research = no
+
+	modifier = {
+		unit_provinces_lost_mult = -0.10
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+castile_medina_del_campo_fairs = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/black_placeholder.dds"
+	category = society
+
+    can_research = no
+
+	modifier = {
+		state_trade_capacity_mult  = 0.15
+	}
+
+	on_researched = {
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+

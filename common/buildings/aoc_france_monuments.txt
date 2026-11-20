@@ -1,5 +1,5 @@
 ﻿building_hospices_de_beaune = {
-	building_group = bg_monuments
+	building_group = bg_aoc_france_monuments
 	icon = "gfx/interface/icons/building_icons/hospital_uyr.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	expandable = no
@@ -7,8 +7,8 @@
 	unique = yes
 
 	production_method_groups = { pmg_hospices_de_beaune }
-	unlocking_technologies = { france_hospices_de_beaune }
-	required_construction = construction_cost_monument
+	unlocking_technologies = { burgundy_hospices_de_beaune }
+	required_construction = aoc_monument_construction_traditions
 
 	potential = { state_region = s:STATE_BURGUNDY }
 	possible = {
@@ -16,12 +16,18 @@
 		this = p:x8C3297.state
 	}
 
-	ai_value = 100
+	ai_value = {
+		value = 0
+		if = {
+			limit = { owner = { net_fixed_income >= 6000 } }
+			add = aoc_france_monument_ai_score
+		}
+	}
 }
 
 building_chateau_de_vincennes = {
-	building_group = bg_monuments
-	icon = "gfx/interface/icons/building_icons/council_hall_uyr.dds"
+	building_group = bg_aoc_france_monuments
+	icon = "gfx/interface/icons/invention_icons/chateau.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	expandable = no
 	downsizeable = no
@@ -29,7 +35,7 @@ building_chateau_de_vincennes = {
 
 	production_method_groups = { pmg_chateau_de_vincennes }
 	unlocking_technologies = { france_chateau_de_vincennes }
-	required_construction = construction_cost_monument
+	required_construction = aoc_monument_construction_traditions
 
 	potential = { state_region = s:STATE_ILE_DE_FRANCE }
 	possible = {
@@ -37,5 +43,148 @@ building_chateau_de_vincennes = {
 		this = p:x906000.state
 	}
 
-	ai_value = 100
+	ai_value = {
+		value = 0
+		if = {
+			limit = { owner = { net_fixed_income >= 6000 } }
+			add = aoc_france_monument_ai_score
+		}
+	}
+}
+
+building_chateau_de_chambord = {
+	building_group = bg_aoc_france_monuments
+	icon = "gfx/interface/icons/invention_icons/chateau.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = { pmg_chateau_de_chambord }
+	unlocking_technologies = { france_chateau_de_chambord }
+	required_construction = aoc_monument_construction_renaissance
+
+	potential = { state_region = s:STATE_ORLEANS }
+	possible = {
+		owner = { c:FRA ?= this }
+		this = p:x47B641.state
+	}
+
+	ai_value = {
+		value = 0
+		if = {
+			limit = { owner = { net_fixed_income >= 7500 } }
+			add = aoc_france_monument_ai_score
+		}
+	}
+}
+
+building_royal_atlantic_naval_yard = {
+	building_group = bg_aoc_france_monuments
+	icon = "gfx/interface/icons/invention_icons/anchor.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	city_type = port
+
+	production_method_groups = { pmg_royal_atlantic_naval_yard }
+	unlocking_technologies = { france_royal_atlantic_naval_yard }
+	required_construction = aoc_monument_construction_discovery
+
+	potential = { state_region = s:STATE_NORMANDY }
+	possible = {
+		owner = { c:FRA ?= this }
+		this = p:xA786BB.state
+		is_coastal = yes
+	}
+
+	ai_value = {
+		value = 0
+		if = {
+			limit = { owner = { net_fixed_income >= 9000 } }
+			add = aoc_france_monument_ai_score
+		}
+	}
+}
+
+building_academie_francaise = {
+	building_group = bg_aoc_france_monuments
+	icon = "gfx/interface/icons/invention_icons/university2.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = { pmg_academie_francaise }
+	unlocking_technologies = { france_academie_francaise }
+	required_construction = aoc_monument_construction_reformation
+
+	potential = { state_region = s:STATE_ILE_DE_FRANCE }
+	possible = {
+		owner = { c:FRA ?= this }
+		this = p:x906000.state
+	}
+
+	ai_value = {
+		value = 0
+		if = {
+			limit = { owner = { net_fixed_income >= 11000 } }
+			add = aoc_france_monument_ai_score
+		}
+	}
+}
+
+building_palace_of_versailles = {
+	building_group = bg_aoc_france_monuments
+	icon = "gfx/interface/icons/invention_icons/palace_of_versailles.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = { pmg_palace_of_versailles }
+	unlocking_technologies = { france_palace_of_versailles }
+	required_construction = aoc_monument_construction_absolutism
+
+	potential = { state_region = s:STATE_ILE_DE_FRANCE }
+	possible = {
+		owner = { c:FRA ?= this }
+		this = p:x906000.state
+	}
+
+	ai_value = {
+		value = 0
+		if = {
+			limit = { owner = { net_fixed_income >= 14000 } }
+			add = aoc_france_monument_ai_score
+		}
+	}
+}
+
+building_louvre_museum = {
+	building_group = bg_aoc_france_monuments
+	icon = "gfx/interface/icons/invention_icons/louvre.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	production_method_groups = { pmg_louvre_museum }
+	unlocking_technologies = { france_louvre_museum }
+	required_construction = aoc_monument_construction_revolutions
+
+	potential = { state_region = s:STATE_ILE_DE_FRANCE }
+	possible = {
+		owner = { c:FRA ?= this }
+		this = p:x906000.state
+	}
+
+	ai_value = {
+		value = 0
+		if = {
+			limit = { owner = { net_fixed_income >= 17500 } }
+			add = aoc_france_monument_ai_score
+		}
+	}
 }

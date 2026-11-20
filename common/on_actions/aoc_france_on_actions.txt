@@ -1,0 +1,260 @@
+on_yearly_pulse_country = {
+	on_actions = {
+		aoc_presidial_courts_yearly
+		aoc_france_ottoman_alliance_yearly
+		aoc_france_calais_yearly
+		aoc_france_francs_archers_yearly
+		aoc_france_cloth_of_gold_yearly
+		aoc_france_antarctique_yearly
+		aoc_france_assassination_yearly
+		aoc_france_glass_charter_yearly
+		aoc_france_argentier_yearly
+		aoc_france_customs_yearly
+		aoc_france_sorbonne_yearly
+		aoc_france_lyon_fairs_yearly
+		aoc_france_blois_books_yearly
+		aoc_france_royal_readers_yearly
+		aoc_france_lyon_silk_yearly
+		aoc_france_villers_cotterets_yearly
+		aoc_france_lescot_louvre_yearly
+		aoc_france_poissy_yearly
+		aoc_france_gregorian_calendar_yearly
+		aoc_france_paulette_yearly
+		aoc_france_riquet_canal_yearly
+		aoc_france_science_academy_yearly
+		aoc_france_cassini_map_yearly
+		aoc_france_chappe_telegraph_yearly
+		aoc_france_metric_measures_yearly
+		aoc_france_civil_code_yearly
+	}
+}
+
+aoc_presidial_courts_yearly = {
+	trigger = { c:FRA ?= this }
+
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.1
+	}
+}
+
+aoc_france_ottoman_alliance_yearly = {
+	trigger = { c:FRA ?= this }
+
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.2
+	}
+}
+
+aoc_france_calais_yearly = {
+	trigger = { c:FRA ?= this }
+
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.3
+	}
+}
+
+aoc_france_francs_archers_yearly = {
+	trigger = { c:FRA ?= this }
+
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.4
+	}
+}
+
+aoc_france_cloth_of_gold_yearly = {
+	trigger = { c:FRA ?= this }
+
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.5
+	}
+}
+
+aoc_france_antarctique_yearly = {
+	trigger = { c:FRA ?= this }
+
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.6
+	}
+}
+
+aoc_france_assassination_yearly = {
+	trigger = { c:FRA ?= this }
+
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.7
+	}
+}
+
+aoc_france_glass_charter_yearly = {
+	trigger = { c:FRA ?= this }
+
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.8
+	}
+}
+
+on_monthly_pulse_country = {
+	on_actions = { aoc_france_antarctique_monthly }
+}
+
+aoc_france_antarctique_monthly = {
+	trigger = {
+		has_modifier = aoc_france_antarctique_patronage
+	}
+
+	effect = {
+		add_involvement = { strategic_region = sr:region_brazil value = 100 }
+	}
+}
+
+aoc_france_argentier_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.11
+	}
+}
+
+aoc_france_customs_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.12
+	}
+}
+
+aoc_france_sorbonne_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.13
+	}
+}
+
+aoc_france_lyon_fairs_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.14
+	}
+}
+
+aoc_france_blois_books_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.15
+	}
+}
+
+aoc_france_royal_readers_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.16
+	}
+}
+
+aoc_france_lyon_silk_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.17
+	}
+}
+
+aoc_france_villers_cotterets_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.18
+	}
+}
+
+aoc_france_lescot_louvre_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.19
+	}
+}
+
+aoc_france_poissy_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.20
+	}
+}
+
+aoc_france_gregorian_calendar_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.21
+	}
+}
+
+aoc_france_paulette_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.22
+	}
+}
+
+aoc_france_riquet_canal_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.23
+	}
+}
+
+aoc_france_science_academy_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.24
+	}
+}
+
+aoc_france_cassini_map_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.25
+	}
+}
+
+aoc_france_chappe_telegraph_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.26
+	}
+}
+
+aoc_france_metric_measures_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.27
+	}
+}
+
+aoc_france_civil_code_yearly = {
+	trigger = { c:FRA ?= this }
+	random_events = {
+		chance_to_happen = 20
+		100 = aoc_france.28
+	}
+}

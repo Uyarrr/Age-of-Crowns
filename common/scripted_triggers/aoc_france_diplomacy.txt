@@ -1,3 +1,45 @@
+# The campaign can also end effectively if either independent crown disappears.
+aoc_france_hyw_active = {
+	c:FRA ?= this
+	aoc_hyw_crowns_available = yes
+	NOT = { has_global_variable = aoc_hyw_concluded }
+}
+
+aoc_france_can_centralize_subject = {
+	OR = { c:FRA ?= this was_formed_from = FRA }
+	aoc_france_hyw_active = no
+	$TARGET$ = {
+		is_direct_subject_of = root
+		OR = {
+			is_subject_type = subject_type_appanage
+			AND = {
+				is_subject_type = subject_type_vassal
+				capital ?= { is_in_geographic_region = geographic_region_france }
+			}
+		}
+	}
+}
+
+aoc_france_colonial_program = {
+	aoc_france_hyw_active = no
+	has_technology_researched = colonization
+	has_technology_researched = colonial_trade_networks
+}
+
+aoc_france_colonial_region = {
+	OR = {
+		$REGION$ = sr:region_canada
+		AND = {
+			has_variable = aoc_french_atlantic_phase
+			$REGION$ = sr:region_atlantic_coast
+		}
+		AND = {
+			has_variable = aoc_french_caribbean_phase
+			$REGION$ = sr:region_central_america
+		}
+	}
+}
+
 # France prioritizes its subjects, Europe and countries in regions where it
 # already has a territorial or subject foothold.
 aoc_france_diplomatic_priority = {
@@ -6,6 +48,14 @@ aoc_france_diplomatic_priority = {
 			capital = { is_in_geographic_region = geographic_region:geographic_region_europe }
 		}
 		$TARGET$ = { is_subject_of = root }
+		AND = {
+			aoc_france_colonial_program = yes
+			$TARGET$ = {
+				any_scope_state = {
+					root = { aoc_france_colonial_region = { REGION = prev.region } }
+				}
+			}
+		}
 		any_scope_state = { region = $TARGET$.capital.region }
 		any_direct_subject = {
 			any_scope_state = { region = $TARGET$.capital.region }

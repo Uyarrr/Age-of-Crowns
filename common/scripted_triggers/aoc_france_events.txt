@@ -1,0 +1,51 @@
+aoc_english_successor = {
+	OR = {
+		c:ENG ?= this
+		was_formed_from = ENG
+	}
+}
+
+aoc_france_can_negotiate_with = {
+	is_subject = no
+	$OTHER$ = { is_subject = no }
+	NOR = {
+		is_diplomatic_play_enemy_of = $OTHER$
+		has_war_with = $OTHER$
+	}
+}
+
+aoc_france_can_attack_calais = {
+	aggressive_diplomatic_plays_permitted = yes
+	p:xE0A0C0.state.owner ?= {
+		aoc_english_successor = yes
+		NOT = { is_subject_of = prev }
+	}
+	NOR = {
+		is_subject_of = p:xE0A0C0.state.owner
+		is_diplomatic_play_enemy_of = p:xE0A0C0.state.owner
+		has_war_with = p:xE0A0C0.state.owner
+		has_truce_with = p:xE0A0C0.state.owner
+		AND = {
+			NOT = { has_global_variable = aoc_hyw_concluded }
+			aoc_hyw_crowns_available = yes
+			aoc_hyw_involved = yes
+			p:xE0A0C0.state.owner ?= { aoc_hyw_involved = yes }
+		}
+	}
+}
+
+aoc_france_can_offer_ottoman_alliance = {
+	c:TUR ?= { exists = capital }
+	aoc_france_can_negotiate_with = { OTHER = c:TUR }
+	NOT = {
+		any_scope_treaty = {
+			binds = c:TUR
+			any_scope_article = { has_type = alliance }
+		}
+	}
+}
+
+# Traditions stories remain eligible through the first half of Renaissance research.
+aoc_france_traditions_window_open = {
+	NOT = { aoc_era_research_mid = { ERA = 2 } }
+}

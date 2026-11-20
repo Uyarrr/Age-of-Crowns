@@ -166,6 +166,22 @@ goods_input_book_add={
 	}
 }
 
+goods_input_luxury_furniture_add={
+	decimals=1
+	color=BDE
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_luxury_clothes_add={
+	decimals=1
+	color=BDE
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_input_ironingot_add={
 	decimals=1
 	color=BDE
@@ -555,6 +571,464 @@ goods_output_medicaments_add={
 goods_output_incense_add={
 	decimals=1
 	color=BDE
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_ivory_add = {
+	decimals = 0
+	color = BDE
+	game_data = { ai_value = 0 }
+}
+
+goods_output_ivory_add = {
+	decimals = 0
+	color = good
+	game_data = { ai_value = 0 }
+}
+
+goods_input_ivory_mult = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = { ai_value = 0 }
+}
+
+goods_output_ivory_mult = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = { ai_value = 0 }
+}
+
+goods_input_livestock_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_firearms_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_stone_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_tin_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_horse_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_bronze_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_fiber_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_navalsupplies_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_saltpeter_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_pottery_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_weapons_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_book_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_leather_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_beer_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_cannons_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_weapons_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_warhorse_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_bread_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_ironingot_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_gold_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_silver_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_jewelry_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_gems_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_pepper_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_chili_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_stone_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_tin_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_horse_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_bronze_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_fiber_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_navalsupplies_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_saltpeter_mult={
+	decimals=1
+	color=BDE
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_pottery_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_weapons_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_beer_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_leather_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_cannons_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_warhorse_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_firearms_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_livestock_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_bread_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_book_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_ironingot_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_gold_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_silver_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_jewelry_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_gems_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_pepper_mult={
+	decimals=1
+	color=good
+	percent=yes
 	game_data={
 		ai_value=0
 	}

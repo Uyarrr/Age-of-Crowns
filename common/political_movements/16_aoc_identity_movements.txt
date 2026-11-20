@@ -12,7 +12,7 @@
 movement_religious_minority = {
 	category = movement_category_religious
 
-	ideology = ideology_humanist
+	ideology = ideology_aoc_toleration
 	character_ideologies = {
 		ideology_reformer
 		ideology_theocrat
@@ -330,7 +330,7 @@ movement_religious_minority = {
 movement_cultural_minority = {
 	category = movement_category_cultural
 
-	ideology = ideology_decentralization
+	ideology = ideology_aoc_local_privileges
 	character_ideologies = {
 		ideology_sovereignist_leader
 		ideology_reformer
@@ -430,10 +430,7 @@ movement_cultural_minority = {
 	}
 
 	character_support_trigger = {
-		OR = {
-			culture = scope:culture
-			has_ideology = ideology:ideology_sovereignist_leader
-		}
+		culture = scope:culture
 	}
 	character_support_weight = {
 		value = 50

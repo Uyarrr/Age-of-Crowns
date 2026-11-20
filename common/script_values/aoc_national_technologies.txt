@@ -1,3 +1,8 @@
+aoc_burgundy_researched = {
+	value = 0
+	if = { limit = { has_technology_researched = burgundy_hospices_de_beaune } add = 1 }
+}
+
 aoc_france_researched = {
 	value = 0
 	if = { limit = { has_technology_researched = france_domaine_royal } add = 1 }
@@ -6,8 +11,6 @@ aoc_france_researched = {
 	if = { limit = { has_technology_researched = france_appanage_system } add = 1 }
 	if = { limit = { has_technology_researched = france_royal_construction_commissions } add = 1 }
 	if = { limit = { has_technology_researched = france_establishment_of_recettes_generales } add = 1 }
-	if = { limit = { has_technology_researched = france_breton_marriage } add = 1 }
-	if = { limit = { has_technology_researched = france_royal_guild_privileges } add = 1 }
 	if = { limit = { has_technology_researched = france_colonial_ventures } add = 1 }
 	if = { limit = { has_technology_researched = france_atlantic_fisheries } add = 1 }
 	if = { limit = { has_technology_researched = france_grasse_perfumed_gloves } add = 1 }
@@ -18,11 +21,20 @@ aoc_france_researched = {
 	if = { limit = { has_technology_researched = france_the_gribeauval_system } add = 1 }
 	if = { limit = { has_technology_researched = france_french_monarchy } add = 1 }
 	if = { limit = { has_technology_researched = france_ancient_french_taxation } add = 1 }
-	if = { limit = { has_technology_researched = france_french_noble_armies } add = 1 }
-	if = { limit = { has_technology_researched = france_hospices_de_beaune } add = 1 }
+	if = { limit = { has_technology_researched = france_noblesse_d_epee } add = 1 }
 	if = { limit = { has_technology_researched = france_chateau_de_vincennes } add = 1 }
 	if = { limit = { has_technology_researched = france_renaissance_gendarmes } add = 1 }
 	if = { limit = { has_technology_researched = france_royal_exploration_carrack } add = 1 }
 	if = { limit = { has_technology_researched = france_parish_registration } add = 1 }
+	if = { limit = { has_technology_researched = france_elite_gendarmes } add = 1 }
 	if = { limit = { has_technology_researched = france_east_india_company } add = 1 }
+	if = { limit = { has_technology_researched = france_chateau_de_chambord } add = 1 }
+	if = { limit = { has_technology_researched = france_royal_atlantic_naval_yard } add = 1 }
+	if = { limit = { has_technology_researched = france_academie_francaise } add = 1 }
+	if = { limit = { has_technology_researched = france_palace_of_versailles } add = 1 }
+	if = { limit = { has_technology_researched = france_louvre_museum } add = 1 }
+	if = { limit = { has_technology_researched = france_ecole_polytechnique } add = 1 }
+	if = { limit = { has_technology_researched = france_royal_manufactories } add = 1 }
+	if = { limit = { has_technology_researched = france_liberte_egalite_fraternite } add = 1 }
+	if = { limit = { has_technology_researched = france_grande_armee } add = 1 }
 }

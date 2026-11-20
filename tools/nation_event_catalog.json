@@ -1,14 +1,65 @@
 {
+  "aoc_france.1": {
+    "countries": ["FRA"],
+    "briefing": "The Crown brings royal justice closer to the provinces.",
+    "conditions": "France has a 20% annual chance after reaching Early Discovery. The window opens at 25% of regular Era 3 research and closes once France completes all regular Era 3 technologies."
+  },
+  "aoc_france.2": {
+    "countries": ["FRA"],
+    "briefing": "France looks to the Ottoman court for an ally against the Habsburgs.",
+    "conditions": "From Early Discovery until Era 3 research is complete, France has a 20% annual chance if it can negotiate an alliance with the Ottomans."
+  },
+  "aoc_france.3": {
+    "countries": ["FRA"],
+    "briefing": "A French army prepares to challenge the garrison at Calais.",
+    "conditions": "From Late Discovery until Era 3 research is complete, France has a 20% annual chance if England or a country formed from England still holds Calais and France can launch the campaign."
+  },
+  "aoc_france.4": {
+    "countries": ["FRA"],
+    "briefing": "The Crown asks each parish to furnish an archer.",
+    "conditions": "France has a 20% annual chance from Early Traditions (25% of regular Era 1 research) until it reaches 50% of regular Era 2 research."
+  },
+  "aoc_france.5": {
+    "countries": ["FRA"],
+    "briefing": "Heralds prepare a meeting of the French and English courts near Ardres.",
+    "conditions": "From Mid Renaissance until Era 2 research is complete, France has a 20% annual chance if it can negotiate with England or a country formed from England."
+  },
+  "aoc_france.6": {
+    "countries": ["FRA"],
+    "briefing": "French mariners seek royal backing for a venture in Guanabara Bay.",
+    "conditions": "France has a 20% annual chance from Mid Discovery until Era 3 research is complete."
+  },
+  "aoc_france.7": {
+    "countries": ["FRA"],
+    "briefing": "A blow against the sovereign leaves the French court in turmoil.",
+    "conditions": "From Late Reformation until Era 4 research is complete, France has a 20% annual chance while governed by a monarch outside of a regency."
+  },
+  "aoc_france.8": {
+    "countries": ["FRA"],
+    "briefing": "Glassmakers petition the Crown for a charter to make mirrors in France.",
+    "conditions": "France has a 20% annual chance from Mid Absolutism until Era 5 research is complete."
+  },
+  "aoc_france.10": {
+    "countries": ["ENG"],
+    "briefing": "The French court invites its English counterpart to a meeting near Ardres.",
+    "conditions": "France sends an invitation after choosing to hold the Field of the Cloth of Gold."
+  },
   "national_colonization.3": {
     "countries": ["FRA"],
+    "briefing": "French navigators look to the Saint Lawrence for a foothold in North America.",
     "conditions": "As independent France, research $colonization$ and $colonial_trade_networks$."
   },
   "france_east_india.1": {
     "countries": ["FRA"],
+    "briefing": "French merchants look to establish trading posts in India.",
     "conditions": "Complete $je_aoc_england_east_india$ as France after chartering the Compagnie des Indes."
   },
-  "aoc_hyw.300": { "countries": ["FRA"] },
-  "aoc_hyw.301": { "countries": ["FRA"] },
+  "aoc_hyw.300": {
+    "countries": ["FRA"]
+  },
+  "aoc_hyw.301": {
+    "countries": ["FRA"]
+  },
   "aoc_hyw.310": {
     "countries": ["ENG"],
     "conditions": "On its first monthly check with Maine under English protection, the Hundred Years’ War journal schedules this decision for six months later. Maine must still be an English subject when the event fires."
@@ -20,5 +71,95 @@
   "aoc_hyw.312": {
     "countries": ["FRA"],
     "conditions": "England refuses to surrender Maine while Maine is still under English protection."
+  },
+  "aoc_france.11": {
+    "countries": ["FRA"],
+    "briefing": "Accusations against Jacques Cœur have reached the royal council.",
+    "conditions": "France has a 20% annual chance from Early Traditions (25% of regular Era 1 research) until France reaches 50% of regular Era 2 research. France must also have a monarchy."
+  },
+  "aoc_france.12": {
+    "countries": ["FRA"],
+    "briefing": "The king’s jurists have proposed that each bailiwick put its customary law into writing.",
+    "conditions": "France has a 20% annual chance from Mid Traditions (50% of regular Era 1 research) until France reaches 50% of regular Era 2 research. France must also have a monarchy."
+  },
+  "aoc_france.13": {
+    "countries": ["FRA"],
+    "briefing": "Scholars at the Sorbonne have brought three printers to Paris.",
+    "conditions": "France has a 20% annual chance from Late Traditions (75% of regular Era 1 research) until France reaches 50% of regular Era 2 research. France must also directly hold territory in $STATE_ILE_DE_FRANCE$."
+  },
+  "aoc_france.14": {
+    "countries": ["FRA"],
+    "briefing": "The aldermen of Lyon have petitioned the Crown to renew their four fairs.",
+    "conditions": "France has a 20% annual chance from Early Renaissance (25% of regular Era 2 research) until all regular Era 2 technologies are complete. France must also directly hold territory in $STATE_RHONE$."
+  },
+  "aoc_france.15": {
+    "countries": ["FRA"],
+    "briefing": "Books from the royal collections have been brought together at Blois, including manuscripts carried back from Italy.",
+    "conditions": "France has a 20% annual chance from Mid Renaissance (50% of regular Era 2 research) until all regular Era 2 technologies are complete. France must also directly hold territory in $STATE_ORLEANS$, and have a monarchy."
+  },
+  "aoc_france.16": {
+    "countries": ["FRA"],
+    "briefing": "The Crown has received a proposal to appoint salaried readers in Greek, Hebrew, and mathematics.",
+    "conditions": "France has a 20% annual chance from Late Renaissance (75% of regular Era 2 research) until all regular Era 2 technologies are complete. France must also directly hold territory in $STATE_ILE_DE_FRANCE$, and have a monarchy, and have a university in $STATE_ILE_DE_FRANCE$."
+  },
+  "aoc_france.17": {
+    "countries": ["FRA"],
+    "briefing": "Two merchants have asked the Crown to grant privileges to silk weavers who settle in Lyon.",
+    "conditions": "France has a 20% annual chance from Early Discovery (25% of regular Era 3 research) until all regular Era 3 technologies are complete. France must also directly hold territory in $STATE_RHONE$, and have a luxury cloth workshop in $STATE_RHONE$, and its market has a supply of silk."
+  },
+  "aoc_france.18": {
+    "countries": ["FRA"],
+    "briefing": "A draft ordinance from Villers-Cotterêts has reached the royal council.",
+    "conditions": "France has a 20% annual chance from Mid Discovery (50% of regular Era 3 research) until all regular Era 3 technologies are complete. France must also have a monarchy."
+  },
+  "aoc_france.19": {
+    "countries": ["FRA"],
+    "briefing": "Pierre Lescot has presented plans for a new wing of the Louvre.",
+    "conditions": "France has a 20% annual chance from Late Discovery (75% of regular Era 3 research) until all regular Era 3 technologies are complete. France must also directly hold territory in $STATE_ILE_DE_FRANCE$, and have a monarchy."
+  },
+  "aoc_france.20": {
+    "countries": ["FRA"],
+    "briefing": "The court has invited Catholic prelates and Reformed ministers to meet at Poissy.",
+    "conditions": "France has a 20% annual chance from Early Reformation (25% of regular Era 4 research) until all regular Era 4 technologies are complete. France must also have Catholic state religion and Protestant inhabitants."
+  },
+  "aoc_france.21": {
+    "countries": ["FRA"],
+    "briefing": "The chancellery has prepared an order adopting the Gregorian calendar.",
+    "conditions": "France has a 20% annual chance from Mid Reformation (50% of regular Era 4 research) until all regular Era 4 technologies are complete. France must also have Catholic state religion."
+  },
+  "aoc_france.22": {
+    "countries": ["FRA"],
+    "briefing": "The treasury has proposed an annual payment for holders of royal offices.",
+    "conditions": "France has a 20% annual chance from Late Reformation (75% of regular Era 4 research) until all regular Era 4 technologies are complete. France must also have a monarchy."
+  },
+  "aoc_france.23": {
+    "countries": ["FRA"],
+    "briefing": "Pierre-Paul Riquet has presented a plan to carry boats from the Garonne to the Mediterranean.",
+    "conditions": "France has a 20% annual chance from Early Absolutism (25% of regular Era 5 research) until all regular Era 5 technologies are complete. France must also directly hold territory in $STATE_LANGUEDOC$, and directly hold territory in $STATE_AQUITAINE$."
+  },
+  "aoc_france.24": {
+    "countries": ["FRA"],
+    "briefing": "Mathematicians, astronomers, and natural philosophers have begun meeting at the king’s library.",
+    "conditions": "France has a 20% annual chance from Mid Absolutism (50% of regular Era 5 research) until all regular Era 5 technologies are complete."
+  },
+  "aoc_france.25": {
+    "countries": ["FRA"],
+    "briefing": "Surveyors under Cassini have begun assembling a general map of France.",
+    "conditions": "France has a 20% annual chance from Late Absolutism (75% of regular Era 5 research) until all regular Era 5 technologies are complete."
+  },
+  "aoc_france.26": {
+    "countries": ["FRA"],
+    "briefing": "A dispatch sent from Paris has reached Lille by way of Claude Chappe’s telegraph.",
+    "conditions": "France has a 20% annual chance from Early Revolutions (25% of regular Era 6 research) until all regular Era 6 technologies are complete. France must also directly hold territory in both $STATE_ILE_DE_FRANCE$ and $STATE_FRENCH_LOW_COUNTRIES$."
+  },
+  "aoc_france.27": {
+    "countries": ["FRA"],
+    "briefing": "Commissioners have proposed a common system of weights and measures for the country.",
+    "conditions": "France has a 20% annual chance from Mid Revolutions (50% of regular Era 6 research) until all regular Era 6 technologies are complete."
+  },
+  "aoc_france.28": {
+    "countries": ["FRA"],
+    "briefing": "The jurists have delivered a single draft code to govern civil affairs throughout France.",
+    "conditions": "France has a 20% annual chance from Late Revolutions (75% of regular Era 6 research) until all regular Era 6 technologies are complete."
   }
 }

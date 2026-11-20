@@ -39,6 +39,7 @@ types aoc_england_content_types
 			wrap_count = 4
 			datamodel = "[Technology.GetUnlocks(GetPlayer.Self)]"
 			block "native_unlocks" {}
+			block "journal_unlocks" {}
 			item = {
 				icon = {
 					size = { 20 20 }
@@ -63,12 +64,6 @@ types aoc_england_content_types
 			visible = no
 			using = tooltip_se
 			block "subject_unlock" {}
-		}
-		flowcontainer = {
-			position = { 8 94 }
-			direction = vertical
-			spacing = 2
-			block "journal_unlocks" {}
 		}
 	}
 
@@ -111,7 +106,7 @@ types aoc_england_content_types
 			multiline = yes
 			align = left|top|nobaseline
 			using = fontsize_small
-			block "event_conditions" {}
+			block "event_briefing" {}
 		}
 		icon = {
 			position = { 460 9 }

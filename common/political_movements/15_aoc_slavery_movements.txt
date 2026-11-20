@@ -22,12 +22,19 @@ movement_pro_slavery = {
 		any_scope_state = { is_slave_state = yes }
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
 			limit = {
-				any_political_movement = { is_political_movement_type = movement_anti_slavery }
+				OR = {
+					has_law_or_variant = law_type:law_legacy_slavery
+					has_law_or_variant = law_type:law_colonial_slavery
+				}
 			}
-			multiply = 2
+			multiply = 3
+		}
+		if = {
+			limit = { has_law_or_variant = law_type:law_slave_trade }
+			multiply = 1.25
 		}
 	}
 	on_created = {
@@ -230,21 +237,10 @@ movement_anti_slavery = {
 		}
 	}
 	creation_weight = {
-		value = 100
+		value = 90
 		if = {
-			limit = { has_technology_researched = enlightenment }
+			limit = { has_law_or_variant = law_type:law_slave_trade }
 			multiply = 2
-		}
-		if = {
-			limit = {
-				any_neighbouring_state = {
-					owner = {
-						NOT = { THIS = ROOT }
-						has_law_or_variant = law_type:law_slavery_banned
-					}
-				}
-			}
-			multiply = 1.5
 		}
 	}
 	on_created = {
@@ -442,18 +438,9 @@ movement_slave_revolt = {
 		}
 	}
 	creation_weight = {
-		value = 100
+		value = 120
 		if = {
-			limit = {
-				any_neighbouring_state = {
-					owner = {
-						NOT = { THIS = ROOT }
-						any_political_movement = {
-							is_political_movement_type = movement_slave_revolt
-						}
-					}
-				}
-			}
+			limit = { has_law_or_variant = law_type:law_slave_trade }
 			multiply = 2
 		}
 	}

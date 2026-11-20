@@ -1,0 +1,19 @@
+aoc_era_research_early = {
+	aoc_era_$ERA$_research_percent >= 25
+}
+
+aoc_era_research_mid = {
+	aoc_era_$ERA$_research_percent >= 50
+}
+
+aoc_era_research_late = {
+	aoc_era_$ERA$_research_percent >= 75
+}
+
+aoc_era_research_complete = {
+	aoc_era_$ERA$_research_percent >= 100
+}
+
+aoc_era_event_window_open = {
+	NOT = { aoc_era_research_complete = { ERA = $ERA$ } }
+}

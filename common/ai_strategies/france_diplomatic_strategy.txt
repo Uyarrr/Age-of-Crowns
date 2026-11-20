@@ -40,12 +40,11 @@
 
 		if = {
 			limit = {
-				has_technology_researched = colonization
-				has_technology_researched = colonial_trade_networks
+				aoc_france_colonial_program = yes
 				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = root } }
 				scope:target_country = {
-					any_scope_state = { region = sr:region_canada }
+					any_scope_state = { root = { aoc_france_colonial_region = { REGION = prev.region } } }
 				}
 			}
 			add = 1.25
@@ -53,7 +52,11 @@
 
 		if = {
 			limit = {
-				scope:target_country = { c:ENG ?= this }
+				aoc_france_hyw_active = yes
+				scope:target_country = {
+					c:ENG ?= this
+					any_scope_state = { is_in_geographic_region = geographic_region_france }
+				}
 			}
 			add = 2.5
 		}
@@ -109,18 +112,27 @@
 
 		if = {
 			limit = {
-				OR = {
-					scope:target_country = { is_subject_of = root }
-					NOT = { aoc_france_diplomatic_priority = { TARGET = scope:target_country } }
-				}
+				NOT = { aoc_france_diplomatic_priority = { TARGET = scope:target_country } }
+				NOT = { aoc_ai_target_shares_state = { TARGET = scope:target_country } }
+			}
+			add = -0.65
+		}
+		if = {
+			limit = {
+				scope:target_country = { is_subject_of = root }
+				NOT = { aoc_france_can_centralize_subject = { TARGET = scope:target_country } }
 			}
 			add = -10
+		}
+		if = {
+			limit = { aoc_france_can_centralize_subject = { TARGET = scope:target_country } }
+			add = 1.5
 		}
 	}
 
 	building_group_weights = {
 		bg_army = 1.75
-		bg_navy = 1.15
+		bg_navy = 1.50
 	}
 
 	# France joins after developing a mature Era III colonial program. Later
@@ -129,10 +141,25 @@
 		value = 0
 		if = {
 			limit = {
-				has_technology_researched = colonization
-				has_technology_researched = colonial_trade_networks
+				aoc_france_colonial_program = yes
 			}
 			add = 0.55
+		}
+	}
+
+	strategic_region_stance_type_scores = {
+		stance_colonize_region = {
+			if = {
+				limit = {
+					aoc_france_colonial_program = yes
+					aoc_france_colonial_region = { REGION = scope:target_region }
+					NOT = { has_law_or_variant = law_type:law_no_colonial_affairs }
+					scope:target_region = {
+						any_scope_state = { owner = { is_country_type = decentralized } }
+					}
+				}
+				add = 250
+			}
 		}
 	}
 
@@ -157,8 +184,7 @@
 
 		if = {
 			limit = {
-				has_technology_researched = colonization
-				has_technology_researched = colonial_trade_networks
+				aoc_france_colonial_program = yes
 				scope:region = sr:region_canada
 			}
 			add = 850
@@ -167,7 +193,7 @@
 		if = {
 			limit = {
 				has_variable = aoc_french_atlantic_phase
-				has_technology_researched = colonization
+				aoc_france_colonial_program = yes
 				scope:region = sr:region_atlantic_coast
 			}
 			add = 300
@@ -176,7 +202,7 @@
 		if = {
 			limit = {
 				has_variable = aoc_french_caribbean_phase
-				has_technology_researched = colonization
+				aoc_france_colonial_program = yes
 				scope:region = sr:region_central_america
 			}
 			add = 200
@@ -187,8 +213,7 @@
 		value = 0
 		if = {
 			limit = {
-				has_technology_researched = colonization
-				has_technology_researched = colonial_trade_networks
+				aoc_france_colonial_program = yes
 				can_reach_target_state = { TARGET_STATE = scope:target_state }
 				scope:target_state = { region = sr:region_canada }
 			}
@@ -197,7 +222,7 @@
 		if = {
 			limit = {
 				has_variable = aoc_french_atlantic_phase
-				has_technology_researched = colonization
+				aoc_france_colonial_program = yes
 				can_reach_target_state = { TARGET_STATE = scope:target_state }
 				scope:target_state = { region = sr:region_atlantic_coast }
 			}
@@ -219,8 +244,8 @@
 		return_state = 2.5
 		make_tributary = 1.1
 		make_dominion = 0.5
-		reduce_autonomy = 0.0
-		annex_country = 0.0
+		reduce_autonomy = 1.0
+		annex_country = 1.0
 		force_nationalization = 0.0
 	}
 
@@ -228,8 +253,9 @@
 		none = {
 			trigger = {
 				NOT = { aoc_france_diplomatic_priority = { TARGET = scope:target_country } }
+				NOT = { aoc_ai_target_shares_state = { TARGET = scope:target_country } }
 			}
-			score = { value = 1000 }
+			score = { value = 100 }
 		}
 
 		conquer = {
@@ -237,7 +263,21 @@
 				NOT = { scope:target_country = { is_subject_of = root } }
 				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				OR = {
-					scope:target_country = { c:ENG ?= this }
+					AND = {
+						aoc_france_hyw_active = yes
+						scope:target_country = {
+							c:ENG ?= this
+							any_scope_state = { is_in_geographic_region = geographic_region_france }
+						}
+					}
+					AND = {
+						aoc_france_colonial_program = yes
+						scope:target_country = {
+							any_scope_state = {
+								root = { aoc_france_colonial_region = { REGION = prev.region } }
+							}
+						}
+					}
 					has_strategic_adjacency = scope:target_country
 					scope:target_country = {
 						any_scope_state = {
@@ -251,7 +291,11 @@
 
 				if = {
 					limit = {
-						scope:target_country = { c:ENG ?= this }
+						aoc_france_hyw_active = yes
+						scope:target_country = {
+							c:ENG ?= this
+							any_scope_state = { is_in_geographic_region = geographic_region_france }
+						}
 					}
 					add = 450
 				}
@@ -285,23 +329,31 @@
 
 		dominate = {
 			trigger = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
-				has_strategic_adjacency = scope:target_country
-				scope:target_country.country_rank <= rank_value:minor_power
-				scope:target_country = {
-					any_scope_state = {
-						is_in_geographic_region = geographic_region_france
+				OR = {
+					aoc_france_can_centralize_subject = { TARGET = scope:target_country }
+					AND = {
+						NOT = { scope:target_country = { is_subject_of = root } }
+						can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
+						has_strategic_adjacency = scope:target_country
+						scope:target_country.country_rank <= rank_value:minor_power
+						scope:target_country = {
+							any_scope_state = { is_in_geographic_region = geographic_region_france }
+						}
 					}
 				}
 			}
 			score = {
 				value = 80
+				if = {
+					limit = { aoc_france_can_centralize_subject = { TARGET = scope:target_country } }
+					add = 500
+				}
 			}
 		}
 
 		protect = {
 			trigger = {
+				NOT = { aoc_france_can_centralize_subject = { TARGET = scope:target_country } }
 				scope:target_country = {
 					is_subject_of = root
 					"relations(root)" >= 0
@@ -316,10 +368,12 @@
 			trigger = {
 				NOT = { scope:target_country = { c:ENG ?= this } }
 				OR = {
-					scope:target_country = { is_subject_of = root }
 					AND = {
-						c:FRA ?= this
-						NOT = { has_global_variable = aoc_hyw_concluded }
+						scope:target_country = { is_subject_of = root }
+						NOT = { aoc_france_can_centralize_subject = { TARGET = scope:target_country } }
+					}
+					AND = {
+						aoc_france_hyw_active = yes
 						scope:target_country = {
 							is_subject = no
 							capital = { is_in_geographic_region = geographic_region:geographic_region_europe }
@@ -357,7 +411,9 @@
 
 			if = {
 				limit = {
+					aoc_france_hyw_active = yes
 					scope:target_country = { c:ENG ?= this }
+					scope:target_state = { is_in_geographic_region = geographic_region_france }
 				}
 				add = 300
 			}
@@ -386,7 +442,9 @@
 		return_state = {
 			if = {
 				limit = {
+					aoc_france_hyw_active = yes
 					scope:target_country = { c:ENG ?= this }
+					scope:target_state = { is_in_geographic_region = geographic_region_france }
 				}
 				add = 300
 			}
@@ -429,13 +487,17 @@
 
 		reduce_autonomy = {
 			if = {
-				limit = { scope:target_country = { is_subject_of = root } }
-				add = -1000
+				limit = { aoc_france_can_centralize_subject = { TARGET = scope:target_country } }
+				add = 350
 			}
 		}
 
 		annex_country = {
 			if = {
+				limit = { aoc_france_can_centralize_subject = { TARGET = scope:target_country } }
+				add = 650
+			}
+			else_if = {
 				limit = { scope:target_country = { is_subject_of = root } }
 				add = -1000
 			}

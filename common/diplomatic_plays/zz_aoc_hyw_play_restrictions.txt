@@ -542,6 +542,10 @@ REPLACE:dp_annex_subject = {
 				has_diplomatic_pact = { who = root type = puppet }
 				has_diplomatic_pact = { who = root type = vassal }
 				has_diplomatic_pact = { who = root type = crown_land }
+				AND = {
+					is_subject_type = subject_type_appanage
+					root = { aoc_france_can_centralize_subject = { TARGET = scope:target_country } }
+				}
 			}
 		}
 		NAND = {

@@ -18,6 +18,11 @@
 	aggression = {
 		value = 0.20
 
+		if = {
+			limit = { aoc_ai_iberian_consolidation_target = yes }
+			add = 2.25
+		}
+
 		# Caribbean bases remain the highest priority.
 		if = {
 			limit = {
@@ -124,7 +129,21 @@
 	}
 
 	strategic_region_stance_type_scores = {
-		stance_colonize_region = { value = 40 }
+		stance_colonize_region = {
+			if = {
+				limit = {
+					has_technology_researched = colonization
+					NOT = { has_law_or_variant = law_type:law_no_colonial_affairs }
+					scope:target_region = {
+						any_scope_state = {
+							is_in_geographic_region = geographic_region_americas
+							owner = { is_country_type = decentralized }
+						}
+					}
+				}
+				add = 100
+			}
+		}
 	}
 	max_active_stances = { add = 3 }
 
@@ -266,19 +285,29 @@
 
 		conquer = {
 			trigger = {
-				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
-				scope:target_country = {
-					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_latin_america
-							is_in_geographic_region = geographic_region_colonial_new_spain
+				OR = {
+					aoc_ai_iberian_consolidation_target = yes
+					AND = {
+						NOT = { scope:target_country = { is_subject_of = root } }
+						can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
+						scope:target_country = {
+							any_scope_state = {
+								OR = {
+									is_in_geographic_region = geographic_region_latin_america
+									is_in_geographic_region = geographic_region_colonial_new_spain
+								}
+							}
 						}
 					}
 				}
 			}
 			score = {
 				value = 25
+
+				if = {
+					limit = { aoc_ai_iberian_consolidation_target = yes }
+					add = 425
+				}
 
 				if = {
 					limit = {
@@ -356,6 +385,13 @@
 		}
 
 		conquer_state = {
+			if = {
+				limit = {
+					aoc_ai_iberian_consolidation_target = yes
+					scope:target_state = { is_in_geographic_region = geographic_region_iberia_old }
+				}
+				add = 350
+			}
 			if = {
 				limit = {
 					has_secret_goal = {

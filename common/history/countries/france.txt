@@ -1,20 +1,18 @@
 ﻿COUNTRIES = {
 	c:FRA ?= {
 		add_era_researched = era_1
-		add_technology_researched = france_royal_construction_commissions
 		add_technology_researched = france_domaine_royal
 		add_technology_researched = france_elan
 		add_technology_researched = france_consolidation_of_country
 		add_technology_researched = france_appanage_system
 		add_technology_researched = france_french_monarchy
 		add_technology_researched = france_ancient_french_taxation
-		add_technology_researched = france_french_noble_armies
-		add_technology_researched = france_hospices_de_beaune
+		add_technology_researched = france_noblesse_d_epee
 		add_technology_researched = france_chateau_de_vincennes
+		add_technology_researched = burgundy_hospices_de_beaune
 		activate_law = law_type:law_french_monarchy
 		activate_law = law_type:law_ancient_french_taxation
-		activate_law = law_type:law_french_noble_armies
-		add_technology_researched = bronze_tools
+		activate_law = law_type:law_france_noblesse_d_epee
 		
 		add_company = company_type:company_france_wine
 		company:company_france_wine = {

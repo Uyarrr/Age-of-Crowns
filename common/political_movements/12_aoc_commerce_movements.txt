@@ -21,14 +21,17 @@ movement_burgher = {
 		has_technology_researched = merchant_guilds
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_law_or_variant = law_type:law_curtail_the_burghers }
-			multiply = 2
-		}
-		if = {
-			limit = { has_law_or_variant = law_type:law_autocracy }
-			multiply = 1.5
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_curtail_the_burghers
+					has_law_or_variant = law_type:law_landed_voting
+					has_law_or_variant = law_type:law_autocracy
+					has_law_or_variant = law_type:law_noble_controlled_mining
+				}
+			}
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -202,18 +205,16 @@ movement_merchant = {
 		has_technology_researched = banking
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_technology_researched = double_entry_bookkeeping }
-			multiply = 1.5
-		}
-		if = {
-			limit = { has_technology_researched = limited_companies }
-			multiply = 2
-		}
-		if = {
-			limit = { has_law_or_variant = law_type:law_manorial_economy }
-			multiply = 1.5
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_manorial_economy
+					has_law_or_variant = law_type:law_state_directed_economy
+					has_law_or_variant = law_type:law_war_economy
+				}
+			}
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -362,16 +363,16 @@ movement_mercantilist = {
 		has_technology_researched = colonial_trade_networks
 	}
 	creation_weight = {
-		value = 100
-		if = {
-			limit = { has_law_or_variant = law_type:law_free_trade }
-			multiply = 2
-		}
+		value = 50
 		if = {
 			limit = {
-				any_scope_state = { is_incorporated = no }
+				OR = {
+					has_law_or_variant = law_type:law_free_trade
+					has_law_or_variant = law_type:law_isolationism
+					has_law_or_variant = law_type:law_economic_liberalism
+				}
 			}
-			multiply = 1.5
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -521,23 +522,16 @@ movement_free_trade = {
 		has_technology_researched = free_trade
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
 			limit = {
 				OR = {
 					has_law_or_variant = law_type:law_mercantilism
 					has_law_or_variant = law_type:law_protectionism
 					has_law_or_variant = law_type:law_isolationism
-					has_law = law_type:law_canton_system
 				}
 			}
-			multiply = 2
-		}
-		if = {
-			limit = {
-				any_scope_state = { has_port = yes }
-			}
-			multiply = 1.5
+			multiply = 3
 		}
 	}
 	on_created = {

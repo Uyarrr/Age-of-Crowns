@@ -39,6 +39,7 @@ types aoc_england_content_types
 			wrap_count = 4
 			datamodel = "[Technology.GetUnlocks(GetPlayer.Self)]"
 			block "native_unlocks" {}
+			block "journal_unlocks" {}
 			item = {
 				icon = {
 					size = { 20 20 }
@@ -63,12 +64,6 @@ types aoc_england_content_types
 			visible = no
 			using = tooltip_se
 			block "subject_unlock" {}
-		}
-		flowcontainer = {
-			position = { 8 94 }
-			direction = vertical
-			spacing = 2
-			block "journal_unlocks" {}
 		}
 	}
 
@@ -111,7 +106,7 @@ types aoc_england_content_types
 			multiline = yes
 			align = left|top|nobaseline
 			using = fontsize_small
-			block "event_conditions" {}
+			block "event_briefing" {}
 		}
 		icon = {
 			position = { 460 9 }
@@ -360,7 +355,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/england_coa.dds" tooltip = "aoc_content_player_england_100" }
 				blockoverride "event_title" { text = "england_the_justices_of_peace.title" tooltip = "aoc_content_player_england_100" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_100" tooltip = "aoc_content_player_england_100" }
+				blockoverride "event_briefing" { text = "england_the_justices_of_peace.desc" tooltip = "aoc_content_player_england_100" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_required_age_1"
@@ -373,7 +368,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/england_coa.dds" tooltip = "aoc_content_player_england_101" }
 				blockoverride "event_title" { text = "england_the_yorkist_tradition.title" tooltip = "aoc_content_player_england_101" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_101" tooltip = "aoc_content_player_england_101" }
+				blockoverride "event_briefing" { text = "england_the_yorkist_tradition.desc" tooltip = "aoc_content_player_england_101" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_required_age_2"
@@ -386,7 +381,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/england_coa.dds" tooltip = "aoc_content_player_england_102" }
 				blockoverride "event_title" { text = "england_the_enclosure_movement.title" tooltip = "aoc_content_player_england_102" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_102" tooltip = "aoc_content_player_england_102" }
+				blockoverride "event_briefing" { text = "england_the_enclosure_movement.desc" tooltip = "aoc_content_player_england_102" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_required_age_2"
@@ -423,7 +418,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_aoc_hyw_310" }
 				blockoverride "event_title" { text = "aoc_hyw_maine_title" tooltip = "aoc_content_player_aoc_hyw_310" }
-				blockoverride "event_conditions" { text = "aoc_content_when_aoc_hyw_310" tooltip = "aoc_content_player_aoc_hyw_310" }
+				blockoverride "event_briefing" { text = "aoc_hyw_maine_desc" tooltip = "aoc_content_player_aoc_hyw_310" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_storyline_age_1"
@@ -436,7 +431,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_england_300" }
 				blockoverride "event_title" { text = "england_hyw_victory.title" tooltip = "aoc_content_player_england_300" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_300" tooltip = "aoc_content_player_england_300" }
+				blockoverride "event_briefing" { text = "england_hyw_victory.desc" tooltip = "aoc_content_player_england_300" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_storyline_age_1"
@@ -449,7 +444,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/hundred_years_war.dds" tooltip = "aoc_content_player_england_301" }
 				blockoverride "event_title" { text = "england_hyw_defeat.title" tooltip = "aoc_content_player_england_301" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_301" tooltip = "aoc_content_player_england_301" }
+				blockoverride "event_briefing" { text = "england_hyw_defeat.desc" tooltip = "aoc_content_player_england_301" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_1_traditions.dds"
 					tooltip = "aoc_content_storyline_age_1"
@@ -486,7 +481,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_302" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_start.title" tooltip = "aoc_content_player_england_302" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_302" tooltip = "aoc_content_player_england_302" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_start.desc" tooltip = "aoc_content_player_england_302" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -499,7 +494,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_303" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_lancaster.title" tooltip = "aoc_content_player_england_303" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_303" tooltip = "aoc_content_player_england_303" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_lancaster.desc" tooltip = "aoc_content_player_england_303" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -512,7 +507,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_304" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_york.title" tooltip = "aoc_content_player_england_304" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_304" tooltip = "aoc_content_player_england_304" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_york.desc" tooltip = "aoc_content_player_england_304" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -525,7 +520,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_305" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_realm_arms.title" tooltip = "aoc_content_player_england_305" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_305" tooltip = "aoc_content_player_england_305" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_realm_arms.desc" tooltip = "aoc_content_player_england_305" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -538,7 +533,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_306" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_cade.title" tooltip = "aoc_content_player_england_306" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_306" tooltip = "aoc_content_player_england_306" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_cade.desc" tooltip = "aoc_content_player_england_306" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -551,7 +546,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_307" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_protectorate.title" tooltip = "aoc_content_player_england_307" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_307" tooltip = "aoc_content_player_england_307" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_protectorate.desc" tooltip = "aoc_content_player_england_307" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -564,7 +559,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_308" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_livery.title" tooltip = "aoc_content_player_england_308" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_308" tooltip = "aoc_content_player_england_308" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_livery.desc" tooltip = "aoc_content_player_england_308" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -577,7 +572,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_309" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_queen_party.title" tooltip = "aoc_content_player_england_309" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_309" tooltip = "aoc_content_player_england_309" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_queen_party.desc" tooltip = "aoc_content_player_england_309" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -590,7 +585,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_310" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_warwick.title" tooltip = "aoc_content_player_england_310" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_310" tooltip = "aoc_content_player_england_310" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_warwick.desc" tooltip = "aoc_content_player_england_310" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -603,7 +598,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_311" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_st_albans.title" tooltip = "aoc_content_player_england_311" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_311" tooltip = "aoc_content_player_england_311" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_st_albans.desc" tooltip = "aoc_content_player_england_311" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -616,7 +611,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_312" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_loveday.title" tooltip = "aoc_content_player_england_312" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_312" tooltip = "aoc_content_player_england_312" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_loveday.desc" tooltip = "aoc_content_player_england_312" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -629,7 +624,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_313" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_attainders.title" tooltip = "aoc_content_player_england_313" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_313" tooltip = "aoc_content_player_england_313" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_attainders.desc" tooltip = "aoc_content_player_england_313" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -642,7 +637,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_314" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_accord.title" tooltip = "aoc_content_player_england_314" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_314" tooltip = "aoc_content_player_england_314" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_accord.desc" tooltip = "aoc_content_player_england_314" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -655,7 +650,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_315" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_wakefield.title" tooltip = "aoc_content_player_england_315" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_315" tooltip = "aoc_content_player_england_315" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_wakefield.desc" tooltip = "aoc_content_player_england_315" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -668,7 +663,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_316" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_kingmaker.title" tooltip = "aoc_content_player_england_316" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_316" tooltip = "aoc_content_player_england_316" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_kingmaker.desc" tooltip = "aoc_content_player_england_316" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_required_age_2"
@@ -681,7 +676,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_317" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_readeption.title" tooltip = "aoc_content_player_england_317" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_317" tooltip = "aoc_content_player_england_317" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_readeption.desc" tooltip = "aoc_content_player_england_317" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -694,7 +689,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_318" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_princes.title" tooltip = "aoc_content_player_england_318" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_318" tooltip = "aoc_content_player_england_318" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_princes.desc" tooltip = "aoc_content_player_england_318" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -707,7 +702,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_319" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_tudor_claimant.title" tooltip = "aoc_content_player_england_319" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_319" tooltip = "aoc_content_player_england_319" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_tudor_claimant.desc" tooltip = "aoc_content_player_england_319" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_required_age_2"
@@ -720,7 +715,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_320" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_civil_war.title" tooltip = "aoc_content_player_england_320" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_320" tooltip = "aoc_content_player_england_320" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_civil_war.desc" tooltip = "aoc_content_player_england_320" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -733,7 +728,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_321" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_lancaster_restored.title" tooltip = "aoc_content_player_england_321" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_321" tooltip = "aoc_content_player_england_321" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_lancaster_restored.desc" tooltip = "aoc_content_player_england_321" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -746,7 +741,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_322" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_york_accession.title" tooltip = "aoc_content_player_england_322" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_322" tooltip = "aoc_content_player_england_322" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_york_accession.desc" tooltip = "aoc_content_player_england_322" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -759,7 +754,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_323" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_tudor_victory.title" tooltip = "aoc_content_player_england_323" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_323" tooltip = "aoc_content_player_england_323" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_tudor_victory.desc" tooltip = "aoc_content_player_england_323" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -772,7 +767,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/war_of_the_roses.dds" tooltip = "aoc_content_player_england_324" }
 				blockoverride "event_title" { text = "england_war_of_the_roses_crown_victory.title" tooltip = "aoc_content_player_england_324" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_324" tooltip = "aoc_content_player_england_324" }
+				blockoverride "event_briefing" { text = "england_war_of_the_roses_crown_victory.desc" tooltip = "aoc_content_player_england_324" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_2_renaissance.dds"
 					tooltip = "aoc_content_storyline_age_2"
@@ -809,7 +804,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/britain_coa.dds" tooltip = "aoc_content_player_england_200" }
 				blockoverride "event_title" { text = "england_new_world_canada.title" tooltip = "aoc_content_player_england_200" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_200" tooltip = "aoc_content_player_england_200" }
+				blockoverride "event_briefing" { text = "england_new_world_canada.desc" tooltip = "aoc_content_player_england_200" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_required_age_3"
@@ -822,7 +817,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/britain_coa.dds" tooltip = "aoc_content_player_england_201" }
 				blockoverride "event_title" { text = "england_new_world_atlantic_coast.title" tooltip = "aoc_content_player_england_201" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_201" tooltip = "aoc_content_player_england_201" }
+				blockoverride "event_briefing" { text = "england_new_world_atlantic_coast.desc" tooltip = "aoc_content_player_england_201" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_required_age_3"
@@ -835,7 +830,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds" tooltip = "aoc_content_player_england_overseas_1" }
 				blockoverride "event_title" { text = "england_overseas.1.t" tooltip = "aoc_content_player_england_overseas_1" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_overseas_1" tooltip = "aoc_content_player_england_overseas_1" }
+				blockoverride "event_briefing" { text = "england_overseas.1.d" tooltip = "aoc_content_player_england_overseas_1" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_storyline_age_3"
@@ -848,7 +843,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_cape.dds" tooltip = "aoc_content_player_england_overseas_2" }
 				blockoverride "event_title" { text = "england_overseas.2.t" tooltip = "aoc_content_player_england_overseas_2" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_overseas_2" tooltip = "aoc_content_player_england_overseas_2" }
+				blockoverride "event_briefing" { text = "england_overseas.2.d" tooltip = "aoc_content_player_england_overseas_2" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_storyline_age_3"
@@ -861,7 +856,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_east_india.dds" tooltip = "aoc_content_player_england_overseas_3" }
 				blockoverride "event_title" { text = "england_overseas.3.t" tooltip = "aoc_content_player_england_overseas_3" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_overseas_3" tooltip = "aoc_content_player_england_overseas_3" }
+				blockoverride "event_briefing" { text = "england_overseas.3.d" tooltip = "aoc_content_player_england_overseas_3" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_storyline_age_3"
@@ -874,7 +869,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_australasia.dds" tooltip = "aoc_content_player_england_overseas_4" }
 				blockoverride "event_title" { text = "england_overseas.4.t" tooltip = "aoc_content_player_england_overseas_4" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_overseas_4" tooltip = "aoc_content_player_england_overseas_4" }
+				blockoverride "event_briefing" { text = "england_overseas.4.d" tooltip = "aoc_content_player_england_overseas_4" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_storyline_age_3"
@@ -887,7 +882,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_hudson_bay.dds" tooltip = "aoc_content_player_england_overseas_5" }
 				blockoverride "event_title" { text = "england_overseas.5.t" tooltip = "aoc_content_player_england_overseas_5" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_overseas_5" tooltip = "aoc_content_player_england_overseas_5" }
+				blockoverride "event_briefing" { text = "england_overseas.5.d" tooltip = "aoc_content_player_england_overseas_5" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_storyline_age_3"
@@ -900,7 +895,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_royal_navy.dds" tooltip = "aoc_content_player_england_overseas_6" }
 				blockoverride "event_title" { text = "england_overseas.6.t" tooltip = "aoc_content_player_england_overseas_6" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_overseas_6" tooltip = "aoc_content_player_england_overseas_6" }
+				blockoverride "event_briefing" { text = "england_overseas.6.d" tooltip = "aoc_content_player_england_overseas_6" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_storyline_age_3"
@@ -913,7 +908,7 @@ flowcontainer = {
 			aoc_content_event_row = {
 				blockoverride "event_icon" { texture = "gfx/interface/icons/event_icons/england_overseas/aoc_england_new_world.dds" tooltip = "aoc_content_player_england_overseas_7" }
 				blockoverride "event_title" { text = "england_overseas.7.t" tooltip = "aoc_content_player_england_overseas_7" }
-				blockoverride "event_conditions" { text = "aoc_content_when_england_overseas_7" tooltip = "aoc_content_player_england_overseas_7" }
+				blockoverride "event_briefing" { text = "england_overseas.7.d" tooltip = "aoc_content_player_england_overseas_7" }
 				blockoverride "event_age" {
 					texture = "gfx/interface/icons/invention_icons/age_3_discovery.dds"
 					tooltip = "aoc_content_storyline_age_3"
@@ -921,6 +916,39 @@ flowcontainer = {
 				blockoverride "event_details" { tooltip = "aoc_content_details_england_overseas_7" }
 				blockoverride "event_seen" {
 					visible = "[GetScriptedGui('aoc_content_check_england_overseas_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+		}
+		button_standard = {
+			size = { 510 36 }
+			text = "aoc_content_category_other"
+			onclick = "[GetVariableSystem.Toggle('aoc_content_collapsed_other')]"
+			icon = {
+				position = { 16 11 }
+				size = { 14 14 }
+				texture = "gfx/interface/politics_view/summary_arrow_right.dds"
+				visible = "[GetVariableSystem.Exists('aoc_content_collapsed_other')]"
+				alwaystransparent = yes
+			}
+			icon = {
+				position = { 16 11 }
+				size = { 14 14 }
+				texture = "gfx/interface/politics_view/summary_arrow_down.dds"
+				visible = "[Not(GetVariableSystem.Exists('aoc_content_collapsed_other'))]"
+				alwaystransparent = yes
+			}
+		}
+		flowcontainer = {
+			visible = "[Not(GetVariableSystem.Exists('aoc_content_collapsed_other'))]"
+			direction = vertical
+			spacing = 4
+			aoc_content_event_row = {
+				blockoverride "event_icon" { texture = "gfx/interface/icons/invention_icons/france_coa.dds" tooltip = "aoc_content_player_aoc_france_10" }
+				blockoverride "event_title" { text = "aoc_france_cloth_of_gold_reply.title" tooltip = "aoc_content_player_aoc_france_10" }
+				blockoverride "event_briefing" { text = "aoc_content_briefing_aoc_france_10" tooltip = "aoc_content_player_aoc_france_10" }
+				blockoverride "event_details" { tooltip = "aoc_content_details_aoc_france_10" }
+				blockoverride "event_seen" {
+					visible = "[GetScriptedGui('aoc_content_check_aoc_france_10').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				}
 			}
 		}

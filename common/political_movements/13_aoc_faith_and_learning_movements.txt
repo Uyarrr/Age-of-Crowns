@@ -16,22 +16,20 @@ movement_clerical = {
 		ideology_moderate
 	}
 
-	creation_trigger = {
-		NOT = { has_law_or_variant = law_type:law_state_atheism }
-	}
+	creation_trigger = {}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { aoc_country_has_weakened_church = yes }
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_curtail_the_clergy
+					has_law_or_variant = law_type:law_total_separation
+					has_law_or_variant = law_type:law_state_atheism
+					has_law_or_variant = law_type:law_secular_education
+					has_law_or_variant = law_type:law_freedom_of_conscience
+				}
+			}
 			multiply = 3
-		}
-		if = {
-			limit = { has_technology_researched = confessionalism }
-			multiply = 1.5
-		}
-		if = {
-			limit = { has_law_or_variant = law_type:law_theocracy }
-			multiply = 0.5
 		}
 	}
 	on_created = {
@@ -222,18 +220,15 @@ movement_old_custom = {
 
 	creation_trigger = {}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { aoc_country_has_weakened_church = yes }
-			multiply = 2
-		}
-		if = {
-			limit = { has_technology_researched = renaissance }
-			multiply = 1.5
-		}
-		if = {
-			limit = { has_law_or_variant = law_type:law_secular_education }
-			multiply = 1.5
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_by_blood
+					has_law_or_variant = law_type:law_secular_education
+				}
+			}
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -375,11 +370,11 @@ movement_old_custom = {
 	additional_radicalism_factors = {
 		if = {
 			limit = {
-				owner ?= { aoc_country_has_weakened_church = yes }
+				owner ?= { has_law_or_variant = law_type:law_secular_education }
 			}
 			add = {
 				value = 0.1
-				desc = "AOC_MOVEMENT_CHURCH_UNDER_ATTACK"
+				desc = "AOC_MOVEMENT_SECULAR_SCHOOLS"
 			}
 		}
 		if = {
@@ -412,14 +407,17 @@ movement_humanist = {
 		has_technology_researched = renaissance
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_technology_researched = printing_press }
-			multiply = 2
-		}
-		if = {
-			limit = { has_technology_researched = patron_of_arts }
-			multiply = 1.5
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_state_religion
+					has_law_or_variant = law_type:law_state_atheism
+					has_law_or_variant = law_type:law_integrate_foreign_traditions
+					has_law_or_variant = law_type:law_strengthen_the_clergy
+				}
+			}
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -549,14 +547,14 @@ movement_humanist = {
 			limit = {
 				owner ?= {
 					OR = {
-						has_law_or_variant = law_type:law_outlawed_dissent
-						has_law_or_variant = law_type:law_censorship
+						has_law_or_variant = law_type:law_state_religion
+						has_law_or_variant = law_type:law_state_atheism
 					}
 				}
 			}
 			add = {
 				value = 0.05
-				desc = "AOC_MOVEMENT_CENSORSHIP"
+				desc = "AOC_MOVEMENT_NO_TOLERATION"
 			}
 		}
 	}
@@ -578,14 +576,15 @@ movement_natural_philosophy = {
 		has_technology_researched = printing_press
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_technology_researched = scientific_revolution }
-			multiply = 2
-		}
-		if = {
-			limit = { has_technology_researched = university }
-			multiply = 1.5
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_uneducated_masses
+					has_law_or_variant = law_type:law_devout_education
+				}
+			}
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -738,19 +737,18 @@ movement_enlightenment = {
 		has_technology_researched = enlightenment
 	}
 	creation_weight = {
-		value = 100
-		if = {
-			limit = { aoc_country_has_absolute_crown = yes }
-			multiply = 1.5
-		}
+		value = 50
 		if = {
 			limit = {
 				OR = {
-					has_law_or_variant = law_type:law_outlawed_dissent
+					has_law_or_variant = law_type:law_absolute_rule
+					has_law_or_variant = law_type:law_autocracy
 					has_law_or_variant = law_type:law_censorship
+					has_law_or_variant = law_type:law_outlawed_dissent
+					has_law_or_variant = law_type:law_secret_police
 				}
 			}
-			multiply = 1.5
+			multiply = 3
 		}
 	}
 	on_created = {

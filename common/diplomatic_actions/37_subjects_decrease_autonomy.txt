@@ -104,7 +104,12 @@
 		}
 
 		will_propose = {
+			NAND = {
+				aoc_france_hyw_active = yes
+				scope:target_country = { is_subject_type = subject_type_appanage }
+			}
 			OR = {
+				aoc_france_can_centralize_subject = { TARGET = scope:target_country }
 				AND = {
 					has_journal_entry = je_tp_tsar_crown_of_perfection
 					NOT = { has_variable = je_tp_tsar_crown_of_perfection_button_4_complete }

@@ -2732,6 +2732,14 @@ ai_strategy_default = {
 
 				if = {
 					limit = {
+						NOT = { scope:target_country = { is_subject_of = root } }
+						aoc_ai_target_shares_state = { TARGET = scope:target_country }
+					}
+					add = 200
+				}
+
+				if = {
+					limit = {
 						OR = {
 							ai_is_regional_objective_local_country = {
 								TYPE = aro:ai_regional_objective_acquire_states
@@ -3222,6 +3230,10 @@ ai_strategy_default = {
 			else = {
 				multiply = 0.75
 			}
+			if = {
+				limit = { aoc_ai_split_state_wargoal = yes }
+				add = 400
+			}
 		}
 
 		return_state = {
@@ -3281,6 +3293,10 @@ ai_strategy_default = {
 			}
 			else = {
 				multiply = 0.75
+			}
+			if = {
+				limit = { aoc_ai_split_state_wargoal = yes }
+				add = 400
 			}
 		}
 
@@ -3506,6 +3522,17 @@ ai_strategy_default = {
 
 		annex_country = {
 			value = 0
+
+			if = {
+				limit = {
+					scope:target_country = {
+						num_states = 1
+						NOT = { is_subject_of = root }
+					}
+					aoc_ai_target_shares_state = { TARGET = scope:target_country }
+				}
+				add = 200
+			}
 
 			if = {
 				limit = {

@@ -76,18 +76,14 @@ france_appanage_system = {
 }
 
 france_royal_construction_commissions = {
-	# Unlocks Law
-	era = era_1
+	era = era_3
 	texture = "gfx/interface/icons/invention_icons/construction.dds"
 	category = society
 
     can_research = no
 
 	modifier = {
-		building_construction_sector_throughput_add = 0.10
-	}
-
-	on_researched = {
+		building_construction_sector_throughput_add = 0.15
 	}
 
 	ai_weight = {
@@ -113,44 +109,6 @@ france_establishment_of_recettes_generales = {
 		value = 1
 	}
 }
-
-france_breton_marriage = {
-	era = era_2
-	texture = "gfx/interface/icons/event_icons/breton_marriage.dds"
-	category = society
-
-    can_research = no
-
-	modifier = {
-	}
-
-	on_researched = {
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-france_royal_guild_privileges = {
-	# Unlocks Royal Guild Privilege Law
-	era = era_2
-	texture = "gfx/interface/icons/event_icons/breton_marriage.dds"
-	category = society
-
-    can_research = no
-
-	modifier = {
-	}
-
-	on_researched = {
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 
 france_colonial_ventures = {
 	era = era_3
@@ -199,7 +157,7 @@ france_grasse_perfumed_gloves = {
     can_research = no
 
 	modifier = {
-		building_perfumery_throughput_add = 0.15
+		building_perfumery_throughput_add = 0.20
 	}
 
 	on_researched = {
@@ -213,7 +171,7 @@ france_grasse_perfumed_gloves = {
 france_edict_of_nantes = {
 	# Unlocks Law
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/renaissance.dds"
+	texture = "gfx/interface/icons/law_icons/edict_of_nantes.dds"
 	category = society
 
     can_research = no
@@ -237,7 +195,7 @@ france_manufacture_royale_des_glaces = {
     can_research = no
 
 	modifier = {
-		building_glassworks_throughput_add = 0.15
+		building_glassworks_throughput_add = 0.25
 	}
 
 	on_researched = {
@@ -307,7 +265,7 @@ france_the_gribeauval_system = {
 
 france_french_monarchy = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/france_domaine_royal.dds"
+	texture = "gfx/interface/icons/invention_icons/france_coa.dds"
 	category = society
 	can_research = no
 
@@ -323,19 +281,10 @@ france_ancient_french_taxation = {
 	ai_weight = { value = 1 }
 }
 
-france_french_noble_armies = {
+france_noblesse_d_epee = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/heavy_cavalry_2.dds"
+	texture = "gfx/interface/icons/law_icons/noblesse_depee.dds"
 	category = military
-	can_research = no
-
-	ai_weight = { value = 1 }
-}
-
-france_hospices_de_beaune = {
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/france_appanage_system.dds"
-	category = society
 	can_research = no
 
 	ai_weight = { value = 1 }
@@ -343,7 +292,7 @@ france_hospices_de_beaune = {
 
 france_chateau_de_vincennes = {
 	era = era_1
-	texture = "gfx/interface/icons/invention_icons/monumental_construction.dds"
+	texture = "gfx/interface/icons/invention_icons/chateau.dds"
 	category = society
 	can_research = no
 
@@ -352,16 +301,19 @@ france_chateau_de_vincennes = {
 
 france_renaissance_gendarmes = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/heavy_cavalry_2.dds"
+	texture = "gfx/interface/icons/invention_icons/france_genderme_1.dds"
 	category = military
 	can_research = no
+
+	modifier = { 
+		}
 
 	ai_weight = { value = 1 }
 }
 
 france_royal_exploration_carrack = {
 	era = era_2
-	texture = "gfx/interface/icons/ships/carrack.dds"
+	texture = "gfx/interface/icons/invention_icons/pinnace.dds"
 	category = military
 	can_research = no
 
@@ -381,11 +333,122 @@ france_parish_registration = {
 	ai_weight = { value = 1 }
 }
 
+france_elite_gendarmes = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/france_genderme_2.dds"
+	category = military
+	can_research = no
+
+	modifier = { 
+		}
+
+	ai_weight = { value = 1 }
+}
+
 france_east_india_company = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/colonial_trade_networks.dds"
 	category = society
 	can_research = no
+
+	ai_weight = { value = 1 }
+}
+
+france_chateau_de_chambord = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/chateau.dds"
+	category = society
+	can_research = no
+
+	ai_weight = { value = 1 }
+}
+
+france_royal_atlantic_naval_yard = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/anchor.dds"
+	category = military
+	can_research = no
+
+	ai_weight = { value = 1 }
+}
+
+france_academie_francaise = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/university2.dds"
+	category = society
+	can_research = no
+
+	ai_weight = { value = 1 }
+}
+
+france_palace_of_versailles = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/palace_of_versailles.dds"
+	category = society
+	can_research = no
+
+	ai_weight = { value = 1 }
+}
+
+france_louvre_museum = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/louvre.dds"
+	category = society
+	can_research = no
+
+	ai_weight = { value = 1 }
+}
+
+france_ecole_polytechnique = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/ecole_polytechnique.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		state_pop_qualifications_mult = 0.25
+	}
+
+	ai_weight = { value = 1 }
+}
+
+france_royal_manufactories = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/manufactories.dds"
+	category = production
+	can_research = no
+
+	modifier = {
+		building_luxury_cloth_workshop_throughput_add = 0.125
+		building_luxury_furniture_workshop_throughput_add = 0.125
+	}
+
+	ai_weight = { value = 1 }
+}
+
+france_liberte_egalite_fraternite = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/nationalism.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		country_legitimacy_min_add = 10
+	}
+
+	ai_weight = { value = 1 }
+}
+
+france_grande_armee = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/line_infantry.dds"
+	category = military
+	can_research = no
+
+	modifier = {
+		unit_army_offense_mult = 0.05
+		unit_army_defense_mult = 0.05
+	}
 
 	ai_weight = { value = 1 }
 }

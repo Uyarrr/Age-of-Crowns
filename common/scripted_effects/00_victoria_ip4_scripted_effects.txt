@@ -300,6 +300,10 @@ designate_character_as_regent = {
 
 remove_regency_modifier = { # Applied in country scope
 	if = {
+		limit = { has_modifier = aoc_france_assassination_regency }
+		remove_modifier = aoc_france_assassination_regency
+	}
+	if = {
 		limit = {
 			ruler ?= {
 				is_immortal = yes

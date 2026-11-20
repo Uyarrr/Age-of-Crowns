@@ -67,22 +67,52 @@ combat_unit_type_france_renaissance_gendarmes = {
 	unlocking_technologies = { france_renaissance_gendarmes }
 
 	battle_modifier = {
-		unit_offense_add = 34
-		unit_defense_add = 21
-		unit_morale_damage_mult = 0.40
+		unit_offense_add = 35
+		unit_defense_add = 22
+		unit_morale_damage_mult = 0.4
 	}
 
 	upkeep_modifier = {
 		goods_input_weapons_add = 3
 		goods_input_warhorse_add = 1
 		goods_input_ironingot_add = 2
-		goods_input_leather_add = 2
+		goods_input_leather_add = 3
 	}
 
-	combat_unit_image = { texture = "gfx/unit_illustrations/heavy_cavalry_2.dds" }
+	combat_unit_image = { texture = "gfx/unit_illustrations/france_genderme_1.dds" }
 
 	upgrades = {
-		combat_unit_type_heavy_cavalry_3
+		combat_unit_type_france_elite_gendarmes
+		combat_unit_type_heavy_cavalry_4
+		combat_unit_type_heavy_cavalry_5
+		combat_unit_type_heavy_cavalry_6
+	}
+}
+
+combat_unit_type_france_elite_gendarmes = {
+	group = combat_unit_group_heavy_cavalry
+	supply_capacity = 30
+	max_manpower = 1000
+	conscript_peasant_levies = no
+
+	unlocking_technologies = { france_elite_gendarmes }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 29
+        unit_morale_damage_mult = 0.4
+    }
+
+    upkeep_modifier = {
+        goods_input_weapons_add = 4
+        goods_input_warhorse_add = 3
+        goods_input_ironingot_add = 2
+        goods_input_leather_add = 4
+    }
+
+	combat_unit_image = { texture = "gfx/unit_illustrations/france_genderme_2.dds" }
+
+	upgrades = {
 		combat_unit_type_heavy_cavalry_4
 		combat_unit_type_heavy_cavalry_5
 		combat_unit_type_heavy_cavalry_6

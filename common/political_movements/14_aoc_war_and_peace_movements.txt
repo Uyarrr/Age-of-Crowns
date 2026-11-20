@@ -1,16 +1,15 @@
-﻿############################################################
+############################################################
 # AGE OF CROWNS - WAR AND PEACE
 # Hawks and doves, professional soldiers and the armed
 # commons.
 ############################################################
 
-# Courtiers and captains eager for conquest, crusade and overseas empire.
-# The Crusade of Varna (1444), Charles the Bold, the completion of the
-# Reconquista (1492), the Italian Wars (1494) and the conquistadors.
+# Courtiers and captains who urge the sovereign to take the field.
+# The Crusade of Varna (1444), Charles the Bold and the Italian Wars.
 movement_war_party = {
 	category = movement_category_ideological
 
-	ideology = ideology_outward
+	ideology = ideology_belligerent
 	character_ideologies = {
 		ideology_jingoist_leader
 		ideology_authoritarian
@@ -18,17 +17,18 @@ movement_war_party = {
 
 	creation_trigger = {}
 	creation_weight = {
-		value = 100
+		value = 50
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_civil_society
+					has_law_or_variant = law_type:law_defensive_stance
+				}
+			}
+			multiply = 3
+		}
 		if = {
 			limit = { number_of_claims > 0 }
-			multiply = 2
-		}
-		if = {
-			limit = { has_technology_researched = colonization }
-			multiply = 1.5
-		}
-		if = {
-			limit = { has_law_or_variant = law_type:law_civil_society }
 			multiply = 1.5
 		}
 	}
@@ -42,7 +42,7 @@ movement_war_party = {
 			scope:interest_group ?= {
 				OR = {
 					is_interest_group_type = ig_armed_forces
-					has_ideology = ideology:ideology_outward
+					has_ideology = ideology:ideology_belligerent
 				}
 			}
 		}
@@ -64,7 +64,7 @@ movement_war_party = {
 		movement_support_aristocrats
 		movement_support_soldiers
 		movement_support_number_of_claims
-		movement_support_colonial_settlers
+		movement_support_capitalists
 	}
 
 	pop_support_weight = {
@@ -189,7 +189,7 @@ movement_war_party = {
 movement_peace_party = {
 	category = movement_category_ideological
 
-	ideology = ideology_inward
+	ideology = ideology_conciliatory
 	character_ideologies = {
 		ideology_pacifist
 		ideology_moderate
@@ -197,14 +197,20 @@ movement_peace_party = {
 
 	creation_trigger = {}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { is_at_war = yes }
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_martial_society
+					has_law_or_variant = law_type:law_war_economy
+					has_law_or_variant = law_type:law_offensive_stance
+				}
+			}
 			multiply = 3
 		}
 		if = {
-			limit = { has_law_or_variant = law_type:law_martial_society }
-			multiply = 1.5
+			limit = { is_at_war = yes }
+			multiply = 2
 		}
 	}
 	on_created = {
@@ -214,7 +220,7 @@ movement_peace_party = {
 	character_support_trigger = {
 		OR = {
 			has_ideology = ideology:ideology_pacifist
-			scope:interest_group ?= { has_ideology = ideology:ideology_inward }
+			scope:interest_group ?= { has_ideology = ideology:ideology_conciliatory }
 		}
 	}
 	character_support_weight = {
@@ -235,7 +241,7 @@ movement_peace_party = {
 		movement_support_capitalists
 		movement_support_clergymen
 		movement_support_at_war
-		movement_support_lost_wars
+		movement_support_peasants
 	}
 
 	pop_support_weight = {
@@ -363,14 +369,15 @@ movement_military_reform = {
 		has_technology_researched = professional_army
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_law_or_variant = law_type:law_no_army_doctrine }
-			multiply = 2
-		}
-		if = {
-			limit = { has_technology_researched = military_revolution }
-			multiply = 1.5
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_no_army_doctrine
+					has_law_or_variant = law_type:law_expanded_levies
+				}
+			}
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -535,19 +542,16 @@ movement_militia = {
 		has_technology_researched = peasant_levy
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
 			limit = {
 				OR = {
-					has_law_or_variant = law_type:law_noble_army
 					has_law_or_variant = law_type:law_noble_levy
+					has_law_or_variant = law_type:law_noble_army
+					has_law_or_variant = law_type:law_mercenary_army
 				}
 			}
-			multiply = 2
-		}
-		if = {
-			limit = { is_at_war = yes }
-			multiply = 1.5
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -672,6 +676,175 @@ movement_militia = {
 				value = 0.05
 				desc = "AOC_MOVEMENT_NOBLE_ARMY"
 			}
+		}
+	}
+}
+
+# Settlers, merchants, and officers petition for new settlements and charters.
+movement_expansionist = {
+	category = movement_category_ideological
+	ideology = ideology_outward
+	character_ideologies = { ideology_jingoist_leader }
+
+	creation_trigger = {
+		has_technology_researched = colonization
+	}
+
+	creation_weight = {
+		value = 50
+		if = {
+			limit = { has_law_or_variant = law_type:law_no_colonial_affairs }
+			multiply = 3
+		}
+	}
+
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_jingoist_leader
+			scope:interest_group ?= { has_ideology = ideology:ideology_outward }
+		}
+	}
+
+	character_support_weight = { value = 100 }
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_capitalists
+		movement_support_officers
+		movement_support_farmers
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = { scope:political_movement ?= { is_being_suppressed = yes } }
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:political_movement ?= { is_being_bolstered = yes } }
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = { value = 2 desc = "POP_BASE_SUPPORT" }
+
+		if = {
+			limit = { is_pop_type = capitalists }
+			add = { value = 26 desc = "POP_CAPITALISTS" }
+		}
+		if = {
+			limit = { is_pop_type = officers }
+			add = { value = 20 desc = "POP_OFFICERS" }
+		}
+		if = {
+			limit = { is_pop_type = farmers }
+			add = { value = 14 desc = "POP_FARMERS" }
+		}
+	}
+}
+
+# Provincial interests petition the court to restrict overseas ventures and foreign merchants.
+movement_isolationist = {
+	category = movement_category_ideological
+	ideology = ideology_inward
+	character_ideologies = { ideology_sovereignist_leader }
+
+	creation_trigger = {
+		has_technology_researched = colonization
+	}
+
+	creation_weight = {
+		value = 50
+		if = {
+			limit = {
+				NAND = {
+					has_law_or_variant = law_type:law_no_colonial_affairs
+					has_law_or_variant = law_type:law_isolationism
+				}
+			}
+			multiply = 3
+		}
+	}
+
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_sovereignist_leader
+			scope:interest_group ?= { has_ideology = ideology:ideology_inward }
+		}
+	}
+
+	character_support_weight = { value = 100 }
+
+	pop_support_trigger = {
+		NOT = { is_pop_type = slaves }
+	}
+
+	pop_support_factors = {
+		movement_support_aristocrats
+		movement_support_farmers
+		movement_support_peasants
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = { scope:political_movement ?= { is_being_suppressed = yes } }
+			add = {
+				desc = "concept_suppressed"
+				value = suppression_base_value
+				multiply = {
+					value = -0.5
+					add = owner.modifier:country_suppression_attraction_factor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:political_movement ?= { is_being_bolstered = yes } }
+			add = {
+				desc = "concept_bolstered"
+				value = bolstering_base_value
+				multiply = {
+					value = 0.5
+					add = owner.modifier:country_bolster_attraction_factor
+				}
+			}
+		}
+
+		add = { value = 2 desc = "POP_BASE_SUPPORT" }
+
+		if = {
+			limit = { is_pop_type = aristocrats }
+			add = { value = 22 desc = "POP_ARISTOCRATS" }
+		}
+		if = {
+			limit = { is_pop_type = farmers }
+			add = { value = 18 desc = "POP_FARMERS" }
+		}
+		if = {
+			limit = { is_pop_type = peasants }
+			add = { value = 10 desc = "POP_PEASANTS" }
 		}
 	}
 }

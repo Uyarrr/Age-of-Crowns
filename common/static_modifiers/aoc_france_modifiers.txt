@@ -1,0 +1,249 @@
+aoc_presidial_courts_bureaucracy = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_bureaucracy_mult = 0.20
+}
+
+aoc_presidial_courts_tax_capacity = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_tax_capacity_mult = 0.20
+}
+
+aoc_france_calais_campaign = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	unit_morale_loss_mult = -0.15
+}
+
+aoc_france_calais_abandoned = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_prestige_mult = -0.10
+}
+
+aoc_france_parish_archers = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_conscription_rate_mult = 0.25
+}
+
+aoc_france_muster_drills = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	unit_experience_gain_mult = 0.10
+}
+
+aoc_france_court_splendor = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_prestige_mult = 0.10
+}
+
+aoc_france_antarctique_patronage = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_expenses_add = 1500
+}
+
+aoc_france_assassination_regency = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	country_legitimacy_base_add = -25
+	country_authority_add = -250
+}
+
+aoc_france_royal_glassworks = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	building_glassworks_throughput_add = 0.25
+}
+
+aoc_france_glass_merchants = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_trade_advantage_mult = 0.10
+	state_trade_capacity_mult = 0.10
+}
+
+aoc_france_argentier_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	interest_group_ig_industrialists_approval_add = -3
+}
+
+aoc_france_argentier_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_trade_advantage_mult = 0.15
+}
+
+aoc_france_customs_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_radicals_from_political_movements_mult = -0.1
+}
+
+aoc_france_customs_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	interest_group_ig_landowners_approval_add = 3
+}
+
+aoc_france_sorbonne_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_education_access_add = 0.15
+}
+
+aoc_france_sorbonne_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_trade_advantage_mult = 0.45
+}
+
+aoc_france_lyon_fairs_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_trade_capacity_mult = 0.45
+	state_tax_capacity_mult = -0.1
+}
+
+aoc_france_lyon_fairs_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_tax_capacity_mult = 0.15
+}
+
+aoc_france_blois_books_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_education_access_add = 0.15
+}
+
+aoc_france_blois_books_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_prestige_mult = 0.1
+}
+
+aoc_france_royal_readers_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	building_university_throughput_add = 0.15
+}
+
+aoc_france_royal_readers_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	interest_group_ig_devout_approval_add = 3
+}
+
+aoc_france_lyon_silk_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	building_luxury_cloth_workshop_throughput_add = 0.15
+}
+
+aoc_france_lyon_silk_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	interest_group_ig_industrialists_approval_add = 3
+}
+
+aoc_france_villers_cotterets_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_assimilation_mult = 0.1
+	country_authority_add = 100
+}
+
+aoc_france_villers_cotterets_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_bureaucracy_mult = 0.1
+}
+
+aoc_france_lescot_louvre_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_prestige_mult = 0.15
+}
+
+aoc_france_lescot_louvre_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_construction_mult = 0.15
+}
+
+aoc_france_poissy_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_radicals_from_political_movements_mult = -0.1
+	interest_group_ig_devout_approval_add = -3
+}
+
+aoc_france_poissy_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_conversion_mult = 0.1
+	interest_group_ig_devout_approval_add = 3
+}
+
+aoc_france_gregorian_calendar_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_bureaucracy_mult = 0.1
+}
+
+aoc_france_gregorian_calendar_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	interest_group_ig_landowners_approval_add = 3
+	state_trade_capacity_mult = -0.15
+}
+
+aoc_france_paulette_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_bureaucrats_pol_str_mult = 0.15
+}
+
+aoc_france_paulette_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_authority_add = 100
+}
+
+aoc_france_riquet_canal_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_infrastructure_mult = 0.45
+}
+
+aoc_france_riquet_canal_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_trade_capacity_mult = 0.45
+}
+
+aoc_france_science_academy_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_weekly_innovation_add = 10
+}
+
+aoc_france_science_academy_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_production_tech_spread_mult = 0.1
+}
+
+aoc_france_cassini_map_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_infrastructure_mult = 0.15
+}
+
+aoc_france_cassini_map_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	unit_defense_mult = 0.1
+}
+
+aoc_france_chappe_telegraph_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_bureaucracy_mult = 0.15
+}
+
+aoc_france_chappe_telegraph_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+}
+
+aoc_france_metric_measures_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_trade_capacity_mult = 0.15
+}
+
+aoc_france_metric_measures_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	state_trade_advantage_mult = 0.15
+}
+
+aoc_france_civil_code_a = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_bureaucracy_mult = 0.15
+	interest_group_ig_landowners_approval_add = -3
+}
+
+aoc_france_civil_code_b = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_bureaucracy_mult = 0.05
+	interest_group_ig_landowners_approval_add = 3
+}
+
+aoc_france_office_revenue = {
+	icon = "gfx/interface/icons/invention_icons/france_coa.dds"
+	country_tax_income_add = 1
+}

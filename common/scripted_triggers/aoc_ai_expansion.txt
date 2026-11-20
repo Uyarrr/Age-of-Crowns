@@ -1,0 +1,30 @@
+# Look for another owner of the same state region, excluding treaty ports.
+aoc_ai_target_shares_state = {
+	$TARGET$ = {
+		any_scope_state = {
+			is_split_state = yes
+			is_treaty_port = no
+			state_region = {
+				any_scope_state = {
+					owner = root
+					is_treaty_port = no
+				}
+			}
+		}
+	}
+}
+
+aoc_ai_split_state_wargoal = {
+	ai_state_ambition_split_state = yes
+	scope:target_state = { is_treaty_port = no }
+	lenient_ai_behavior_trigger = no
+}
+
+aoc_ai_iberian_consolidation_target = {
+	scope:target_country ?= {
+		OR = { c:GRA ?= this c:ARA ?= this c:NAV ?= this }
+		NOT = { is_subject_of = root }
+	}
+	has_strategic_adjacency = scope:target_country
+	can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
+}

@@ -20,19 +20,16 @@ movement_manorial = {
 		NOT = { has_law_or_variant = law_type:law_chiefdom }
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
 			limit = {
 				OR = {
-					has_law_or_variant = law_type:law_tenant_farmers
 					has_law_or_variant = law_type:law_homesteading
+					has_law_or_variant = law_type:law_merchant_economy
+					has_law_or_variant = law_type:law_economic_liberalism
 				}
 			}
-			multiply = 2
-		}
-		if = {
-			limit = { has_law_or_variant = law_type:law_serfdom }
-			multiply = 0.5
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -211,14 +208,15 @@ movement_peasant_league = {
 		}
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_law_or_variant = law_type:law_serfdom }
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_serfdom
+					has_law_or_variant = law_type:law_closed_borders
+				}
+			}
 			multiply = 3
-		}
-		if = {
-			limit = { has_technology_researched = printing_press }
-			multiply = 1.5
 		}
 	}
 	on_created = {
@@ -449,13 +447,20 @@ movement_commons = {
 
 	creation_trigger = {}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_law = law_type:law_enclosed_estates }
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_serfdom
+					has_law_or_variant = law_type:law_enclosed_estates
+					has_law_or_variant = law_type:law_economic_liberalism
+					has_law_or_variant = law_type:law_lockean_proviso
+				}
+			}
 			multiply = 3
 		}
 		if = {
-			limit = { has_law_or_variant = law_type:law_economic_liberalism }
+			limit = { has_law = law_type:law_enclosed_estates }
 			multiply = 1.5
 		}
 	}
@@ -637,17 +642,17 @@ movement_yeomanry = {
 
 	creation_trigger = {
 		has_technology_researched = tenant_farmers
-		NOT = { has_law_or_variant = law_type:law_serfdom }
 	}
 	creation_weight = {
-		value = 100
+		value = 50
 		if = {
-			limit = { has_law_or_variant = law_type:law_tenant_farmers }
-			multiply = 1.5
-		}
-		if = {
-			limit = { has_technology_researched = printing_press }
-			multiply = 1.5
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_tenant_farmers
+					has_law_or_variant = law_type:law_enclosed_estates
+				}
+			}
+			multiply = 3
 		}
 	}
 	on_created = {
@@ -788,19 +793,16 @@ movement_guild = {
 		has_technology_researched = guilds
 	}
 	creation_weight = {
-		value = 100
-		if = {
-			limit = { has_technology_researched = putting_out_system }
-			multiply = 2
-		}
+		value = 50
 		if = {
 			limit = {
 				OR = {
 					has_law_or_variant = law_type:law_economic_liberalism
-					has_law_or_variant = law_type:law_merchant_economy
+					has_law_or_variant = law_type:law_state_directed_economy
+					has_law_or_variant = law_type:law_economic_theory
 				}
 			}
-			multiply = 2
+			multiply = 3
 		}
 	}
 	on_created = {
