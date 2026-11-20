@@ -141,11 +141,10 @@ aoc_hyw_try_start_round = {
 				var:aoc_hyw_stalemates < 3
 			}
 		}
-		# A war already being fought by the two crowns cannot be launched again.
-		# Treat it as the current campaign and score it once peace returns.
+		# Prefer a separate scripted campaign, even during an existing war.
 		if = {
 			limit = { c:ENG = { has_war_with = c:FRA } }
-			aoc_hyw_start_existing_war_round = yes
+			aoc_hyw_start_round = { WAR = yes }
 		}
 		else_if = {
 			limit = {
@@ -154,17 +153,9 @@ aoc_hyw_try_start_round = {
 					aoc_hyw_not_fighting_crown = { CROWN = c:FRA }
 				}
 			}
-			aoc_hyw_start_round = yes
+			aoc_hyw_start_round = { WAR = no }
 		}
 	}
-}
-
-aoc_hyw_start_existing_war_round = {
-	remove_global_variable = aoc_hyw_english_round_victory
-	remove_global_variable = aoc_hyw_french_round_victory
-	set_global_variable = aoc_hyw_round_active
-	set_global_variable = aoc_hyw_external_round_active
-	set_global_variable = aoc_hyw_campaign_started
 }
 
 aoc_hyw_start_round = {
@@ -190,6 +181,7 @@ aoc_hyw_start_round = {
 			name = dp_aoc_hyw
 			type = dp_aoc_hyw
 			target_country = c:FRA
+			war = $WAR$
 			escalation = 80
 			add_war_goal = {
 				holder = c:FRA
@@ -250,18 +242,7 @@ aoc_hyw_score_round = {
 	if = {
 		limit = {
 			aoc_hyw_round_open = yes
-			OR = {
-				# Adopted an existing war: resolve when the crowns stop fighting.
-				AND = {
-					has_global_variable = aoc_hyw_external_round_active
-					c:ENG = { NOT = { has_war_with = c:FRA } }
-				}
-				# Scripted campaign: resolve only when its play/war is gone.
-				AND = {
-					NOT = { has_global_variable = aoc_hyw_external_round_active }
-					NOT = { any_diplomatic_play = { is_diplomatic_play_type = dp_aoc_hyw } }
-				}
-			}
+			NOT = { any_diplomatic_play = { is_diplomatic_play_type = dp_aoc_hyw } }
 		}
 		remove_global_variable = aoc_hyw_round_active
 		scope:journal_entry = {
