@@ -47,14 +47,6 @@ In game, start as a neutral French appanage and check that the starting roster l
 - Enforcing the campaign demand scores a win. A round with no sole winner scores a stalemate. Three wins decide the settlement, and three stalemates conclude the journal with the existing borders and subjects.
 - England keeps its holdings and imposes a 25-year treaty with French payments and investment rights. If England claimed the throne, France also becomes its junior partner. A French victory transfers England’s own holdings in geographic France and annexes English subjects with holdings in that region.
 
-## English claim to the French throne: Personal Union compatibility
-
-France starts with `law_french_monarchy`, a national variant of `law_monarchy`. The Hundred Years' War settlement grants a real `personal_union` pact when England has pressed its claim. Vanilla's Personal Union diplomatic action checks **both** partners' monarchy law on the next daily tick; if its maintenance check does not recognize the custom French law, the pact forms but immediately auto-breaks and France becomes independent.
-
-`common/diplomatic_actions/zz_aoc_french_personal_union.txt` replaces only the Personal Union action definition. It preserves all vanilla pact behavior and conditions while explicitly accepting `law_french_monarchy` in both monarchy maintenance checks. Do not work around the break by replacing France's starting law with vanilla `law_monarchy`: the national law and government should remain in use.
-
-**In-game regression:** Begin a campaign as England, select **Claim the French Throne** before the first round, and win three campaigns. Verify France appears under England as a Personal Union while retaining French Monarchy, then advance multiple days (ideally a month) and reload the save. France must remain a junior partner without an automatic independence notification. Also verify an ordinary Personal Union still breaks as normal when either partner genuinely abandons monarchy.
-
 ## National event viewer
 
 Run `node tools/build_nation_content.cjs` after editing an event. The generator discovers visible, localized country events from national namespaces and positive country triggers. For shared chains and events whose recipient is supplied by the caller, use `tools/nation_event_catalog.json` to list the recipient tags and optionally write a player-facing condition. England lists The Surrender of Maine under Hundred Years’ War. France lists The Keys of Le Mans and Maine Withheld in its Events tab. The generated seen marker records the event for its recipient when it opens.
